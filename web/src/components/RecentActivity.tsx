@@ -14,8 +14,8 @@ interface Props {
 }
 
 const COLORS = [
-  "#6366f1", "#8b5cf6", "#a78bfa", "#c4b5fd",
-  "#818cf8", "#6d28d9", "#7c3aed", "#9333ea",
+  "#00ff41", "#00cc33", "#009926", "#006619",
+  "#00ff41", "#00cc33", "#009926", "#006619",
 ];
 
 export function RecentActivity({ activity }: Props) {
@@ -34,19 +34,19 @@ export function RecentActivity({ activity }: Props) {
       <p className="subtitle">Last 2 weeks — hours played</p>
       <ResponsiveContainer width="100%" height={activity.length * 44 + 40}>
         <BarChart data={data} layout="vertical" margin={{ left: 120, right: 30 }}>
-          <XAxis type="number" unit="h" tick={{ fill: "#94a3b8" }} />
+          <XAxis type="number" unit="h" tick={{ fill: "#005500", fontSize: 10 }} />
           <YAxis
             type="category"
             dataKey="label"
             width={110}
-            tick={{ fill: "#e2e8f0", fontSize: 12 }}
+            tick={{ fill: "#00cc33", fontSize: 10 }}
           />
           <Tooltip
             formatter={(v) => [`${v}h`, "2-week playtime"]}
-            contentStyle={{ background: "#1e293b", border: "none", borderRadius: 8 }}
-            labelStyle={{ color: "#e2e8f0" }}
+            contentStyle={{ background: "#000", border: "1px solid #003b00", borderRadius: 0 }}
+            labelStyle={{ color: "#00ff41" }}
           />
-          <Bar dataKey="playtime_2weeks_hours" radius={[0, 6, 6, 0]}>
+          <Bar dataKey="playtime_2weeks_hours" radius={[0, 0, 0, 0]}>
             {data.map((_, i) => (
               <Cell key={i} fill={COLORS[i % COLORS.length]} />
             ))}

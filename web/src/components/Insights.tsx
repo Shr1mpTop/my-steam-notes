@@ -58,7 +58,7 @@ export function GameNetwork({ network }: NetworkProps) {
         ))}
         {network.nodes.map((name) => (
           <g key={name}>
-            <circle cx={nodeMap[name].x} cy={nodeMap[name].y} r="18" fill="#6366f1" opacity={0.8} />
+            <circle cx={nodeMap[name].x} cy={nodeMap[name].y} r="18" fill="#003b00" stroke="#00ff41" strokeWidth="1" opacity={0.8} />
             <text x={nodeMap[name].x} y={nodeMap[name].y} textAnchor="middle" dominantBaseline="middle" fill="#fff" fontSize="7" fontWeight="600">
               {name.length > 10 ? name.slice(0, 9) + "…" : name}
             </text>
@@ -103,7 +103,7 @@ export function StayingPower({ games }: StayingProps) {
       <p className="viz-subtitle">Total hours vs days since last played</p>
       <div className="staying-grid">
         {data.map((g) => {
-          const recencyColor = g.recency < 7 ? "#39d353" : g.recency < 30 ? "#f59e0b" : g.recency < 90 ? "#f97316" : "#ef4444";
+          const recencyColor = g.recency < 7 ? "#00ff41" : g.recency < 30 ? "#00cc33" : g.recency < 90 ? "#009926" : "#006619";
           return (
             <div key={g.name} className="staying-row">
               <span className="staying-name">{g.name}</span>

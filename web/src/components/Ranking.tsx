@@ -4,7 +4,7 @@ import type { ParetoItem } from "../types";
 interface ParetoProps { data: ParetoItem[]; }
 interface PlatformProps { data: Record<string, number>; }
 
-const COLORS = ["#6366f1", "#8b5cf6", "#a78bfa", "#c4b5fd", "#818cf8", "#6d28d9", "#7c3aed", "#9333ea", "#06b6d4", "#14b8a6"];
+const COLORS = ["#00ff41", "#00cc33", "#009926", "#006619", "#00ff41", "#00cc33", "#009926", "#006619", "#00ff41", "#00cc33"];
 
 export function ParetoChart({ data }: ParetoProps) {
   const top20 = data.slice(0, 20);
@@ -14,14 +14,14 @@ export function ParetoChart({ data }: ParetoProps) {
       <p className="viz-subtitle">Top games account for most of your playtime</p>
       <ResponsiveContainer width="100%" height={280}>
         <AreaChart data={top20} margin={{ left: 10, right: 20, top: 10, bottom: 40 }}>
-          <XAxis dataKey="rank" tick={{ fill: "#8b949e", fontSize: 11 }} label={{ value: "Game Rank", position: "bottom", fill: "#8b949e", fontSize: 11 }} />
-          <YAxis tick={{ fill: "#8b949e", fontSize: 11 }} domain={[0, 100]} unit="%" />
+          <XAxis dataKey="rank" tick={{ fill: "#005500", fontSize: 9 }} label={{ value: "Game Rank", position: "bottom", fill: "#005500", fontSize: 9 }} />
+          <YAxis tick={{ fill: "#005500", fontSize: 9 }} domain={[0, 100]} unit="%" />
           <Tooltip
             formatter={(v, name) => name === "cumulative_pct" ? [`${v}%`, "Cumulative"] : [`${v}h`, "Hours"]}
-            contentStyle={{ background: "#1e293b", border: "none", borderRadius: 8 }}
+            contentStyle={{ background: "#000", border: "1px solid #003b00", borderRadius: 0 }}
             labelFormatter={(_, payload) => payload?.[0]?.payload?.name || ""}
           />
-          <Area type="monotone" dataKey="cumulative_pct" stroke="#39d353" fill="rgba(57,211,83,0.15)" strokeWidth={2} />
+          <Area type="monotone" dataKey="cumulative_pct" stroke="#00ff41" fill="rgba(0,255,65,0.08)" strokeWidth={1} />
         </AreaChart>
       </ResponsiveContainer>
     </div>
@@ -44,7 +44,7 @@ export function PlatformPie({ data }: PlatformProps) {
             <Pie data={chartData} cx="50%" cy="50%" innerRadius={50} outerRadius={80} paddingAngle={3} dataKey="value">
               {chartData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
             </Pie>
-            <Tooltip formatter={(v) => [`${Number(v).toFixed(0)}h`]} contentStyle={{ background: "#1e293b", border: "none", borderRadius: 8 }} />
+            <Tooltip formatter={(v) => [`${Number(v).toFixed(0)}h`]} contentStyle={{ background: "#000", border: "1px solid #003b00", borderRadius: 0 }} />
           </PieChart>
         </ResponsiveContainer>
         <div className="platform-legend">
