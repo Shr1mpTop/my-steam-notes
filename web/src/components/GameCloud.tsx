@@ -33,7 +33,7 @@ export function GameCloud({ games }: Props) {
     // Aggressive scaling: top game = 60px radius, smallest = 4px
     // Sqrt scaling: balanced contrast, not too extreme
     const ratio = Math.sqrt(game.playtime_hours) / Math.sqrt(maxHours);
-    const radius = Math.max(6, Math.round(ratio * 42));
+    const radius = Math.max(10, Math.round(ratio * 64));
     return {
       id: game.appid,
       game,
