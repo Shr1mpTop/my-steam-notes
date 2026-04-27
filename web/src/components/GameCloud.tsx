@@ -33,7 +33,7 @@ export function GameCloud({ games }: Props) {
     // Aggressive scaling: top game = 60px radius, smallest = 4px
     // Sqrt scaling: balanced contrast, not too extreme
     const ratio = Math.sqrt(game.playtime_hours) / Math.sqrt(maxHours);
-    const radius = Math.max(10, Math.round(ratio * 64));
+    const radius = Math.max(14, Math.round(ratio * 80));
     return {
       id: game.appid,
       game,
@@ -53,8 +53,8 @@ export function GameCloud({ games }: Props) {
         .strength((d) => Math.sqrt(d.mass) * 0.8)
       )
       .force("collision", forceCollide<Node>()
-        .radius((d) => d.radius + 1.5)
-        .strength(0.9)
+        .radius((d) => d.radius + 4)
+        .strength(1)
       )
       .force("center", forceCenter(width / 2, height / 2))
       .alphaDecay(0.015)
