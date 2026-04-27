@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { DashboardData } from "../types";
 
-const DATA_URL = "/dashboard.json";
+const DATA_URL = `${import.meta.env.BASE_URL}dashboard.json`;
 
 export function useDashboard() {
   const [data, setData] = useState<DashboardData | null>(null);
