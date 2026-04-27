@@ -31,11 +31,9 @@ export function GameCloud({ games }: Props) {
 
   const allNodes: Node[] = games.map((game, i) => {
     // Aggressive scaling: top game = 60px radius, smallest = 4px
-    // Linear ratio gives strong visual contrast
-    const ratio = game.playtime_hours / maxHours;
-    const radius = i === 0
-      ? 60
-      : Math.max(4, Math.round(ratio * 56));
+    // Sqrt scaling: balanced contrast, not too extreme
+    const ratio = Math.sqrt(game.playtime_hours) / Math.sqrt(maxHours);
+    const radius = Math.max(6, Math.round(ratio * 42));
     return {
       id: game.appid,
       game,
@@ -93,7 +91,6 @@ export function GameCloud({ games }: Props) {
       <p className="subtitle">{games.length} games — mass = playtime, gravity pulls them together</p>
 
       <div className="gravity-container">
-        <div className="gravity-core" />
         <div className="gravity-field">
           {nodes.map((n) => {
             const size = n.radius * 2;
