@@ -41,6 +41,34 @@ SCHEMA = [
         lastlogoff INTEGER,
         loccountrycode TEXT
     )""",
+    """CREATE TABLE IF NOT EXISTS status_polls (
+        timestamp TEXT PRIMARY KEY,
+        personastate INTEGER,
+        gameextrainfo TEXT,
+        gameid TEXT
+    )""",
+    """CREATE TABLE IF NOT EXISTS game_details (
+        appid INTEGER PRIMARY KEY,
+        name TEXT,
+        header_image TEXT,
+        price_overview TEXT,
+        genres TEXT,
+        categories TEXT,
+        type TEXT,
+        updated_at TEXT
+    )""",
+    """CREATE TABLE IF NOT EXISTS game_achievements (
+        appid INTEGER NOT NULL,
+        apiname TEXT NOT NULL,
+        achieved INTEGER DEFAULT 0,
+        unlocktime INTEGER DEFAULT 0,
+        global_percent TEXT DEFAULT '0',
+        PRIMARY KEY (appid, apiname)
+    )""",
+    """CREATE TABLE IF NOT EXISTS steam_level (
+        date TEXT PRIMARY KEY,
+        level INTEGER
+    )""",
 ]
 
 for stmt in SCHEMA:

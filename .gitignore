@@ -1,1 +1,7 @@
 .env
+.venv/
+__pycache__/
+*.pyc
+steam_data.db
+node_modules/
+web/dist/

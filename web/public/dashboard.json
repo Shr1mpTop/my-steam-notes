@@ -1,0 +1,2742 @@
+{
+  "updated_at": "2026-04-27T18:36:23Z",
+  "player": {
+    "personaname": "chr(0x1D11E)",
+    "online": false,
+    "currently_playing": "",
+    "level": 30
+  },
+  "milestone": {
+    "total_hours": 5341.0,
+    "movies": 2670,
+    "books": 890,
+    "walking_km": 26705
+  },
+  "game_cloud": [
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "playtime_hours": 1856.8,
+      "img_icon_url": "8dbc71957312bbd3baea65848b545be9eae2a355",
+      "rtime_last_played": 1777303173
+    },
+    {
+      "appid": 1172470,
+      "name": "Apex Legends",
+      "playtime_hours": 528.3,
+      "img_icon_url": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
+      "rtime_last_played": 1777305143
+    },
+    {
+      "appid": 379430,
+      "name": "Kingdom Come: Deliverance",
+      "playtime_hours": 369.6,
+      "img_icon_url": "915ec515c36645855abed0476b5b0891d8a4e47a",
+      "rtime_last_played": 1765354646
+    },
+    {
+      "appid": 261550,
+      "name": "Mount & Blade II: Bannerlord",
+      "playtime_hours": 264.1,
+      "img_icon_url": "896d5f4214e4e185a20af51b46d9dea2e6f4aaad",
+      "rtime_last_played": 1763043473
+    },
+    {
+      "appid": 105600,
+      "name": "Terraria",
+      "playtime_hours": 209.5,
+      "img_icon_url": "858961e95fbf869f136e1770d586e0caefd4cfac",
+      "rtime_last_played": 1773419607
+    },
+    {
+      "appid": 1771300,
+      "name": "Kingdom Come: Deliverance II",
+      "playtime_hours": 159.4,
+      "img_icon_url": "80e8d75b87433627cafd2a1bcbb5b9f5741e2277",
+      "rtime_last_played": 1765354685
+    },
+    {
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "playtime_hours": 151.4,
+      "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
+      "rtime_last_played": 1764521570
+    },
+    {
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "playtime_hours": 121.7,
+      "img_icon_url": "1e72f87eb927fa1485e68aefaff23c7fd7178251",
+      "rtime_last_played": 1721630329
+    },
+    {
+      "appid": 365670,
+      "name": "Blender",
+      "playtime_hours": 109.5,
+      "img_icon_url": "48733cd333eea6e40711a1b9c6dde32ffe363ced",
+      "rtime_last_played": 1757266219
+    },
+    {
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "playtime_hours": 100.3,
+      "img_icon_url": "72edaed9d748c6cf7397ffb1c83f0b837b9ebd9d",
+      "rtime_last_played": 1773203991
+    },
+    {
+      "appid": 1527950,
+      "name": "Wartales",
+      "playtime_hours": 89.2,
+      "img_icon_url": "691c50613e860ab57715d391eb27f1b86e77a7fd",
+      "rtime_last_played": 1774987899
+    },
+    {
+      "appid": 1966720,
+      "name": "Lethal Company",
+      "playtime_hours": 83.2,
+      "img_icon_url": "80d2453285274e4723c884a671cdd3f8fe2f766f",
+      "rtime_last_played": 1730216529
+    },
+    {
+      "appid": 1787090,
+      "name": "MyDockFinder",
+      "playtime_hours": 65.8,
+      "img_icon_url": "71776d225a6d9984e93520b8892f0b121dbefa44",
+      "rtime_last_played": 1736694521
+    },
+    {
+      "appid": 1127400,
+      "name": "Mindustry",
+      "playtime_hours": 54.1,
+      "img_icon_url": "1abc85522939efd31f3439302e64f673ba2424a5",
+      "rtime_last_played": 1747316633
+    },
+    {
+      "appid": 578080,
+      "name": "PUBG: BATTLEGROUNDS",
+      "playtime_hours": 52.6,
+      "img_icon_url": "609f27278aa70697c13bf99f32c5a0248c381f9d",
+      "rtime_last_played": 1762202708
+    },
+    {
+      "appid": 2186680,
+      "name": "Warhammer 40,000: Rogue Trader",
+      "playtime_hours": 51.1,
+      "img_icon_url": "095b26e213960e2c2b6564fd7211ed6a20f39d18",
+      "rtime_last_played": 1775198769
+    },
+    {
+      "appid": 292030,
+      "name": "The Witcher 3: Wild Hunt",
+      "playtime_hours": 50.3,
+      "img_icon_url": "78d0ff98b67851f24539cdf2402cf147679134f4",
+      "rtime_last_played": 1710678495
+    },
+    {
+      "appid": 1623730,
+      "name": "Palworld",
+      "playtime_hours": 49.3,
+      "img_icon_url": "f5523077a8f4c923c2e8d8c17794b3319035fa73",
+      "rtime_last_played": 1766494108
+    },
+    {
+      "appid": 1238810,
+      "name": "Battlefield™ V",
+      "playtime_hours": 47.8,
+      "img_icon_url": "23ded6a957b5ec7525679c2e7bdac90c0653dbc8",
+      "rtime_last_played": 1737487166
+    },
+    {
+      "appid": 233860,
+      "name": "Kenshi",
+      "playtime_hours": 45.7,
+      "img_icon_url": "9e8fa3ef841ba1861b2b8aa1254532bb4eee954b",
+      "rtime_last_played": 1762260585
+    },
+    {
+      "appid": 1363080,
+      "name": "Manor Lords",
+      "playtime_hours": 42.8,
+      "img_icon_url": "f0b869c004ddb564f961668130894f335fe04175",
+      "rtime_last_played": 1767629096
+    },
+    {
+      "appid": 2213700,
+      "name": "Sintopia",
+      "playtime_hours": 37.7,
+      "img_icon_url": "1ee4cabe5b840bcaae56c1d40cb131f81e04c6ab",
+      "rtime_last_played": 1777305389
+    },
+    {
+      "appid": 1769420,
+      "name": "Noble Fates",
+      "playtime_hours": 36.4,
+      "img_icon_url": "9e83d739d270c1671847535fbe392a56d5818e06",
+      "rtime_last_played": 1776020542
+    },
+    {
+      "appid": 12210,
+      "name": "Grand Theft Auto IV: The Complete Edition",
+      "playtime_hours": 33.3,
+      "img_icon_url": "a3cf6a64c73f991898a9e34681d0db8226eaa191",
+      "rtime_last_played": 1709277708
+    },
+    {
+      "appid": 1092790,
+      "name": "Inscryption",
+      "playtime_hours": 31.8,
+      "img_icon_url": "25c02dcbabe97febe787797195099325a4d47935",
+      "rtime_last_played": 1749357839
+    },
+    {
+      "appid": 1466860,
+      "name": "Age of Empires IV: Anniversary Edition",
+      "playtime_hours": 29.3,
+      "img_icon_url": "503acf3ef0503e24af6b5336012a1f585a2f955e",
+      "rtime_last_played": 1773566298
+    },
+    {
+      "appid": 489830,
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "playtime_hours": 28.5,
+      "img_icon_url": "0dfe3eed5658f9fbd8b62f8021038c0a4190f21d",
+      "rtime_last_played": 1726987947
+    },
+    {
+      "appid": 365360,
+      "name": "Battle Brothers",
+      "playtime_hours": 28.5,
+      "img_icon_url": "b99db2c64ea125ff01c2d31583ff560a834e999c",
+      "rtime_last_played": 1776867887
+    },
+    {
+      "appid": 48700,
+      "name": "Mount & Blade: Warband",
+      "playtime_hours": 27.9,
+      "img_icon_url": "0773e90a6991a5427df4ee516687d832d92b050e",
+      "rtime_last_played": 1738595743
+    },
+    {
+      "appid": 3241660,
+      "name": "R.E.P.O.",
+      "playtime_hours": 27.3,
+      "img_icon_url": "b8bf4770408fc369e15cebd42e0026a27b67aaa8",
+      "rtime_last_played": 1769702877
+    },
+    {
+      "appid": 881100,
+      "name": "Noita",
+      "playtime_hours": 25.8,
+      "img_icon_url": "a21dbd1d3bd01f0a688f2d7029978d5cdbe14e74",
+      "rtime_last_played": 1743049094
+    },
+    {
+      "appid": 356190,
+      "name": "Middle-earth™: Shadow of War™",
+      "playtime_hours": 22.5,
+      "img_icon_url": "316c479e5d51d21e15eb8f82338fce82c42c4115",
+      "rtime_last_played": 1637578145
+    },
+    {
+      "appid": 289070,
+      "name": "Sid Meier's Civilization VI",
+      "playtime_hours": 21.6,
+      "img_icon_url": "9dc914132fec244adcede62fb8e7524a72a7398c",
+      "rtime_last_played": 1773694519
+    },
+    {
+      "appid": 3164500,
+      "name": "Schedule I",
+      "playtime_hours": 21.6,
+      "img_icon_url": "3d9f9ed56cb6e1ba995883207290c39674e9c411",
+      "rtime_last_played": 1770837517
+    },
+    {
+      "appid": 1203620,
+      "name": "Enshrouded",
+      "playtime_hours": 21.0,
+      "img_icon_url": "9588cc0bd32e350a2353c332be67cf52a9b2b47b",
+      "rtime_last_played": 1763137230
+    },
+    {
+      "appid": 270150,
+      "name": "RUNNING WITH RIFLES",
+      "playtime_hours": 19.6,
+      "img_icon_url": "feacad90f64b2db6c3f7ac6dafe62d21a1b3df55",
+      "rtime_last_played": 1653544313
+    },
+    {
+      "appid": 255710,
+      "name": "Cities: Skylines",
+      "playtime_hours": 18.4,
+      "img_icon_url": "6cf7b10dd29db28448ef79698ed2118a03617d63",
+      "rtime_last_played": 1753369917
+    },
+    {
+      "appid": 1129580,
+      "name": "Medieval Dynasty",
+      "playtime_hours": 18.1,
+      "img_icon_url": "2bc2abbf62765ad587a399f67d8ca89a8f486e7b",
+      "rtime_last_played": 1774124988
+    },
+    {
+      "appid": 3167020,
+      "name": "Escape From Duckov",
+      "playtime_hours": 17.6,
+      "img_icon_url": "5bb8d31708442a8f3ddbc100d7be7c3fde530d18",
+      "rtime_last_played": 1762191673
+    },
+    {
+      "appid": 312660,
+      "name": "Sniper Elite 4",
+      "playtime_hours": 17.5,
+      "img_icon_url": "3a1dbbf59326c0bb78113db7ac0d70b9988b3ce8",
+      "rtime_last_played": 1633613338
+    },
+    {
+      "appid": 2239150,
+      "name": "Thronefall",
+      "playtime_hours": 14.8,
+      "img_icon_url": "33b662f2a7a302f154861643b0e59c87b36a3d5e",
+      "rtime_last_played": 1755447616
+    },
+    {
+      "appid": 1422450,
+      "name": "Deadlock",
+      "playtime_hours": 14.6,
+      "img_icon_url": "f6da1420a173324d49bcd470fa3eee781ad0fa5e",
+      "rtime_last_played": 1727433685
+    },
+    {
+      "appid": 357310,
+      "name": "Oriental Empires",
+      "playtime_hours": 12.9,
+      "img_icon_url": "4c3fdc6c7a191507d3708eb54d69fc854db033c4",
+      "rtime_last_played": 1774599551
+    },
+    {
+      "appid": 1987080,
+      "name": "Inside the Backrooms",
+      "playtime_hours": 10.8,
+      "img_icon_url": "36c529359e0802af3589360e03ed781c366b5ae5",
+      "rtime_last_played": 1692621493
+    },
+    {
+      "appid": 688420,
+      "name": "Bad North: Jotunn Edition",
+      "playtime_hours": 10.7,
+      "img_icon_url": "038a9c080d91b1963b51498541a718f844a0f162",
+      "rtime_last_played": 1708169561
+    },
+    {
+      "appid": 322330,
+      "name": "Don't Starve Together",
+      "playtime_hours": 10.5,
+      "img_icon_url": "a80aa6cff8eebc1cbc18c367d9ab063e1553b0ee",
+      "rtime_last_played": 1718901717
+    },
+    {
+      "appid": 1714040,
+      "name": "Super Auto Pets",
+      "playtime_hours": 9.1,
+      "img_icon_url": "741a65b9af8572a8bffe15fe50ca2e35479d1526",
+      "rtime_last_played": 1743584468
+    },
+    {
+      "appid": 2067920,
+      "name": "Rogue: Genesia",
+      "playtime_hours": 8.5,
+      "img_icon_url": "3902c16718546348eae5db5838e1123189641198",
+      "rtime_last_played": 1666875809
+    },
+    {
+      "appid": 391730,
+      "name": "Crashlands",
+      "playtime_hours": 8.2,
+      "img_icon_url": "8fb73009c5f9918aab9717d8f9db1a4604733297",
+      "rtime_last_played": 1679548206
+    },
+    {
+      "appid": 2060160,
+      "name": "The Farmer Was Replaced",
+      "playtime_hours": 8.1,
+      "img_icon_url": "c5e5f32afc4cc79cc7a92bf174375367509e2866",
+      "rtime_last_played": 1768126981
+    },
+    {
+      "appid": 2881650,
+      "name": "Content Warning",
+      "playtime_hours": 7.8,
+      "img_icon_url": "513cf7f2e22c94f4372369e29bffccc4c239e9c0",
+      "rtime_last_played": 1712416141
+    },
+    {
+      "appid": 714010,
+      "name": "Aimlabs",
+      "playtime_hours": 7.7,
+      "img_icon_url": "15347de11efc127539c388e585af9e92d10d5189",
+      "rtime_last_played": 1770919092
+    },
+    {
+      "appid": 1262580,
+      "name": "Need for Speed™ Payback",
+      "playtime_hours": 7.5,
+      "img_icon_url": "af67577ce6051d85440c7fa65ff21f8eb5b0b199",
+      "rtime_last_played": 1666102935
+    },
+    {
+      "appid": 359550,
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "playtime_hours": 7.4,
+      "img_icon_url": "624745d333ac54aedb1ee911013e2edb7722550e",
+      "rtime_last_played": 1634574042
+    },
+    {
+      "appid": 704850,
+      "name": "Thief Simulator",
+      "playtime_hours": 7.4,
+      "img_icon_url": "351a94d88850d4e0495e8a880f87af4a881f7d78",
+      "rtime_last_played": 1668924996
+    },
+    {
+      "appid": 976730,
+      "name": "Halo: The Master Chief Collection",
+      "playtime_hours": 7.3,
+      "img_icon_url": "196a45d8df1981ff6b6b1872a38dc38f6c22875d",
+      "rtime_last_played": 1765354964
+    },
+    {
+      "appid": 2294130,
+      "name": "Goobies",
+      "playtime_hours": 7.2,
+      "img_icon_url": "22521336c395b4413cd7729535343290309f2808",
+      "rtime_last_played": 1769002904
+    },
+    {
+      "appid": 1293830,
+      "name": "Forza Horizon 4",
+      "playtime_hours": 6.9,
+      "img_icon_url": "7c993f9089d54fe2767efec47b75a7009cdd632e",
+      "rtime_last_played": 1765370342
+    },
+    {
+      "appid": 550,
+      "name": "Left 4 Dead 2",
+      "playtime_hours": 6.8,
+      "img_icon_url": "7d5a243f9500d2f8467312822f8af2a2928777ed",
+      "rtime_last_played": 1695399062
+    },
+    {
+      "appid": 48720,
+      "name": "Mount & Blade: With Fire and Sword",
+      "playtime_hours": 6.8,
+      "img_icon_url": "c27db8507dba945882395a5be1cb20a2c2f59e48",
+      "rtime_last_played": 1709543942
+    },
+    {
+      "appid": 1366800,
+      "name": "Crosshair X",
+      "playtime_hours": 6.4,
+      "img_icon_url": "16138bef561b61372e02f3006da2c76a21cdbbd7",
+      "rtime_last_played": 1775894947
+    },
+    {
+      "appid": 612880,
+      "name": "Wolfenstein II: The New Colossus",
+      "playtime_hours": 5.7,
+      "img_icon_url": "fd5c894c47b49a7d5e46e7ed60d6f1fdf60d210d",
+      "rtime_last_played": 1647962924
+    },
+    {
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "playtime_hours": 5.6,
+      "img_icon_url": "8355a7bbdb704f727bfba80ec56bc7228991338e",
+      "rtime_last_played": 1776325930
+    },
+    {
+      "appid": 242760,
+      "name": "The Forest",
+      "playtime_hours": 5.3,
+      "img_icon_url": "3a6847f6ac5879e48531db52261771d5e22904ac",
+      "rtime_last_played": 1747657971
+    },
+    {
+      "appid": 552500,
+      "name": "Warhammer: Vermintide 2",
+      "playtime_hours": 4.9,
+      "img_icon_url": "a671f2ddf7359beba9702ac097baf6d50cb07202",
+      "rtime_last_played": 1668261592
+    },
+    {
+      "appid": 1366540,
+      "name": "Dyson Sphere Program",
+      "playtime_hours": 4.9,
+      "img_icon_url": "55fa75b8e6586427da47f58f320e975e990a460b",
+      "rtime_last_played": 1766667483
+    },
+    {
+      "appid": 2666510,
+      "name": "Rusty's Retirement",
+      "playtime_hours": 4.8,
+      "img_icon_url": "72be5b22943d8874a18c9de214f1d5fa82d98310",
+      "rtime_last_played": 1768056833
+    },
+    {
+      "appid": 22100,
+      "name": "Mount & Blade",
+      "playtime_hours": 4.7,
+      "img_icon_url": "86d2f78aaff6629cded326df094c933b50302f0f",
+      "rtime_last_played": 1765354975
+    },
+    {
+      "appid": 3846120,
+      "name": "MineMogul",
+      "playtime_hours": 4.5,
+      "img_icon_url": "81cdbce1c5d99d825aae1f37f55903e803ec8f9c",
+      "rtime_last_played": 1774113826
+    },
+    {
+      "appid": 440900,
+      "name": "Conan Exiles",
+      "playtime_hours": 4.3,
+      "img_icon_url": "399859f8bdaeef066f14029d5f1910960545fbd9",
+      "rtime_last_played": 1765370460
+    },
+    {
+      "appid": 973760,
+      "name": "Thronebreaker: The Witcher Tales",
+      "playtime_hours": 4.3,
+      "img_icon_url": "c1f8e9dddd16f817b624d7e18f0af525dbb867dd",
+      "rtime_last_played": 1765355460
+    },
+    {
+      "appid": 457140,
+      "name": "Oxygen Not Included",
+      "playtime_hours": 4.2,
+      "img_icon_url": "d37534163ebac8351e0bda0bf30f8f2174c921b6",
+      "rtime_last_played": 1765377584
+    },
+    {
+      "appid": 2527500,
+      "name": "MiSide",
+      "playtime_hours": 4.2,
+      "img_icon_url": "c262acd97d45a10d3102cb654dace25af7b05977",
+      "rtime_last_played": 1769439578
+    },
+    {
+      "appid": 361280,
+      "name": "Turmoil",
+      "playtime_hours": 4.2,
+      "img_icon_url": "37bfa1637243c416174c039a23ebe370a3c04e78",
+      "rtime_last_played": 1639220356
+    },
+    {
+      "appid": 602960,
+      "name": "Barotrauma",
+      "playtime_hours": 4.0,
+      "img_icon_url": "a0adb0f29ce819c6dffa32446624fb7648defc5a",
+      "rtime_last_played": 1636800755
+    },
+    {
+      "appid": 601430,
+      "name": "The Evil Within 2",
+      "playtime_hours": 4.0,
+      "img_icon_url": "823f7bef429bc85a7a68dba32d6f47938fc3b689",
+      "rtime_last_played": 1639211686
+    },
+    {
+      "appid": 2163330,
+      "name": "Yet Another Zombie Survivors",
+      "playtime_hours": 3.9,
+      "img_icon_url": "29d2fd0987cbbc1fdb23a356979d7bbb6584a9e5",
+      "rtime_last_played": 1752345329
+    },
+    {
+      "appid": 736590,
+      "name": "Operation: Harsh Doorstop",
+      "playtime_hours": 3.8,
+      "img_icon_url": "c6bab4b59297f21d7c58195d2de0054662ec47d4",
+      "rtime_last_played": 1713804613
+    },
+    {
+      "appid": 1483870,
+      "name": "Draw & Guess",
+      "playtime_hours": 3.8,
+      "img_icon_url": "fa74c29e304534a16965a53e6044853822830811",
+      "rtime_last_played": 1630048857
+    },
+    {
+      "appid": 1238840,
+      "name": "Battlefield™ 1",
+      "playtime_hours": 3.5,
+      "img_icon_url": "325c78f6940b57a43b65468d2dc10e22601b0ec5",
+      "rtime_last_played": 1640442977
+    },
+    {
+      "appid": 383870,
+      "name": "Firewatch",
+      "playtime_hours": 3.5,
+      "img_icon_url": "d13e70a08cab192c52104f315a7d68591c085e81",
+      "rtime_last_played": 1765355401
+    },
+    {
+      "appid": 435150,
+      "name": "Divinity: Original Sin 2",
+      "playtime_hours": 3.4,
+      "img_icon_url": "519a99caef7c5e2b4625c8c2fa0620fb66a752f3",
+      "rtime_last_played": 1766402278
+    },
+    {
+      "appid": 1463120,
+      "name": "College Kings - The Complete Season",
+      "playtime_hours": 3.2,
+      "img_icon_url": "74647497457d7cae04264d7d1e1ec484bbd61545",
+      "rtime_last_played": 1765354459
+    },
+    {
+      "appid": 1274570,
+      "name": "DEVOUR",
+      "playtime_hours": 3.1,
+      "img_icon_url": "e24aa080068d3686e0b1b5aa52a4155dc553e69d",
+      "rtime_last_played": 1765366380
+    },
+    {
+      "appid": 863550,
+      "name": "HITMAN™ 2",
+      "playtime_hours": 3.0,
+      "img_icon_url": "3f7c071da7a338e03f6243b73c02c072f1bacee9",
+      "rtime_last_played": 1765367582
+    },
+    {
+      "appid": 494840,
+      "name": "UBOAT",
+      "playtime_hours": 2.7,
+      "img_icon_url": "456cd3ff98511c5874d3cb2492e0db1019610767",
+      "rtime_last_played": 1723086579
+    },
+    {
+      "appid": 1222680,
+      "name": "Need for Speed™ Heat ",
+      "playtime_hours": 2.5,
+      "img_icon_url": "98a96955403db8eeed026bc5ff04e51e3329f1b0",
+      "rtime_last_played": 1765369979
+    },
+    {
+      "appid": 1213210,
+      "name": "Command & Conquer™ Remastered Collection",
+      "playtime_hours": 2.5,
+      "img_icon_url": "5e4296aadeecff15a623e98e07f4f382e6335511",
+      "rtime_last_played": 1765370399
+    },
+    {
+      "appid": 414700,
+      "name": "Outlast 2",
+      "playtime_hours": 2.4,
+      "img_icon_url": "f336155a1714d0d413dea897f63ef19ee1f7cf21",
+      "rtime_last_played": 1765370399
+    },
+    {
+      "appid": 286690,
+      "name": "Metro 2033 Redux",
+      "playtime_hours": 2.3,
+      "img_icon_url": "353ea01a045c084215bca95519808eaa7319ce0c",
+      "rtime_last_played": 1765367941
+    },
+    {
+      "appid": 300,
+      "name": "Day of Defeat: Source",
+      "playtime_hours": 2.3,
+      "img_icon_url": "062754bb5853b0534283ae27dc5d58200692b22d",
+      "rtime_last_played": 1765365455
+    },
+    {
+      "appid": 356040,
+      "name": "Sheltered",
+      "playtime_hours": 2.3,
+      "img_icon_url": "2e1c4674ec7ef073a6941cb95284588c58edbed2",
+      "rtime_last_played": 1765365961
+    },
+    {
+      "appid": 220,
+      "name": "Half-Life 2",
+      "playtime_hours": 2.2,
+      "img_icon_url": "fcfb366051782b8ebf2aa297f3b746395858cb62",
+      "rtime_last_played": 1765365960
+    },
+    {
+      "appid": 620,
+      "name": "Portal 2",
+      "playtime_hours": 2.2,
+      "img_icon_url": "25a5a16b2423bf7487ac5340b5b0948cef48c5f8",
+      "rtime_last_played": 1765368002
+    },
+    {
+      "appid": 359840,
+      "name": "Shift Happens",
+      "playtime_hours": 2.2,
+      "img_icon_url": "4babaa40ec39ec666b12b54487578770a178a657",
+      "rtime_last_played": 1765367400
+    },
+    {
+      "appid": 40970,
+      "name": "Stronghold Crusader HD",
+      "playtime_hours": 2.2,
+      "img_icon_url": "e8ab759836e51dde895aeeb53bdb35959dae00d0",
+      "rtime_last_played": 1765367880
+    },
+    {
+      "appid": 227300,
+      "name": "Euro Truck Simulator 2",
+      "playtime_hours": 2.1,
+      "img_icon_url": "adc18a4fc9adc0330144b76d61cbda68bb2394a0",
+      "rtime_last_played": 1765362256
+    },
+    {
+      "appid": 257350,
+      "name": "Baldur's Gate II: Enhanced Edition",
+      "playtime_hours": 2.1,
+      "img_icon_url": "c76299c87cab47a1cfcbff3b42cd883194e090f9",
+      "rtime_last_played": 1765366440
+    },
+    {
+      "appid": 228280,
+      "name": "Baldur's Gate: Enhanced Edition",
+      "playtime_hours": 2.1,
+      "img_icon_url": "8f58ffe2b58e546ec6d9515fa80fb231764b2da8",
+      "rtime_last_played": 1765366441
+    },
+    {
+      "appid": 1097150,
+      "name": "Fall Guys",
+      "playtime_hours": 2.1,
+      "img_icon_url": "6c027709b9eb1417c993bc7d513b97b232002368",
+      "rtime_last_played": 1644474403
+    },
+    {
+      "appid": 218620,
+      "name": "PAYDAY 2",
+      "playtime_hours": 2.0,
+      "img_icon_url": "a6abc0d0c1e79c0b5b0f5c8ab81ce9076a542414",
+      "rtime_last_played": 1765362612
+    },
+    {
+      "appid": 1494810,
+      "name": "Mortal Sin",
+      "playtime_hours": 2.0,
+      "img_icon_url": "13f3ab0c9a4a243624c55724b17b4cbee3a58a0d",
+      "rtime_last_played": 1756916815
+    },
+    {
+      "appid": 4465480,
+      "name": "Counter-Strike:Global Offensive",
+      "playtime_hours": 2.0,
+      "img_icon_url": "c42651245856bf11a1201a4b521040ae830f2b07",
+      "rtime_last_played": 1772645973
+    },
+    {
+      "appid": 1062090,
+      "name": "Timberborn",
+      "playtime_hours": 2.0,
+      "img_icon_url": "a4863a01d88f18c948a712bfe90234ece672ca83",
+      "rtime_last_played": 1766649895
+    },
+    {
+      "appid": 1515950,
+      "name": "Capcom Arcade Stadium",
+      "playtime_hours": 1.9,
+      "img_icon_url": "2715c826a625a0cac409491c1982a459a71f7349",
+      "rtime_last_played": 1765363335
+    },
+    {
+      "appid": 475550,
+      "name": "Beholder",
+      "playtime_hours": 1.9,
+      "img_icon_url": "1025e7d1606b1e7a7f17048532039d78241e9f5d",
+      "rtime_last_played": 1639398105
+    },
+    {
+      "appid": 3350200,
+      "name": "Revenge on gold diggers ",
+      "playtime_hours": 1.5,
+      "img_icon_url": "b8bb31cec008ac2a794458ed5251b75bbe50df14",
+      "rtime_last_played": 1751909395
+    },
+    {
+      "appid": 2325900,
+      "name": "These Doomed Isles: The First God",
+      "playtime_hours": 1.3,
+      "img_icon_url": "63761465b1cb0f4abf4a868758db786b7331c522",
+      "rtime_last_played": 1689611389
+    },
+    {
+      "appid": 304930,
+      "name": "Unturned",
+      "playtime_hours": 1.3,
+      "img_icon_url": "e18009fb628b35953826efe47dc3be556b689f4c",
+      "rtime_last_played": 1712552504
+    },
+    {
+      "appid": 1911390,
+      "name": "Knightfall: A Daring Journey",
+      "playtime_hours": 1.2,
+      "img_icon_url": "8e09cd2255f59c3b079f31525853639fb8ad39e2",
+      "rtime_last_played": 1649419037
+    },
+    {
+      "appid": 3912710,
+      "name": "War of Banners Demo",
+      "playtime_hours": 1.2,
+      "img_icon_url": "21c2715a25fdc61d287e2e83465bf71608fea11b",
+      "rtime_last_played": 1777188017
+    },
+    {
+      "appid": 2533960,
+      "name": "SUMMERHOUSE",
+      "playtime_hours": 1.0,
+      "img_icon_url": "14b826b173771a2c5345c4b8071196ec5c8b56e8",
+      "rtime_last_played": 1714036536
+    },
+    {
+      "appid": 464920,
+      "name": "Surviving Mars",
+      "playtime_hours": 1.0,
+      "img_icon_url": "6c0bbf943ed725a16304161b89061ac1d37f6a2a",
+      "rtime_last_played": 1632583771
+    },
+    {
+      "appid": 373420,
+      "name": "Divinity: Original Sin Enhanced Edition",
+      "playtime_hours": 0.9,
+      "img_icon_url": "822ff912b2e464fbebbedf7a75ae1eb24921f16b",
+      "rtime_last_played": 1766161382
+    },
+    {
+      "appid": 2016590,
+      "name": "Dark and Darker",
+      "playtime_hours": 0.9,
+      "img_icon_url": "9dfa7ea1b799b795ab5795e8251b17e35ef2b8d8",
+      "rtime_last_played": 1717915184
+    },
+    {
+      "appid": 2316660,
+      "name": "Halls of Torment Prelude",
+      "playtime_hours": 0.8,
+      "img_icon_url": "9fec2ded1ecfea4bc04814440294bde9f235684e",
+      "rtime_last_played": 1719076171
+    },
+    {
+      "appid": 967050,
+      "name": "Pacify",
+      "playtime_hours": 0.8,
+      "img_icon_url": "58100bbcafa4244c8ea086d8de1208787c44c7e0",
+      "rtime_last_played": 1632414330
+    },
+    {
+      "appid": 230190,
+      "name": "War for the Overworld",
+      "playtime_hours": 0.6,
+      "img_icon_url": "9fd8f2fec6b8967dc79d87b2a704f866c02cfcef",
+      "rtime_last_played": 1777307535
+    },
+    {
+      "appid": 377160,
+      "name": "Fallout 4",
+      "playtime_hours": 0.6,
+      "img_icon_url": "779c4356ebe32af2af7c9f0bbba595dfe872cd7f",
+      "rtime_last_played": 1634466667
+    },
+    {
+      "appid": 442070,
+      "name": "Drawful 2",
+      "playtime_hours": 0.6,
+      "img_icon_url": "a2aab99a9ec657f817aff247593b3310cae44288",
+      "rtime_last_played": 1727520039
+    },
+    {
+      "appid": 1568590,
+      "name": "Goose Goose Duck",
+      "playtime_hours": 0.6,
+      "img_icon_url": "3b802d5010d6d5d72c93a8565b260c6042cc9390",
+      "rtime_last_played": 1672391722
+    },
+    {
+      "appid": 544810,
+      "name": "KARDS - The WWII Card Game",
+      "playtime_hours": 0.6,
+      "img_icon_url": "a87cdfca39c1dd5eadfd919621e008c1bdbd705c",
+      "rtime_last_played": 1726577024
+    },
+    {
+      "appid": 240,
+      "name": "Counter-Strike: Source",
+      "playtime_hours": 0.5,
+      "img_icon_url": "9052fa60c496a1c03383b27687ec50f4bf0f0e10",
+      "rtime_last_played": 1694960206
+    },
+    {
+      "appid": 346110,
+      "name": "ARK: Survival Evolved",
+      "playtime_hours": 0.5,
+      "img_icon_url": "fef1799533131c10f538d2dd697bbbd89e663265",
+      "rtime_last_played": 1705676602
+    },
+    {
+      "appid": 80,
+      "name": "Counter-Strike: Condition Zero",
+      "playtime_hours": 0.4,
+      "img_icon_url": "077b050ef3e89cd84e2c5a575d78d53b54058236",
+      "rtime_last_played": 1694958343
+    },
+    {
+      "appid": 552990,
+      "name": "World of Warships",
+      "playtime_hours": 0.4,
+      "img_icon_url": "023b6bb5bcf82f9222d70cd38fdb18a899bd67e8",
+      "rtime_last_played": 1721590142
+    },
+    {
+      "appid": 897450,
+      "name": "The Survivalists",
+      "playtime_hours": 0.4,
+      "img_icon_url": "210ddf7659b9dc50051c397cbd51eb35fa584373",
+      "rtime_last_played": 1705419253
+    },
+    {
+      "appid": 2902540,
+      "name": "KUNKUN Defender",
+      "playtime_hours": 0.4,
+      "img_icon_url": "b0db48efbdaabfe2ee3d9a2c2ed708a8fd61b8d3",
+      "rtime_last_played": 1775050125
+    },
+    {
+      "appid": 1528080,
+      "name": "Gas Station Simulator: Prologue - Early Days",
+      "playtime_hours": 0.3,
+      "img_icon_url": "24e2fc9fa306605134e3d46fdea7a1afefb8d818",
+      "rtime_last_played": 1634139516
+    },
+    {
+      "appid": 227940,
+      "name": "Heroes & Generals",
+      "playtime_hours": 0.3,
+      "img_icon_url": "64f09c15e558464a40ced00a9ef35ed13542e144",
+      "rtime_last_played": 1585038417
+    },
+    {
+      "appid": 496460,
+      "name": "Life is Feudal: Forest Village",
+      "playtime_hours": 0.3,
+      "img_icon_url": "a573416150a927e1cb21ce41c1844562e376264f",
+      "rtime_last_played": 1712410860
+    },
+    {
+      "appid": 1481400,
+      "name": "Dagon",
+      "playtime_hours": 0.2,
+      "img_icon_url": "854ec49de1b5b2032a1b251ce0770947b0df195c",
+      "rtime_last_played": 1632826265
+    },
+    {
+      "appid": 563560,
+      "name": "Alien Swarm: Reactive Drop",
+      "playtime_hours": 0.2,
+      "img_icon_url": "3f30d5d196532aa1d79dbf133f067a38769178dc",
+      "rtime_last_played": 1775374276
+    },
+    {
+      "appid": 673750,
+      "name": "Super Bunny Man",
+      "playtime_hours": 0.2,
+      "img_icon_url": "84dacb8846b7ede61ca12576ee2c5393b390ed88",
+      "rtime_last_played": 1769703870
+    },
+    {
+      "appid": 392160,
+      "name": "X4: Foundations",
+      "playtime_hours": 0.2,
+      "img_icon_url": "89022109a84c57ed7e329933e42c1153e06c1096",
+      "rtime_last_played": 1766601778
+    },
+    {
+      "appid": 1325860,
+      "name": "VTube Studio",
+      "playtime_hours": 0.2,
+      "img_icon_url": "afd5c41656a67009dd4ffd7919acdcfb9844bd2a",
+      "rtime_last_played": 1648293823
+    },
+    {
+      "appid": 557260,
+      "name": "iREC",
+      "playtime_hours": 0.1,
+      "img_icon_url": "03252aa61675014b15df0a3f8f6b450fdd9525d8",
+      "rtime_last_played": 1634911253
+    },
+    {
+      "appid": 1620690,
+      "name": "Rubber Bandits: Summer Prologue",
+      "playtime_hours": 0.1,
+      "img_icon_url": "085a4a96593bedb8e408887469b926c1eeec31b6",
+      "rtime_last_played": 1629878071
+    },
+    {
+      "appid": 1807160,
+      "name": "Celestial Empire Playtest",
+      "playtime_hours": 0.1,
+      "img_icon_url": "297daab0e57f4d24ee895c4663945b13039cf437",
+      "rtime_last_played": 1645008306
+    },
+    {
+      "appid": 1938090,
+      "name": "Call of Duty®",
+      "playtime_hours": 0.1,
+      "img_icon_url": "8eaf32220060344996cbf11f697a4f4be943e5f3",
+      "rtime_last_played": 1671005010
+    },
+    {
+      "appid": 16700,
+      "name": "Stronghold Crusader Extreme HD",
+      "playtime_hours": 0.1,
+      "img_icon_url": "b6d157c98d12921c4a3a13182174aa0bff22d810",
+      "rtime_last_played": 1668182670
+    },
+    {
+      "appid": 623990,
+      "name": "Tom Clancy's Rainbow Six Siege - Test Server",
+      "playtime_hours": 0.1,
+      "img_icon_url": "20deaf466474f76f2ffdb345fe56f40fe3af74c0",
+      "rtime_last_played": 1634221633
+    },
+    {
+      "appid": 2078890,
+      "name": "Dark and Darker Playtest",
+      "playtime_hours": 0.0,
+      "img_icon_url": "9dfa7ea1b799b795ab5795e8251b17e35ef2b8d8",
+      "rtime_last_played": 1671980558
+    }
+  ],
+  "recent_activity": [
+    {
+      "appid": 2213700,
+      "name": "Sintopia",
+      "playtime_2weeks_hours": 37.7,
+      "playtime_forever_hours": 37.7
+    },
+    {
+      "appid": 365360,
+      "name": "Battle Brothers",
+      "playtime_2weeks_hours": 28.5,
+      "playtime_forever_hours": 28.5
+    },
+    {
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "playtime_2weeks_hours": 5.6,
+      "playtime_forever_hours": 5.6
+    },
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "playtime_2weeks_hours": 4.6,
+      "playtime_forever_hours": 1856.8
+    },
+    {
+      "appid": 1172470,
+      "name": "Apex Legends",
+      "playtime_2weeks_hours": 4.2,
+      "playtime_forever_hours": 528.3
+    },
+    {
+      "appid": 3912710,
+      "name": "War of Banners Demo",
+      "playtime_2weeks_hours": 1.2,
+      "playtime_forever_hours": 1.2
+    },
+    {
+      "appid": 230190,
+      "name": "War for the Overworld",
+      "playtime_2weeks_hours": 0.6,
+      "playtime_forever_hours": 0.6
+    },
+    {
+      "appid": 892970,
+      "name": "Valheim",
+      "playtime_2weeks_hours": 0.0,
+      "playtime_forever_hours": 19.1
+    }
+  ],
+  "heatmap": {
+    "2026-04-27": {
+      "online_minutes": 0,
+      "games": {}
+    }
+  },
+  "time_heatmap": [],
+  "platform": {
+    "Windows": 5318.7,
+    "Mac": 12.0,
+    "Linux": 0.0,
+    "Steam Deck": 0.0
+  },
+  "pareto": [
+    {
+      "name": "Counter-Strike 2",
+      "hours": 1856.8,
+      "cumulative_pct": 34.8,
+      "rank": 1
+    },
+    {
+      "name": "Apex Legends",
+      "hours": 528.3,
+      "cumulative_pct": 44.7,
+      "rank": 2
+    },
+    {
+      "name": "Kingdom Come: Deliverance",
+      "hours": 369.6,
+      "cumulative_pct": 51.6,
+      "rank": 3
+    },
+    {
+      "name": "Mount & Blade II: Bannerlord",
+      "hours": 264.1,
+      "cumulative_pct": 56.5,
+      "rank": 4
+    },
+    {
+      "name": "Terraria",
+      "hours": 209.5,
+      "cumulative_pct": 60.4,
+      "rank": 5
+    },
+    {
+      "name": "Kingdom Come: Deliverance II",
+      "hours": 159.4,
+      "cumulative_pct": 63.4,
+      "rank": 6
+    },
+    {
+      "name": "Baldur's Gate 3",
+      "hours": 151.4,
+      "cumulative_pct": 66.3,
+      "rank": 7
+    },
+    {
+      "name": "Grand Theft Auto V Legacy",
+      "hours": 121.7,
+      "cumulative_pct": 68.5,
+      "rank": 8
+    },
+    {
+      "name": "Blender",
+      "hours": 109.5,
+      "cumulative_pct": 70.6,
+      "rank": 9
+    },
+    {
+      "name": "Wallpaper Engine",
+      "hours": 100.3,
+      "cumulative_pct": 72.5,
+      "rank": 10
+    },
+    {
+      "name": "Wartales",
+      "hours": 89.2,
+      "cumulative_pct": 74.1,
+      "rank": 11
+    },
+    {
+      "name": "Lethal Company",
+      "hours": 83.2,
+      "cumulative_pct": 75.7,
+      "rank": 12
+    },
+    {
+      "name": "MyDockFinder",
+      "hours": 65.8,
+      "cumulative_pct": 76.9,
+      "rank": 13
+    },
+    {
+      "name": "Mindustry",
+      "hours": 54.1,
+      "cumulative_pct": 77.9,
+      "rank": 14
+    },
+    {
+      "name": "PUBG: BATTLEGROUNDS",
+      "hours": 52.6,
+      "cumulative_pct": 78.9,
+      "rank": 15
+    },
+    {
+      "name": "Warhammer 40,000: Rogue Trader",
+      "hours": 51.1,
+      "cumulative_pct": 79.9,
+      "rank": 16
+    },
+    {
+      "name": "The Witcher 3: Wild Hunt",
+      "hours": 50.3,
+      "cumulative_pct": 80.8,
+      "rank": 17
+    },
+    {
+      "name": "Palworld",
+      "hours": 49.3,
+      "cumulative_pct": 81.7,
+      "rank": 18
+    },
+    {
+      "name": "Battlefield™ V",
+      "hours": 47.8,
+      "cumulative_pct": 82.6,
+      "rank": 19
+    },
+    {
+      "name": "Kenshi",
+      "hours": 45.7,
+      "cumulative_pct": 83.5,
+      "rank": 20
+    },
+    {
+      "name": "Manor Lords",
+      "hours": 42.8,
+      "cumulative_pct": 84.3,
+      "rank": 21
+    },
+    {
+      "name": "Sintopia",
+      "hours": 37.7,
+      "cumulative_pct": 85.0,
+      "rank": 22
+    },
+    {
+      "name": "Noble Fates",
+      "hours": 36.4,
+      "cumulative_pct": 85.7,
+      "rank": 23
+    },
+    {
+      "name": "Grand Theft Auto IV: The Complete Edition",
+      "hours": 33.3,
+      "cumulative_pct": 86.3,
+      "rank": 24
+    },
+    {
+      "name": "Inscryption",
+      "hours": 31.8,
+      "cumulative_pct": 86.9,
+      "rank": 25
+    },
+    {
+      "name": "Age of Empires IV: Anniversary Edition",
+      "hours": 29.3,
+      "cumulative_pct": 87.5,
+      "rank": 26
+    },
+    {
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "hours": 28.5,
+      "cumulative_pct": 88.0,
+      "rank": 27
+    },
+    {
+      "name": "Battle Brothers",
+      "hours": 28.5,
+      "cumulative_pct": 88.5,
+      "rank": 28
+    },
+    {
+      "name": "Mount & Blade: Warband",
+      "hours": 27.9,
+      "cumulative_pct": 89.0,
+      "rank": 29
+    },
+    {
+      "name": "R.E.P.O.",
+      "hours": 27.3,
+      "cumulative_pct": 89.6,
+      "rank": 30
+    },
+    {
+      "name": "Noita",
+      "hours": 25.8,
+      "cumulative_pct": 90.0,
+      "rank": 31
+    },
+    {
+      "name": "Middle-earth™: Shadow of War™",
+      "hours": 22.5,
+      "cumulative_pct": 90.5,
+      "rank": 32
+    },
+    {
+      "name": "Sid Meier's Civilization VI",
+      "hours": 21.6,
+      "cumulative_pct": 90.9,
+      "rank": 33
+    },
+    {
+      "name": "Schedule I",
+      "hours": 21.6,
+      "cumulative_pct": 91.3,
+      "rank": 34
+    },
+    {
+      "name": "Enshrouded",
+      "hours": 21.0,
+      "cumulative_pct": 91.7,
+      "rank": 35
+    },
+    {
+      "name": "RUNNING WITH RIFLES",
+      "hours": 19.6,
+      "cumulative_pct": 92.0,
+      "rank": 36
+    },
+    {
+      "name": "Cities: Skylines",
+      "hours": 18.4,
+      "cumulative_pct": 92.4,
+      "rank": 37
+    },
+    {
+      "name": "Medieval Dynasty",
+      "hours": 18.1,
+      "cumulative_pct": 92.7,
+      "rank": 38
+    },
+    {
+      "name": "Escape From Duckov",
+      "hours": 17.6,
+      "cumulative_pct": 93.0,
+      "rank": 39
+    },
+    {
+      "name": "Sniper Elite 4",
+      "hours": 17.5,
+      "cumulative_pct": 93.4,
+      "rank": 40
+    },
+    {
+      "name": "Thronefall",
+      "hours": 14.8,
+      "cumulative_pct": 93.6,
+      "rank": 41
+    },
+    {
+      "name": "Deadlock",
+      "hours": 14.6,
+      "cumulative_pct": 93.9,
+      "rank": 42
+    },
+    {
+      "name": "Oriental Empires",
+      "hours": 12.9,
+      "cumulative_pct": 94.2,
+      "rank": 43
+    },
+    {
+      "name": "Inside the Backrooms",
+      "hours": 10.8,
+      "cumulative_pct": 94.4,
+      "rank": 44
+    },
+    {
+      "name": "Bad North: Jotunn Edition",
+      "hours": 10.7,
+      "cumulative_pct": 94.6,
+      "rank": 45
+    },
+    {
+      "name": "Don't Starve Together",
+      "hours": 10.5,
+      "cumulative_pct": 94.8,
+      "rank": 46
+    },
+    {
+      "name": "Super Auto Pets",
+      "hours": 9.1,
+      "cumulative_pct": 94.9,
+      "rank": 47
+    },
+    {
+      "name": "Rogue: Genesia",
+      "hours": 8.5,
+      "cumulative_pct": 95.1,
+      "rank": 48
+    },
+    {
+      "name": "Crashlands",
+      "hours": 8.2,
+      "cumulative_pct": 95.2,
+      "rank": 49
+    },
+    {
+      "name": "The Farmer Was Replaced",
+      "hours": 8.1,
+      "cumulative_pct": 95.4,
+      "rank": 50
+    },
+    {
+      "name": "Content Warning",
+      "hours": 7.8,
+      "cumulative_pct": 95.5,
+      "rank": 51
+    },
+    {
+      "name": "Aimlabs",
+      "hours": 7.7,
+      "cumulative_pct": 95.7,
+      "rank": 52
+    },
+    {
+      "name": "Need for Speed™ Payback",
+      "hours": 7.5,
+      "cumulative_pct": 95.8,
+      "rank": 53
+    },
+    {
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "hours": 7.4,
+      "cumulative_pct": 96.0,
+      "rank": 54
+    },
+    {
+      "name": "Thief Simulator",
+      "hours": 7.4,
+      "cumulative_pct": 96.1,
+      "rank": 55
+    },
+    {
+      "name": "Halo: The Master Chief Collection",
+      "hours": 7.3,
+      "cumulative_pct": 96.2,
+      "rank": 56
+    },
+    {
+      "name": "Goobies",
+      "hours": 7.2,
+      "cumulative_pct": 96.4,
+      "rank": 57
+    },
+    {
+      "name": "Forza Horizon 4",
+      "hours": 6.9,
+      "cumulative_pct": 96.5,
+      "rank": 58
+    },
+    {
+      "name": "Left 4 Dead 2",
+      "hours": 6.8,
+      "cumulative_pct": 96.6,
+      "rank": 59
+    },
+    {
+      "name": "Mount & Blade: With Fire and Sword",
+      "hours": 6.8,
+      "cumulative_pct": 96.8,
+      "rank": 60
+    },
+    {
+      "name": "Crosshair X",
+      "hours": 6.4,
+      "cumulative_pct": 96.9,
+      "rank": 61
+    },
+    {
+      "name": "Wolfenstein II: The New Colossus",
+      "hours": 5.7,
+      "cumulative_pct": 97.0,
+      "rank": 62
+    },
+    {
+      "name": "Grand Theft Auto V Enhanced",
+      "hours": 5.6,
+      "cumulative_pct": 97.1,
+      "rank": 63
+    },
+    {
+      "name": "The Forest",
+      "hours": 5.3,
+      "cumulative_pct": 97.2,
+      "rank": 64
+    },
+    {
+      "name": "Warhammer: Vermintide 2",
+      "hours": 4.9,
+      "cumulative_pct": 97.3,
+      "rank": 65
+    },
+    {
+      "name": "Dyson Sphere Program",
+      "hours": 4.9,
+      "cumulative_pct": 97.4,
+      "rank": 66
+    },
+    {
+      "name": "Rusty's Retirement",
+      "hours": 4.8,
+      "cumulative_pct": 97.5,
+      "rank": 67
+    },
+    {
+      "name": "Mount & Blade",
+      "hours": 4.7,
+      "cumulative_pct": 97.5,
+      "rank": 68
+    },
+    {
+      "name": "MineMogul",
+      "hours": 4.5,
+      "cumulative_pct": 97.6,
+      "rank": 69
+    },
+    {
+      "name": "Conan Exiles",
+      "hours": 4.3,
+      "cumulative_pct": 97.7,
+      "rank": 70
+    },
+    {
+      "name": "Thronebreaker: The Witcher Tales",
+      "hours": 4.3,
+      "cumulative_pct": 97.8,
+      "rank": 71
+    },
+    {
+      "name": "Oxygen Not Included",
+      "hours": 4.2,
+      "cumulative_pct": 97.9,
+      "rank": 72
+    },
+    {
+      "name": "MiSide",
+      "hours": 4.2,
+      "cumulative_pct": 98.0,
+      "rank": 73
+    },
+    {
+      "name": "Turmoil",
+      "hours": 4.2,
+      "cumulative_pct": 98.0,
+      "rank": 74
+    },
+    {
+      "name": "Barotrauma",
+      "hours": 4.0,
+      "cumulative_pct": 98.1,
+      "rank": 75
+    },
+    {
+      "name": "The Evil Within 2",
+      "hours": 4.0,
+      "cumulative_pct": 98.2,
+      "rank": 76
+    },
+    {
+      "name": "Yet Another Zombie Survivors",
+      "hours": 3.9,
+      "cumulative_pct": 98.3,
+      "rank": 77
+    },
+    {
+      "name": "Operation: Harsh Doorstop",
+      "hours": 3.8,
+      "cumulative_pct": 98.3,
+      "rank": 78
+    },
+    {
+      "name": "Draw & Guess",
+      "hours": 3.8,
+      "cumulative_pct": 98.4,
+      "rank": 79
+    },
+    {
+      "name": "Battlefield™ 1",
+      "hours": 3.5,
+      "cumulative_pct": 98.5,
+      "rank": 80
+    },
+    {
+      "name": "Firewatch",
+      "hours": 3.5,
+      "cumulative_pct": 98.5,
+      "rank": 81
+    },
+    {
+      "name": "Divinity: Original Sin 2",
+      "hours": 3.4,
+      "cumulative_pct": 98.6,
+      "rank": 82
+    },
+    {
+      "name": "College Kings - The Complete Season",
+      "hours": 3.2,
+      "cumulative_pct": 98.7,
+      "rank": 83
+    },
+    {
+      "name": "DEVOUR",
+      "hours": 3.1,
+      "cumulative_pct": 98.7,
+      "rank": 84
+    },
+    {
+      "name": "HITMAN™ 2",
+      "hours": 3.0,
+      "cumulative_pct": 98.8,
+      "rank": 85
+    },
+    {
+      "name": "UBOAT",
+      "hours": 2.7,
+      "cumulative_pct": 98.8,
+      "rank": 86
+    },
+    {
+      "name": "Need for Speed™ Heat ",
+      "hours": 2.5,
+      "cumulative_pct": 98.9,
+      "rank": 87
+    },
+    {
+      "name": "Command & Conquer™ Remastered Collection",
+      "hours": 2.5,
+      "cumulative_pct": 98.9,
+      "rank": 88
+    },
+    {
+      "name": "Outlast 2",
+      "hours": 2.4,
+      "cumulative_pct": 99.0,
+      "rank": 89
+    },
+    {
+      "name": "Metro 2033 Redux",
+      "hours": 2.3,
+      "cumulative_pct": 99.0,
+      "rank": 90
+    },
+    {
+      "name": "Day of Defeat: Source",
+      "hours": 2.3,
+      "cumulative_pct": 99.0,
+      "rank": 91
+    },
+    {
+      "name": "Sheltered",
+      "hours": 2.3,
+      "cumulative_pct": 99.1,
+      "rank": 92
+    },
+    {
+      "name": "Half-Life 2",
+      "hours": 2.2,
+      "cumulative_pct": 99.1,
+      "rank": 93
+    },
+    {
+      "name": "Portal 2",
+      "hours": 2.2,
+      "cumulative_pct": 99.2,
+      "rank": 94
+    },
+    {
+      "name": "Shift Happens",
+      "hours": 2.2,
+      "cumulative_pct": 99.2,
+      "rank": 95
+    },
+    {
+      "name": "Stronghold Crusader HD",
+      "hours": 2.2,
+      "cumulative_pct": 99.2,
+      "rank": 96
+    },
+    {
+      "name": "Euro Truck Simulator 2",
+      "hours": 2.1,
+      "cumulative_pct": 99.3,
+      "rank": 97
+    },
+    {
+      "name": "Baldur's Gate II: Enhanced Edition",
+      "hours": 2.1,
+      "cumulative_pct": 99.3,
+      "rank": 98
+    },
+    {
+      "name": "Baldur's Gate: Enhanced Edition",
+      "hours": 2.1,
+      "cumulative_pct": 99.4,
+      "rank": 99
+    },
+    {
+      "name": "Fall Guys",
+      "hours": 2.1,
+      "cumulative_pct": 99.4,
+      "rank": 100
+    },
+    {
+      "name": "PAYDAY 2",
+      "hours": 2.0,
+      "cumulative_pct": 99.4,
+      "rank": 101
+    },
+    {
+      "name": "Mortal Sin",
+      "hours": 2.0,
+      "cumulative_pct": 99.5,
+      "rank": 102
+    },
+    {
+      "name": "Counter-Strike:Global Offensive",
+      "hours": 2.0,
+      "cumulative_pct": 99.5,
+      "rank": 103
+    },
+    {
+      "name": "Timberborn",
+      "hours": 2.0,
+      "cumulative_pct": 99.6,
+      "rank": 104
+    },
+    {
+      "name": "Capcom Arcade Stadium",
+      "hours": 1.9,
+      "cumulative_pct": 99.6,
+      "rank": 105
+    },
+    {
+      "name": "Beholder",
+      "hours": 1.9,
+      "cumulative_pct": 99.6,
+      "rank": 106
+    },
+    {
+      "name": "Revenge on gold diggers ",
+      "hours": 1.5,
+      "cumulative_pct": 99.7,
+      "rank": 107
+    },
+    {
+      "name": "These Doomed Isles: The First God",
+      "hours": 1.3,
+      "cumulative_pct": 99.7,
+      "rank": 108
+    },
+    {
+      "name": "Unturned",
+      "hours": 1.3,
+      "cumulative_pct": 99.7,
+      "rank": 109
+    },
+    {
+      "name": "Knightfall: A Daring Journey",
+      "hours": 1.2,
+      "cumulative_pct": 99.7,
+      "rank": 110
+    },
+    {
+      "name": "War of Banners Demo",
+      "hours": 1.2,
+      "cumulative_pct": 99.7,
+      "rank": 111
+    },
+    {
+      "name": "SUMMERHOUSE",
+      "hours": 1.0,
+      "cumulative_pct": 99.8,
+      "rank": 112
+    },
+    {
+      "name": "Surviving Mars",
+      "hours": 1.0,
+      "cumulative_pct": 99.8,
+      "rank": 113
+    },
+    {
+      "name": "Divinity: Original Sin Enhanced Edition",
+      "hours": 0.9,
+      "cumulative_pct": 99.8,
+      "rank": 114
+    },
+    {
+      "name": "Dark and Darker",
+      "hours": 0.9,
+      "cumulative_pct": 99.8,
+      "rank": 115
+    },
+    {
+      "name": "Halls of Torment Prelude",
+      "hours": 0.8,
+      "cumulative_pct": 99.8,
+      "rank": 116
+    },
+    {
+      "name": "Pacify",
+      "hours": 0.8,
+      "cumulative_pct": 99.9,
+      "rank": 117
+    },
+    {
+      "name": "War for the Overworld",
+      "hours": 0.6,
+      "cumulative_pct": 99.9,
+      "rank": 118
+    },
+    {
+      "name": "Fallout 4",
+      "hours": 0.6,
+      "cumulative_pct": 99.9,
+      "rank": 119
+    },
+    {
+      "name": "Drawful 2",
+      "hours": 0.6,
+      "cumulative_pct": 99.9,
+      "rank": 120
+    },
+    {
+      "name": "Goose Goose Duck",
+      "hours": 0.6,
+      "cumulative_pct": 99.9,
+      "rank": 121
+    },
+    {
+      "name": "KARDS - The WWII Card Game",
+      "hours": 0.6,
+      "cumulative_pct": 99.9,
+      "rank": 122
+    },
+    {
+      "name": "Counter-Strike: Source",
+      "hours": 0.5,
+      "cumulative_pct": 99.9,
+      "rank": 123
+    },
+    {
+      "name": "ARK: Survival Evolved",
+      "hours": 0.5,
+      "cumulative_pct": 99.9,
+      "rank": 124
+    },
+    {
+      "name": "Counter-Strike: Condition Zero",
+      "hours": 0.4,
+      "cumulative_pct": 99.9,
+      "rank": 125
+    },
+    {
+      "name": "World of Warships",
+      "hours": 0.4,
+      "cumulative_pct": 99.9,
+      "rank": 126
+    },
+    {
+      "name": "The Survivalists",
+      "hours": 0.4,
+      "cumulative_pct": 99.9,
+      "rank": 127
+    },
+    {
+      "name": "KUNKUN Defender",
+      "hours": 0.4,
+      "cumulative_pct": 100.0,
+      "rank": 128
+    },
+    {
+      "name": "Gas Station Simulator: Prologue - Early Days",
+      "hours": 0.3,
+      "cumulative_pct": 100.0,
+      "rank": 129
+    },
+    {
+      "name": "Heroes & Generals",
+      "hours": 0.3,
+      "cumulative_pct": 100.0,
+      "rank": 130
+    },
+    {
+      "name": "Life is Feudal: Forest Village",
+      "hours": 0.3,
+      "cumulative_pct": 100.0,
+      "rank": 131
+    },
+    {
+      "name": "Dagon",
+      "hours": 0.2,
+      "cumulative_pct": 100.0,
+      "rank": 132
+    },
+    {
+      "name": "Alien Swarm: Reactive Drop",
+      "hours": 0.2,
+      "cumulative_pct": 100.0,
+      "rank": 133
+    },
+    {
+      "name": "Super Bunny Man",
+      "hours": 0.2,
+      "cumulative_pct": 100.0,
+      "rank": 134
+    },
+    {
+      "name": "X4: Foundations",
+      "hours": 0.2,
+      "cumulative_pct": 100.0,
+      "rank": 135
+    },
+    {
+      "name": "VTube Studio",
+      "hours": 0.2,
+      "cumulative_pct": 100.0,
+      "rank": 136
+    },
+    {
+      "name": "iREC",
+      "hours": 0.1,
+      "cumulative_pct": 100.0,
+      "rank": 137
+    },
+    {
+      "name": "Rubber Bandits: Summer Prologue",
+      "hours": 0.1,
+      "cumulative_pct": 100.0,
+      "rank": 138
+    },
+    {
+      "name": "Celestial Empire Playtest",
+      "hours": 0.1,
+      "cumulative_pct": 100.0,
+      "rank": 139
+    },
+    {
+      "name": "Call of Duty®",
+      "hours": 0.1,
+      "cumulative_pct": 100.0,
+      "rank": 140
+    },
+    {
+      "name": "Stronghold Crusader Extreme HD",
+      "hours": 0.1,
+      "cumulative_pct": 100.0,
+      "rank": 141
+    },
+    {
+      "name": "Tom Clancy's Rainbow Six Siege - Test Server",
+      "hours": 0.1,
+      "cumulative_pct": 100.0,
+      "rank": 142
+    },
+    {
+      "name": "Dark and Darker Playtest",
+      "hours": 0.0,
+      "cumulative_pct": 100.0,
+      "rank": 143
+    }
+  ],
+  "weekday": [
+    {
+      "day": "Mon",
+      "minutes": 0
+    },
+    {
+      "day": "Tue",
+      "minutes": 0
+    },
+    {
+      "day": "Wed",
+      "minutes": 0
+    },
+    {
+      "day": "Thu",
+      "minutes": 0
+    },
+    {
+      "day": "Fri",
+      "minutes": 0
+    },
+    {
+      "day": "Sat",
+      "minutes": 0
+    },
+    {
+      "day": "Sun",
+      "minutes": 0
+    }
+  ],
+  "stats": {
+    "total_games": 172,
+    "played_games": 143,
+    "dust_rate": 16.9,
+    "never_played": 29,
+    "loyalty_score": 40,
+    "loyalty_label": "Explorer",
+    "peak_day": {
+      "date": "2026-04-27",
+      "minutes": 0
+    },
+    "longest_streak": {
+      "days": 0,
+      "start": null,
+      "end": null
+    }
+  },
+  "achievements": [
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "playtime_hours": 1856.8,
+      "total": 1,
+      "unlocked": 1,
+      "pct": 100,
+      "rare": [
+        {
+          "name": "PLAY_CS2",
+          "global_pct": 38.7
+        }
+      ]
+    },
+    {
+      "appid": 1172470,
+      "name": "Apex Legends",
+      "playtime_hours": 528.3,
+      "total": 12,
+      "unlocked": 11,
+      "pct": 92,
+      "rare": [
+        {
+          "name": "APEX_LEGEND_11",
+          "global_pct": 14.8
+        },
+        {
+          "name": "WELL_ROUNDED_5",
+          "global_pct": 16.4
+        },
+        {
+          "name": "THE_PLAYER_0",
+          "global_pct": 23.8
+        },
+        {
+          "name": "APEX_SUPPORT_9",
+          "global_pct": 27.5
+        },
+        {
+          "name": "DECKED_OUT_1",
+          "global_pct": 28.4
+        }
+      ]
+    },
+    {
+      "appid": 379430,
+      "name": "Kingdom Come: Deliverance",
+      "playtime_hours": 369.6,
+      "total": 82,
+      "unlocked": 82,
+      "pct": 100,
+      "rare": [
+        {
+          "name": "Merciful",
+          "global_pct": 0.9
+        },
+        {
+          "name": "Pilgrim",
+          "global_pct": 1.0
+        },
+        {
+          "name": "TisButAScratch",
+          "global_pct": 1.0
+        },
+        {
+          "name": "TrialAndError",
+          "global_pct": 1.0
+        },
+        {
+          "name": "Virgin",
+          "global_pct": 1.2
+        }
+      ]
+    },
+    {
+      "appid": 261550,
+      "name": "Mount & Blade II: Bannerlord",
+      "playtime_hours": 264.1,
+      "total": 50,
+      "unlocked": 6,
+      "pct": 12,
+      "rare": [
+        {
+          "name": "Entrepreneur",
+          "global_pct": 23.1
+        },
+        {
+          "name": "King Solomon",
+          "global_pct": 24.6
+        },
+        {
+          "name": "Lawmaker",
+          "global_pct": 28.4
+        },
+        {
+          "name": "Bannerlord",
+          "global_pct": 29.1
+        },
+        {
+          "name": "Trained",
+          "global_pct": 34.9
+        }
+      ]
+    },
+    {
+      "appid": 105600,
+      "name": "Terraria",
+      "playtime_hours": 209.5,
+      "total": 137,
+      "unlocked": 87,
+      "pct": 64,
+      "rare": [
+        {
+          "name": "ORGANIZED_CHAOS",
+          "global_pct": 1.5
+        },
+        {
+          "name": "CONSERVATIONIST",
+          "global_pct": 1.9
+        },
+        {
+          "name": "TO_INFINITY_AND_BEYOND",
+          "global_pct": 5.4
+        },
+        {
+          "name": "GAIN_TORCH_GODS_FAVOR",
+          "global_pct": 10.3
+        },
+        {
+          "name": "GET_ANKH_SHIELD",
+          "global_pct": 11.6
+        }
+      ]
+    },
+    {
+      "appid": 1771300,
+      "name": "Kingdom Come: Deliverance II",
+      "playtime_hours": 159.4,
+      "total": 83,
+      "unlocked": 42,
+      "pct": 51,
+      "rare": [
+        {
+          "name": "7",
+          "global_pct": 2.0
+        },
+        {
+          "name": "46",
+          "global_pct": 8.4
+        },
+        {
+          "name": "32",
+          "global_pct": 9.4
+        },
+        {
+          "name": "60",
+          "global_pct": 9.4
+        },
+        {
+          "name": "6",
+          "global_pct": 9.5
+        }
+      ]
+    },
+    {
+      "appid": 1086940,
+      "name": "Baldur's Gate 3",
+      "playtime_hours": 151.4,
+      "total": 54,
+      "unlocked": 22,
+      "pct": 41,
+      "rare": [
+        {
+          "name": "BG3_Quest19",
+          "global_pct": 17.0
+        },
+        {
+          "name": "BG3_Quest34",
+          "global_pct": 23.4
+        },
+        {
+          "name": "BG3_Quest06",
+          "global_pct": 24.7
+        },
+        {
+          "name": "BG3_Quest21",
+          "global_pct": 26.0
+        },
+        {
+          "name": "BG3_Quest17",
+          "global_pct": 29.5
+        }
+      ]
+    },
+    {
+      "appid": 271590,
+      "name": "Grand Theft Auto V Legacy",
+      "playtime_hours": 121.7,
+      "total": 77,
+      "unlocked": 22,
+      "pct": 29,
+      "rare": [
+        {
+          "name": "ACH23",
+          "global_pct": 11.0
+        },
+        {
+          "name": "ACH12",
+          "global_pct": 12.5
+        },
+        {
+          "name": "ACHR4",
+          "global_pct": 13.5
+        },
+        {
+          "name": "ACH18",
+          "global_pct": 14.8
+        },
+        {
+          "name": "ACH25",
+          "global_pct": 20.9
+        }
+      ]
+    },
+    {
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "playtime_hours": 100.3,
+      "total": 17,
+      "unlocked": 12,
+      "pct": 71,
+      "rare": [
+        {
+          "name": "POST_VIDEO_WALLPAPER",
+          "global_pct": 2.0
+        },
+        {
+          "name": "POST_SCENE_WALLPAPER",
+          "global_pct": 2.3
+        },
+        {
+          "name": "USE_TEMPLATE_3D",
+          "global_pct": 3.7
+        },
+        {
+          "name": "FAVORITE_100_WALLPAPERS",
+          "global_pct": 4.1
+        },
+        {
+          "name": "FAVORITE_50_WALLPAPERS",
+          "global_pct": 5.5
+        }
+      ]
+    },
+    {
+      "appid": 1527950,
+      "name": "Wartales",
+      "playtime_hours": 89.2,
+      "total": 235,
+      "unlocked": 63,
+      "pct": 27,
+      "rare": [
+        {
+          "name": "grinmeer_setting_completed",
+          "global_pct": 8.4
+        },
+        {
+          "name": "grinmeer_ambassy_enter",
+          "global_pct": 8.6
+        },
+        {
+          "name": "gosenberg_ruins_done",
+          "global_pct": 10.5
+        },
+        {
+          "name": "grinmeer_champion_completed",
+          "global_pct": 11.6
+        },
+        {
+          "name": "team_defeated_grinmeer",
+          "global_pct": 11.6
+        }
+      ]
+    },
+    {
+      "appid": 1787090,
+      "name": "MyDockFinder",
+      "playtime_hours": 65.8,
+      "total": 12,
+      "unlocked": 7,
+      "pct": 58,
+      "rare": [
+        {
+          "name": "ACT_LOGO",
+          "global_pct": 22.4
+        },
+        {
+          "name": "ACT_INI",
+          "global_pct": 23.7
+        },
+        {
+          "name": "ACT_EDITICO",
+          "global_pct": 26.1
+        },
+        {
+          "name": "ACT_TRAYICO",
+          "global_pct": 38.1
+        },
+        {
+          "name": "ACT_SHUTDOWN",
+          "global_pct": 42.5
+        }
+      ]
+    },
+    {
+      "appid": 1127400,
+      "name": "Mindustry",
+      "playtime_hours": 54.1,
+      "total": 87,
+      "unlocked": 18,
+      "pct": 21,
+      "rare": [
+        {
+          "name": "enablePixelation",
+          "global_pct": 15.1
+        },
+        {
+          "name": "useFlameAmmo",
+          "global_pct": 22.2
+        },
+        {
+          "name": "dieExclusion",
+          "global_pct": 23.2
+        },
+        {
+          "name": "shockWetEnemy",
+          "global_pct": 26.9
+        },
+        {
+          "name": "drop10kitems",
+          "global_pct": 27.4
+        }
+      ]
+    },
+    {
+      "appid": 578080,
+      "name": "PUBG: BATTLEGROUNDS",
+      "playtime_hours": 52.6,
+      "total": 37,
+      "unlocked": 17,
+      "pct": 46,
+      "rare": [
+        {
+          "name": "ACHIVE002",
+          "global_pct": 21.3
+        },
+        {
+          "name": "ACHIVE028",
+          "global_pct": 25.3
+        },
+        {
+          "name": "ACHIVE016",
+          "global_pct": 27.4
+        },
+        {
+          "name": "ACHIVE008",
+          "global_pct": 29.3
+        },
+        {
+          "name": "ACHIVE010",
+          "global_pct": 29.6
+        }
+      ]
+    },
+    {
+      "appid": 2186680,
+      "name": "Warhammer 40,000: Rogue Trader",
+      "playtime_hours": 51.1,
+      "total": 106,
+      "unlocked": 22,
+      "pct": 21,
+      "rare": [
+        {
+          "name": "53_GardensOfMadness",
+          "global_pct": 17.6
+        },
+        {
+          "name": "55_ReturningTheBoots",
+          "global_pct": 21.4
+        },
+        {
+          "name": "50_Whodunit",
+          "global_pct": 21.8
+        },
+        {
+          "name": "59_ThePossessedShip",
+          "global_pct": 22.6
+        },
+        {
+          "name": "05_TheComorraghSurvivors",
+          "global_pct": 27.1
+        }
+      ]
+    },
+    {
+      "appid": 292030,
+      "name": "The Witcher 3: Wild Hunt",
+      "playtime_hours": 50.3,
+      "total": 78,
+      "unlocked": 14,
+      "pct": 18,
+      "rare": [
+        {
+          "name": "POWER_OVERWHELMING",
+          "global_pct": 5.1
+        },
+        {
+          "name": "NECROMANCER",
+          "global_pct": 29.3
+        },
+        {
+          "name": "SHRIEKER",
+          "global_pct": 30.6
+        },
+        {
+          "name": "FRIEND_IN_NEED",
+          "global_pct": 30.8
+        },
+        {
+          "name": "TRIPLE_THREAT",
+          "global_pct": 31.4
+        }
+      ]
+    },
+    {
+      "appid": 1623730,
+      "name": "Palworld",
+      "playtime_hours": 49.3,
+      "total": 57,
+      "unlocked": 9,
+      "pct": 16,
+      "rare": [
+        {
+          "name": "Pal_Achievement_27",
+          "global_pct": 18.4
+        },
+        {
+          "name": "Pal_Achievement_40",
+          "global_pct": 25.3
+        },
+        {
+          "name": "Pal_Achievement_17",
+          "global_pct": 27.6
+        },
+        {
+          "name": "Pal_Achievement_2",
+          "global_pct": 41.1
+        },
+        {
+          "name": "Pal_Achievement_9",
+          "global_pct": 59.5
+        }
+      ]
+    },
+    {
+      "appid": 1238810,
+      "name": "Battlefield™ V",
+      "playtime_hours": 47.8,
+      "total": 21,
+      "unlocked": 11,
+      "pct": 52,
+      "rare": [
+        {
+          "name": "Achievement_GOSCC_6",
+          "global_pct": 14.4
+        },
+        {
+          "name": "Achievement_GOSCC_5",
+          "global_pct": 15.9
+        },
+        {
+          "name": "Achievement_GOSCC_14",
+          "global_pct": 22.9
+        },
+        {
+          "name": "Achievement_GOSCC_4",
+          "global_pct": 24.7
+        },
+        {
+          "name": "Achievement_GOSCC_18",
+          "global_pct": 25.2
+        }
+      ]
+    }
+  ],
+  "game_network": {
+    "nodes": [
+      "Valheim",
+      "Counter-Strike 2",
+      "Apex Legends",
+      "Grand Theft Auto V Enhanced",
+      "War of Banners Demo",
+      "Battle Brothers",
+      "Sintopia",
+      "War for the Overworld"
+    ],
+    "links": [
+      {
+        "source": "Counter-Strike 2",
+        "target": "War for the Overworld",
+        "strength": 1
+      },
+      {
+        "source": "Counter-Strike 2",
+        "target": "Battle Brothers",
+        "strength": 1
+      },
+      {
+        "source": "Counter-Strike 2",
+        "target": "Valheim",
+        "strength": 1
+      },
+      {
+        "source": "Counter-Strike 2",
+        "target": "Apex Legends",
+        "strength": 1
+      },
+      {
+        "source": "Counter-Strike 2",
+        "target": "Sintopia",
+        "strength": 1
+      },
+      {
+        "source": "Counter-Strike 2",
+        "target": "Grand Theft Auto V Enhanced",
+        "strength": 1
+      },
+      {
+        "source": "Counter-Strike 2",
+        "target": "War of Banners Demo",
+        "strength": 1
+      },
+      {
+        "source": "War for the Overworld",
+        "target": "Battle Brothers",
+        "strength": 1
+      },
+      {
+        "source": "War for the Overworld",
+        "target": "Valheim",
+        "strength": 1
+      },
+      {
+        "source": "War for the Overworld",
+        "target": "Apex Legends",
+        "strength": 1
+      },
+      {
+        "source": "War for the Overworld",
+        "target": "Sintopia",
+        "strength": 1
+      },
+      {
+        "source": "War for the Overworld",
+        "target": "Grand Theft Auto V Enhanced",
+        "strength": 1
+      },
+      {
+        "source": "War for the Overworld",
+        "target": "War of Banners Demo",
+        "strength": 1
+      },
+      {
+        "source": "Battle Brothers",
+        "target": "Valheim",
+        "strength": 1
+      },
+      {
+        "source": "Battle Brothers",
+        "target": "Apex Legends",
+        "strength": 1
+      },
+      {
+        "source": "Battle Brothers",
+        "target": "Sintopia",
+        "strength": 1
+      },
+      {
+        "source": "Battle Brothers",
+        "target": "Grand Theft Auto V Enhanced",
+        "strength": 1
+      },
+      {
+        "source": "Battle Brothers",
+        "target": "War of Banners Demo",
+        "strength": 1
+      },
+      {
+        "source": "Valheim",
+        "target": "Apex Legends",
+        "strength": 1
+      },
+      {
+        "source": "Valheim",
+        "target": "Sintopia",
+        "strength": 1
+      },
+      {
+        "source": "Valheim",
+        "target": "Grand Theft Auto V Enhanced",
+        "strength": 1
+      },
+      {
+        "source": "Valheim",
+        "target": "War of Banners Demo",
+        "strength": 1
+      },
+      {
+        "source": "Apex Legends",
+        "target": "Sintopia",
+        "strength": 1
+      },
+      {
+        "source": "Apex Legends",
+        "target": "Grand Theft Auto V Enhanced",
+        "strength": 1
+      },
+      {
+        "source": "Apex Legends",
+        "target": "War of Banners Demo",
+        "strength": 1
+      },
+      {
+        "source": "Sintopia",
+        "target": "Grand Theft Auto V Enhanced",
+        "strength": 1
+      },
+      {
+        "source": "Sintopia",
+        "target": "War of Banners Demo",
+        "strength": 1
+      },
+      {
+        "source": "Grand Theft Auto V Enhanced",
+        "target": "War of Banners Demo",
+        "strength": 1
+      }
+    ]
+  },
+  "genres": [
+    {
+      "genre": "Action",
+      "games": 31,
+      "hours": 4194.8
+    },
+    {
+      "genre": "Free To Play",
+      "games": 4,
+      "hours": 2446.7
+    },
+    {
+      "genre": "Adventure",
+      "games": 22,
+      "hours": 2082.3
+    },
+    {
+      "genre": "RPG",
+      "games": 22,
+      "hours": 1693.1
+    },
+    {
+      "genre": "Indie",
+      "games": 24,
+      "hours": 1198.0
+    },
+    {
+      "genre": "Strategy",
+      "games": 21,
+      "hours": 987.5
+    },
+    {
+      "genre": "Simulation",
+      "games": 14,
+      "hours": 581.4
+    },
+    {
+      "genre": "Early Access",
+      "games": 8,
+      "hours": 292.4
+    },
+    {
+      "genre": "Animation & Modeling",
+      "games": 2,
+      "hours": 209.8
+    },
+    {
+      "genre": "Design & Illustration",
+      "games": 2,
+      "hours": 209.8
+    },
+    {
+      "genre": "Utilities",
+      "games": 2,
+      "hours": 166.1
+    },
+    {
+      "genre": "Casual",
+      "games": 3,
+      "hours": 116.9
+    },
+    {
+      "genre": "Video Production",
+      "games": 1,
+      "hours": 109.5
+    },
+    {
+      "genre": "Photo Editing",
+      "games": 1,
+      "hours": 100.3
+    },
+    {
+      "genre": "Massively Multiplayer",
+      "games": 1,
+      "hours": 52.6
+    }
+  ],
+  "game_weather": {
+    "forecast": "storm",
+    "top_game": "Sintopia",
+    "games": [
+      {
+        "name": "Sintopia",
+        "hours": 37.7
+      },
+      {
+        "name": "Battle Brothers",
+        "hours": 28.5
+      },
+      {
+        "name": "Grand Theft Auto V Enhanced",
+        "hours": 5.6
+      },
+      {
+        "name": "Counter-Strike 2",
+        "hours": 4.6
+      },
+      {
+        "name": "Apex Legends",
+        "hours": 4.2
+      }
+    ]
+  },
+  "weekly_digest": []
+}

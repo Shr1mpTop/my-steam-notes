@@ -1,0 +1,115 @@
+export interface DashboardData {
+  updated_at: string;
+  player: PlayerInfo;
+  milestone: MilestoneData;
+  game_cloud: GameCloudItem[];
+  recent_activity: RecentActivityItem[];
+  heatmap: Record<string, HeatmapDay>;
+  time_heatmap: TimeHeatmapItem[];
+  platform: Record<string, number>;
+  pareto: ParetoItem[];
+  weekday: WeekdayItem[];
+  stats: StatsData;
+  achievements: AchievementGame[];
+  game_network: GameNetworkData;
+  genres: GenreItem[];
+  game_weather: GameWeatherData;
+  weekly_digest: WeeklyDigestItem[];
+}
+
+export interface PlayerInfo {
+  personaname: string;
+  online: boolean;
+  currently_playing: string;
+  level: number;
+}
+
+export interface MilestoneData {
+  total_hours: number;
+  movies: number;
+  books: number;
+  walking_km: number;
+}
+
+export interface GameCloudItem {
+  appid: number;
+  name: string;
+  playtime_hours: number;
+  img_icon_url: string;
+  rtime_last_played: number;
+}
+
+export interface RecentActivityItem {
+  appid: number;
+  name: string;
+  playtime_2weeks_hours: number;
+  playtime_forever_hours: number;
+}
+
+export interface HeatmapDay {
+  online_minutes: number;
+  games: Record<string, number>;
+}
+
+export interface TimeHeatmapItem {
+  dow: number;
+  hour: number;
+  count: number;
+}
+
+export interface ParetoItem {
+  name: string;
+  hours: number;
+  cumulative_pct: number;
+  rank: number;
+}
+
+export interface WeekdayItem {
+  day: string;
+  minutes: number;
+}
+
+export interface StatsData {
+  total_games: number;
+  played_games: number;
+  dust_rate: number;
+  never_played: number;
+  loyalty_score: number;
+  loyalty_label: string;
+  peak_day: { date: string; minutes: number } | null;
+  longest_streak: { days: number; start: string | null; end: string | null };
+}
+
+export interface AchievementGame {
+  appid: number;
+  name: string;
+  playtime_hours: number;
+  total: number;
+  unlocked: number;
+  pct: number;
+  rare: { name: string; global_pct: number }[];
+}
+
+export interface GameNetworkData {
+  nodes: string[];
+  links: { source: string; target: string; strength: number }[];
+}
+
+export interface GenreItem {
+  genre: string;
+  games: number;
+  hours: number;
+}
+
+export interface GameWeatherData {
+  forecast: string;
+  top_game: string;
+  games: { name: string; hours: number }[];
+}
+
+export interface WeeklyDigestItem {
+  dates: string[];
+  total_hours: number;
+  games_count: number;
+  top_games: string[];
+}
