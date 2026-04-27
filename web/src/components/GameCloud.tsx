@@ -19,23 +19,23 @@ interface Node {
   x: number;
   y: number;
   rank: number;
-  opacity: number;
 }
 
 export function GameCloud({ games }: Props) {
   const width = 800, height = 560;
   const [nodes, setNodes] = useState<Node[]>([]);
+  const [hover, setHover] = useState<{ x: number; y: number; name: string; hours: number; rank: number } | null>(null);
   const rafRef = useRef<number>(0);
-  const simRef = useRef<ReturnType<typeof forceSimulation<Node>> | null>(null);
 
   const maxHours = games[0]?.playtime_hours ?? 1;
 
-  // Build nodes from ALL games
   const allNodes: Node[] = games.map((game, i) => {
-    const logR = Math.log(game.playtime_hours + 1) / Math.log(maxHours + 1);
+    // Aggressive scaling: top game = 60px radius, smallest = 4px
+    // Linear ratio gives strong visual contrast
+    const ratio = game.playtime_hours / maxHours;
     const radius = i === 0
-      ? 52
-      : Math.max(5, Math.round(Math.pow(logR, 0.55) * 36));
+      ? 60
+      : Math.max(4, Math.round(ratio * 56));
     return {
       id: game.appid,
       game,
@@ -44,11 +44,9 @@ export function GameCloud({ games }: Props) {
       x: width / 2 + (Math.random() - 0.5) * 600,
       y: height / 2 + (Math.random() - 0.5) * 400,
       rank: i + 1,
-      opacity: 0.3 + 0.7 * (game.playtime_hours / maxHours),
     };
   });
 
-  // D3 force simulation
   useEffect(() => {
     if (!allNodes.length) return;
 
@@ -64,7 +62,6 @@ export function GameCloud({ games }: Props) {
       .alphaDecay(0.015)
       .velocityDecay(0.4)
       .on("tick", () => {
-        // Clamp to bounds
         for (const n of allNodes) {
           n.x = Math.max(n.radius, Math.min(width - n.radius, n.x));
           n.y = Math.max(n.radius, Math.min(height - n.radius, n.y));
@@ -72,13 +69,21 @@ export function GameCloud({ games }: Props) {
         setNodes([...allNodes]);
       });
 
-    simRef.current = sim;
-
     return () => {
       sim.stop();
       cancelAnimationFrame(rafRef.current);
     };
   }, [games]);
+
+  const handleMouseEnter = (n: Node) => {
+    setHover({
+      x: n.x,
+      y: n.y - n.radius - 12,
+      name: n.game.name,
+      hours: n.game.playtime_hours,
+      rank: n.rank,
+    });
+  };
 
   if (!games.length) return <p style={{ color: "#005500", fontFamily: "monospace" }}>No games data yet.</p>;
 
@@ -92,6 +97,7 @@ export function GameCloud({ games }: Props) {
         <div className="gravity-field">
           {nodes.map((n) => {
             const size = n.radius * 2;
+            const ratio = n.game.playtime_hours / maxHours;
             return (
               <div
                 key={n.id}
@@ -101,11 +107,12 @@ export function GameCloud({ games }: Props) {
                   height: size,
                   left: n.x - n.radius,
                   top: n.y - n.radius,
-                  opacity: n.opacity,
+                  opacity: 0.3 + 0.7 * ratio,
+                  zIndex: hover && hover.rank === n.rank ? 10 : 1,
                 }}
-                title={`${n.game.name}: ${n.game.playtime_hours}h`}
+                onMouseEnter={() => handleMouseEnter(n)}
+                onMouseLeave={() => setHover(null)}
               >
-                {n.rank <= 3 && <span className="cloud-rank">#{n.rank}</span>}
                 {n.game.img_icon_url ? (
                   <img
                     src={steamImgUrl(n.game.appid, n.game.img_icon_url)}
@@ -118,17 +125,24 @@ export function GameCloud({ games }: Props) {
                     {n.game.name[0]}
                   </span>
                 )}
-                {n.radius >= 36 && (
-                  <span className="cloud-label">
-                    {n.game.name.length > 12 ? n.game.name.slice(0, 11) + "…" : n.game.name}
-                    <br />
-                    {n.game.playtime_hours}h
-                  </span>
-                )}
               </div>
             );
           })}
         </div>
+
+        {hover && (
+          <div
+            className="cloud-tooltip"
+            style={{
+              left: Math.min(hover.x, width - 160),
+              top: Math.max(hover.y, 10),
+            }}
+          >
+            <span className="cloud-tooltip-rank">#{hover.rank}</span>
+            <span className="cloud-tooltip-name">{hover.name}</span>
+            <span className="cloud-tooltip-hours">{hover.hours}h</span>
+          </div>
+        )}
       </div>
     </div>
   );

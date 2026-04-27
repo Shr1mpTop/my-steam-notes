@@ -264,6 +264,31 @@ body::after {
   text-align: center; padding: 6px 2px 2px; pointer-events: none;
 }
 .cloud-letter { color: var(--text-dim); font-weight: 600; }
+
+/* Tooltip */
+.cloud-tooltip {
+  position: absolute;
+  background: rgba(0,10,0,0.92);
+  border: 1px solid var(--g);
+  padding: 6px 10px;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(0,255,65,0.15);
+  z-index: 20;
+}
+.cloud-tooltip-rank {
+  font-family: var(--font); font-size: 8px;
+  color: var(--text-dim); letter-spacing: 1px;
+  display: block; margin-bottom: 2px;
+}
+.cloud-tooltip-name {
+  font-family: var(--font); font-size: 11px;
+  color: var(--g); display: block;
+}
+.cloud-tooltip-hours {
+  font-family: var(--font); font-size: 9px;
+  color: var(--text-dim); display: block; margin-top: 1px;
+}
 .cloud-more { text-align: center; color: var(--text-dim); font-size: 10px; margin-top: 10px; }
 .cloud-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px; padding: 6px 0; }
 
