@@ -1,4 +1,5 @@
-import { useRef, useEffect, useMemo, useState } from "react";
+import { useRef, useEffect, useState } from "react";
+import { forceSimulation, forceManyBody, forceCollide, forceCenter } from "d3-force";
 import type { GameCloudItem } from "../types";
 
 interface Props {
@@ -10,196 +11,125 @@ function steamImgUrl(appid: number, iconHash: string) {
   return `https://media.steampowered.com/steamcommunity/public/images/apps/${appid}/${iconHash}.jpg`;
 }
 
-interface Body {
+interface Node {
+  id: number;
   game: GameCloudItem;
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
   radius: number;
   mass: number;
+  x: number;
+  y: number;
   rank: number;
+  opacity: number;
 }
 
 export function GameCloud({ games }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [bodies, setBodies] = useState<Body[]>([]);
+  const width = 800, height = 560;
+  const [nodes, setNodes] = useState<Node[]>([]);
   const rafRef = useRef<number>(0);
+  const simRef = useRef<ReturnType<typeof forceSimulation<Node>> | null>(null);
 
-  const top = useMemo(() => games.slice(0, 40), [games]);
-  const rest = useMemo(() => games.slice(40, 90), [games]);
   const maxHours = games[0]?.playtime_hours ?? 1;
 
-  // Initialize bodies
+  // Build nodes from ALL games
+  const allNodes: Node[] = games.map((game, i) => {
+    const logR = Math.log(game.playtime_hours + 1) / Math.log(maxHours + 1);
+    const radius = i === 0
+      ? 52
+      : Math.max(5, Math.round(Math.pow(logR, 0.55) * 36));
+    return {
+      id: game.appid,
+      game,
+      radius,
+      mass: Math.max(1, game.playtime_hours),
+      x: width / 2 + (Math.random() - 0.5) * 600,
+      y: height / 2 + (Math.random() - 0.5) * 400,
+      rank: i + 1,
+      opacity: 0.3 + 0.7 * (game.playtime_hours / maxHours),
+    };
+  });
+
+  // D3 force simulation
   useEffect(() => {
-    if (!top.length) return;
+    if (!allNodes.length) return;
 
-    const sorted = [...top].sort((a, b) => b.playtime_hours - a.playtime_hours);
-    const cx = 400, cy = 260;
-
-    const initial: Body[] = sorted.map((game, i) => {
-      const logR = Math.log(game.playtime_hours + 1) / Math.log(maxHours + 1);
-      const radius = i === 0 ? 56 : Math.max(10, Math.round(Math.pow(logR, 0.5) * 38));
-      const mass = Math.max(1, game.playtime_hours);
-
-      // Start scattered randomly
-      const angle = Math.random() * Math.PI * 2;
-      const dist = 100 + Math.random() * 250;
-      return {
-        game,
-        x: cx + Math.cos(angle) * dist,
-        y: cy + Math.sin(angle) * dist,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        radius,
-        mass,
-        rank: i + 1,
-      };
-    });
-
-    setBodies(initial);
-  }, [top, maxHours]);
-
-  // Physics simulation
-  useEffect(() => {
-    if (!bodies.length) return;
-
-    const G = 800;        // gravitational constant
-    const DAMPING = 0.92;  // velocity damping per frame
-    const REPULSE = 1.5;   // collision repulsion strength
-    const CENTER_PULL = 0.00004; // gentle pull toward center
-    const cx = 400, cy = 260;
-
-    let frame = 0;
-    const maxFrames = 300;
-    let current = [...bodies];
-
-    function step() {
-      frame++;
-      const next = current.map((b, i) => {
-        let fx = 0, fy = 0;
-
-        for (let j = 0; j < current.length; j++) {
-          if (i === j) continue;
-          const other = current[j];
-          const dx = other.x - b.x;
-          const dy = other.y - b.y;
-          const distSq = dx * dx + dy * dy;
-          const dist = Math.sqrt(distSq) || 1;
-
-          // Gravitational attraction: F = G * m1 * m2 / r^2
-          const minDist = b.radius + other.radius;
-          if (dist > minDist * 0.5) {
-            const force = G * b.mass * other.mass / (distSq + 100);
-            fx += (dx / dist) * force / b.mass;
-            fy += (dy / dist) * force / b.mass;
-          }
-
-          // Collision repulsion
-          const overlap = minDist - dist;
-          if (overlap > 0) {
-            const repulse = overlap * REPULSE;
-            fx -= (dx / dist) * repulse;
-            fy -= (dy / dist) * repulse;
-          }
+    const sim = forceSimulation<Node>(allNodes)
+      .force("charge", forceManyBody<Node>()
+        .strength((d) => Math.sqrt(d.mass) * 0.8)
+      )
+      .force("collision", forceCollide<Node>()
+        .radius((d) => d.radius + 1.5)
+        .strength(0.9)
+      )
+      .force("center", forceCenter(width / 2, height / 2))
+      .alphaDecay(0.015)
+      .velocityDecay(0.4)
+      .on("tick", () => {
+        // Clamp to bounds
+        for (const n of allNodes) {
+          n.x = Math.max(n.radius, Math.min(width - n.radius, n.x));
+          n.y = Math.max(n.radius, Math.min(height - n.radius, n.y));
         }
-
-        // Gentle center pull (prevents drift)
-        fx += (cx - b.x) * CENTER_PULL * b.mass;
-        fy += (cy - b.y) * CENTER_PULL * b.mass;
-
-        // Update velocity
-        const damping = frame < maxFrames ? DAMPING : 0.5;
-        let vx = (b.vx + fx) * damping;
-        let vy = (b.vy + fy) * damping;
-
-        // Update position
-        let x = b.x + vx;
-        let y = b.y + vy;
-
-        // Boundary containment
-        x = Math.max(b.radius, Math.min(800 - b.radius, x));
-        y = Math.max(b.radius, Math.min(520 - b.radius, y));
-
-        return { ...b, x, y, vx, vy };
+        setNodes([...allNodes]);
       });
 
-      current = next;
-      setBodies(next);
+    simRef.current = sim;
 
-      if (frame < maxFrames) {
-        rafRef.current = requestAnimationFrame(step);
-      }
-    }
-
-    rafRef.current = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, [bodies.length > 0]); // only re-run when bodies first appear
+    return () => {
+      sim.stop();
+      cancelAnimationFrame(rafRef.current);
+    };
+  }, [games]);
 
   if (!games.length) return <p style={{ color: "#005500", fontFamily: "monospace" }}>No games data yet.</p>;
 
   return (
     <div className="game-cloud">
       <h2>Game Cloud</h2>
-      <p className="subtitle">{games.length} games — gravitational simulation, mass = playtime</p>
+      <p className="subtitle">{games.length} games — mass = playtime, gravity pulls them together</p>
 
-      <div className="gravity-container" ref={containerRef}>
+      <div className="gravity-container">
         <div className="gravity-core" />
         <div className="gravity-field">
-          {bodies.map((b) => (
-            <div
-              key={b.game.appid}
-              className="cloud-item gravity-item"
-              style={{
-                width: b.radius * 2,
-                height: b.radius * 2,
-                left: b.x - b.radius,
-                top: b.y - b.radius,
-                opacity: 0.4 + 0.6 * (b.game.playtime_hours / maxHours),
-              }}
-              title={`${b.game.name}: ${b.game.playtime_hours}h`}
-            >
-              {b.rank <= 3 && <span className="cloud-rank">#{b.rank}</span>}
-              {b.game.img_icon_url ? (
-                <img
-                  src={steamImgUrl(b.game.appid, b.game.img_icon_url)}
-                  alt={b.game.name}
-                  width={b.radius * 2}
-                  height={b.radius * 2}
-                />
-              ) : (
-                <span className="cloud-letter" style={{ fontSize: b.radius * 0.8 }}>
-                  {b.game.name[0]}
-                </span>
-              )}
-              {b.radius >= 40 && (
-                <span className="cloud-label">
-                  {b.game.name.length > 12 ? b.game.name.slice(0, 11) + "…" : b.game.name}
-                  <br />
-                  {b.game.playtime_hours}h
-                </span>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {rest.length > 0 && (
-        <>
-          <p className="cloud-more">+ {games.length - 40} more in orbit</p>
-          <div className="cloud-strip">
-            {rest.map((game) => (
-              <div key={game.appid} className="cloud-item tiny" title={`${game.name}: ${game.playtime_hours}h`}>
-                {game.img_icon_url ? (
-                  <img src={steamImgUrl(game.appid, game.img_icon_url)} alt={game.name} />
+          {nodes.map((n) => {
+            const size = n.radius * 2;
+            return (
+              <div
+                key={n.id}
+                className="cloud-item gravity-item"
+                style={{
+                  width: size,
+                  height: size,
+                  left: n.x - n.radius,
+                  top: n.y - n.radius,
+                  opacity: n.opacity,
+                }}
+                title={`${n.game.name}: ${n.game.playtime_hours}h`}
+              >
+                {n.rank <= 3 && <span className="cloud-rank">#{n.rank}</span>}
+                {n.game.img_icon_url ? (
+                  <img
+                    src={steamImgUrl(n.game.appid, n.game.img_icon_url)}
+                    alt={n.game.name}
+                    width={size}
+                    height={size}
+                  />
                 ) : (
-                  <span>{game.name[0]}</span>
+                  <span className="cloud-letter" style={{ fontSize: n.radius * 0.7 }}>
+                    {n.game.name[0]}
+                  </span>
+                )}
+                {n.radius >= 36 && (
+                  <span className="cloud-label">
+                    {n.game.name.length > 12 ? n.game.name.slice(0, 11) + "…" : n.game.name}
+                    <br />
+                    {n.game.playtime_hours}h
+                  </span>
                 )}
               </div>
-            ))}
-          </div>
-        </>
-      )}
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
