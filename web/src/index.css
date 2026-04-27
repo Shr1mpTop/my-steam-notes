@@ -194,27 +194,64 @@ body::after {
   box-shadow: 0 0 6px var(--g);
 }
 
-/* ── Game Cloud ── */
-.cloud-hero { display: flex; justify-content: center; align-items: flex-end; gap: 16px; padding: 16px 0 24px; }
-.cloud-scatter { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5px; padding: 10px 0; }
+/* ── Game Cloud — Gravity Layout ── */
+.gravity-container {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+}
+.gravity-core {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 8px; height: 8px;
+  background: var(--g);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px 12px rgba(0,255,65,0.15), 0 0 80px 30px rgba(0,255,65,0.05);
+  animation: corePulse 3s ease-in-out infinite;
+  z-index: 0;
+}
+@keyframes corePulse {
+  0%, 100% { box-shadow: 0 0 40px 12px rgba(0,255,65,0.15), 0 0 80px 30px rgba(0,255,65,0.05); }
+  50% { box-shadow: 0 0 60px 20px rgba(0,255,65,0.2), 0 0 100px 40px rgba(0,255,65,0.08); }
+}
+.gravity-svg {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.gravity-field {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+}
 .cloud-item {
   overflow: hidden; cursor: pointer;
   background: var(--surface); border: 1px solid transparent;
   display: flex; align-items: center; justify-content: center;
   position: relative; flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cloud-item.gravity-item {
+  position: absolute;
+  animation: gravityIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 .cloud-item:hover {
   border-color: var(--g);
   box-shadow: 0 0 12px rgba(0,255,65,0.2);
-  z-index: 2; opacity: 1 !important;
-  transform: scale(1.1);
+  z-index: 10 !important;
+  opacity: 1 !important;
+  transform: scale(1.2);
+}
+@keyframes gravityIn {
+  from { opacity: 0; transform: scale(0) translateY(-20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
 }
 .cloud-item img { display: block; width: 100%; height: 100%; object-fit: cover; image-rendering: pixelated; }
-.cloud-item.tiny { width: 22px; height: 22px; opacity: 0.35; }
+.cloud-item.tiny { width: 20px; height: 20px; opacity: 0.3; }
 .cloud-item.tiny:hover { opacity: 1; }
-.cloud-item.tiny img { width: 22px; height: 22px; }
-.cloud-item.tiny span { font-size: 9px; color: var(--text-dim); }
+.cloud-item.tiny img { width: 20px; height: 20px; }
+.cloud-item.tiny span { font-size: 8px; color: var(--text-dim); }
 .cloud-rank {
   position: absolute; top: 1px; left: 3px;
   font-size: 8px; font-weight: 700; color: var(--g); z-index: 1;
