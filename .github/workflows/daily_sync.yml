@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: daily-steam-sync
+  group: steam-data-sync
   cancel-in-progress: true
 
 permissions:
@@ -17,14 +17,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Rebase latest main
-        run: git pull --rebase origin main
+        with:
+          fetch-depth: 0
 
       - uses: astral-sh/setup-uv@v4
 
       - name: Install deps
         run: uv sync
+
+      - name: Ensure database schema
+        env:
+          TURSO_URL: ${{ secrets.TURSO_URL }}
+          TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
+        run: uv run scripts/init_turso.py
 
       - name: Daily full sync
         env:
@@ -33,6 +38,20 @@ jobs:
           TURSO_URL: ${{ secrets.TURSO_URL }}
           TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
         run: uv run scripts/sync_turso.py
+
+      - name: Sync enrichment data
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          STEAM_ID: ${{ secrets.STEAM_ID }}
+          TURSO_URL: ${{ secrets.TURSO_URL }}
+          TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
+        run: uv run scripts/sync_enrichment.py
+
+      - name: Sync game update posts
+        env:
+          TURSO_URL: ${{ secrets.TURSO_URL }}
+          TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
+        run: uv run scripts/sync_game_updates.py
 
       - name: Generate dashboard
         env:
@@ -48,4 +67,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/dashboard.json
           git diff --cached --quiet || git commit -m "chore: daily sync $(date -u +%Y-%m-%d)"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main

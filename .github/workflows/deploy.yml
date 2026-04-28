@@ -38,9 +38,6 @@ jobs:
       - name: Validate dashboard.json
         run: python3 -m json.tool data/dashboard.json > /dev/null
 
-      - name: Copy dashboard.json
-        run: cp data/dashboard.json web/dist/dashboard.json
-
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
