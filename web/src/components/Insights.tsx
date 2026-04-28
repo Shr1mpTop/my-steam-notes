@@ -175,29 +175,46 @@ const truncate = (s: string, max: number) => s.length > max ? s.slice(0, max) + 
 export function GameNetwork({ network }: Props) {
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
 
+  // Normalize: support both old format (string[]) and new format ({appid, name, genres}[])
+  const nodes = useMemo(() => {
+    return network.nodes.map((n: any) =>
+      typeof n === "string"
+        ? { appid: 0, name: n, genres: [] as string[] }
+        : { appid: n.appid ?? 0, name: n.name ?? "", genres: n.genres ?? [] }
+    );
+  }, [network.nodes]);
+
+  const links = useMemo(() => {
+    return network.links.map((l: any) => ({
+      source: typeof l.source === "string" ? 0 : (l.source ?? 0),
+      target: typeof l.target === "string" ? 0 : (l.target ?? 0),
+      strength: l.strength ?? 1,
+    }));
+  }, [network.links]);
+
   const nodeMap = useMemo(() => {
     const m = new Map<number, { name: string; genres: string[] }>();
-    for (const n of network.nodes) m.set(n.appid, { name: n.name, genres: n.genres });
+    for (const n of nodes) m.set(n.appid, { name: n.name, genres: n.genres });
     return m;
-  }, [network.nodes]);
+  }, [nodes]);
 
   // Group nodes by their first genre
   const genreGroups = useMemo(() => {
     const m = new Map<string, { appid: number; name: string }[]>();
-    for (const n of network.nodes) {
+    for (const n of nodes) {
       const g = firstGenre(n.genres);
       if (!m.has(g)) m.set(g, []);
       m.get(g)!.push({ appid: n.appid, name: n.name });
     }
     return m;
-  }, [network.nodes]);
+  }, [nodes]);
 
   // Count inter-genre connections
   const genreLinks = useMemo(() => {
-    const links: { source: string; target: string; strength: number }[] = [];
+    const genreLinks: { source: string; target: string; strength: number }[] = [];
     const pairMap = new Map<string, number>();
 
-    for (const l of network.links) {
+    for (const l of links) {
       const sn = nodeMap.get(l.source);
       const tn = nodeMap.get(l.target);
       if (!sn || !tn) continue;
@@ -210,10 +227,10 @@ export function GameNetwork({ network }: Props) {
 
     for (const [key, strength] of pairMap) {
       const [source, target] = key.split("|");
-      links.push({ source, target, strength });
+      genreLinks.push({ source, target, strength });
     }
-    return links;
-  }, [network.links, nodeMap]);
+    return genreLinks;
+  }, [links, nodeMap]);
 
   // Genre-level treemap layout (sized by number of games)
   const W = 400, H = 300;
@@ -248,14 +265,14 @@ export function GameNetwork({ network }: Props) {
 
     // Intra-genre links + inter-genre links
     const gameAppids = new Set(games.map(g => g.appid));
-    const links = network.links.filter(l => {
+    const filteredLinks = links.filter(l => {
       const sIn = gameAppids.has(l.source);
       const tIn = gameAppids.has(l.target);
       return sIn || tIn;
     });
 
-    return { blocks, links };
-  }, [selectedGenre, genreGroups, network.links]);
+    return { blocks, links: filteredLinks };
+  }, [selectedGenre, genreGroups, links]);
 
   const handleGenreClick = useCallback((genre: string) => {
     setSelectedGenre(g => g === genre ? null : genre);
