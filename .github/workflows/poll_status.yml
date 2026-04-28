@@ -6,15 +6,20 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: steam-data-sync
+  group: poll-steam-status
   cancel-in-progress: true
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 jobs:
   poll:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -30,3 +35,33 @@ jobs:
           TURSO_URL: ${{ secrets.TURSO_URL }}
           TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
         run: uv run scripts/poll_status.py
+
+      - name: Generate fresh dashboard
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          STEAM_ID: ${{ secrets.STEAM_ID }}
+          TURSO_URL: ${{ secrets.TURSO_URL }}
+          TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
+        run: uv run scripts/build_dashboard.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install & build web
+        run: |
+          cd web
+          npm ci
+          npm run build
+
+      - name: Validate dashboard.json
+        run: python3 -m json.tool data/dashboard.json > /dev/null
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

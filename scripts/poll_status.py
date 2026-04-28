@@ -1,6 +1,7 @@
 """
-Poll Steam status & generate comprehensive dashboard.json.
-All 30 visualizations' data is pre-computed here.
+Poll Steam status into Turso.
+
+Dashboard generation lives in scripts/build_dashboard.py.
 """
 import os
 import json
@@ -404,12 +405,7 @@ def generate_dashboard(player_info):
 
 def main():
     print("=== Steam Status Poll ===\n")
-    player = poll_status()
-    print("\nGenerating dashboard...")
-    db = generate_dashboard(player)
-    print(f"  Games: {len(db['game_cloud'])} | Genres: {len(db['genres'])}")
-    print(f"  Achievements: {len(db['achievements'])} games")
-    print(f"  Weather: {db['game_weather']['forecast']} — {db['game_weather']['top_game']}")
+    poll_status()
     print("\n=== Done ===")
 
 
