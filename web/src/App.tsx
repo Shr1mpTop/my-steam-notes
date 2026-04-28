@@ -32,10 +32,23 @@ function App() {
 
       <div className="divider" />
 
-      {/* Contribution Heatmap */}
+      {/* ── Time Analytics (front and center) ── */}
       <ContributionMap heatmap={data.heatmap} />
 
-      {/* Game Cloud */}
+      <div className="divider" />
+
+      <div className="two-col">
+        <TimeHeatmap data={data.time_heatmap} />
+        <WeekdayChart data={data.weekday} />
+      </div>
+
+      <div className="centered">
+        <GamingClock data={data.time_heatmap} />
+      </div>
+
+      <div className="divider" />
+
+      {/* Game Cloud (TreeMap) */}
       <GameCloud games={data.game_cloud} />
 
       <div className="divider" />
@@ -75,23 +88,6 @@ function App() {
 
       {/* Achievements */}
       <AchievementBoard achievements={data.achievements} />
-
-      <div className="divider" />
-
-      {/* Time Analytics */}
-      <div className="two-col">
-        <TimeHeatmap data={data.time_heatmap} />
-        <WeekdayChart data={data.weekday} />
-      </div>
-
-      <div className="divider" />
-
-      {/* Gaming Clock */}
-      <div className="centered">
-        <GamingClock data={data.time_heatmap} />
-      </div>
-
-      <div className="divider" />
 
       <footer className="footer">
         <span>Steam Notebook — Updated {new Date(data.updated_at).toLocaleString()}</span>
