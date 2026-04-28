@@ -37,6 +37,7 @@ export interface GameCloudItem {
   playtime_hours: number;
   img_icon_url: string;
   rtime_last_played: number;
+  genres: string[];
 }
 
 export interface RecentActivityItem {
@@ -91,8 +92,8 @@ export interface AchievementGame {
 }
 
 export interface GameNetworkData {
-  nodes: string[];
-  links: { source: string; target: string; strength: number }[];
+  nodes: { appid: number; name: string; genres: string[] }[];
+  links: { source: number; target: number; strength: number }[];
 }
 
 export interface GenreItem {

@@ -66,7 +66,12 @@ def build_milestone():
 
 def build_game_cloud():
     rows = execute(
-        "SELECT appid, name, playtime_forever, img_icon_url, rtime_last_played FROM owned_games WHERE playtime_forever > 0 ORDER BY playtime_forever DESC"
+        """SELECT og.appid, og.name, og.playtime_forever, og.img_icon_url,
+                  og.rtime_last_played, gd.genres
+           FROM owned_games og
+           LEFT JOIN game_details gd ON og.appid = gd.appid
+           WHERE og.playtime_forever > 0
+           ORDER BY og.playtime_forever DESC"""
     )
     return [
         {
@@ -74,6 +79,7 @@ def build_game_cloud():
             "playtime_hours": round(r["playtime_forever"] / 60, 1),
             "img_icon_url": r["img_icon_url"],
             "rtime_last_played": r["rtime_last_played"],
+            "genres": json.loads(r["genres"]) if r["genres"] else [],
         } for r in rows
     ]
 
@@ -242,17 +248,33 @@ def build_achievements():
 def build_game_network():
     """Games that were played in the same 2-week period are 'related'."""
     rows = execute(
-        """SELECT a.name as game_a, b.name as game_b, COUNT(*) as strength
+        """SELECT a.appid as id_a, a.name as game_a,
+                  b.appid as id_b, b.name as game_b, COUNT(*) as strength
            FROM recent_sessions a JOIN recent_sessions b ON a.snapshot_date = b.snapshot_date AND a.appid < b.appid
            GROUP BY a.appid, b.appid ORDER BY strength DESC LIMIT 30"""
     )
-    nodes = set()
+    # Fetch genres for all involved games
+    appids = set()
+    for r in rows:
+        appids.add(r["id_a"])
+        appids.add(r["id_b"])
+    genre_map = {}
+    if appids:
+        placeholders = ",".join(["?"] * len(appids))
+        detail_rows = execute(
+            f"SELECT appid, genres FROM game_details WHERE appid IN ({placeholders})",
+            list(appids),
+        )
+        for dr in detail_rows:
+            genre_map[dr["appid"]] = json.loads(dr["genres"]) if dr["genres"] else []
+
+    nodes = {}
     links = []
     for r in rows:
-        nodes.add(r["game_a"])
-        nodes.add(r["game_b"])
-        links.append({"source": r["game_a"], "target": r["game_b"], "strength": r["strength"]})
-    return {"nodes": list(nodes), "links": links}
+        nodes[r["id_a"]] = {"appid": r["id_a"], "name": r["game_a"], "genres": genre_map.get(r["id_a"], [])}
+        nodes[r["id_b"]] = {"appid": r["id_b"], "name": r["game_b"], "genres": genre_map.get(r["id_b"], [])}
+        links.append({"source": r["id_a"], "target": r["id_b"], "strength": r["strength"]})
+    return {"nodes": list(nodes.values()), "links": links}
 
 
 def build_genre_distribution():
