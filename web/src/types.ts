@@ -22,6 +22,7 @@ export interface PlayerInfo {
   online: boolean;
   currently_playing: string;
   level: number;
+  avatarfull: string;
 }
 
 export interface MilestoneData {

@@ -1,16 +1,24 @@
 /* ═══════════════════════════════════════════
-   STEAM NOTEBOOK — MATRIX TERMINAL
+   STEAM NOTEBOOK — RGB CRT TERMINAL
    ═══════════════════════════════════════════ */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
 
 :root {
   --bg: #000000;
+  /* RGB primaries */
+  --r: #ff0040;
   --g: #00ff41;
+  --b: #00bfff;
+  /* RGB mixes: cyan=G+B, magenta=R+B, yellow=R+G */
+  --cyan: #00ffdd;
+  --magenta: #cc00ff;
+  --amber: #ffaa00;
+  /* Shades */
   --g-dim: #003b00;
   --g-mid: #00aa2a;
   --g-glow: rgba(0,255,65,0.15);
   --g-text: #00cc33;
-  --surface: rgba(0,20,0,0.7);
+  --surface: rgba(0,10,5,0.7);
   --border: rgba(0,255,65,0.12);
   --text: #00cc33;
   --text-dim: #005500;
@@ -20,8 +28,8 @@
     0deg,
     transparent,
     transparent 2px,
-    rgba(0,0,0,0.15) 2px,
-    rgba(0,0,0,0.15) 4px
+    rgba(0,0,0,0.12) 2px,
+    rgba(0,0,0,0.12) 4px
   );
 }
 
@@ -38,14 +46,29 @@ body {
   position: relative;
 }
 
-/* Scanline overlay */
+/* RGB scanline overlay with slow color sweep */
 body::after {
   content: '';
   position: fixed; inset: 0;
-  background: var(--scanline);
+  background:
+    var(--scanline),
+    linear-gradient(
+      180deg,
+      rgba(255,0,64,0.03) 0%,
+      rgba(0,255,65,0.03) 33%,
+      rgba(0,191,255,0.03) 66%,
+      rgba(255,0,64,0.03) 100%
+    );
+  background-size: 100% 4px, 100% 300vh;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.4;
+  opacity: 0.5;
+  animation: rgbSweep 12s linear infinite;
+}
+
+@keyframes rgbSweep {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 0 0, 0 300vh; }
 }
 
 /* CRT flicker */
@@ -66,7 +89,8 @@ body::after {
 /* ── Shared ── */
 .divider {
   border: none; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--g-dim), transparent);
+  background: linear-gradient(90deg, transparent, var(--r), var(--g), var(--b), transparent);
+  opacity: 0.25;
   margin: 32px 0;
 }
 .loading, .error {
@@ -95,9 +119,10 @@ body::after {
 }
 .viz-card:hover { border-color: rgba(0,255,65,0.3); }
 .viz-card h3 {
-  font-size: 11px; font-weight: 400; color: var(--g);
+  font-size: 11px; font-weight: 400; color: var(--cyan);
   letter-spacing: 2px; text-transform: uppercase;
   margin-bottom: 2px;
+  text-shadow: -1px 0 var(--r), 1px 0 var(--b);
 }
 .viz-card h3::before { content: '$ '; color: var(--text-dim); }
 .viz-subtitle {
@@ -139,9 +164,15 @@ body::after {
 .status-indicator.online { background: var(--g); box-shadow: 0 0 6px var(--g); }
 .status-indicator.offline { background: var(--text-dim); }
 .profile-avatar { position: relative; }
+.avatar-img {
+  width: 48px; height: 48px;
+  border: 1px solid var(--g-dim);
+  border-radius: 4px;
+  object-fit: cover;
+}
 .profile-name {
-  font-size: 18px; font-weight: 700; color: var(--g);
-  text-shadow: 0 0 10px rgba(0,255,65,0.3);
+  font-size: 18px; font-weight: 700; color: #fff;
+  text-shadow: 0 0 10px rgba(0,255,65,0.3), -1px 0 var(--r), 1px 0 var(--b);
 }
 .profile-badges { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; }
 .badge {
@@ -172,8 +203,8 @@ body::after {
 }
 .milestone-card:hover { border-color: var(--g); }
 .milestone-value {
-  display: block; font-size: 18px; font-weight: 700; color: var(--g);
-  text-shadow: 0 0 8px rgba(0,255,65,0.3);
+  display: block; font-size: 18px; font-weight: 700; color: var(--amber);
+  text-shadow: 0 0 8px rgba(255,170,0,0.3);
 }
 .milestone-label {
   display: block; font-size: 8px; color: var(--text-dim);
@@ -189,9 +220,9 @@ body::after {
 }
 .xp-bar-track { height: 2px; background: var(--g-dim); overflow: hidden; }
 .xp-bar-fill {
-  height: 100%; background: var(--g);
+  height: 100%; background: linear-gradient(90deg, var(--g), var(--cyan));
   transition: width 1.5s ease;
-  box-shadow: 0 0 6px var(--g);
+  box-shadow: 0 0 6px var(--cyan);
 }
 
 /* ── Game Cloud — TreeMap ── */
@@ -344,11 +375,12 @@ body::after {
   flex-shrink: 0;
 }
 
-/* Section titles (non viz-card) */
+/* Section titles (non viz-card) — RGB chromatic aberration */
 .game-cloud h2, .recent-activity h2, .contribution-map h2 {
   font-size: 11px; font-weight: 400; color: var(--g);
   letter-spacing: 2px; text-transform: uppercase;
   margin-bottom: 2px;
+  text-shadow: -1px 0 var(--r), 1px 0 var(--b);
 }
 .game-cloud h2::before, .recent-activity h2::before, .contribution-map h2::before {
   content: '$ '; color: var(--text-dim);
@@ -366,8 +398,8 @@ body::after {
 }
 .stat-card:hover { border-color: var(--g); }
 .stat-value {
-  display: block; font-size: 16px; font-weight: 700; color: var(--g);
-  text-shadow: 0 0 6px rgba(0,255,65,0.3);
+  display: block; font-size: 16px; font-weight: 700; color: var(--cyan);
+  text-shadow: 0 0 6px rgba(0,255,221,0.3);
 }
 .stat-label {
   display: block; font-size: 8px; color: var(--text-dim);
@@ -377,9 +409,9 @@ body::after {
 /* ── Dust Meter ── */
 .dust-bar-track { height: 3px; background: var(--g-dim); overflow: hidden; margin-bottom: 6px; }
 .dust-bar-played {
-  height: 100%; background: var(--g);
+  height: 100%; background: linear-gradient(90deg, var(--g), var(--cyan));
   transition: width 1s ease;
-  box-shadow: 0 0 4px var(--g);
+  box-shadow: 0 0 4px var(--cyan);
 }
 .dust-labels { display: flex; justify-content: space-between; font-size: 9px; color: var(--text-dim); }
 
@@ -395,9 +427,9 @@ body::after {
 .achievement-count { font-size: 10px; color: var(--text-dim); }
 .achievement-bar-track { height: 2px; background: var(--g-dim); overflow: hidden; margin-bottom: 4px; }
 .achievement-bar-fill {
-  height: 100%; background: var(--g);
+  height: 100%; background: linear-gradient(90deg, var(--b), var(--cyan));
   transition: width 1s ease;
-  box-shadow: 0 0 4px var(--g);
+  box-shadow: 0 0 4px var(--b);
 }
 .achievement-pct { font-size: 9px; color: var(--text-dim); }
 .rare-achievements { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 3px; }
@@ -417,9 +449,9 @@ body::after {
   flex: 1; height: 2px; background: var(--g-dim); overflow: hidden;
 }
 .genre-bar-fill, .staying-bar {
-  height: 100%; background: var(--g);
+  height: 100%; background: linear-gradient(90deg, var(--amber), var(--g));
   transition: width 0.8s ease;
-  box-shadow: 0 0 3px var(--g);
+  box-shadow: 0 0 3px var(--amber);
 }
 .genre-hours, .staying-hours, .staying-recency, .genre-count {
   font-size: 9px; color: var(--text-dim); text-align: right;
@@ -447,9 +479,9 @@ body::after {
   overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;
 }
 .weekday-bar-fill {
-  background: var(--g);
+  background: linear-gradient(180deg, var(--cyan), var(--g));
   transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 4px rgba(0,255,65,0.3);
+  box-shadow: 0 0 4px rgba(0,255,221,0.3);
 }
 .weekday-label { font-size: 9px; color: var(--text-dim); margin-top: 4px; }
 .weekday-value { font-size: 8px; color: var(--text-dim); }
@@ -475,8 +507,8 @@ body::after {
 .digest-content { text-align: center; }
 .digest-stat { display: inline-block; margin: 0 16px; }
 .digest-value {
-  display: block; font-size: 22px; font-weight: 700; color: var(--g);
-  text-shadow: 0 0 8px rgba(0,255,65,0.3);
+  display: block; font-size: 22px; font-weight: 700; color: var(--amber);
+  text-shadow: 0 0 8px rgba(255,170,0,0.3);
 }
 .digest-label { font-size: 8px; color: var(--text-dim); letter-spacing: 2px; text-transform: uppercase; }
 .digest-games { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }

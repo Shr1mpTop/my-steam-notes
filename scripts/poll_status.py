@@ -53,6 +53,7 @@ def build_player(player_info):
         "online": player_info.get("personastate", 0) != 0,
         "currently_playing": player_info.get("gameextrainfo", ""),
         "level": level,
+        "avatarfull": player_info.get("avatarfull", ""),
     }
 
 
