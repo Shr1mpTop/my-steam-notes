@@ -2496,6 +2496,23 @@ button, input, select, textarea { font: inherit; }
     right: 12px;
   }
   .dashboard-shell { padding: 16px 12px 0; }
+  .cinematic-dashboard { padding-top: 16px; }
+  .dashboard-topbar {
+    display: grid;
+    gap: 12px;
+  }
+  .dashboard-intro {
+    margin-bottom: 4px;
+  }
+  .dashboard-intro h1,
+  .dashboard-intro h2 {
+    font-size: clamp(28px, 9vw, 42px);
+    line-height: 1.06;
+  }
+  .locale-toggle {
+    width: max-content;
+    min-height: 38px;
+  }
   .dashboard-grid { grid-template-columns: 1fr; gap: 14px; }
   .span-4,
   .span-5,

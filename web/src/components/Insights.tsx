@@ -33,7 +33,7 @@ export function StatsCards({ stats }: StatsProps) {
         </div>
       )}
       <div className="stat-card">
-        <span className="stat-value">{stats.longest_streak.days} days</span>
+        <span className="stat-value">{stats.longest_streak.days} {t("daysUnit")}</span>
         <span className="stat-label">{t("longestStreak")}</span>
       </div>
     </div>
