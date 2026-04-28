@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-28T04:25:25Z",
+  "updated_at": "2026-04-28T04:37:57Z",
   "player": {
     "personaname": "chr(0x1D11E)",
-    "online": false,
-    "currently_playing": "",
+    "online": true,
+    "currently_playing": "Sintopia",
     "level": 30
   },
   "milestone": {
@@ -275,7 +275,7 @@
       "name": "Sintopia",
       "playtime_hours": 37.7,
       "img_icon_url": "1ee4cabe5b840bcaae56c1d40cb131f81e04c6ab",
-      "rtime_last_played": 1777305389,
+      "rtime_last_played": 1777350717,
       "genres": [
         "Indie",
         "Simulation",
@@ -1422,11 +1422,17 @@
       "games": {}
     },
     "2026-04-28": {
-      "online_minutes": 0,
+      "online_minutes": 10,
       "games": {}
     }
   },
-  "time_heatmap": [],
+  "time_heatmap": [
+    {
+      "dow": 1,
+      "hour": 4,
+      "count": 2
+    }
+  ],
   "platform": {
     "Windows": 5318.7,
     "Mac": 12.0,
@@ -2898,142 +2904,142 @@
       {
         "source": 730,
         "target": 230190,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 730,
         "target": 365360,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 730,
         "target": 892970,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 730,
         "target": 3240220,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 730,
         "target": 3912710,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 230190,
         "target": 365360,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 230190,
         "target": 892970,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 230190,
         "target": 1172470,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 230190,
         "target": 2213700,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 230190,
         "target": 3240220,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 230190,
         "target": 3912710,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 365360,
         "target": 892970,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 365360,
         "target": 3240220,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 365360,
         "target": 3912710,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 892970,
         "target": 1172470,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 892970,
         "target": 2213700,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 892970,
         "target": 3240220,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 892970,
         "target": 3912710,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 1172470,
         "target": 2213700,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 1172470,
         "target": 3240220,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 1172470,
         "target": 3912710,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 2213700,
         "target": 3240220,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 2213700,
         "target": 3912710,
-        "strength": 1
+        "strength": 2
       },
       {
         "source": 3240220,
         "target": 3912710,
-        "strength": 1
+        "strength": 2
       }
     ]
   },
