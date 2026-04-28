@@ -2,7 +2,7 @@ name: Poll Steam Status
 
 on:
   schedule:
-    - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'  # every 5 min
+    - cron: '7,37 * * * *'  # every 30 min
   workflow_dispatch:
 
 concurrency:
