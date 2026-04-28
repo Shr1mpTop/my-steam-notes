@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-28T14:07:58.517304+08:00",
+  "updated_at": "2026-04-28T14:44:24.333239+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
     "online": true,
-    "currently_playing": "Counter-Strike 2",
+    "currently_playing": "",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
   },
@@ -1423,7 +1423,7 @@
       "games": {}
     },
     "2026-04-28": {
-      "online_minutes": 105,
+      "online_minutes": 115,
       "games": {}
     }
   },
@@ -1441,7 +1441,7 @@
     {
       "dow": 1,
       "hour": 14,
-      "count": 2
+      "count": 4
     }
   ],
   "platform": {
