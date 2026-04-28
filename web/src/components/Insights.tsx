@@ -121,8 +121,8 @@ function genreColor(genre: string): string {
 // --- Layout: treemap blocks for genres ---
 interface Rect { x: number; y: number; w: number; h: number }
 
-function firstGenre(genres: string[]): string {
-  return genres.length > 0 ? genres[0] : "Other";
+function firstGenre(genres: string[] | undefined): string {
+  return (genres?.length ?? 0) > 0 ? genres![0] : "Other";
 }
 
 // Binary tree split (same as GameCloud)

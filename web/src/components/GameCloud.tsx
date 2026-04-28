@@ -112,7 +112,7 @@ interface GenreGroup {
 function groupByGenre(games: GameCloudItem[]): GenreGroup[] {
   const m = new Map<string, GameCloudItem[]>();
   for (const g of games) {
-    for (const genre of g.genres.length ? g.genres : ["Other"]) {
+    for (const genre of (g.genres?.length ? g.genres : ["Other"])) {
       if (!m.has(genre)) m.set(genre, []);
       m.get(genre)!.push(g);
     }
