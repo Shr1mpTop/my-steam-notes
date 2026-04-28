@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28T13:10:49.989268+08:00",
+  "updated_at": "2026-04-28T13:12:25.393773+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
     "online": true,
@@ -7,10 +7,10 @@
     "level": 30
   },
   "milestone": {
-    "total_hours": 5341.0,
+    "total_hours": 5341.5,
     "movies": 2670,
     "books": 890,
-    "walking_km": 26705
+    "walking_km": 26707
   },
   "game_cloud": [
     {
@@ -273,9 +273,9 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_hours": 37.7,
+      "playtime_hours": 38.2,
       "img_icon_url": "1ee4cabe5b840bcaae56c1d40cb131f81e04c6ab",
-      "rtime_last_played": 1777350717,
+      "rtime_last_played": 1777352517,
       "genres": [
         "Indie",
         "Simulation",
@@ -1370,8 +1370,8 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_2weeks_hours": 37.7,
-      "playtime_forever_hours": 37.7
+      "playtime_2weeks_hours": 38.2,
+      "playtime_forever_hours": 38.2
     },
     {
       "appid": 365360,
@@ -1422,7 +1422,7 @@
       "games": {}
     },
     "2026-04-28": {
-      "online_minutes": 65,
+      "online_minutes": 70,
       "games": {}
     }
   },
@@ -1435,11 +1435,11 @@
     {
       "dow": 1,
       "hour": 13,
-      "count": 1
+      "count": 2
     }
   ],
   "platform": {
-    "Windows": 5318.7,
+    "Windows": 5319.2,
     "Mac": 12.0,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -1573,7 +1573,7 @@
     },
     {
       "name": "Sintopia",
-      "hours": 37.7,
+      "hours": 38.2,
       "cumulative_pct": 85.0,
       "rank": 22
     },
@@ -3072,17 +3072,17 @@
     {
       "genre": "Indie",
       "games": 24,
-      "hours": 1198.0
+      "hours": 1198.5
     },
     {
       "genre": "Strategy",
       "games": 21,
-      "hours": 987.5
+      "hours": 988.0
     },
     {
       "genre": "Simulation",
       "games": 14,
-      "hours": 581.4
+      "hours": 581.9
     },
     {
       "genre": "Early Access",
@@ -3131,7 +3131,7 @@
     "games": [
       {
         "name": "Sintopia",
-        "hours": 37.7
+        "hours": 38.2
       },
       {
         "name": "Battle Brothers",
