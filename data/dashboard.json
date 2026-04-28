@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "updated_at": "2026-04-28T13:12:25.393773+08:00",
-=======
-  "updated_at": "2026-04-28T13:34:29.866260+08:00",
->>>>>>> Stashed changes
+  "updated_at": "2026-04-28T13:39:19.685137+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
     "online": true,
@@ -12,10 +8,10 @@
     "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
   },
   "milestone": {
-    "total_hours": 5341.5,
-    "movies": 2670,
+    "total_hours": 5342.0,
+    "movies": 2671,
     "books": 890,
-    "walking_km": 26707
+    "walking_km": 26710
   },
   "game_cloud": [
     {
@@ -278,9 +274,9 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_hours": 38.2,
+      "playtime_hours": 38.7,
       "img_icon_url": "1ee4cabe5b840bcaae56c1d40cb131f81e04c6ab",
-      "rtime_last_played": 1777352517,
+      "rtime_last_played": 1777354317,
       "genres": [
         "Indie",
         "Simulation",
@@ -1375,8 +1371,8 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_2weeks_hours": 38.2,
-      "playtime_forever_hours": 38.2
+      "playtime_2weeks_hours": 38.7,
+      "playtime_forever_hours": 38.7
     },
     {
       "appid": 365360,
@@ -1427,11 +1423,7 @@
       "games": {}
     },
     "2026-04-28": {
-<<<<<<< Updated upstream
-      "online_minutes": 70,
-=======
-      "online_minutes": 75,
->>>>>>> Stashed changes
+      "online_minutes": 85,
       "games": {}
     }
   },
@@ -1444,15 +1436,11 @@
     {
       "dow": 1,
       "hour": 13,
-<<<<<<< Updated upstream
-      "count": 2
-=======
-      "count": 3
->>>>>>> Stashed changes
+      "count": 5
     }
   ],
   "platform": {
-    "Windows": 5319.2,
+    "Windows": 5319.7,
     "Mac": 12.0,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -1467,7 +1455,7 @@
     {
       "name": "Apex Legends",
       "hours": 528.3,
-      "cumulative_pct": 44.7,
+      "cumulative_pct": 44.6,
       "rank": 2
     },
     {
@@ -1497,7 +1485,7 @@
     {
       "name": "Baldur's Gate 3",
       "hours": 151.4,
-      "cumulative_pct": 66.3,
+      "cumulative_pct": 66.2,
       "rank": 7
     },
     {
@@ -1586,7 +1574,7 @@
     },
     {
       "name": "Sintopia",
-      "hours": 38.2,
+      "hours": 38.7,
       "cumulative_pct": 85.0,
       "rank": 22
     },
@@ -3085,17 +3073,17 @@
     {
       "genre": "Indie",
       "games": 24,
-      "hours": 1198.5
+      "hours": 1199.0
     },
     {
       "genre": "Strategy",
       "games": 21,
-      "hours": 988.0
+      "hours": 988.5
     },
     {
       "genre": "Simulation",
       "games": 14,
-      "hours": 581.9
+      "hours": 582.4
     },
     {
       "genre": "Early Access",
@@ -3144,7 +3132,7 @@
     "games": [
       {
         "name": "Sintopia",
-        "hours": 38.2
+        "hours": 38.7
       },
       {
         "name": "Battle Brothers",
