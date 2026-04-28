@@ -28,7 +28,7 @@ def get_json(interface, method, version, params=None):
 
 
 def sync_owned_games():
-    """Upsert all owned games and compute daily delta."""
+    """Upsert all owned games and refresh today's daily delta."""
     data = get_json("IPlayerService", "GetOwnedGames", "v0001", {
         "steamid": SID,
         "include_appinfo": "true",
@@ -36,12 +36,6 @@ def sync_owned_games():
     })
     games = data.get("games", [])
     print(f"Fetched {len(games)} owned games")
-
-    # Get yesterday's snapshot to compute delta
-    existing = execute(
-        "SELECT appid, playtime_forever FROM daily_snapshots WHERE date = ?", [TODAY]
-    )
-    existing_map = {r["appid"]: r["playtime_forever"] for r in existing}
 
     # Upsert owned_games
     now = datetime.now(TZ).isoformat()
@@ -69,31 +63,35 @@ def sync_owned_games():
     )
     print("Upserted owned_games")
 
-    # Get previous snapshot for delta calculation
+    # Use the latest snapshot before today as the stable daily baseline.
     prev_rows = execute(
-        "SELECT appid, playtime_forever FROM daily_snapshots WHERE date = (SELECT MAX(date) FROM daily_snapshots)"
+        """SELECT appid, playtime_forever
+           FROM daily_snapshots
+           WHERE date = (SELECT MAX(date) FROM daily_snapshots WHERE date < ?)""",
+        [TODAY],
     )
     prev_map = {r["appid"]: r["playtime_forever"] for r in prev_rows}
 
-    # Insert daily snapshots (skip if already exists for today)
+    # Upsert today's snapshots so repeated runs reflect the current Steam totals
+    # without accumulating duplicate playtime.
     snapshot_args = []
-    new_count = 0
     for g in games:
         appid = g["appid"]
         pt = g.get("playtime_forever", 0)
-        if appid in existing_map:
-            continue
         delta = max(0, pt - prev_map.get(appid, 0))
         snapshot_args.append([TODAY, appid, g["name"], pt, delta])
-        new_count += 1
 
     if snapshot_args:
         execute_many(
-            """INSERT OR IGNORE INTO daily_snapshots (date, appid, name, playtime_forever, daily_playtime)
-               VALUES (?, ?, ?, ?, ?)""",
+            """INSERT INTO daily_snapshots (date, appid, name, playtime_forever, daily_playtime)
+               VALUES (?, ?, ?, ?, ?)
+               ON CONFLICT(date, appid) DO UPDATE SET
+                 name=excluded.name,
+                 playtime_forever=excluded.playtime_forever,
+                 daily_playtime=excluded.daily_playtime""",
             snapshot_args,
         )
-        print(f"Inserted {new_count} daily snapshots for {TODAY}")
+        print(f"Upserted {len(snapshot_args)} daily snapshots for {TODAY}")
 
 
 def sync_recent_sessions():

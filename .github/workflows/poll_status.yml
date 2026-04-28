@@ -28,13 +28,21 @@ jobs:
       - name: Install deps
         run: uv sync
 
-      - name: Poll status & generate dashboard
+      - name: Poll current status
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
           STEAM_ID: ${{ secrets.STEAM_ID }}
           TURSO_URL: ${{ secrets.TURSO_URL }}
           TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
         run: uv run scripts/poll_status.py
+
+      - name: Sync realtime playtime
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          STEAM_ID: ${{ secrets.STEAM_ID }}
+          TURSO_URL: ${{ secrets.TURSO_URL }}
+          TURSO_TOKEN: ${{ secrets.TURSO_TOKEN }}
+        run: uv run scripts/sync_realtime.py
 
       - name: Generate fresh dashboard
         env:
