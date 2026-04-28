@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28T13:58:26.190830+08:00",
+  "updated_at": "2026-04-28T14:01:34.676957+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
     "online": true,
@@ -8,10 +8,10 @@
     "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
   },
   "milestone": {
-    "total_hours": 5342.0,
+    "total_hours": 5342.2,
     "movies": 2671,
     "books": 890,
-    "walking_km": 26710
+    "walking_km": 26711
   },
   "game_cloud": [
     {
@@ -19,7 +19,7 @@
       "name": "Counter-Strike 2",
       "playtime_hours": 1856.8,
       "img_icon_url": "8dbc71957312bbd3baea65848b545be9eae2a355",
-      "rtime_last_played": 1777303173,
+      "rtime_last_played": 1777355258,
       "genres": [
         "Action",
         "Free To Play"
@@ -274,9 +274,9 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_hours": 38.7,
+      "playtime_hours": 39.0,
       "img_icon_url": "1ee4cabe5b840bcaae56c1d40cb131f81e04c6ab",
-      "rtime_last_played": 1777354317,
+      "rtime_last_played": 1777355255,
       "genres": [
         "Indie",
         "Simulation",
@@ -1371,8 +1371,8 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_2weeks_hours": 38.7,
-      "playtime_forever_hours": 38.7
+      "playtime_2weeks_hours": 39.0,
+      "playtime_forever_hours": 39.0
     },
     {
       "appid": 365360,
@@ -1423,7 +1423,7 @@
       "games": {}
     },
     "2026-04-28": {
-      "online_minutes": 95,
+      "online_minutes": 100,
       "games": {}
     }
   },
@@ -1437,10 +1437,15 @@
       "dow": 1,
       "hour": 13,
       "count": 7
+    },
+    {
+      "dow": 1,
+      "hour": 14,
+      "count": 1
     }
   ],
   "platform": {
-    "Windows": 5319.7,
+    "Windows": 5320.0,
     "Mac": 12.0,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -1574,7 +1579,7 @@
     },
     {
       "name": "Sintopia",
-      "hours": 38.7,
+      "hours": 39.0,
       "cumulative_pct": 85.0,
       "rank": 22
     },
@@ -3073,17 +3078,17 @@
     {
       "genre": "Indie",
       "games": 24,
-      "hours": 1199.0
+      "hours": 1199.3
     },
     {
       "genre": "Strategy",
       "games": 21,
-      "hours": 988.5
+      "hours": 988.8
     },
     {
       "genre": "Simulation",
       "games": 14,
-      "hours": 582.4
+      "hours": 582.7
     },
     {
       "genre": "Early Access",
@@ -3132,7 +3137,7 @@
     "games": [
       {
         "name": "Sintopia",
-        "hours": 38.7
+        "hours": 39.0
       },
       {
         "name": "Battle Brothers",
