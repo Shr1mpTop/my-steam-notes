@@ -1,390 +1,320 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
-import type { DashboardData } from "../types";
+import type { DashboardData, GameCloudItem } from "../types";
 
 interface Props {
   data: DashboardData;
 }
 
-interface Chapter {
-  eyebrow: string;
-  title: string;
-  body: string;
-  stat: string;
-  label: string;
+const COLORS = [0x67e8f9, 0x34d399, 0xf59e0b, 0xfb7185, 0xa78bfa, 0x60a5fa];
+
+function formatHours(value: number, digits = 0) {
+  return `${value.toLocaleString(undefined, {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  })}h`;
 }
 
-const palette = [0x67e8f9, 0x34d399, 0xf59e0b, 0xfb7185, 0xa78bfa];
+function steamIconUrl(game: GameCloudItem) {
+  return `https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`;
+}
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
 }
 
-function formatHours(value: number) {
-  return `${Math.round(value).toLocaleString()}h`;
-}
-
-function formatCompact(value: number) {
-  return new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(value);
-}
-
 export function LandingExperience({ data }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const activeRef = useRef(0);
-  const [activeChapter, setActiveChapter] = useState(0);
+  const heroRef = useRef<HTMLElement | null>(null);
 
+  const topGames = useMemo(() => data.game_cloud.slice(0, 6), [data.game_cloud]);
+  const recentGames = data.game_weather.games.slice(0, 5);
   const topGame = data.pareto[0];
-  const recentGame = data.recent_activity[0];
-  const strongestGenre = data.genres[0];
-  const genreBars = useMemo(() => data.genres.slice(0, 7).map((genre) => genre.hours), [data.genres]);
-
-  const chapters = useMemo<Chapter[]>(() => [
-    {
-      eyebrow: "Steam Notebook",
-      title: "把游玩记录变成一条可穿行的时间线",
-      body: `${data.player.personaname} 的库里有 ${data.stats.total_games.toLocaleString()} 款游戏，所有轨迹汇成一个可滚动探索的数据宇宙。`,
-      stat: data.stats.total_games.toLocaleString(),
-      label: "Games tracked",
-    },
-    {
-      eyebrow: "Playtime Orbit",
-      title: "每一小时都在改变星图的重心",
-      body: `累计 ${formatHours(data.milestone.total_hours)} 的游玩时间，让偏爱的类型、周期和沉迷峰值变得一眼可见。`,
-      stat: formatHours(data.milestone.total_hours),
-      label: "Total playtime",
-    },
-    {
-      eyebrow: "Gravity Well",
-      title: topGame ? `${topGame.name} 是当前最强引力源` : "最长投入的游戏会自然浮出水面",
-      body: topGame
-        ? `它贡献了 ${formatHours(topGame.hours)}，占前列累计曲线的 ${topGame.cumulative_pct.toFixed(1)}%。`
-        : "当数据同步后，投入最深的游戏会成为这个宇宙里的主星。",
-      stat: topGame ? formatHours(topGame.hours) : "Ready",
-      label: "Top game pull",
-    },
-    {
-      eyebrow: "Live Console",
-      title: "落回控制台，继续看真实数据",
-      body: recentGame
-        ? `最近两周最活跃的是 ${recentGame.name}，同时还有更新、成就、热力图和类型网络等待继续分析。`
-        : "下方保留完整控制台：更新、成就、热力图、类型网络和最近活动都还在原位。",
-      stat: strongestGenre ? strongestGenre.genre : "Dashboard",
-      label: strongestGenre ? `${formatCompact(strongestGenre.hours)} genre hours` : "Open console",
-    },
-  ], [data, recentGame, strongestGenre, topGame]);
+  const totalHours = formatHours(data.milestone.total_hours, 1);
+  const xpLevel = Math.floor(data.milestone.total_hours / 100) + 1;
+  const xpProgress = Math.round(data.milestone.total_hours % 100);
+  const playedPct = Math.round((data.stats.played_games / Math.max(data.stats.total_games, 1)) * 100);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const section = sectionRef.current;
-    if (!canvas || !section) return;
+    if (!canvas) return;
 
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x05070b, 0.035);
+    scene.fog = new THREE.FogExp2(0x05070b, 0.045);
 
-    const camera = new THREE.PerspectiveCamera(48, window.innerWidth / window.innerHeight, 0.1, 100);
-    camera.position.set(0, 0.2, 8.8);
+    const camera = new THREE.PerspectiveCamera(44, window.innerWidth / window.innerHeight, 0.1, 90);
+    camera.position.set(0, 0.2, 11.5);
 
     const renderer = new THREE.WebGLRenderer({
       canvas,
-      antialias: true,
       alpha: true,
+      antialias: true,
       powerPreference: "high-performance",
     });
     renderer.setClearColor(0x05070b, 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     const root = new THREE.Group();
+    const libraryGroup = new THREE.Group();
+    const railGroup = new THREE.Group();
     scene.add(root);
+    root.add(libraryGroup, railGroup);
 
-    const ambient = new THREE.AmbientLight(0x91a7ff, 1.5);
-    const keyLight = new THREE.PointLight(0x67e8f9, 18, 28);
-    keyLight.position.set(-4, 3.5, 5);
-    const warmLight = new THREE.PointLight(0xf59e0b, 10, 26);
-    warmLight.position.set(4, -2, 3);
-    scene.add(ambient, keyLight, warmLight);
+    scene.add(new THREE.AmbientLight(0xb9d6ff, 1.2));
+    const cyan = new THREE.PointLight(0x67e8f9, 18, 28);
+    cyan.position.set(-4, 4, 6);
+    const amber = new THREE.PointLight(0xf59e0b, 10, 24);
+    amber.position.set(4, -3, 5);
+    scene.add(cyan, amber);
 
-    const coreMaterial = new THREE.MeshStandardMaterial({
-      color: 0x67e8f9,
-      emissive: 0x123b4f,
-      metalness: 0.45,
-      roughness: 0.28,
-      transparent: true,
-      opacity: 0.76,
-      wireframe: true,
-    });
-    const core = new THREE.Mesh(new THREE.IcosahedronGeometry(1.1, 2), coreMaterial);
-    root.add(core);
-
-    const ringMaterials = palette.slice(0, 4).map((color, index) => new THREE.MeshBasicMaterial({
-      color,
-      transparent: true,
-      opacity: 0.18 - index * 0.02,
-      wireframe: true,
-    }));
-    ringMaterials.forEach((material, index) => {
-      const ring = new THREE.Mesh(new THREE.TorusGeometry(1.9 + index * 0.48, 0.008, 8, 128), material);
-      ring.rotation.set(index * 0.7, index * 0.35, index * 0.45);
-      root.add(ring);
-    });
-
-    const particleCount = 1500;
-    const basePositions = new Float32Array(particleCount * 3);
-    const streamPositions = new Float32Array(particleCount * 3);
-    const positions = new Float32Array(particleCount * 3);
-    const colors = new Float32Array(particleCount * 3);
+    const gameCount = Math.min(Math.max(data.game_cloud.length * 8, 900), window.innerWidth < 760 ? 1000 : 1800);
+    const positions = new Float32Array(gameCount * 3);
+    const colors = new Float32Array(gameCount * 3);
     const color = new THREE.Color();
+    const maxHours = Math.max(...data.game_cloud.map((game) => game.playtime_hours), 1);
 
-    for (let i = 0; i < particleCount; i += 1) {
+    for (let i = 0; i < gameCount; i += 1) {
+      const game = data.game_cloud[i % data.game_cloud.length];
+      const rank = i / gameCount;
+      const lane = (i % 17) / 17;
+      const angle = rank * Math.PI * 18 + lane * Math.PI * 2;
+      const weight = Math.sqrt((game?.playtime_hours ?? 0) / maxHours);
+      const radius = 1.2 + lane * 4.8 + weight * 1.2;
       const i3 = i * 3;
-      const angle = i * 0.091;
-      const lane = (i % 13) / 13;
-      const radius = 1.35 + (i % 89) / 18;
-      const depth = ((i % 97) / 97 - 0.5) * 7.8;
-      const spiral = angle + radius * 0.22;
 
-      basePositions[i3] = Math.cos(spiral) * radius;
-      basePositions[i3 + 1] = Math.sin(spiral * 1.3) * (0.92 + lane * 1.6);
-      basePositions[i3 + 2] = depth;
+      positions[i3] = Math.cos(angle) * radius;
+      positions[i3 + 1] = Math.sin(angle * 0.72) * (0.9 + weight * 1.9);
+      positions[i3 + 2] = Math.sin(angle) * radius * 0.42 + (rank - 0.5) * 5.8;
 
-      streamPositions[i3] = (lane - 0.5) * 8.5 + Math.sin(angle) * 0.52;
-      streamPositions[i3 + 1] = Math.sin(i * 0.027) * 1.15 + Math.cos(angle * 0.32) * 0.28;
-      streamPositions[i3 + 2] = 5.2 - (i / particleCount) * 11.8;
-
-      positions[i3] = basePositions[i3];
-      positions[i3 + 1] = basePositions[i3 + 1];
-      positions[i3 + 2] = basePositions[i3 + 2];
-
-      color.setHex(palette[i % palette.length]);
+      color.setHex(COLORS[(game?.appid ?? i) % COLORS.length]);
       colors[i3] = color.r;
       colors[i3 + 1] = color.g;
       colors[i3 + 2] = color.b;
     }
 
-    const particleGeometry = new THREE.BufferGeometry();
-    particleGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-    particleGeometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
-    const particleMaterial = new THREE.PointsMaterial({
-      size: 0.032,
+    const pointGeometry = new THREE.BufferGeometry();
+    pointGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    pointGeometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+    const pointMaterial = new THREE.PointsMaterial({
+      size: window.innerWidth < 760 ? 0.035 : 0.028,
+      color: 0xffffff,
+      vertexColors: true,
       transparent: true,
       opacity: 0.78,
-      vertexColors: true,
       depthWrite: false,
       blending: THREE.AdditiveBlending,
     });
-    const particles = new THREE.Points(particleGeometry, particleMaterial);
-    root.add(particles);
+    const points = new THREE.Points(pointGeometry, pointMaterial);
+    libraryGroup.add(points);
 
-    const lineMaterials: THREE.LineBasicMaterial[] = [];
-    for (let lane = 0; lane < 7; lane += 1) {
-      const points: THREE.Vector3[] = [];
-      for (let step = 0; step < 120; step += 1) {
-        const t = step / 119;
-        const angle = t * Math.PI * 5.8 + lane * 0.7;
-        const radius = 2.1 + lane * 0.22 + Math.sin(t * Math.PI) * 0.55;
-        points.push(new THREE.Vector3(
-          Math.cos(angle) * radius,
-          Math.sin(angle * 0.68) * (1.1 + lane * 0.12),
-          (t - 0.5) * 9.5,
-        ));
-      }
-      const geometry = new THREE.BufferGeometry().setFromPoints(points);
-      const material = new THREE.LineBasicMaterial({
-        color: palette[lane % palette.length],
-        transparent: true,
-        opacity: 0.2,
-      });
-      lineMaterials.push(material);
-      root.add(new THREE.Line(geometry, material));
-    }
-
-    const panelGroup = new THREE.Group();
-    const panelMaterial = new THREE.MeshBasicMaterial({
-      color: 0x8bd8ff,
+    const shellMaterial = new THREE.MeshBasicMaterial({
+      color: 0x67e8f9,
       transparent: true,
-      opacity: 0.1,
+      opacity: 0.055,
       wireframe: true,
     });
-    for (let i = 0; i < 9; i += 1) {
-      const panel = new THREE.Mesh(new THREE.BoxGeometry(0.95 + (i % 3) * 0.28, 0.42, 0.02), panelMaterial);
-      panel.position.set((i % 3 - 1) * 1.36, 1.55 - Math.floor(i / 3) * 0.58, -1.2 - i * 0.08);
-      panel.rotation.y = -0.24;
-      panelGroup.add(panel);
-    }
-    panelGroup.position.set(2.7, -0.45, -1.2);
-    root.add(panelGroup);
+    const shell = new THREE.Mesh(new THREE.IcosahedronGeometry(3.2, 3), shellMaterial);
+    libraryGroup.add(shell);
 
-    const bars = new THREE.Group();
-    const maxHours = Math.max(...genreBars, 1);
-    genreBars.forEach((hours, index) => {
-      const height = 0.32 + (hours / maxHours) * 1.65;
-      const material = new THREE.MeshStandardMaterial({
-        color: palette[index % palette.length],
-        emissive: palette[index % palette.length],
-        emissiveIntensity: 0.12,
-        metalness: 0.2,
-        roughness: 0.35,
-        transparent: true,
-        opacity: 0.78,
-      });
-      const bar = new THREE.Mesh(new THREE.BoxGeometry(0.26, height, 0.26), material);
-      bar.position.set((index - (genreBars.length - 1) / 2) * 0.42, -1.72 + height / 2, -0.55);
-      bars.add(bar);
-    });
-    bars.position.set(-2.65, 0.08, -0.9);
-    bars.rotation.y = 0.28;
-    root.add(bars);
-
-    let targetProgress = 0;
-    let smoothProgress = 0;
-    let animationFrame = 0;
-    let reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const positionAttribute = particleGeometry.getAttribute("position") as THREE.BufferAttribute;
-    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-    const updateProgress = () => {
-      const bounds = section.getBoundingClientRect();
-      const scrollable = Math.max(bounds.height - window.innerHeight, 1);
-      targetProgress = clamp(-bounds.top / scrollable, 0, 1);
-      const nextChapter = Math.min(chapters.length - 1, Math.floor(targetProgress * chapters.length));
-      if (nextChapter !== activeRef.current) {
-        activeRef.current = nextChapter;
-        setActiveChapter(nextChapter);
+    const ringMaterials: THREE.LineBasicMaterial[] = [];
+    for (let ringIndex = 0; ringIndex < 7; ringIndex += 1) {
+      const ringPoints: THREE.Vector3[] = [];
+      for (let step = 0; step <= 220; step += 1) {
+        const t = step / 220;
+        const angle = t * Math.PI * 2;
+        const radius = 2.1 + ringIndex * 0.56;
+        ringPoints.push(new THREE.Vector3(
+          Math.cos(angle) * radius,
+          Math.sin(angle) * radius * (0.34 + ringIndex * 0.035),
+          Math.sin(angle + ringIndex) * 0.42,
+        ));
       }
+      const material = new THREE.LineBasicMaterial({
+        color: COLORS[ringIndex % COLORS.length],
+        transparent: true,
+        opacity: 0.13,
+      });
+      const ring = new THREE.Line(new THREE.BufferGeometry().setFromPoints(ringPoints), material);
+      ring.rotation.set(ringIndex * 0.46, ringIndex * 0.22, ringIndex * 0.18);
+      ringMaterials.push(material);
+      railGroup.add(ring);
+    }
+
+    const reticleMaterial = new THREE.LineBasicMaterial({ color: 0x67e8f9, transparent: true, opacity: 0.28 });
+    const reticle = new THREE.Group();
+    const reticleCircle: THREE.Vector3[] = [];
+    for (let i = 0; i <= 80; i += 1) {
+      const angle = (i / 80) * Math.PI * 2;
+      reticleCircle.push(new THREE.Vector3(Math.cos(angle) * 1.4, Math.sin(angle) * 1.4, 0));
+    }
+    reticle.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(reticleCircle), reticleMaterial));
+    [
+      [new THREE.Vector3(-1.9, 0, 0), new THREE.Vector3(-0.92, 0, 0)],
+      [new THREE.Vector3(0.92, 0, 0), new THREE.Vector3(1.9, 0, 0)],
+      [new THREE.Vector3(0, -1.9, 0), new THREE.Vector3(0, -0.92, 0)],
+      [new THREE.Vector3(0, 0.92, 0), new THREE.Vector3(0, 1.9, 0)],
+    ].forEach((pair) => reticle.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pair), reticleMaterial)));
+    reticle.position.set(-1.9, -0.35, 0.45);
+    railGroup.add(reticle);
+
+    const shardMaterial = new THREE.MeshBasicMaterial({
+      color: 0xf59e0b,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.22,
+      side: THREE.DoubleSide,
+    });
+    const shards = new THREE.Group();
+    for (let i = 0; i < 6; i += 1) {
+      const shard = new THREE.Mesh(new THREE.ConeGeometry(0.22 + i * 0.018, 1.2 + i * 0.1, 3), shardMaterial);
+      shard.position.set(2 + (i - 2.5) * 0.42, -0.2 + Math.sin(i) * 0.2, 0.24 - i * 0.03);
+      shard.rotation.set(Math.PI / 2, 0.2, i * 0.46);
+      shards.add(shard);
+    }
+    railGroup.add(shards);
+
+    let animationFrame = 0;
+    let targetScroll = 0;
+    let scroll = 0;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const updateScroll = () => {
+      const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+      targetScroll = clamp(window.scrollY / maxScroll, 0, 1);
     };
 
     const resize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.6));
       renderer.setSize(window.innerWidth, window.innerHeight);
-      updateProgress();
-    };
-
-    const updateMotionPreference = () => {
-      reducedMotion = motionQuery.matches;
+      updateScroll();
     };
 
     const animate = () => {
-      smoothProgress = reducedMotion
-        ? targetProgress
-        : THREE.MathUtils.lerp(smoothProgress, targetProgress, 0.075);
-
-      const streamBlend = Math.sin(smoothProgress * Math.PI);
+      scroll = reducedMotion ? targetScroll : THREE.MathUtils.lerp(scroll, targetScroll, 0.055);
       const time = performance.now() * 0.001;
 
-      for (let i = 0; i < particleCount; i += 1) {
-        const i3 = i * 3;
-        const wave = Math.sin(time * 0.8 + i * 0.019) * 0.08;
-        const blend = clamp(streamBlend + wave, 0, 1);
-        positions[i3] = THREE.MathUtils.lerp(basePositions[i3], streamPositions[i3], blend);
-        positions[i3 + 1] = THREE.MathUtils.lerp(basePositions[i3 + 1], streamPositions[i3 + 1], blend);
-        positions[i3 + 2] = THREE.MathUtils.lerp(basePositions[i3 + 2], streamPositions[i3 + 2], blend);
-      }
-      positionAttribute.needsUpdate = true;
+      libraryGroup.rotation.y = time * 0.025 + scroll * 1.65;
+      libraryGroup.rotation.x = Math.sin(scroll * Math.PI) * 0.16;
+      railGroup.rotation.z = -scroll * 0.42;
+      shell.rotation.x = time * 0.08;
+      shell.rotation.y = time * 0.11;
+      reticle.rotation.z = time * 0.22;
+      shards.rotation.y = Math.sin(time * 0.6) * 0.2 + scroll * 0.7;
+      pointMaterial.opacity = 0.52 + Math.sin(scroll * Math.PI) * 0.22;
 
-      root.rotation.y = smoothProgress * Math.PI * 1.35 + time * 0.035;
-      root.rotation.x = Math.sin(smoothProgress * Math.PI) * 0.18;
-      core.rotation.x = time * 0.24 + smoothProgress * 1.6;
-      core.rotation.y = time * 0.32 + smoothProgress * 2.2;
-      particles.rotation.z = -smoothProgress * 0.46;
-      panelGroup.position.x = 2.9 - smoothProgress * 1.3;
-      panelGroup.rotation.y = -0.25 + smoothProgress * 0.72;
-      bars.position.x = -2.8 + Math.sin(smoothProgress * Math.PI) * 0.9;
-      bars.rotation.y = 0.3 - smoothProgress * 0.58;
-
-      camera.position.x = THREE.MathUtils.lerp(-0.55, 0.7, smoothProgress);
-      camera.position.y = THREE.MathUtils.lerp(0.22, -0.18, Math.sin(smoothProgress * Math.PI));
-      camera.position.z = THREE.MathUtils.lerp(8.8, 6.35, smoothProgress);
+      camera.position.x = Math.sin(scroll * Math.PI * 2) * 0.9;
+      camera.position.y = 0.2 + scroll * 1.4;
+      camera.position.z = 11.5 - scroll * 2.3;
       camera.lookAt(0, 0, 0);
-
-      lineMaterials.forEach((material, index) => {
-        material.opacity = 0.12 + Math.sin(smoothProgress * Math.PI + index * 0.4) * 0.12;
-      });
 
       renderer.render(scene, camera);
       animationFrame = window.requestAnimationFrame(animate);
     };
 
-    updateProgress();
+    updateScroll();
     resize();
     animate();
 
-    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("scroll", updateScroll, { passive: true });
     window.addEventListener("resize", resize);
-    motionQuery.addEventListener("change", updateMotionPreference);
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
-      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("scroll", updateScroll);
       window.removeEventListener("resize", resize);
-      motionQuery.removeEventListener("change", updateMotionPreference);
-      scene.traverse((object) => {
-        if (object instanceof THREE.Mesh || object instanceof THREE.Points || object instanceof THREE.Line) {
-          object.geometry.dispose();
-        }
-      });
-      coreMaterial.dispose();
+      pointGeometry.dispose();
+      pointMaterial.dispose();
+      shell.geometry.dispose();
+      shellMaterial.dispose();
       ringMaterials.forEach((material) => material.dispose());
-      particleMaterial.dispose();
-      lineMaterials.forEach((material) => material.dispose());
-      panelMaterial.dispose();
-      bars.children.forEach((child) => {
-        if (child instanceof THREE.Mesh) {
-          child.material.dispose();
-        }
+      reticleMaterial.dispose();
+      shardMaterial.dispose();
+      scene.traverse((object) => {
+        if (object instanceof THREE.Line) object.geometry.dispose();
+        if (object instanceof THREE.Mesh && object !== shell) object.geometry.dispose();
       });
       renderer.dispose();
     };
-  }, [chapters.length, genreBars]);
+  }, [data.game_cloud]);
 
   return (
-    <section className="landing-experience" ref={sectionRef} aria-label="Steam Notebook overview">
-      <div className="landing-stage">
-        <canvas className="landing-canvas" ref={canvasRef} />
+    <>
+      <div className="atlas-backdrop" aria-hidden="true">
+        <canvas className="atlas-canvas" ref={canvasRef} />
+      </div>
 
-        <nav className="landing-nav" aria-label="Primary">
-          <a className="landing-wordmark" href="#top" aria-label="Steam Notebook home">
-            <span className="wordmark-mark" />
+      <section className="atlas-hero" ref={heroRef} aria-label="Steam data atlas">
+        <nav className="atlas-nav" aria-label="Primary">
+          <a className="atlas-wordmark" href="#top" aria-label="Steam Notebook home">
+            <span className="atlas-mark" />
             <span>Steam Notebook</span>
           </a>
-          <a className="landing-console-link" href="#dashboard">进入控制台</a>
+          <div className="atlas-nav-actions">
+            <a href="#dashboard">数据舱</a>
+            <a href="#updates">更新动态</a>
+          </div>
         </nav>
 
-        <div className="landing-copy">
-          <div className="landing-chapters" aria-live="polite">
-            {chapters.map((chapter, index) => (
-              <article
-                className={`landing-chapter ${index === activeChapter ? "is-active" : ""}`}
-                key={chapter.eyebrow}
-                aria-hidden={index !== activeChapter}
-              >
-                <p className="landing-eyebrow">{chapter.eyebrow}</p>
-                <h1 className="landing-title">{chapter.title}</h1>
-                <p className="landing-body">{chapter.body}</p>
-                <div className="landing-actions">
-                  <a className="landing-primary-action" href="#dashboard" tabIndex={index === activeChapter ? undefined : -1}>
-                    进入现有控制台
-                  </a>
-                  <span className="landing-live-pill">{data.player.online ? "Online" : "Offline"}</span>
-                </div>
-              </article>
-            ))}
+        <div className="atlas-hero-inner">
+          <div className="atlas-copy">
+            <p className="atlas-eyebrow">Private Steam Atlas</p>
+            <h1>{data.player.personaname} 的游玩宇宙</h1>
+            <p>
+              不是报告，不是流水账。这里是一座个人 Steam 观测台：游戏库、热力、成就、类型、更新和近期气候都被压进同一个空间。
+            </p>
+            <div className="atlas-actions">
+              <a href="#dashboard">进入数据舱</a>
+              <span>{data.player.online ? "Online" : "Offline"} · Lv.{data.player.level}</span>
+            </div>
           </div>
 
-          <aside className="landing-metric-panel" aria-label="Active metric">
-            <span className="landing-metric-value">{chapters[activeChapter].stat}</span>
-            <span className="landing-metric-label">{chapters[activeChapter].label}</span>
+          <aside className="atlas-command-panel" aria-label="Steam summary">
+            <div className="atlas-player">
+              {data.player.avatarfull && <img src={data.player.avatarfull} alt={data.player.personaname} />}
+              <div>
+                <strong>{totalHours}</strong>
+                <span>Total playtime · XP Level {xpLevel}</span>
+              </div>
+            </div>
+            <div className="atlas-kpi-grid">
+              <div><strong>{data.stats.total_games}</strong><span>Games</span></div>
+              <div><strong>{playedPct}%</strong><span>Activated</span></div>
+              <div><strong>{data.milestone.walking_km.toLocaleString()} km</strong><span>Walking eq.</span></div>
+              <div><strong>{xpProgress}/100</strong><span>Next level</span></div>
+            </div>
+            <div className="atlas-weather">
+              <span>Gaming Weather</span>
+              <strong>{data.game_weather.forecast} · {data.game_weather.top_game}</strong>
+              {recentGames.map((game) => (
+                <div key={game.name}>
+                  <span>{game.name}</span>
+                  <b>{formatHours(game.hours, 1)}</b>
+                </div>
+              ))}
+            </div>
           </aside>
         </div>
 
-        <div className="landing-progress" aria-hidden="true">
-          {chapters.map((chapter, index) => (
-            <span className={index === activeChapter ? "is-active" : ""} key={chapter.eyebrow} />
+        <div className="atlas-orbit-strip" aria-label="Top games">
+          {topGames.map((game) => (
+            <div className="atlas-game-sigil" key={game.appid}>
+              {game.img_icon_url && <img src={steamIconUrl(game)} alt="" />}
+              <span>{game.name}</span>
+              <strong>{formatHours(game.playtime_hours, 1)}</strong>
+            </div>
           ))}
         </div>
-      </div>
-    </section>
+
+        {topGame && (
+          <div className="atlas-marquee" aria-hidden="true">
+            <span>Top Gravity: {topGame.name} · {formatHours(topGame.hours, 1)}</span>
+            <span>Heatmap · Network · Achievements · Updates</span>
+          </div>
+        )}
+      </section>
+    </>
   );
 }

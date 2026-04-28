@@ -23,7 +23,13 @@ function App() {
     <div className="app" id="top">
       <LandingExperience data={data} />
 
-      <section className="dashboard-shell" id="dashboard" aria-label="Steam data console">
+      <section className="dashboard-shell cinematic-dashboard" id="dashboard" aria-label="Steam data observatory">
+        <div className="dashboard-intro">
+          <span>Data Observatory</span>
+          <h2>数据舱：真正有用的部分</h2>
+          <p>这里保留所有可交互分析：热力图、时间模式、游戏云、80/20 曲线、网络、成就和更新。背景只负责氛围，判断交给数据。</p>
+        </div>
+
         <ProfileHero player={data.player} milestone={data.milestone} />
 
         <main className="dashboard-grid">
@@ -32,10 +38,6 @@ function App() {
           </div>
           <div className="span-5">
             <WeeklyDigest digest={data.weekly_digest} />
-          </div>
-
-          <div className="span-12">
-            <GameUpdates updates={data.game_updates ?? []} />
           </div>
 
           <div className="span-8">
@@ -85,6 +87,16 @@ function App() {
             <AchievementBoard achievements={data.achievements} />
           </div>
         </main>
+      </section>
+
+      <section className="updates-section" id="updates" aria-label="Game update news">
+        <div className="updates-heading">
+          <span>Steam Update Feed</span>
+          <h2>游戏开发更新与新闻动态</h2>
+          <p>滚动叙事结束后，把最近抓取到的 Steam 更新统一收束在页面最后。</p>
+        </div>
+
+        <GameUpdates updates={data.game_updates ?? []} />
 
         <footer className="footer">
           <span>Steam Notebook — Updated {new Date(data.updated_at).toLocaleString()}</span>
