@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TURSO_URL = os.getenv("TURSO_URL").replace("libsql://", "https://")
+raw = os.getenv("TURSO_URL", "").strip()
+TURSO_URL = raw.replace("libsql://", "https://") if raw.startswith("libsql://") else f"https://{raw}" if raw and not raw.startswith("http") else raw
 TURSO_TOKEN = os.getenv("TURSO_TOKEN")
 
 HEADERS = {
