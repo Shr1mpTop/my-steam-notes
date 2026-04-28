@@ -1,9 +1,11 @@
 import type { AchievementGame, GenreItem } from "../types";
+import { useLocale } from "../i18n";
 
 interface Props { achievements: AchievementGame[]; }
 interface GenreProps { genres: GenreItem[]; }
 
 export function AchievementBoard({ achievements }: Props) {
+  const { t } = useLocale();
   if (!achievements.length) return null;
 
   const completed = achievements.filter((a) => a.pct === 100);
@@ -12,8 +14,8 @@ export function AchievementBoard({ achievements }: Props) {
 
   return (
     <div className="viz-card">
-      <h3>Achievement Board</h3>
-      <p className="viz-subtitle">{totalUnlocked}/{totalAchievements} unlocked across {achievements.length} games — {completed.length} games 100% completed</p>
+      <h3>{t("achievementBoard")}</h3>
+      <p className="viz-subtitle">{totalUnlocked}/{totalAchievements} {t("unlocked")} · {achievements.length} {t("games")} · {completed.length} {t("completed")}</p>
       <div className="achievement-grid">
         {achievements.map((game) => (
           <div key={game.appid} className="achievement-card">
@@ -52,6 +54,7 @@ export function AchievementBoard({ achievements }: Props) {
 }
 
 export function GenreChart({ genres }: GenreProps) {
+  const { t } = useLocale();
   if (!genres.length) return null;
 
   const maxHours = Math.max(...genres.map((g) => g.hours));
@@ -59,8 +62,8 @@ export function GenreChart({ genres }: GenreProps) {
 
   return (
     <div className="viz-card">
-      <h3>Genre Distribution</h3>
-      <p className="viz-subtitle">Hours by game genre</p>
+      <h3>{t("genreDistribution")}</h3>
+      <p className="viz-subtitle">{t("genreSubtitle")}</p>
       <div className="genre-chart">
         {genres.slice(0, 10).map((g, i) => (
           <div key={g.genre} className="genre-row">

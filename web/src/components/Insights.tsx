@@ -1,44 +1,47 @@
 import { useMemo, useState, useCallback } from "react";
 import type { StatsData, GameNetworkData, GameCloudItem } from "../types";
+import { useLocale } from "../i18n";
 
 interface StatsProps { stats: StatsData; }
 interface DustProps { played: number; never: number; }
 interface StayingProps { games: GameCloudItem[]; }
 
 export function StatsCards({ stats }: StatsProps) {
+  const { t } = useLocale();
   return (
     <div className="stats-grid">
       <div className="stat-card">
         <span className="stat-value">{stats.total_games}</span>
-        <span className="stat-label">Total Games</span>
+        <span className="stat-label">{t("totalGames")}</span>
       </div>
       <div className="stat-card">
         <span className="stat-value">{stats.played_games}</span>
-        <span className="stat-label">Played</span>
+        <span className="stat-label">{t("played")}</span>
       </div>
       <div className="stat-card">
         <span className="stat-value">{stats.dust_rate}%</span>
-        <span className="stat-label">Dust Rate</span>
+        <span className="stat-label">{t("dustRate")}</span>
       </div>
       <div className="stat-card">
         <span className="stat-value">{stats.loyalty_score}</span>
-        <span className="stat-label">Loyalty: {stats.loyalty_label}</span>
+        <span className="stat-label">{t("loyalty")}: {stats.loyalty_label}</span>
       </div>
       {stats.peak_day && (
         <div className="stat-card">
           <span className="stat-value">{(stats.peak_day.minutes / 60).toFixed(1)}h</span>
-          <span className="stat-label">Peak Day ({stats.peak_day.date})</span>
+          <span className="stat-label">{t("peakDay")} ({stats.peak_day.date})</span>
         </div>
       )}
       <div className="stat-card">
         <span className="stat-value">{stats.longest_streak.days} days</span>
-        <span className="stat-label">Longest Streak</span>
+        <span className="stat-label">{t("longestStreak")}</span>
       </div>
     </div>
   );
 }
 
 export function DustMeter({ played, never }: DustProps) {
+  const { t } = useLocale();
   const total = played + never;
   const playedPct = total > 0 ? Math.round((played / total) * 100) : 0;
   const dustPct = 100 - playedPct;
@@ -48,10 +51,10 @@ export function DustMeter({ played, never }: DustProps) {
 
   return (
     <div className="viz-card dust-card">
-      <h3>Dust Rate</h3>
-      <p className="viz-subtitle">Library activation quality</p>
+      <h3>{t("dustRate")}</h3>
+      <p className="viz-subtitle">{t("libraryActivation")}</p>
       <div className="dust-radial">
-        <svg viewBox="0 0 140 140" className="dust-ring" aria-label={`Dust rate ${dustPct}%`}>
+        <svg viewBox="0 0 140 140" className="dust-ring" aria-label={`${t("dustRate")} ${dustPct}%`}>
           <circle className="dust-ring-track" cx="70" cy="70" r={radius} />
           <circle
             className="dust-ring-played"
@@ -71,19 +74,20 @@ export function DustMeter({ played, never }: DustProps) {
         </svg>
         <div className="dust-center">
           <span className="dust-percent">{dustPct}%</span>
-          <span className="dust-caption">Never opened</span>
+          <span className="dust-caption">{t("neverOpened")}</span>
         </div>
       </div>
       <div className="dust-breakdown">
-        <span><strong>{played}</strong> Played</span>
-        <span><strong>{never}</strong> Never</span>
-        <span><strong>{total}</strong> Total</span>
+        <span><strong>{played}</strong> {t("played")}</span>
+        <span><strong>{never}</strong> {t("never")}</span>
+        <span><strong>{total}</strong> {t("total")}</span>
       </div>
     </div>
   );
 }
 
 export function StayingPower({ games }: StayingProps) {
+  const { t } = useLocale();
   const [now] = useState(() => Date.now() / 1000);
   const withLast = games.filter((g) => g.rtime_last_played > 0);
   if (!withLast.length) return null;
@@ -95,8 +99,8 @@ export function StayingPower({ games }: StayingProps) {
 
   return (
     <div className="viz-card">
-      <h3>Staying Power</h3>
-      <p className="viz-subtitle">Total hours vs days since last played</p>
+      <h3>{t("stayingPower")}</h3>
+      <p className="viz-subtitle">{t("stayingSubtitle")}</p>
       <div className="staying-grid">
         {data.map((g) => {
           const recencyColor = g.recency < 7 ? "#34d399" : g.recency < 30 ? "#67e8f9" : g.recency < 90 ? "#a78bfa" : "#667085";
@@ -107,7 +111,7 @@ export function StayingPower({ games }: StayingProps) {
                 <div className="staying-bar" style={{ width: `${Math.min((g.hours / data[0].hours) * 100, 100)}%`, background: recencyColor }} />
               </div>
               <span className="staying-hours">{g.hours}h</span>
-              <span className="staying-recency" style={{ color: recencyColor }}>{g.recency === 0 ? "Today" : `${g.recency}d ago`}</span>
+              <span className="staying-recency" style={{ color: recencyColor }}>{g.recency === 0 ? t("today") : `${g.recency}${t("daysAgo")}`}</span>
             </div>
           );
         })}
@@ -175,6 +179,7 @@ const BUBBLE_SLOTS = [
 ];
 
 export function GameNetwork({ network }: Props) {
+  const { t } = useLocale();
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
   const W = 640;
   const H = 380;
@@ -309,19 +314,19 @@ export function GameNetwork({ network }: Props) {
     setSelectedGenre((g) => g === genre ? null : genre);
   }, []);
 
-  if (!network.nodes.length) return <div className="viz-card"><h3>Game Network</h3><p className="viz-subtitle">Need more data - check back after a few days</p></div>;
+  if (!network.nodes.length) return <div className="viz-card"><h3>{t("gameNetwork")}</h3><p className="viz-subtitle">{t("waitingPolls")}</p></div>;
 
   return (
     <div className="viz-card game-network-card">
-      <h3>Game Network</h3>
+      <h3>{t("gameNetwork")}</h3>
       <p className="viz-subtitle">
         {selectedGenre ? (
           <>
-            <button className="treemap-back" onClick={() => setSelectedGenre(null)}>Back</button>
-            {selectedGenre} - {selectedGames.length} games in this cluster
+            <button className="treemap-back" onClick={() => setSelectedGenre(null)}>{t("back")}</button>
+            {selectedGenre} - {selectedGames.length} {t("clusterGames")}
           </>
         ) : (
-          "Bubble size = library weight, lines = genres played in the same period"
+          t("networkSubtitle")
         )}
       </p>
 
@@ -364,7 +369,7 @@ export function GameNetwork({ network }: Props) {
                     {truncate(bubble.name, bubble.r > 48 ? 16 : 9)}
                   </text>
                   <text x={bubble.x} y={bubble.y + 12} textAnchor="middle" fill="#96a1b5" fontSize="10">
-                    {bubble.games.length} games · {bubble.connections} links
+                    {bubble.games.length} {t("games")} · {bubble.connections} {t("links")}
                   </text>
                 </g>
               ))}
@@ -399,7 +404,7 @@ export function GameNetwork({ network }: Props) {
                   </text>
                   {bubble.degree > 0 && (
                     <text x={bubble.x} y={bubble.y + 12} textAnchor="middle" fill="#96a1b5" fontSize="9">
-                      {bubble.degree} links
+                      {bubble.degree} {t("links")}
                     </text>
                   )}
                 </g>

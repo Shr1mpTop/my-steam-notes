@@ -1,4 +1,5 @@
 import type { GameUpdateItem } from "../types";
+import { useLocale } from "../i18n";
 
 interface Props {
   updates: GameUpdateItem[];
@@ -19,13 +20,14 @@ function stripBbcode(text: string) {
 }
 
 export function GameUpdates({ updates = [] }: Props) {
+  const { t } = useLocale();
   const recent = updates.slice(0, 6);
 
   return (
     <div className="viz-card game-updates-card">
-      <h3>Update Briefing</h3>
+      <h3>{t("updateBriefing")}</h3>
       <p className="viz-subtitle">
-        {recent.length ? `${recent.length} update posts from your library` : "No game update posts captured yet"}
+        {recent.length ? `${recent.length} ${t("updatePosts")}` : t("noUpdates")}
       </p>
 
       {recent.length > 0 ? (
@@ -44,7 +46,7 @@ export function GameUpdates({ updates = [] }: Props) {
         </div>
       ) : (
         <div className="empty-panel">
-          Run the update sync to collect Steam update posts.
+          {t("runSync")}
         </div>
       )}
     </div>

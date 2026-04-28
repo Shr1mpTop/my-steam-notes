@@ -1,5 +1,6 @@
 import { useMemo, useState, useCallback, useRef } from "react";
 import type { GameCloudItem } from "../types";
+import { useLocale } from "../i18n";
 
 interface Props {
   games: GameCloudItem[];
@@ -135,6 +136,7 @@ function truncate(s: string, max: number): string {
 // --- Components ---
 
 export function GameCloud({ games }: Props) {
+  const { t } = useLocale();
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ x: number; y: number; name: string; hours: number } | null>(null);
   const fieldRef = useRef<HTMLDivElement>(null);
@@ -192,21 +194,21 @@ export function GameCloud({ games }: Props) {
     });
   }, []);
 
-  if (!games.length) return <p style={{ color: "#96a1b5", fontFamily: "var(--mono)" }}>No games data yet.</p>;
+  if (!games.length) return <p style={{ color: "#96a1b5", fontFamily: "var(--mono)" }}>{t("noActivity")}</p>;
 
   const selGenre = selectedGenre ? genres.find(g => g.name === selectedGenre) : null;
 
   return (
     <div className="game-cloud">
-      <h2>Game Cloud</h2>
+      <h2>{t("gameCloud")}</h2>
       <p className="subtitle">
         {selGenre ? (
           <>
-            <button className="treemap-back" onClick={() => setSelectedGenre(null)}>← Back</button>
-            {" "}{selGenre.name} — {selGenre.totalHours.toFixed(0)}h · {selGenre.games.length} games
+            <button className="treemap-back" onClick={() => setSelectedGenre(null)}>← {t("back")}</button>
+            {" "}{selGenre.name} - {selGenre.totalHours.toFixed(0)}h · {selGenre.games.length} {t("games")}
           </>
         ) : (
-          `${games.length} games — sized by playtime, grouped by genre`
+          `${games.length} ${t("games")} - ${t("gameCloudSubtitle")}`
         )}
       </p>
 

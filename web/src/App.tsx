@@ -9,25 +9,30 @@ import { StatsCards, GameNetwork, DustMeter, StayingPower } from "./components/I
 import { AchievementBoard, GenreChart } from "./components/AchievementBoard";
 import { GameWeather, WeeklyDigest } from "./components/FunWidgets";
 import { GameUpdates } from "./components/GameUpdates";
-import { LandingExperience } from "./components/LandingExperience";
+import { useLocale } from "./i18n";
 import "./App.css";
 
 function App() {
   const { data, loading, error } = useDashboard();
+  const { locale, toggleLocale, t } = useLocale();
 
-  if (loading) return <div className="loading">Loading your Steam universe...</div>;
-  if (error) return <div className="error">Failed to load data: {error}</div>;
+  if (loading) return <div className="loading">{t("loading")}</div>;
+  if (error) return <div className="error">{t("error")}: {error}</div>;
   if (!data) return null;
 
   return (
-    <div className="app" id="top">
-      <LandingExperience data={data} />
-
-      <section className="dashboard-shell cinematic-dashboard" id="dashboard" aria-label="Steam data observatory">
-        <div className="dashboard-intro">
-          <span>Data Observatory</span>
-          <h2>数据舱：真正有用的部分</h2>
-          <p>这里保留所有可交互分析：热力图、时间模式、游戏云、80/20 曲线、网络、成就和更新。背景只负责氛围，判断交给数据。</p>
+    <div className="app dashboard-page" id="top">
+      <section className="dashboard-shell cinematic-dashboard" id="dashboard" aria-label="Steam data dashboard">
+        <div className="dashboard-topbar">
+          <div className="dashboard-intro">
+            <span>{t("dashboardKicker")}</span>
+            <h1>{t("dashboardTitle")}</h1>
+            <p>{t("dashboardSubtitle")}</p>
+          </div>
+          <button className="locale-toggle" type="button" onClick={toggleLocale} aria-label={t("switchLabel")}>
+            <span>{t("switchLabel")}</span>
+            <strong>{locale === "zh" ? "中文" : "EN"}</strong>
+          </button>
         </div>
 
         <ProfileHero player={data.player} milestone={data.milestone} />
@@ -91,15 +96,15 @@ function App() {
 
       <section className="updates-section" id="updates" aria-label="Game update news">
         <div className="updates-heading">
-          <span>Steam Update Feed</span>
-          <h2>游戏开发更新与新闻动态</h2>
-          <p>滚动叙事结束后，把最近抓取到的 Steam 更新统一收束在页面最后。</p>
+          <span>Steam</span>
+          <h2>{t("updateFeed")}</h2>
+          <p>{t("updateFeedSubtitle")}</p>
         </div>
 
         <GameUpdates updates={data.game_updates ?? []} />
 
         <footer className="footer">
-          <span>Steam Notebook — Updated {new Date(data.updated_at).toLocaleString()}</span>
+          <span>Steam Notebook - {t("updated")} {new Date(data.updated_at).toLocaleString()}</span>
         </footer>
       </section>
     </div>

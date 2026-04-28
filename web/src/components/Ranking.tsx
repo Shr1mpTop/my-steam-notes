@@ -1,5 +1,6 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, AreaChart, Area, XAxis, YAxis } from "recharts";
 import type { ParetoItem } from "../types";
+import { useLocale } from "../i18n";
 
 interface ParetoProps { data: ParetoItem[]; }
 interface PlatformProps { data: Record<string, number>; }
@@ -15,17 +16,18 @@ const TOOLTIP = {
 };
 
 export function ParetoChart({ data }: ParetoProps) {
+  const { t } = useLocale();
   const top20 = data.slice(0, 20);
   return (
     <div className="viz-card">
-      <h3>80/20 Rule</h3>
-      <p className="viz-subtitle">Top games account for most of your playtime</p>
+      <h3>{t("rule8020")}</h3>
+      <p className="viz-subtitle">{t("rule8020Subtitle")}</p>
       <ResponsiveContainer width="100%" height={280}>
         <AreaChart data={top20} margin={{ left: 10, right: 20, top: 10, bottom: 40 }}>
-          <XAxis dataKey="rank" tick={{ fill: AXIS, fontSize: 10 }} axisLine={{ stroke: GRID }} tickLine={{ stroke: GRID }} label={{ value: "Game Rank", position: "bottom", fill: AXIS, fontSize: 10 }} />
+          <XAxis dataKey="rank" tick={{ fill: AXIS, fontSize: 10 }} axisLine={{ stroke: GRID }} tickLine={{ stroke: GRID }} label={{ value: t("gameRank"), position: "bottom", fill: AXIS, fontSize: 10 }} />
           <YAxis tick={{ fill: AXIS, fontSize: 10 }} axisLine={{ stroke: GRID }} tickLine={{ stroke: GRID }} domain={[0, 100]} unit="%" />
           <Tooltip
-            formatter={(v, name) => name === "cumulative_pct" ? [`${v}%`, "Cumulative"] : [`${v}h`, "Hours"]}
+            formatter={(v, name) => name === "cumulative_pct" ? [`${v}%`, t("cumulative")] : [`${v}h`, t("totalHours")]}
             contentStyle={TOOLTIP}
             labelFormatter={(_, payload) => payload?.[0]?.payload?.name || ""}
           />
@@ -37,6 +39,7 @@ export function ParetoChart({ data }: ParetoProps) {
 }
 
 export function PlatformPie({ data }: PlatformProps) {
+  const { t } = useLocale();
   const chartData = Object.entries(data)
     .filter(([, v]) => v > 0)
     .map(([name, value]) => ({ name, value }));
@@ -44,8 +47,8 @@ export function PlatformPie({ data }: PlatformProps) {
 
   return (
     <div className="viz-card">
-      <h3>Platform Breakdown</h3>
-      <p className="viz-subtitle">Hours by platform</p>
+      <h3>{t("platformBreakdown")}</h3>
+      <p className="viz-subtitle">{t("hoursByPlatform")}</p>
       <div className="platform-chart">
         <ResponsiveContainer width="100%" height={200}>
           <PieChart>

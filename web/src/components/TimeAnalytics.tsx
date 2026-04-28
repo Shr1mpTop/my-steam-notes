@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import type { HeatmapDay, TimeHeatmapItem, WeekdayItem } from "../types";
+import { useLocale } from "../i18n";
 
 interface TimeHeatmapProps { data: TimeHeatmapItem[]; }
 interface WeekdayProps { data: WeekdayItem[]; heatmap?: Record<string, HeatmapDay>; }
@@ -15,6 +16,7 @@ function weekdayIndex(date: string) {
 }
 
 export function TimeHeatmap({ data }: TimeHeatmapProps) {
+  const { t } = useLocale();
   const grid: Record<string, number> = {};
   let maxCount = 1;
   for (const d of data) {
@@ -25,8 +27,8 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
 
   return (
     <div className="viz-card">
-      <h3>When You Play</h3>
-      <p className="viz-subtitle">Hour of day × Day of week — brighter = more active</p>
+      <h3>{t("whenYouPlay")}</h3>
+      <p className="viz-subtitle">{t("timeHeatmapSubtitle")}</p>
       <div className="time-heatmap">
         <div className="th-labels-y">
           {DAYS.map((d) => <span key={d}>{d}</span>)}
@@ -62,6 +64,7 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
 }
 
 export function GamingClock({ data }: ClockProps) {
+  const { t } = useLocale();
   const hourCounts: number[] = Array(24).fill(0);
   for (const d of data) hourCounts[d.hour] += d.count;
   const maxH = Math.max(...hourCounts, 1);
@@ -81,8 +84,8 @@ export function GamingClock({ data }: ClockProps) {
 
   return (
     <div className="viz-card">
-      <h3>Gaming Clock</h3>
-      <p className="viz-subtitle">24h activity pattern</p>
+      <h3>{t("gamingClock")}</h3>
+      <p className="viz-subtitle">{t("gamingClockSubtitle")}</p>
       <svg viewBox="0 0 240 240" width="240" height="240" className="gaming-clock">
         <circle cx={cx} cy={cy} r={r} fill="none" stroke="#273244" strokeWidth="1" />
         {hourLabels.map((l) => <text key={l.label} x={l.x} y={l.y} textAnchor="middle" dominantBaseline="middle" fill="#96a1b5" fontSize="9">{l.label}</text>)}
@@ -94,6 +97,7 @@ export function GamingClock({ data }: ClockProps) {
 }
 
 export function WeekdayChart({ data, heatmap }: WeekdayProps) {
+  const { t } = useLocale();
   const chartData = useMemo(() => {
     if (!heatmap || Object.keys(heatmap).length === 0) return data;
 
@@ -108,8 +112,8 @@ export function WeekdayChart({ data, heatmap }: WeekdayProps) {
   const maxMin = Math.max(...chartData.map((d) => d.minutes), 1);
   return (
     <div className="viz-card">
-      <h3>Weekday Preference</h3>
-      <p className="viz-subtitle">Total playtime by day of week</p>
+      <h3>{t("weekdayPreference")}</h3>
+      <p className="viz-subtitle">{t("weekdaySubtitle")}</p>
       <div className="weekday-bars">
         {chartData.map((d) => (
           <div key={d.day} className="weekday-bar-col">

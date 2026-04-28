@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { HeatmapDay } from "../types";
+import { useLocale } from "../i18n";
 
 interface Props {
   heatmap: Record<string, HeatmapDay>;
@@ -26,6 +27,7 @@ function formatDate(dateStr: string) {
 }
 
 export function ContributionMap({ heatmap }: Props) {
+  const { t } = useLocale();
   const [selected, setSelected] = useState<string | null>(null);
 
   const today = new Date();
@@ -62,9 +64,9 @@ export function ContributionMap({ heatmap }: Props) {
 
   return (
     <div className="contribution-map">
-      <h2>Activity Heatmap</h2>
+      <h2>{t("activityHeatmap")}</h2>
       <p className="subtitle">
-        {totalMinutes > 0 ? `${(totalMinutes / 60).toFixed(0)}h in the last year across ${activeDays} days` : "No activity data yet — waiting for polls"}
+        {totalMinutes > 0 ? `${(totalMinutes / 60).toFixed(0)}h ${t("lastYear")} · ${activeDays} ${t("activeDays")}` : `${t("noActivity")} - ${t("waitingPolls")}`}
       </p>
 
       <div className="heatmap-grid">
@@ -88,17 +90,17 @@ export function ContributionMap({ heatmap }: Props) {
       </div>
 
       <div className="heatmap-legend">
-        <span>Less</span>
+        <span>{t("less")}</span>
         {LEVELS.map((l, i) => (
           <div key={i} className="heatmap-cell" style={{ background: l.color }} title={l.label} />
         ))}
-        <span>More</span>
+        <span>{t("more")}</span>
       </div>
 
       {selected && sel && (
         <div className="day-detail">
           <h3>{formatDate(selected)}</h3>
-          <p>Total: {(sel.online_minutes / 60).toFixed(1)}h online</p>
+          <p>{t("total")}: {(sel.online_minutes / 60).toFixed(1)}h {t("online")}</p>
           {Object.entries(sel.games).length > 0 && (
             <ul>
               {Object.entries(sel.games)

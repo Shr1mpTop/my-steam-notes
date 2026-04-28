@@ -1,4 +1,5 @@
 import type { PlayerInfo, MilestoneData } from "../types";
+import { useLocale } from "../i18n";
 
 interface Props {
   player: PlayerInfo;
@@ -6,6 +7,7 @@ interface Props {
 }
 
 export function ProfileHero({ player, milestone }: Props) {
+  const { t } = useLocale();
   // XP: map total hours to a fun level system (every 100h = 1 level)
   const xpLevel = Math.floor(milestone.total_hours / 100) + 1;
   const xpProgress = (milestone.total_hours % 100);
@@ -32,13 +34,13 @@ export function ProfileHero({ player, milestone }: Props) {
             <span className="badge level">Lv.{player.level}</span>
             {player.currently_playing && (
               <span className="badge playing">
-                <span className="pulse" /> Playing {player.currently_playing}
+                <span className="pulse" /> {t("playing")} {player.currently_playing}
               </span>
             )}
             {!player.currently_playing && player.online && (
-              <span className="badge online-badge">Online</span>
+              <span className="badge online-badge">{t("statusOnline")}</span>
             )}
-            {!player.online && <span className="badge offline-badge">Offline</span>}
+            {!player.online && <span className="badge offline-badge">{t("statusOffline")}</span>}
           </div>
         </div>
       </div>
@@ -46,26 +48,26 @@ export function ProfileHero({ player, milestone }: Props) {
       <div className="milestone-grid">
         <div className="milestone-card">
           <span className="milestone-value">{milestone.total_hours.toLocaleString()}</span>
-          <span className="milestone-label">Hours Played</span>
+          <span className="milestone-label">{t("hoursPlayed")}</span>
         </div>
         <div className="milestone-card">
           <span className="milestone-value">{milestone.movies.toLocaleString()}</span>
-          <span className="milestone-label">Movies Equivalent</span>
+          <span className="milestone-label">{t("moviesEquivalent")}</span>
         </div>
         <div className="milestone-card">
           <span className="milestone-value">{milestone.walking_km.toLocaleString()} km</span>
-          <span className="milestone-label">Walking Distance</span>
+          <span className="milestone-label">{t("walkingDistance")}</span>
         </div>
         <div className="milestone-card">
           <span className="milestone-value">{milestone.books.toLocaleString()}</span>
-          <span className="milestone-label">Books Read</span>
+          <span className="milestone-label">{t("booksRead")}</span>
         </div>
       </div>
 
       <div className="xp-bar-container">
         <div className="xp-bar-header">
-          <span>XP Level {xpLevel}</span>
-          <span>{xpProgress.toFixed(0)} / 100h to next</span>
+          <span>{t("xpLevel")} {xpLevel}</span>
+          <span>{xpProgress.toFixed(0)} / 100h {t("toNext")}</span>
         </div>
         <div className="xp-bar-track">
           <div className="xp-bar-fill" style={{ width: `${xpPercent}%` }} />
