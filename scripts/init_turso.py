@@ -69,6 +69,19 @@ SCHEMA = [
         date TEXT PRIMARY KEY,
         level INTEGER
     )""",
+    """CREATE TABLE IF NOT EXISTS game_news_updates (
+        gid TEXT PRIMARY KEY,
+        appid INTEGER NOT NULL,
+        game_name TEXT NOT NULL,
+        title TEXT NOT NULL,
+        url TEXT,
+        date INTEGER NOT NULL,
+        feedname TEXT,
+        feedlabel TEXT,
+        update_type TEXT,
+        contents TEXT,
+        captured_at TEXT
+    )""",
 ]
 
 for stmt in SCHEMA:

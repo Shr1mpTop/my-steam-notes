@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28T14:44:24.333239+08:00",
+  "updated_at": "2026-04-28T14:54:14.252943+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
     "online": true,
@@ -1423,7 +1423,7 @@
       "games": {}
     },
     "2026-04-28": {
-      "online_minutes": 115,
+      "online_minutes": 120,
       "games": {}
     }
   },
@@ -1441,7 +1441,7 @@
     {
       "dow": 1,
       "hour": 14,
-      "count": 4
+      "count": 5
     }
   ],
   "platform": {
@@ -3157,5 +3157,51 @@
       }
     ]
   },
-  "weekly_digest": []
+  "weekly_digest": [],
+  "game_updates": [
+    {
+      "appid": 2239150,
+      "game_name": "Thronefall",
+      "title": "Thronefall | Dev Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242495",
+      "date": 1777298347,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hey Queens and Kings,Thanks so much for all of the feedback so far from our player survey - this has been super valuable in prioritising some key areas we are looking to fix/implement into the game. The business side of acquiring an IP and setting up new development workflows always takes a little longer to complete than anyone would like 😅, but we are pleased to say that these parts are complete, and we are now focusing on getting development back underway! Thanks to all the amazing survey results, we have been able to identify some quality-of-life improvements to the game that we are working on first, ahead of looking into what exciting new content we could bring to Thronefall. We will be aiming for monthly updates moving forward, and we look forward to sharing more as soon as we can! Th..."
+    },
+    {
+      "appid": 440900,
+      "game_name": "Conan Exiles",
+      "title": "April Hotfix",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242232",
+      "date": 1777295072,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Greetings Exiles, We have a quick hotfix that re-enables character transfers on Steam.ChangesCharacter Transfers have been re-enabled on Steam.Players of Isle of Siptah and Exiled Lands alike can prepare for the upgrade to the Enhanced version by transferring their characters to different servers, including private servers, if they so choose. Read more about the Enhanced version and all the changes it will bring on our blog.Bug FixesAll thralls, pets and mounts followers that disappeared after doing a character transfer should be restored upon logging into the server."
+    },
+    {
+      "appid": 1366540,
+      "game_name": "Dyson Sphere Program",
+      "title": "Patch Notes V0.10.34.28524",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770241718",
+      "date": 1777282068,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Engineers still busy among the stars and reality alike — the blazing heat of summer is almost upon us, and Dyson Sphere Program continues to move forward at full speed.Here is today’s small update: \\Holo beacons can activate \"Dark Fog Beaconing\" function (in combat mode). Once activated, Dark Fog Hives will dispatch Relay stations to beacon's location. Note: The beacon must maintain power supply and visibility must be set to at least \"Local Planetary System\". We know, of course, that many of you are looking forward to the vehicle system. However, this is a special feature that runs through the entire game experience, and to some extent, it will change the rhythm of how the game is played.In order to present it to every Engineer in the best possible form, it still needs quite some time befo..."
+    },
+    {
+      "appid": 494840,
+      "game_name": "UBOAT",
+      "title": "2026.1 Patch 12",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770240627",
+      "date": 1777225688,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Type IX: - Fix: After installing an anti-radar coated snorkel, the boat upgrade UI was still claiming that the normal snorkel was installed instead. - Fix: Some bulkheads weren't closed after issuing an order to close all bulkheads. - Fix: Crew pathing issues with some bulkheads closed. Ships: - Fix: Type VII NPC U-boats had a gap in their 3D geometry. Flotilla bases: - Fix: If a commemorative plaque was earned in a flotilla base, while playing with a U-boat that had a tiger and boat or clover emblem, then the plaque wasn't appearing and only the boat name was written where the plaque should be. Missions: - Fix: A placeholder message in Seehund distant patrol. General: - Fix: Crash while talking with port officers ..."
+    }
+  ]
 }

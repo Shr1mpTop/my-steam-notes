@@ -15,6 +15,7 @@ export interface DashboardData {
   genres: GenreItem[];
   game_weather: GameWeatherData;
   weekly_digest: WeeklyDigestItem[];
+  game_updates: GameUpdateItem[];
 }
 
 export interface PlayerInfo {
@@ -114,4 +115,16 @@ export interface WeeklyDigestItem {
   total_hours: number;
   games_count: number;
   top_games: string[];
+}
+
+export interface GameUpdateItem {
+  appid: number;
+  game_name: string;
+  title: string;
+  url: string;
+  date: number;
+  feedname: string;
+  feedlabel: string;
+  update_type: string;
+  contents: string;
 }

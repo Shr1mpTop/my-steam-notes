@@ -1,11 +1,18 @@
-import type { TimeHeatmapItem, WeekdayItem } from "../types";
+import { useMemo } from "react";
+import type { HeatmapDay, TimeHeatmapItem, WeekdayItem } from "../types";
 
 interface TimeHeatmapProps { data: TimeHeatmapItem[]; }
-interface WeekdayProps { data: WeekdayItem[]; }
+interface WeekdayProps { data: WeekdayItem[]; heatmap?: Record<string, HeatmapDay>; }
 interface ClockProps { data: TimeHeatmapItem[]; }
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const HOURS = Array.from({ length: 24 }, (_, i) => i);
+
+function weekdayIndex(date: string) {
+  const [year, month, day] = date.split("-").map(Number);
+  const nativeDay = new Date(year, month - 1, day).getDay();
+  return nativeDay === 0 ? 6 : nativeDay - 1;
+}
 
 export function TimeHeatmap({ data }: TimeHeatmapProps) {
   const grid: Record<string, number> = {};
@@ -36,8 +43,8 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
                     className="th-cell"
                     style={{
                       background: count > 0
-                        ? `rgba(57, 211, 83, ${0.2 + intensity * 0.8})`
-                        : "#161b22",
+                        ? `rgba(103, 232, 249, ${0.18 + intensity * 0.72})`
+                        : "#151b26",
                     }}
                     title={`${DAYS[dow]} ${hour}:00 — ${count} polls active`}
                   />
@@ -47,7 +54,7 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
           ))}
         </div>
         <div className="th-labels-x">
-          {HOURS.filter((_, i) => i % 3 === 0).map((h) => <span key={h}>{h}h</span>)}
+          {HOURS.map((h) => <span key={h}>{h % 3 === 0 ? `${h}h` : ""}</span>)}
         </div>
       </div>
     </div>
@@ -77,23 +84,34 @@ export function GamingClock({ data }: ClockProps) {
       <h3>Gaming Clock</h3>
       <p className="viz-subtitle">24h activity pattern</p>
       <svg viewBox="0 0 240 240" width="240" height="240" className="gaming-clock">
-        <circle cx={cx} cy={cy} r={r} fill="none" stroke="#21262d" strokeWidth="1" />
-        {hourLabels.map((l) => <text key={l.label} x={l.x} y={l.y} textAnchor="middle" dominantBaseline="middle" fill="#8b949e" fontSize="9">{l.label}</text>)}
-        <path d={pathD} fill="rgba(57, 211, 83, 0.3)" stroke="#39d353" strokeWidth="2" />
-        {points.map((p) => p.count > 0 && <circle key={p.hour} cx={p.x} cy={p.y} r="3" fill="#39d353" />)}
+        <circle cx={cx} cy={cy} r={r} fill="none" stroke="#273244" strokeWidth="1" />
+        {hourLabels.map((l) => <text key={l.label} x={l.x} y={l.y} textAnchor="middle" dominantBaseline="middle" fill="#96a1b5" fontSize="9">{l.label}</text>)}
+        <path d={pathD} fill="rgba(103, 232, 249, 0.22)" stroke="#67e8f9" strokeWidth="2" />
+        {points.map((p) => p.count > 0 && <circle key={p.hour} cx={p.x} cy={p.y} r="3" fill="#a78bfa" />)}
       </svg>
     </div>
   );
 }
 
-export function WeekdayChart({ data }: WeekdayProps) {
-  const maxMin = Math.max(...data.map((d) => d.minutes), 1);
+export function WeekdayChart({ data, heatmap }: WeekdayProps) {
+  const chartData = useMemo(() => {
+    if (!heatmap || Object.keys(heatmap).length === 0) return data;
+
+    const minutes = [0, 0, 0, 0, 0, 0, 0];
+    for (const [date, entry] of Object.entries(heatmap)) {
+      minutes[weekdayIndex(date)] += entry.online_minutes;
+    }
+
+    return DAYS.map((day, i) => ({ day, minutes: minutes[i] }));
+  }, [data, heatmap]);
+
+  const maxMin = Math.max(...chartData.map((d) => d.minutes), 1);
   return (
     <div className="viz-card">
       <h3>Weekday Preference</h3>
       <p className="viz-subtitle">Total playtime by day of week</p>
       <div className="weekday-bars">
-        {data.map((d) => (
+        {chartData.map((d) => (
           <div key={d.day} className="weekday-bar-col">
             <div className="weekday-bar-track">
               <div className="weekday-bar-fill" style={{ height: `${(d.minutes / maxMin) * 100}%` }} />

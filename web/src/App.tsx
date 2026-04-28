@@ -8,6 +8,7 @@ import { ParetoChart, PlatformPie } from "./components/Ranking";
 import { StatsCards, GameNetwork, DustMeter, StayingPower } from "./components/Insights";
 import { AchievementBoard, GenreChart } from "./components/AchievementBoard";
 import { GameWeather, WeeklyDigest } from "./components/FunWidgets";
+import { GameUpdates } from "./components/GameUpdates";
 import "./App.css";
 
 function App() {
@@ -19,74 +20,67 @@ function App() {
 
   return (
     <div className="app">
-      {/* Header / Profile */}
       <ProfileHero player={data.player} milestone={data.milestone} />
 
-      <div className="divider" />
+      <main className="dashboard-grid">
+        <div className="span-7">
+          <GameWeather weather={data.game_weather} />
+        </div>
+        <div className="span-5">
+          <WeeklyDigest digest={data.weekly_digest} />
+        </div>
 
-      {/* Fun Widgets Row */}
-      <div className="two-col">
-        <GameWeather weather={data.game_weather} />
-        <WeeklyDigest digest={data.weekly_digest} />
-      </div>
+        <div className="span-12">
+          <GameUpdates updates={data.game_updates ?? []} />
+        </div>
 
-      <div className="divider" />
+        <div className="span-8">
+          <ContributionMap heatmap={data.heatmap} />
+        </div>
+        <div className="span-4">
+          <GamingClock data={data.time_heatmap} />
+        </div>
 
-      {/* ── Time Analytics (front and center) ── */}
-      <div className="two-col">
-        <ContributionMap heatmap={data.heatmap} />
-        <GamingClock data={data.time_heatmap} />
-      </div>
+        <div className="span-7">
+          <TimeHeatmap data={data.time_heatmap} />
+        </div>
+        <div className="span-5">
+          <WeekdayChart data={data.weekday} heatmap={data.heatmap} />
+        </div>
 
-      <div className="divider" />
+        <div className="span-12">
+          <GameCloud games={data.game_cloud} />
+        </div>
 
-      <div className="two-col">
-        <TimeHeatmap data={data.time_heatmap} />
-        <WeekdayChart data={data.weekday} />
-      </div>
+        <div className="span-12">
+          <StatsCards stats={data.stats} />
+        </div>
+        <div className="span-4">
+          <DustMeter played={data.stats.played_games} never={data.stats.never_played} />
+        </div>
+        <div className="span-8">
+          <ParetoChart data={data.pareto} />
+        </div>
 
-      <div className="divider" />
+        <div className="span-5">
+          <PlatformPie data={data.platform} />
+        </div>
+        <div className="span-7">
+          <RecentActivity activity={data.recent_activity} />
+        </div>
 
-      {/* Game Cloud (TreeMap) */}
-      <GameCloud games={data.game_cloud} />
+        <div className="span-7">
+          <GameNetwork network={data.game_network} />
+        </div>
+        <div className="span-5 stack">
+          <GenreChart genres={data.genres} />
+          <StayingPower games={data.game_cloud} />
+        </div>
 
-      <div className="divider" />
-
-      {/* Stats Overview */}
-      <StatsCards stats={data.stats} />
-      <div className="two-col">
-        <DustMeter played={data.stats.played_games} never={data.stats.never_played} />
-        <div /> {/* spacer */}
-      </div>
-
-      <div className="divider" />
-
-      {/* Rankings */}
-      <div className="two-col">
-        <ParetoChart data={data.pareto} />
-        <PlatformPie data={data.platform} />
-      </div>
-
-      <div className="divider" />
-
-      {/* Recent Activity + Game Network */}
-      <div className="two-col">
-        <RecentActivity activity={data.recent_activity} />
-        <GameNetwork network={data.game_network} />
-      </div>
-
-      <div className="divider" />
-
-      {/* Genre + Staying Power */}
-      <div className="two-col">
-        <GenreChart genres={data.genres} />
-        <StayingPower games={data.game_cloud} />
-      </div>
-
-      <div className="divider" />
-
-      {/* Achievements */}
-      <AchievementBoard achievements={data.achievements} />
+        <div className="span-12">
+          <AchievementBoard achievements={data.achievements} />
+        </div>
+      </main>
 
       <footer className="footer">
         <span>Steam Notebook — Updated {new Date(data.updated_at).toLocaleString()}</span>

@@ -8,7 +8,7 @@ const WEATHER_ICONS: Record<string, string> = {
 };
 
 const WEATHER_COLORS: Record<string, string> = {
-  storm: "#00ff41", rain: "#00cc33", cloudy: "#006619", sunny: "#00ff41",
+  storm: "#a78bfa", rain: "#67e8f9", cloudy: "#94a3b8", sunny: "#f59e0b",
 };
 
 export function GameWeather({ weather }: WeatherProps) {

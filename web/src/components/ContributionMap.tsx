@@ -6,11 +6,11 @@ interface Props {
 }
 
 const LEVELS = [
-  { max: 0, color: "#161b22", label: "No activity" },
-  { max: 60, color: "#0e4429", label: "< 1h" },
-  { max: 180, color: "#006d32", label: "1–3h" },
-  { max: 300, color: "#26a641", label: "3–5h" },
-  { max: Infinity, color: "#39d353", label: "> 5h" },
+  { max: 0, color: "#151b26", label: "No activity" },
+  { max: 60, color: "#164e63", label: "< 1h" },
+  { max: 180, color: "#0e7490", label: "1–3h" },
+  { max: 300, color: "#22d3ee", label: "3–5h" },
+  { max: Infinity, color: "#a78bfa", label: "> 5h" },
 ];
 
 function getColor(minutes: number) {

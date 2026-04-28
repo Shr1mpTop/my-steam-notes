@@ -6,23 +6,23 @@ interface Props {
 }
 
 const GENRE_COLORS: Record<string, string> = {
-  Action: "#e74c3c",
-  "Free To Play": "#f39c12",
-  Adventure: "#27ae60",
-  RPG: "#8e44ad",
-  Indie: "#3498db",
-  Strategy: "#1abc9c",
-  Simulation: "#e67e22",
-  "Early Access": "#95a5a6",
-  "Animation & Modeling": "#d35400",
-  "Design & Illustration": "#c0392b",
-  Utilities: "#7f8c8d",
-  Casual: "#2ecc71",
-  "Video Production": "#e84393",
-  "Photo Editing": "#fd79a8",
-  "Massively Multiplayer": "#6c5ce7",
+  Action: "#fb7185",
+  "Free To Play": "#f59e0b",
+  Adventure: "#34d399",
+  RPG: "#a78bfa",
+  Indie: "#67e8f9",
+  Strategy: "#60a5fa",
+  Simulation: "#f97316",
+  "Early Access": "#94a3b8",
+  "Animation & Modeling": "#f472b6",
+  "Design & Illustration": "#818cf8",
+  Utilities: "#64748b",
+  Casual: "#22c55e",
+  "Video Production": "#e879f9",
+  "Photo Editing": "#f0abfc",
+  "Massively Multiplayer": "#8b5cf6",
 };
-const DEFAULT_COLOR = "#636e72";
+const DEFAULT_COLOR = "#64748b";
 const W = 800, H = 500, HEADER = 18;
 
 function genreColor(genre: string): string {
@@ -192,7 +192,7 @@ export function GameCloud({ games }: Props) {
     });
   }, []);
 
-  if (!games.length) return <p style={{ color: "#005500", fontFamily: "monospace" }}>No games data yet.</p>;
+  if (!games.length) return <p style={{ color: "#96a1b5", fontFamily: "var(--mono)" }}>No games data yet.</p>;
 
   const selGenre = selectedGenre ? genres.find(g => g.name === selectedGenre) : null;
 

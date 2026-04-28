@@ -113,6 +113,8 @@ def build_heatmap():
     for p in poll_days:
         if p["day"] not in heatmap:
             heatmap[p["day"]] = {"online_minutes": p["est"], "games": {}}
+        else:
+            heatmap[p["day"]]["online_minutes"] = max(heatmap[p["day"]]["online_minutes"], p["est"])
     return heatmap
 
 
@@ -343,6 +345,35 @@ def build_weekly_digest():
     return weeks
 
 
+def build_game_updates():
+    try:
+        rows = execute(
+            """SELECT appid, game_name, title, url, date, feedname, feedlabel, update_type, contents
+               FROM game_news_updates
+               WHERE date >= ?
+               ORDER BY date DESC
+               LIMIT 24""",
+            [int((datetime.now(TZ) - timedelta(days=14)).timestamp())],
+        )
+    except Exception:
+        return []
+
+    return [
+        {
+            "appid": r["appid"],
+            "game_name": r["game_name"],
+            "title": r["title"],
+            "url": r["url"] or "",
+            "date": r["date"],
+            "feedname": r["feedname"] or "",
+            "feedlabel": r["feedlabel"] or "",
+            "update_type": r["update_type"] or "Update",
+            "contents": r["contents"] or "",
+        }
+        for r in rows
+    ]
+
+
 def generate_dashboard(player_info):
     os.makedirs(DATA_DIR, exist_ok=True)
     dashboard = {
@@ -362,7 +393,9 @@ def generate_dashboard(player_info):
         "genres": build_genre_distribution(),
         "game_weather": build_game_weather(),
         "weekly_digest": build_weekly_digest(),
+        "game_updates": build_game_updates(),
     }
+    os.makedirs(os.path.dirname(DASHBOARD_PATH), exist_ok=True)
     with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
         json.dump(dashboard, f, ensure_ascii=False, indent=2)
     print(f"Dashboard written ({len(json.dumps(dashboard))} bytes)")
