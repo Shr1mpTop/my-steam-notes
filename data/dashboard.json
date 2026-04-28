@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28T12:56:07.665449+08:00",
+  "updated_at": "2026-04-28T13:10:49.989268+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
     "online": true,
@@ -1422,7 +1422,7 @@
       "games": {}
     },
     "2026-04-28": {
-      "online_minutes": 60,
+      "online_minutes": 65,
       "games": {}
     }
   },
@@ -1431,6 +1431,11 @@
       "dow": 1,
       "hour": 12,
       "count": 12
+    },
+    {
+      "dow": 1,
+      "hour": 13,
+      "count": 1
     }
   ],
   "platform": {
