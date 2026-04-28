@@ -5,6 +5,10 @@ on:
     - cron: '17 17 * * *'  # UTC 17:17 = SG 01:17 (end of day)
   workflow_dispatch:
 
+concurrency:
+  group: daily-steam-sync
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -13,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Rebase latest main
+        run: git pull --rebase origin main
 
       - uses: astral-sh/setup-uv@v4
 
@@ -39,9 +46,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git stash
-          git pull --rebase origin main
-          git stash pop || true
           git add data/dashboard.json
           git diff --cached --quiet || git commit -m "chore: daily sync $(date -u +%Y-%m-%d)"
           git push

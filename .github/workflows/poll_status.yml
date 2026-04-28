@@ -5,6 +5,10 @@ on:
     - cron: '2,7,12,17,22,27,32,37,42,47,52,57 * * * *'  # every 5 min
   workflow_dispatch:
 
+concurrency:
+  group: poll-steam-status
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -13,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Rebase latest main
+        run: git pull --rebase origin main
 
       - uses: astral-sh/setup-uv@v4
 
@@ -31,9 +38,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git stash
-          git pull --rebase origin main
-          git stash pop || true
           git add data/dashboard.json
           git diff --cached --quiet || git commit -m "chore: update dashboard $(date -u +%Y-%m-%dT%H:%M)"
           git push
