@@ -35,6 +35,9 @@ jobs:
           npm ci
           npm run build
 
+      - name: Validate dashboard.json
+        run: python3 -m json.tool data/dashboard.json > /dev/null
+
       - name: Copy dashboard.json
         run: cp data/dashboard.json web/dist/dashboard.json
 
