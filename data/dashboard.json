@@ -1,10 +1,15 @@
 {
+<<<<<<< Updated upstream
   "updated_at": "2026-04-28T13:12:25.393773+08:00",
+=======
+  "updated_at": "2026-04-28T13:34:29.866260+08:00",
+>>>>>>> Stashed changes
   "player": {
     "personaname": "chr(0x1D11E)",
     "online": true,
     "currently_playing": "Sintopia",
-    "level": 30
+    "level": 30,
+    "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
   },
   "milestone": {
     "total_hours": 5341.5,
@@ -1422,7 +1427,11 @@
       "games": {}
     },
     "2026-04-28": {
+<<<<<<< Updated upstream
       "online_minutes": 70,
+=======
+      "online_minutes": 75,
+>>>>>>> Stashed changes
       "games": {}
     }
   },
@@ -1435,7 +1444,11 @@
     {
       "dow": 1,
       "hour": 13,
+<<<<<<< Updated upstream
       "count": 2
+=======
+      "count": 3
+>>>>>>> Stashed changes
     }
   ],
   "platform": {
