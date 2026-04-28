@@ -1,6 +1,6 @@
 import { useMemo, useState, useCallback, useRef } from "react";
 import type { GameCloudItem } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface Props {
   games: GameCloudItem[];

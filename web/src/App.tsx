@@ -9,7 +9,7 @@ import { StatsCards, GameNetwork, DustMeter, StayingPower } from "./components/I
 import { AchievementBoard, GenreChart } from "./components/AchievementBoard";
 import { GameWeather, WeeklyDigest } from "./components/FunWidgets";
 import { GameUpdates } from "./components/GameUpdates";
-import { useLocale } from "./i18n";
+import { useLocale } from "./useLocale";
 import "./App.css";
 
 function App() {

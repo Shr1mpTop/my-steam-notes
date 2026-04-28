@@ -1,7 +1,7 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
-
-type Locale = "zh" | "en";
+import { LocaleContext } from "./locale-context";
+import type { Locale, LocaleContextValue } from "./locale-context";
 
 type Messages = Record<string, string>;
 
@@ -184,15 +184,6 @@ const messages: Record<Locale, Messages> = {
   },
 };
 
-interface LocaleContextValue {
-  locale: Locale;
-  setLocale: (locale: Locale) => void;
-  toggleLocale: () => void;
-  t: (key: string) => string;
-}
-
-const LocaleContext = createContext<LocaleContextValue | null>(null);
-
 function initialLocale(): Locale {
   if (typeof window === "undefined") return "zh";
   const saved = window.localStorage.getItem(STORAGE_KEY);
@@ -219,10 +210,4 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   }), [locale, setLocale]);
 
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>;
-}
-
-export function useLocale() {
-  const context = useContext(LocaleContext);
-  if (!context) throw new Error("useLocale must be used within LocaleProvider");
-  return context;
 }

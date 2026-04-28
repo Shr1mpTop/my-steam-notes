@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import type { HeatmapDay, TimeHeatmapItem, WeekdayItem } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface TimeHeatmapProps { data: TimeHeatmapItem[]; }
 interface WeekdayProps { data: WeekdayItem[]; heatmap?: Record<string, HeatmapDay>; }

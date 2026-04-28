@@ -1,5 +1,5 @@
 import type { PlayerInfo, MilestoneData } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface Props {
   player: PlayerInfo;

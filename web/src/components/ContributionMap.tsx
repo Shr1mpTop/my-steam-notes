@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { HeatmapDay } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface Props {
   heatmap: Record<string, HeatmapDay>;

@@ -8,7 +8,7 @@ import {
   Cell,
 } from "recharts";
 import type { RecentActivityItem } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface Props {
   activity: RecentActivityItem[];

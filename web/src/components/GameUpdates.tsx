@@ -1,5 +1,5 @@
 import type { GameUpdateItem } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface Props {
   updates: GameUpdateItem[];

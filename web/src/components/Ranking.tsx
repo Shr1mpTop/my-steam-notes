@@ -1,6 +1,6 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, AreaChart, Area, XAxis, YAxis } from "recharts";
 import type { ParetoItem } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface ParetoProps { data: ParetoItem[]; }
 interface PlatformProps { data: Record<string, number>; }

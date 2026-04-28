@@ -1,6 +1,6 @@
 import { useMemo, useState, useCallback } from "react";
 import type { StatsData, GameNetworkData, GameCloudItem } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface StatsProps { stats: StatsData; }
 interface DustProps { played: number; never: number; }

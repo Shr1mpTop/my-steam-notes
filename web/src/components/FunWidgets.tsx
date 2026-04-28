@@ -1,5 +1,5 @@
 import type { GameWeatherData, WeeklyDigestItem } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface WeatherProps { weather: GameWeatherData; }
 interface DigestProps { digest: WeeklyDigestItem[]; }

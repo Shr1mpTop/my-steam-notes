@@ -1,5 +1,5 @@
 import type { AchievementGame, GenreItem } from "../types";
-import { useLocale } from "../i18n";
+import { useLocale } from "../useLocale";
 
 interface Props { achievements: AchievementGame[]; }
 interface GenreProps { genres: GenreItem[]; }
