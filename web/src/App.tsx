@@ -33,17 +33,16 @@ function App() {
       <div className="divider" />
 
       {/* ── Time Analytics (front and center) ── */}
-      <ContributionMap heatmap={data.heatmap} />
+      <div className="two-col">
+        <ContributionMap heatmap={data.heatmap} />
+        <GamingClock data={data.time_heatmap} />
+      </div>
 
       <div className="divider" />
 
       <div className="two-col">
         <TimeHeatmap data={data.time_heatmap} />
         <WeekdayChart data={data.weekday} />
-      </div>
-
-      <div className="centered">
-        <GamingClock data={data.time_heatmap} />
       </div>
 
       <div className="divider" />
