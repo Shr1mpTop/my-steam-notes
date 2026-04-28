@@ -121,14 +121,6 @@ function genreColor(genre: string): string {
 // --- Layout: treemap blocks for genres ---
 interface Rect { x: number; y: number; w: number; h: number }
 
-interface GenreBlock {
-  name: string;
-  color: string;
-  games: { appid: number; name: string }[];
-  connections: number; // total link strength to other genres
-  rect: Rect;
-}
-
 function firstGenre(genres: string[]): string {
   return genres.length > 0 ? genres[0] : "Other";
 }
@@ -178,7 +170,6 @@ function doSplit(
   doSplit(right, rr, results, !horizontal);
 }
 
-const pct = (v: number, base: number) => `${(v / base * 100).toFixed(3)}%`;
 const truncate = (s: string, max: number) => s.length > max ? s.slice(0, max) + "…" : s;
 
 export function GameNetwork({ network }: Props) {
@@ -326,7 +317,6 @@ export function GameNetwork({ network }: Props) {
                 const t = tc || sc!;
                 // If one end is outside, draw to edge
                 const sn = nodeMap.get(l.source);
-                const sg = sn ? firstGenre(sn.genres) : "";
                 const isSourceIn = sn && firstGenre(sn.genres) === selectedGenre;
                 const isTargetIn = nodeMap.get(l.target) && firstGenre(nodeMap.get(l.target)!.genres) === selectedGenre;
                 // Only draw lines where at least one end is in the selected genre
