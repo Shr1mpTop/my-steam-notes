@@ -17,6 +17,8 @@ permissions:
 jobs:
   poll:
     runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -26,7 +28,7 @@ jobs:
       - uses: astral-sh/setup-uv@v4
 
       - name: Install deps
-        run: uv sync
+        run: uv sync --locked
 
       - name: Poll current status
         env:
