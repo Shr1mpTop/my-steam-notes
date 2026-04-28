@@ -5,7 +5,7 @@ Computes daily playtime delta and saves daily snapshots.
 """
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 import requests
 from dotenv import load_dotenv
@@ -17,7 +17,8 @@ load_dotenv()
 
 KEY = os.getenv("STEAM_API_KEY")
 SID = os.getenv("STEAM_ID")
-TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+TZ = timezone(timedelta(hours=8))
+TODAY = datetime.now(TZ).strftime("%Y-%m-%d")
 
 
 def get_json(interface, method, version, params=None):
@@ -43,7 +44,7 @@ def sync_owned_games():
     existing_map = {r["appid"]: r["playtime_forever"] for r in existing}
 
     # Upsert owned_games
-    now = datetime.now(timezone.utc).isoformat()
+    now = datetime.now(TZ).isoformat()
     owned_args = [
         [g["appid"], g["name"], g.get("playtime_forever", 0),
          g.get("playtime_windows_forever", 0), g.get("playtime_mac_forever", 0),

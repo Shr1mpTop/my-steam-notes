@@ -17,6 +17,8 @@ from scripts.turso_db import execute
 
 load_dotenv()
 
+TZ = timezone(timedelta(hours=8))  # UTC+8
+
 KEY = os.getenv("STEAM_API_KEY")
 SID = os.getenv("STEAM_ID")
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
@@ -33,7 +35,7 @@ def get_player_summary():
 
 def poll_status():
     p = get_player_summary()
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = datetime.now(TZ).isoformat()
     execute(
         "INSERT OR IGNORE INTO status_polls (timestamp, personastate, gameextrainfo, gameid) VALUES (?, ?, ?, ?)",
         [now, p.get("personastate", 0), p.get("gameextrainfo", ""), p.get("gameid", "")],
@@ -118,7 +120,10 @@ def build_time_heatmap():
     rows = execute("SELECT timestamp, personastate FROM status_polls WHERE personastate > 0")
     grid = defaultdict(int)
     for r in rows:
-        dt = datetime.fromisoformat(r["timestamp"].replace("Z", "+00:00"))
+        ts = r["timestamp"]
+        dt = datetime.fromisoformat(ts.replace("Z", "+00:00"))
+        # Convert to local timezone (UTC+8)
+        dt = dt.astimezone(TZ)
         grid[(dt.weekday(), dt.hour)] += 1
     return [{"dow": k[0], "hour": k[1], "count": v} for k, v in grid.items()]
 
@@ -340,7 +345,7 @@ def build_weekly_digest():
 def generate_dashboard(player_info):
     os.makedirs(DATA_DIR, exist_ok=True)
     dashboard = {
-        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "updated_at": datetime.now(TZ).isoformat(),
         "player": build_player(player_info),
         "milestone": build_milestone(),
         "game_cloud": build_game_cloud(),

@@ -32,6 +32,9 @@ function App() {
 
       <div className="divider" />
 
+      {/* Contribution Heatmap */}
+      <ContributionMap heatmap={data.heatmap} />
+
       {/* Game Cloud */}
       <GameCloud games={data.game_cloud} />
 
@@ -89,9 +92,6 @@ function App() {
       </div>
 
       <div className="divider" />
-
-      {/* Contribution Heatmap */}
-      <ContributionMap heatmap={data.heatmap} />
 
       <footer className="footer">
         <span>Steam Notebook — Updated {new Date(data.updated_at).toLocaleString()}</span>

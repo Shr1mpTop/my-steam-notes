@@ -6,7 +6,7 @@ import os
 import sys
 import time
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 import requests
 from dotenv import load_dotenv
@@ -18,7 +18,8 @@ load_dotenv()
 
 KEY = os.getenv("STEAM_API_KEY")
 SID = os.getenv("STEAM_ID")
-TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+TZ = timezone(timedelta(hours=8))
+TODAY = datetime.now(TZ).strftime("%Y-%m-%d")
 
 
 def get_json(url, params=None, timeout=15):
@@ -45,7 +46,7 @@ def sync_store_details():
         "SELECT appid FROM owned_games WHERE playtime_forever > 0 ORDER BY playtime_forever DESC LIMIT 50"
     )
     appids = [r["appid"] for r in rows]
-    now = datetime.now(timezone.utc).isoformat()
+    now = datetime.now(TZ).isoformat()
     count = 0
 
     for appid in appids:
