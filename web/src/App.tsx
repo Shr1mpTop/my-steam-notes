@@ -46,7 +46,7 @@ function App() {
           </div>
 
           <div className="span-8">
-            <ContributionMap heatmap={data.heatmap} />
+            <ContributionMap heatmap={data.heatmap} updatedAt={data.updated_at} />
           </div>
           <div className="span-4">
             <GamingClock data={data.time_heatmap} />

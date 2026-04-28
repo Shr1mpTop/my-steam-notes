@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-29T03:07:01.037839+08:00",
+  "updated_at": "2026-04-29T03:18:27.541153+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
-    "online": true,
+    "online": false,
     "currently_playing": "",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
@@ -10,7 +10,10 @@
   "milestone": {
     "total_hours": 5345.5,
     "movies": 2672,
+    "total_hours": 5345.5,
+    "movies": 2672,
     "books": 890,
+    "walking_km": 26727
     "walking_km": 26727
   },
   "game_cloud": [
@@ -18,7 +21,9 @@
       "appid": 730,
       "name": "Counter-Strike 2",
       "playtime_hours": 1857.6,
+      "playtime_hours": 1857.6,
       "img_icon_url": "8dbc71957312bbd3baea65848b545be9eae2a355",
+      "rtime_last_played": 1777364075,
       "rtime_last_played": 1777364075,
       "genres": [
         "Action",
@@ -53,7 +58,9 @@
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
       "playtime_hours": 266.4,
+      "playtime_hours": 266.4,
       "img_icon_url": "896d5f4214e4e185a20af51b46d9dea2e6f4aaad",
+      "rtime_last_played": 1777402337,
       "rtime_last_played": 1777402337,
       "genres": [
         "Action",
@@ -347,6 +354,7 @@
       "playtime_hours": 28.5,
       "img_icon_url": "b99db2c64ea125ff01c2d31583ff560a834e999c",
       "rtime_last_played": 1777358233,
+      "rtime_last_played": 1777358233,
       "genres": [
         "RPG",
         "Simulation",
@@ -429,6 +437,7 @@
       "appid": 1203620,
       "name": "Enshrouded",
       "playtime_hours": 21.0,
+      "img_icon_url": "b51ff4aa19722a1f3587b35f37f590a998f36a9a",
       "img_icon_url": "b51ff4aa19722a1f3587b35f37f590a998f36a9a",
       "rtime_last_played": 1763137230,
       "genres": [
@@ -1391,12 +1400,20 @@
       "name": "Counter-Strike 2",
       "playtime_2weeks_hours": 5.5,
       "playtime_forever_hours": 1857.6
+      "playtime_2weeks_hours": 5.5,
+      "playtime_forever_hours": 1857.6
     },
     {
       "appid": 1172470,
       "name": "Apex Legends",
       "playtime_2weeks_hours": 4.2,
       "playtime_forever_hours": 528.3
+    },
+    {
+      "appid": 261550,
+      "name": "Mount & Blade II: Bannerlord",
+      "playtime_2weeks_hours": 2.4,
+      "playtime_forever_hours": 266.4
     },
     {
       "appid": 261550,
@@ -1425,21 +1442,17 @@
   ],
   "heatmap": {
     "2026-04-29": {
-      "online_minutes": 250,
+      "online_minutes": 142,
       "games": {
         "Mount & Blade II: Bannerlord": 142
       }
     },
     "2026-04-28": {
-      "online_minutes": 565,
+      "online_minutes": 128,
       "games": {
         "Sintopia": 76,
         "Counter-Strike 2": 52
       }
-    },
-    "2026-04-27": {
-      "online_minutes": 0,
-      "games": {}
     }
   },
   "time_heatmap": [
@@ -1521,10 +1534,11 @@
     {
       "dow": 2,
       "hour": 3,
-      "count": 4
+      "count": 6
     }
   ],
   "platform": {
+    "Windows": 5323.2,
     "Windows": 5323.2,
     "Mac": 12.0,
     "Linux": 0.0,
@@ -1533,6 +1547,7 @@
   "pareto": [
     {
       "name": "Counter-Strike 2",
+      "hours": 1857.6,
       "hours": 1857.6,
       "cumulative_pct": 34.8,
       "rank": 1
@@ -1547,10 +1562,12 @@
       "name": "Kingdom Come: Deliverance",
       "hours": 369.6,
       "cumulative_pct": 51.5,
+      "cumulative_pct": 51.5,
       "rank": 3
     },
     {
       "name": "Mount & Blade II: Bannerlord",
+      "hours": 266.4,
       "hours": 266.4,
       "cumulative_pct": 56.5,
       "rank": 4
@@ -1558,6 +1575,7 @@
     {
       "name": "Terraria",
       "hours": 209.5,
+      "cumulative_pct": 60.5,
       "cumulative_pct": 60.5,
       "rank": 5
     },
@@ -1570,6 +1588,7 @@
     {
       "name": "Baldur's Gate 3",
       "hours": 151.4,
+      "cumulative_pct": 66.3,
       "cumulative_pct": 66.3,
       "rank": 7
     },
@@ -1702,6 +1721,7 @@
     {
       "name": "Mount & Blade: Warband",
       "hours": 27.9,
+      "cumulative_pct": 89.1,
       "cumulative_pct": 89.1,
       "rank": 29
     },
@@ -1936,6 +1956,7 @@
     {
       "name": "Mount & Blade",
       "hours": 4.7,
+      "cumulative_pct": 97.6,
       "cumulative_pct": 97.6,
       "rank": 68
     },
@@ -2398,9 +2419,11 @@
     {
       "day": "Tue",
       "minutes": 128
+      "minutes": 128
     },
     {
       "day": "Wed",
+      "minutes": 142
       "minutes": 142
     },
     {
@@ -2430,8 +2453,13 @@
     "peak_day": {
       "date": "2026-04-29",
       "minutes": 142
+      "date": "2026-04-29",
+      "minutes": 142
     },
     "longest_streak": {
+      "days": 2,
+      "start": "2026-04-28",
+      "end": "2026-04-29"
       "days": 2,
       "start": "2026-04-28",
       "end": "2026-04-29"
@@ -2441,6 +2469,7 @@
     {
       "appid": 730,
       "name": "Counter-Strike 2",
+      "playtime_hours": 1857.6,
       "playtime_hours": 1857.6,
       "total": 1,
       "unlocked": 1,
@@ -2515,6 +2544,7 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
+      "playtime_hours": 266.4,
       "playtime_hours": 266.4,
       "total": 50,
       "unlocked": 6,
@@ -3000,6 +3030,17 @@
           "Simulation",
           "Strategy"
         ]
+      },
+      {
+        "appid": 261550,
+        "name": "Mount & Blade II: Bannerlord",
+        "genres": [
+          "Action",
+          "Indie",
+          "RPG",
+          "Simulation",
+          "Strategy"
+        ]
       }
     ],
     "links": [
@@ -3007,140 +3048,178 @@
         "source": 730,
         "target": 230190,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 730,
         "target": 365360,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 730,
         "target": 892970,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 730,
         "target": 1172470,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 730,
         "target": 2213700,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 730,
         "target": 3240220,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 730,
         "target": 3912710,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 230190,
         "target": 365360,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 230190,
         "target": 892970,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 230190,
         "target": 1172470,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 230190,
         "target": 2213700,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 230190,
         "target": 3240220,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 230190,
         "target": 3912710,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 365360,
         "target": 892970,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 365360,
         "target": 1172470,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 365360,
         "target": 2213700,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 365360,
         "target": 3240220,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 365360,
         "target": 3912710,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 892970,
         "target": 1172470,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 892970,
         "target": 2213700,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 892970,
         "target": 3240220,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 892970,
         "target": 3912710,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 1172470,
         "target": 2213700,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 1172470,
         "target": 3240220,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 1172470,
         "target": 3912710,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 2213700,
         "target": 3240220,
         "strength": 3
+        "strength": 3
       },
       {
         "source": 2213700,
         "target": 3912710,
+        "strength": 3
         "strength": 3
       },
       {
         "source": 3240220,
         "target": 3912710,
+        "strength": 3
+      },
+      {
+        "source": 730,
+        "target": 261550,
+        "strength": 1
+      },
+      {
+        "source": 230190,
+        "target": 261550,
+        "strength": 1
         "strength": 3
       },
       {
@@ -3160,10 +3239,12 @@
       "genre": "Action",
       "games": 31,
       "hours": 4198.0
+      "hours": 4198.0
     },
     {
       "genre": "Free To Play",
       "games": 4,
+      "hours": 2447.6
       "hours": 2447.6
     },
     {
@@ -3175,20 +3256,24 @@
       "genre": "RPG",
       "games": 22,
       "hours": 1695.4
+      "hours": 1695.4
     },
     {
       "genre": "Indie",
       "games": 24,
+      "hours": 1201.6
       "hours": 1201.6
     },
     {
       "genre": "Strategy",
       "games": 21,
       "hours": 991.2
+      "hours": 991.2
     },
     {
       "genre": "Simulation",
       "games": 14,
+      "hours": 585.0
       "hours": 585.0
     },
     {
@@ -3251,6 +3336,7 @@
       {
         "name": "Counter-Strike 2",
         "hours": 5.5
+        "hours": 5.5
       },
       {
         "name": "Apex Legends",
@@ -3267,13 +3353,35 @@
       "total_hours": 4.5,
       "games_count": 3,
       "top_games": [
-        "Sintopia",
         "Mount & Blade II: Bannerlord",
+        "Sintopia",
         "Counter-Strike 2"
       ]
     }
   ],
   "game_updates": [
+    {
+      "appid": 1527950,
+      "game_name": "Wartales",
+      "title": "Patch Notes for 28/04/2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770244679",
+      "date": 1777367203,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "v1.0.46890 Major Fixed game crash after delivering a prisoner Fixed refugees in Tiltren that wasn’t moving or attacking in battle Fixed freeze at Brigga and Ormance champion’s battle turn Fixed crash at Jarl Sven battle beginning Removed Lombelle from the starter regions Fixed flee in Beast’s battle in Brigga Fixed crash when crossbowman transforms into werewolf Fixed crash during fishing tutorial in Lombelle Minor Fixed NPC’s missing outfit icons Fixed minors collisions issues in some cart escort battles Fixed Lombelle’s Bard staying in prison after being recruited Balanced chaos gain & loss in Fires in the Capital And more… Known Issues to help us solve those issues, be sure to send us more details alongisde your save file on FeatureUpVote Info needed on crashes happening in the taverns ..."
+    },
+    {
+      "appid": 3164500,
+      "game_name": "Schedule I",
+      "title": "Schedule I dev confirms they're working on gamepad support and Steam Deck certification",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/GamingOnLinux/1830797770244620",
+      "date": 1777365236,
+      "feedname": "GamingOnLinux",
+      "feedlabel": "GamingOnLinux",
+      "update_type": "Update",
+      "contents": "The popular drug sim Schedule I that's currently in Early Access is going to get easier to play exactly how you want it with an upcoming update. Read the full article here: https://www.gamingonlinux.com/2026/04/schedule-i-dev-confirms-theyre-working-on-gamepad-support-and-steam-deck-certification/ "
+    },
     {
       "appid": 1527950,
       "game_name": "Wartales",

@@ -4,6 +4,7 @@ import { useLocale } from "../useLocale";
 
 interface Props {
   heatmap: Record<string, HeatmapDay>;
+  updatedAt: string;
 }
 
 const LEVELS = [
@@ -22,21 +23,38 @@ function getColor(minutes: number) {
 }
 
 function formatDate(dateStr: string) {
-  const d = new Date(dateStr + "T00:00:00Z");
-  return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+  const d = dateFromKey(dateStr);
+  return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
 }
 
-export function ContributionMap({ heatmap }: Props) {
+function dateFromKey(dateStr: string) {
+  const [year, month, day] = dateStr.split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
+
+function dateKey(date: Date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function mondayIndex(dateStr: string) {
+  return (dateFromKey(dateStr).getDay() + 6) % 7;
+}
+
+export function ContributionMap({ heatmap, updatedAt }: Props) {
   const { t } = useLocale();
   const [selected, setSelected] = useState<string | null>(null);
 
-  const today = new Date();
+  const anchorKey = updatedAt.slice(0, 10) || dateKey(new Date());
+  const anchorDate = dateFromKey(anchorKey);
   const days: { date: string; minutes: number }[] = [];
 
   for (let i = 364; i >= 0; i--) {
-    const d = new Date(today);
+    const d = new Date(anchorDate);
     d.setDate(d.getDate() - i);
-    const key = d.toISOString().slice(0, 10);
+    const key = dateKey(d);
     const entry = heatmap[key];
     days.push({ date: key, minutes: entry?.online_minutes ?? 0 });
   }
@@ -45,13 +63,13 @@ export function ContributionMap({ heatmap }: Props) {
   const weeks: typeof days[] = [];
   let week: typeof days = [];
   for (const day of days) {
-    const dow = new Date(day.date + "T00:00:00Z").getUTCDay();
+    const dow = mondayIndex(day.date);
     // Pad first week
-    if (weeks.length === 0 && week.length === 0 && dow !== 1) {
-      for (let p = 1; p < dow; p++) week.push({ date: "", minutes: -1 });
+    if (weeks.length === 0 && week.length === 0 && dow !== 0) {
+      for (let p = 0; p < dow; p++) week.push({ date: "", minutes: -1 });
     }
     week.push(day);
-    if (dow === 0) {
+    if (dow === 6) {
       weeks.push(week);
       week = [];
     }
@@ -100,7 +118,7 @@ export function ContributionMap({ heatmap }: Props) {
       {selected && sel && (
         <div className="day-detail">
           <h3>{formatDate(selected)}</h3>
-          <p>{t("total")}: {(sel.online_minutes / 60).toFixed(1)}h {t("online")}</p>
+          <p>{t("total")}: {(sel.online_minutes / 60).toFixed(1)}h {t("playtime")}</p>
           {Object.entries(sel.games).length > 0 && (
             <ul>
               {Object.entries(sel.games)

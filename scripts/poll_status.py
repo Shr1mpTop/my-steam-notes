@@ -102,6 +102,7 @@ def build_recent_activity():
 
 
 def build_heatmap():
+    """Build daily playtime heatmap from Steam playtime deltas."""
     heatmap = {}
     snapshots = execute("SELECT date, name, daily_playtime FROM daily_snapshots WHERE daily_playtime > 0 ORDER BY date DESC")
     for s in snapshots:
@@ -110,12 +111,6 @@ def build_heatmap():
             heatmap[d] = {"online_minutes": 0, "games": {}}
         heatmap[d]["games"][s["name"]] = s["daily_playtime"]
         heatmap[d]["online_minutes"] += s["daily_playtime"]
-    poll_days = execute("SELECT substr(timestamp, 1, 10) as day, COUNT(CASE WHEN personastate > 0 THEN 1 END) * 5 as est FROM status_polls GROUP BY day")
-    for p in poll_days:
-        if p["day"] not in heatmap:
-            heatmap[p["day"]] = {"online_minutes": p["est"], "games": {}}
-        else:
-            heatmap[p["day"]]["online_minutes"] = max(heatmap[p["day"]]["online_minutes"], p["est"])
     return heatmap
 
 
@@ -338,11 +333,12 @@ def build_weekly_digest():
     for i in range(0, min(len(dates_sorted), 7), 7):
         week_dates = dates_sorted[i:i + 7]
         total = sum(sum(g["minutes"] for g in by_date[d]) for d in week_dates)
-        games = set()
+        games = defaultdict(int)
         for d in week_dates:
             for g in by_date[d]:
-                games.add(g["name"])
-        weeks.append({"dates": week_dates, "total_hours": round(total / 60, 1), "games_count": len(games), "top_games": list(games)[:5]})
+                games[g["name"]] += g["minutes"]
+        top_games = sorted(games, key=games.get, reverse=True)[:5]
+        weeks.append({"dates": week_dates, "total_hours": round(total / 60, 1), "games_count": len(games), "top_games": top_games})
     return weeks
 
 
