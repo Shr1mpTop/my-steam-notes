@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29T03:24:27.553885+08:00",
+  "updated_at": "2026-04-30T01:53:10.052840+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
     "online": false,
@@ -8,18 +8,18 @@
     "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
   },
   "milestone": {
-    "total_hours": 5345.5,
-    "movies": 2672,
-    "books": 890,
-    "walking_km": 26727
+    "total_hours": 5354.6,
+    "movies": 2677,
+    "books": 892,
+    "walking_km": 26773
   },
   "game_cloud": [
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1857.6,
+      "playtime_hours": 1857.8,
       "img_icon_url": "8dbc71957312bbd3baea65848b545be9eae2a355",
-      "rtime_last_played": 1777364075,
+      "rtime_last_played": 1777443779,
       "genres": [
         "Action",
         "Free To Play"
@@ -52,9 +52,9 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 266.4,
+      "playtime_hours": 266.6,
       "img_icon_url": "896d5f4214e4e185a20af51b46d9dea2e6f4aaad",
-      "rtime_last_played": 1777402337,
+      "rtime_last_played": 1777467192,
       "genres": [
         "Action",
         "Indie",
@@ -274,9 +274,9 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_hours": 39.0,
+      "playtime_hours": 41.5,
       "img_icon_url": "1ee4cabe5b840bcaae56c1d40cb131f81e04c6ab",
-      "rtime_last_played": 1777355255,
+      "rtime_last_played": 1777476713,
       "genres": [
         "Indie",
         "Simulation",
@@ -708,6 +708,14 @@
       "playtime_hours": 6.4,
       "img_icon_url": "16138bef561b61372e02f3006da2c76a21cdbbd7",
       "rtime_last_played": 1775894947,
+      "genres": []
+    },
+    {
+      "appid": 1876880,
+      "name": "Primitive Society Simulator",
+      "playtime_hours": 6.3,
+      "img_icon_url": "22388e26b41a011135fb65ee4f3de4d4f362cc47",
+      "rtime_last_played": 1777466540,
       "genres": []
     },
     {
@@ -1371,14 +1379,20 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_2weeks_hours": 39.0,
-      "playtime_forever_hours": 39.0
+      "playtime_2weeks_hours": 41.5,
+      "playtime_forever_hours": 41.5
     },
     {
       "appid": 365360,
       "name": "Battle Brothers",
       "playtime_2weeks_hours": 28.5,
       "playtime_forever_hours": 28.5
+    },
+    {
+      "appid": 1876880,
+      "name": "Primitive Society Simulator",
+      "playtime_2weeks_hours": 6.3,
+      "playtime_forever_hours": 6.3
     },
     {
       "appid": 3240220,
@@ -1389,8 +1403,8 @@
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 5.5,
-      "playtime_forever_hours": 1857.6
+      "playtime_2weeks_hours": 5.2,
+      "playtime_forever_hours": 1857.8
     },
     {
       "appid": 1172470,
@@ -1401,8 +1415,8 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_2weeks_hours": 2.4,
-      "playtime_forever_hours": 266.4
+      "playtime_2weeks_hours": 2.5,
+      "playtime_forever_hours": 266.6
     },
     {
       "appid": 3912710,
@@ -1425,9 +1439,12 @@
   ],
   "heatmap": {
     "2026-04-29": {
-      "online_minutes": 142,
+      "online_minutes": 688,
       "games": {
-        "Mount & Blade II: Bannerlord": 142
+        "Sintopia": 150,
+        "Primitive Society Simulator": 379,
+        "Mount & Blade II: Bannerlord": 152,
+        "Counter-Strike 2": 7
       }
     },
     "2026-04-28": {
@@ -1518,10 +1535,65 @@
       "dow": 2,
       "hour": 3,
       "count": 6
+    },
+    {
+      "dow": 2,
+      "hour": 14,
+      "count": 10
+    },
+    {
+      "dow": 2,
+      "hour": 15,
+      "count": 14
+    },
+    {
+      "dow": 2,
+      "hour": 16,
+      "count": 13
+    },
+    {
+      "dow": 2,
+      "hour": 17,
+      "count": 13
+    },
+    {
+      "dow": 2,
+      "hour": 18,
+      "count": 13
+    },
+    {
+      "dow": 2,
+      "hour": 19,
+      "count": 13
+    },
+    {
+      "dow": 2,
+      "hour": 20,
+      "count": 13
+    },
+    {
+      "dow": 2,
+      "hour": 21,
+      "count": 13
+    },
+    {
+      "dow": 2,
+      "hour": 22,
+      "count": 13
+    },
+    {
+      "dow": 2,
+      "hour": 23,
+      "count": 12
+    },
+    {
+      "dow": 3,
+      "hour": 0,
+      "count": 2
     }
   ],
   "platform": {
-    "Windows": 5323.2,
+    "Windows": 5332.3,
     "Mac": 12.0,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -1529,8 +1601,8 @@
   "pareto": [
     {
       "name": "Counter-Strike 2",
-      "hours": 1857.6,
-      "cumulative_pct": 34.8,
+      "hours": 1857.8,
+      "cumulative_pct": 34.7,
       "rank": 1
     },
     {
@@ -1547,843 +1619,849 @@
     },
     {
       "name": "Mount & Blade II: Bannerlord",
-      "hours": 266.4,
-      "cumulative_pct": 56.5,
+      "hours": 266.6,
+      "cumulative_pct": 56.4,
       "rank": 4
     },
     {
       "name": "Terraria",
       "hours": 209.5,
-      "cumulative_pct": 60.5,
+      "cumulative_pct": 60.4,
       "rank": 5
     },
     {
       "name": "Kingdom Come: Deliverance II",
       "hours": 159.4,
-      "cumulative_pct": 63.4,
+      "cumulative_pct": 63.3,
       "rank": 6
     },
     {
       "name": "Baldur's Gate 3",
       "hours": 151.4,
-      "cumulative_pct": 66.3,
+      "cumulative_pct": 66.2,
       "rank": 7
     },
     {
       "name": "Grand Theft Auto V Legacy",
       "hours": 121.7,
-      "cumulative_pct": 68.5,
+      "cumulative_pct": 68.4,
       "rank": 8
     },
     {
       "name": "Blender",
       "hours": 109.5,
-      "cumulative_pct": 70.6,
+      "cumulative_pct": 70.5,
       "rank": 9
     },
     {
       "name": "Wallpaper Engine",
       "hours": 100.3,
-      "cumulative_pct": 72.5,
+      "cumulative_pct": 72.3,
       "rank": 10
     },
     {
       "name": "Wartales",
       "hours": 89.2,
-      "cumulative_pct": 74.1,
+      "cumulative_pct": 74.0,
       "rank": 11
     },
     {
       "name": "Lethal Company",
       "hours": 83.2,
-      "cumulative_pct": 75.7,
+      "cumulative_pct": 75.6,
       "rank": 12
     },
     {
       "name": "MyDockFinder",
       "hours": 65.8,
-      "cumulative_pct": 76.9,
+      "cumulative_pct": 76.8,
       "rank": 13
     },
     {
       "name": "Mindustry",
       "hours": 54.1,
-      "cumulative_pct": 77.9,
+      "cumulative_pct": 77.8,
       "rank": 14
     },
     {
       "name": "PUBG: BATTLEGROUNDS",
       "hours": 52.6,
-      "cumulative_pct": 78.9,
+      "cumulative_pct": 78.8,
       "rank": 15
     },
     {
       "name": "Warhammer 40,000: Rogue Trader",
       "hours": 51.1,
-      "cumulative_pct": 79.9,
+      "cumulative_pct": 79.7,
       "rank": 16
     },
     {
       "name": "The Witcher 3: Wild Hunt",
       "hours": 50.3,
-      "cumulative_pct": 80.8,
+      "cumulative_pct": 80.7,
       "rank": 17
     },
     {
       "name": "Palworld",
       "hours": 49.3,
-      "cumulative_pct": 81.7,
+      "cumulative_pct": 81.6,
       "rank": 18
     },
     {
       "name": "Battlefield™ V",
       "hours": 47.8,
-      "cumulative_pct": 82.6,
+      "cumulative_pct": 82.5,
       "rank": 19
     },
     {
       "name": "Kenshi",
       "hours": 45.7,
-      "cumulative_pct": 83.5,
+      "cumulative_pct": 83.4,
       "rank": 20
     },
     {
       "name": "Manor Lords",
       "hours": 42.8,
-      "cumulative_pct": 84.3,
+      "cumulative_pct": 84.1,
       "rank": 21
     },
     {
       "name": "Sintopia",
-      "hours": 39.0,
-      "cumulative_pct": 85.0,
+      "hours": 41.5,
+      "cumulative_pct": 84.9,
       "rank": 22
     },
     {
       "name": "Noble Fates",
       "hours": 36.4,
-      "cumulative_pct": 85.7,
+      "cumulative_pct": 85.6,
       "rank": 23
     },
     {
       "name": "Grand Theft Auto IV: The Complete Edition",
       "hours": 33.3,
-      "cumulative_pct": 86.3,
+      "cumulative_pct": 86.2,
       "rank": 24
     },
     {
       "name": "Inscryption",
       "hours": 31.8,
-      "cumulative_pct": 86.9,
+      "cumulative_pct": 86.8,
       "rank": 25
     },
     {
       "name": "Age of Empires IV: Anniversary Edition",
       "hours": 29.3,
-      "cumulative_pct": 87.5,
+      "cumulative_pct": 87.4,
       "rank": 26
     },
     {
       "name": "The Elder Scrolls V: Skyrim Special Edition",
       "hours": 28.5,
-      "cumulative_pct": 88.0,
+      "cumulative_pct": 87.9,
       "rank": 27
     },
     {
       "name": "Battle Brothers",
       "hours": 28.5,
-      "cumulative_pct": 88.5,
+      "cumulative_pct": 88.4,
       "rank": 28
     },
     {
       "name": "Mount & Blade: Warband",
       "hours": 27.9,
-      "cumulative_pct": 89.1,
+      "cumulative_pct": 89.0,
       "rank": 29
     },
     {
       "name": "R.E.P.O.",
       "hours": 27.3,
-      "cumulative_pct": 89.6,
+      "cumulative_pct": 89.5,
       "rank": 30
     },
     {
       "name": "Noita",
       "hours": 25.8,
-      "cumulative_pct": 90.0,
+      "cumulative_pct": 89.9,
       "rank": 31
     },
     {
       "name": "Middle-earth™: Shadow of War™",
       "hours": 22.5,
-      "cumulative_pct": 90.5,
+      "cumulative_pct": 90.4,
       "rank": 32
     },
     {
       "name": "Sid Meier's Civilization VI",
       "hours": 21.6,
-      "cumulative_pct": 90.9,
+      "cumulative_pct": 90.8,
       "rank": 33
     },
     {
       "name": "Schedule I",
       "hours": 21.6,
-      "cumulative_pct": 91.3,
+      "cumulative_pct": 91.2,
       "rank": 34
     },
     {
       "name": "Enshrouded",
       "hours": 21.0,
-      "cumulative_pct": 91.7,
+      "cumulative_pct": 91.6,
       "rank": 35
     },
     {
       "name": "RUNNING WITH RIFLES",
       "hours": 19.6,
-      "cumulative_pct": 92.0,
+      "cumulative_pct": 91.9,
       "rank": 36
     },
     {
       "name": "Cities: Skylines",
       "hours": 18.4,
-      "cumulative_pct": 92.4,
+      "cumulative_pct": 92.3,
       "rank": 37
     },
     {
       "name": "Medieval Dynasty",
       "hours": 18.1,
-      "cumulative_pct": 92.7,
+      "cumulative_pct": 92.6,
       "rank": 38
     },
     {
       "name": "Escape From Duckov",
       "hours": 17.6,
-      "cumulative_pct": 93.0,
+      "cumulative_pct": 92.9,
       "rank": 39
     },
     {
       "name": "Sniper Elite 4",
       "hours": 17.5,
-      "cumulative_pct": 93.4,
+      "cumulative_pct": 93.3,
       "rank": 40
     },
     {
       "name": "Thronefall",
       "hours": 14.8,
-      "cumulative_pct": 93.6,
+      "cumulative_pct": 93.5,
       "rank": 41
     },
     {
       "name": "Deadlock",
       "hours": 14.6,
-      "cumulative_pct": 93.9,
+      "cumulative_pct": 93.8,
       "rank": 42
     },
     {
       "name": "Oriental Empires",
       "hours": 12.9,
-      "cumulative_pct": 94.2,
+      "cumulative_pct": 94.1,
       "rank": 43
     },
     {
       "name": "Inside the Backrooms",
       "hours": 10.8,
-      "cumulative_pct": 94.4,
+      "cumulative_pct": 94.3,
       "rank": 44
     },
     {
       "name": "Bad North: Jotunn Edition",
       "hours": 10.7,
-      "cumulative_pct": 94.6,
+      "cumulative_pct": 94.5,
       "rank": 45
     },
     {
       "name": "Don't Starve Together",
       "hours": 10.5,
-      "cumulative_pct": 94.8,
+      "cumulative_pct": 94.7,
       "rank": 46
     },
     {
       "name": "Super Auto Pets",
       "hours": 9.1,
-      "cumulative_pct": 94.9,
+      "cumulative_pct": 94.8,
       "rank": 47
     },
     {
       "name": "Rogue: Genesia",
       "hours": 8.5,
-      "cumulative_pct": 95.1,
+      "cumulative_pct": 95.0,
       "rank": 48
     },
     {
       "name": "Crashlands",
       "hours": 8.2,
-      "cumulative_pct": 95.2,
+      "cumulative_pct": 95.1,
       "rank": 49
     },
     {
       "name": "The Farmer Was Replaced",
       "hours": 8.1,
-      "cumulative_pct": 95.4,
+      "cumulative_pct": 95.3,
       "rank": 50
     },
     {
       "name": "Content Warning",
       "hours": 7.8,
-      "cumulative_pct": 95.5,
+      "cumulative_pct": 95.4,
       "rank": 51
     },
     {
       "name": "Aimlabs",
       "hours": 7.7,
-      "cumulative_pct": 95.7,
+      "cumulative_pct": 95.6,
       "rank": 52
     },
     {
       "name": "Need for Speed™ Payback",
       "hours": 7.5,
-      "cumulative_pct": 95.8,
+      "cumulative_pct": 95.7,
       "rank": 53
     },
     {
       "name": "Tom Clancy's Rainbow Six Siege",
       "hours": 7.4,
-      "cumulative_pct": 96.0,
+      "cumulative_pct": 95.9,
       "rank": 54
     },
     {
       "name": "Thief Simulator",
       "hours": 7.4,
-      "cumulative_pct": 96.1,
+      "cumulative_pct": 96.0,
       "rank": 55
     },
     {
       "name": "Halo: The Master Chief Collection",
       "hours": 7.3,
-      "cumulative_pct": 96.2,
+      "cumulative_pct": 96.1,
       "rank": 56
     },
     {
       "name": "Goobies",
       "hours": 7.2,
-      "cumulative_pct": 96.4,
+      "cumulative_pct": 96.3,
       "rank": 57
     },
     {
       "name": "Forza Horizon 4",
       "hours": 6.9,
-      "cumulative_pct": 96.5,
+      "cumulative_pct": 96.4,
       "rank": 58
     },
     {
       "name": "Left 4 Dead 2",
       "hours": 6.8,
-      "cumulative_pct": 96.6,
+      "cumulative_pct": 96.5,
       "rank": 59
     },
     {
       "name": "Mount & Blade: With Fire and Sword",
       "hours": 6.8,
-      "cumulative_pct": 96.8,
+      "cumulative_pct": 96.6,
       "rank": 60
     },
     {
       "name": "Crosshair X",
       "hours": 6.4,
-      "cumulative_pct": 96.9,
+      "cumulative_pct": 96.8,
       "rank": 61
+    },
+    {
+      "name": "Primitive Society Simulator",
+      "hours": 6.3,
+      "cumulative_pct": 96.9,
+      "rank": 62
     },
     {
       "name": "Wolfenstein II: The New Colossus",
       "hours": 5.7,
       "cumulative_pct": 97.0,
-      "rank": 62
+      "rank": 63
     },
     {
       "name": "Grand Theft Auto V Enhanced",
       "hours": 5.6,
       "cumulative_pct": 97.1,
-      "rank": 63
+      "rank": 64
     },
     {
       "name": "The Forest",
       "hours": 5.3,
       "cumulative_pct": 97.2,
-      "rank": 64
+      "rank": 65
     },
     {
       "name": "Warhammer: Vermintide 2",
       "hours": 4.9,
       "cumulative_pct": 97.3,
-      "rank": 65
+      "rank": 66
     },
     {
       "name": "Dyson Sphere Program",
       "hours": 4.9,
       "cumulative_pct": 97.4,
-      "rank": 66
+      "rank": 67
     },
     {
       "name": "Rusty's Retirement",
       "hours": 4.8,
       "cumulative_pct": 97.5,
-      "rank": 67
+      "rank": 68
     },
     {
       "name": "Mount & Blade",
       "hours": 4.7,
       "cumulative_pct": 97.6,
-      "rank": 68
+      "rank": 69
     },
     {
       "name": "MineMogul",
       "hours": 4.5,
       "cumulative_pct": 97.6,
-      "rank": 69
+      "rank": 70
     },
     {
       "name": "Conan Exiles",
       "hours": 4.3,
       "cumulative_pct": 97.7,
-      "rank": 70
+      "rank": 71
     },
     {
       "name": "Thronebreaker: The Witcher Tales",
       "hours": 4.3,
       "cumulative_pct": 97.8,
-      "rank": 71
+      "rank": 72
     },
     {
       "name": "Oxygen Not Included",
       "hours": 4.2,
       "cumulative_pct": 97.9,
-      "rank": 72
+      "rank": 73
     },
     {
       "name": "MiSide",
       "hours": 4.2,
       "cumulative_pct": 98.0,
-      "rank": 73
+      "rank": 74
     },
     {
       "name": "Turmoil",
       "hours": 4.2,
       "cumulative_pct": 98.0,
-      "rank": 74
+      "rank": 75
     },
     {
       "name": "Barotrauma",
       "hours": 4.0,
       "cumulative_pct": 98.1,
-      "rank": 75
+      "rank": 76
     },
     {
       "name": "The Evil Within 2",
       "hours": 4.0,
       "cumulative_pct": 98.2,
-      "rank": 76
+      "rank": 77
     },
     {
       "name": "Yet Another Zombie Survivors",
       "hours": 3.9,
       "cumulative_pct": 98.3,
-      "rank": 77
+      "rank": 78
     },
     {
       "name": "Operation: Harsh Doorstop",
       "hours": 3.8,
       "cumulative_pct": 98.3,
-      "rank": 78
+      "rank": 79
     },
     {
       "name": "Draw & Guess",
       "hours": 3.8,
       "cumulative_pct": 98.4,
-      "rank": 79
+      "rank": 80
     },
     {
       "name": "Battlefield™ 1",
       "hours": 3.5,
       "cumulative_pct": 98.5,
-      "rank": 80
+      "rank": 81
     },
     {
       "name": "Firewatch",
       "hours": 3.5,
       "cumulative_pct": 98.5,
-      "rank": 81
+      "rank": 82
     },
     {
       "name": "Divinity: Original Sin 2",
       "hours": 3.4,
       "cumulative_pct": 98.6,
-      "rank": 82
+      "rank": 83
     },
     {
       "name": "College Kings - The Complete Season",
       "hours": 3.2,
       "cumulative_pct": 98.7,
-      "rank": 83
+      "rank": 84
     },
     {
       "name": "DEVOUR",
       "hours": 3.1,
       "cumulative_pct": 98.7,
-      "rank": 84
+      "rank": 85
     },
     {
       "name": "HITMAN™ 2",
       "hours": 3.0,
       "cumulative_pct": 98.8,
-      "rank": 85
+      "rank": 86
     },
     {
       "name": "UBOAT",
       "hours": 2.7,
       "cumulative_pct": 98.8,
-      "rank": 86
+      "rank": 87
     },
     {
       "name": "Need for Speed™ Heat ",
       "hours": 2.5,
       "cumulative_pct": 98.9,
-      "rank": 87
+      "rank": 88
     },
     {
       "name": "Command & Conquer™ Remastered Collection",
       "hours": 2.5,
       "cumulative_pct": 98.9,
-      "rank": 88
+      "rank": 89
     },
     {
       "name": "Outlast 2",
       "hours": 2.4,
       "cumulative_pct": 99.0,
-      "rank": 89
+      "rank": 90
     },
     {
       "name": "Metro 2033 Redux",
       "hours": 2.3,
       "cumulative_pct": 99.0,
-      "rank": 90
+      "rank": 91
     },
     {
       "name": "Day of Defeat: Source",
       "hours": 2.3,
       "cumulative_pct": 99.0,
-      "rank": 91
+      "rank": 92
     },
     {
       "name": "Sheltered",
       "hours": 2.3,
       "cumulative_pct": 99.1,
-      "rank": 92
+      "rank": 93
     },
     {
       "name": "Half-Life 2",
       "hours": 2.2,
       "cumulative_pct": 99.1,
-      "rank": 93
+      "rank": 94
     },
     {
       "name": "Portal 2",
       "hours": 2.2,
       "cumulative_pct": 99.2,
-      "rank": 94
+      "rank": 95
     },
     {
       "name": "Shift Happens",
       "hours": 2.2,
       "cumulative_pct": 99.2,
-      "rank": 95
+      "rank": 96
     },
     {
       "name": "Stronghold Crusader HD",
       "hours": 2.2,
       "cumulative_pct": 99.2,
-      "rank": 96
+      "rank": 97
     },
     {
       "name": "Euro Truck Simulator 2",
       "hours": 2.1,
       "cumulative_pct": 99.3,
-      "rank": 97
+      "rank": 98
     },
     {
       "name": "Baldur's Gate II: Enhanced Edition",
       "hours": 2.1,
       "cumulative_pct": 99.3,
-      "rank": 98
+      "rank": 99
     },
     {
       "name": "Baldur's Gate: Enhanced Edition",
       "hours": 2.1,
       "cumulative_pct": 99.4,
-      "rank": 99
+      "rank": 100
     },
     {
       "name": "Fall Guys",
       "hours": 2.1,
       "cumulative_pct": 99.4,
-      "rank": 100
+      "rank": 101
     },
     {
       "name": "PAYDAY 2",
       "hours": 2.0,
       "cumulative_pct": 99.4,
-      "rank": 101
+      "rank": 102
     },
     {
       "name": "Mortal Sin",
       "hours": 2.0,
       "cumulative_pct": 99.5,
-      "rank": 102
+      "rank": 103
     },
     {
       "name": "Counter-Strike:Global Offensive",
       "hours": 2.0,
       "cumulative_pct": 99.5,
-      "rank": 103
+      "rank": 104
     },
     {
       "name": "Timberborn",
       "hours": 2.0,
       "cumulative_pct": 99.6,
-      "rank": 104
+      "rank": 105
     },
     {
       "name": "Capcom Arcade Stadium",
       "hours": 1.9,
       "cumulative_pct": 99.6,
-      "rank": 105
+      "rank": 106
     },
     {
       "name": "Beholder",
       "hours": 1.9,
       "cumulative_pct": 99.6,
-      "rank": 106
+      "rank": 107
     },
     {
       "name": "Revenge on gold diggers ",
       "hours": 1.5,
       "cumulative_pct": 99.7,
-      "rank": 107
+      "rank": 108
     },
     {
       "name": "These Doomed Isles: The First God",
       "hours": 1.3,
       "cumulative_pct": 99.7,
-      "rank": 108
+      "rank": 109
     },
     {
       "name": "Unturned",
       "hours": 1.3,
       "cumulative_pct": 99.7,
-      "rank": 109
+      "rank": 110
     },
     {
       "name": "Knightfall: A Daring Journey",
       "hours": 1.2,
       "cumulative_pct": 99.7,
-      "rank": 110
+      "rank": 111
     },
     {
       "name": "War of Banners Demo",
       "hours": 1.2,
-      "cumulative_pct": 99.7,
-      "rank": 111
+      "cumulative_pct": 99.8,
+      "rank": 112
     },
     {
       "name": "SUMMERHOUSE",
       "hours": 1.0,
       "cumulative_pct": 99.8,
-      "rank": 112
+      "rank": 113
     },
     {
       "name": "Surviving Mars",
       "hours": 1.0,
       "cumulative_pct": 99.8,
-      "rank": 113
+      "rank": 114
     },
     {
       "name": "Divinity: Original Sin Enhanced Edition",
       "hours": 0.9,
       "cumulative_pct": 99.8,
-      "rank": 114
+      "rank": 115
     },
     {
       "name": "Dark and Darker",
       "hours": 0.9,
       "cumulative_pct": 99.8,
-      "rank": 115
+      "rank": 116
     },
     {
       "name": "Halls of Torment Prelude",
       "hours": 0.8,
       "cumulative_pct": 99.8,
-      "rank": 116
+      "rank": 117
     },
     {
       "name": "Pacify",
       "hours": 0.8,
       "cumulative_pct": 99.9,
-      "rank": 117
+      "rank": 118
     },
     {
       "name": "War for the Overworld",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 118
+      "rank": 119
     },
     {
       "name": "Fallout 4",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 119
+      "rank": 120
     },
     {
       "name": "Drawful 2",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 120
+      "rank": 121
     },
     {
       "name": "Goose Goose Duck",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 121
+      "rank": 122
     },
     {
       "name": "KARDS - The WWII Card Game",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 122
+      "rank": 123
     },
     {
       "name": "Counter-Strike: Source",
       "hours": 0.5,
       "cumulative_pct": 99.9,
-      "rank": 123
+      "rank": 124
     },
     {
       "name": "ARK: Survival Evolved",
       "hours": 0.5,
       "cumulative_pct": 99.9,
-      "rank": 124
+      "rank": 125
     },
     {
       "name": "Counter-Strike: Condition Zero",
       "hours": 0.4,
       "cumulative_pct": 99.9,
-      "rank": 125
+      "rank": 126
     },
     {
       "name": "World of Warships",
       "hours": 0.4,
       "cumulative_pct": 99.9,
-      "rank": 126
+      "rank": 127
     },
     {
       "name": "The Survivalists",
       "hours": 0.4,
       "cumulative_pct": 99.9,
-      "rank": 127
+      "rank": 128
     },
     {
       "name": "KUNKUN Defender",
       "hours": 0.4,
       "cumulative_pct": 100.0,
-      "rank": 128
+      "rank": 129
     },
     {
       "name": "Gas Station Simulator: Prologue - Early Days",
       "hours": 0.3,
       "cumulative_pct": 100.0,
-      "rank": 129
+      "rank": 130
     },
     {
       "name": "Heroes & Generals",
       "hours": 0.3,
       "cumulative_pct": 100.0,
-      "rank": 130
+      "rank": 131
     },
     {
       "name": "Life is Feudal: Forest Village",
       "hours": 0.3,
       "cumulative_pct": 100.0,
-      "rank": 131
+      "rank": 132
     },
     {
       "name": "Dagon",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 132
+      "rank": 133
     },
     {
       "name": "Alien Swarm: Reactive Drop",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 133
+      "rank": 134
     },
     {
       "name": "Super Bunny Man",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 134
+      "rank": 135
     },
     {
       "name": "X4: Foundations",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 135
+      "rank": 136
     },
     {
       "name": "VTube Studio",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 136
+      "rank": 137
     },
     {
       "name": "iREC",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 137
+      "rank": 138
     },
     {
       "name": "Rubber Bandits: Summer Prologue",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 138
+      "rank": 139
     },
     {
       "name": "Celestial Empire Playtest",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 139
+      "rank": 140
     },
     {
       "name": "Call of Duty®",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 140
+      "rank": 141
     },
     {
       "name": "Stronghold Crusader Extreme HD",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 141
+      "rank": 142
     },
     {
       "name": "Tom Clancy's Rainbow Six Siege - Test Server",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 142
+      "rank": 143
     },
     {
       "name": "Dark and Darker Playtest",
       "hours": 0.0,
       "cumulative_pct": 100.0,
-      "rank": 143
+      "rank": 144
     }
   ],
   "weekday": [
@@ -2397,7 +2475,7 @@
     },
     {
       "day": "Wed",
-      "minutes": 142
+      "minutes": 688
     },
     {
       "day": "Thu",
@@ -2417,15 +2495,15 @@
     }
   ],
   "stats": {
-    "total_games": 172,
-    "played_games": 143,
-    "dust_rate": 16.9,
+    "total_games": 173,
+    "played_games": 144,
+    "dust_rate": 16.8,
     "never_played": 29,
     "loyalty_score": 40,
     "loyalty_label": "Explorer",
     "peak_day": {
       "date": "2026-04-29",
-      "minutes": 142
+      "minutes": 688
     },
     "longest_streak": {
       "days": 2,
@@ -2437,7 +2515,7 @@
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1857.6,
+      "playtime_hours": 1857.8,
       "total": 1,
       "unlocked": 1,
       "pct": 100,
@@ -2511,7 +2589,7 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 266.4,
+      "playtime_hours": 266.6,
       "total": 50,
       "unlocked": 6,
       "pct": 12,
@@ -2996,158 +3074,163 @@
           "Simulation",
           "Strategy"
         ]
+      },
+      {
+        "appid": 1876880,
+        "name": "Primitive Society Simulator",
+        "genres": []
       }
     ],
     "links": [
       {
         "source": 730,
         "target": 230190,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 730,
         "target": 365360,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 730,
         "target": 892970,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 730,
         "target": 3240220,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 730,
         "target": 3912710,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 230190,
         "target": 365360,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 230190,
         "target": 892970,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 230190,
         "target": 1172470,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 230190,
         "target": 2213700,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 230190,
         "target": 3240220,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 230190,
         "target": 3912710,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 365360,
         "target": 892970,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 365360,
         "target": 3240220,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 365360,
         "target": 3912710,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 892970,
         "target": 1172470,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 892970,
         "target": 2213700,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 892970,
         "target": 3240220,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 892970,
         "target": 3912710,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 1172470,
         "target": 2213700,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 1172470,
         "target": 3240220,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 1172470,
         "target": 3912710,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 2213700,
         "target": 3240220,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 2213700,
         "target": 3912710,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 3240220,
         "target": 3912710,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 730,
         "target": 261550,
-        "strength": 1
+        "strength": 2
       },
       {
-        "source": 230190,
-        "target": 261550,
-        "strength": 1
+        "source": 730,
+        "target": 1876880,
+        "strength": 2
       }
     ]
   },
@@ -3155,12 +3238,12 @@
     {
       "genre": "Action",
       "games": 31,
-      "hours": 4198.0
+      "hours": 4198.3
     },
     {
       "genre": "Free To Play",
       "games": 4,
-      "hours": 2447.6
+      "hours": 2447.7
     },
     {
       "genre": "Adventure",
@@ -3170,22 +3253,22 @@
     {
       "genre": "RPG",
       "games": 22,
-      "hours": 1695.4
+      "hours": 1695.6
     },
     {
       "genre": "Indie",
       "games": 24,
-      "hours": 1201.6
+      "hours": 1204.3
     },
     {
       "genre": "Strategy",
       "games": 21,
-      "hours": 991.2
+      "hours": 993.8
     },
     {
       "genre": "Simulation",
       "games": 14,
-      "hours": 585.0
+      "hours": 587.7
     },
     {
       "genre": "Early Access",
@@ -3234,11 +3317,15 @@
     "games": [
       {
         "name": "Sintopia",
-        "hours": 39.0
+        "hours": 41.5
       },
       {
         "name": "Battle Brothers",
         "hours": 28.5
+      },
+      {
+        "name": "Primitive Society Simulator",
+        "hours": 6.3
       },
       {
         "name": "Grand Theft Auto V Enhanced",
@@ -3246,11 +3333,7 @@
       },
       {
         "name": "Counter-Strike 2",
-        "hours": 5.5
-      },
-      {
-        "name": "Apex Legends",
-        "hours": 4.2
+        "hours": 5.2
       }
     ]
   },
@@ -3260,11 +3343,12 @@
         "2026-04-29",
         "2026-04-28"
       ],
-      "total_hours": 4.5,
-      "games_count": 3,
+      "total_hours": 13.6,
+      "games_count": 4,
       "top_games": [
-        "Mount & Blade II: Bannerlord",
+        "Primitive Society Simulator",
         "Sintopia",
+        "Mount & Blade II: Bannerlord",
         "Counter-Strike 2"
       ]
     }
@@ -3273,7 +3357,106 @@
     {
       "appid": 1527950,
       "game_name": "Wartales",
-      "title": "Patch Notes for 28/04/2026",
+      "title": "Patch Notes v1.0.46922",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565415",
+      "date": 1777474272,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "v1.0.46922 Major Fixed the load save crash Fixed the cart escort crash and several major issues linked to it Fixed the Drombach scientist quest Fixed the crash at Rigel’s taverns entrance Fixed the missing Hierophante in the last quest of Lombelle Minor Fixed the treasure maps that didn’t complete when the object is found Fixed the Werewolf’s Licking Wounds skill Fixed the candidate contract that doesn’t complete And more… "
+    },
+    {
+      "appid": 544810,
+      "game_name": "KARDS - The WWII Card Game",
+      "title": "Update on Permanent Pool Card List",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565348",
+      "date": 1777473262,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "{STEAM_CLAN_IMAGE}/34861374/b3619235f07ea82a017fef0144292e651b3604ad.jpg Hello Commanders, In our recent New Rotation System - Dev Blog, we stated that we aimed to publish the list of permanent cards in late April. We want to provide a quick update on that timing. The list will now be published in early May, with the current target being next week. This list defines which cards will remain permanently in the active pool as part of the new rotation system. We appreciate your patience and look forward to sharing the full list with you shortly. See you on the battlefield!"
+    },
+    {
+      "appid": 1481400,
+      "game_name": "Dagon",
+      "title": "Eldritch horrors going semi-viral on Instagram",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565315",
+      "date": 1777472675,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hi cultists!Just a tiny, unusual update today:If you’re on Instagram, give our studio a follow! We’ve recently been blessed by the unholy algorithm, and we plan to stay there for longer, with updates about the studio and our games.Who cares about yet another photo of a perfectly lit vegan salad curated by philosophy students - Instagram needs more eldritch horrors, weird stories and digital blood.That’s all for today, hear you later!"
+    },
+    {
+      "appid": 1203620,
+      "game_name": "Enshrouded",
+      "title": "Changelog for Patch #14 v.0.9.1.1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155564970",
+      "date": 1777465139,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Changelog for Patch #14 v.0.9.1.1The revision of Patch #14 is 1013216 Added a fix for an endless world loading issue that has been reported by players.Fixed a potential crash connected to the NPC pathfinding. Fixed several randomly occurring crashes.Fixed the skill Inner Fires adding the incorrect amount of time in the Shroud.Fixed an issue with XP rewards for item sets. The XP now gets granted as intended.Improved controller support in the Adventure sharing menus.Added a download progress bar when downloading a shared world.Fixed some issues with cancelling a world download. It should now work as intended.Fixed several issues with the scrollbars in the Adventure sharing menu tabs, such as incorrect resetting when switching tabs or removing superfluous scrollbars.Fixed an error where scree..."
+    },
+    {
+      "appid": 392160,
+      "game_name": "X4: Foundations",
+      "title": "9.00 Public Beta 8 now available",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155564707",
+      "date": 1777459463,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "9.00 Public Beta 8 is now available! Please find the full changelog below. Thank you for your continued support and feedback during this testing phase. How Do I Take Part in the Public Beta? Every player who owns X4: Foundations has the opportunity to download the new 9.00 Public Beta version. In order to ensure that beta participants are aware of the risks and rules involved, we ask all interested players to visit our forum, where they will find the rules and disclaimers, as well as practical instructions for participating in the beta. Follow this link to our forum - no registration required - to find the relevant information. X4 9.00 Public Beta 8 Changelog: (see the full 9.00 Public Beta Changelog in our forum) Removed ability for Torus to block panels during final Torus puzzle in Torus..."
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "Cache arrives in Counter-Strike 2 while Valve continue working on ANIMGRAPH 2",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/GamingOnLinux/1831432155564670",
+      "date": 1777458337,
+      "feedname": "GamingOnLinux",
+      "feedlabel": "GamingOnLinux",
+      "update_type": "Update",
+      "contents": "A return of a classic, the popular Cache map has finally returned with the latest Counter-Strike 2 update that's out now. Nice to see more content arrive! Read the full article here: https://www.gamingonlinux.com/2026/04/cache-arrives-in-counter-strike-2-while-valve-continue-working-on-animgraph-2/ "
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "The Return Of Cache",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155563524",
+      "date": 1777415065,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Today's update features the return of a classic. Welcome back, Cache! Cache veterans will feel right at home in familiar locations, while new players can quickly learn the ins and outs of a classic three lane map that rewards strategy and teamplay. You can find Cache in Casual, Competitive, Deathmatch and Retakes modes (for now). Don't forget to clear Forklift, and we'll see you on the server."
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "Counter-Strike 2 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155563523",
+      "date": 1777415058,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "\\CacheAdded Cache to Competitive, Casual, Deathmatch, and Retakes modes.Dust IIUncovered Mid Box (Xbox) to reveal a previously hidden jump spot. On purpose this time.OfficeEnabled collision on tarp on boxes used around CT spawn.StrongholdUpdated to the latest version from the Community Workshop (Update Notes)PoseidonUpdated to the latest version from the Community Workshop (Update Notes)\\Minor adjustments to viewmodel animations.Talon and Karambit knives are now held correctly while defusing.\\Minor mix changes and adjustments.Fixed issue where C4 equip sound was not getting interrupted by other equip sounds.Removed first-person death sound effect that played in the case of music kit death cue being inaudible.\\Shader fix for AO while using alpha test causing overly dark and chunky silhouett..."
+    },
+    {
+      "appid": 494840,
+      "game_name": "UBOAT",
+      "title": "2026.1 Patch 13",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770246297",
+      "date": 1777404235,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Localization: - Russian localization update by Hard. - Japanese localization update by かねのもうじゃ. - Fix: Resolved issue with cyrillic characters in settings and the port menu. Missions: - Fix: It was possible for the mission script to get stuck after sinking HMS Dorsetshire in Cape Town patrol. - Fix: In certain save files, the issue with not being able to pick campaign missions with Type IX could still remain. Ships: - Fix: Type VIIB NPC U-boats had a gap in their 3D geometry. Graphics: - Fix: Resolved an issue that could make character eyes pink after following a reproduction instruction. - Fix: Resolved one graphics-related CTD issue. General: - Fix: Port captain was disappearing after saving the game state and lo..."
+    },
+    {
+      "appid": 1527950,
+      "game_name": "Wartales",
+      "title": "Patch Notes v1.0.46890",
       "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770244679",
       "date": 1777367203,
       "feedname": "steam_community_announcements",
