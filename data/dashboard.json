@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-04-30T21:24:54.544233+08:00",
+  "updated_at": "2026-05-01T01:50:33.957056+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
-    "online": true,
+    "online": false,
     "currently_playing": "",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
   },
   "milestone": {
-    "total_hours": 5356.9,
+    "total_hours": 5357.3,
     "movies": 2678,
     "books": 892,
-    "walking_km": 26784
+    "walking_km": 26786
   },
   "game_cloud": [
     {
@@ -597,6 +597,19 @@
       ]
     },
     {
+      "appid": 2060160,
+      "name": "The Farmer Was Replaced",
+      "playtime_hours": 8.4,
+      "img_icon_url": "c5e5f32afc4cc79cc7a92bf174375367509e2866",
+      "rtime_last_played": 1777568382,
+      "genres": [
+        "Casual",
+        "Indie",
+        "Simulation",
+        "Strategy"
+      ]
+    },
+    {
       "appid": 391730,
       "name": "Crashlands",
       "playtime_hours": 8.2,
@@ -607,19 +620,6 @@
         "Adventure",
         "Indie",
         "RPG"
-      ]
-    },
-    {
-      "appid": 2060160,
-      "name": "The Farmer Was Replaced",
-      "playtime_hours": 8.1,
-      "img_icon_url": "c5e5f32afc4cc79cc7a92bf174375367509e2866",
-      "rtime_last_played": 1768126981,
-      "genres": [
-        "Casual",
-        "Indie",
-        "Simulation",
-        "Strategy"
       ]
     },
     {
@@ -1395,22 +1395,22 @@
       "playtime_forever_hours": 6.3
     },
     {
-      "appid": 730,
-      "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 5.2,
-      "playtime_forever_hours": 1857.8
-    },
-    {
-      "appid": 1172470,
-      "name": "Apex Legends",
-      "playtime_2weeks_hours": 4.9,
-      "playtime_forever_hours": 528.9
-    },
-    {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
       "playtime_2weeks_hours": 4.2,
       "playtime_forever_hours": 268.4
+    },
+    {
+      "appid": 1172470,
+      "name": "Apex Legends",
+      "playtime_2weeks_hours": 4.1,
+      "playtime_forever_hours": 528.9
+    },
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "playtime_2weeks_hours": 4.0,
+      "playtime_forever_hours": 1857.8
     },
     {
       "appid": 3912710,
@@ -1425,10 +1425,10 @@
       "playtime_forever_hours": 0.6
     },
     {
-      "appid": 3240220,
-      "name": "Grand Theft Auto V Enhanced",
-      "playtime_2weeks_hours": 0.4,
-      "playtime_forever_hours": 5.6
+      "appid": 2060160,
+      "name": "The Farmer Was Replaced",
+      "playtime_2weeks_hours": 0.3,
+      "playtime_forever_hours": 8.4
     },
     {
       "appid": 892970,
@@ -1438,6 +1438,12 @@
     }
   ],
   "heatmap": {
+    "2026-05-01": {
+      "online_minutes": 19,
+      "games": {
+        "The Farmer Was Replaced": 19
+      }
+    },
     "2026-04-30": {
       "online_minutes": 143,
       "games": {
@@ -1705,7 +1711,7 @@
       "dow": 2,
       "hour": 21,
       "count": 56.7,
-      "recent_count": 35.0,
+      "recent_count": 0.0,
       "game_minutes": 55.0,
       "online_minutes": 5.0,
       "games": {
@@ -1716,7 +1722,7 @@
       "dow": 2,
       "hour": 22,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -1727,7 +1733,7 @@
       "dow": 2,
       "hour": 23,
       "count": 43.8,
-      "recent_count": 43.8,
+      "recent_count": 0.0,
       "game_minutes": 35.1,
       "online_minutes": 24.9,
       "games": {
@@ -1738,7 +1744,7 @@
       "dow": 3,
       "hour": 0,
       "count": 3.5,
-      "recent_count": 3.5,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 10.1,
       "games": {}
@@ -1825,15 +1831,55 @@
     {
       "dow": 3,
       "hour": 21,
-      "count": 8.7,
-      "recent_count": 8.7,
+      "count": 21.0,
+      "recent_count": 21.0,
       "game_minutes": 0.0,
-      "online_minutes": 25.0,
+      "online_minutes": 60.0,
       "games": {}
+    },
+    {
+      "dow": 3,
+      "hour": 22,
+      "count": 21.0,
+      "recent_count": 21.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
+    },
+    {
+      "dow": 3,
+      "hour": 23,
+      "count": 21.0,
+      "recent_count": 21.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
+    },
+    {
+      "dow": 4,
+      "hour": 0,
+      "count": 32.8,
+      "recent_count": 32.8,
+      "game_minutes": 18.2,
+      "online_minutes": 41.8,
+      "games": {
+        "The Farmer Was Replaced": 18.2
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 1,
+      "count": 7.0,
+      "recent_count": 7.0,
+      "game_minutes": 0.0,
+      "online_minutes": 20.0,
+      "games": {
+        "The Farmer Was Replaced": 0.0
+      }
     }
   ],
   "platform": {
-    "Windows": 5334.7,
+    "Windows": 5335.0,
     "Mac": 12.0,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -1854,7 +1900,7 @@
     {
       "name": "Kingdom Come: Deliverance",
       "hours": 369.6,
-      "cumulative_pct": 51.5,
+      "cumulative_pct": 51.4,
       "rank": 3
     },
     {
@@ -1932,7 +1978,7 @@
     {
       "name": "Warhammer 40,000: Rogue Trader",
       "hours": 51.1,
-      "cumulative_pct": 79.8,
+      "cumulative_pct": 79.7,
       "rank": 16
     },
     {
@@ -2112,7 +2158,7 @@
     {
       "name": "Don't Starve Together",
       "hours": 10.5,
-      "cumulative_pct": 94.7,
+      "cumulative_pct": 94.6,
       "rank": 46
     },
     {
@@ -2128,14 +2174,14 @@
       "rank": 48
     },
     {
-      "name": "Crashlands",
-      "hours": 8.2,
+      "name": "The Farmer Was Replaced",
+      "hours": 8.4,
       "cumulative_pct": 95.1,
       "rank": 49
     },
     {
-      "name": "The Farmer Was Replaced",
-      "hours": 8.1,
+      "name": "Crashlands",
+      "hours": 8.2,
       "cumulative_pct": 95.3,
       "rank": 50
     },
@@ -2723,7 +2769,7 @@
     },
     {
       "day": "Fri",
-      "minutes": 0
+      "minutes": 19
     },
     {
       "day": "Sat",
@@ -2746,9 +2792,9 @@
       "minutes": 688
     },
     "longest_streak": {
-      "days": 3,
+      "days": 4,
       "start": "2026-04-28",
-      "end": "2026-04-30"
+      "end": "2026-05-01"
     }
   },
   "achievements": [
@@ -3295,13 +3341,13 @@
         ]
       },
       {
-        "appid": 3240220,
-        "name": "Grand Theft Auto V Enhanced",
+        "appid": 3912710,
+        "name": "War of Banners Demo",
         "genres": []
       },
       {
-        "appid": 3912710,
-        "name": "War of Banners Demo",
+        "appid": 3240220,
+        "name": "Grand Theft Auto V Enhanced",
         "genres": []
       },
       {
@@ -3325,101 +3371,121 @@
       {
         "source": 730,
         "target": 230190,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 730,
         "target": 365360,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 730,
         "target": 892970,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 4
-      },
-      {
-        "source": 730,
-        "target": 3240220,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 730,
         "target": 3912710,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 230190,
         "target": 365360,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 230190,
         "target": 892970,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 230190,
         "target": 1172470,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 230190,
         "target": 2213700,
-        "strength": 4
-      },
-      {
-        "source": 230190,
-        "target": 3240220,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 230190,
         "target": 3912710,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 365360,
         "target": 892970,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 4
-      },
-      {
-        "source": 365360,
-        "target": 3240220,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 365360,
         "target": 3912710,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 892970,
         "target": 1172470,
-        "strength": 4
+        "strength": 5
       },
       {
         "source": 892970,
         "target": 2213700,
+        "strength": 5
+      },
+      {
+        "source": 892970,
+        "target": 3912710,
+        "strength": 5
+      },
+      {
+        "source": 1172470,
+        "target": 2213700,
+        "strength": 5
+      },
+      {
+        "source": 1172470,
+        "target": 3912710,
+        "strength": 5
+      },
+      {
+        "source": 2213700,
+        "target": 3912710,
+        "strength": 5
+      },
+      {
+        "source": 730,
+        "target": 3240220,
+        "strength": 4
+      },
+      {
+        "source": 230190,
+        "target": 3240220,
+        "strength": 4
+      },
+      {
+        "source": 365360,
+        "target": 3240220,
         "strength": 4
       },
       {
@@ -3428,33 +3494,13 @@
         "strength": 4
       },
       {
-        "source": 892970,
-        "target": 3912710,
-        "strength": 4
-      },
-      {
-        "source": 1172470,
-        "target": 2213700,
-        "strength": 4
-      },
-      {
         "source": 1172470,
         "target": 3240220,
-        "strength": 4
-      },
-      {
-        "source": 1172470,
-        "target": 3912710,
         "strength": 4
       },
       {
         "source": 2213700,
         "target": 3240220,
-        "strength": 4
-      },
-      {
-        "source": 2213700,
-        "target": 3912710,
         "strength": 4
       },
       {
@@ -3465,12 +3511,12 @@
       {
         "source": 730,
         "target": 261550,
-        "strength": 2
+        "strength": 3
       },
       {
         "source": 730,
         "target": 1876880,
-        "strength": 2
+        "strength": 3
       }
     ]
   },
@@ -3498,17 +3544,17 @@
     {
       "genre": "Indie",
       "games": 24,
-      "hours": 1206.0
+      "hours": 1206.4
     },
     {
       "genre": "Strategy",
       "games": 21,
-      "hours": 995.6
+      "hours": 995.9
     },
     {
       "genre": "Simulation",
       "games": 14,
-      "hours": 589.4
+      "hours": 589.8
     },
     {
       "genre": "Early Access",
@@ -3533,7 +3579,7 @@
     {
       "genre": "Casual",
       "games": 3,
-      "hours": 116.9
+      "hours": 117.2
     },
     {
       "genre": "Video Production",
@@ -3568,24 +3614,25 @@
         "hours": 6.3
       },
       {
-        "name": "Counter-Strike 2",
-        "hours": 5.2
+        "name": "Mount & Blade II: Bannerlord",
+        "hours": 4.2
       },
       {
         "name": "Apex Legends",
-        "hours": 4.9
+        "hours": 4.1
       }
     ]
   },
   "weekly_digest": [
     {
       "dates": [
+        "2026-05-01",
         "2026-04-30",
         "2026-04-29",
         "2026-04-28"
       ],
-      "total_hours": 16.0,
-      "games_count": 5,
+      "total_hours": 16.3,
+      "games_count": 6,
       "top_games": [
         "Primitive Society Simulator",
         "Mount & Blade II: Bannerlord",
@@ -3596,6 +3643,116 @@
     }
   ],
   "game_updates": [
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "New Updates Coming with Apex Legends™: Overclocked",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155568807",
+      "date": 1777565256,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "NEW UPDATES COMING WITH APEX LEGENDS™: OVERCLOCKEDThe start of a new season seems like a great time to check in on The Road Ahead.When we released this roadmap earlier this year, we told you that what we had on the graphic was just the start. We’re excited to announce a new addition: a Major Ranked Update is slated for Season 32. We hear your continued feedback and know that Ranked is an important part of your Apex Legends journey. Our team is continuously working on the Ranked mode, testing and tweaking to give you the best competitive experience possible. That work will continue and when Season 32 arrives, Ranked will have a brand new look and feel; we can’t wait to tell you more when the time is right!Now get ready to push it to the limits and redline all season in OVERCLOCKED.In Overcl..."
+    },
+    {
+      "appid": 2213700,
+      "game_name": "Sintopia",
+      "title": "Patch Two now live for Sintopia!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155568277",
+      "date": 1777557716,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Administrators!Another patch has emerged from the pits of Hell for Sintopia! Just in time for your monthly performance review. We hope you've been doing a good job down there 😈Patch Two fixes some of the bugs raised by the community, adds some balancing changes to the Overworld and Hell, rolls out more changes to the Souls Dispatcher, and more!Read the full patch notes below!Full Patch NotesCampaignMission 3: Fixed an issue on the navigation mesh in the Overworld, causing Humus Rangers to get stuck near the Zap! Power Shrine when moving close.Mission 7: Fixed an issue that could prevent players from achieving the “Kill the Humkonnens” step (ex: by feeding a Humkonnen Soul to a Confined Blind Seer).Mission 7: Added a failsafe to facilitate picking the burnt Imp ashes up when they fall close..."
+    },
+    {
+      "appid": 218620,
+      "game_name": "PAYDAY 2",
+      "title": "PAYDAY 2: Update 245 Changelog",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155568050",
+      "date": 1777554120,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Hello heisters!Got an new update for you all, to coincide with the new content drop. Incase you missed it, the new Espionage Weapon Pack DLC has been released! Check it out: PAYDAY 2: Update 245 ChangelogDownload Size: 131.9 MBGeneralFixed crash when using a ECM feedback on an in-custody players ECMFixed Heavy Zeal Sniper not spawning in Holdout modesFixed a crash relating to cops dying from DOT while the player is in custodyFixed some missing mask materials that were not included in the drop poolsFixed the \"Shock Baton\" melee weapon not using the correct model when viewed from a third personGameplayKilled enemies in loud now alert other nearby enemiesIncreased the Saiga Dozers damage on Mayhem and below to account for the base damage that was reduced the update priorFixed vehicles not bei..."
+    },
+    {
+      "appid": 218620,
+      "game_name": "PAYDAY 2",
+      "title": "PAYDAY 2: The Espionage Weapon Pack",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155568047",
+      "date": 1777554108,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hello spiesters!For the past few months, we at Sidetrack have been working hard to bring you updates that fix long standing issues, as well as deliver features that make PAYDAY 2 even better. The feedback you've given us has been wonderful, and we will continue to work on the game with you all.Earlier this month, you've also seen us dabble into our first content additions, and now it's time for a much bigger one. We hope you enjoy what we cooked up and choose to support us, so interm we can support you.The Espionage Weapon packWelcome to a new era of espionage. Featuring 3 new guns and 2 new gadgets.Strix PistolBallerina 9mm Submachine GunDECA Technologies Dart ProjectorLaser ChronometerSpy CameraRead more about it on the store page here:Update 245 ChangelogFind the Changelog Here!PAYDAYGa..."
+    },
+    {
+      "appid": 2881650,
+      "game_name": "Content Warning",
+      "title": "Patch Notes 1.24.0",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155567881",
+      "date": 1777550347,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Hello Spööktubers! Thank you for your patience as we're fixing bugs on all platforms.Here's a new patch fixing some stuff!For those of you wondering when crossplay between Switch 1 & 2 and other platforms will be back: The first Switch patch ran into an issue during testing, so we’re currently waiting on feedback from Nintendo. We’re hoping the patch will be approved by next week, but it could take longer if any problems are found. The fixes from this patch will also be included.Patch Notes:Lobbies should no longer be stuck in offline mode after rehostingThe door in the house should no longer be open only for the host due to the aforementioned issueVideo extraction time has been greatly reduced in most use casesEnjoy the patch, and please report any issues to support@landfall.se"
+    },
+    {
+      "appid": 704850,
+      "game_name": "Thief Simulator",
+      "title": "Thief Simulator 3 PLAYTEST - sign up now!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155567661",
+      "date": 1777546861,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hello fellow Thieves. Noble Muffins is back making a new Thief Simulator.Help us improve Thief Simulator 3 in this early playtest!How to participate?If you haven’t done it yet, head over to our Steam store page and look for the \"Join the Thief Simulator 3 Playtest\" section. Just click the \"Request Access\" button, and you'll be on our list!What to expect?You will be able to play few early game jobs.Steal solo or join your friend on steam in 2 player coop!Don't forget to Wishlist to stay updated!"
+    },
+    {
+      "appid": 2016590,
+      "game_name": "Dark and Darker",
+      "title": "Early Access Hotfix #114",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155566984",
+      "date": 1777529004,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Greetings, Adventurers.This hotfix is aimed at quickly resolving several issues to ensure a proper start to this season. Other changes, including balance adjustments, will be rolled out gradually through upcoming hotfixes. This hotfix fixes the ability to claim your EAS8 Adventure Rank rewards, fixes a blocking issue with the Mimic quest, and adds the missing key binding options for the newly introduced ping feature. We hope you enjoy the new season to the fullest.As always, thank you and see you in the dungeons!IRONMACEBugfixes:Fixed an issue where the previous season's Adventurer rank leaderboard was not displayed and rewards could not be claimed.Fixed an issue where Mimics could fail to spawn.Fixed an issue where the Ghost King dropped the Skull Key.Fixed an issue where the display orde..."
+    },
+    {
+      "appid": 578080,
+      "game_name": "PUBG: BATTLEGROUNDS",
+      "title": "PUBG Global Series Circuit 2 is about to drop!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155566516",
+      "date": 1777505829,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "A little over a month after Circuit 1's unpredictable three weeks, the 24 teams are back in Seoul. The PUBG Global Series returns with its second circuit — PGS 4-6 — kicking off May 20.Circuit 2 isn't a reset. The PGS Points earned in Circuit 1 carry directly into the standings, and the final results here decide who qualifies for the Esports World Cup (EWC). Add a new patch to the mix, and the question becomes: how do the strategies teams locked in during Circuit 1 hold up in a different environment? Circuit 2 Overview Location: Seongsu, Seoul, South KoreaParticipating Teams: 24 TeamsTotal Prize Pool: $500,000 (PGS 4-5: $100,000 each / PGS 6: $300,000)All Circuit 2 matches begin at 19:00 KST (10:00 UTC / 11:00 CET / 17:00 ICT / 03:00 PDT) daily. *PGS 4 Day 1 Group Stage begins at 14:00 KST..."
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "Counter-Strike 2 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155566354",
+      "date": 1777499165,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "\\CacheBomb explosion radius increased.Lighting Adjustments around Vent.Disabled player collision on sign and removed lamp by squeaky.Reworked e-box on A-site for better visibility.Lowered Checkers entrance frame height at B Main.Removed AC unit above Sandbags and moved pipes.Fixed lack of footstep sounds on top of crates at A-site.Fixed hole in world on door in Sun Room.Fixed wall bangs on A Main wall.Fixed some z-fighting around Garage.Adjusted grenade clipping throughout map.Adjusted player clipping throughout map.Dust IIBlocked visibility through corner of Mid Box (Xbox).\\Speculative fix for a case where all audio drops out.\\Fixed cases where crouch-jumping in confined spaces could cause the player camera to intersect the ceiling.Adjusted particle effect sprite opacity for fully occlude..."
+    },
+    {
+      "appid": 578080,
+      "game_name": "PUBG: BATTLEGROUNDS",
+      "title": "When is the next PUBG update?",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1831432155567646",
+      "date": 1777487055,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Update",
+      "contents": "<strong>When is the next PUBG update?</strong> There are very few battle royale games, or any games for that matter, that have a history like PUBG. The first BR that truly broke out, it almost single-handedly created an entirely new genre, and it's hard to think about the gaming landscape without the shooter-with-the-ever-closing-circle now. If you haven't played <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds\">PUBG</a> for a while, logging on might give you a bit of a fright. Menus look completely different, events are constant, but thankfully, the actual game remains more or less the same. There are new weapons and <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/pubg-map\">PUBG maps</a>, of course, but it's all about avoiding the zone and putting your enemies to the sword. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/update\">When is the next PUBG update?</a> RELATED LINKS: <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/stellar-blade-eve-collab\">PUBG and Stellar Blade come together in the unlikeliest collab, and i...</a>"
+    },
     {
       "appid": 1527950,
       "game_name": "Wartales",
@@ -3616,7 +3773,7 @@
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Update",
-      "contents": "{STEAM_CLAN_IMAGE}/34861374/b3619235f07ea82a017fef0144292e651b3604ad.jpg Hello Commanders, In our recent New Rotation System - Dev Blog, we stated that we aimed to publish the list of permanent cards in late April. We want to provide a quick update on that timing. The list will now be published in early May, with the current target being next week. This list defines which cards will remain permanently in the active pool as part of the new rotation system. We appreciate your patience and look forward to sharing the full list with you shortly. See you on the battlefield!"
+      "contents": "{STEAM_CLAN_IMAGE}/34861374/b3619235f07ea82a017fef0144292e651b3604ad.jpg Hello commanders, In our recent New Rotation System - Dev Blog, we stated that we aimed to publish the list of permanent cards in late April. We want to provide a quick update on that timing. The list will now be published in early May, with the current target being next week. This list defines which cards will remain permanently in the active pool as part of the new rotation system. We appreciate your patience and look forward to sharing the full list with you shortly. See you on the battlefield!"
     },
     {
       "appid": 1481400,
@@ -3749,17 +3906,6 @@
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
       "contents": "Engineers still busy among the stars and reality alike — the blazing heat of summer is almost upon us, and Dyson Sphere Program continues to move forward at full speed.Here is today’s small update: \\Holo beacons can activate \"Dark Fog Beaconing\" function (in combat mode). Once activated, Dark Fog Hives will dispatch Relay stations to beacon's location. Note: The beacon must maintain power supply and visibility must be set to at least \"Local Planetary System\". We know, of course, that many of you are looking forward to the vehicle system. However, this is a special feature that runs through the entire game experience, and to some extent, it will change the rhythm of how the game is played.In order to present it to every Engineer in the best possible form, it still needs quite some time befo..."
-    },
-    {
-      "appid": 494840,
-      "game_name": "UBOAT",
-      "title": "2026.1 Patch 12",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770240627",
-      "date": 1777225688,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Type IX: - Fix: After installing an anti-radar coated snorkel, the boat upgrade UI was still claiming that the normal snorkel was installed instead. - Fix: Some bulkheads weren't closed after issuing an order to close all bulkheads. - Fix: Crew pathing issues with some bulkheads closed. Ships: - Fix: Type VII NPC U-boats had a gap in their 3D geometry. Flotilla bases: - Fix: If a commemorative plaque was earned in a flotilla base, while playing with a U-boat that had a tiger and boat or clover emblem, then the plaque wasn't appearing and only the boat name was written where the plaque should be. Missions: - Fix: A placeholder message in Seehund distant patrol. General: - Fix: Crash while talking with port officers ..."
     }
   ]
 }
