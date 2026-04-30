@@ -8,6 +8,21 @@ import { fileURLToPath } from 'node:url'
 
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const dashboardSource = resolve(rootDir, 'data/dashboard.json')
+const chartVendorPackages = [
+  '/node_modules/recharts/',
+  '/node_modules/@reduxjs/toolkit/',
+  '/node_modules/react-redux/',
+  '/node_modules/redux/',
+  '/node_modules/immer/',
+  '/node_modules/reselect/',
+  '/node_modules/decimal.js-light/',
+  '/node_modules/es-toolkit/',
+  '/node_modules/d3-',
+  '/node_modules/eventemitter3/',
+  '/node_modules/use-sync-external-store/',
+  '/node_modules/react-is/',
+  '/node_modules/tiny-invariant/',
+]
 
 function dashboardDataPlugin(): Plugin {
   return {
@@ -36,4 +51,13 @@ function dashboardDataPlugin(): Plugin {
 export default defineConfig({
   plugins: [react(), dashboardDataPlugin()],
   base: '/my-steam-notes/',
+  build: {
+    rolldownOptions: {
+      output: {
+        manualChunks(id) {
+          return chartVendorPackages.some((pkg) => id.includes(pkg)) ? 'recharts' : undefined
+        },
+      },
+    },
+  },
 })

@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-04-30T01:53:10.052840+08:00",
+  "updated_at": "2026-04-30T21:24:54.544233+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
-    "online": false,
+    "online": true,
     "currently_playing": "",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
   },
   "milestone": {
-    "total_hours": 5354.6,
-    "movies": 2677,
+    "total_hours": 5356.9,
+    "movies": 2678,
     "books": 892,
-    "walking_km": 26773
+    "walking_km": 26784
   },
   "game_cloud": [
     {
@@ -28,9 +28,9 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 528.3,
+      "playtime_hours": 528.9,
       "img_icon_url": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
-      "rtime_last_played": 1777305143,
+      "rtime_last_played": 1777527806,
       "genres": [
         "Action",
         "Adventure",
@@ -52,9 +52,9 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 266.6,
+      "playtime_hours": 268.4,
       "img_icon_url": "896d5f4214e4e185a20af51b46d9dea2e6f4aaad",
-      "rtime_last_played": 1777467192,
+      "rtime_last_played": 1777534026,
       "genres": [
         "Action",
         "Indie",
@@ -1395,12 +1395,6 @@
       "playtime_forever_hours": 6.3
     },
     {
-      "appid": 3240220,
-      "name": "Grand Theft Auto V Enhanced",
-      "playtime_2weeks_hours": 5.6,
-      "playtime_forever_hours": 5.6
-    },
-    {
       "appid": 730,
       "name": "Counter-Strike 2",
       "playtime_2weeks_hours": 5.2,
@@ -1409,14 +1403,14 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_2weeks_hours": 4.2,
-      "playtime_forever_hours": 528.3
+      "playtime_2weeks_hours": 4.9,
+      "playtime_forever_hours": 528.9
     },
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_2weeks_hours": 2.5,
-      "playtime_forever_hours": 266.6
+      "playtime_2weeks_hours": 4.2,
+      "playtime_forever_hours": 268.4
     },
     {
       "appid": 3912710,
@@ -1431,6 +1425,12 @@
       "playtime_forever_hours": 0.6
     },
     {
+      "appid": 3240220,
+      "name": "Grand Theft Auto V Enhanced",
+      "playtime_2weeks_hours": 0.4,
+      "playtime_forever_hours": 5.6
+    },
+    {
       "appid": 892970,
       "name": "Valheim",
       "playtime_2weeks_hours": 0.0,
@@ -1438,6 +1438,13 @@
     }
   ],
   "heatmap": {
+    "2026-04-30": {
+      "online_minutes": 143,
+      "games": {
+        "Apex Legends": 39,
+        "Mount & Blade II: Bannerlord": 104
+      }
+    },
     "2026-04-29": {
       "online_minutes": 688,
       "games": {
@@ -1459,141 +1466,374 @@
     {
       "dow": 1,
       "hour": 12,
-      "count": 12
+      "count": 22.1,
+      "recent_count": 0.0,
+      "game_minutes": 22.1,
+      "online_minutes": 0.0,
+      "games": {
+        "Sintopia": 22.1
+      }
     },
     {
       "dow": 1,
       "hour": 13,
-      "count": 7
+      "count": 52.9,
+      "recent_count": 0.0,
+      "game_minutes": 52.9,
+      "online_minutes": 0.0,
+      "games": {
+        "Sintopia": 51.4,
+        "Counter-Strike 2": 1.6
+      }
     },
     {
       "dow": 1,
       "hour": 14,
-      "count": 5
+      "count": 28.5,
+      "recent_count": 0.0,
+      "game_minutes": 23.0,
+      "online_minutes": 15.9,
+      "games": {
+        "Counter-Strike 2": 23.0
+      }
     },
     {
       "dow": 1,
       "hour": 15,
-      "count": 1
+      "count": 8.5,
+      "recent_count": 0.0,
+      "game_minutes": 0.0,
+      "online_minutes": 24.2,
+      "games": {}
     },
     {
       "dow": 1,
       "hour": 16,
-      "count": 2
+      "count": 20.2,
+      "recent_count": 0.0,
+      "game_minutes": 15.0,
+      "online_minutes": 15.0,
+      "games": {
+        "Counter-Strike 2": 15.0
+      }
     },
     {
       "dow": 1,
       "hour": 17,
-      "count": 9
+      "count": 14.8,
+      "recent_count": 0.0,
+      "game_minutes": 0.0,
+      "online_minutes": 42.2,
+      "games": {}
     },
     {
       "dow": 1,
       "hour": 18,
-      "count": 13
+      "count": 21.0,
+      "recent_count": 0.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
     },
     {
       "dow": 1,
       "hour": 19,
-      "count": 13
+      "count": 21.0,
+      "recent_count": 0.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
     },
     {
       "dow": 1,
       "hour": 20,
-      "count": 13
+      "count": 21.0,
+      "recent_count": 0.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
     },
     {
       "dow": 1,
       "hour": 21,
-      "count": 12
+      "count": 21.0,
+      "recent_count": 0.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
     },
     {
       "dow": 1,
       "hour": 22,
-      "count": 12
+      "count": 21.0,
+      "recent_count": 0.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
     },
     {
       "dow": 1,
       "hour": 23,
-      "count": 14
+      "count": 21.0,
+      "recent_count": 0.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
     },
     {
       "dow": 2,
       "hour": 0,
-      "count": 14
+      "count": 38.4,
+      "recent_count": 0.0,
+      "game_minutes": 26.8,
+      "online_minutes": 33.2,
+      "games": {
+        "Mount & Blade II: Bannerlord": 26.8
+      }
     },
     {
       "dow": 2,
       "hour": 1,
-      "count": 15
+      "count": 60.0,
+      "recent_count": 0.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
     },
     {
       "dow": 2,
       "hour": 2,
-      "count": 17
+      "count": 56.2,
+      "recent_count": 0.0,
+      "game_minutes": 54.2,
+      "online_minutes": 5.8,
+      "games": {
+        "Mount & Blade II: Bannerlord": 54.2
+      }
     },
     {
       "dow": 2,
       "hour": 3,
-      "count": 6
+      "count": 5.3,
+      "recent_count": 0.0,
+      "game_minutes": 0.0,
+      "online_minutes": 15.0,
+      "games": {}
     },
     {
       "dow": 2,
       "hour": 14,
-      "count": 10
+      "count": 41.7,
+      "recent_count": 0.0,
+      "game_minutes": 40.0,
+      "online_minutes": 5.0,
+      "games": {
+        "Primitive Society Simulator": 35.0,
+        "Counter-Strike 2": 5.0
+      }
     },
     {
       "dow": 2,
       "hour": 15,
-      "count": 14
+      "count": 60.0,
+      "recent_count": 0.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Primitive Society Simulator": 60.0
+      }
     },
     {
       "dow": 2,
       "hour": 16,
-      "count": 13
+      "count": 60.0,
+      "recent_count": 0.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Primitive Society Simulator": 60.0
+      }
     },
     {
       "dow": 2,
       "hour": 17,
-      "count": 13
+      "count": 60.0,
+      "recent_count": 0.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Primitive Society Simulator": 60.0
+      }
     },
     {
       "dow": 2,
       "hour": 18,
-      "count": 13
+      "count": 60.0,
+      "recent_count": 0.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Primitive Society Simulator": 60.0
+      }
     },
     {
       "dow": 2,
       "hour": 19,
-      "count": 13
+      "count": 60.0,
+      "recent_count": 0.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Primitive Society Simulator": 60.0
+      }
     },
     {
       "dow": 2,
       "hour": 20,
-      "count": 13
+      "count": 56.8,
+      "recent_count": 0.0,
+      "game_minutes": 55.1,
+      "online_minutes": 4.9,
+      "games": {
+        "Primitive Society Simulator": 45.0,
+        "Mount & Blade II: Bannerlord": 10.0
+      }
     },
     {
       "dow": 2,
       "hour": 21,
-      "count": 13
+      "count": 56.7,
+      "recent_count": 35.0,
+      "game_minutes": 55.0,
+      "online_minutes": 5.0,
+      "games": {
+        "Sintopia": 55.0
+      }
     },
     {
       "dow": 2,
       "hour": 22,
-      "count": 13
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Sintopia": 60.0
+      }
     },
     {
       "dow": 2,
       "hour": 23,
-      "count": 12
+      "count": 43.8,
+      "recent_count": 43.8,
+      "game_minutes": 35.1,
+      "online_minutes": 24.9,
+      "games": {
+        "Sintopia": 35.1
+      }
     },
     {
       "dow": 3,
       "hour": 0,
-      "count": 2
+      "count": 3.5,
+      "recent_count": 3.5,
+      "game_minutes": 0.0,
+      "online_minutes": 10.1,
+      "games": {}
+    },
+    {
+      "dow": 3,
+      "hour": 13,
+      "count": 55.0,
+      "recent_count": 55.0,
+      "game_minutes": 55.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Apex Legends": 40.0,
+        "Mount & Blade II: Bannerlord": 14.9
+      }
+    },
+    {
+      "dow": 3,
+      "hour": 14,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 3,
+      "hour": 15,
+      "count": 39.1,
+      "recent_count": 39.1,
+      "game_minutes": 27.9,
+      "online_minutes": 32.1,
+      "games": {
+        "Mount & Blade II: Bannerlord": 27.9
+      }
+    },
+    {
+      "dow": 3,
+      "hour": 16,
+      "count": 21.0,
+      "recent_count": 21.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
+    },
+    {
+      "dow": 3,
+      "hour": 17,
+      "count": 5.3,
+      "recent_count": 5.3,
+      "game_minutes": 0.0,
+      "online_minutes": 15.1,
+      "games": {}
+    },
+    {
+      "dow": 3,
+      "hour": 18,
+      "count": 14.0,
+      "recent_count": 14.0,
+      "game_minutes": 0.0,
+      "online_minutes": 39.9,
+      "games": {}
+    },
+    {
+      "dow": 3,
+      "hour": 19,
+      "count": 21.0,
+      "recent_count": 21.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
+    },
+    {
+      "dow": 3,
+      "hour": 20,
+      "count": 21.0,
+      "recent_count": 21.0,
+      "game_minutes": 0.0,
+      "online_minutes": 60.0,
+      "games": {}
+    },
+    {
+      "dow": 3,
+      "hour": 21,
+      "count": 8.7,
+      "recent_count": 8.7,
+      "game_minutes": 0.0,
+      "online_minutes": 25.0,
+      "games": {}
     }
   ],
   "platform": {
-    "Windows": 5332.3,
+    "Windows": 5334.7,
     "Mac": 12.0,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -1607,7 +1847,7 @@
     },
     {
       "name": "Apex Legends",
-      "hours": 528.3,
+      "hours": 528.9,
       "cumulative_pct": 44.6,
       "rank": 2
     },
@@ -1619,8 +1859,8 @@
     },
     {
       "name": "Mount & Blade II: Bannerlord",
-      "hours": 266.6,
-      "cumulative_pct": 56.4,
+      "hours": 268.4,
+      "cumulative_pct": 56.5,
       "rank": 4
     },
     {
@@ -1656,7 +1896,7 @@
     {
       "name": "Wallpaper Engine",
       "hours": 100.3,
-      "cumulative_pct": 72.3,
+      "cumulative_pct": 72.4,
       "rank": 10
     },
     {
@@ -1692,7 +1932,7 @@
     {
       "name": "Warhammer 40,000: Rogue Trader",
       "hours": 51.1,
-      "cumulative_pct": 79.7,
+      "cumulative_pct": 79.8,
       "rank": 16
     },
     {
@@ -1722,7 +1962,7 @@
     {
       "name": "Manor Lords",
       "hours": 42.8,
-      "cumulative_pct": 84.1,
+      "cumulative_pct": 84.2,
       "rank": 21
     },
     {
@@ -2479,7 +2719,7 @@
     },
     {
       "day": "Thu",
-      "minutes": 0
+      "minutes": 143
     },
     {
       "day": "Fri",
@@ -2506,9 +2746,9 @@
       "minutes": 688
     },
     "longest_streak": {
-      "days": 2,
+      "days": 3,
       "start": "2026-04-28",
-      "end": "2026-04-29"
+      "end": "2026-04-30"
     }
   },
   "achievements": [
@@ -2529,7 +2769,7 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 528.3,
+      "playtime_hours": 528.9,
       "total": 12,
       "unlocked": 11,
       "pct": 92,
@@ -2589,7 +2829,7 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 266.6,
+      "playtime_hours": 268.4,
       "total": 50,
       "unlocked": 6,
       "pct": 12,
@@ -3238,37 +3478,37 @@
     {
       "genre": "Action",
       "games": 31,
-      "hours": 4198.3
+      "hours": 4200.7
     },
     {
       "genre": "Free To Play",
       "games": 4,
-      "hours": 2447.7
+      "hours": 2448.4
     },
     {
       "genre": "Adventure",
       "games": 22,
-      "hours": 2082.3
+      "hours": 2083.0
     },
     {
       "genre": "RPG",
       "games": 22,
-      "hours": 1695.6
+      "hours": 1697.3
     },
     {
       "genre": "Indie",
       "games": 24,
-      "hours": 1204.3
+      "hours": 1206.0
     },
     {
       "genre": "Strategy",
       "games": 21,
-      "hours": 993.8
+      "hours": 995.6
     },
     {
       "genre": "Simulation",
       "games": 14,
-      "hours": 587.7
+      "hours": 589.4
     },
     {
       "genre": "Early Access",
@@ -3328,28 +3568,30 @@
         "hours": 6.3
       },
       {
-        "name": "Grand Theft Auto V Enhanced",
-        "hours": 5.6
-      },
-      {
         "name": "Counter-Strike 2",
         "hours": 5.2
+      },
+      {
+        "name": "Apex Legends",
+        "hours": 4.9
       }
     ]
   },
   "weekly_digest": [
     {
       "dates": [
+        "2026-04-30",
         "2026-04-29",
         "2026-04-28"
       ],
-      "total_hours": 13.6,
-      "games_count": 4,
+      "total_hours": 16.0,
+      "games_count": 5,
       "top_games": [
         "Primitive Society Simulator",
-        "Sintopia",
         "Mount & Blade II: Bannerlord",
-        "Counter-Strike 2"
+        "Sintopia",
+        "Counter-Strike 2",
+        "Apex Legends"
       ]
     }
   ],

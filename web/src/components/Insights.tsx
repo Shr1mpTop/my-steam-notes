@@ -1,4 +1,6 @@
-import { useMemo, useState, useCallback } from "react";
+import { useMemo, useState } from "react";
+import { forceCenter, forceCollide, forceLink, forceManyBody, forceSimulation, forceX, forceY } from "d3-force";
+import type { SimulationLinkDatum, SimulationNodeDatum } from "d3-force";
 import type { StatsData, GameNetworkData, GameCloudItem } from "../types";
 import { useLocale } from "../useLocale";
 
@@ -162,42 +164,52 @@ function firstGenre(genres: string[] | undefined): string {
 
 const truncate = (s: string, max: number) => s.length > max ? s.slice(0, max) + "…" : s;
 
-const BUBBLE_SLOTS = [
-  { x: 320, y: 172 },
-  { x: 188, y: 140 },
-  { x: 452, y: 140 },
-  { x: 232, y: 258 },
-  { x: 408, y: 258 },
-  { x: 118, y: 224 },
-  { x: 522, y: 224 },
-  { x: 122, y: 78 },
-  { x: 518, y: 78 },
-  { x: 320, y: 70 },
-  { x: 320, y: 302 },
-  { x: 590, y: 156 },
-  { x: 50, y: 156 },
-];
+interface ForceNode extends SimulationNodeDatum {
+  id: number;
+  appid: number;
+  name: string;
+  genres: string[];
+  genre: string;
+  degree: number;
+  r: number;
+}
+
+interface ForceGraphLink extends SimulationLinkDatum<ForceNode> {
+  source: string | number | ForceNode;
+  target: string | number | ForceNode;
+  strength: number;
+}
+
+interface PositionedLink {
+  source: ForceNode;
+  target: ForceNode;
+  strength: number;
+}
 
 export function GameNetwork({ network }: Props) {
   const { t } = useLocale();
-  const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
   const W = 640;
   const H = 380;
 
   const nodes = useMemo(() => {
-    return (network.nodes as NetworkNodeInput[]).map((n) =>
-      typeof n === "string"
+    const m = new Map<number, { appid: number; name: string; genres: string[] }>();
+    for (const n of (network.nodes as NetworkNodeInput[])) {
+      const node = typeof n === "string"
         ? { appid: 0, name: n, genres: [] as string[] }
-        : { appid: n.appid ?? 0, name: n.name ?? "", genres: n.genres ?? [] }
-    );
+        : { appid: n.appid ?? 0, name: n.name ?? "", genres: n.genres ?? [] };
+      if (node.appid > 0) m.set(node.appid, node);
+    }
+    return [...m.values()];
   }, [network.nodes]);
 
   const links = useMemo(() => {
-    return (network.links as NetworkLinkInput[]).map((l) => ({
-      source: typeof l.source === "string" ? 0 : (l.source ?? 0),
-      target: typeof l.target === "string" ? 0 : (l.target ?? 0),
-      strength: l.strength ?? 1,
-    }));
+    return (network.links as NetworkLinkInput[])
+      .map((l) => ({
+        source: typeof l.source === "string" ? 0 : (l.source ?? 0),
+        target: typeof l.target === "string" ? 0 : (l.target ?? 0),
+        strength: l.strength ?? 1,
+      }))
+      .filter((l) => l.source > 0 && l.target > 0 && l.source !== l.target);
   }, [network.links]);
 
   const nodeMap = useMemo(() => {
@@ -205,73 +217,6 @@ export function GameNetwork({ network }: Props) {
     for (const n of nodes) m.set(n.appid, n);
     return m;
   }, [nodes]);
-
-  const genreGroups = useMemo(() => {
-    const m = new Map<string, { appid: number; name: string }[]>();
-    for (const n of nodes) {
-      const g = firstGenre(n.genres);
-      if (!m.has(g)) m.set(g, []);
-      m.get(g)!.push({ appid: n.appid, name: n.name });
-    }
-    return m;
-  }, [nodes]);
-
-  const genreLinks = useMemo(() => {
-    const genreLinks: { source: string; target: string; strength: number }[] = [];
-    const pairMap = new Map<string, number>();
-
-    for (const l of links) {
-      const sn = nodeMap.get(l.source);
-      const tn = nodeMap.get(l.target);
-      if (!sn || !tn) continue;
-      const sg = firstGenre(sn.genres);
-      const tg = firstGenre(tn.genres);
-      if (sg === tg) continue; // intra-genre, skip
-      const key = sg < tg ? `${sg}|${tg}` : `${tg}|${sg}`;
-      pairMap.set(key, (pairMap.get(key) || 0) + l.strength);
-    }
-
-    for (const [key, strength] of pairMap) {
-      const [source, target] = key.split("|");
-      genreLinks.push({ source, target, strength });
-    }
-    return genreLinks;
-  }, [links, nodeMap]);
-
-  const genreNames = useMemo(() => {
-    return [...genreGroups.keys()].sort((a, b) => (genreGroups.get(b)?.length ?? 0) - (genreGroups.get(a)?.length ?? 0));
-  }, [genreGroups]);
-
-  const genreBubbles = useMemo(() => {
-    const maxGames = Math.max(...genreNames.map((g) => genreGroups.get(g)?.length ?? 0), 1);
-    return genreNames.slice(0, BUBBLE_SLOTS.length).map((name, i) => {
-      const games = genreGroups.get(name) || [];
-      const connections = genreLinks
-        .filter((l) => l.source === name || l.target === name)
-        .reduce((s, l) => s + l.strength, 0);
-      const slot = BUBBLE_SLOTS[i] || BUBBLE_SLOTS[BUBBLE_SLOTS.length - 1];
-      return {
-        name,
-        x: slot.x,
-        y: slot.y,
-        r: 24 + Math.sqrt(games.length / maxGames) * 38 + Math.min(connections, 12) * 0.55,
-        color: genreColor(name),
-        games,
-        connections,
-      };
-    });
-  }, [genreNames, genreGroups, genreLinks]);
-
-  const genreCenterMap = useMemo(() => {
-    const m = new Map<string, { x: number; y: number; r: number }>();
-    for (const bubble of genreBubbles) m.set(bubble.name, { x: bubble.x, y: bubble.y, r: bubble.r });
-    return m;
-  }, [genreBubbles]);
-
-  const selectedGames = useMemo(() => {
-    if (!selectedGenre) return [];
-    return genreGroups.get(selectedGenre) || [];
-  }, [selectedGenre, genreGroups]);
 
   const gameDegree = useMemo(() => {
     const degree = new Map<number, number>();
@@ -282,53 +227,88 @@ export function GameNetwork({ network }: Props) {
     return degree;
   }, [links]);
 
-  const gameBubbles = useMemo(() => {
-    const sorted = [...selectedGames].sort((a, b) => (gameDegree.get(b.appid) || 0) - (gameDegree.get(a.appid) || 0));
-    const maxDegree = Math.max(...sorted.map((g) => gameDegree.get(g.appid) || 1), 1);
-    return sorted.slice(0, 22).map((game, i) => {
-      const angle = i === 0 ? 0 : (i - 1) * 2.399963;
-      const distance = i === 0 ? 0 : 34 + Math.sqrt(i) * 25;
+  const genreNames = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const node of nodes) {
+      const genre = firstGenre(node.genres);
+      counts.set(genre, (counts.get(genre) || 0) + 1);
+    }
+    return [...counts.keys()].sort((a, b) => (counts.get(b) || 0) - (counts.get(a) || 0));
+  }, [nodes]);
+
+  const communityCenters = useMemo(() => {
+    const centers = new Map<string, { x: number; y: number }>();
+    const radius = Math.min(W, H) * 0.26;
+    genreNames.forEach((genre, i) => {
+      const angle = genreNames.length === 1 ? 0 : (i / genreNames.length) * Math.PI * 2 - Math.PI / 2;
+      centers.set(genre, {
+        x: W / 2 + Math.cos(angle) * radius,
+        y: H / 2 + Math.sin(angle) * radius * 0.82,
+      });
+    });
+    return centers;
+  }, [genreNames]);
+
+  const graph = useMemo(() => {
+    const maxDegree = Math.max(...nodes.map((n) => gameDegree.get(n.appid) || 0), 1);
+    const simNodes: ForceNode[] = nodes.map((node, i) => {
+      const genre = firstGenre(node.genres);
+      const angle = (i / Math.max(nodes.length, 1)) * Math.PI * 2;
       return {
-        ...game,
-        x: W / 2 + Math.cos(angle) * distance,
-        y: H / 2 + Math.sin(angle) * distance * 0.72,
-        r: 18 + Math.sqrt((gameDegree.get(game.appid) || 1) / maxDegree) * 24,
-        degree: gameDegree.get(game.appid) || 0,
+        id: node.appid,
+        appid: node.appid,
+        name: node.name,
+        genres: node.genres,
+        genre,
+        degree: gameDegree.get(node.appid) || 0,
+        r: 10 + Math.sqrt((gameDegree.get(node.appid) || 1) / maxDegree) * 18,
+        x: W / 2 + Math.cos(angle) * 120,
+        y: H / 2 + Math.sin(angle) * 82,
       };
     });
-  }, [selectedGames, gameDegree]);
+    const simLinks: ForceGraphLink[] = links
+      .filter((link) => nodeMap.has(link.source) && nodeMap.has(link.target))
+      .map((link) => ({
+        source: String(link.source),
+        target: String(link.target),
+        strength: link.strength,
+      }));
 
-  const gameCenterMap = useMemo(() => {
-    const m = new Map<number, { x: number; y: number; r: number }>();
-    for (const bubble of gameBubbles) m.set(bubble.appid, { x: bubble.x, y: bubble.y, r: bubble.r });
-    return m;
-  }, [gameBubbles]);
+    const simulation = forceSimulation<ForceNode>(simNodes)
+      .force("link", forceLink<ForceNode, ForceGraphLink>(simLinks)
+        .id((d) => String(d.id))
+        .distance((l) => 118 - Math.min(l.strength, 10) * 6)
+        .strength((l) => 0.08 + Math.min(l.strength, 10) * 0.025))
+      .force("charge", forceManyBody<ForceNode>().strength((d) => -110 - d.r * 4))
+      .force("collide", forceCollide<ForceNode>().radius((d) => d.r + 7).iterations(3))
+      .force("x", forceX<ForceNode>((d) => communityCenters.get(d.genre)?.x ?? W / 2).strength(0.08))
+      .force("y", forceY<ForceNode>((d) => communityCenters.get(d.genre)?.y ?? H / 2).strength(0.08))
+      .force("center", forceCenter(W / 2, H / 2))
+      .stop();
 
-  const focusedLinks = useMemo(() => {
-    if (!selectedGenre) return [];
-    const gameIds = new Set(selectedGames.map((game) => game.appid));
-    return links.filter((l) => gameIds.has(l.source) && gameIds.has(l.target));
-  }, [selectedGenre, selectedGames, links]);
+    for (let i = 0; i < 180; i++) simulation.tick();
 
-  const handleGenreClick = useCallback((genre: string) => {
-    setSelectedGenre((g) => g === genre ? null : genre);
-  }, []);
+    for (const node of simNodes) {
+      node.x = Math.max(node.r + 12, Math.min(W - node.r - 12, node.x ?? W / 2));
+      node.y = Math.max(node.r + 12, Math.min(H - node.r - 12, node.y ?? H / 2));
+    }
+
+    return {
+      nodes: simNodes.sort((a, b) => a.r - b.r),
+      links: simLinks.map((link) => ({
+        source: link.source as ForceNode,
+        target: link.target as ForceNode,
+        strength: link.strength,
+      })) satisfies PositionedLink[],
+    };
+  }, [nodes, links, nodeMap, gameDegree, communityCenters]);
 
   if (!network.nodes.length) return <div className="viz-card"><h3>{t("gameNetwork")}</h3><p className="viz-subtitle">{t("waitingPolls")}</p></div>;
 
   return (
     <div className="viz-card game-network-card">
       <h3>{t("gameNetwork")}</h3>
-      <p className="viz-subtitle">
-        {selectedGenre ? (
-          <>
-            <button className="treemap-back" onClick={() => setSelectedGenre(null)}>{t("back")}</button>
-            {selectedGenre} - {selectedGames.length} {t("clusterGames")}
-          </>
-        ) : (
-          t("networkSubtitle")
-        )}
-      </p>
+      <p className="viz-subtitle">{t("networkSubtitle")}</p>
 
       <div className="network-bubble-stage">
         <svg viewBox={`0 0 ${W} ${H}`} className="network-svg">
@@ -342,88 +322,46 @@ export function GameNetwork({ network }: Props) {
             </filter>
           </defs>
 
-          {!selectedGenre && (
-            <>
-              {genreLinks.map((l, i) => {
-                const source = genreCenterMap.get(l.source);
-                const target = genreCenterMap.get(l.target);
-                if (!source || !target) return null;
-                return (
-                  <line
-                    key={`${l.source}-${l.target}-${i}`}
-                    x1={source.x}
-                    y1={source.y}
-                    x2={target.x}
-                    y2={target.y}
-                    stroke="#67e8f9"
-                    strokeWidth={Math.min(1 + l.strength * 0.55, 5)}
-                    opacity={0.18}
-                  />
-                );
-              })}
-              {genreBubbles.map((bubble) => (
-                <g key={bubble.name} className="network-bubble" onClick={() => handleGenreClick(bubble.name)}>
-                  <circle cx={bubble.x} cy={bubble.y} r={bubble.r + 10} fill={bubble.color} opacity="0.07" />
-                  <circle cx={bubble.x} cy={bubble.y} r={bubble.r} fill={bubble.color} opacity="0.26" stroke={bubble.color} strokeWidth="1.5" filter="url(#networkGlow)" />
-                  <text x={bubble.x} y={bubble.y - 4} textAnchor="middle" fill="#f8fbff" fontSize="12" fontWeight="700">
-                    {truncate(bubble.name, bubble.r > 48 ? 16 : 9)}
+          {graph.links.map((link, i) => (
+            <line
+              key={`${link.source.appid}-${link.target.appid}-${i}`}
+              className="network-link"
+              x1={link.source.x ?? W / 2}
+              y1={link.source.y ?? H / 2}
+              x2={link.target.x ?? W / 2}
+              y2={link.target.y ?? H / 2}
+              strokeWidth={Math.min(1 + link.strength * 0.45, 4)}
+            />
+          ))}
+          {graph.nodes.map((node) => {
+            const x = node.x ?? W / 2;
+            const y = node.y ?? H / 2;
+            return (
+              <g key={node.appid} className="network-bubble">
+                <circle cx={x} cy={y} r={node.r + 8} fill={genreColor(node.genre)} opacity="0.07" />
+                <circle cx={x} cy={y} r={node.r} fill={genreColor(node.genre)} opacity="0.34" stroke={genreColor(node.genre)} strokeWidth="1.4" filter="url(#networkGlow)" />
+                <text x={x} y={y - 3} textAnchor="middle" fill="#f8fbff" fontSize={node.r > 22 ? "10" : "9"} fontWeight="700">
+                  {truncate(node.name, node.r > 24 ? 13 : 8)}
+                </text>
+                {node.degree > 0 && (
+                  <text x={x} y={y + 12} textAnchor="middle" fill="#96a1b5" fontSize="9">
+                    {node.degree} {t("links")}
                   </text>
-                  <text x={bubble.x} y={bubble.y + 12} textAnchor="middle" fill="#96a1b5" fontSize="10">
-                    {bubble.games.length} {t("games")} · {bubble.connections} {t("links")}
-                  </text>
-                </g>
-              ))}
-            </>
-          )}
-
-          {selectedGenre && (
-            <>
-              {focusedLinks.map((l, i) => {
-                const source = gameCenterMap.get(l.source);
-                const target = gameCenterMap.get(l.target);
-                if (!source || !target) return null;
-                return (
-                  <line
-                    key={`${l.source}-${l.target}-${i}`}
-                    x1={source.x}
-                    y1={source.y}
-                    x2={target.x}
-                    y2={target.y}
-                    stroke={genreColor(selectedGenre)}
-                    strokeWidth={Math.min(1 + l.strength * 0.45, 4)}
-                    opacity={0.2}
-                  />
-                );
-              })}
-              {gameBubbles.map((bubble) => (
-                <g key={bubble.appid} className="network-bubble">
-                  <circle cx={bubble.x} cy={bubble.y} r={bubble.r + 8} fill={genreColor(selectedGenre)} opacity="0.06" />
-                  <circle cx={bubble.x} cy={bubble.y} r={bubble.r} fill={genreColor(selectedGenre)} opacity="0.3" stroke={genreColor(selectedGenre)} strokeWidth="1.4" />
-                  <text x={bubble.x} y={bubble.y - 3} textAnchor="middle" fill="#f8fbff" fontSize="10" fontWeight="700">
-                    {truncate(bubble.name, bubble.r > 35 ? 13 : 8)}
-                  </text>
-                  {bubble.degree > 0 && (
-                    <text x={bubble.x} y={bubble.y + 12} textAnchor="middle" fill="#96a1b5" fontSize="9">
-                      {bubble.degree} {t("links")}
-                    </text>
-                  )}
-                </g>
-              ))}
-            </>
-          )}
+                )}
+              </g>
+            );
+          })}
         </svg>
       </div>
 
-      {!selectedGenre && (
-        <div className="treemap-legend network-legend">
-          {genreBubbles.slice(0, 8).map((g) => (
-            <span key={g.name} className="treemap-legend-item" onClick={() => handleGenreClick(g.name)}>
-              <span className="treemap-legend-dot" style={{ background: g.color }} />
-              {g.name}
-            </span>
-          ))}
-        </div>
-      )}
+      <div className="treemap-legend network-legend">
+        {genreNames.slice(0, 8).map((genre) => (
+          <span key={genre} className="treemap-legend-item">
+            <span className="treemap-legend-dot" style={{ background: genreColor(genre) }} />
+            {genre}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

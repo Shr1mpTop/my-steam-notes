@@ -8,12 +8,16 @@ interface Props {
 }
 
 const LEVELS = [
-  { max: 0, color: "#151b26", label: "No activity" },
-  { max: 60, color: "#164e63", label: "< 1h" },
-  { max: 180, color: "#0e7490", label: "1–3h" },
-  { max: 300, color: "#22d3ee", label: "3–5h" },
-  { max: Infinity, color: "#a78bfa", label: "> 5h" },
+  { max: 0, color: "#17130d", label: "No activity" },
+  { max: 30, color: "#fde047", label: "< 30m" },
+  { max: 60, color: "#facc15", label: "30m–1h" },
+  { max: 180, color: "#fb923c", label: "1–3h" },
+  { max: 300, color: "#f97316", label: "3–5h" },
+  { max: 480, color: "#ef4444", label: "5–8h" },
+  { max: Infinity, color: "#7f1d1d", label: "> 8h" },
 ];
+
+const ACTIVE_LEVELS = LEVELS.filter((level) => level.max > 0);
 
 function getColor(minutes: number) {
   for (const l of LEVELS) {
@@ -109,7 +113,7 @@ export function ContributionMap({ heatmap, updatedAt }: Props) {
 
       <div className="heatmap-legend">
         <span>{t("less")}</span>
-        {LEVELS.map((l, i) => (
+        {ACTIVE_LEVELS.map((l, i) => (
           <div key={i} className="heatmap-cell" style={{ background: l.color }} title={l.label} />
         ))}
         <span>{t("more")}</span>

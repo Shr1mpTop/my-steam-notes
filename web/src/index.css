@@ -1593,6 +1593,68 @@ button, input, select, textarea { font: inherit; }
   padding-bottom: 56%;
 }
 
+.treemap-toolbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: -4px 0 12px;
+}
+
+.treemap-mode-switch {
+  position: relative;
+  width: 54px;
+  height: 28px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 10px 24px rgba(0, 0, 0, 0.18);
+  transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.treemap-mode-switch::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background:
+    radial-gradient(circle at 35% 30%, #fff, transparent 22%),
+    linear-gradient(135deg, #f8fafc, #a8b0bc);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    0 5px 12px rgba(0, 0, 0, 0.38);
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.treemap-mode-switch:hover {
+  border-color: rgba(255, 255, 255, 0.32);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+.treemap-mode-switch.is-primary {
+  background: rgba(2, 6, 12, 0.62);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.treemap-mode-switch.is-primary::before {
+  transform: translateX(26px);
+  background:
+    radial-gradient(circle at 35% 30%, #fff, transparent 22%),
+    linear-gradient(135deg, #ffffff, #d6d9df);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.18) inset,
+    0 5px 12px rgba(0, 0, 0, 0.38);
+}
+
 .treemap-field::before {
   content: "";
   position: absolute;
@@ -1973,7 +2035,7 @@ button, input, select, textarea { font: inherit; }
 
 .th-cell,
 .heatmap-cell {
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.045);
   border-radius: 3px;
   cursor: pointer;
   transition: transform 0.1s ease, outline-color 0.1s ease;
@@ -1986,8 +2048,15 @@ button, input, select, textarea { font: inherit; }
 
 .th-cell:hover,
 .heatmap-cell:hover {
-  outline: 1px solid rgba(103, 232, 249, 0.7);
   transform: translateY(-1px);
+}
+
+.th-cell:hover {
+  outline: 1px solid rgba(103, 232, 249, 0.7);
+}
+
+.heatmap-cell:hover {
+  outline: 1px solid rgba(251, 146, 60, 0.8);
 }
 
 .th-labels-x {
@@ -2000,6 +2069,92 @@ button, input, select, textarea { font: inherit; }
   font-family: var(--mono);
   font-size: 9px;
   text-align: center;
+}
+
+.time-tooltip {
+  position: fixed;
+  z-index: 2000;
+  width: min(280px, calc(100vw - 24px));
+  padding: 12px;
+  border: 1px solid rgba(103, 232, 249, 0.28);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(19, 28, 42, 0.96), rgba(8, 12, 20, 0.96)),
+    rgba(8, 12, 20, 0.96);
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.38),
+    0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  color: var(--text);
+  pointer-events: none;
+  backdrop-filter: blur(18px);
+}
+
+.time-tooltip-title {
+  margin-bottom: 8px;
+  color: #f8fbff;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.time-tooltip-row,
+.time-tooltip-game {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.time-tooltip-row {
+  padding: 5px 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.time-tooltip-row strong,
+.time-tooltip-game strong {
+  flex: 0 0 auto;
+  color: #e8f8ff;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.time-tooltip-section {
+  margin-top: 8px;
+  padding-top: 9px;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.time-tooltip-games {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.time-tooltip-game {
+  color: var(--text);
+  font-size: 12px;
+}
+
+.time-tooltip-game span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.time-tooltip-empty {
+  color: var(--text-dim);
+  font-size: 12px;
 }
 
 .weekday-bars {
@@ -2038,6 +2193,79 @@ button, input, select, textarea { font: inherit; }
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+.gaming-clock-wrap {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.clock-area {
+  pointer-events: none;
+}
+
+.clock-area--average {
+  fill: rgba(103, 232, 249, 0.16);
+}
+
+.clock-area--recent {
+  fill: rgba(245, 158, 11, 0.14);
+}
+
+.clock-line {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.clock-line--average {
+  stroke: #67e8f9;
+  stroke-width: 2;
+}
+
+.clock-line--recent {
+  stroke: #f59e0b;
+  stroke-width: 2.5;
+}
+
+.clock-dot--average {
+  fill: #67e8f9;
+}
+
+.clock-dot--recent {
+  fill: #f59e0b;
+}
+
+.gaming-clock-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.clock-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.clock-legend-line {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+}
+
+.clock-legend-line--average {
+  background: #67e8f9;
+}
+
+.clock-legend-line--recent {
+  background: #f59e0b;
 }
 
 .weather-card {
@@ -2284,11 +2512,12 @@ button, input, select, textarea { font: inherit; }
   position: relative;
   min-height: 340px;
   background:
-    radial-gradient(circle at 50% 50%, rgba(103, 232, 249, 0.07), transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(103, 232, 249, 0.06), transparent 38%),
+    radial-gradient(circle at 16% 18%, rgba(245, 158, 11, 0.08), transparent 26%),
     linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px),
     rgba(5, 8, 13, 0.48);
-  background-size: auto, 32px 32px, 32px 32px, auto;
+  background-size: auto, auto, 32px 32px, 32px 32px, auto;
 }
 
 .network-bubble-stage .network-svg {
@@ -2297,7 +2526,7 @@ button, input, select, textarea { font: inherit; }
 }
 
 .network-bubble {
-  cursor: pointer;
+  cursor: default;
   transition: opacity 0.18s ease;
 }
 
@@ -2308,6 +2537,12 @@ button, input, select, textarea { font: inherit; }
 
 .network-bubble:hover {
   opacity: 0.82;
+}
+
+.network-link {
+  stroke: rgba(148, 163, 184, 0.62);
+  opacity: 0.24;
+  stroke-linecap: round;
 }
 
 .network-legend {

@@ -6,6 +6,8 @@ interface Props {
   games: GameCloudItem[];
 }
 
+type GenreMode = "all" | "primary";
+
 const GENRE_COLORS: Record<string, string> = {
   Action: "#fb7185",
   "Free To Play": "#f59e0b",
@@ -155,10 +157,15 @@ interface GenreGroup {
   name: string; color: string; totalHours: number; games: GameCloudItem[];
 }
 
-function groupByGenre(games: GameCloudItem[]): GenreGroup[] {
+function genresForGame(game: GameCloudItem, mode: GenreMode): string[] {
+  const genres = game.genres?.length ? game.genres : ["Other"];
+  return mode === "primary" ? [genres[0]] : genres;
+}
+
+function groupByGenre(games: GameCloudItem[], mode: GenreMode): GenreGroup[] {
   const m = new Map<string, GameCloudItem[]>();
   for (const g of games) {
-    for (const genre of (g.genres?.length ? g.genres : ["Other"])) {
+    for (const genre of genresForGame(g, mode)) {
       if (!m.has(genre)) m.set(genre, []);
       m.get(genre)!.push(g);
     }
@@ -246,11 +253,12 @@ function TreemapGameTile({ tile, baseW, baseH, className = "", showName, showHou
 
 export function GameCloud({ games }: Props) {
   const { t } = useLocale();
+  const [genreMode, setGenreMode] = useState<GenreMode>("all");
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ x: number; y: number; name: string; hours: number } | null>(null);
   const fieldRef = useRef<HTMLDivElement>(null);
 
-  const genres = useMemo(() => groupByGenre(games), [games]);
+  const genres = useMemo(() => groupByGenre(games, genreMode), [games, genreMode]);
 
   // Overview: genre-level layout
   const genreLayouts = useMemo(() =>
@@ -304,6 +312,12 @@ export function GameCloud({ games }: Props) {
     setTooltip(null);
   }, []);
 
+  const handleGenreModeChange = useCallback((mode: GenreMode) => {
+    setGenreMode(mode);
+    setSelectedGenre(null);
+    setTooltip(null);
+  }, []);
+
   const handleHover = useCallback((e: React.MouseEvent, name: string, hours: number) => {
     if (!fieldRef.current) return;
     const cr = fieldRef.current.getBoundingClientRect();
@@ -332,6 +346,16 @@ export function GameCloud({ games }: Props) {
           `${games.length} ${t("games")} - ${t("gameCloudSubtitle")}`
         )}
       </p>
+      <div className="treemap-toolbar">
+        <button
+          type="button"
+          className={`treemap-mode-switch ${genreMode === "primary" ? "is-primary" : ""}`}
+          aria-label={`${t("genreMode")}: ${genreMode === "all" ? t("genreModeAll") : t("genreModePrimary")}`}
+          aria-pressed={genreMode === "primary"}
+          title={`${t("genreMode")}: ${genreMode === "all" ? t("genreModeAll") : t("genreModePrimary")}`}
+          onClick={() => handleGenreModeChange(genreMode === "all" ? "primary" : "all")}
+        />
+      </div>
 
       <div className="treemap-container">
         <div ref={fieldRef} className="treemap-field">

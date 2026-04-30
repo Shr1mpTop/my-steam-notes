@@ -58,6 +58,10 @@ export interface TimeHeatmapItem {
   dow: number;
   hour: number;
   count: number;
+  recent_count?: number;
+  game_minutes?: number;
+  online_minutes?: number;
+  games?: Record<string, number>;
 }
 
 export interface ParetoItem {
