@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-05-01T01:50:33.957056+08:00",
+  "updated_at": "2026-05-02T01:41:14.976188+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
-    "online": false,
-    "currently_playing": "",
+    "online": true,
+    "currently_playing": "Mount & Blade II: Bannerlord",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
   },
   "milestone": {
-    "total_hours": 5357.3,
-    "movies": 2678,
-    "books": 892,
-    "walking_km": 26786
+    "total_hours": 5366.4,
+    "movies": 2683,
+    "books": 894,
+    "walking_km": 26832
   },
   "game_cloud": [
     {
@@ -28,9 +28,9 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 528.9,
+      "playtime_hours": 530.5,
       "img_icon_url": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
-      "rtime_last_played": 1777527806,
+      "rtime_last_played": 1777639959,
       "genres": [
         "Action",
         "Adventure",
@@ -52,9 +52,9 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 268.4,
+      "playtime_hours": 275.8,
       "img_icon_url": "896d5f4214e4e185a20af51b46d9dea2e6f4aaad",
-      "rtime_last_played": 1777534026,
+      "rtime_last_played": 1777656449,
       "genres": [
         "Action",
         "Indie",
@@ -1389,22 +1389,22 @@
       "playtime_forever_hours": 28.5
     },
     {
+      "appid": 261550,
+      "name": "Mount & Blade II: Bannerlord",
+      "playtime_2weeks_hours": 11.7,
+      "playtime_forever_hours": 275.8
+    },
+    {
       "appid": 1876880,
       "name": "Primitive Society Simulator",
       "playtime_2weeks_hours": 6.3,
       "playtime_forever_hours": 6.3
     },
     {
-      "appid": 261550,
-      "name": "Mount & Blade II: Bannerlord",
-      "playtime_2weeks_hours": 4.2,
-      "playtime_forever_hours": 268.4
-    },
-    {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_2weeks_hours": 4.1,
-      "playtime_forever_hours": 528.9
+      "playtime_2weeks_hours": 5.7,
+      "playtime_forever_hours": 530.5
     },
     {
       "appid": 730,
@@ -1438,10 +1438,18 @@
     }
   ],
   "heatmap": {
-    "2026-05-01": {
-      "online_minutes": 19,
+    "2026-05-02": {
+      "online_minutes": 120,
       "games": {
-        "The Farmer Was Replaced": 19
+        "Mount & Blade II: Bannerlord": 120
+      }
+    },
+    "2026-05-01": {
+      "online_minutes": 445,
+      "games": {
+        "The Farmer Was Replaced": 19,
+        "Apex Legends": 98,
+        "Mount & Blade II: Bannerlord": 328
       }
     },
     "2026-04-30": {
@@ -1753,7 +1761,7 @@
       "dow": 3,
       "hour": 13,
       "count": 55.0,
-      "recent_count": 55.0,
+      "recent_count": 0.0,
       "game_minutes": 55.0,
       "online_minutes": 0.0,
       "games": {
@@ -1765,7 +1773,7 @@
       "dow": 3,
       "hour": 14,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -1776,7 +1784,7 @@
       "dow": 3,
       "hour": 15,
       "count": 39.1,
-      "recent_count": 39.1,
+      "recent_count": 0.0,
       "game_minutes": 27.9,
       "online_minutes": 32.1,
       "games": {
@@ -1787,7 +1795,7 @@
       "dow": 3,
       "hour": 16,
       "count": 21.0,
-      "recent_count": 21.0,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 60.0,
       "games": {}
@@ -1796,7 +1804,7 @@
       "dow": 3,
       "hour": 17,
       "count": 5.3,
-      "recent_count": 5.3,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 15.1,
       "games": {}
@@ -1805,7 +1813,7 @@
       "dow": 3,
       "hour": 18,
       "count": 14.0,
-      "recent_count": 14.0,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 39.9,
       "games": {}
@@ -1814,7 +1822,7 @@
       "dow": 3,
       "hour": 19,
       "count": 21.0,
-      "recent_count": 21.0,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 60.0,
       "games": {}
@@ -1823,7 +1831,7 @@
       "dow": 3,
       "hour": 20,
       "count": 21.0,
-      "recent_count": 21.0,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 60.0,
       "games": {}
@@ -1832,7 +1840,7 @@
       "dow": 3,
       "hour": 21,
       "count": 21.0,
-      "recent_count": 21.0,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 60.0,
       "games": {}
@@ -1841,7 +1849,7 @@
       "dow": 3,
       "hour": 22,
       "count": 21.0,
-      "recent_count": 21.0,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 60.0,
       "games": {}
@@ -1850,7 +1858,7 @@
       "dow": 3,
       "hour": 23,
       "count": 21.0,
-      "recent_count": 21.0,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 60.0,
       "games": {}
@@ -1859,7 +1867,7 @@
       "dow": 4,
       "hour": 0,
       "count": 32.8,
-      "recent_count": 32.8,
+      "recent_count": 0.0,
       "game_minutes": 18.2,
       "online_minutes": 41.8,
       "games": {
@@ -1870,16 +1878,136 @@
       "dow": 4,
       "hour": 1,
       "count": 7.0,
-      "recent_count": 7.0,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 20.0,
       "games": {
         "The Farmer Was Replaced": 0.0
       }
+    },
+    {
+      "dow": 4,
+      "hour": 15,
+      "count": 19.2,
+      "recent_count": 19.2,
+      "game_minutes": 0.0,
+      "online_minutes": 55.0,
+      "games": {}
+    },
+    {
+      "dow": 4,
+      "hour": 16,
+      "count": 50.2,
+      "recent_count": 50.2,
+      "game_minutes": 45.0,
+      "online_minutes": 15.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 45.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 17,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 18,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 19,
+      "count": 56.8,
+      "recent_count": 56.8,
+      "game_minutes": 55.0,
+      "online_minutes": 5.0,
+      "games": {
+        "Apex Legends": 40.0,
+        "Mount & Blade II: Bannerlord": 15.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 20,
+      "count": 56.8,
+      "recent_count": 56.8,
+      "game_minutes": 55.0,
+      "online_minutes": 5.0,
+      "games": {
+        "Apex Legends": 55.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 21,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 59.9,
+      "online_minutes": 0.1,
+      "games": {
+        "Mount & Blade II: Bannerlord": 59.9
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 22,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 23,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 5,
+      "hour": 0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 5,
+      "hour": 1,
+      "count": 41.3,
+      "recent_count": 41.3,
+      "game_minutes": 41.3,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 41.3
+      }
     }
   ],
   "platform": {
-    "Windows": 5335.0,
+    "Windows": 5344.1,
     "Mac": 12.0,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -1888,13 +2016,13 @@
     {
       "name": "Counter-Strike 2",
       "hours": 1857.8,
-      "cumulative_pct": 34.7,
+      "cumulative_pct": 34.6,
       "rank": 1
     },
     {
       "name": "Apex Legends",
-      "hours": 528.9,
-      "cumulative_pct": 44.6,
+      "hours": 530.5,
+      "cumulative_pct": 44.5,
       "rank": 2
     },
     {
@@ -1905,7 +2033,7 @@
     },
     {
       "name": "Mount & Blade II: Bannerlord",
-      "hours": 268.4,
+      "hours": 275.8,
       "cumulative_pct": 56.5,
       "rank": 4
     },
@@ -1918,7 +2046,7 @@
     {
       "name": "Kingdom Come: Deliverance II",
       "hours": 159.4,
-      "cumulative_pct": 63.3,
+      "cumulative_pct": 63.4,
       "rank": 6
     },
     {
@@ -1930,7 +2058,7 @@
     {
       "name": "Grand Theft Auto V Legacy",
       "hours": 121.7,
-      "cumulative_pct": 68.4,
+      "cumulative_pct": 68.5,
       "rank": 8
     },
     {
@@ -1948,7 +2076,7 @@
     {
       "name": "Wartales",
       "hours": 89.2,
-      "cumulative_pct": 74.0,
+      "cumulative_pct": 74.1,
       "rank": 11
     },
     {
@@ -1966,7 +2094,7 @@
     {
       "name": "Mindustry",
       "hours": 54.1,
-      "cumulative_pct": 77.8,
+      "cumulative_pct": 77.9,
       "rank": 14
     },
     {
@@ -1978,7 +2106,7 @@
     {
       "name": "Warhammer 40,000: Rogue Trader",
       "hours": 51.1,
-      "cumulative_pct": 79.7,
+      "cumulative_pct": 79.8,
       "rank": 16
     },
     {
@@ -2014,7 +2142,7 @@
     {
       "name": "Sintopia",
       "hours": 41.5,
-      "cumulative_pct": 84.9,
+      "cumulative_pct": 85.0,
       "rank": 22
     },
     {
@@ -2026,7 +2154,7 @@
     {
       "name": "Grand Theft Auto IV: The Complete Edition",
       "hours": 33.3,
-      "cumulative_pct": 86.2,
+      "cumulative_pct": 86.3,
       "rank": 24
     },
     {
@@ -2050,7 +2178,7 @@
     {
       "name": "Battle Brothers",
       "hours": 28.5,
-      "cumulative_pct": 88.4,
+      "cumulative_pct": 88.5,
       "rank": 28
     },
     {
@@ -2068,7 +2196,7 @@
     {
       "name": "Noita",
       "hours": 25.8,
-      "cumulative_pct": 89.9,
+      "cumulative_pct": 90.0,
       "rank": 31
     },
     {
@@ -2158,7 +2286,7 @@
     {
       "name": "Don't Starve Together",
       "hours": 10.5,
-      "cumulative_pct": 94.6,
+      "cumulative_pct": 94.7,
       "rank": 46
     },
     {
@@ -2242,7 +2370,7 @@
     {
       "name": "Mount & Blade: With Fire and Sword",
       "hours": 6.8,
-      "cumulative_pct": 96.6,
+      "cumulative_pct": 96.7,
       "rank": 60
     },
     {
@@ -2769,11 +2897,11 @@
     },
     {
       "day": "Fri",
-      "minutes": 19
+      "minutes": 445
     },
     {
       "day": "Sat",
-      "minutes": 0
+      "minutes": 120
     },
     {
       "day": "Sun",
@@ -2792,9 +2920,9 @@
       "minutes": 688
     },
     "longest_streak": {
-      "days": 4,
+      "days": 5,
       "start": "2026-04-28",
-      "end": "2026-05-01"
+      "end": "2026-05-02"
     }
   },
   "achievements": [
@@ -2815,7 +2943,7 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 528.9,
+      "playtime_hours": 530.5,
       "total": 12,
       "unlocked": 11,
       "pct": 92,
@@ -2875,7 +3003,7 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 268.4,
+      "playtime_hours": 275.8,
       "total": 50,
       "unlocked": 6,
       "pct": 12,
@@ -3346,11 +3474,6 @@
         "genres": []
       },
       {
-        "appid": 3240220,
-        "name": "Grand Theft Auto V Enhanced",
-        "genres": []
-      },
-      {
         "appid": 261550,
         "name": "Mount & Blade II: Bannerlord",
         "genres": [
@@ -3365,158 +3488,163 @@
         "appid": 1876880,
         "name": "Primitive Society Simulator",
         "genres": []
+      },
+      {
+        "appid": 3240220,
+        "name": "Grand Theft Auto V Enhanced",
+        "genres": []
       }
     ],
     "links": [
       {
         "source": 730,
         "target": 230190,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 730,
         "target": 365360,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 730,
         "target": 892970,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 730,
         "target": 3912710,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 230190,
         "target": 365360,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 230190,
         "target": 892970,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 230190,
         "target": 1172470,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 230190,
         "target": 2213700,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 230190,
         "target": 3912710,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 365360,
         "target": 892970,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 365360,
         "target": 3912710,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 892970,
         "target": 1172470,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 892970,
         "target": 2213700,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 892970,
         "target": 3912710,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 1172470,
         "target": 2213700,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 1172470,
         "target": 3912710,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 2213700,
         "target": 3912710,
-        "strength": 5
-      },
-      {
-        "source": 730,
-        "target": 3240220,
-        "strength": 4
-      },
-      {
-        "source": 230190,
-        "target": 3240220,
-        "strength": 4
-      },
-      {
-        "source": 365360,
-        "target": 3240220,
-        "strength": 4
-      },
-      {
-        "source": 892970,
-        "target": 3240220,
-        "strength": 4
-      },
-      {
-        "source": 1172470,
-        "target": 3240220,
-        "strength": 4
-      },
-      {
-        "source": 2213700,
-        "target": 3240220,
-        "strength": 4
-      },
-      {
-        "source": 3240220,
-        "target": 3912710,
-        "strength": 4
+        "strength": 6
       },
       {
         "source": 730,
         "target": 261550,
-        "strength": 3
+        "strength": 4
       },
       {
         "source": 730,
         "target": 1876880,
-        "strength": 3
+        "strength": 4
+      },
+      {
+        "source": 730,
+        "target": 3240220,
+        "strength": 4
+      },
+      {
+        "source": 230190,
+        "target": 261550,
+        "strength": 4
+      },
+      {
+        "source": 230190,
+        "target": 1876880,
+        "strength": 4
+      },
+      {
+        "source": 230190,
+        "target": 3240220,
+        "strength": 4
+      },
+      {
+        "source": 261550,
+        "target": 365360,
+        "strength": 4
+      },
+      {
+        "source": 261550,
+        "target": 892970,
+        "strength": 4
+      },
+      {
+        "source": 261550,
+        "target": 1172470,
+        "strength": 4
       }
     ]
   },
@@ -3524,37 +3652,37 @@
     {
       "genre": "Action",
       "games": 31,
-      "hours": 4200.7
+      "hours": 4209.8
     },
     {
       "genre": "Free To Play",
       "games": 4,
-      "hours": 2448.4
+      "hours": 2450.0
     },
     {
       "genre": "Adventure",
       "games": 22,
-      "hours": 2083.0
+      "hours": 2084.6
     },
     {
       "genre": "RPG",
       "games": 22,
-      "hours": 1697.3
+      "hours": 1704.8
     },
     {
       "genre": "Indie",
       "games": 24,
-      "hours": 1206.4
+      "hours": 1213.8
     },
     {
       "genre": "Strategy",
       "games": 21,
-      "hours": 995.9
+      "hours": 1003.4
     },
     {
       "genre": "Simulation",
       "games": 14,
-      "hours": 589.8
+      "hours": 597.2
     },
     {
       "genre": "Early Access",
@@ -3610,39 +3738,128 @@
         "hours": 28.5
       },
       {
+        "name": "Mount & Blade II: Bannerlord",
+        "hours": 11.7
+      },
+      {
         "name": "Primitive Society Simulator",
         "hours": 6.3
       },
       {
-        "name": "Mount & Blade II: Bannerlord",
-        "hours": 4.2
-      },
-      {
         "name": "Apex Legends",
-        "hours": 4.1
+        "hours": 5.7
       }
     ]
   },
   "weekly_digest": [
     {
       "dates": [
+        "2026-05-02",
         "2026-05-01",
         "2026-04-30",
         "2026-04-29",
         "2026-04-28"
       ],
-      "total_hours": 16.3,
+      "total_hours": 25.4,
       "games_count": 6,
       "top_games": [
-        "Primitive Society Simulator",
         "Mount & Blade II: Bannerlord",
+        "Primitive Society Simulator",
         "Sintopia",
-        "Counter-Strike 2",
-        "Apex Legends"
+        "Apex Legends",
+        "Counter-Strike 2"
       ]
     }
   ],
   "game_updates": [
+    {
+      "appid": 3241660,
+      "game_name": "R.E.P.O.",
+      "title": "Let's talk about the COSMETICS!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155571308",
+      "date": 1777640450,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hey hey semibots! And now, for the FINAL DEVLOG before the update launches on May 7th, we’re giving you a rundown of the cosmetics so that you’re well prepared and ready! Check out the Devlog here: If you prefer reading, here are the key takeaways: COSMETICS With the upcoming update, you’ll be able to find Cosmetic Boxes while out collecting valuables. They come in 4 different rarities; Common, Uncommon, Rare and Ultra Rare. Extract these boxes and Taxman will reward the entire team with individual Tax Tokens (1 token per Cosmetic Box). Insert these Tax Tokens in the new mysterious machines located in the shops and get rewarded with cosmetics! NEW COSMETIC MENU Just like before, you can color your semibot in any color you’d like, but now you can color each individual part of your semibot! ..."
+    },
+    {
+      "appid": 105600,
+      "game_name": "Terraria",
+      "title": "New Terraria State of the Game promises fixes for its most frustrating combat problems",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1831432155571156",
+      "date": 1777637574,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Content Update",
+      "contents": "A new <strong>Terraria</strong> State of the Game update is here, and developer Re-Logic is finally tackling some of the long-term combat frustrations that have been the bane of the <a href=\"https://www.pcgamesn.com/15-best-sandbox-games-pc\">sandbox game</a> for many years. Head of Business Strategy Ted 'Loki' Murphy comments that the Terraria 1.4.5 launch feels like \"just yesterday,\" but says the team has been \"head-down working away on post-launch support.\" With balancing at the center of the next Terraria patch, he believes this next overhaul won't be the last, but hopes that crossplay can move up the priority list soon. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/terraria/state-of-the-game-april-2026-combat-fixes\">New Terraria State of the Game promises fixes for its most frustrating combat problems</a> RELATED LINKS: <a href=\"https://www.pcgamesn.com/terraria/gem-staves-changes\">Terraria is getting new early game magic, as Re-Logic puts class balance under the microscope</a> <a href=\"https://www.pcgamesn.com/terraria/february-2026-state-of-game\">Terraria teases \"ver...</a>"
+    },
+    {
+      "appid": 105600,
+      "game_name": "Terraria",
+      "title": "Terraria State of the Game - April 2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155570207",
+      "date": 1777605066,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "{STEAM_CLAN_IMAGE}/3949769/80e58e939bf62e331ac0fa68e405305a119c1e18.png Greetings Terrarians! How in the world is it almost Summer already?! It feels like 1.4.5 launch was just yesterday... Our team has been head-down working away on post launch support for 1.4.5 and we really think everyone is going to enjoy what is coming soon in Terraria 1.4.5.7. You will get to see a bit more of that in the update sections below in this State of the Game. As it is balance focused, we are certain there will need to be some tweaks in what we assume will be 1.4.5.8 before we can hopefully - at long last - call 1.4.5 done and move on to the wonderful world of Crossplay. We received our Terraria Board Game copies as well, but we haven't really had time to dive in yet. There is so much more in the works for ..."
+    },
+    {
+      "appid": 1422450,
+      "game_name": "Deadlock",
+      "title": "Gameplay Update - 04-30-2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155569981",
+      "date": 1777592743,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "- Base health per boon reduced by 7- Vitality Investment bonus increased from 8/10/13/17/34/39/44/48/52/56% to 9/12/15/20/38/42/46/50/56/62%- Weapon Investments bonus rescaled from 7/9/13/20/49/60/80/95/115/135% to 9/12/15/18/46/55/70/85/100/115%- Reduced bullet damage growth by 10% for the following heroes: Bebop, Pocket, Vyper- Reduced bullet damage growth by 5% for the following heroes: Victor- Increased bullet damage growth by 10% for the following heroes: Mo & Krill, Apollo- Guardians, Base Guardians and Shrines now have 10% Bullet Resistance- Walkers Bullet Resistance increased from 15% to 25%- Medic Trooper missing health percent heal reduced from 14% to 12%- Medic Trooper fixed regen growth per minute reduced from 3 to 2- Getting knocked off bounce pads now sends you downwards quic..."
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "Counter-Strike 2 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155569878",
+      "date": 1777589209,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "\\CacheMap-wide clipping fixes and geometry polish.Fixed some spots where bomb would be unreachable when dropped.Fixed dynamic shadows breaking in some spots.Fixed some surface sound types.\\Fixed hand popping when counter-strafing with a grenade equipped.\\Limit aim punch to 90 degrees.Added secondary intersection trace for partially-occluded thirdperson weapons.Adjusted ground smoothing at locations where sloped ground surfaces join with step-height transitions.Fixed issue that caused defuse-cables from completely occluded players to also be occluded.Fixed 'FATAL ERROR: Failed to on-demand compile shader' affecting some older GPUs."
+    },
+    {
+      "appid": 322330,
+      "game_name": "Don't Starve Together",
+      "title": "The WX-78 Skill Spotlight Follow-up is Now Available!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155569732",
+      "date": 1777584853,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hey Everybody!Today we have a small Follow-Up Shadow Affinity update for the WX-78 Skill spotlight.Highlights Include:Added a new Chessmaster Circuit.Added the Shadow Servitor skill for WX-78.Replaced Field Survey II skill with Signal Booster skill, which boosts all drone ranges in general.Roto-Mapper now also functions similar to Ocuvigil, but only revealed to the owner.Additional behaviour and interactions for the Possessed Chassis.Login RewardsWe're also including some login rewards for you. Get the Ominous Exploiterator, Gloomy Auto-Grabber, Elegant Exploiterator, Opulent Auto-Grabber and Pengull Ice Cube just by logging into the game for a limited time. The drone skins will later be purchasable in-game. Until Next time! As mentioned in the WX-Spotlight update, we're moving on to the n..."
+    },
+    {
+      "appid": 494840,
+      "game_name": "UBOAT",
+      "title": "2026.1 Patch 14",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155569586",
+      "date": 1777580513,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Localization: - Russian localization update by Hard. Type IX: - Fix: Sometimes aircraft could be detected on the surface, while playing with Type IXC or Type IXC/40, even though U-boat was submerged below periscope depth and had no means of detecting them. - Fix: Diesel engines often continued to be animated after switching to electric motors. Ports: - Fix: If tide was very low, it could be problematic to leave or dock at Penang. Missions: - Fix: Missing translation on one objective in Join Monsoon Group mission. Crew: - Fix: Merchant skill no longer requires the officer to do trade personally, it's enough to have him among the crew. Graphics: - Fix (regression of 2026.1 Patch 13): Some face shapes were looking wro..."
+    },
+    {
+      "appid": 1466860,
+      "game_name": "Age of Empires IV: Anniversary Edition",
+      "title": "Age of Empires IV – Update 16.1.9737 and Yue Fei’s Legacy DLC Release Preview",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155569389",
+      "date": 1777575889,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "{STEAM_CLAN_IMAGE}/40285313/cc746ab9b3997c2a447e52b6df239e6671a628bc.png Big changes are right around the corner! In addition to Age of Empires IV: Yue Fei’s Legacy officially shipping and bringing the Jin Dynasty and a new 8-mission campaign with it on May 7th, we will also roll out some great quality of life features as well as balance changes, AI improvements, stability fixes, and more. With this update, we’re also introducing even more changes to the way Ranked Seasons and Events are managed to allow for more predictability in the future. Read on to learn more before jumping in game! This is just a small taste of what is coming in the latest update. For a more complete list, please visit our site and check out our blog. Happy Gaming! {STEAM_CLAN_IMAGE}/40285313/da022369a6c7a53b9fa55351..."
+    },
     {
       "appid": 1172470,
       "game_name": "Apex Legends",
@@ -3818,94 +4035,6 @@
       "feedlabel": "GamingOnLinux",
       "update_type": "Update",
       "contents": "A return of a classic, the popular Cache map has finally returned with the latest Counter-Strike 2 update that's out now. Nice to see more content arrive! Read the full article here: https://www.gamingonlinux.com/2026/04/cache-arrives-in-counter-strike-2-while-valve-continue-working-on-animgraph-2/ "
-    },
-    {
-      "appid": 730,
-      "game_name": "Counter-Strike 2",
-      "title": "The Return Of Cache",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155563524",
-      "date": 1777415065,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Today's update features the return of a classic. Welcome back, Cache! Cache veterans will feel right at home in familiar locations, while new players can quickly learn the ins and outs of a classic three lane map that rewards strategy and teamplay. You can find Cache in Casual, Competitive, Deathmatch and Retakes modes (for now). Don't forget to clear Forklift, and we'll see you on the server."
-    },
-    {
-      "appid": 730,
-      "game_name": "Counter-Strike 2",
-      "title": "Counter-Strike 2 Update",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155563523",
-      "date": 1777415058,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "\\CacheAdded Cache to Competitive, Casual, Deathmatch, and Retakes modes.Dust IIUncovered Mid Box (Xbox) to reveal a previously hidden jump spot. On purpose this time.OfficeEnabled collision on tarp on boxes used around CT spawn.StrongholdUpdated to the latest version from the Community Workshop (Update Notes)PoseidonUpdated to the latest version from the Community Workshop (Update Notes)\\Minor adjustments to viewmodel animations.Talon and Karambit knives are now held correctly while defusing.\\Minor mix changes and adjustments.Fixed issue where C4 equip sound was not getting interrupted by other equip sounds.Removed first-person death sound effect that played in the case of music kit death cue being inaudible.\\Shader fix for AO while using alpha test causing overly dark and chunky silhouett..."
-    },
-    {
-      "appid": 494840,
-      "game_name": "UBOAT",
-      "title": "2026.1 Patch 13",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770246297",
-      "date": 1777404235,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Localization: - Russian localization update by Hard. - Japanese localization update by かねのもうじゃ. - Fix: Resolved issue with cyrillic characters in settings and the port menu. Missions: - Fix: It was possible for the mission script to get stuck after sinking HMS Dorsetshire in Cape Town patrol. - Fix: In certain save files, the issue with not being able to pick campaign missions with Type IX could still remain. Ships: - Fix: Type VIIB NPC U-boats had a gap in their 3D geometry. Graphics: - Fix: Resolved an issue that could make character eyes pink after following a reproduction instruction. - Fix: Resolved one graphics-related CTD issue. General: - Fix: Port captain was disappearing after saving the game state and lo..."
-    },
-    {
-      "appid": 1527950,
-      "game_name": "Wartales",
-      "title": "Patch Notes v1.0.46890",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770244679",
-      "date": 1777367203,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "v1.0.46890 Major Fixed game crash after delivering a prisoner Fixed refugees in Tiltren that wasn’t moving or attacking in battle Fixed freeze at Brigga and Ormance champion’s battle turn Fixed crash at Jarl Sven battle beginning Removed Lombelle from the starter regions Fixed flee in Beast’s battle in Brigga Fixed crash when crossbowman transforms into werewolf Fixed crash during fishing tutorial in Lombelle Minor Fixed NPC’s missing outfit icons Fixed minors collisions issues in some cart escort battles Fixed Lombelle’s Bard staying in prison after being recruited Balanced chaos gain & loss in Fires in the Capital And more… Known Issues to help us solve those issues, be sure to send us more details alongisde your save file on FeatureUpVote Info needed on crashes happening in the taverns ..."
-    },
-    {
-      "appid": 3164500,
-      "game_name": "Schedule I",
-      "title": "Schedule I dev confirms they're working on gamepad support and Steam Deck certification",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/GamingOnLinux/1830797770244620",
-      "date": 1777365236,
-      "feedname": "GamingOnLinux",
-      "feedlabel": "GamingOnLinux",
-      "update_type": "Update",
-      "contents": "The popular drug sim Schedule I that's currently in Early Access is going to get easier to play exactly how you want it with an upcoming update. Read the full article here: https://www.gamingonlinux.com/2026/04/schedule-i-dev-confirms-theyre-working-on-gamepad-support-and-steam-deck-certification/ "
-    },
-    {
-      "appid": 2239150,
-      "game_name": "Thronefall",
-      "title": "Thronefall | Dev Update",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242495",
-      "date": 1777298347,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hey Queens and Kings,Thanks so much for all of the feedback so far from our player survey - this has been super valuable in prioritising some key areas we are looking to fix/implement into the game. The business side of acquiring an IP and setting up new development workflows always takes a little longer to complete than anyone would like 😅, but we are pleased to say that these parts are complete, and we are now focusing on getting development back underway! Thanks to all the amazing survey results, we have been able to identify some quality-of-life improvements to the game that we are working on first, ahead of looking into what exciting new content we could bring to Thronefall. We will be aiming for monthly updates moving forward, and we look forward to sharing more as soon as we can! Th..."
-    },
-    {
-      "appid": 440900,
-      "game_name": "Conan Exiles",
-      "title": "April Hotfix",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242232",
-      "date": 1777295072,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Greetings Exiles, We have a quick hotfix that re-enables character transfers on Steam.ChangesCharacter Transfers have been re-enabled on Steam.Players of Isle of Siptah and Exiled Lands alike can prepare for the upgrade to the Enhanced version by transferring their characters to different servers, including private servers, if they so choose. Read more about the Enhanced version and all the changes it will bring on our blog.Bug FixesAll thralls, pets and mounts followers that disappeared after doing a character transfer should be restored upon logging into the server."
-    },
-    {
-      "appid": 1366540,
-      "game_name": "Dyson Sphere Program",
-      "title": "Patch Notes V0.10.34.28524",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770241718",
-      "date": 1777282068,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Engineers still busy among the stars and reality alike — the blazing heat of summer is almost upon us, and Dyson Sphere Program continues to move forward at full speed.Here is today’s small update: \\Holo beacons can activate \"Dark Fog Beaconing\" function (in combat mode). Once activated, Dark Fog Hives will dispatch Relay stations to beacon's location. Note: The beacon must maintain power supply and visibility must be set to at least \"Local Planetary System\". We know, of course, that many of you are looking forward to the vehicle system. However, this is a special feature that runs through the entire game experience, and to some extent, it will change the rhythm of how the game is played.In order to present it to every Engineer in the best possible form, it still needs quite some time befo..."
     }
   ]
 }
