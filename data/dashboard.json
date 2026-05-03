@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-05-03T01:35:41.956915+08:00",
+  "updated_at": "2026-05-04T01:37:14.970145+08:00",
   "player": {
     "personaname": "chr(0x1D11E)",
-    "online": false,
-    "currently_playing": "",
+    "online": true,
+    "currently_playing": "Mount & Blade II: Bannerlord",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
   },
   "milestone": {
-    "total_hours": 5376.4,
-    "movies": 2688,
-    "books": 896,
-    "walking_km": 26882
+    "total_hours": 5382.0,
+    "movies": 2691,
+    "books": 897,
+    "walking_km": 26910
   },
   "game_cloud": [
     {
@@ -52,9 +52,9 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 284.4,
+      "playtime_hours": 289.9,
       "img_icon_url": "896d5f4214e4e185a20af51b46d9dea2e6f4aaad",
-      "rtime_last_played": 1777726422,
+      "rtime_last_played": 1777829083,
       "genres": [
         "Action",
         "Indie",
@@ -126,9 +126,9 @@
     {
       "appid": 431960,
       "name": "Wallpaper Engine",
-      "playtime_hours": 100.3,
+      "playtime_hours": 100.4,
       "img_icon_url": "72edaed9d748c6cf7397ffb1c83f0b837b9ebd9d",
-      "rtime_last_played": 1773203991,
+      "rtime_last_played": 1777809259,
       "genres": [
         "Casual",
         "Indie",
@@ -1391,8 +1391,8 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_2weeks_hours": 20.3,
-      "playtime_forever_hours": 284.4
+      "playtime_2weeks_hours": 25.8,
+      "playtime_forever_hours": 289.9
     },
     {
       "appid": 1172470,
@@ -1431,6 +1431,12 @@
       "playtime_forever_hours": 8.4
     },
     {
+      "appid": 431960,
+      "name": "Wallpaper Engine",
+      "playtime_2weeks_hours": 0.1,
+      "playtime_forever_hours": 100.4
+    },
+    {
       "appid": 892970,
       "name": "Valheim",
       "playtime_2weeks_hours": 0.0,
@@ -1438,6 +1444,19 @@
     }
   ],
   "heatmap": {
+    "2026-05-04": {
+      "online_minutes": 90,
+      "games": {
+        "Mount & Blade II: Bannerlord": 90
+      }
+    },
+    "2026-05-03": {
+      "online_minutes": 246,
+      "games": {
+        "Wallpaper Engine": 6,
+        "Mount & Blade II: Bannerlord": 240
+      }
+    },
     "2026-05-02": {
       "online_minutes": 724,
       "games": {
@@ -2000,7 +2019,7 @@
       "dow": 5,
       "hour": 1,
       "count": 60.0,
-      "recent_count": 24.2,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2011,7 +2030,7 @@
       "dow": 5,
       "hour": 2,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2022,7 +2041,7 @@
       "dow": 5,
       "hour": 3,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2033,7 +2052,7 @@
       "dow": 5,
       "hour": 4,
       "count": 25.0,
-      "recent_count": 25.0,
+      "recent_count": 0.0,
       "game_minutes": 25.0,
       "online_minutes": 0.0,
       "games": {
@@ -2044,7 +2063,7 @@
       "dow": 5,
       "hour": 14,
       "count": 3.5,
-      "recent_count": 3.5,
+      "recent_count": 0.0,
       "game_minutes": 0.0,
       "online_minutes": 10.0,
       "games": {}
@@ -2053,7 +2072,7 @@
       "dow": 5,
       "hour": 15,
       "count": 50.2,
-      "recent_count": 50.2,
+      "recent_count": 0.0,
       "game_minutes": 45.0,
       "online_minutes": 15.0,
       "games": {
@@ -2064,7 +2083,7 @@
       "dow": 5,
       "hour": 16,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2075,7 +2094,7 @@
       "dow": 5,
       "hour": 17,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2086,7 +2105,7 @@
       "dow": 5,
       "hour": 18,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2097,7 +2116,7 @@
       "dow": 5,
       "hour": 19,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2108,7 +2127,7 @@
       "dow": 5,
       "hour": 20,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2120,7 +2139,7 @@
       "dow": 5,
       "hour": 21,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2131,17 +2150,95 @@
       "dow": 5,
       "hour": 22,
       "count": 25.4,
-      "recent_count": 25.4,
+      "recent_count": 0.0,
       "game_minutes": 23.7,
       "online_minutes": 5.0,
       "games": {
         "Battle Brothers": 18.6,
         "Apex Legends": 5.0
       }
+    },
+    {
+      "dow": 6,
+      "hour": 19,
+      "count": 10.0,
+      "recent_count": 10.0,
+      "game_minutes": 10.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Wallpaper Engine": 5.0,
+        "Mount & Blade II: Bannerlord": 5.0
+      }
+    },
+    {
+      "dow": 6,
+      "hour": 20,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 6,
+      "hour": 21,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 6,
+      "hour": 22,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 6,
+      "hour": 23,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 0,
+      "hour": 0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 60.0
+      }
+    },
+    {
+      "dow": 0,
+      "hour": 1,
+      "count": 37.3,
+      "recent_count": 37.3,
+      "game_minutes": 37.3,
+      "online_minutes": 0.0,
+      "games": {
+        "Mount & Blade II: Bannerlord": 37.3
+      }
     }
   ],
   "platform": {
-    "Windows": 5354.2,
+    "Windows": 5359.8,
     "Mac": 12.0,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -2150,7 +2247,7 @@
     {
       "name": "Counter-Strike 2",
       "hours": 1857.8,
-      "cumulative_pct": 34.6,
+      "cumulative_pct": 34.5,
       "rank": 1
     },
     {
@@ -2167,8 +2264,8 @@
     },
     {
       "name": "Mount & Blade II: Bannerlord",
-      "hours": 284.4,
-      "cumulative_pct": 56.6,
+      "hours": 289.9,
+      "cumulative_pct": 56.7,
       "rank": 4
     },
     {
@@ -2192,7 +2289,7 @@
     {
       "name": "Grand Theft Auto V Legacy",
       "hours": 121.7,
-      "cumulative_pct": 68.5,
+      "cumulative_pct": 68.6,
       "rank": 8
     },
     {
@@ -2203,8 +2300,8 @@
     },
     {
       "name": "Wallpaper Engine",
-      "hours": 100.3,
-      "cumulative_pct": 72.4,
+      "hours": 100.4,
+      "cumulative_pct": 72.5,
       "rank": 10
     },
     {
@@ -2306,7 +2403,7 @@
     {
       "name": "Battle Brothers",
       "hours": 28.8,
-      "cumulative_pct": 87.9,
+      "cumulative_pct": 88.0,
       "rank": 27
     },
     {
@@ -2450,7 +2547,7 @@
     {
       "name": "Content Warning",
       "hours": 7.8,
-      "cumulative_pct": 95.4,
+      "cumulative_pct": 95.5,
       "rank": 51
     },
     {
@@ -2564,7 +2661,7 @@
     {
       "name": "MineMogul",
       "hours": 4.5,
-      "cumulative_pct": 97.6,
+      "cumulative_pct": 97.7,
       "rank": 70
     },
     {
@@ -3015,7 +3112,7 @@
   "weekday": [
     {
       "day": "Mon",
-      "minutes": 0
+      "minutes": 90
     },
     {
       "day": "Tue",
@@ -3039,7 +3136,7 @@
     },
     {
       "day": "Sun",
-      "minutes": 0
+      "minutes": 246
     }
   ],
   "stats": {
@@ -3054,9 +3151,9 @@
       "minutes": 724
     },
     "longest_streak": {
-      "days": 5,
+      "days": 7,
       "start": "2026-04-28",
-      "end": "2026-05-02"
+      "end": "2026-05-04"
     }
   },
   "achievements": [
@@ -3137,7 +3234,7 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 284.4,
+      "playtime_hours": 289.9,
       "total": 50,
       "unlocked": 6,
       "pct": 12,
@@ -3287,7 +3384,7 @@
     {
       "appid": 431960,
       "name": "Wallpaper Engine",
-      "playtime_hours": 100.3,
+      "playtime_hours": 100.4,
       "total": 17,
       "unlocked": 12,
       "pct": 71,
@@ -3628,152 +3725,152 @@
       {
         "source": 730,
         "target": 230190,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 730,
         "target": 365360,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 730,
         "target": 892970,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 730,
         "target": 3912710,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 230190,
         "target": 365360,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 230190,
         "target": 892970,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 230190,
         "target": 1172470,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 230190,
         "target": 2213700,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 230190,
         "target": 3912710,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 365360,
         "target": 892970,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 365360,
         "target": 3912710,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 892970,
         "target": 1172470,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 892970,
         "target": 2213700,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 892970,
         "target": 3912710,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 1172470,
         "target": 2213700,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 1172470,
         "target": 3912710,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 2213700,
         "target": 3912710,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 730,
         "target": 261550,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 730,
         "target": 1876880,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 230190,
         "target": 261550,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 230190,
         "target": 1876880,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 261550,
         "target": 365360,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 261550,
         "target": 892970,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 261550,
         "target": 1172470,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 261550,
         "target": 1876880,
-        "strength": 5
+        "strength": 6
       },
       {
         "source": 261550,
         "target": 2213700,
-        "strength": 5
+        "strength": 6
       }
     ]
   },
@@ -3781,7 +3878,7 @@
     {
       "genre": "Action",
       "games": 31,
-      "hours": 4219.5
+      "hours": 4225.0
     },
     {
       "genre": "Free To Play",
@@ -3796,22 +3893,22 @@
     {
       "genre": "RPG",
       "games": 22,
-      "hours": 1713.8
+      "hours": 1719.3
     },
     {
       "genre": "Indie",
       "games": 24,
-      "hours": 1222.4
+      "hours": 1228.0
     },
     {
       "genre": "Strategy",
       "games": 21,
-      "hours": 1012.3
+      "hours": 1017.8
     },
     {
       "genre": "Simulation",
       "games": 14,
-      "hours": 606.2
+      "hours": 611.7
     },
     {
       "genre": "Early Access",
@@ -3821,22 +3918,22 @@
     {
       "genre": "Animation & Modeling",
       "games": 2,
-      "hours": 209.8
+      "hours": 209.9
     },
     {
       "genre": "Design & Illustration",
       "games": 2,
-      "hours": 209.8
+      "hours": 209.9
     },
     {
       "genre": "Utilities",
       "games": 2,
-      "hours": 166.1
+      "hours": 166.2
     },
     {
       "genre": "Casual",
       "games": 3,
-      "hours": 117.2
+      "hours": 117.3
     },
     {
       "genre": "Video Production",
@@ -3846,7 +3943,7 @@
     {
       "genre": "Photo Editing",
       "games": 1,
-      "hours": 100.3
+      "hours": 100.4
     },
     {
       "genre": "Massively Multiplayer",
@@ -3868,7 +3965,7 @@
       },
       {
         "name": "Mount & Blade II: Bannerlord",
-        "hours": 20.3
+        "hours": 25.8
       },
       {
         "name": "Apex Legends",
@@ -3883,14 +3980,16 @@
   "weekly_digest": [
     {
       "dates": [
+        "2026-05-04",
+        "2026-05-03",
         "2026-05-02",
         "2026-05-01",
         "2026-04-30",
         "2026-04-29",
         "2026-04-28"
       ],
-      "total_hours": 35.5,
-      "games_count": 7,
+      "total_hours": 41.1,
+      "games_count": 8,
       "top_games": [
         "Mount & Blade II: Bannerlord",
         "Primitive Society Simulator",
@@ -3901,6 +4000,28 @@
     }
   ],
   "game_updates": [
+    {
+      "appid": 494840,
+      "game_name": "UBOAT",
+      "title": "2026.1 Patch 16",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155575530",
+      "date": 1777816493,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Type IX: - Fix: It wasn't possible to open hatch from the engine room to the control room in FPP. Damage system: - Water inflow rate through hull breaches was considerably decreased to compensate for the fact that enemies are much better now at dropping depth charges and to some degree also hitting the U-boat with guns on the surface. Physics: - Fix: Ships with long and narrow shape like F-class destroyers could be thrown out of the water, if 140x time compression was used in the side view and they had their rudders turned fully. Resupply: - U-boat is now automatically stopped when cargo loading from another ship starts. - Fix: The ship from which cargo is loaded is also stopped for the duration of resupply. Some r..."
+    },
+    {
+      "appid": 220,
+      "game_name": "Half-Life 2",
+      "title": "You're not crazy, that one sewer puzzle in Half-Life 2 really did used to be harder",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1831432155574762",
+      "date": 1777774743,
+      "feedname": "PC Gamer",
+      "feedlabel": "PC Gamer",
+      "update_type": "Update",
+      "contents": "YouTuber <a href=\"https://www.youtube.com/@1Ocelot/videos\">Ocelot</a>, who specializes in videos comparing different versions of games like <a href=\"https://www.youtube.com/watch?v=mVhg614-av8\">Silent Hill 3</a> and <a href=\"https://www.youtube.com/watch?v=kGargv8ikEU\">Resident Evil: Code Veronica</a>, recently took to analyzing different versions of Half-Life 2. Valve's FPS may not seem as fruitful a topic for dissection, but there are more differences in these builds than you might think... <a href=\"https://www.pcgamer.com/games/fps/youre-not-crazy-that-one-sewer-puzzle-in-half-life-2-really-did-used-to-be-harder/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
+    },
     {
       "appid": 967050,
       "game_name": "Pacify",
@@ -4142,28 +4263,6 @@
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
       "contents": "v1.0.46922 Major Fixed the load save crash Fixed the cart escort crash and several major issues linked to it Fixed the Drombach scientist quest Fixed the crash at Rigel’s taverns entrance Fixed the missing Hierophante in the last quest of Lombelle Minor Fixed the treasure maps that didn’t complete when the object is found Fixed the Werewolf’s Licking Wounds skill Fixed the candidate contract that doesn’t complete And more… "
-    },
-    {
-      "appid": 544810,
-      "game_name": "KARDS - The WWII Card Game",
-      "title": "Update on Permanent Pool Card List",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565348",
-      "date": 1777473262,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "{STEAM_CLAN_IMAGE}/34861374/b3619235f07ea82a017fef0144292e651b3604ad.jpg Hello commanders, In our recent New Rotation System - Dev Blog, we stated that we aimed to publish the list of permanent cards in late April. We want to provide a quick update on that timing. The list will now be published in early May, with the current target being next week. This list defines which cards will remain permanently in the active pool as part of the new rotation system. We appreciate your patience and look forward to sharing the full list with you shortly. See you on the battlefield!"
-    },
-    {
-      "appid": 1481400,
-      "game_name": "Dagon",
-      "title": "Eldritch horrors going semi-viral on Instagram",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565315",
-      "date": 1777472675,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hi cultists!Just a tiny, unusual update today:If you’re on Instagram, give our studio a follow! We’ve recently been blessed by the unholy algorithm, and we plan to stay there for longer, with updates about the studio and our games.Who cares about yet another photo of a perfectly lit vegan salad curated by philosophy students - Instagram needs more eldritch horrors, weird stories and digital blood.That’s all for today, hear you later!"
     }
   ]
 }
