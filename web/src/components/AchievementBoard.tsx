@@ -29,10 +29,10 @@ export function AchievementBoard({ achievements }: Props) {
                 style={{
                   width: `${game.pct}%`,
                   background: game.pct === 100
-                    ? "#34d399"
+                    ? "var(--success)"
                     : game.pct >= 50
-                      ? "#67e8f9"
-                      : "#a78bfa",
+                      ? "var(--accent)"
+                      : "var(--accent-2)",
                 }}
               />
             </div>
@@ -58,7 +58,18 @@ export function GenreChart({ genres }: GenreProps) {
   if (!genres.length) return null;
 
   const maxHours = Math.max(...genres.map((g) => g.hours));
-  const COLORS = ["#67e8f9", "#a78bfa", "#34d399", "#f59e0b", "#fb7185", "#60a5fa", "#f472b6", "#22c55e", "#f97316", "#818cf8"];
+  const COLORS = [
+    "var(--palette-0)",
+    "var(--palette-1)",
+    "var(--palette-2)",
+    "var(--palette-3)",
+    "var(--palette-4)",
+    "var(--palette-5)",
+    "var(--palette-6)",
+    "var(--palette-7)",
+    "var(--palette-8)",
+    "var(--palette-9)",
+  ];
 
   return (
     <div className="viz-card">

@@ -5,14 +5,25 @@ import { useLocale } from "../useLocale";
 interface ParetoProps { data: ParetoItem[]; }
 interface PlatformProps { data: Record<string, number>; }
 
-const COLORS = ["#67e8f9", "#a78bfa", "#34d399", "#f59e0b", "#fb7185", "#60a5fa", "#f472b6", "#22c55e", "#f97316", "#818cf8"];
-const AXIS = "#667085";
-const GRID = "#273244";
+const COLORS = [
+  "var(--palette-0)",
+  "var(--palette-1)",
+  "var(--palette-2)",
+  "var(--palette-3)",
+  "var(--palette-4)",
+  "var(--palette-5)",
+  "var(--palette-6)",
+  "var(--palette-7)",
+  "var(--palette-8)",
+  "var(--palette-9)",
+];
+const AXIS = "var(--chart-axis)";
+const GRID = "var(--chart-grid)";
 const TOOLTIP = {
-  background: "rgba(9, 11, 16, 0.96)",
-  border: "1px solid rgba(148, 163, 184, 0.24)",
+  background: "var(--tooltip-bg)",
+  border: "1px solid var(--tooltip-border)",
   borderRadius: 8,
-  color: "#e8edf7",
+  color: "var(--tooltip-text)",
 };
 
 export function ParetoChart({ data }: ParetoProps) {
@@ -31,7 +42,7 @@ export function ParetoChart({ data }: ParetoProps) {
             contentStyle={TOOLTIP}
             labelFormatter={(_, payload) => payload?.[0]?.payload?.name || ""}
           />
-          <Area type="monotone" dataKey="cumulative_pct" stroke="#67e8f9" fill="rgba(103, 232, 249, 0.14)" strokeWidth={2} />
+          <Area type="monotone" dataKey="cumulative_pct" stroke="var(--chart-accent)" fill="var(--chart-accent-soft)" strokeWidth={2} />
         </AreaChart>
       </ResponsiveContainer>
     </div>

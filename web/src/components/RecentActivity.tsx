@@ -15,8 +15,8 @@ interface Props {
 }
 
 const COLORS = [
-  "#67e8f9", "#a78bfa", "#34d399", "#f59e0b",
-  "#fb7185", "#60a5fa", "#f472b6", "#818cf8",
+  "var(--palette-0)", "var(--palette-1)", "var(--palette-2)", "var(--palette-3)",
+  "var(--palette-4)", "var(--palette-5)", "var(--palette-6)", "var(--palette-7)",
 ];
 
 export function RecentActivity({ activity }: Props) {
@@ -36,17 +36,17 @@ export function RecentActivity({ activity }: Props) {
       <p className="subtitle">{t("recentActivitySubtitle")}</p>
       <ResponsiveContainer width="100%" height={activity.length * 44 + 40}>
         <BarChart data={data} layout="vertical" margin={{ left: 120, right: 30 }}>
-          <XAxis type="number" unit="h" tick={{ fill: "#667085", fontSize: 10 }} axisLine={{ stroke: "#273244" }} tickLine={{ stroke: "#273244" }} />
+          <XAxis type="number" unit="h" tick={{ fill: "var(--chart-axis)", fontSize: 10 }} axisLine={{ stroke: "var(--chart-grid)" }} tickLine={{ stroke: "var(--chart-grid)" }} />
           <YAxis
             type="category"
             dataKey="label"
             width={110}
-            tick={{ fill: "#96a1b5", fontSize: 10 }}
+            tick={{ fill: "var(--text-muted)", fontSize: 10 }}
           />
           <Tooltip
             formatter={(v) => [`${v}h`, t("twoWeekPlaytime")]}
-            contentStyle={{ background: "rgba(9, 11, 16, 0.96)", border: "1px solid rgba(148, 163, 184, 0.24)", borderRadius: 8, color: "#e8edf7" }}
-            labelStyle={{ color: "#67e8f9" }}
+            contentStyle={{ background: "var(--tooltip-bg)", border: "1px solid var(--tooltip-border)", borderRadius: 8, color: "var(--tooltip-text)" }}
+            labelStyle={{ color: "var(--chart-accent)" }}
           />
           <Bar dataKey="playtime_2weeks_hours" radius={[0, 0, 0, 0]}>
             {data.map((_, i) => (

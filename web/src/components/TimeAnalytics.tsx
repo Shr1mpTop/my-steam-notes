@@ -27,6 +27,13 @@ function formatHours(minutes: number) {
   return minutes >= 60 ? `${(minutes / 60).toFixed(1)}h` : `${Math.round(minutes)}m`;
 }
 
+function heatColor(intensity: number) {
+  if (intensity <= 0.33) return "rgba(250, 204, 21, 0.36)";
+  if (intensity <= 0.62) return "rgba(251, 146, 60, 0.62)";
+  if (intensity <= 0.86) return "rgba(239, 68, 68, 0.82)";
+  return "rgba(185, 28, 28, 1)";
+}
+
 export function TimeHeatmap({ data }: TimeHeatmapProps) {
   const { t } = useLocale();
   const [tooltip, setTooltip] = useState<HeatmapTooltip | null>(null);
@@ -78,8 +85,8 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
                     className="th-cell"
                     style={{
                       background: count > 0
-                        ? `rgba(103, 232, 249, ${0.18 + intensity * 0.72})`
-                        : "#151b26",
+                        ? heatColor(intensity)
+                        : "var(--heatmap-empty)",
                     }}
                     aria-label={`${DAYS[dow]} ${hour}:00 — ${formatHours(count)} ${t("weightedActivity")} · ${formatHours(item?.game_minutes ?? 0)} ${t("inGame")} · ${formatHours(item?.online_minutes ?? 0)} ${t("steamOnline")}`}
                     onMouseEnter={(event) => placeTooltip(event, dow, hour, item)}
@@ -163,10 +170,10 @@ export function GamingClock({ data }: ClockProps) {
       <p className="viz-subtitle">{t("gamingClockSubtitle")}</p>
       <div className="gaming-clock-wrap">
         <svg viewBox="0 0 240 240" width="240" height="240" className="gaming-clock">
-          <circle cx={cx} cy={cy} r={r} fill="none" stroke="#273244" strokeWidth="1" />
-          <circle cx={cx} cy={cy} r={r * 0.65} fill="none" stroke="rgba(148, 163, 184, 0.14)" strokeWidth="1" />
-          <circle cx={cx} cy={cy} r={r * 0.3} fill="none" stroke="rgba(148, 163, 184, 0.1)" strokeWidth="1" />
-          {hourLabels.map((l) => <text key={l.label} x={l.x} y={l.y} textAnchor="middle" dominantBaseline="middle" fill="#96a1b5" fontSize="9">{l.label}</text>)}
+          <circle cx={cx} cy={cy} r={r} fill="none" stroke="var(--chart-grid)" strokeWidth="1" />
+          <circle cx={cx} cy={cy} r={r * 0.65} fill="none" stroke="var(--grid)" strokeWidth="1" />
+          <circle cx={cx} cy={cy} r={r * 0.3} fill="none" stroke="var(--grid)" strokeWidth="1" />
+          {hourLabels.map((l) => <text key={l.label} x={l.x} y={l.y} textAnchor="middle" dominantBaseline="middle" fill="var(--text-muted)" fontSize="9">{l.label}</text>)}
           <path d={pathD(historicalPoints)} className="clock-area clock-area--average" />
           <path d={pathD(historicalPoints)} className="clock-line clock-line--average" />
           {hasRecent && <path d={pathD(recentPoints)} className="clock-area clock-area--recent" />}

@@ -340,11 +340,11 @@ export function GameNetwork({ network }: Props) {
               <g key={node.appid} className="network-bubble">
                 <circle cx={x} cy={y} r={node.r + 8} fill={genreColor(node.genre)} opacity="0.07" />
                 <circle cx={x} cy={y} r={node.r} fill={genreColor(node.genre)} opacity="0.34" stroke={genreColor(node.genre)} strokeWidth="1.4" filter="url(#networkGlow)" />
-                <text x={x} y={y - 3} textAnchor="middle" fill="#f8fbff" fontSize={node.r > 22 ? "10" : "9"} fontWeight="700">
+                <text x={x} y={y - 3} textAnchor="middle" fill="var(--text)" fontSize={node.r > 22 ? "10" : "9"} fontWeight="700">
                   {truncate(node.name, node.r > 24 ? 13 : 8)}
                 </text>
                 {node.degree > 0 && (
-                  <text x={x} y={y + 12} textAnchor="middle" fill="#96a1b5" fontSize="9">
+                  <text x={x} y={y + 12} textAnchor="middle" fill="var(--text-muted)" fontSize="9">
                     {node.degree} {t("links")}
                   </text>
                 )}

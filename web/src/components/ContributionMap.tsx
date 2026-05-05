@@ -8,13 +8,11 @@ interface Props {
 }
 
 const LEVELS = [
-  { max: 0, color: "#17130d", label: "No activity" },
-  { max: 30, color: "#fde047", label: "< 30m" },
-  { max: 60, color: "#facc15", label: "30m–1h" },
-  { max: 180, color: "#fb923c", label: "1–3h" },
-  { max: 300, color: "#f97316", label: "3–5h" },
-  { max: 480, color: "#ef4444", label: "5–8h" },
-  { max: Infinity, color: "#7f1d1d", label: "> 8h" },
+  { max: 0, color: "var(--heatmap-empty)", label: "No activity" },
+  { max: 60, color: "rgba(250, 204, 21, 0.36)", label: "< 1h" },
+  { max: 180, color: "rgba(251, 146, 60, 0.62)", label: "1–3h" },
+  { max: 480, color: "rgba(239, 68, 68, 0.82)", label: "3–8h" },
+  { max: Infinity, color: "rgba(185, 28, 28, 1)", label: "> 8h" },
 ];
 
 const ACTIVE_LEVELS = LEVELS.filter((level) => level.max > 0);
@@ -98,11 +96,14 @@ export function ContributionMap({ heatmap, updatedAt }: Props) {
               d.minutes === -1 ? (
                 <div key={di} className="heatmap-cell empty" />
               ) : (
-                <div
+                <button
                   key={di}
-                  className="heatmap-cell"
+                  className={`heatmap-cell${selected === d.date ? " is-selected" : ""}`}
+                  type="button"
                   style={{ background: getColor(d.minutes) }}
-                  title={`${formatDate(d.date)}: ${d.minutes > 0 ? (d.minutes / 60).toFixed(1) + "h" : "no activity"}`}
+                  title={`${formatDate(d.date)}: ${d.minutes > 0 ? (d.minutes / 60).toFixed(1) + "h" : t("noActivity")}`}
+                  aria-label={`${formatDate(d.date)}: ${d.minutes > 0 ? (d.minutes / 60).toFixed(1) + "h" : t("noActivity")}`}
+                  aria-pressed={selected === d.date}
                   onClick={() => setSelected(d.date === selected ? null : d.date)}
                 />
               )
