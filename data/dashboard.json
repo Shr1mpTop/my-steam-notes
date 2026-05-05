@@ -1,25 +1,25 @@
 {
-  "updated_at": "2026-05-05T01:53:59.267131+08:00",
+  "updated_at": "2026-05-06T01:53:39.705485+08:00",
   "player": {
-    "personaname": "chr(0x1D11E)",
-    "online": false,
-    "currently_playing": "",
+    "personaname": "俊林叔叔阳具店",
+    "online": true,
+    "currently_playing": "Counter-Strike 2",
     "level": 30,
-    "avatarfull": "https://avatars.steamstatic.com/519f37920ebcc07a84cc56597621eab752a5161b_full.jpg"
+    "avatarfull": "https://avatars.steamstatic.com/0c36cd0464c002f4a34041c76d11a6699ab08dd1_full.jpg"
   },
   "milestone": {
-    "total_hours": 5396.5,
-    "movies": 2698,
+    "total_hours": 5398.0,
+    "movies": 2699,
     "books": 899,
-    "walking_km": 26982
+    "walking_km": 26990
   },
   "game_cloud": [
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1859.7,
+      "playtime_hours": 1861.2,
       "img_icon_url": "8dbc71957312bbd3baea65848b545be9eae2a355",
-      "rtime_last_played": 1777912831,
+      "rtime_last_played": 1778002927,
       "genres": [
         "Action",
         "Free To Play"
@@ -784,7 +784,7 @@
     },
     {
       "appid": 440900,
-      "name": "Conan Exiles",
+      "name": "Conan Exiles Enhanced",
       "playtime_hours": 4.3,
       "img_icon_url": "399859f8bdaeef066f14029d5f1910960545fbd9",
       "rtime_last_played": 1765370460,
@@ -1391,8 +1391,14 @@
     {
       "appid": 365360,
       "name": "Battle Brothers",
-      "playtime_2weeks_hours": 24.4,
+      "playtime_2weeks_hours": 12.3,
       "playtime_forever_hours": 28.8
+    },
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "playtime_2weeks_hours": 7.4,
+      "playtime_forever_hours": 1861.2
     },
     {
       "appid": 1172470,
@@ -1405,12 +1411,6 @@
       "name": "Primitive Society Simulator",
       "playtime_2weeks_hours": 6.3,
       "playtime_forever_hours": 6.3
-    },
-    {
-      "appid": 730,
-      "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 5.9,
-      "playtime_forever_hours": 1859.7
     },
     {
       "appid": 3912710,
@@ -1444,6 +1444,12 @@
     }
   ],
   "heatmap": {
+    "2026-05-06": {
+      "online_minutes": 90,
+      "games": {
+        "Counter-Strike 2": 90
+      }
+    },
     "2026-05-05": {
       "online_minutes": 55,
       "games": {
@@ -1564,86 +1570,88 @@
     {
       "dow": 1,
       "hour": 17,
-      "count": 14.8,
-      "recent_count": 0.0,
+      "count": 34.0,
+      "recent_count": 19.2,
       "game_minutes": 0.0,
-      "online_minutes": 42.2,
+      "online_minutes": 97.2,
       "games": {}
     },
     {
       "dow": 1,
       "hour": 18,
-      "count": 21.0,
-      "recent_count": 0.0,
+      "count": 42.0,
+      "recent_count": 21.0,
       "game_minutes": 0.0,
-      "online_minutes": 60.0,
+      "online_minutes": 120.0,
       "games": {}
     },
     {
       "dow": 1,
       "hour": 19,
-      "count": 21.0,
-      "recent_count": 0.0,
+      "count": 42.0,
+      "recent_count": 21.0,
       "game_minutes": 0.0,
-      "online_minutes": 60.0,
+      "online_minutes": 120.0,
       "games": {}
     },
     {
       "dow": 1,
       "hour": 20,
-      "count": 21.0,
-      "recent_count": 0.0,
+      "count": 42.0,
+      "recent_count": 21.0,
       "game_minutes": 0.0,
-      "online_minutes": 60.0,
+      "online_minutes": 120.0,
       "games": {}
     },
     {
       "dow": 1,
       "hour": 21,
-      "count": 21.0,
-      "recent_count": 0.0,
+      "count": 42.0,
+      "recent_count": 21.0,
       "game_minutes": 0.0,
-      "online_minutes": 60.0,
+      "online_minutes": 120.0,
       "games": {}
     },
     {
       "dow": 1,
       "hour": 22,
-      "count": 21.0,
-      "recent_count": 0.0,
+      "count": 42.0,
+      "recent_count": 21.0,
       "game_minutes": 0.0,
-      "online_minutes": 60.0,
+      "online_minutes": 120.0,
       "games": {}
     },
     {
       "dow": 1,
       "hour": 23,
-      "count": 21.0,
-      "recent_count": 0.0,
+      "count": 42.0,
+      "recent_count": 21.0,
       "game_minutes": 0.0,
-      "online_minutes": 60.0,
+      "online_minutes": 120.0,
       "games": {}
     },
     {
       "dow": 2,
       "hour": 0,
-      "count": 38.4,
-      "recent_count": 0.0,
-      "game_minutes": 26.8,
-      "online_minutes": 33.2,
+      "count": 88.6,
+      "recent_count": 50.2,
+      "game_minutes": 71.7,
+      "online_minutes": 48.3,
       "games": {
+        "Counter-Strike 2": 45.0,
         "Mount & Blade II: Bannerlord": 26.8
       }
     },
     {
       "dow": 2,
       "hour": 1,
-      "count": 60.0,
-      "recent_count": 0.0,
-      "game_minutes": 60.0,
+      "count": 113.7,
+      "recent_count": 53.7,
+      "game_minutes": 113.7,
       "online_minutes": 0.0,
       "games": {
-        "Mount & Blade II: Bannerlord": 60.0
+        "Mount & Blade II: Bannerlord": 60.0,
+        "Counter-Strike 2": 53.7
       }
     },
     {
@@ -2238,7 +2246,7 @@
       "dow": 0,
       "hour": 1,
       "count": 60.0,
-      "recent_count": 6.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2249,7 +2257,7 @@
       "dow": 0,
       "hour": 2,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2260,7 +2268,7 @@
       "dow": 0,
       "hour": 3,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2271,7 +2279,7 @@
       "dow": 0,
       "hour": 4,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2282,7 +2290,7 @@
       "dow": 0,
       "hour": 5,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2293,7 +2301,7 @@
       "dow": 0,
       "hour": 6,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2304,7 +2312,7 @@
       "dow": 0,
       "hour": 7,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2315,7 +2323,7 @@
       "dow": 0,
       "hour": 8,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2326,7 +2334,7 @@
       "dow": 0,
       "hour": 9,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2337,7 +2345,7 @@
       "dow": 0,
       "hour": 10,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2348,7 +2356,7 @@
       "dow": 0,
       "hour": 11,
       "count": 26.8,
-      "recent_count": 26.8,
+      "recent_count": 0.0,
       "game_minutes": 25.1,
       "online_minutes": 5.0,
       "games": {
@@ -2359,7 +2367,7 @@
       "dow": 0,
       "hour": 20,
       "count": 50.0,
-      "recent_count": 50.0,
+      "recent_count": 0.0,
       "game_minutes": 50.0,
       "online_minutes": 0.0,
       "games": {
@@ -2370,7 +2378,7 @@
       "dow": 0,
       "hour": 21,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2381,7 +2389,7 @@
       "dow": 0,
       "hour": 22,
       "count": 56.7,
-      "recent_count": 56.7,
+      "recent_count": 0.0,
       "game_minutes": 55.0,
       "online_minutes": 5.0,
       "games": {
@@ -2395,7 +2403,7 @@
       "dow": 0,
       "hour": 23,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
@@ -2406,7 +2414,7 @@
       "dow": 1,
       "hour": 0,
       "count": 43.9,
-      "recent_count": 43.9,
+      "recent_count": 0.0,
       "game_minutes": 43.9,
       "online_minutes": 0.0,
       "games": {
@@ -2415,7 +2423,7 @@
     }
   ],
   "platform": {
-    "Windows": 5374.2,
+    "Windows": 5375.7,
     "Mac": 12.0,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -2423,7 +2431,7 @@
   "pareto": [
     {
       "name": "Counter-Strike 2",
-      "hours": 1859.7,
+      "hours": 1861.2,
       "cumulative_pct": 34.5,
       "rank": 1
     },
@@ -2448,7 +2456,7 @@
     {
       "name": "Terraria",
       "hours": 209.5,
-      "cumulative_pct": 60.6,
+      "cumulative_pct": 60.7,
       "rank": 5
     },
     {
@@ -2490,7 +2498,7 @@
     {
       "name": "Lethal Company",
       "hours": 83.2,
-      "cumulative_pct": 75.7,
+      "cumulative_pct": 75.8,
       "rank": 12
     },
     {
@@ -2842,7 +2850,7 @@
       "rank": 70
     },
     {
-      "name": "Conan Exiles",
+      "name": "Conan Exiles Enhanced",
       "hours": 4.3,
       "cumulative_pct": 97.7,
       "rank": 71
@@ -3297,7 +3305,7 @@
     },
     {
       "day": "Wed",
-      "minutes": 688
+      "minutes": 778
     },
     {
       "day": "Thu",
@@ -3328,16 +3336,16 @@
       "minutes": 901
     },
     "longest_streak": {
-      "days": 8,
+      "days": 9,
       "start": "2026-04-28",
-      "end": "2026-05-05"
+      "end": "2026-05-06"
     }
   },
   "achievements": [
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1859.7,
+      "playtime_hours": 1861.2,
       "total": 1,
       "unlocked": 1,
       "pct": 100,
@@ -3902,152 +3910,152 @@
       {
         "source": 730,
         "target": 230190,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 730,
         "target": 365360,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 730,
         "target": 892970,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 730,
         "target": 3912710,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 230190,
         "target": 365360,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 230190,
         "target": 892970,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 230190,
         "target": 1172470,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 230190,
         "target": 2213700,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 230190,
         "target": 3912710,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 365360,
         "target": 892970,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 365360,
         "target": 3912710,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 892970,
         "target": 1172470,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 892970,
         "target": 2213700,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 892970,
         "target": 3912710,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 1172470,
         "target": 2213700,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 1172470,
         "target": 3912710,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 2213700,
         "target": 3912710,
-        "strength": 9
+        "strength": 10
       },
       {
         "source": 730,
         "target": 261550,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 730,
         "target": 1876880,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 230190,
         "target": 261550,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 230190,
         "target": 1876880,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 261550,
         "target": 365360,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 261550,
         "target": 892970,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 261550,
         "target": 1172470,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 261550,
         "target": 1876880,
-        "strength": 7
+        "strength": 8
       },
       {
         "source": 261550,
         "target": 2213700,
-        "strength": 7
+        "strength": 8
       }
     ]
   },
@@ -4055,12 +4063,12 @@
     {
       "genre": "Action",
       "games": 31,
-      "hours": 4239.4
+      "hours": 4240.9
     },
     {
       "genre": "Free To Play",
       "games": 4,
-      "hours": 2453.4
+      "hours": 2454.9
     },
     {
       "genre": "Adventure",
@@ -4142,41 +4150,85 @@
       },
       {
         "name": "Battle Brothers",
-        "hours": 24.4
+        "hours": 12.3
+      },
+      {
+        "name": "Counter-Strike 2",
+        "hours": 7.4
       },
       {
         "name": "Apex Legends",
         "hours": 7.2
-      },
-      {
-        "name": "Primitive Society Simulator",
-        "hours": 6.3
       }
     ]
   },
   "weekly_digest": [
     {
       "dates": [
+        "2026-05-06",
         "2026-05-05",
         "2026-05-04",
         "2026-05-03",
         "2026-05-02",
         "2026-05-01",
-        "2026-04-30",
-        "2026-04-29"
+        "2026-04-30"
       ],
-      "total_hours": 53.4,
-      "games_count": 8,
+      "total_hours": 43.4,
+      "games_count": 7,
       "top_games": [
         "Mount & Blade II: Bannerlord",
-        "Primitive Society Simulator",
         "Apex Legends",
-        "Sintopia",
-        "Counter-Strike 2"
+        "Counter-Strike 2",
+        "Battle Brothers",
+        "The Farmer Was Replaced"
       ]
     }
   ],
   "game_updates": [
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "Apex Legends: Latest Update - 05/05/2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155580745",
+      "date": 1778000518,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "ADJUSTED:We are implementing 4.5 hour map rotations in Ranked for all regions!After testing 4.5 hour rotations in our East Asia servers late in Season 28, we believe implementing this cadence in all servers will have a positive impact on the playerbase by enabling more map variety. This means players can engage on their favourite maps more often, or feel less “trapped” on their least favourite maps.During the initial test we saw positive player sentiment regarding the opportunity to potentially play on multiple maps in a single play session and we’re excited to provide this opportunity to all regions.This is a permanent change, though we may continue to test slight variances in rotation duration to pinpoint the most optimal timelines!"
+    },
+    {
+      "appid": 304930,
+      "game_name": "Unturned",
+      "title": "3.26.3.1 Patch Notes",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155580562",
+      "date": 1777996889,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "ChangelogAdded\"Prevent Level Skill Overrides\" option for enabling leveling/skills on maps that disable it.ChangedLevels with high numbers of volumes can opt-in to \"Enable_Static_Volumes\" which improves performance of volume overlap checks. (Thanks RBMKBlaze, Ghosticollis, and MCrow!)Separated \"No Incoming Damage\" safezone option from \"No Weapons\" to allow attacking safezone campers.Fixed2D Scopes with Dual Rendering Off not working with California 2 custom scope shaders. (Thanks AngelAbov3!)Peacemaker suitcase timer for left-handed characters. (Thanks mileslucas169!)Press vest text for left-handed characters. (Thanks oddowo and CPL!)Warning about UFO mythical auto random seed off. (Thanks Dizzpie!)California 2 shirt/pants missing 3D preview model. (Thanks TSB!)"
+    },
+    {
+      "appid": 359550,
+      "game_name": "Tom Clancy's Rainbow Six Siege",
+      "title": "Y11S1.3 PATCH NOTES",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155579580",
+      "date": 1777973984,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Major Update",
+      "contents": "See the upcoming changes to Rainbow Six Siege with the release of Y11S1.3.BALANCINGThese are small adjustments that don’t aim to alter an Operator’s overall power level or flexibility. Instead, they focus on polishing gameplay details, improving consistency, and enhancing quality-of-life without shifting the meta. Our goal is to maintain a steady stream of these refinements alongside major updates, helping the game consistently and constantly evolve and improve.CAVEIRAIncreased Silent Step's maximum duration to enhance flanking potential.SILENT STEPMax. resources: Increased to 15 seconds (from 12)Total refill time: Increased to 15 seconds (from 12)KAIDReduced the activation time of the Electroclaw for more responsive counterplay and mid-round adjustments.RTILA ELECTROCLAWActivation time: R..."
+    },
+    {
+      "appid": 322330,
+      "game_name": "Don't Starve Together",
+      "title": "Hotfix 726747",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155579264",
+      "date": 1777963328,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Changes Auto-Grabber can now deposit matching items into Expansive Storage Units (activated via Spatializer Circuits). Expansive Storage Units now inherit WX-78’s preserver rates from active Refrigerant and Thermal Circuits. Blocking Circuit ability will protect against thief sources such as Frogs, Bearger, Powder Monkey, Otter, etc. Other players’ Exploiterators will now appear faded out if there are too many WX-78 players using them on your screen. Bug Fixes Fixed Auto-Grabber’s range boost needing Warm Standby even when following WX-78. Fixed Possessed Chassis trying to walk forward to its target when waiting for projectiles to return to the Gloomerang. Fixed Possessed Chassis sometimes crashing when their leader tries to row. Fixed Cookie Cutters phasing through a boat when electrocute..."
+    },
     {
       "appid": 1172470,
       "game_name": "Apex Legends",
@@ -4396,50 +4448,6 @@
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
       "contents": "Hello Spööktubers! Thank you for your patience as we're fixing bugs on all platforms.Here's a new patch fixing some stuff!For those of you wondering when crossplay between Switch 1 & 2 and other platforms will be back: The first Switch patch ran into an issue during testing, so we’re currently waiting on feedback from Nintendo. We’re hoping the patch will be approved by next week, but it could take longer if any problems are found. The fixes from this patch will also be included.Patch Notes:Lobbies should no longer be stuck in offline mode after rehostingThe door in the house should no longer be open only for the host due to the aforementioned issueVideo extraction time has been greatly reduced in most use casesEnjoy the patch, and please report any issues to support@landfall.se"
-    },
-    {
-      "appid": 704850,
-      "game_name": "Thief Simulator",
-      "title": "Thief Simulator 3 PLAYTEST - sign up now!",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155567661",
-      "date": 1777546861,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hello fellow Thieves. Noble Muffins is back making a new Thief Simulator.Help us improve Thief Simulator 3 in this early playtest!How to participate?If you haven’t done it yet, head over to our Steam store page and look for the \"Join the Thief Simulator 3 Playtest\" section. Just click the \"Request Access\" button, and you'll be on our list!What to expect?You will be able to play few early game jobs.Steal solo or join your friend on steam in 2 player coop!Don't forget to Wishlist to stay updated!"
-    },
-    {
-      "appid": 2016590,
-      "game_name": "Dark and Darker",
-      "title": "Early Access Hotfix #114",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155566984",
-      "date": 1777529004,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Greetings, Adventurers.This hotfix is aimed at quickly resolving several issues to ensure a proper start to this season. Other changes, including balance adjustments, will be rolled out gradually through upcoming hotfixes. This hotfix fixes the ability to claim your EAS8 Adventure Rank rewards, fixes a blocking issue with the Mimic quest, and adds the missing key binding options for the newly introduced ping feature. We hope you enjoy the new season to the fullest.As always, thank you and see you in the dungeons!IRONMACEBugfixes:Fixed an issue where the previous season's Adventurer rank leaderboard was not displayed and rewards could not be claimed.Fixed an issue where Mimics could fail to spawn.Fixed an issue where the Ghost King dropped the Skull Key.Fixed an issue where the display orde..."
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "PUBG Global Series Circuit 2 is about to drop!",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155566516",
-      "date": 1777505829,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "A little over a month after Circuit 1's unpredictable three weeks, the 24 teams are back in Seoul. The PUBG Global Series returns with its second circuit — PGS 4-6 — kicking off May 20.Circuit 2 isn't a reset. The PGS Points earned in Circuit 1 carry directly into the standings, and the final results here decide who qualifies for the Esports World Cup (EWC). Add a new patch to the mix, and the question becomes: how do the strategies teams locked in during Circuit 1 hold up in a different environment? Circuit 2 Overview Location: Seongsu, Seoul, South KoreaParticipating Teams: 24 TeamsTotal Prize Pool: $500,000 (PGS 4-5: $100,000 each / PGS 6: $300,000)All Circuit 2 matches begin at 19:00 KST (10:00 UTC / 11:00 CET / 17:00 ICT / 03:00 PDT) daily. *PGS 4 Day 1 Group Stage begins at 14:00 KST..."
-    },
-    {
-      "appid": 730,
-      "game_name": "Counter-Strike 2",
-      "title": "Counter-Strike 2 Update",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155566354",
-      "date": 1777499165,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "\\CacheBomb explosion radius increased.Lighting Adjustments around Vent.Disabled player collision on sign and removed lamp by squeaky.Reworked e-box on A-site for better visibility.Lowered Checkers entrance frame height at B Main.Removed AC unit above Sandbags and moved pipes.Fixed lack of footstep sounds on top of crates at A-site.Fixed hole in world on door in Sun Room.Fixed wall bangs on A Main wall.Fixed some z-fighting around Garage.Adjusted grenade clipping throughout map.Adjusted player clipping throughout map.Dust IIBlocked visibility through corner of Mid Box (Xbox).\\Speculative fix for a case where all audio drops out.\\Fixed cases where crouch-jumping in confined spaces could cause the player camera to intersect the ceiling.Adjusted particle effect sprite opacity for fully occlude..."
     }
   ]
 }
