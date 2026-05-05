@@ -16,8 +16,8 @@ import "./App.css";
 type Theme = "dark" | "paper";
 type Density = "comfortable" | "compact";
 
-const THEME_STORAGE_KEY = "steam-notebook-theme";
-const DENSITY_STORAGE_KEY = "steam-notebook-density";
+const THEME_STORAGE_KEY = "steam-notebook-theme-v2";
+const DENSITY_STORAGE_KEY = "steam-notebook-density-v3";
 
 function initialTheme(): Theme {
   if (typeof window === "undefined") return "paper";
@@ -26,9 +26,9 @@ function initialTheme(): Theme {
 }
 
 function initialDensity(): Density {
-  if (typeof window === "undefined") return "compact";
+  if (typeof window === "undefined") return "comfortable";
   const saved = window.localStorage.getItem(DENSITY_STORAGE_KEY);
-  return saved === "compact" || saved === "comfortable" ? saved : "compact";
+  return saved === "compact" || saved === "comfortable" ? saved : "comfortable";
 }
 
 function App() {

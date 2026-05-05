@@ -2514,9 +2514,12 @@ button, input, select, textarea { font: inherit; }
 .game-update-item {
   display: grid;
   gap: 8px;
+  grid-template-rows: auto auto auto 1fr;
   min-width: 0;
   min-height: 148px;
+  max-height: 188px;
   padding: 14px;
+  overflow: hidden;
   color: inherit;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.035);
@@ -2561,17 +2564,28 @@ button, input, select, textarea { font: inherit; }
 }
 
 .game-update-title {
+  display: -webkit-box;
+  min-width: 0;
+  overflow: hidden;
   color: #f8fbff;
   font-size: 14px;
   font-weight: 800;
   line-height: 1.25;
+  overflow-wrap: anywhere;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .game-update-item p {
+  display: -webkit-box;
   margin: 0;
+  overflow: hidden;
   color: var(--text-muted);
   font-size: 12px;
   line-height: 1.45;
+  overflow-wrap: anywhere;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .empty-panel {
@@ -3009,48 +3023,337 @@ button, input, select, textarea { font: inherit; }
   fill: rgba(217, 119, 6, 0.1);
 }
 
-:root[data-density="compact"] .dashboard-shell {
+:root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-shell {
   width: min(100%, 1680px);
   padding: 18px clamp(10px, 1.5vw, 24px) 0;
 }
 
-:root[data-density="compact"] .cinematic-dashboard {
+:root:is([data-density="comfortable"], [data-density="compact"]) .cinematic-dashboard {
   padding-top: 18px;
 }
 
-:root[data-density="compact"] .dashboard-topbar {
+:root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-topbar {
   gap: 16px;
   margin-bottom: 10px;
 }
 
-:root[data-density="compact"] .dashboard-intro {
+:root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-intro {
   margin-bottom: 12px;
 }
 
-:root[data-density="compact"] .dashboard-intro h1,
-:root[data-density="compact"] .dashboard-intro h2 {
+:root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-intro h1,
+:root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-intro h2 {
   font-size: clamp(28px, 3.8vw, 52px);
 }
 
-:root[data-density="compact"] .dashboard-intro p {
+:root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-intro p {
   margin-top: 10px;
   font-size: 13px;
   line-height: 1.5;
 }
 
-:root[data-density="compact"] .dashboard-grid,
-:root[data-density="compact"] .stack {
+:root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-grid,
+:root:is([data-density="comfortable"], [data-density="compact"]) .stack {
   gap: 10px;
 }
 
-:root[data-density="compact"] .dashboard-grid {
+:root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-grid {
   grid-auto-flow: row;
   align-items: stretch;
   margin-top: 10px;
 }
 
-:root[data-density="compact"] .dashboard-grid > div {
+:root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-grid > div {
   height: 100%;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .profile-hero,
+:root:is([data-density="comfortable"], [data-density="compact"]) .viz-card,
+:root:is([data-density="comfortable"], [data-density="compact"]) .game-cloud,
+:root:is([data-density="comfortable"], [data-density="compact"]) .recent-activity,
+:root:is([data-density="comfortable"], [data-density="compact"]) .contribution-map {
+  height: 100%;
+  padding: 12px;
+}
+
+@media (min-width: 1181px) {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-activity {
+    order: 1;
+    grid-column: 1 / span 6;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-weather {
+    order: 2;
+    grid-column: span 3;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-digest {
+    order: 3;
+    grid-column: span 3;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-time {
+    order: 4;
+    grid-column: 1 / span 6;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-clock {
+    order: 5;
+    grid-column: span 3;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-weekday {
+    order: 6;
+    grid-column: span 3;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-cloud {
+    order: 7;
+    grid-column: 1 / -1;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-stats {
+    order: 8;
+    grid-column: span 12;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-pareto {
+    order: 9;
+    grid-column: 1 / span 6;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-recent {
+    order: 10;
+    grid-column: span 6;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-network {
+    order: 11;
+    grid-column: 1 / span 6;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-side-stack {
+    order: 12;
+    grid-column: span 6;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-platform {
+    order: 13;
+    grid-column: span 6;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-dust {
+    order: 14;
+    grid-column: span 6;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-achievements {
+    order: 15;
+    grid-column: 1 / -1;
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .stats-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .achievement-grid {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  }
+
+  :root:is([data-density="comfortable"], [data-density="compact"]) .game-updates-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .viz-card h3,
+:root:is([data-density="comfortable"], [data-density="compact"]) .game-cloud h2,
+:root:is([data-density="comfortable"], [data-density="compact"]) .recent-activity h2,
+:root:is([data-density="comfortable"], [data-density="compact"]) .contribution-map h2 {
+  font-size: 12px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .viz-subtitle,
+:root:is([data-density="comfortable"], [data-density="compact"]) .game-cloud .subtitle,
+:root:is([data-density="comfortable"], [data-density="compact"]) .recent-activity .subtitle,
+:root:is([data-density="comfortable"], [data-density="compact"]) .contribution-map .subtitle {
+  margin-bottom: 10px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .profile-card {
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .avatar-img,
+:root:is([data-density="comfortable"], [data-density="compact"]) .avatar-placeholder {
+  width: 54px;
+  height: 54px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .profile-name {
+  font-size: clamp(22px, 2.8vw, 36px);
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .profile-badges,
+:root:is([data-density="comfortable"], [data-density="compact"]) .milestone-grid,
+:root:is([data-density="comfortable"], [data-density="compact"]) .stats-grid,
+:root:is([data-density="comfortable"], [data-density="compact"]) .achievement-grid,
+:root:is([data-density="comfortable"], [data-density="compact"]) .weather-games,
+:root:is([data-density="comfortable"], [data-density="compact"]) .digest-content,
+:root:is([data-density="comfortable"], [data-density="compact"]) .game-updates-list {
+  gap: 8px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .milestone-card,
+:root:is([data-density="comfortable"], [data-density="compact"]) .stat-card,
+:root:is([data-density="comfortable"], [data-density="compact"]) .achievement-card,
+:root:is([data-density="comfortable"], [data-density="compact"]) .digest-stat,
+:root:is([data-density="comfortable"], [data-density="compact"]) .game-update-item,
+:root:is([data-density="comfortable"], [data-density="compact"]) .day-detail {
+  padding: 10px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .milestone-value,
+:root:is([data-density="comfortable"], [data-density="compact"]) .stat-value,
+:root:is([data-density="comfortable"], [data-density="compact"]) .digest-value {
+  font-size: clamp(16px, 1.6vw, 22px);
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .milestone-label,
+:root:is([data-density="comfortable"], [data-density="compact"]) .stat-label,
+:root:is([data-density="comfortable"], [data-density="compact"]) .digest-label {
+  margin-top: 6px;
+  font-size: 10px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .config-button {
+  min-height: 38px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .config-menu {
+  gap: 9px;
+  padding: 10px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .config-option {
+  min-height: 27px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .heatmap-grid,
+:root:is([data-density="comfortable"], [data-density="compact"]) .heatmap-col {
+  gap: 3px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .heatmap-cell {
+  width: 10px;
+  height: 10px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .th-row,
+:root:is([data-density="comfortable"], [data-density="compact"]) .th-labels-x {
+  grid-template-columns: repeat(24, 14px);
+  gap: 3px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .th-grid,
+:root:is([data-density="comfortable"], [data-density="compact"]) .th-labels-y {
+  gap: 3px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .th-cell {
+  width: 14px;
+  height: 12px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .th-labels-y span {
+  height: 12px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .weekday-bars {
+  height: 132px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .gaming-clock {
+  width: 200px;
+  height: 200px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .panel-pareto .recharts-responsive-container {
+  height: 220px !important;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .panel-platform .recharts-responsive-container {
+  height: 160px !important;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .treemap-field {
+  padding-bottom: 48%;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .network-bubble-stage,
+:root:is([data-density="comfortable"], [data-density="compact"]) .network-bubble-stage .network-svg {
+  min-height: 300px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .dust-radial {
+  width: min(100%, 180px);
+  margin: 8px auto 12px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .dust-breakdown span,
+:root:is([data-density="comfortable"], [data-density="compact"]) .weather-game {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .game-update-item {
+  min-height: 124px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .updates-section {
+  padding-top: 48px;
+}
+
+:root:is([data-density="comfortable"], [data-density="compact"]) .footer {
+  margin-top: 18px;
+  padding: 18px 0 22px;
+}
+
+:root[data-density="compact"] .dashboard-shell {
+  width: min(100%, 1760px);
+  padding: 12px clamp(8px, 1vw, 18px) 0;
+}
+
+:root[data-density="compact"] .cinematic-dashboard {
+  padding-top: 12px;
+}
+
+:root[data-density="compact"] .dashboard-topbar {
+  margin-bottom: 6px;
+}
+
+:root[data-density="compact"] .dashboard-intro {
+  margin-bottom: 6px;
+}
+
+:root[data-density="compact"] .dashboard-intro h1,
+:root[data-density="compact"] .dashboard-intro h2 {
+  font-size: clamp(24px, 2.6vw, 38px);
+}
+
+:root[data-density="compact"] .dashboard-intro p {
+  display: none;
+}
+
+:root[data-density="compact"] .dashboard-grid,
+:root[data-density="compact"] .stack {
+  gap: 8px;
+}
+
+:root[data-density="compact"] .dashboard-grid {
+  margin-top: 8px;
 }
 
 :root[data-density="compact"] .profile-hero,
@@ -3058,138 +3361,59 @@ button, input, select, textarea { font: inherit; }
 :root[data-density="compact"] .game-cloud,
 :root[data-density="compact"] .recent-activity,
 :root[data-density="compact"] .contribution-map {
-  height: 100%;
-  padding: 12px;
-}
-
-@media (min-width: 1181px) {
-  :root[data-density="compact"] .panel-activity {
-    order: 1;
-    grid-column: 1 / span 6;
-  }
-
-  :root[data-density="compact"] .panel-weather {
-    order: 2;
-    grid-column: span 3;
-  }
-
-  :root[data-density="compact"] .panel-digest {
-    order: 3;
-    grid-column: span 3;
-  }
-
-  :root[data-density="compact"] .panel-time {
-    order: 4;
-    grid-column: 1 / span 6;
-  }
-
-  :root[data-density="compact"] .panel-clock {
-    order: 5;
-    grid-column: span 3;
-  }
-
-  :root[data-density="compact"] .panel-weekday {
-    order: 6;
-    grid-column: span 3;
-  }
-
-  :root[data-density="compact"] .panel-cloud {
-    order: 7;
-    grid-column: 1 / -1;
-  }
-
-  :root[data-density="compact"] .panel-stats {
-    order: 8;
-    grid-column: span 12;
-  }
-
-  :root[data-density="compact"] .panel-pareto {
-    order: 9;
-    grid-column: 1 / span 6;
-  }
-
-  :root[data-density="compact"] .panel-recent {
-    order: 10;
-    grid-column: span 6;
-  }
-
-  :root[data-density="compact"] .panel-network {
-    order: 11;
-    grid-column: 1 / span 6;
-  }
-
-  :root[data-density="compact"] .panel-side-stack {
-    order: 12;
-    grid-column: span 6;
-  }
-
-  :root[data-density="compact"] .panel-platform {
-    order: 13;
-    grid-column: span 6;
-  }
-
-  :root[data-density="compact"] .panel-dust {
-    order: 14;
-    grid-column: span 6;
-  }
-
-  :root[data-density="compact"] .panel-achievements {
-    order: 15;
-    grid-column: 1 / -1;
-  }
-
-  :root[data-density="compact"] .stats-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  :root[data-density="compact"] .achievement-grid {
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  }
-
-  :root[data-density="compact"] .game-updates-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+  padding: 9px;
 }
 
 :root[data-density="compact"] .viz-card h3,
 :root[data-density="compact"] .game-cloud h2,
 :root[data-density="compact"] .recent-activity h2,
 :root[data-density="compact"] .contribution-map h2 {
-  font-size: 12px;
+  margin-bottom: 2px;
+  font-size: 11px;
 }
 
 :root[data-density="compact"] .viz-subtitle,
 :root[data-density="compact"] .game-cloud .subtitle,
 :root[data-density="compact"] .recent-activity .subtitle,
 :root[data-density="compact"] .contribution-map .subtitle {
-  margin-bottom: 10px;
-  font-size: 11px;
-  line-height: 1.35;
+  display: none;
 }
 
 :root[data-density="compact"] .profile-card {
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 9px;
+  margin-bottom: 8px;
 }
 
 :root[data-density="compact"] .avatar-img,
 :root[data-density="compact"] .avatar-placeholder {
-  width: 54px;
-  height: 54px;
+  width: 42px;
+  height: 42px;
 }
 
 :root[data-density="compact"] .profile-name {
-  font-size: clamp(22px, 2.8vw, 36px);
+  font-size: clamp(20px, 2vw, 30px);
 }
 
-:root[data-density="compact"] .profile-badges,
+:root[data-density="compact"] .profile-badges {
+  gap: 5px;
+  margin-top: 6px;
+}
+
+:root[data-density="compact"] .badge,
+:root[data-density="compact"] .digest-game-tag,
+:root[data-density="compact"] .rare-tag {
+  min-height: 20px;
+  padding: 3px 7px;
+  font-size: 10px;
+}
+
 :root[data-density="compact"] .milestone-grid,
 :root[data-density="compact"] .stats-grid,
 :root[data-density="compact"] .achievement-grid,
 :root[data-density="compact"] .weather-games,
 :root[data-density="compact"] .digest-content,
 :root[data-density="compact"] .game-updates-list {
-  gap: 8px;
+  gap: 6px;
 }
 
 :root[data-density="compact"] .milestone-card,
@@ -3198,113 +3422,730 @@ button, input, select, textarea { font: inherit; }
 :root[data-density="compact"] .digest-stat,
 :root[data-density="compact"] .game-update-item,
 :root[data-density="compact"] .day-detail {
-  padding: 10px;
+  padding: 8px;
 }
 
 :root[data-density="compact"] .milestone-value,
 :root[data-density="compact"] .stat-value,
 :root[data-density="compact"] .digest-value {
-  font-size: clamp(16px, 1.6vw, 22px);
+  font-size: clamp(15px, 1.25vw, 19px);
 }
 
 :root[data-density="compact"] .milestone-label,
 :root[data-density="compact"] .stat-label,
 :root[data-density="compact"] .digest-label {
-  margin-top: 6px;
-  font-size: 10px;
+  margin-top: 4px;
+  font-size: 9px;
 }
 
 :root[data-density="compact"] .config-button {
-  min-height: 38px;
+  min-height: 34px;
 }
 
-:root[data-density="compact"] .config-menu {
-  gap: 9px;
-  padding: 10px;
+:root[data-density="compact"] .config-button strong {
+  min-height: 22px;
+  font-size: 10px;
 }
 
-:root[data-density="compact"] .config-option {
-  min-height: 27px;
+:root[data-density="compact"] .heatmap-grid {
+  padding-top: 5px;
 }
 
 :root[data-density="compact"] .heatmap-grid,
 :root[data-density="compact"] .heatmap-col {
-  gap: 3px;
+  gap: 2px;
 }
 
 :root[data-density="compact"] .heatmap-cell {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
+}
+
+:root[data-density="compact"] .heatmap-legend {
+  margin-top: 7px;
 }
 
 :root[data-density="compact"] .th-row,
 :root[data-density="compact"] .th-labels-x {
-  grid-template-columns: repeat(24, 14px);
-  gap: 3px;
+  grid-template-columns: repeat(24, 11px);
+  gap: 2px;
 }
 
 :root[data-density="compact"] .th-grid,
 :root[data-density="compact"] .th-labels-y {
-  gap: 3px;
+  gap: 2px;
 }
 
 :root[data-density="compact"] .th-cell {
-  width: 14px;
-  height: 12px;
+  width: 11px;
+  height: 10px;
 }
 
 :root[data-density="compact"] .th-labels-y span {
-  height: 12px;
+  height: 10px;
+  font-size: 9px;
 }
 
 :root[data-density="compact"] .weekday-bars {
-  height: 132px;
+  height: 100px;
 }
 
 :root[data-density="compact"] .gaming-clock {
-  width: 200px;
-  height: 200px;
+  width: 152px;
+  height: 152px;
+}
+
+:root[data-density="compact"] .gaming-clock-legend {
+  display: none;
+}
+
+:root[data-density="compact"] .weather-header {
+  gap: 9px;
+  margin-bottom: 6px;
+}
+
+:root[data-density="compact"] .weather-icon {
+  width: 34px;
+  height: 34px;
+  flex-basis: 34px;
+  font-size: 19px;
+}
+
+:root[data-density="compact"] .weather-game {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+:root[data-density="compact"] .weather-game:nth-child(n+4),
+:root[data-density="compact"] .digest-games .digest-game-tag:nth-child(n+4),
+:root[data-density="compact"] .rare-achievements,
+:root[data-density="compact"] .day-detail {
+  display: none;
 }
 
 :root[data-density="compact"] .panel-pareto .recharts-responsive-container {
-  height: 220px !important;
+  height: 180px !important;
 }
 
 :root[data-density="compact"] .panel-platform .recharts-responsive-container {
-  height: 160px !important;
+  height: 130px !important;
 }
 
 :root[data-density="compact"] .treemap-field {
-  padding-bottom: 48%;
+  padding-bottom: 30%;
 }
 
 :root[data-density="compact"] .network-bubble-stage,
 :root[data-density="compact"] .network-bubble-stage .network-svg {
-  min-height: 300px;
+  min-height: 220px;
 }
 
 :root[data-density="compact"] .dust-radial {
-  width: min(100%, 180px);
-  margin: 8px auto 12px;
+  width: min(100%, 132px);
+  margin: 4px auto 8px;
 }
 
-:root[data-density="compact"] .dust-breakdown span,
-:root[data-density="compact"] .weather-game {
-  padding-top: 7px;
-  padding-bottom: 7px;
+:root[data-density="compact"] .dust-breakdown {
+  gap: 5px;
+}
+
+:root[data-density="compact"] .dust-breakdown span {
+  padding: 6px 5px;
+}
+
+:root[data-density="compact"] .platform-chart {
+  grid-template-columns: minmax(120px, 0.9fr) minmax(110px, 0.7fr);
 }
 
 :root[data-density="compact"] .game-update-item {
-  min-height: 124px;
+  min-height: 116px;
+  max-height: 140px;
+}
+
+:root[data-density="compact"] .game-update-title {
+  font-size: 12px;
+  -webkit-line-clamp: 2;
+}
+
+:root[data-density="compact"] .game-update-item p {
+  font-size: 11px;
+  line-height: 1.35;
+  -webkit-line-clamp: 2;
 }
 
 :root[data-density="compact"] .updates-section {
-  padding-top: 48px;
+  padding-top: 28px;
+}
+
+:root[data-density="compact"] .updates-heading {
+  margin-bottom: 10px;
+}
+
+:root[data-density="compact"] .updates-heading h2 {
+  font-size: clamp(24px, 2.5vw, 38px);
+}
+
+:root[data-density="compact"] .updates-heading p {
+  display: none;
+}
+
+@media (min-width: 1181px) {
+  :root[data-density="compact"] .panel-activity {
+    order: 1;
+    grid-column: 1 / span 5;
+  }
+
+  :root[data-density="compact"] .panel-weather {
+    order: 2;
+    grid-column: span 2;
+  }
+
+  :root[data-density="compact"] .panel-digest {
+    order: 3;
+    grid-column: span 2;
+  }
+
+  :root[data-density="compact"] .panel-clock {
+    order: 4;
+    grid-column: span 3;
+  }
+
+  :root[data-density="compact"] .panel-time {
+    order: 5;
+    grid-column: 1 / span 5;
+  }
+
+  :root[data-density="compact"] .panel-weekday {
+    order: 6;
+    grid-column: span 2;
+  }
+
+  :root[data-density="compact"] .panel-dust {
+    order: 7;
+    grid-column: span 2;
+  }
+
+  :root[data-density="compact"] .panel-platform {
+    order: 8;
+    grid-column: span 3;
+  }
+
+  :root[data-density="compact"] .panel-cloud {
+    order: 9;
+    grid-column: 1 / -1;
+  }
+
+  :root[data-density="compact"] .panel-stats {
+    order: 10;
+    grid-column: 1 / -1;
+  }
+
+  :root[data-density="compact"] .panel-pareto {
+    order: 11;
+    grid-column: span 4;
+  }
+
+  :root[data-density="compact"] .panel-recent {
+    order: 12;
+    grid-column: span 4;
+  }
+
+  :root[data-density="compact"] .panel-side-stack {
+    order: 13;
+    grid-column: span 4;
+  }
+
+  :root[data-density="compact"] .panel-network {
+    order: 14;
+    grid-column: span 6;
+  }
+
+  :root[data-density="compact"] .panel-achievements {
+    order: 15;
+    grid-column: span 6;
+  }
+}
+
+:root[data-density="compact"] .dashboard-shell {
+  width: min(100%, 1920px);
+  padding: 8px 8px 0;
+}
+
+:root[data-density="compact"] .cinematic-dashboard {
+  padding-top: 8px;
+}
+
+:root[data-density="compact"] .dashboard-topbar {
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+:root[data-density="compact"] .dashboard-intro {
+  margin-bottom: 0;
+}
+
+:root[data-density="compact"] .dashboard-intro span {
+  font-size: 9px;
+}
+
+:root[data-density="compact"] .dashboard-intro h1,
+:root[data-density="compact"] .dashboard-intro h2 {
+  margin-top: 4px;
+  font-size: clamp(20px, 2vw, 30px);
+}
+
+:root[data-density="compact"] .config-button {
+  min-height: 30px;
+  gap: 7px;
+  padding: 0 8px;
+}
+
+:root[data-density="compact"] .config-button span,
+:root[data-density="compact"] .config-section-label {
+  font-size: 9px;
+}
+
+:root[data-density="compact"] .config-button strong {
+  min-height: 20px;
+  padding: 0 6px;
+  font-size: 9px;
+}
+
+:root[data-density="compact"] .profile-hero {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.6fr);
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 7px 9px;
+}
+
+:root[data-density="compact"] .profile-card {
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+:root[data-density="compact"] .avatar-img,
+:root[data-density="compact"] .avatar-placeholder {
+  width: 34px;
+  height: 34px;
+}
+
+:root[data-density="compact"] .status-indicator {
+  width: 10px;
+  height: 10px;
+}
+
+:root[data-density="compact"] .profile-name {
+  font-size: clamp(18px, 1.6vw, 24px);
+}
+
+:root[data-density="compact"] .profile-badges {
+  gap: 4px;
+  margin-top: 4px;
+}
+
+:root[data-density="compact"] .badge {
+  min-height: 18px;
+  padding: 2px 6px;
+  font-size: 9px;
+}
+
+:root[data-density="compact"] .badge.playing {
+  max-width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:root[data-density="compact"] .milestone-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+  margin-bottom: 0;
+}
+
+:root[data-density="compact"] .milestone-card {
+  padding: 6px 7px;
+}
+
+:root[data-density="compact"] .milestone-value {
+  font-size: clamp(14px, 1.1vw, 18px);
+}
+
+:root[data-density="compact"] .milestone-label {
+  margin-top: 3px;
+  font-size: 8px;
+}
+
+:root[data-density="compact"] .xp-bar-container {
+  display: none;
+}
+
+:root[data-density="compact"] .dashboard-grid {
+  gap: 6px;
+  margin-top: 6px;
+}
+
+:root[data-density="compact"] .stack {
+  gap: 6px;
+}
+
+:root[data-density="compact"] .profile-hero,
+:root[data-density="compact"] .viz-card,
+:root[data-density="compact"] .game-cloud,
+:root[data-density="compact"] .recent-activity,
+:root[data-density="compact"] .contribution-map {
+  padding: 7px;
+}
+
+:root[data-density="compact"] .viz-card h3,
+:root[data-density="compact"] .game-cloud h2,
+:root[data-density="compact"] .recent-activity h2,
+:root[data-density="compact"] .contribution-map h2 {
+  margin-bottom: 0;
+  font-size: 10px;
+  line-height: 1.15;
+}
+
+:root[data-density="compact"] .viz-card h3::before,
+:root[data-density="compact"] .game-cloud h2::before,
+:root[data-density="compact"] .recent-activity h2::before,
+:root[data-density="compact"] .contribution-map h2::before {
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+}
+
+:root[data-density="compact"] .weather-header {
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+:root[data-density="compact"] .weather-icon {
+  width: 28px;
+  height: 28px;
+  flex-basis: 28px;
+  font-size: 16px;
+}
+
+:root[data-density="compact"] .weather-game {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 10px;
+}
+
+:root[data-density="compact"] .digest-content {
+  gap: 5px;
+}
+
+:root[data-density="compact"] .digest-stat {
+  padding: 6px;
+}
+
+:root[data-density="compact"] .digest-games {
+  display: none;
+}
+
+:root[data-density="compact"] .heatmap-grid {
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+:root[data-density="compact"] .heatmap-grid,
+:root[data-density="compact"] .heatmap-col {
+  gap: 1px;
+}
+
+:root[data-density="compact"] .heatmap-cell {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+}
+
+:root[data-density="compact"] .heatmap-legend {
+  margin-top: 5px;
+  font-size: 9px;
+}
+
+:root[data-density="compact"] .th-row,
+:root[data-density="compact"] .th-labels-x {
+  grid-template-columns: repeat(24, 9px);
+  gap: 1px;
+}
+
+:root[data-density="compact"] .th-grid,
+:root[data-density="compact"] .th-labels-y {
+  gap: 1px;
+}
+
+:root[data-density="compact"] .th-cell {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+}
+
+:root[data-density="compact"] .th-labels-y span {
+  height: 9px;
+  font-size: 8px;
+}
+
+:root[data-density="compact"] .th-labels-x span {
+  font-size: 8px;
+}
+
+:root[data-density="compact"] .weekday-bars {
+  height: 74px;
+  gap: 5px;
+  padding-top: 4px;
+}
+
+:root[data-density="compact"] .weekday-label,
+:root[data-density="compact"] .weekday-value {
+  font-size: 9px;
+}
+
+:root[data-density="compact"] .gaming-clock {
+  width: 118px;
+  height: 118px;
+}
+
+:root[data-density="compact"] .clock-legend-item:last-child {
+  display: none;
+}
+
+:root[data-density="compact"] .stats-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 5px;
+}
+
+:root[data-density="compact"] .stat-card {
+  padding: 7px;
+}
+
+:root[data-density="compact"] .stat-value {
+  font-size: clamp(14px, 1.05vw, 18px);
+}
+
+:root[data-density="compact"] .stat-label {
+  margin-top: 4px;
+  font-size: 8px;
+}
+
+:root[data-density="compact"] .panel-pareto .recharts-responsive-container {
+  height: 128px !important;
+}
+
+:root[data-density="compact"] .panel-platform .recharts-responsive-container {
+  height: 100px !important;
+}
+
+:root[data-density="compact"] .platform-chart {
+  grid-template-columns: minmax(92px, 0.75fr) minmax(92px, 0.75fr);
+  gap: 6px;
+}
+
+:root[data-density="compact"] .platform-legend .legend-item:nth-child(n+5) {
+  display: none;
+}
+
+:root[data-density="compact"] .treemap-toolbar,
+:root[data-density="compact"] .treemap-legend {
+  display: none;
+}
+
+:root[data-density="compact"] .treemap-field {
+  padding-bottom: 18%;
+}
+
+:root[data-density="compact"] .network-bubble-stage,
+:root[data-density="compact"] .network-bubble-stage .network-svg {
+  min-height: 150px;
+}
+
+:root[data-density="compact"] .network-legend {
+  display: none;
+}
+
+:root[data-density="compact"] .dust-radial {
+  width: min(100%, 94px);
+  margin: 2px auto 5px;
+}
+
+:root[data-density="compact"] .dust-percent {
+  font-size: 24px;
+}
+
+:root[data-density="compact"] .dust-caption {
+  font-size: 9px;
+}
+
+:root[data-density="compact"] .dust-breakdown {
+  gap: 4px;
+}
+
+:root[data-density="compact"] .dust-breakdown span {
+  padding: 4px;
+  font-size: 9px;
+}
+
+:root[data-density="compact"] .dust-breakdown strong {
+  font-size: 12px;
+}
+
+:root[data-density="compact"] .genre-row,
+:root[data-density="compact"] .staying-row {
+  grid-template-columns: minmax(70px, 92px) minmax(52px, 1fr) auto auto;
+  gap: 6px;
+}
+
+:root[data-density="compact"] .genre-name,
+:root[data-density="compact"] .staying-name,
+:root[data-density="compact"] .genre-hours,
+:root[data-density="compact"] .genre-count,
+:root[data-density="compact"] .staying-hours,
+:root[data-density="compact"] .staying-recency {
+  font-size: 10px;
+}
+
+:root[data-density="compact"] .achievement-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 5px;
+}
+
+:root[data-density="compact"] .achievement-card {
+  padding: 7px;
+}
+
+:root[data-density="compact"] .achievement-game,
+:root[data-density="compact"] .achievement-count,
+:root[data-density="compact"] .achievement-pct {
+  font-size: 10px;
+}
+
+:root[data-density="compact"] .achievement-bar-track {
+  height: 5px;
+  margin-bottom: 5px;
+}
+
+:root[data-density="compact"] .game-updates-list {
+  gap: 6px;
+}
+
+:root[data-density="compact"] .game-update-item {
+  min-height: 92px;
+  max-height: 108px;
+  gap: 4px;
+  padding: 7px;
+}
+
+:root[data-density="compact"] .game-update-meta {
+  gap: 4px;
+}
+
+:root[data-density="compact"] .game-update-meta span {
+  min-height: 18px;
+  padding: 2px 6px;
+  font-size: 9px;
+}
+
+:root[data-density="compact"] .game-update-item strong {
+  font-size: 10px;
+}
+
+:root[data-density="compact"] .game-update-title {
+  font-size: 11px;
+  line-height: 1.15;
+  -webkit-line-clamp: 1;
+}
+
+:root[data-density="compact"] .game-update-item p {
+  font-size: 10px;
+  line-height: 1.25;
+  -webkit-line-clamp: 2;
+}
+
+:root[data-density="compact"] .updates-section {
+  padding-top: 20px;
+}
+
+:root[data-density="compact"] .updates-heading {
+  margin-bottom: 8px;
+}
+
+:root[data-density="compact"] .updates-heading h2 {
+  margin-top: 5px;
+  font-size: clamp(20px, 2vw, 30px);
 }
 
 :root[data-density="compact"] .footer {
-  margin-top: 18px;
-  padding: 18px 0 22px;
+  margin-top: 10px;
+  padding: 10px 0 14px;
+}
+
+@media (min-width: 1181px) {
+  :root[data-density="compact"] .panel-pareto {
+    order: 11;
+    grid-column: span 3;
+  }
+
+  :root[data-density="compact"] .panel-platform {
+    order: 12;
+    grid-column: span 3;
+  }
+
+  :root[data-density="compact"] .panel-dust {
+    order: 13;
+    grid-column: span 3;
+  }
+
+  :root[data-density="compact"] .panel-network {
+    order: 14;
+    grid-column: span 3;
+  }
+
+  :root[data-density="compact"] .panel-recent {
+    order: 15;
+    grid-column: span 4;
+  }
+
+  :root[data-density="compact"] .panel-side-stack {
+    order: 16;
+    grid-column: span 4;
+  }
+
+  :root[data-density="compact"] .panel-achievements {
+    order: 17;
+    grid-column: span 4;
+  }
+}
+
+:root[data-density="compact"] .panel-pareto .recharts-responsive-container {
+  height: 82px !important;
+}
+
+:root[data-density="compact"] .panel-network .viz-subtitle {
+  display: none;
+}
+
+:root[data-density="compact"] .network-bubble-stage {
+  min-height: 84px;
+  height: 84px;
+}
+
+:root[data-density="compact"] .network-bubble-stage .network-svg {
+  width: 100%;
+  height: 84px !important;
+  min-height: 84px;
+  max-height: 84px;
+}
+
+:root[data-density="compact"] .network-bubble text {
+  display: none;
+}
+
+:root[data-density="compact"] .network-link {
+  opacity: 0.18;
 }
 
 ::-webkit-scrollbar { width: 8px; height: 8px; }
@@ -3384,82 +4225,82 @@ button, input, select, textarea { font: inherit; }
   .stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .game-updates-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  :root[data-density="compact"] .panel-activity {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-activity {
     order: 1;
     grid-column: 1 / span 8;
   }
 
-  :root[data-density="compact"] .panel-weather {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-weather {
     order: 2;
     grid-column: span 4;
   }
 
-  :root[data-density="compact"] .panel-time {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-time {
     order: 3;
     grid-column: 1 / span 8;
   }
 
-  :root[data-density="compact"] .panel-digest {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-digest {
     order: 4;
     grid-column: span 4;
   }
 
-  :root[data-density="compact"] .panel-cloud {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-cloud {
     order: 5;
     grid-column: 1 / -1;
   }
 
-  :root[data-density="compact"] .panel-clock {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-clock {
     order: 6;
     grid-column: span 4;
   }
 
-  :root[data-density="compact"] .panel-weekday {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-weekday {
     order: 7;
     grid-column: span 4;
   }
 
-  :root[data-density="compact"] .panel-dust {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-dust {
     order: 8;
     grid-column: span 4;
   }
 
-  :root[data-density="compact"] .panel-stats {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-stats {
     order: 9;
     grid-column: 1 / -1;
   }
 
-  :root[data-density="compact"] .panel-pareto {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-pareto {
     order: 10;
     grid-column: 1 / span 8;
   }
 
-  :root[data-density="compact"] .panel-platform {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-platform {
     order: 11;
     grid-column: span 4;
   }
 
-  :root[data-density="compact"] .panel-recent {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-recent {
     order: 12;
     grid-column: 1 / span 8;
   }
 
-  :root[data-density="compact"] .panel-side-stack {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-side-stack {
     order: 13;
     grid-column: span 4;
   }
 
-  :root[data-density="compact"] .panel-network {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-network {
     order: 14;
     grid-column: 1 / -1;
   }
 
-  :root[data-density="compact"] .panel-achievements {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .panel-achievements {
     order: 15;
     grid-column: 1 / -1;
   }
 
-  :root[data-density="compact"] .game-updates-list {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .game-updates-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -3695,7 +4536,7 @@ button, input, select, textarea { font: inherit; }
   .span-7,
   .span-8,
   .span-12 { grid-column: 1 / -1; }
-  :root[data-density="compact"] .dashboard-grid > div {
+  :root:is([data-density="comfortable"], [data-density="compact"]) .dashboard-grid > div {
     grid-column: 1 / -1;
   }
   .two-col { grid-template-columns: 1fr; }

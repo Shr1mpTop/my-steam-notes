@@ -5,7 +5,7 @@ import type { Locale, LocaleContextValue } from "./locale-context";
 
 type Messages = Record<string, string>;
 
-const STORAGE_KEY = "steam-notebook-locale";
+const STORAGE_KEY = "steam-notebook-locale-v2";
 
 const messages: Record<Locale, Messages> = {
   zh: {
