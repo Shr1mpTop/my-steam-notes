@@ -20,8 +20,6 @@ load_dotenv()
 
 TZ = timezone(timedelta(hours=8))  # UTC+8
 STATUS_GAP_CAP = timedelta(minutes=15)
-STEAM_ONLINE_WEIGHT = 0.35
-IN_GAME_WEIGHT = 1.0
 
 KEY = os.getenv("STEAM_API_KEY")
 SID = os.getenv("STEAM_ID")
@@ -111,24 +109,32 @@ def build_heatmap():
     for s in snapshots:
         d = s["date"]
         if d not in heatmap:
-            heatmap[d] = {"online_minutes": 0, "games": {}}
+            heatmap[d] = {"playtime_minutes": 0, "online_minutes": 0, "games": {}}
         heatmap[d]["games"][s["name"]] = s["daily_playtime"]
-        heatmap[d]["online_minutes"] += s["daily_playtime"]
+        heatmap[d]["playtime_minutes"] += s["daily_playtime"]
+        # Backward-compatible alias for the current frontend/static JSON.
+        # This value is Steam playtime, not persona-online duration.
+        heatmap[d]["online_minutes"] = heatmap[d]["playtime_minutes"]
     return heatmap
 
 
 def build_time_heatmap():
-    """Build weighted activity by weekday/hour from status intervals.
+    """Build this week's in-game activity by weekday/hour from status intervals.
 
     Each poll state is treated as lasting until the next poll, capped to avoid
-    counting long downtime gaps as activity. In-game time counts at full weight;
-    Steam-online-but-not-playing time contributes a smaller ambient weight.
+    counting long downtime gaps as activity. Steam-online-but-not-playing time
+    is deliberately ignored so the distribution reflects playtime only.
     """
+    now = datetime.now(TZ)
+    week_start = (now - timedelta(days=now.weekday())).replace(hour=0, minute=0, second=0, microsecond=0)
+    query_start = week_start - STATUS_GAP_CAP
     rows = execute(
         """SELECT timestamp, personastate, gameextrainfo, gameid
-           FROM status_polls ORDER BY timestamp ASC"""
+           FROM status_polls
+           WHERE timestamp >= ?
+           ORDER BY timestamp ASC""",
+        [query_start.isoformat()],
     )
-    now = datetime.now(TZ)
     recent_cutoff = now - timedelta(hours=24)
     grid = defaultdict(lambda: {
         "count": 0.0,
@@ -144,45 +150,41 @@ def build_time_heatmap():
             dt = dt.replace(tzinfo=TZ)
         return dt.astimezone(TZ)
 
-    def activity_weight(row):
+    def game_name_from_row(row):
         is_playing = bool(row.get("gameid")) or bool(row.get("gameextrainfo"))
-        if is_playing:
-            game_name = row.get("gameextrainfo") or f"App {row.get('gameid')}" or "Unknown game"
-            return IN_GAME_WEIGHT, "game_minutes", game_name
-        if (row.get("personastate") or 0) > 0:
-            return STEAM_ONLINE_WEIGHT, "online_minutes", ""
-        return 0.0, "", ""
+        if not is_playing:
+            return ""
+        return row.get("gameextrainfo") or f"App {row.get('gameid')}" or "Unknown game"
 
-    def add_interval(start, end, weight, bucket_name, game_name):
-        cursor = start
+    def add_interval(start, end, game_name):
+        cursor = max(start, week_start)
         while cursor < end:
             next_hour = (cursor.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1))
             segment_end = min(end, next_hour)
             minutes = (segment_end - cursor).total_seconds() / 60
             if minutes > 0:
                 key = (cursor.weekday(), cursor.hour)
-                grid[key]["count"] += minutes * weight
-                grid[key][bucket_name] += minutes
-                if game_name:
-                    grid[key]["games"][game_name] += minutes
+                grid[key]["count"] += minutes
+                grid[key]["game_minutes"] += minutes
+                grid[key]["games"][game_name] += minutes
                 if segment_end > recent_cutoff:
                     recent_start = max(cursor, recent_cutoff)
                     recent_minutes = (segment_end - recent_start).total_seconds() / 60
                     if recent_minutes > 0:
-                        grid[key]["recent_count"] += recent_minutes * weight
+                        grid[key]["recent_count"] += recent_minutes
             cursor = segment_end
 
     for i, r in enumerate(rows):
-        weight, bucket_name, game_name = activity_weight(r)
-        if weight <= 0:
+        game_name = game_name_from_row(r)
+        if not game_name:
             continue
         ts = r["timestamp"]
         start = parse_ts(ts)
         next_start = parse_ts(rows[i + 1]["timestamp"]) if i + 1 < len(rows) else now
         end = min(next_start, start + STATUS_GAP_CAP, now)
-        if end <= start:
+        if end <= start or end <= week_start:
             continue
-        add_interval(start, end, weight, bucket_name, game_name)
+        add_interval(start, end, game_name)
 
     return [
         {

@@ -27,6 +27,10 @@ function formatHours(minutes: number) {
   return minutes >= 60 ? `${(minutes / 60).toFixed(1)}h` : `${Math.round(minutes)}m`;
 }
 
+function playtimeMinutes(entry: HeatmapDay) {
+  return entry.playtime_minutes ?? entry.online_minutes ?? 0;
+}
+
 function heatColor(intensity: number) {
   if (intensity <= 0.33) return "rgba(250, 204, 21, 0.36)";
   if (intensity <= 0.62) return "rgba(251, 146, 60, 0.62)";
@@ -88,7 +92,7 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
                         ? heatColor(intensity)
                         : "var(--heatmap-empty)",
                     }}
-                    aria-label={`${DAYS[dow]} ${hour}:00 — ${formatHours(count)} ${t("weightedActivity")} · ${formatHours(item?.game_minutes ?? 0)} ${t("inGame")} · ${formatHours(item?.online_minutes ?? 0)} ${t("steamOnline")}`}
+                    aria-label={`${DAYS[dow]} ${hour}:00 — ${formatHours(count)} ${t("playtime")}`}
                     onMouseEnter={(event) => placeTooltip(event, dow, hour, item)}
                     onMouseMove={(event) => placeTooltip(event, dow, hour, item)}
                   />
@@ -105,16 +109,8 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
         <div className="time-tooltip" style={{ left: tooltip.x, top: tooltip.y }} role="tooltip">
           <div className="time-tooltip-title">{tooltip.label}</div>
           <div className="time-tooltip-row">
-            <span>{t("weightedActivity")}</span>
+            <span>{t("playtime")}</span>
             <strong>{formatHours(tooltip.item.count)}</strong>
-          </div>
-          <div className="time-tooltip-row">
-            <span>{t("inGame")}</span>
-            <strong>{formatHours(tooltip.item.game_minutes ?? 0)}</strong>
-          </div>
-          <div className="time-tooltip-row">
-            <span>{t("steamOnline")}</span>
-            <strong>{formatHours(tooltip.item.online_minutes ?? 0)}</strong>
           </div>
           <div className="time-tooltip-section">{t("gameBreakdown")}</div>
           <div className="time-tooltip-games">
@@ -203,7 +199,7 @@ export function WeekdayChart({ data, heatmap }: WeekdayProps) {
 
     const minutes = [0, 0, 0, 0, 0, 0, 0];
     for (const [date, entry] of Object.entries(heatmap)) {
-      minutes[weekdayIndex(date)] += entry.online_minutes;
+      minutes[weekdayIndex(date)] += playtimeMinutes(entry);
     }
 
     return DAYS.map((day, i) => ({ day, minutes: minutes[i] }));

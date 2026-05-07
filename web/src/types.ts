@@ -50,6 +50,7 @@ export interface RecentActivityItem {
 }
 
 export interface HeatmapDay {
+  playtime_minutes?: number;
   online_minutes: number;
   games: Record<string, number>;
 }

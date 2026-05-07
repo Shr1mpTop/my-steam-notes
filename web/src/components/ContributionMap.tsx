@@ -45,6 +45,10 @@ function mondayIndex(dateStr: string) {
   return (dateFromKey(dateStr).getDay() + 6) % 7;
 }
 
+function playtimeMinutes(entry?: HeatmapDay) {
+  return entry?.playtime_minutes ?? entry?.online_minutes ?? 0;
+}
+
 export function ContributionMap({ heatmap, updatedAt }: Props) {
   const { t } = useLocale();
   const [selected, setSelected] = useState<string | null>(null);
@@ -58,7 +62,7 @@ export function ContributionMap({ heatmap, updatedAt }: Props) {
     d.setDate(d.getDate() - i);
     const key = dateKey(d);
     const entry = heatmap[key];
-    days.push({ date: key, minutes: entry?.online_minutes ?? 0 });
+    days.push({ date: key, minutes: playtimeMinutes(entry) });
   }
 
   // Arrange into weeks (columns), Mon-Sun (rows)
@@ -123,7 +127,7 @@ export function ContributionMap({ heatmap, updatedAt }: Props) {
       {selected && sel && (
         <div className="day-detail">
           <h3>{formatDate(selected)}</h3>
-          <p>{t("total")}: {(sel.online_minutes / 60).toFixed(1)}h {t("playtime")}</p>
+          <p>{t("total")}: {(playtimeMinutes(sel) / 60).toFixed(1)}h {t("playtime")}</p>
           {Object.entries(sel.games).length > 0 && (
             <ul>
               {Object.entries(sel.games)
