@@ -60,6 +60,7 @@ export interface TimeHeatmapItem {
   hour: number;
   count: number;
   recent_count?: number;
+  all_time_count?: number;
   game_minutes?: number;
   online_minutes?: number;
   games?: Record<string, number>;

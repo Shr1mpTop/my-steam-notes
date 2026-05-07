@@ -127,18 +127,16 @@ def build_time_heatmap():
     """
     now = datetime.now(TZ)
     week_start = (now - timedelta(days=now.weekday())).replace(hour=0, minute=0, second=0, microsecond=0)
-    query_start = week_start - STATUS_GAP_CAP
     rows = execute(
         """SELECT timestamp, personastate, gameextrainfo, gameid
            FROM status_polls
-           WHERE timestamp >= ?
-           ORDER BY timestamp ASC""",
-        [query_start.isoformat()],
+           ORDER BY timestamp ASC"""
     )
     recent_cutoff = now - timedelta(hours=24)
     grid = defaultdict(lambda: {
         "count": 0.0,
         "recent_count": 0.0,
+        "all_time_count": 0.0,
         "game_minutes": 0.0,
         "online_minutes": 0.0,
         "games": defaultdict(float),
@@ -156,22 +154,28 @@ def build_time_heatmap():
             return ""
         return row.get("gameextrainfo") or f"App {row.get('gameid')}" or "Unknown game"
 
-    def add_interval(start, end, game_name):
-        cursor = max(start, week_start)
+    def add_interval(start, end, game_name, *, all_time=False):
+        if all_time:
+            cursor = start
+        else:
+            cursor = max(start, week_start)
         while cursor < end:
             next_hour = (cursor.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1))
             segment_end = min(end, next_hour)
             minutes = (segment_end - cursor).total_seconds() / 60
             if minutes > 0:
                 key = (cursor.weekday(), cursor.hour)
-                grid[key]["count"] += minutes
-                grid[key]["game_minutes"] += minutes
-                grid[key]["games"][game_name] += minutes
-                if segment_end > recent_cutoff:
-                    recent_start = max(cursor, recent_cutoff)
-                    recent_minutes = (segment_end - recent_start).total_seconds() / 60
-                    if recent_minutes > 0:
-                        grid[key]["recent_count"] += recent_minutes
+                if all_time:
+                    grid[key]["all_time_count"] += minutes
+                else:
+                    grid[key]["count"] += minutes
+                    grid[key]["game_minutes"] += minutes
+                    grid[key]["games"][game_name] += minutes
+                    if segment_end > recent_cutoff:
+                        recent_start = max(cursor, recent_cutoff)
+                        recent_minutes = (segment_end - recent_start).total_seconds() / 60
+                        if recent_minutes > 0:
+                            grid[key]["recent_count"] += recent_minutes
             cursor = segment_end
 
     for i, r in enumerate(rows):
@@ -182,9 +186,11 @@ def build_time_heatmap():
         start = parse_ts(ts)
         next_start = parse_ts(rows[i + 1]["timestamp"]) if i + 1 < len(rows) else now
         end = min(next_start, start + STATUS_GAP_CAP, now)
-        if end <= start or end <= week_start:
+        if end <= start:
             continue
-        add_interval(start, end, game_name)
+        add_interval(start, end, game_name, all_time=True)
+        if end > week_start:
+            add_interval(start, end, game_name)
 
     return [
         {
@@ -192,6 +198,7 @@ def build_time_heatmap():
             "hour": k[1],
             "count": round(v["count"], 1),
             "recent_count": round(v["recent_count"], 1),
+            "all_time_count": round(v["all_time_count"], 1),
             "game_minutes": round(v["game_minutes"], 1),
             "online_minutes": round(v["online_minutes"], 1),
             "games": {

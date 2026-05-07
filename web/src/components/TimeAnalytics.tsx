@@ -134,7 +134,7 @@ export function GamingClock({ data }: ClockProps) {
   const cx = 120, cy = 120, r = 90;
   const historicalCounts = useMemo(() => {
     const counts: number[] = Array(24).fill(0);
-    for (const d of data) counts[d.hour] += d.count;
+    for (const d of data) counts[d.hour] += d.all_time_count ?? d.count;
     return counts;
   }, [data]);
   const recentCounts = useMemo(() => {
