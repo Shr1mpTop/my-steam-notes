@@ -1,25 +1,25 @@
 {
-  "updated_at": "2026-05-08T01:58:19.698467+08:00",
+  "updated_at": "2026-05-09T01:50:19.538911+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
-    "online": false,
+    "online": true,
     "currently_playing": "",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/0c36cd0464c002f4a34041c76d11a6699ab08dd1_full.jpg"
   },
   "milestone": {
-    "total_hours": 5407.9,
-    "movies": 2703,
-    "books": 901,
-    "walking_km": 27039
+    "total_hours": 5416.1,
+    "movies": 2708,
+    "books": 902,
+    "walking_km": 27080
   },
   "game_cloud": [
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1863.8,
+      "playtime_hours": 1863.9,
       "img_icon_url": "8dbc71957312bbd3baea65848b545be9eae2a355",
-      "rtime_last_played": 1778080199,
+      "rtime_last_played": 1778218864,
       "genres": [
         "Action",
         "Free To Play"
@@ -28,9 +28,9 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 534.0,
+      "playtime_hours": 534.1,
       "img_icon_url": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
-      "rtime_last_played": 1778165758,
+      "rtime_last_played": 1778250321,
       "genres": [
         "Action",
         "Adventure",
@@ -522,6 +522,18 @@
       ]
     },
     {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtime_hours": 13.1,
+      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
+      "rtime_last_played": 1778250308,
+      "genres": [
+        "Indie",
+        "Strategy",
+        "Early Access"
+      ]
+    },
+    {
       "appid": 357310,
       "name": "Oriental Empires",
       "playtime_hours": 12.9,
@@ -740,14 +752,6 @@
       "playtime_hours": 5.3,
       "img_icon_url": "3a6847f6ac5879e48531db52261771d5e22904ac",
       "rtime_last_played": 1747657971,
-      "genres": []
-    },
-    {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtime_hours": 5.3,
-      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
-      "rtime_last_played": 1778172132,
       "genres": []
     },
     {
@@ -1287,6 +1291,14 @@
       "genres": []
     },
     {
+      "appid": 646570,
+      "name": "Slay the Spire",
+      "playtime_hours": 0.2,
+      "img_icon_url": "33ea124ea8c03a9ce7012d34c3b348a351612fca",
+      "rtime_last_played": 1778243671,
+      "genres": []
+    },
+    {
       "appid": 1481400,
       "name": "Dagon",
       "playtime_hours": 0.2,
@@ -1393,32 +1405,32 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_2weeks_hours": 24.0,
+      "playtime_2weeks_hours": 16.8,
       "playtime_forever_hours": 41.5
+    },
+    {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtime_2weeks_hours": 13.1,
+      "playtime_forever_hours": 13.1
     },
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 10.0,
-      "playtime_forever_hours": 1863.8
+      "playtime_2weeks_hours": 10.1,
+      "playtime_forever_hours": 1863.9
     },
     {
       "appid": 1172470,
       "name": "Apex Legends",
       "playtime_2weeks_hours": 9.2,
-      "playtime_forever_hours": 534.0
+      "playtime_forever_hours": 534.1
     },
     {
       "appid": 1876880,
       "name": "Primitive Society Simulator",
       "playtime_2weeks_hours": 6.3,
       "playtime_forever_hours": 6.3
-    },
-    {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtime_2weeks_hours": 5.3,
-      "playtime_forever_hours": 5.3
     },
     {
       "appid": 3912710,
@@ -1445,6 +1457,12 @@
       "playtime_forever_hours": 8.4
     },
     {
+      "appid": 646570,
+      "name": "Slay the Spire",
+      "playtime_2weeks_hours": 0.2,
+      "playtime_forever_hours": 0.2
+    },
+    {
       "appid": 431960,
       "name": "Wallpaper Engine",
       "playtime_2weeks_hours": 0.1,
@@ -1459,10 +1477,13 @@
   ],
   "heatmap": {
     "2026-05-08": {
-      "playtime_minutes": 78,
-      "online_minutes": 78,
+      "playtime_minutes": 564,
+      "online_minutes": 564,
       "games": {
-        "Slay the Spire 2": 78
+        "Slay the Spire 2": 544,
+        "Apex Legends": 1,
+        "Slay the Spire": 15,
+        "Counter-Strike 2": 4
       }
     },
     "2026-05-07": {
@@ -1766,7 +1787,7 @@
       "dow": 3,
       "hour": 15,
       "count": 26.6,
-      "recent_count": 26.6,
+      "recent_count": 0.0,
       "all_time_count": 54.5,
       "game_minutes": 26.6,
       "online_minutes": 0.0,
@@ -1778,7 +1799,7 @@
       "dow": 4,
       "hour": 0,
       "count": 45.1,
-      "recent_count": 45.1,
+      "recent_count": 0.0,
       "all_time_count": 63.2,
       "game_minutes": 45.1,
       "online_minutes": 0.0,
@@ -1799,72 +1820,87 @@
     {
       "dow": 4,
       "hour": 16,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 45.0,
-      "game_minutes": 0.0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 105.0,
+      "game_minutes": 60.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
     },
     {
       "dow": 4,
       "hour": 17,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 120.0,
+      "game_minutes": 60.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
     },
     {
       "dow": 4,
       "hour": 18,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 120.0,
+      "game_minutes": 60.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
     },
     {
       "dow": 4,
       "hour": 19,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 55.0,
-      "game_minutes": 0.0,
+      "count": 15.0,
+      "recent_count": 15.0,
+      "all_time_count": 70.0,
+      "game_minutes": 15.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 15.0
+      }
     },
     {
       "dow": 4,
       "hour": 20,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 55.0,
-      "game_minutes": 0.0,
+      "count": 34.9,
+      "recent_count": 34.9,
+      "all_time_count": 90.0,
+      "game_minutes": 34.9,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 25.0,
+        "Slay the Spire": 10.0
+      }
     },
     {
       "dow": 4,
       "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 59.9,
-      "game_minutes": 0.0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 119.9,
+      "game_minutes": 60.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
     },
     {
       "dow": 4,
       "hour": 22,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
+      "count": 30.1,
+      "recent_count": 30.1,
+      "all_time_count": 90.1,
+      "game_minutes": 30.1,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 30.1
+      }
     },
     {
       "dow": 4,
@@ -2267,7 +2303,7 @@
       "dow": 3,
       "hour": 1,
       "count": 40.0,
-      "recent_count": 1.6,
+      "recent_count": 0.0,
       "all_time_count": 40.0,
       "game_minutes": 40.0,
       "online_minutes": 0.0,
@@ -2279,7 +2315,7 @@
       "dow": 3,
       "hour": 2,
       "count": 5.1,
-      "recent_count": 5.1,
+      "recent_count": 0.0,
       "all_time_count": 5.1,
       "game_minutes": 5.1,
       "online_minutes": 0.0,
@@ -2291,7 +2327,7 @@
       "dow": 3,
       "hour": 16,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 60.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -2303,7 +2339,7 @@
       "dow": 3,
       "hour": 17,
       "count": 35.0,
-      "recent_count": 35.0,
+      "recent_count": 0.0,
       "all_time_count": 35.0,
       "game_minutes": 35.0,
       "online_minutes": 0.0,
@@ -2315,7 +2351,7 @@
       "dow": 3,
       "hour": 22,
       "count": 49.9,
-      "recent_count": 49.9,
+      "recent_count": 0.0,
       "all_time_count": 49.9,
       "game_minutes": 49.9,
       "online_minutes": 0.0,
@@ -2327,6 +2363,67 @@
       "dow": 3,
       "hour": 23,
       "count": 60.0,
+      "recent_count": 0.0,
+      "all_time_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 2,
+      "count": 20.0,
+      "recent_count": 20.0,
+      "all_time_count": 20.0,
+      "game_minutes": 20.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 20.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 3,
+      "count": 5.0,
+      "recent_count": 5.0,
+      "all_time_count": 5.0,
+      "game_minutes": 5.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 5.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 13,
+      "count": 20.0,
+      "recent_count": 20.0,
+      "all_time_count": 20.0,
+      "game_minutes": 20.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 15.0,
+        "Counter-Strike 2": 5.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 14,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
+    },
+    {
+      "dow": 4,
+      "hour": 15,
+      "count": 60.0,
       "recent_count": 60.0,
       "all_time_count": 60.0,
       "game_minutes": 60.0,
@@ -2337,404 +2434,404 @@
     }
   ],
   "platform": {
-    "Windows": 5382.2,
-    "Mac": 15.5,
+    "Windows": 5389.9,
+    "Mac": 15.9,
     "Linux": 0.0,
     "Steam Deck": 0.0
   },
   "pareto": [
     {
       "name": "Counter-Strike 2",
-      "hours": 1863.8,
-      "cumulative_pct": 34.5,
+      "hours": 1863.9,
+      "cumulative_pct": 34.4,
       "rank": 1
     },
     {
       "name": "Apex Legends",
-      "hours": 534.0,
+      "hours": 534.1,
       "cumulative_pct": 44.3,
       "rank": 2
     },
     {
       "name": "Kingdom Come: Deliverance",
       "hours": 369.6,
-      "cumulative_pct": 51.2,
+      "cumulative_pct": 51.1,
       "rank": 3
     },
     {
       "name": "Mount & Blade II: Bannerlord",
       "hours": 302.1,
-      "cumulative_pct": 56.8,
+      "cumulative_pct": 56.7,
       "rank": 4
     },
     {
       "name": "Terraria",
       "hours": 209.5,
-      "cumulative_pct": 60.6,
+      "cumulative_pct": 60.5,
       "rank": 5
     },
     {
       "name": "Kingdom Come: Deliverance II",
       "hours": 159.4,
-      "cumulative_pct": 63.6,
+      "cumulative_pct": 63.5,
       "rank": 6
     },
     {
       "name": "Baldur's Gate 3",
       "hours": 151.4,
-      "cumulative_pct": 66.4,
+      "cumulative_pct": 66.3,
       "rank": 7
     },
     {
       "name": "Grand Theft Auto V Legacy",
       "hours": 121.7,
-      "cumulative_pct": 68.6,
+      "cumulative_pct": 68.5,
       "rank": 8
     },
     {
       "name": "Blender",
       "hours": 109.5,
-      "cumulative_pct": 70.7,
+      "cumulative_pct": 70.6,
       "rank": 9
     },
     {
       "name": "Wallpaper Engine",
       "hours": 100.4,
-      "cumulative_pct": 72.5,
+      "cumulative_pct": 72.4,
       "rank": 10
     },
     {
       "name": "Wartales",
       "hours": 89.2,
-      "cumulative_pct": 74.2,
+      "cumulative_pct": 74.1,
       "rank": 11
     },
     {
       "name": "Lethal Company",
       "hours": 83.2,
-      "cumulative_pct": 75.7,
+      "cumulative_pct": 75.6,
       "rank": 12
     },
     {
       "name": "MyDockFinder",
       "hours": 65.8,
-      "cumulative_pct": 76.9,
+      "cumulative_pct": 76.8,
       "rank": 13
     },
     {
       "name": "Mindustry",
       "hours": 54.1,
-      "cumulative_pct": 77.9,
+      "cumulative_pct": 77.8,
       "rank": 14
     },
     {
       "name": "PUBG: BATTLEGROUNDS",
       "hours": 52.6,
-      "cumulative_pct": 78.9,
+      "cumulative_pct": 78.8,
       "rank": 15
     },
     {
       "name": "Warhammer 40,000: Rogue Trader",
       "hours": 51.1,
-      "cumulative_pct": 79.8,
+      "cumulative_pct": 79.7,
       "rank": 16
     },
     {
       "name": "The Witcher 3: Wild Hunt",
       "hours": 50.3,
-      "cumulative_pct": 80.8,
+      "cumulative_pct": 80.6,
       "rank": 17
     },
     {
       "name": "Palworld",
       "hours": 49.3,
-      "cumulative_pct": 81.7,
+      "cumulative_pct": 81.6,
       "rank": 18
     },
     {
       "name": "Battlefield™ V",
       "hours": 47.8,
-      "cumulative_pct": 82.6,
+      "cumulative_pct": 82.4,
       "rank": 19
     },
     {
       "name": "Kenshi",
       "hours": 45.7,
-      "cumulative_pct": 83.4,
+      "cumulative_pct": 83.3,
       "rank": 20
     },
     {
       "name": "Manor Lords",
       "hours": 42.8,
-      "cumulative_pct": 84.2,
+      "cumulative_pct": 84.1,
       "rank": 21
     },
     {
       "name": "Sintopia",
       "hours": 41.5,
-      "cumulative_pct": 85.0,
+      "cumulative_pct": 84.8,
       "rank": 22
     },
     {
       "name": "Noble Fates",
       "hours": 36.4,
-      "cumulative_pct": 85.6,
+      "cumulative_pct": 85.5,
       "rank": 23
     },
     {
       "name": "Grand Theft Auto IV: The Complete Edition",
       "hours": 33.3,
-      "cumulative_pct": 86.3,
+      "cumulative_pct": 86.1,
       "rank": 24
     },
     {
       "name": "Inscryption",
       "hours": 31.8,
-      "cumulative_pct": 86.8,
+      "cumulative_pct": 86.7,
       "rank": 25
     },
     {
       "name": "Age of Empires IV: Anniversary Edition",
       "hours": 29.3,
-      "cumulative_pct": 87.4,
+      "cumulative_pct": 87.3,
       "rank": 26
     },
     {
       "name": "Battle Brothers",
       "hours": 28.8,
-      "cumulative_pct": 87.9,
+      "cumulative_pct": 87.8,
       "rank": 27
     },
     {
       "name": "The Elder Scrolls V: Skyrim Special Edition",
       "hours": 28.5,
-      "cumulative_pct": 88.4,
+      "cumulative_pct": 88.3,
       "rank": 28
     },
     {
       "name": "Mount & Blade: Warband",
       "hours": 27.9,
-      "cumulative_pct": 89.0,
+      "cumulative_pct": 88.8,
       "rank": 29
     },
     {
       "name": "R.E.P.O.",
       "hours": 27.3,
-      "cumulative_pct": 89.5,
+      "cumulative_pct": 89.3,
       "rank": 30
     },
     {
       "name": "Noita",
       "hours": 25.8,
-      "cumulative_pct": 89.9,
+      "cumulative_pct": 89.8,
       "rank": 31
     },
     {
       "name": "Middle-earth™: Shadow of War™",
       "hours": 22.5,
-      "cumulative_pct": 90.4,
+      "cumulative_pct": 90.2,
       "rank": 32
     },
     {
       "name": "Sid Meier's Civilization VI",
       "hours": 21.6,
-      "cumulative_pct": 90.8,
+      "cumulative_pct": 90.6,
       "rank": 33
     },
     {
       "name": "Schedule I",
       "hours": 21.6,
-      "cumulative_pct": 91.2,
+      "cumulative_pct": 91.0,
       "rank": 34
     },
     {
       "name": "Enshrouded",
       "hours": 21.0,
-      "cumulative_pct": 91.5,
+      "cumulative_pct": 91.4,
       "rank": 35
     },
     {
       "name": "RUNNING WITH RIFLES",
       "hours": 19.6,
-      "cumulative_pct": 91.9,
+      "cumulative_pct": 91.8,
       "rank": 36
     },
     {
       "name": "Cities: Skylines",
       "hours": 18.4,
-      "cumulative_pct": 92.2,
+      "cumulative_pct": 92.1,
       "rank": 37
     },
     {
       "name": "Medieval Dynasty",
       "hours": 18.1,
-      "cumulative_pct": 92.6,
+      "cumulative_pct": 92.4,
       "rank": 38
     },
     {
       "name": "Escape From Duckov",
       "hours": 17.6,
-      "cumulative_pct": 92.9,
+      "cumulative_pct": 92.8,
       "rank": 39
     },
     {
       "name": "Sniper Elite 4",
       "hours": 17.5,
-      "cumulative_pct": 93.2,
+      "cumulative_pct": 93.1,
       "rank": 40
     },
     {
       "name": "Thronefall",
       "hours": 14.8,
-      "cumulative_pct": 93.5,
+      "cumulative_pct": 93.4,
       "rank": 41
     },
     {
       "name": "Deadlock",
       "hours": 14.6,
-      "cumulative_pct": 93.8,
+      "cumulative_pct": 93.6,
       "rank": 42
+    },
+    {
+      "name": "Slay the Spire 2",
+      "hours": 13.1,
+      "cumulative_pct": 93.9,
+      "rank": 43
     },
     {
       "name": "Oriental Empires",
       "hours": 12.9,
-      "cumulative_pct": 94.0,
-      "rank": 43
+      "cumulative_pct": 94.1,
+      "rank": 44
     },
     {
       "name": "Inside the Backrooms",
       "hours": 10.8,
-      "cumulative_pct": 94.2,
-      "rank": 44
+      "cumulative_pct": 94.3,
+      "rank": 45
     },
     {
       "name": "Bad North: Jotunn Edition",
       "hours": 10.7,
-      "cumulative_pct": 94.4,
-      "rank": 45
+      "cumulative_pct": 94.5,
+      "rank": 46
     },
     {
       "name": "Don't Starve Together",
       "hours": 10.5,
-      "cumulative_pct": 94.6,
-      "rank": 46
+      "cumulative_pct": 94.7,
+      "rank": 47
     },
     {
       "name": "Super Auto Pets",
       "hours": 9.1,
-      "cumulative_pct": 94.8,
-      "rank": 47
-    },
-    {
-      "name": "Rogue: Genesia",
-      "hours": 8.5,
       "cumulative_pct": 94.9,
       "rank": 48
     },
     {
-      "name": "The Farmer Was Replaced",
-      "hours": 8.4,
-      "cumulative_pct": 95.1,
+      "name": "Rogue: Genesia",
+      "hours": 8.5,
+      "cumulative_pct": 95.0,
       "rank": 49
     },
     {
-      "name": "Crashlands",
-      "hours": 8.2,
+      "name": "The Farmer Was Replaced",
+      "hours": 8.4,
       "cumulative_pct": 95.2,
       "rank": 50
     },
     {
-      "name": "Content Warning",
-      "hours": 7.8,
-      "cumulative_pct": 95.4,
+      "name": "Crashlands",
+      "hours": 8.2,
+      "cumulative_pct": 95.3,
       "rank": 51
     },
     {
-      "name": "Aimlabs",
-      "hours": 7.7,
+      "name": "Content Warning",
+      "hours": 7.8,
       "cumulative_pct": 95.5,
       "rank": 52
     },
     {
-      "name": "Need for Speed™ Payback",
-      "hours": 7.5,
-      "cumulative_pct": 95.7,
+      "name": "Aimlabs",
+      "hours": 7.7,
+      "cumulative_pct": 95.6,
       "rank": 53
     },
     {
-      "name": "Tom Clancy's Rainbow Six Siege",
-      "hours": 7.4,
+      "name": "Need for Speed™ Payback",
+      "hours": 7.5,
       "cumulative_pct": 95.8,
       "rank": 54
     },
     {
-      "name": "Thief Simulator",
+      "name": "Tom Clancy's Rainbow Six Siege",
       "hours": 7.4,
       "cumulative_pct": 95.9,
       "rank": 55
     },
     {
-      "name": "Halo: The Master Chief Collection",
-      "hours": 7.3,
-      "cumulative_pct": 96.1,
+      "name": "Thief Simulator",
+      "hours": 7.4,
+      "cumulative_pct": 96.0,
       "rank": 56
     },
     {
-      "name": "Goobies",
-      "hours": 7.2,
+      "name": "Halo: The Master Chief Collection",
+      "hours": 7.3,
       "cumulative_pct": 96.2,
       "rank": 57
     },
     {
-      "name": "Forza Horizon 4",
-      "hours": 6.9,
+      "name": "Goobies",
+      "hours": 7.2,
       "cumulative_pct": 96.3,
       "rank": 58
     },
     {
-      "name": "Left 4 Dead 2",
-      "hours": 6.8,
-      "cumulative_pct": 96.5,
+      "name": "Forza Horizon 4",
+      "hours": 6.9,
+      "cumulative_pct": 96.4,
       "rank": 59
     },
     {
-      "name": "Mount & Blade: With Fire and Sword",
+      "name": "Left 4 Dead 2",
       "hours": 6.8,
       "cumulative_pct": 96.6,
       "rank": 60
     },
     {
-      "name": "Crosshair X",
-      "hours": 6.4,
+      "name": "Mount & Blade: With Fire and Sword",
+      "hours": 6.8,
       "cumulative_pct": 96.7,
       "rank": 61
     },
     {
-      "name": "Primitive Society Simulator",
-      "hours": 6.3,
+      "name": "Crosshair X",
+      "hours": 6.4,
       "cumulative_pct": 96.8,
       "rank": 62
     },
     {
-      "name": "Wolfenstein II: The New Colossus",
-      "hours": 5.7,
+      "name": "Primitive Society Simulator",
+      "hours": 6.3,
       "cumulative_pct": 96.9,
       "rank": 63
     },
     {
-      "name": "Grand Theft Auto V Enhanced",
-      "hours": 5.6,
+      "name": "Wolfenstein II: The New Colossus",
+      "hours": 5.7,
       "cumulative_pct": 97.0,
       "rank": 64
     },
     {
-      "name": "The Forest",
-      "hours": 5.3,
+      "name": "Grand Theft Auto V Enhanced",
+      "hours": 5.6,
       "cumulative_pct": 97.1,
       "rank": 65
     },
     {
-      "name": "Slay the Spire 2",
+      "name": "The Forest",
       "hours": 5.3,
       "cumulative_pct": 97.2,
       "rank": 66
@@ -2898,7 +2995,7 @@
     {
       "name": "Day of Defeat: Source",
       "hours": 2.3,
-      "cumulative_pct": 99.1,
+      "cumulative_pct": 99.0,
       "rank": 93
     },
     {
@@ -2958,7 +3055,7 @@
     {
       "name": "PAYDAY 2",
       "hours": 2.0,
-      "cumulative_pct": 99.5,
+      "cumulative_pct": 99.4,
       "rank": 103
     },
     {
@@ -3018,7 +3115,7 @@
     {
       "name": "War of Banners Demo",
       "hours": 1.2,
-      "cumulative_pct": 99.8,
+      "cumulative_pct": 99.7,
       "rank": 113
     },
     {
@@ -3054,7 +3151,7 @@
     {
       "name": "Pacify",
       "hours": 0.8,
-      "cumulative_pct": 99.9,
+      "cumulative_pct": 99.8,
       "rank": 119
     },
     {
@@ -3120,7 +3217,7 @@
     {
       "name": "KUNKUN Defender",
       "hours": 0.4,
-      "cumulative_pct": 100.0,
+      "cumulative_pct": 99.9,
       "rank": 130
     },
     {
@@ -3142,76 +3239,82 @@
       "rank": 133
     },
     {
-      "name": "Dagon",
+      "name": "Slay the Spire",
       "hours": 0.2,
       "cumulative_pct": 100.0,
       "rank": 134
     },
     {
-      "name": "Alien Swarm: Reactive Drop",
+      "name": "Dagon",
       "hours": 0.2,
       "cumulative_pct": 100.0,
       "rank": 135
     },
     {
-      "name": "Super Bunny Man",
+      "name": "Alien Swarm: Reactive Drop",
       "hours": 0.2,
       "cumulative_pct": 100.0,
       "rank": 136
     },
     {
-      "name": "X4: Foundations",
+      "name": "Super Bunny Man",
       "hours": 0.2,
       "cumulative_pct": 100.0,
       "rank": 137
     },
     {
-      "name": "VTube Studio",
+      "name": "X4: Foundations",
       "hours": 0.2,
       "cumulative_pct": 100.0,
       "rank": 138
     },
     {
-      "name": "iREC",
-      "hours": 0.1,
+      "name": "VTube Studio",
+      "hours": 0.2,
       "cumulative_pct": 100.0,
       "rank": 139
     },
     {
-      "name": "Rubber Bandits: Summer Prologue",
+      "name": "iREC",
       "hours": 0.1,
       "cumulative_pct": 100.0,
       "rank": 140
     },
     {
-      "name": "Celestial Empire Playtest",
+      "name": "Rubber Bandits: Summer Prologue",
       "hours": 0.1,
       "cumulative_pct": 100.0,
       "rank": 141
     },
     {
-      "name": "Call of Duty®",
+      "name": "Celestial Empire Playtest",
       "hours": 0.1,
       "cumulative_pct": 100.0,
       "rank": 142
     },
     {
-      "name": "Stronghold Crusader Extreme HD",
+      "name": "Call of Duty®",
       "hours": 0.1,
       "cumulative_pct": 100.0,
       "rank": 143
     },
     {
-      "name": "Tom Clancy's Rainbow Six Siege - Test Server",
+      "name": "Stronghold Crusader Extreme HD",
       "hours": 0.1,
       "cumulative_pct": 100.0,
       "rank": 144
     },
     {
+      "name": "Tom Clancy's Rainbow Six Siege - Test Server",
+      "hours": 0.1,
+      "cumulative_pct": 100.0,
+      "rank": 145
+    },
+    {
       "name": "Dark and Darker Playtest",
       "hours": 0.0,
       "cumulative_pct": 100.0,
-      "rank": 145
+      "rank": 146
     }
   ],
   "weekday": [
@@ -3233,7 +3336,7 @@
     },
     {
       "day": "Fri",
-      "minutes": 523
+      "minutes": 1009
     },
     {
       "day": "Sat",
@@ -3246,9 +3349,9 @@
   ],
   "stats": {
     "total_games": 175,
-    "played_games": 145,
-    "dust_rate": 17.1,
-    "never_played": 30,
+    "played_games": 146,
+    "dust_rate": 16.6,
+    "never_played": 29,
     "loyalty_score": 40,
     "loyalty_label": "Explorer",
     "peak_day": {
@@ -3265,7 +3368,7 @@
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1863.8,
+      "playtime_hours": 1863.9,
       "total": 1,
       "unlocked": 1,
       "pct": 100,
@@ -3279,7 +3382,7 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 534.0,
+      "playtime_hours": 534.1,
       "total": 12,
       "unlocked": 11,
       "pct": 92,
@@ -3830,152 +3933,152 @@
       {
         "source": 730,
         "target": 230190,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 730,
         "target": 365360,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 730,
         "target": 892970,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 730,
         "target": 3912710,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 230190,
         "target": 365360,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 230190,
         "target": 892970,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 230190,
         "target": 1172470,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 230190,
         "target": 2213700,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 230190,
         "target": 3912710,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 365360,
         "target": 892970,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 365360,
         "target": 3912710,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 892970,
         "target": 1172470,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 892970,
         "target": 2213700,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 892970,
         "target": 3912710,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 1172470,
         "target": 2213700,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 1172470,
         "target": 3912710,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 2213700,
         "target": 3912710,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 730,
         "target": 261550,
-        "strength": 10
+        "strength": 11
       },
       {
         "source": 730,
         "target": 1876880,
-        "strength": 10
+        "strength": 11
       },
       {
         "source": 230190,
         "target": 261550,
-        "strength": 10
+        "strength": 11
       },
       {
         "source": 230190,
         "target": 1876880,
-        "strength": 10
+        "strength": 11
       },
       {
         "source": 261550,
         "target": 365360,
-        "strength": 10
+        "strength": 11
       },
       {
         "source": 261550,
         "target": 892970,
-        "strength": 10
+        "strength": 11
       },
       {
         "source": 261550,
         "target": 1172470,
-        "strength": 10
+        "strength": 11
       },
       {
         "source": 261550,
         "target": 1876880,
-        "strength": 10
+        "strength": 11
       },
       {
         "source": 261550,
         "target": 2213700,
-        "strength": 10
+        "strength": 11
       }
     ]
   },
@@ -3983,7 +4086,7 @@
     {
       "genre": "Action",
       "games": 31,
-      "hours": 4245.6
+      "hours": 4245.7
     },
     {
       "genre": "Free To Play",
@@ -4002,13 +4105,13 @@
     },
     {
       "genre": "Indie",
-      "games": 24,
-      "hours": 1240.2
+      "games": 25,
+      "hours": 1253.3
     },
     {
       "genre": "Strategy",
-      "games": 21,
-      "hours": 1030.0
+      "games": 22,
+      "hours": 1043.1
     },
     {
       "genre": "Simulation",
@@ -4017,8 +4120,8 @@
     },
     {
       "genre": "Early Access",
-      "games": 8,
-      "hours": 292.4
+      "games": 9,
+      "hours": 305.4
     },
     {
       "genre": "Animation & Modeling",
@@ -4066,19 +4169,19 @@
       },
       {
         "name": "Sintopia",
-        "hours": 24.0
+        "hours": 16.8
+      },
+      {
+        "name": "Slay the Spire 2",
+        "hours": 13.1
       },
       {
         "name": "Counter-Strike 2",
-        "hours": 10.0
+        "hours": 10.1
       },
       {
         "name": "Apex Legends",
         "hours": 9.2
-      },
-      {
-        "name": "Primitive Society Simulator",
-        "hours": 6.3
       }
     ]
   },
@@ -4093,18 +4196,128 @@
         "2026-05-03",
         "2026-05-02"
       ],
-      "total_hours": 43.6,
-      "games_count": 7,
+      "total_hours": 51.7,
+      "games_count": 8,
       "top_games": [
         "Mount & Blade II: Bannerlord",
-        "Counter-Strike 2",
         "Slay the Spire 2",
+        "Counter-Strike 2",
         "Apex Legends",
         "Battle Brothers"
       ]
     }
   ],
   "game_updates": [
+    {
+      "appid": 440900,
+      "game_name": "Conan Exiles Enhanced",
+      "title": "May Hotfix 1.0.2",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502815263",
+      "date": 1778248888,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "We have a new hotfix for you today that addresses the following issues:Fixed an issue where favorite servers would not be saved between sessions.Fixed an issue where filtering servers by favorites showed all servers as favorites.Dedicated servers can opt-in to send us crash reports with the launch argument -SendUnattendedBugReportsServer admins can launch with this option if experiencing server crashes to give us information to investigateFix an issue that was preventing servers with an IPv6 address from showing up in the server browserFixed an issue that was preventing the client from showing previously played servers"
+    },
+    {
+      "appid": 2868840,
+      "game_name": "Slay the Spire 2",
+      "title": "New Slay the Spire 2 update deletes its most controversial boss fight",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1832065502814953",
+      "date": 1778242585,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Patch Notes",
+      "contents": "The Doormaker is dead. Mega Crit's new <strong>Slay the Spire 2</strong> update has just landed on the beta branch, and the developer has finally made the decision to put its most divisive enemy to bed and start fresh with a completely new creation. These latest StS 2 patch notes also introduce the first incarnation of the Bestiary, and a fresh helping of balance changes for the <a href=\"https://www.pcgamesn.com/best-roguelike-games-pc\">roguelike</a> deckbuilder, led by some fairly notable Defect buffs. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/slay-the-spire-2/update-doormaker-removed\">New Slay the Spire 2 update deletes its most controversial boss fight</a> RELATED LINKS: <a href=\"https://www.pcgamesn.com/slay-the-spire-2/update-patch-notes-ironclad-neow\">New Slay the Spire 2 update reworks Ironclad's most unpopular card and makes lower Ascensions easier</a> <a href=\"https://www.pcgamesn.com/slay-the-spire-2/roadmap-neowsletter-april-2026\">The new Slay the Spire 2 roadmap has no dates: \"Exacting deadlines produce sloppy, uninspired work\"</a> <a href=\"https://www.pcgamesn.com/slay-the-spire-2/patch-notes-live-april-2026\">Slay the Spire 2 patch notes arrive for all, meaning...</a>"
+    },
+    {
+      "appid": 544810,
+      "game_name": "KARDS - The WWII Card Game",
+      "title": "KARDS Permanent Card Pool List",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502814709",
+      "date": 1778238019,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "{STEAM_CLAN_IMAGE}/34861374/94bcfbef7dc7c64f7e60cebd9eee5d169c216ace.jpg Hello Commanders, Today we're publishing the full list of cards in the permanent pool - the strategic backbone of KARDS under the new rotation system. The permanent pool is the set of cards that will never rotate out of the active pool. These are the cards you can safely craft, build around, and rely on regardless of what each new expansion brings. With this expanded core now in place, the active pool will hold between 800 and 900 cards at all times, giving every Commander a stable and diverse foundation for long-term deckbuilding. We’ve covered the full details of how the new rotation system works in our recent dev blog. If you missed that briefing, you can catch up here: New Rotation System - Dev Blog But first - ne..."
+    },
+    {
+      "appid": 2016590,
+      "game_name": "Dark and Darker",
+      "title": "Early Access Hotfix #114-1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502814049",
+      "date": 1778218369,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Greetings, Adventurers. We’d like to inform you of the latest changes applied in this update.IRONMACEBugfixes:Fixed an issue where a specific pattern of the Abomination could cause a crash.Fixed an issue where certain Quests in the Merchant's Quest Log popup could be missing or only partially displayed.Fixed an issue where, due to Secure Option compatibility, High-Roller and Arena could not be played on Steam Deck and Linux environments."
+    },
+    {
+      "appid": 2868840,
+      "game_name": "Slay the Spire 2",
+      "title": "Beta Patch Notes - v0.105.0",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502813730",
+      "date": 1778201610,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "It's beta patch time! For those new to Slay the Spire 2, keep in mind that these changes are pushed to our Beta branch to ensure stability, then eventually merged into the main branch. For those who play using controller, we highly recommend using the Beta branch as we're trying to resolve crashes related to selection screens when playing via controller/Steam Deck. While our focus is still on fixing crashes and ensuring the game runs on as many hardware configurations as possible, let's look at some of this patch's highlights. Bi-Weekly Patching As you've probably noticed, we're moving to patch every 2 weeks rather than weekly as outlined in our Early Access Disclaimer. This may be a bit surprising as the first game patched weekly, but it was a lot of work so it really sucked. Anyways, the..."
+    },
+    {
+      "appid": 714010,
+      "game_name": "Aimlabs",
+      "title": "THIS is how to aim train based on your weaknesses...",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502813694",
+      "date": 1778199278,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "You played the Aimlabs Benchmarks and found your weak spots. Now what? This video turns your Benchmarks results into an actual training plan with specific tasks for every subskill, structured routines, and progressive overload principles that actually work.Stop random grinding. Learn how to build a real aim training routine using isolation, specificity, and progressive overload - the same principles that make gym training effective. We break down exactly which tasks to play for each Tap, Track, and Switch subskill, how to structure your sessions, and when to increase difficulty.This complete Benchmarks guide breaks down all 3 main categories, every subskill, what each challenge tests, how the scoring system works, and what your rank actually means. Learn how to read your results and build ..."
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "NIGHTMODE II Music Kits",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502813483",
+      "date": 1778191843,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "https://clan.akamai.steamstatic.com/images/3381077/6cfbf7066cc7fdedd3fc9cfd3a46a131d195d4ac.png Today we are releasing six new music kits with NIGHTMODE Records. NIGHTMODE II Music Kits are now available in the STORE tab, featuring: ALRT, DOPAMINE HIT Altare, Change My Mind borne, Give It To Me Pirapus, EVERYNITE Repiet & Julia Kleijn, On And On ShockOne, Voices Alongside new music kits, we've continued updating Cache and made other miscellaneous fixes. Release Notes for today's update can be found here. "
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "Counter-Strike 2 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502813482",
+      "date": 1778191777,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "\\CacheFixed various holes in map.Simplified grenade clipping in various areas.Fixed sounds and surfacetypes for various materials.Orange wire spool at Sandbags has been exchanged for white wire.\\NIGHTMODE II Music Kits are now available for purchase in standard and StatTrak versions through the STORE tab.\\Fixed progressive refinement rendering Source Film Maker.\\User Viewmodel FOV now correctly networks to remote clients.Adjusted player model occlusion bounds.Fixed ragdolls missing death velocity when shot in specific body locations.Minor adjustments to ground smoothing transitions when leaving the ground and when landing.Fixed a case where post-processing transitions weren't smooth (e.g. at the end of freeze time).Fixed a case where map guides for Ancient wouldn't load in the nighttime ve..."
+    },
+    {
+      "appid": 304930,
+      "game_name": "Unturned",
+      "title": "3.26.3.2 Patch Notes",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502813383",
+      "date": 1778187656,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "FixedBypass_No_Building_Zones ignored by several redundant barricade-related checks."
+    },
+    {
+      "appid": 494840,
+      "game_name": "UBOAT",
+      "title": "2026.1 Patch 17",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502813363",
+      "date": 1778187111,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Type IX:- Fix: Missing geometry under the stern loading hatch for loading torpedoes. - Fix: Forward deck gun was incorrectly reported on the Overview screen. Type VII:- Fix: Resolved glowing texture error on Turm 0 on Type VII U-boats near ports.- Fix: Navigation lights stopped to work on Turm 0 on Type VII. UI:- Slider in time skip UI is now smoothly animated instead of jumping in steps when time skipping is used on the open sea. - Fix: If time skipping was initiated while any story sequence was open (for example during Python story sequence or after meeting a milk cow), it was breaking the UI and the time skip didn't work. - Fix: Survivors from sunk NPC U-boats had a placeholder white icon on the list where usual..."
+    },
     {
       "appid": 1466860,
       "game_name": "Age of Empires IV: Anniversary Edition",
@@ -4258,116 +4471,6 @@
       "feedlabel": "Community Announcements",
       "update_type": "Hotfix",
       "contents": "Bug Fixes Fixed creatures like Chester that follow a carried item still following the holder of the item when the item is dropped from a distance. Fixed crash when using shift-click to transfer items out of containers like Expansive Storage Unit, Ammo Pouch, Battle Call Canister, Picnic Casket, etc. Fixed client prediction sometimes failing after transforming into Wonkey. Fixed Exploiterators and Auto-Grabbers stopping from following WX-78 after minigames. Fixed mutating Puffins being invisible. Fixed Possessed Chassis getting stuck when they’re unable to find a suitable spot to attack. Fixed Possessed Chassis trying to use Zaptrocuter on creatures that can’t be hit by its projectile. "
-    },
-    {
-      "appid": 1172470,
-      "game_name": "Apex Legends",
-      "title": "Apex Legends: Latest Update - 05/05/2026, 2:00pm PT",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155581392",
-      "date": 1778015010,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "⚠️INVESTIGATING:We are looking into an issue preventing players from purchasing the Ultimate+ Battle Pass tier on any Xbox platform. Our current recommended workaround is to try from the Microsoft Store, where possible.We are also tracking a crash impacting Xbox Series machines. We have located the issue and are working towards a fix.We're hoping to have these issues resolved soon and will relay updates as they come."
-    },
-    {
-      "appid": 1172470,
-      "game_name": "Apex Legends",
-      "title": "Matchmaking Outage - 05/05/2026 11:30am PT",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155581061",
-      "date": 1778005857,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "UPDATE - 1:41pm PT Our team has located and resolved the issues preventing players from matchmaking. Everyone should now be able to join matches in all game modes without issue!Thank you again for your patience. Investigating: We are working to resolve an issue preventing players from Matchmaking into games. We will provide more information as the situation unfolds. Thank you for your patience. "
-    },
-    {
-      "appid": 1172470,
-      "game_name": "Apex Legends",
-      "title": "Apex Legends: Latest Update - 05/05/2026",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155580745",
-      "date": 1778000518,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "ADJUSTED:We are implementing 4.5 hour map rotations in Ranked for all regions!After testing 4.5 hour rotations in our East Asia servers late in Season 28, we believe implementing this cadence in all servers will have a positive impact on the playerbase by enabling more map variety. This means players can engage on their favourite maps more often, or feel less “trapped” on their least favourite maps.During the initial test we saw positive player sentiment regarding the opportunity to potentially play on multiple maps in a single play session and we’re excited to provide this opportunity to all regions.This is a permanent change, though we may continue to test slight variances in rotation duration to pinpoint the most optimal timelines!"
-    },
-    {
-      "appid": 304930,
-      "game_name": "Unturned",
-      "title": "3.26.3.1 Patch Notes",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155580562",
-      "date": 1777996889,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "ChangelogAdded\"Prevent Level Skill Overrides\" option for enabling leveling/skills on maps that disable it.ChangedLevels with high numbers of volumes can opt-in to \"Enable_Static_Volumes\" which improves performance of volume overlap checks. (Thanks RBMKBlaze, Ghosticollis, and MCrow!)Separated \"No Incoming Damage\" safezone option from \"No Weapons\" to allow attacking safezone campers.Fixed2D Scopes with Dual Rendering Off not working with California 2 custom scope shaders. (Thanks AngelAbov3!)Peacemaker suitcase timer for left-handed characters. (Thanks mileslucas169!)Press vest text for left-handed characters. (Thanks oddowo and CPL!)Warning about UFO mythical auto random seed off. (Thanks Dizzpie!)California 2 shirt/pants missing 3D preview model. (Thanks TSB!)"
-    },
-    {
-      "appid": 359550,
-      "game_name": "Tom Clancy's Rainbow Six Siege",
-      "title": "Y11S1.3 PATCH NOTES",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155579580",
-      "date": 1777973984,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Major Update",
-      "contents": "See the upcoming changes to Rainbow Six Siege with the release of Y11S1.3.BALANCINGThese are small adjustments that don’t aim to alter an Operator’s overall power level or flexibility. Instead, they focus on polishing gameplay details, improving consistency, and enhancing quality-of-life without shifting the meta. Our goal is to maintain a steady stream of these refinements alongside major updates, helping the game consistently and constantly evolve and improve.CAVEIRAIncreased Silent Step's maximum duration to enhance flanking potential.SILENT STEPMax. resources: Increased to 15 seconds (from 12)Total refill time: Increased to 15 seconds (from 12)KAIDReduced the activation time of the Electroclaw for more responsive counterplay and mid-round adjustments.RTILA ELECTROCLAWActivation time: R..."
-    },
-    {
-      "appid": 322330,
-      "game_name": "Don't Starve Together",
-      "title": "Hotfix 726747",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155579264",
-      "date": 1777963328,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Changes Auto-Grabber can now deposit matching items into Expansive Storage Units (activated via Spatializer Circuits). Expansive Storage Units now inherit WX-78’s preserver rates from active Refrigerant and Thermal Circuits. Blocking Circuit ability will protect against thief sources such as Frogs, Bearger, Powder Monkey, Otter, etc. Other players’ Exploiterators will now appear faded out if there are too many WX-78 players using them on your screen. Bug Fixes Fixed Auto-Grabber’s range boost needing Warm Standby even when following WX-78. Fixed Possessed Chassis trying to walk forward to its target when waiting for projectiles to return to the Gloomerang. Fixed Possessed Chassis sometimes crashing when their leader tries to row. Fixed Cookie Cutters phasing through a boat when electrocute..."
-    },
-    {
-      "appid": 1172470,
-      "game_name": "Apex Legends",
-      "title": "Overclocked Patch Notes",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155578176",
-      "date": 1777915911,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Overclocked is locked and loaded and ready to go! In Season 29 of the Apex Games we are not only focused on delivering exciting, new seasonal content, but addressing key feedback from our player-base. A brand new Legend, Axle, joins the fray and this combat racer is bound to shake things up. Vantage, Conduit and Ash are getting buffs to keep up with the breakneck pace. We’re introducing Deathbox Respawns and Chained Healing to get you and your teammates back into the fight sooner. The starting line approaches, so get ready to roll in Apex Legends: OVERCLOCKED.To get a quick overview of some of Overclocked’s main updates, check out our Highlights blog from last week. For a deep-dive into meta balancing, check out our seasonal Designer’s Notes. Read on for all the details about what’s happen..."
-    },
-    {
-      "appid": 1062090,
-      "game_name": "Timberborn",
-      "title": "Patch notes 2026-05-04 (experimental)",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577071",
-      "date": 1777890653,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Hello, everyone!Several new changes are now live on the experimental branch, including reduced sloshing, a fix to a possible reserve storage exploit, and some extra help for modders. Speaking of which: remember to join our first-ever Modding Competition by May 21 to win some sweet, sweet prizes!Misc.Reserve storage buildings must now be emptied before they can be deleted. ModsThe blend file with example models that we shared some time ago is now included in the game's StreamingAssets directory and will be automatically imported by the Modding Tools' assets import feature.Bug fixesMade further tweaks to the water simulation to prevent excessive sloshing.The Earth Recultivator’s construction site can now be correctly selected when placed on Impermeable Floor.Flow Sensors are now more precise..."
-    },
-    {
-      "appid": 494840,
-      "game_name": "UBOAT",
-      "title": "2026.1 Patch 16",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155575530",
-      "date": 1777816493,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Type IX: - Fix: It wasn't possible to open hatch from the engine room to the control room in FPP. Damage system: - Water inflow rate through hull breaches was considerably decreased to compensate for the fact that enemies are much better now at dropping depth charges and to some degree also hitting the U-boat with guns on the surface. Physics: - Fix: Ships with long and narrow shape like F-class destroyers could be thrown out of the water, if 140x time compression was used in the side view and they had their rudders turned fully. Resupply: - U-boat is now automatically stopped when cargo loading from another ship starts. - Fix: The ship from which cargo is loaded is also stopped for the duration of resupply. Some r..."
-    },
-    {
-      "appid": 220,
-      "game_name": "Half-Life 2",
-      "title": "You're not crazy, that one sewer puzzle in Half-Life 2 really was harder 22 years ago",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1831432155574762",
-      "date": 1777774743,
-      "feedname": "PC Gamer",
-      "feedlabel": "PC Gamer",
-      "update_type": "Update",
-      "contents": "YouTuber <a href=\"https://www.youtube.com/@1Ocelot/videos\">Ocelot</a>, who specializes in videos comparing different versions of games like <a href=\"https://www.youtube.com/watch?v=mVhg614-av8\">Silent Hill 3</a> and <a href=\"https://www.youtube.com/watch?v=kGargv8ikEU\">Resident Evil: Code Veronica</a>, recently took to analyzing different versions of Half-Life 2. Valve's FPS may not seem as fruitful a topic for dissection, but there are more differences in these builds than you might think... <a href=\"https://www.pcgamer.com/games/fps/youre-not-crazy-that-one-sewer-puzzle-in-half-life-2-really-did-used-to-be-harder/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
     }
   ]
 }
