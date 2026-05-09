@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-05-09T01:50:19.538911+08:00",
+  "updated_at": "2026-05-10T01:38:46.954649+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
     "online": true,
-    "currently_playing": "",
+    "currently_playing": "Slay the Spire 2",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/0c36cd0464c002f4a34041c76d11a6699ab08dd1_full.jpg"
   },
   "milestone": {
-    "total_hours": 5416.1,
-    "movies": 2708,
-    "books": 902,
-    "walking_km": 27080
+    "total_hours": 5418.4,
+    "movies": 2709,
+    "books": 903,
+    "walking_km": 27092
   },
   "game_cloud": [
     {
@@ -500,6 +500,18 @@
       ]
     },
     {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtime_hours": 15.4,
+      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
+      "rtime_last_played": 1778347904,
+      "genres": [
+        "Indie",
+        "Strategy",
+        "Early Access"
+      ]
+    },
+    {
       "appid": 2239150,
       "name": "Thronefall",
       "playtime_hours": 14.8,
@@ -519,18 +531,6 @@
       "rtime_last_played": 1727433685,
       "genres": [
         "Action"
-      ]
-    },
-    {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtime_hours": 13.1,
-      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
-      "rtime_last_played": 1778250308,
-      "genres": [
-        "Indie",
-        "Strategy",
-        "Early Access"
       ]
     },
     {
@@ -1403,16 +1403,10 @@
       "playtime_forever_hours": 302.1
     },
     {
-      "appid": 2213700,
-      "name": "Sintopia",
-      "playtime_2weeks_hours": 16.8,
-      "playtime_forever_hours": 41.5
-    },
-    {
       "appid": 2868840,
       "name": "Slay the Spire 2",
-      "playtime_2weeks_hours": 13.1,
-      "playtime_forever_hours": 13.1
+      "playtime_2weeks_hours": 15.4,
+      "playtime_forever_hours": 15.4
     },
     {
       "appid": 730,
@@ -1421,9 +1415,15 @@
       "playtime_forever_hours": 1863.9
     },
     {
+      "appid": 2213700,
+      "name": "Sintopia",
+      "playtime_2weeks_hours": 8.2,
+      "playtime_forever_hours": 41.5
+    },
+    {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_2weeks_hours": 9.2,
+      "playtime_2weeks_hours": 6.3,
       "playtime_forever_hours": 534.1
     },
     {
@@ -1476,6 +1476,13 @@
     }
   ],
   "heatmap": {
+    "2026-05-10": {
+      "playtime_minutes": 139,
+      "online_minutes": 139,
+      "games": {
+        "Slay the Spire 2": 139
+      }
+    },
     "2026-05-08": {
       "playtime_minutes": 564,
       "online_minutes": 564,
@@ -1821,7 +1828,7 @@
       "dow": 4,
       "hour": 16,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 105.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -1833,7 +1840,7 @@
       "dow": 4,
       "hour": 17,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 120.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -1845,7 +1852,7 @@
       "dow": 4,
       "hour": 18,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 120.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -1857,7 +1864,7 @@
       "dow": 4,
       "hour": 19,
       "count": 15.0,
-      "recent_count": 15.0,
+      "recent_count": 0.0,
       "all_time_count": 70.0,
       "game_minutes": 15.0,
       "online_minutes": 0.0,
@@ -1869,7 +1876,7 @@
       "dow": 4,
       "hour": 20,
       "count": 34.9,
-      "recent_count": 34.9,
+      "recent_count": 0.0,
       "all_time_count": 90.0,
       "game_minutes": 34.9,
       "online_minutes": 0.0,
@@ -1882,7 +1889,7 @@
       "dow": 4,
       "hour": 21,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 119.9,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -1894,7 +1901,7 @@
       "dow": 4,
       "hour": 22,
       "count": 30.1,
-      "recent_count": 30.1,
+      "recent_count": 0.0,
       "all_time_count": 90.1,
       "game_minutes": 30.1,
       "online_minutes": 0.0,
@@ -2375,7 +2382,7 @@
       "dow": 4,
       "hour": 2,
       "count": 20.0,
-      "recent_count": 20.0,
+      "recent_count": 0.0,
       "all_time_count": 20.0,
       "game_minutes": 20.0,
       "online_minutes": 0.0,
@@ -2387,7 +2394,7 @@
       "dow": 4,
       "hour": 3,
       "count": 5.0,
-      "recent_count": 5.0,
+      "recent_count": 0.0,
       "all_time_count": 5.0,
       "game_minutes": 5.0,
       "online_minutes": 0.0,
@@ -2399,7 +2406,7 @@
       "dow": 4,
       "hour": 13,
       "count": 20.0,
-      "recent_count": 20.0,
+      "recent_count": 0.0,
       "all_time_count": 20.0,
       "game_minutes": 20.0,
       "online_minutes": 0.0,
@@ -2412,7 +2419,7 @@
       "dow": 4,
       "hour": 14,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 60.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -2424,18 +2431,54 @@
       "dow": 4,
       "hour": 15,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 60.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
       "games": {
         "Slay the Spire 2": 60.0
       }
+    },
+    {
+      "dow": 5,
+      "hour": 23,
+      "count": 35.0,
+      "recent_count": 35.0,
+      "all_time_count": 35.0,
+      "game_minutes": 35.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 35.0
+      }
+    },
+    {
+      "dow": 6,
+      "hour": 0,
+      "count": 54.9,
+      "recent_count": 54.9,
+      "all_time_count": 54.9,
+      "game_minutes": 54.9,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 54.9
+      }
+    },
+    {
+      "dow": 6,
+      "hour": 1,
+      "count": 38.8,
+      "recent_count": 38.8,
+      "all_time_count": 38.8,
+      "game_minutes": 38.8,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 38.8
+      }
     }
   ],
   "platform": {
     "Windows": 5389.9,
-    "Mac": 15.9,
+    "Mac": 18.2,
     "Linux": 0.0,
     "Steam Deck": 0.0
   },
@@ -2491,7 +2534,7 @@
     {
       "name": "Blender",
       "hours": 109.5,
-      "cumulative_pct": 70.6,
+      "cumulative_pct": 70.5,
       "rank": 9
     },
     {
@@ -2503,7 +2546,7 @@
     {
       "name": "Wartales",
       "hours": 89.2,
-      "cumulative_pct": 74.1,
+      "cumulative_pct": 74.0,
       "rank": 11
     },
     {
@@ -2527,7 +2570,7 @@
     {
       "name": "PUBG: BATTLEGROUNDS",
       "hours": 52.6,
-      "cumulative_pct": 78.8,
+      "cumulative_pct": 78.7,
       "rank": 15
     },
     {
@@ -2545,7 +2588,7 @@
     {
       "name": "Palworld",
       "hours": 49.3,
-      "cumulative_pct": 81.6,
+      "cumulative_pct": 81.5,
       "rank": 18
     },
     {
@@ -2557,13 +2600,13 @@
     {
       "name": "Kenshi",
       "hours": 45.7,
-      "cumulative_pct": 83.3,
+      "cumulative_pct": 83.2,
       "rank": 20
     },
     {
       "name": "Manor Lords",
       "hours": 42.8,
-      "cumulative_pct": 84.1,
+      "cumulative_pct": 84.0,
       "rank": 21
     },
     {
@@ -2593,13 +2636,13 @@
     {
       "name": "Age of Empires IV: Anniversary Edition",
       "hours": 29.3,
-      "cumulative_pct": 87.3,
+      "cumulative_pct": 87.2,
       "rank": 26
     },
     {
       "name": "Battle Brothers",
       "hours": 28.8,
-      "cumulative_pct": 87.8,
+      "cumulative_pct": 87.7,
       "rank": 27
     },
     {
@@ -2653,7 +2696,7 @@
     {
       "name": "RUNNING WITH RIFLES",
       "hours": 19.6,
-      "cumulative_pct": 91.8,
+      "cumulative_pct": 91.7,
       "rank": 36
     },
     {
@@ -2671,30 +2714,30 @@
     {
       "name": "Escape From Duckov",
       "hours": 17.6,
-      "cumulative_pct": 92.8,
+      "cumulative_pct": 92.7,
       "rank": 39
     },
     {
       "name": "Sniper Elite 4",
       "hours": 17.5,
-      "cumulative_pct": 93.1,
+      "cumulative_pct": 93.0,
       "rank": 40
+    },
+    {
+      "name": "Slay the Spire 2",
+      "hours": 15.4,
+      "cumulative_pct": 93.3,
+      "rank": 41
     },
     {
       "name": "Thronefall",
       "hours": 14.8,
-      "cumulative_pct": 93.4,
-      "rank": 41
-    },
-    {
-      "name": "Deadlock",
-      "hours": 14.6,
       "cumulative_pct": 93.6,
       "rank": 42
     },
     {
-      "name": "Slay the Spire 2",
-      "hours": 13.1,
+      "name": "Deadlock",
+      "hours": 14.6,
       "cumulative_pct": 93.9,
       "rank": 43
     },
@@ -3344,7 +3387,7 @@
     },
     {
       "day": "Sun",
-      "minutes": 246
+      "minutes": 385
     }
   ],
   "stats": {
@@ -3933,152 +3976,152 @@
       {
         "source": 730,
         "target": 230190,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 730,
         "target": 365360,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 730,
         "target": 892970,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 730,
         "target": 3912710,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 230190,
         "target": 365360,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 230190,
         "target": 892970,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 230190,
         "target": 1172470,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 230190,
         "target": 2213700,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 230190,
         "target": 3912710,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 365360,
         "target": 892970,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 365360,
         "target": 3912710,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 892970,
         "target": 1172470,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 892970,
         "target": 2213700,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 892970,
         "target": 3912710,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 1172470,
         "target": 2213700,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 1172470,
         "target": 3912710,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 2213700,
         "target": 3912710,
-        "strength": 13
+        "strength": 14
       },
       {
         "source": 730,
         "target": 261550,
-        "strength": 11
+        "strength": 12
       },
       {
         "source": 730,
         "target": 1876880,
-        "strength": 11
+        "strength": 12
       },
       {
         "source": 230190,
         "target": 261550,
-        "strength": 11
+        "strength": 12
       },
       {
         "source": 230190,
         "target": 1876880,
-        "strength": 11
+        "strength": 12
       },
       {
         "source": 261550,
         "target": 365360,
-        "strength": 11
+        "strength": 12
       },
       {
         "source": 261550,
         "target": 892970,
-        "strength": 11
+        "strength": 12
       },
       {
         "source": 261550,
         "target": 1172470,
-        "strength": 11
+        "strength": 12
       },
       {
         "source": 261550,
         "target": 1876880,
-        "strength": 11
+        "strength": 12
       },
       {
         "source": 261550,
         "target": 2213700,
-        "strength": 11
+        "strength": 12
       }
     ]
   },
@@ -4106,12 +4149,12 @@
     {
       "genre": "Indie",
       "games": 25,
-      "hours": 1253.3
+      "hours": 1255.6
     },
     {
       "genre": "Strategy",
       "games": 22,
-      "hours": 1043.1
+      "hours": 1045.4
     },
     {
       "genre": "Simulation",
@@ -4121,7 +4164,7 @@
     {
       "genre": "Early Access",
       "games": 9,
-      "hours": 305.4
+      "hours": 307.7
     },
     {
       "genre": "Animation & Modeling",
@@ -4168,46 +4211,79 @@
         "hours": 38.0
       },
       {
-        "name": "Sintopia",
-        "hours": 16.8
-      },
-      {
         "name": "Slay the Spire 2",
-        "hours": 13.1
+        "hours": 15.4
       },
       {
         "name": "Counter-Strike 2",
         "hours": 10.1
       },
       {
+        "name": "Sintopia",
+        "hours": 8.2
+      },
+      {
         "name": "Apex Legends",
-        "hours": 9.2
+        "hours": 6.3
       }
     ]
   },
   "weekly_digest": [
     {
       "dates": [
+        "2026-05-10",
         "2026-05-08",
         "2026-05-07",
         "2026-05-06",
         "2026-05-05",
         "2026-05-04",
-        "2026-05-03",
-        "2026-05-02"
+        "2026-05-03"
       ],
-      "total_hours": 51.7,
-      "games_count": 8,
+      "total_hours": 41.9,
+      "games_count": 7,
       "top_games": [
         "Mount & Blade II: Bannerlord",
         "Slay the Spire 2",
         "Counter-Strike 2",
         "Apex Legends",
-        "Battle Brothers"
+        "Slay the Spire"
       ]
     }
   ],
   "game_updates": [
+    {
+      "appid": 3241660,
+      "game_name": "R.E.P.O.",
+      "title": "R.E.P.O. v0.4.1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502817573",
+      "date": 1778335399,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Hey hey semibots! Hope you are enjoying all the new fashions, here is a patch with some fixes and balancing! CHANGES BALANCING FIXES CHANGES Cosmetic Box Spawn - Increased the \"bad luck\" multiplier slightly. It now persists after a game over and increases at the end of a level instead of at the start. Cosmetic Shop Machine - Players unlocking cosmetics one after another should now get less similar cosmetics. Unlocking a grabber cosmetic now shows the grabber during the screen animation intro. Shopkeeper - Improved the Ruckus System to detect more forms of ruckus. No longer holds the player as high, preventing death heads from getting stuck in ceilings. Now warns the player before shooting them, if the crime is not too severe. Charging Station - Can now charge items held higher up. Item Sta..."
+    },
+    {
+      "appid": 2868840,
+      "game_name": "Slay the Spire 2",
+      "title": "Beta Hotfix Notes - v0.105.1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502816737",
+      "date": 1778296466,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Quick hotfix today addressing several bugs related to the new Aeonglass boss and multiplayer state divergences. USER INTERFACE & EXPERIENCE: - Updated the Aeonglass boss icon BUG FIXES: Enemies: - Fixed Aeonglass first move intent showing a buff instead of a debuff - Fixed Aeonglass music not playing correctly - Fixed Ceremonial Beast background music transition not lining up with when it gets stunned Multiplayer: - Fixed Silken Tress relic only affecting card rewards for the host - Fixed state divergence when taking any rewards after a treasure room - Fixed state divergence after Crystal Sphere event"
+    },
+    {
+      "appid": 1363080,
+      "game_name": "Manor Lords",
+      "title": "Development News (Info on the Upcoming Update)",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502816551",
+      "date": 1778285624,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hi everyone! Tim here, CEO of Manor Lords publisher Hooded Horse. I'm checking in to bring some news of the upcoming update. My apologies for being a bit late with this news post -- so my plan is to check in here once a month, unless there's a new update released or about to be released to either beta or main. And we've been in a bit of a holding pattern here, because the latest update has been in a cycle of QA testing, us thinking the build is just about ready for beta testing release to all of you, and then discovering some problems requiring fixes, for a couple weeks (we always test the new builds including with a professional QA firm before they go out to public beta testing, to try to fix as many bugs as possible, though of course they never find quite as much as beta playtesting reve..."
+    },
     {
       "appid": 440900,
       "game_name": "Conan Exiles Enhanced",
@@ -4438,39 +4514,6 @@
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
       "contents": "Whoa, that was quick! The recent experimental changes are now live on the main branch.Update your game, and in the meantime, here's our recurring reminder - remember to join our Modding Competition by May 21, 2026 to win sweet prizes, including the three 750 EUR main prizes and unique wooden merch! Zero coding experience needed*!(*) At least in the Tails and banners category proudly sponsored by the Beaver Artist Association, but shhh. >> Mod Competition "
-    },
-    {
-      "appid": 1203620,
-      "game_name": "Enshrouded",
-      "title": "Changelog for Hotfix #40 v.0.9.1.1",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502808278",
-      "date": 1778058428,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Changelog for Hotfix #40 v.0.9.1.1The revision of Hotfix #40 is 1018982 Changelog:The mining sync and got mining out of easily sync, which is now fixed. Sorry, we fixed the mining animation and mining sound breaking and getting out of sync. There, better!Bases that were built near large lakes could experience extreme rubberbanding and performance issues, which are now fixed.Improved crash detection to help us diagnose and fix future issues."
-    },
-    {
-      "appid": 227300,
-      "game_name": "Euro Truck Simulator 2",
-      "title": "Euro Truck Simulator 2: 1.59 Update Release",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502808054",
-      "date": 1778051637,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "We are excited that the 1.59 update for Euro Truck Simulator 2 is now officially released and available on Steam! We hope you will enjoy all the new features, which you can read about in more detail below.As always, we would like to thank everyone who took part in the open beta phase and reported possible issues or any kind of feedback on our forum, as it helped us fine-tune everything for a smooth transition to the full update!Benelux Rework ReleaseWe are happy to reveal that the long-awaited Benelux Rework project is released with this update! Our assets and map designers have completely rebuilt the whole original map of Belgium, the Netherlands, and Luxembourg from scratch, delivering a richer, more detailed experience.Truckers can explore a wide range of revamped major cities and their..."
-    },
-    {
-      "appid": 322330,
-      "game_name": "Don't Starve Together",
-      "title": "Hotfix 726875",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502807638",
-      "date": 1778025207,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Bug Fixes Fixed creatures like Chester that follow a carried item still following the holder of the item when the item is dropped from a distance. Fixed crash when using shift-click to transfer items out of containers like Expansive Storage Unit, Ammo Pouch, Battle Call Canister, Picnic Casket, etc. Fixed client prediction sometimes failing after transforming into Wonkey. Fixed Exploiterators and Auto-Grabbers stopping from following WX-78 after minigames. Fixed mutating Puffins being invisible. Fixed Possessed Chassis getting stuck when they’re unable to find a suitable spot to attack. Fixed Possessed Chassis trying to use Zaptrocuter on creatures that can’t be hit by its projectile. "
     }
   ]
 }
