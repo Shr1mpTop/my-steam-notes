@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-05-10T01:38:46.954649+08:00",
+  "updated_at": "2026-05-11T01:39:16.248432+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
-    "online": true,
-    "currently_playing": "Slay the Spire 2",
+    "online": false,
+    "currently_playing": "",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/0c36cd0464c002f4a34041c76d11a6699ab08dd1_full.jpg"
   },
   "milestone": {
-    "total_hours": 5418.4,
-    "movies": 2709,
-    "books": 903,
-    "walking_km": 27092
+    "total_hours": 5426.9,
+    "movies": 2713,
+    "books": 904,
+    "walking_km": 27134
   },
   "game_cloud": [
     {
@@ -28,9 +28,9 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 534.1,
+      "playtime_hours": 537.8,
       "img_icon_url": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
-      "rtime_last_played": 1778250321,
+      "rtime_last_played": 1778403632,
       "genres": [
         "Action",
         "Adventure",
@@ -440,6 +440,18 @@
       ]
     },
     {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtime_hours": 20.2,
+      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
+      "rtime_last_played": 1778420178,
+      "genres": [
+        "Indie",
+        "Strategy",
+        "Early Access"
+      ]
+    },
+    {
       "appid": 270150,
       "name": "RUNNING WITH RIFLES",
       "playtime_hours": 19.6,
@@ -497,18 +509,6 @@
       "genres": [
         "Action",
         "Adventure"
-      ]
-    },
-    {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtime_hours": 15.4,
-      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
-      "rtime_last_played": 1778347904,
-      "genres": [
-        "Indie",
-        "Strategy",
-        "Early Access"
       ]
     },
     {
@@ -1405,26 +1405,20 @@
     {
       "appid": 2868840,
       "name": "Slay the Spire 2",
-      "playtime_2weeks_hours": 15.4,
-      "playtime_forever_hours": 15.4
-    },
-    {
-      "appid": 730,
-      "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 10.1,
-      "playtime_forever_hours": 1863.9
-    },
-    {
-      "appid": 2213700,
-      "name": "Sintopia",
-      "playtime_2weeks_hours": 8.2,
-      "playtime_forever_hours": 41.5
+      "playtime_2weeks_hours": 20.2,
+      "playtime_forever_hours": 20.2
     },
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_2weeks_hours": 6.3,
-      "playtime_forever_hours": 534.1
+      "playtime_2weeks_hours": 10.1,
+      "playtime_forever_hours": 537.8
+    },
+    {
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "playtime_2weeks_hours": 8.4,
+      "playtime_forever_hours": 1863.9
     },
     {
       "appid": 1876880,
@@ -1433,10 +1427,10 @@
       "playtime_forever_hours": 6.3
     },
     {
-      "appid": 3912710,
-      "name": "War of Banners Demo",
-      "playtime_2weeks_hours": 1.2,
-      "playtime_forever_hours": 1.2
+      "appid": 2213700,
+      "name": "Sintopia",
+      "playtime_2weeks_hours": 6.1,
+      "playtime_forever_hours": 41.5
     },
     {
       "appid": 230190,
@@ -1467,20 +1461,15 @@
       "name": "Wallpaper Engine",
       "playtime_2weeks_hours": 0.1,
       "playtime_forever_hours": 100.4
-    },
-    {
-      "appid": 892970,
-      "name": "Valheim",
-      "playtime_2weeks_hours": 0.0,
-      "playtime_forever_hours": 19.1
     }
   ],
   "heatmap": {
     "2026-05-10": {
-      "playtime_minutes": 139,
-      "online_minutes": 139,
+      "playtime_minutes": 651,
+      "online_minutes": 651,
       "games": {
-        "Slay the Spire 2": 139
+        "Slay the Spire 2": 428,
+        "Apex Legends": 223
       }
     },
     "2026-05-08": {
@@ -1623,38 +1612,32 @@
     {
       "dow": 2,
       "hour": 0,
-      "count": 45.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 71.7,
-      "game_minutes": 45.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Counter-Strike 2": 45.0
-      }
+      "games": {}
     },
     {
       "dow": 2,
       "hour": 1,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 120.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Counter-Strike 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 2,
       "hour": 2,
-      "count": 25.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 79.2,
-      "game_minutes": 25.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Counter-Strike 2": 25.0
-      }
+      "games": {}
     },
     {
       "dow": 2,
@@ -1699,76 +1682,62 @@
     {
       "dow": 2,
       "hour": 18,
-      "count": 34.9,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 94.9,
-      "game_minutes": 34.9,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Apex Legends": 24.9,
-        "Counter-Strike 2": 9.9
-      }
+      "games": {}
     },
     {
       "dow": 2,
       "hour": 19,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 120.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Counter-Strike 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 2,
       "hour": 20,
-      "count": 55.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 110.1,
-      "game_minutes": 55.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Apex Legends": 55.0,
-        "Counter-Strike 2": 0.0
-      }
+      "games": {}
     },
     {
       "dow": 2,
       "hour": 21,
-      "count": 40.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 95.0,
-      "game_minutes": 40.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Apex Legends": 40.0
-      }
+      "games": {}
     },
     {
       "dow": 2,
       "hour": 22,
-      "count": 34.9,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 94.9,
-      "game_minutes": 34.9,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Counter-Strike 2": 34.9
-      }
+      "games": {}
     },
     {
       "dow": 2,
       "hour": 23,
-      "count": 10.1,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 45.2,
-      "game_minutes": 10.1,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Counter-Strike 2": 10.1
-      }
+      "games": {}
     },
     {
       "dow": 3,
@@ -1793,26 +1762,22 @@
     {
       "dow": 3,
       "hour": 15,
-      "count": 26.6,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 54.5,
-      "game_minutes": 26.6,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 26.6
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 0,
-      "count": 45.1,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 63.2,
-      "game_minutes": 45.1,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 45.1
-      }
+      "games": {}
     },
     {
       "dow": 4,
@@ -1827,87 +1792,72 @@
     {
       "dow": 4,
       "hour": 16,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 105.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 17,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 120.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 18,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 120.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 19,
-      "count": 15.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 70.0,
-      "game_minutes": 15.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 15.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 20,
-      "count": 34.9,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 90.0,
-      "game_minutes": 34.9,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 25.0,
-        "Slay the Spire": 10.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 21,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 119.9,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 22,
-      "count": 30.1,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 90.1,
-      "game_minutes": 30.1,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 30.1
-      }
+      "games": {}
     },
     {
       "dow": 4,
@@ -2054,7 +2004,7 @@
       "hour": 19,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 10.0,
+      "all_time_count": 70.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
@@ -2064,7 +2014,7 @@
       "hour": 20,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 60.0,
+      "all_time_count": 120.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
@@ -2074,7 +2024,7 @@
       "hour": 21,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 60.0,
+      "all_time_count": 100.1,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
@@ -2102,383 +2052,387 @@
     {
       "dow": 0,
       "hour": 0,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 1,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 2,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 3,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 4,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 5,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 6,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 7,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 8,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 9,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 10,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 11,
-      "count": 25.1,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 25.1,
-      "game_minutes": 25.1,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 25.1
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 20,
-      "count": 50.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 50.0,
-      "game_minutes": 50.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 50.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 21,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 22,
-      "count": 55.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 55.0,
-      "game_minutes": 55.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Mount & Blade II: Bannerlord": 20.1,
-        "Apex Legends": 20.0,
-        "Counter-Strike 2": 9.9,
-        "Sintopia": 5.0
-      }
+      "games": {}
     },
     {
       "dow": 0,
       "hour": 23,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Counter-Strike 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 1,
       "hour": 0,
-      "count": 43.9,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 43.9,
-      "game_minutes": 43.9,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Counter-Strike 2": 43.9
-      }
+      "games": {}
     },
     {
       "dow": 3,
       "hour": 1,
-      "count": 40.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 40.0,
-      "game_minutes": 40.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 40.0
-      }
+      "games": {}
     },
     {
       "dow": 3,
       "hour": 2,
-      "count": 5.1,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 5.1,
-      "game_minutes": 5.1,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 5.1
-      }
+      "games": {}
     },
     {
       "dow": 3,
       "hour": 16,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 3,
       "hour": 17,
-      "count": 35.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 35.0,
-      "game_minutes": 35.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 35.0
-      }
+      "games": {}
     },
     {
       "dow": 3,
       "hour": 22,
-      "count": 49.9,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 49.9,
-      "game_minutes": 49.9,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 49.9
-      }
+      "games": {}
     },
     {
       "dow": 3,
       "hour": 23,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 2,
-      "count": 20.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 20.0,
-      "game_minutes": 20.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 20.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 3,
-      "count": 5.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 5.0,
-      "game_minutes": 5.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 5.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 13,
-      "count": 20.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 20.0,
-      "game_minutes": 20.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 15.0,
-        "Counter-Strike 2": 5.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 14,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 4,
       "hour": 15,
-      "count": 60.0,
+      "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 60.0,
-      "game_minutes": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 60.0
-      }
+      "games": {}
     },
     {
       "dow": 5,
       "hour": 23,
-      "count": 35.0,
-      "recent_count": 35.0,
+      "count": 0.0,
+      "recent_count": 0.0,
       "all_time_count": 35.0,
-      "game_minutes": 35.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 35.0
-      }
+      "games": {}
     },
     {
       "dow": 6,
       "hour": 0,
-      "count": 54.9,
-      "recent_count": 54.9,
+      "count": 0.0,
+      "recent_count": 0.0,
       "all_time_count": 54.9,
-      "game_minutes": 54.9,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 54.9
-      }
+      "games": {}
     },
     {
       "dow": 6,
       "hour": 1,
-      "count": 38.8,
-      "recent_count": 38.8,
-      "all_time_count": 38.8,
-      "game_minutes": 38.8,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 60.0,
+      "game_minutes": 0.0,
       "online_minutes": 0.0,
-      "games": {
-        "Slay the Spire 2": 38.8
-      }
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 2,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 15.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 13,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 39.9,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 14,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 60.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 15,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 60.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 16,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 60.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 17,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 50.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 18,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 39.8,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
     }
   ],
   "platform": {
-    "Windows": 5389.9,
-    "Mac": 18.2,
+    "Windows": 5397.8,
+    "Mac": 18.9,
     "Linux": 0.0,
     "Steam Deck": 0.0
   },
@@ -2486,12 +2440,12 @@
     {
       "name": "Counter-Strike 2",
       "hours": 1863.9,
-      "cumulative_pct": 34.4,
+      "cumulative_pct": 34.3,
       "rank": 1
     },
     {
       "name": "Apex Legends",
-      "hours": 534.1,
+      "hours": 537.8,
       "cumulative_pct": 44.3,
       "rank": 2
     },
@@ -2504,7 +2458,7 @@
     {
       "name": "Mount & Blade II: Bannerlord",
       "hours": 302.1,
-      "cumulative_pct": 56.7,
+      "cumulative_pct": 56.6,
       "rank": 4
     },
     {
@@ -2516,13 +2470,13 @@
     {
       "name": "Kingdom Come: Deliverance II",
       "hours": 159.4,
-      "cumulative_pct": 63.5,
+      "cumulative_pct": 63.4,
       "rank": 6
     },
     {
       "name": "Baldur's Gate 3",
       "hours": 151.4,
-      "cumulative_pct": 66.3,
+      "cumulative_pct": 66.2,
       "rank": 7
     },
     {
@@ -2540,7 +2494,7 @@
     {
       "name": "Wallpaper Engine",
       "hours": 100.4,
-      "cumulative_pct": 72.4,
+      "cumulative_pct": 72.3,
       "rank": 10
     },
     {
@@ -2552,19 +2506,19 @@
     {
       "name": "Lethal Company",
       "hours": 83.2,
-      "cumulative_pct": 75.6,
+      "cumulative_pct": 75.5,
       "rank": 12
     },
     {
       "name": "MyDockFinder",
       "hours": 65.8,
-      "cumulative_pct": 76.8,
+      "cumulative_pct": 76.7,
       "rank": 13
     },
     {
       "name": "Mindustry",
       "hours": 54.1,
-      "cumulative_pct": 77.8,
+      "cumulative_pct": 77.7,
       "rank": 14
     },
     {
@@ -2576,7 +2530,7 @@
     {
       "name": "Warhammer 40,000: Rogue Trader",
       "hours": 51.1,
-      "cumulative_pct": 79.7,
+      "cumulative_pct": 79.6,
       "rank": 16
     },
     {
@@ -2594,7 +2548,7 @@
     {
       "name": "Battlefield™ V",
       "hours": 47.8,
-      "cumulative_pct": 82.4,
+      "cumulative_pct": 82.3,
       "rank": 19
     },
     {
@@ -2612,31 +2566,31 @@
     {
       "name": "Sintopia",
       "hours": 41.5,
-      "cumulative_pct": 84.8,
+      "cumulative_pct": 84.7,
       "rank": 22
     },
     {
       "name": "Noble Fates",
       "hours": 36.4,
-      "cumulative_pct": 85.5,
+      "cumulative_pct": 85.4,
       "rank": 23
     },
     {
       "name": "Grand Theft Auto IV: The Complete Edition",
       "hours": 33.3,
-      "cumulative_pct": 86.1,
+      "cumulative_pct": 86.0,
       "rank": 24
     },
     {
       "name": "Inscryption",
       "hours": 31.8,
-      "cumulative_pct": 86.7,
+      "cumulative_pct": 86.6,
       "rank": 25
     },
     {
       "name": "Age of Empires IV: Anniversary Edition",
       "hours": 29.3,
-      "cumulative_pct": 87.2,
+      "cumulative_pct": 87.1,
       "rank": 26
     },
     {
@@ -2648,84 +2602,84 @@
     {
       "name": "The Elder Scrolls V: Skyrim Special Edition",
       "hours": 28.5,
-      "cumulative_pct": 88.3,
+      "cumulative_pct": 88.2,
       "rank": 28
     },
     {
       "name": "Mount & Blade: Warband",
       "hours": 27.9,
-      "cumulative_pct": 88.8,
+      "cumulative_pct": 88.7,
       "rank": 29
     },
     {
       "name": "R.E.P.O.",
       "hours": 27.3,
-      "cumulative_pct": 89.3,
+      "cumulative_pct": 89.2,
       "rank": 30
     },
     {
       "name": "Noita",
       "hours": 25.8,
-      "cumulative_pct": 89.8,
+      "cumulative_pct": 89.7,
       "rank": 31
     },
     {
       "name": "Middle-earth™: Shadow of War™",
       "hours": 22.5,
-      "cumulative_pct": 90.2,
+      "cumulative_pct": 90.1,
       "rank": 32
     },
     {
       "name": "Sid Meier's Civilization VI",
       "hours": 21.6,
-      "cumulative_pct": 90.6,
+      "cumulative_pct": 90.5,
       "rank": 33
     },
     {
       "name": "Schedule I",
       "hours": 21.6,
-      "cumulative_pct": 91.0,
+      "cumulative_pct": 90.9,
       "rank": 34
     },
     {
       "name": "Enshrouded",
       "hours": 21.0,
-      "cumulative_pct": 91.4,
+      "cumulative_pct": 91.3,
       "rank": 35
     },
     {
-      "name": "RUNNING WITH RIFLES",
-      "hours": 19.6,
+      "name": "Slay the Spire 2",
+      "hours": 20.2,
       "cumulative_pct": 91.7,
       "rank": 36
     },
     {
-      "name": "Cities: Skylines",
-      "hours": 18.4,
-      "cumulative_pct": 92.1,
+      "name": "RUNNING WITH RIFLES",
+      "hours": 19.6,
+      "cumulative_pct": 92.0,
       "rank": 37
     },
     {
-      "name": "Medieval Dynasty",
-      "hours": 18.1,
+      "name": "Cities: Skylines",
+      "hours": 18.4,
       "cumulative_pct": 92.4,
       "rank": 38
     },
     {
-      "name": "Escape From Duckov",
-      "hours": 17.6,
+      "name": "Medieval Dynasty",
+      "hours": 18.1,
       "cumulative_pct": 92.7,
       "rank": 39
     },
     {
-      "name": "Sniper Elite 4",
-      "hours": 17.5,
+      "name": "Escape From Duckov",
+      "hours": 17.6,
       "cumulative_pct": 93.0,
       "rank": 40
     },
     {
-      "name": "Slay the Spire 2",
-      "hours": 15.4,
+      "name": "Sniper Elite 4",
+      "hours": 17.5,
       "cumulative_pct": 93.3,
       "rank": 41
     },
@@ -3387,7 +3341,7 @@
     },
     {
       "day": "Sun",
-      "minutes": 385
+      "minutes": 897
     }
   ],
   "stats": {
@@ -3425,7 +3379,7 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 534.1,
+      "playtime_hours": 537.8,
       "total": 12,
       "unlocked": 11,
       "pct": 92,
@@ -3928,11 +3882,6 @@
         ]
       },
       {
-        "appid": 892970,
-        "name": "Valheim",
-        "genres": []
-      },
-      {
         "appid": 1172470,
         "name": "Apex Legends",
         "genres": [
@@ -3949,6 +3898,11 @@
           "Simulation",
           "Strategy"
         ]
+      },
+      {
+        "appid": 892970,
+        "name": "Valheim",
+        "genres": []
       },
       {
         "appid": 3912710,
@@ -3976,96 +3930,96 @@
       {
         "source": 730,
         "target": 230190,
-        "strength": 14
+        "strength": 15
       },
       {
         "source": 730,
         "target": 365360,
-        "strength": 14
-      },
-      {
-        "source": 730,
-        "target": 892970,
-        "strength": 14
+        "strength": 15
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 14
+        "strength": 15
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 14
-      },
-      {
-        "source": 730,
-        "target": 3912710,
-        "strength": 14
+        "strength": 15
       },
       {
         "source": 230190,
         "target": 365360,
-        "strength": 14
-      },
-      {
-        "source": 230190,
-        "target": 892970,
-        "strength": 14
+        "strength": 15
       },
       {
         "source": 230190,
         "target": 1172470,
-        "strength": 14
+        "strength": 15
       },
       {
         "source": 230190,
         "target": 2213700,
-        "strength": 14
-      },
-      {
-        "source": 230190,
-        "target": 3912710,
-        "strength": 14
-      },
-      {
-        "source": 365360,
-        "target": 892970,
-        "strength": 14
+        "strength": 15
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 14
+        "strength": 15
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 14
-      },
-      {
-        "source": 365360,
-        "target": 3912710,
-        "strength": 14
-      },
-      {
-        "source": 892970,
-        "target": 1172470,
-        "strength": 14
-      },
-      {
-        "source": 892970,
-        "target": 2213700,
-        "strength": 14
-      },
-      {
-        "source": 892970,
-        "target": 3912710,
-        "strength": 14
+        "strength": 15
       },
       {
         "source": 1172470,
         "target": 2213700,
+        "strength": 15
+      },
+      {
+        "source": 730,
+        "target": 892970,
+        "strength": 14
+      },
+      {
+        "source": 730,
+        "target": 3912710,
+        "strength": 14
+      },
+      {
+        "source": 230190,
+        "target": 892970,
+        "strength": 14
+      },
+      {
+        "source": 230190,
+        "target": 3912710,
+        "strength": 14
+      },
+      {
+        "source": 365360,
+        "target": 892970,
+        "strength": 14
+      },
+      {
+        "source": 365360,
+        "target": 3912710,
+        "strength": 14
+      },
+      {
+        "source": 892970,
+        "target": 1172470,
+        "strength": 14
+      },
+      {
+        "source": 892970,
+        "target": 2213700,
+        "strength": 14
+      },
+      {
+        "source": 892970,
+        "target": 3912710,
         "strength": 14
       },
       {
@@ -4081,47 +4035,47 @@
       {
         "source": 730,
         "target": 261550,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 730,
         "target": 1876880,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 230190,
         "target": 261550,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 230190,
         "target": 1876880,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 261550,
         "target": 365360,
-        "strength": 12
-      },
-      {
-        "source": 261550,
-        "target": 892970,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 261550,
         "target": 1172470,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 261550,
         "target": 1876880,
-        "strength": 12
+        "strength": 13
       },
       {
         "source": 261550,
         "target": 2213700,
-        "strength": 12
+        "strength": 13
+      },
+      {
+        "source": 365360,
+        "target": 1876880,
+        "strength": 13
       }
     ]
   },
@@ -4129,17 +4083,17 @@
     {
       "genre": "Action",
       "games": 31,
-      "hours": 4245.7
+      "hours": 4249.4
     },
     {
       "genre": "Free To Play",
       "games": 4,
-      "hours": 2459.6
+      "hours": 2463.3
     },
     {
       "genre": "Adventure",
       "games": 22,
-      "hours": 2088.1
+      "hours": 2091.8
     },
     {
       "genre": "RPG",
@@ -4149,12 +4103,12 @@
     {
       "genre": "Indie",
       "games": 25,
-      "hours": 1255.6
+      "hours": 1260.4
     },
     {
       "genre": "Strategy",
       "games": 22,
-      "hours": 1045.4
+      "hours": 1050.2
     },
     {
       "genre": "Simulation",
@@ -4164,7 +4118,7 @@
     {
       "genre": "Early Access",
       "games": 9,
-      "hours": 307.7
+      "hours": 312.6
     },
     {
       "genre": "Animation & Modeling",
@@ -4212,18 +4166,18 @@
       },
       {
         "name": "Slay the Spire 2",
-        "hours": 15.4
-      },
-      {
-        "name": "Counter-Strike 2",
-        "hours": 10.1
-      },
-      {
-        "name": "Sintopia",
-        "hours": 8.2
+        "hours": 20.2
       },
       {
         "name": "Apex Legends",
+        "hours": 10.1
+      },
+      {
+        "name": "Counter-Strike 2",
+        "hours": 8.4
+      },
+      {
+        "name": "Primitive Society Simulator",
         "hours": 6.3
       }
     ]
@@ -4239,18 +4193,40 @@
         "2026-05-04",
         "2026-05-03"
       ],
-      "total_hours": 41.9,
+      "total_hours": 50.5,
       "games_count": 7,
       "top_games": [
-        "Mount & Blade II: Bannerlord",
         "Slay the Spire 2",
-        "Counter-Strike 2",
+        "Mount & Blade II: Bannerlord",
         "Apex Legends",
+        "Counter-Strike 2",
         "Slay the Spire"
       ]
     }
   ],
   "game_updates": [
+    {
+      "appid": 2868840,
+      "game_name": "Slay the Spire 2",
+      "title": "Rejoice, Doormaker haters, for Mega Crit have removed him from Slay the Spire 2 in favour of a brand new boss",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/Rock, Paper, Shotgun/1832065502818411",
+      "date": 1778363688,
+      "feedname": "Rock, Paper, Shotgun",
+      "feedlabel": "Rock, Paper, Shotgun",
+      "update_type": "Patch Notes",
+      "contents": "Another week, another <a href=\"https://www.rockpapershotgun.com/games/slay-the-spire-2\">Slay the Spire 2</a> patch! Or really I should say another couple of weeks. The new beta version of the game, v0.105.0, is ready for those of you on the beta branch to try out, and the first point of order is bi-weekly patching. \"As you've probably noticed, we're moving to patch every 2 weeks rather than weekly as outlined in our Early Access Disclaimer,\" explain developer Mega Crit. <a href=\"https://www.rockpapershotgun.com/rejoice-doormaker-haters-for-mega-crit-have-removed-him-from-slay-the-spire-2-in-favour-of-a-brand-new-boss\">Read more</a> "
+    },
+    {
+      "appid": 1363080,
+      "game_name": "Manor Lords",
+      "title": "The Manor Lords trade rework is on hold while Slavic Magic sorts out systems \"that had quietly degraded over time\"",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1832065502818967",
+      "date": 1778346745,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Update",
+      "contents": "The latest <strong>Manor Lords</strong> developer update has just landed, and the big news is that the trade rework developer Slavic Magic initially outlined in January has been put on the back burner for a while. The reason is simple: while players were positive about the idea, many questioned why it was being given priority over more pressing features when the current implementation is good enough. In its place, the team has a pathfinding rework incoming, with a rural traditions update next in line. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/manor-lords/pathfinding-update-trade-rework-paused\">The Manor Lords trade rework is on hold while Slavic Magic sorts out systems \"that had quietly degraded over time\"</a> RELATED LINKS: <a href=\"https://www.pcgamesn.com/manor-lords/update-6-patch-notes\">Manor Lords makes families matter more as housing gets a new upgrade</a> <a href=\"https://www.pcgamesn.com/manor-lords/experimental-trade-rework\">Manor Lords' experimental trade rework is going to completely transform the me...</a>"
+    },
     {
       "appid": 3241660,
       "game_name": "R.E.P.O.",
@@ -4492,28 +4468,6 @@
       "feedlabel": "Community Announcements",
       "update_type": "Hotfix",
       "contents": "We have a quick hotfix for you today that addresses the following issues:Fixed an intermittent server crash.Fixed an issue loading mod pak files that have been renamed on dedicated servers.Fixed an issue where the game could take a long time to boot or run out of memory mounting pak files from Legacy mods.Startup videos should now be skippable on most systems after preloading completes.Legacy mods will be ignored but initially remain in the modlist.txt.If active mods are modified, then Legacy mods will be removed from modlist.txt.Default allowed ping increased to 300 (from 200)Living settlements disabled for the following official servers:151619421509"
-    },
-    {
-      "appid": 392160,
-      "game_name": "X4: Foundations",
-      "title": "9.00 Public Beta 9 now available",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502809024",
-      "date": 1778076397,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "9.00 Public Beta 9 is now available! Please find the full changelog below. Thank you for your continued support and feedback during this testing phase. How Do I Take Part in the Public Beta? Every player who owns X4: Foundations has the opportunity to download the new 9.00 Public Beta version. In order to ensure that beta participants are aware of the risks and rules involved, we ask all interested players to visit our forum, where they will find the rules and disclaimers, as well as practical instructions for participating in the beta. Follow this link to our forum - no registration required - to find the relevant information. X4 9.00 Public Beta 9 Changelog: (see the full 9.00 Public Beta Changelog in our forum) Added resource map colour information to Mining Filter menu (new feature in ..."
-    },
-    {
-      "appid": 1062090,
-      "game_name": "Timberborn",
-      "title": "Patch notes 2026-05-06 (main branch)",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502808450",
-      "date": 1778063024,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Whoa, that was quick! The recent experimental changes are now live on the main branch.Update your game, and in the meantime, here's our recurring reminder - remember to join our Modding Competition by May 21, 2026 to win sweet prizes, including the three 750 EUR main prizes and unique wooden merch! Zero coding experience needed*!(*) At least in the Tails and banners category proudly sponsored by the Beaver Artist Association, but shhh. >> Mod Competition "
     }
   ]
 }
