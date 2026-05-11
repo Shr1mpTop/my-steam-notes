@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-05-11T01:39:16.248432+08:00",
+  "updated_at": "2026-05-12T02:01:17.001704+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
-    "online": false,
-    "currently_playing": "",
+    "online": true,
+    "currently_playing": "Slay the Spire 2",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/0c36cd0464c002f4a34041c76d11a6699ab08dd1_full.jpg"
   },
   "milestone": {
-    "total_hours": 5426.9,
-    "movies": 2713,
-    "books": 904,
-    "walking_km": 27134
+    "total_hours": 5432.9,
+    "movies": 2716,
+    "books": 905,
+    "walking_km": 27164
   },
   "game_cloud": [
     {
@@ -376,6 +376,18 @@
       ]
     },
     {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtime_hours": 25.9,
+      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
+      "rtime_last_played": 1778521015,
+      "genres": [
+        "Indie",
+        "Strategy",
+        "Early Access"
+      ]
+    },
+    {
       "appid": 881100,
       "name": "Noita",
       "playtime_hours": 25.8,
@@ -436,18 +448,6 @@
         "Adventure",
         "Indie",
         "RPG",
-        "Early Access"
-      ]
-    },
-    {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtime_hours": 20.2,
-      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
-      "rtime_last_played": 1778420178,
-      "genres": [
-        "Indie",
-        "Strategy",
         "Early Access"
       ]
     },
@@ -1219,6 +1219,14 @@
       "genres": []
     },
     {
+      "appid": 646570,
+      "name": "Slay the Spire",
+      "playtime_hours": 0.6,
+      "img_icon_url": "33ea124ea8c03a9ce7012d34c3b348a351612fca",
+      "rtime_last_played": 1778512219,
+      "genres": []
+    },
+    {
       "appid": 240,
       "name": "Counter-Strike: Source",
       "playtime_hours": 0.5,
@@ -1288,14 +1296,6 @@
       "playtime_hours": 0.3,
       "img_icon_url": "a573416150a927e1cb21ce41c1844562e376264f",
       "rtime_last_played": 1712410860,
-      "genres": []
-    },
-    {
-      "appid": 646570,
-      "name": "Slay the Spire",
-      "playtime_hours": 0.2,
-      "img_icon_url": "33ea124ea8c03a9ce7012d34c3b348a351612fca",
-      "rtime_last_played": 1778243671,
       "genres": []
     },
     {
@@ -1405,19 +1405,19 @@
     {
       "appid": 2868840,
       "name": "Slay the Spire 2",
-      "playtime_2weeks_hours": 20.2,
-      "playtime_forever_hours": 20.2
+      "playtime_2weeks_hours": 25.9,
+      "playtime_forever_hours": 25.9
     },
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_2weeks_hours": 10.1,
+      "playtime_2weeks_hours": 9.5,
       "playtime_forever_hours": 537.8
     },
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 8.4,
+      "playtime_2weeks_hours": 7.1,
       "playtime_forever_hours": 1863.9
     },
     {
@@ -1429,12 +1429,12 @@
     {
       "appid": 2213700,
       "name": "Sintopia",
-      "playtime_2weeks_hours": 6.1,
+      "playtime_2weeks_hours": 3.8,
       "playtime_forever_hours": 41.5
     },
     {
-      "appid": 230190,
-      "name": "War for the Overworld",
+      "appid": 646570,
+      "name": "Slay the Spire",
       "playtime_2weeks_hours": 0.6,
       "playtime_forever_hours": 0.6
     },
@@ -1451,12 +1451,6 @@
       "playtime_forever_hours": 8.4
     },
     {
-      "appid": 646570,
-      "name": "Slay the Spire",
-      "playtime_2weeks_hours": 0.2,
-      "playtime_forever_hours": 0.2
-    },
-    {
       "appid": 431960,
       "name": "Wallpaper Engine",
       "playtime_2weeks_hours": 0.1,
@@ -1464,6 +1458,21 @@
     }
   ],
   "heatmap": {
+    "2026-05-12": {
+      "playtime_minutes": 145,
+      "online_minutes": 145,
+      "games": {
+        "Slay the Spire 2": 145
+      }
+    },
+    "2026-05-11": {
+      "playtime_minutes": 215,
+      "online_minutes": 215,
+      "games": {
+        "Slay the Spire 2": 197,
+        "Slay the Spire": 18
+      }
+    },
     "2026-05-10": {
       "playtime_minutes": 651,
       "online_minutes": 651,
@@ -2172,52 +2181,64 @@
     {
       "dow": 0,
       "hour": 20,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 50.0,
-      "game_minutes": 0.0,
+      "count": 30.0,
+      "recent_count": 30.0,
+      "all_time_count": 80.0,
+      "game_minutes": 30.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 30.0
+      }
     },
     {
       "dow": 0,
       "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
+      "count": 50.0,
+      "recent_count": 50.0,
+      "all_time_count": 110.0,
+      "game_minutes": 50.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 50.0
+      }
     },
     {
       "dow": 0,
       "hour": 22,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 55.0,
-      "game_minutes": 0.0,
+      "count": 7.2,
+      "recent_count": 7.2,
+      "all_time_count": 62.2,
+      "game_minutes": 7.2,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire": 4.9,
+        "Slay the Spire 2": 2.3
+      }
     },
     {
       "dow": 0,
       "hour": 23,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 120.0,
+      "game_minutes": 60.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 44.9,
+        "Slay the Spire": 15.1
+      }
     },
     {
       "dow": 1,
       "hour": 0,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 43.9,
-      "game_minutes": 0.0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 103.9,
+      "game_minutes": 60.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
     },
     {
       "dow": 3,
@@ -2428,11 +2449,59 @@
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
+    },
+    {
+      "dow": 0,
+      "hour": 18,
+      "count": 24.9,
+      "recent_count": 24.9,
+      "all_time_count": 24.9,
+      "game_minutes": 24.9,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 24.9
+      }
+    },
+    {
+      "dow": 0,
+      "hour": 19,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
+    },
+    {
+      "dow": 1,
+      "hour": 1,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
+    },
+    {
+      "dow": 1,
+      "hour": 2,
+      "count": 1.3,
+      "recent_count": 1.3,
+      "all_time_count": 1.3,
+      "game_minutes": 1.3,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 1.3
+      }
     }
   ],
   "platform": {
-    "Windows": 5397.8,
-    "Mac": 18.9,
+    "Windows": 5398.6,
+    "Mac": 24.1,
     "Linux": 0.0,
     "Steam Deck": 0.0
   },
@@ -2446,13 +2515,13 @@
     {
       "name": "Apex Legends",
       "hours": 537.8,
-      "cumulative_pct": 44.3,
+      "cumulative_pct": 44.2,
       "rank": 2
     },
     {
       "name": "Kingdom Come: Deliverance",
       "hours": 369.6,
-      "cumulative_pct": 51.1,
+      "cumulative_pct": 51.0,
       "rank": 3
     },
     {
@@ -2464,7 +2533,7 @@
     {
       "name": "Terraria",
       "hours": 209.5,
-      "cumulative_pct": 60.5,
+      "cumulative_pct": 60.4,
       "rank": 5
     },
     {
@@ -2476,180 +2545,180 @@
     {
       "name": "Baldur's Gate 3",
       "hours": 151.4,
-      "cumulative_pct": 66.2,
+      "cumulative_pct": 66.1,
       "rank": 7
     },
     {
       "name": "Grand Theft Auto V Legacy",
       "hours": 121.7,
-      "cumulative_pct": 68.5,
+      "cumulative_pct": 68.4,
       "rank": 8
     },
     {
       "name": "Blender",
       "hours": 109.5,
-      "cumulative_pct": 70.5,
+      "cumulative_pct": 70.4,
       "rank": 9
     },
     {
       "name": "Wallpaper Engine",
       "hours": 100.4,
-      "cumulative_pct": 72.3,
+      "cumulative_pct": 72.2,
       "rank": 10
     },
     {
       "name": "Wartales",
       "hours": 89.2,
-      "cumulative_pct": 74.0,
+      "cumulative_pct": 73.9,
       "rank": 11
     },
     {
       "name": "Lethal Company",
       "hours": 83.2,
-      "cumulative_pct": 75.5,
+      "cumulative_pct": 75.4,
       "rank": 12
     },
     {
       "name": "MyDockFinder",
       "hours": 65.8,
-      "cumulative_pct": 76.7,
+      "cumulative_pct": 76.6,
       "rank": 13
     },
     {
       "name": "Mindustry",
       "hours": 54.1,
-      "cumulative_pct": 77.7,
+      "cumulative_pct": 77.6,
       "rank": 14
     },
     {
       "name": "PUBG: BATTLEGROUNDS",
       "hours": 52.6,
-      "cumulative_pct": 78.7,
+      "cumulative_pct": 78.6,
       "rank": 15
     },
     {
       "name": "Warhammer 40,000: Rogue Trader",
       "hours": 51.1,
-      "cumulative_pct": 79.6,
+      "cumulative_pct": 79.5,
       "rank": 16
     },
     {
       "name": "The Witcher 3: Wild Hunt",
       "hours": 50.3,
-      "cumulative_pct": 80.6,
+      "cumulative_pct": 80.5,
       "rank": 17
     },
     {
       "name": "Palworld",
       "hours": 49.3,
-      "cumulative_pct": 81.5,
+      "cumulative_pct": 81.4,
       "rank": 18
     },
     {
       "name": "Battlefield™ V",
       "hours": 47.8,
-      "cumulative_pct": 82.3,
+      "cumulative_pct": 82.2,
       "rank": 19
     },
     {
       "name": "Kenshi",
       "hours": 45.7,
-      "cumulative_pct": 83.2,
+      "cumulative_pct": 83.1,
       "rank": 20
     },
     {
       "name": "Manor Lords",
       "hours": 42.8,
-      "cumulative_pct": 84.0,
+      "cumulative_pct": 83.9,
       "rank": 21
     },
     {
       "name": "Sintopia",
       "hours": 41.5,
-      "cumulative_pct": 84.7,
+      "cumulative_pct": 84.6,
       "rank": 22
     },
     {
       "name": "Noble Fates",
       "hours": 36.4,
-      "cumulative_pct": 85.4,
+      "cumulative_pct": 85.3,
       "rank": 23
     },
     {
       "name": "Grand Theft Auto IV: The Complete Edition",
       "hours": 33.3,
-      "cumulative_pct": 86.0,
+      "cumulative_pct": 85.9,
       "rank": 24
     },
     {
       "name": "Inscryption",
       "hours": 31.8,
-      "cumulative_pct": 86.6,
+      "cumulative_pct": 86.5,
       "rank": 25
     },
     {
       "name": "Age of Empires IV: Anniversary Edition",
       "hours": 29.3,
-      "cumulative_pct": 87.1,
+      "cumulative_pct": 87.0,
       "rank": 26
     },
     {
       "name": "Battle Brothers",
       "hours": 28.8,
-      "cumulative_pct": 87.7,
+      "cumulative_pct": 87.6,
       "rank": 27
     },
     {
       "name": "The Elder Scrolls V: Skyrim Special Edition",
       "hours": 28.5,
-      "cumulative_pct": 88.2,
+      "cumulative_pct": 88.1,
       "rank": 28
     },
     {
       "name": "Mount & Blade: Warband",
       "hours": 27.9,
-      "cumulative_pct": 88.7,
+      "cumulative_pct": 88.6,
       "rank": 29
     },
     {
       "name": "R.E.P.O.",
       "hours": 27.3,
-      "cumulative_pct": 89.2,
+      "cumulative_pct": 89.1,
       "rank": 30
+    },
+    {
+      "name": "Slay the Spire 2",
+      "hours": 25.9,
+      "cumulative_pct": 89.6,
+      "rank": 31
     },
     {
       "name": "Noita",
       "hours": 25.8,
-      "cumulative_pct": 89.7,
-      "rank": 31
-    },
-    {
-      "name": "Middle-earth™: Shadow of War™",
-      "hours": 22.5,
       "cumulative_pct": 90.1,
       "rank": 32
     },
     {
-      "name": "Sid Meier's Civilization VI",
-      "hours": 21.6,
+      "name": "Middle-earth™: Shadow of War™",
+      "hours": 22.5,
       "cumulative_pct": 90.5,
       "rank": 33
     },
     {
-      "name": "Schedule I",
+      "name": "Sid Meier's Civilization VI",
       "hours": 21.6,
       "cumulative_pct": 90.9,
       "rank": 34
     },
     {
-      "name": "Enshrouded",
-      "hours": 21.0,
+      "name": "Schedule I",
+      "hours": 21.6,
       "cumulative_pct": 91.3,
       "rank": 35
     },
     {
-      "name": "Slay the Spire 2",
-      "hours": 20.2,
+      "name": "Enshrouded",
+      "hours": 21.0,
       "cumulative_pct": 91.7,
       "rank": 36
     },
@@ -3022,7 +3091,7 @@
     {
       "name": "Stronghold Crusader HD",
       "hours": 2.2,
-      "cumulative_pct": 99.3,
+      "cumulative_pct": 99.2,
       "rank": 98
     },
     {
@@ -3182,62 +3251,62 @@
       "rank": 124
     },
     {
-      "name": "Counter-Strike: Source",
-      "hours": 0.5,
+      "name": "Slay the Spire",
+      "hours": 0.6,
       "cumulative_pct": 99.9,
       "rank": 125
     },
     {
-      "name": "ARK: Survival Evolved",
+      "name": "Counter-Strike: Source",
       "hours": 0.5,
       "cumulative_pct": 99.9,
       "rank": 126
     },
     {
-      "name": "Counter-Strike: Condition Zero",
-      "hours": 0.4,
+      "name": "ARK: Survival Evolved",
+      "hours": 0.5,
       "cumulative_pct": 99.9,
       "rank": 127
     },
     {
-      "name": "World of Warships",
+      "name": "Counter-Strike: Condition Zero",
       "hours": 0.4,
       "cumulative_pct": 99.9,
       "rank": 128
     },
     {
-      "name": "The Survivalists",
+      "name": "World of Warships",
       "hours": 0.4,
       "cumulative_pct": 99.9,
       "rank": 129
     },
     {
-      "name": "KUNKUN Defender",
+      "name": "The Survivalists",
       "hours": 0.4,
       "cumulative_pct": 99.9,
       "rank": 130
     },
     {
-      "name": "Gas Station Simulator: Prologue - Early Days",
-      "hours": 0.3,
+      "name": "KUNKUN Defender",
+      "hours": 0.4,
       "cumulative_pct": 100.0,
       "rank": 131
     },
     {
-      "name": "Heroes & Generals",
+      "name": "Gas Station Simulator: Prologue - Early Days",
       "hours": 0.3,
       "cumulative_pct": 100.0,
       "rank": 132
     },
     {
-      "name": "Life is Feudal: Forest Village",
+      "name": "Heroes & Generals",
       "hours": 0.3,
       "cumulative_pct": 100.0,
       "rank": 133
     },
     {
-      "name": "Slay the Spire",
-      "hours": 0.2,
+      "name": "Life is Feudal: Forest Village",
+      "hours": 0.3,
       "cumulative_pct": 100.0,
       "rank": 134
     },
@@ -3317,11 +3386,11 @@
   "weekday": [
     {
       "day": "Mon",
-      "minutes": 901
+      "minutes": 1116
     },
     {
       "day": "Tue",
-      "minutes": 183
+      "minutes": 328
     },
     {
       "day": "Wed",
@@ -3868,11 +3937,6 @@
         ]
       },
       {
-        "appid": 230190,
-        "name": "War for the Overworld",
-        "genres": []
-      },
-      {
         "appid": 365360,
         "name": "Battle Brothers",
         "genres": [
@@ -3900,13 +3964,8 @@
         ]
       },
       {
-        "appid": 892970,
-        "name": "Valheim",
-        "genres": []
-      },
-      {
-        "appid": 3912710,
-        "name": "War of Banners Demo",
+        "appid": 230190,
+        "name": "War for the Overworld",
         "genres": []
       },
       {
@@ -3921,33 +3980,58 @@
         ]
       },
       {
+        "appid": 892970,
+        "name": "Valheim",
+        "genres": []
+      },
+      {
         "appid": 1876880,
         "name": "Primitive Society Simulator",
+        "genres": []
+      },
+      {
+        "appid": 3912710,
+        "name": "War of Banners Demo",
         "genres": []
       }
     ],
     "links": [
       {
         "source": 730,
+        "target": 365360,
+        "strength": 16
+      },
+      {
+        "source": 730,
+        "target": 1172470,
+        "strength": 16
+      },
+      {
+        "source": 730,
+        "target": 2213700,
+        "strength": 16
+      },
+      {
+        "source": 365360,
+        "target": 1172470,
+        "strength": 16
+      },
+      {
+        "source": 365360,
+        "target": 2213700,
+        "strength": 16
+      },
+      {
+        "source": 1172470,
+        "target": 2213700,
+        "strength": 16
+      },
+      {
+        "source": 730,
         "target": 230190,
         "strength": 15
       },
       {
-        "source": 730,
-        "target": 365360,
-        "strength": 15
-      },
-      {
-        "source": 730,
-        "target": 1172470,
-        "strength": 15
-      },
-      {
-        "source": 730,
-        "target": 2213700,
-        "strength": 15
-      },
-      {
         "source": 230190,
         "target": 365360,
         "strength": 15
@@ -3963,23 +4047,18 @@
         "strength": 15
       },
       {
-        "source": 365360,
-        "target": 1172470,
-        "strength": 15
-      },
-      {
-        "source": 365360,
-        "target": 2213700,
-        "strength": 15
-      },
-      {
-        "source": 1172470,
-        "target": 2213700,
-        "strength": 15
+        "source": 730,
+        "target": 261550,
+        "strength": 14
       },
       {
         "source": 730,
         "target": 892970,
+        "strength": 14
+      },
+      {
+        "source": 730,
+        "target": 1876880,
         "strength": 14
       },
       {
@@ -3998,8 +4077,33 @@
         "strength": 14
       },
       {
+        "source": 261550,
+        "target": 365360,
+        "strength": 14
+      },
+      {
+        "source": 261550,
+        "target": 1172470,
+        "strength": 14
+      },
+      {
+        "source": 261550,
+        "target": 1876880,
+        "strength": 14
+      },
+      {
+        "source": 261550,
+        "target": 2213700,
+        "strength": 14
+      },
+      {
         "source": 365360,
         "target": 892970,
+        "strength": 14
+      },
+      {
+        "source": 365360,
+        "target": 1876880,
         "strength": 14
       },
       {
@@ -4024,58 +4128,23 @@
       },
       {
         "source": 1172470,
+        "target": 1876880,
+        "strength": 14
+      },
+      {
+        "source": 1172470,
         "target": 3912710,
+        "strength": 14
+      },
+      {
+        "source": 1876880,
+        "target": 2213700,
         "strength": 14
       },
       {
         "source": 2213700,
         "target": 3912710,
         "strength": 14
-      },
-      {
-        "source": 730,
-        "target": 261550,
-        "strength": 13
-      },
-      {
-        "source": 730,
-        "target": 1876880,
-        "strength": 13
-      },
-      {
-        "source": 230190,
-        "target": 261550,
-        "strength": 13
-      },
-      {
-        "source": 230190,
-        "target": 1876880,
-        "strength": 13
-      },
-      {
-        "source": 261550,
-        "target": 365360,
-        "strength": 13
-      },
-      {
-        "source": 261550,
-        "target": 1172470,
-        "strength": 13
-      },
-      {
-        "source": 261550,
-        "target": 1876880,
-        "strength": 13
-      },
-      {
-        "source": 261550,
-        "target": 2213700,
-        "strength": 13
-      },
-      {
-        "source": 365360,
-        "target": 1876880,
-        "strength": 13
       }
     ]
   },
@@ -4103,12 +4172,12 @@
     {
       "genre": "Indie",
       "games": 25,
-      "hours": 1260.4
+      "hours": 1266.1
     },
     {
       "genre": "Strategy",
       "games": 22,
-      "hours": 1050.2
+      "hours": 1055.9
     },
     {
       "genre": "Simulation",
@@ -4118,7 +4187,7 @@
     {
       "genre": "Early Access",
       "games": 9,
-      "hours": 312.6
+      "hours": 318.2
     },
     {
       "genre": "Animation & Modeling",
@@ -4166,15 +4235,15 @@
       },
       {
         "name": "Slay the Spire 2",
-        "hours": 20.2
+        "hours": 25.9
       },
       {
         "name": "Apex Legends",
-        "hours": 10.1
+        "hours": 9.5
       },
       {
         "name": "Counter-Strike 2",
-        "hours": 8.4
+        "hours": 7.1
       },
       {
         "name": "Primitive Society Simulator",
@@ -4185,19 +4254,18 @@
   "weekly_digest": [
     {
       "dates": [
+        "2026-05-12",
+        "2026-05-11",
         "2026-05-10",
         "2026-05-08",
         "2026-05-07",
         "2026-05-06",
-        "2026-05-05",
-        "2026-05-04",
-        "2026-05-03"
+        "2026-05-05"
       ],
-      "total_hours": 50.5,
-      "games_count": 7,
+      "total_hours": 37.4,
+      "games_count": 4,
       "top_games": [
         "Slay the Spire 2",
-        "Mount & Blade II: Bannerlord",
         "Apex Legends",
         "Counter-Strike 2",
         "Slay the Spire"
@@ -4205,6 +4273,50 @@
     }
   ],
   "game_updates": [
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "Apex Legends: Latest Update 5/11/2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502822005",
+      "date": 1778519769,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "⚠️INVESTIGATING:-We’re aware of an issue where some graphics and brightness settings reset after relaunching Apex. A fix is incoming, and we expect this to be resolved soon.-We are also investigating issues where players respawned from beacons return to the match without a white backpack, and those respawned from deathbox lose their weapon hop ups.-We are investigating reports of performance issues on various devices/hardware."
+    },
+    {
+      "appid": 1203620,
+      "game_name": "Enshrouded",
+      "title": "Changelog for Hotfix #41 v.0.9.1.2",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502821444",
+      "date": 1778508503,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Changelog for Hotfix #41 v.0.9.1.2The revision of Hotfix #41 is 1024233 Changelog:Fixed a VFX issue that might lead to a crashImproved crash detection even more to help us diagnose and fix future issues. This affects a lot of VFX files, therefore shader compilation might take a bit longer than usual. Sorry about that, but we promise it’s for a very good reason!Fixed dodge roll stuttering when standing still after the roll"
+    },
+    {
+      "appid": 2213700,
+      "game_name": "Sintopia",
+      "title": "Hotfix now live for Sintopia!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502821245",
+      "date": 1778504711,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Hello there, Administrators!Another update, already?! The Imps have been very busy here at Hell Inc (and not just because we’ve taken away their Break Room privileges)! 😈This time out, we’ve taken care of some campaign bugs from Mission 7, as well as more general fixes around performance, achievements, and key bindings. As always, thanks for your diligent feedback and reports!Until next time, good luck down there, Administrators. Give ‘em Hell... 😏Full Patch NotesCampaignMission 7: The Guacasaurus won’t be interrupted by their “erratic roaming” behaviour when catching fire while enraged.Mission 7: Fixed a bug that could cause the objective to \"wake up all humus\" to be needlessly hard to achieve.GeneralFixed an issue where the “Mixing Flavor” Achievement could unlock without meeting the req..."
+    },
+    {
+      "appid": 1483870,
+      "game_name": "Draw & Guess",
+      "title": "Progression, Social, and Artbooks - LIVE NOW",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502820741",
+      "date": 1778492428,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hey everyone! We have quite a lot of content to share with you today, so BUCKLE IN as we dive into all of the new features we just dropped.Character Unlocks/ProgressionFollowing a public vote from the community, 79% of you told us you don’t want cosmetic microtransactions in Draw & Guess. As of this update, they are GONE FOREVER. We decided not to have an “earnable AND buyable” model, as we want characters/skins to represent the time you put into earning them. If we’re going to do this, we want to do it right, i.e. remove cosmetic microtransactions completely, and not overcomplicate things by also retaining the in-game shop.Note: The shop will be temporarily accessible to players with over 350 Ink for the next 3 months via a dialogue on the main menu. Ink can no longer be purchased; it can..."
+    },
     {
       "appid": 2868840,
       "game_name": "Slay the Spire 2",
@@ -4424,50 +4536,6 @@
       "feedlabel": "Product Update",
       "update_type": "Update",
       "contents": "An update has been released for Left 4 Dead: - Fixed several exploits that could be used to crash servers or remote players."
-    },
-    {
-      "appid": 500,
-      "game_name": "Left 4 Dead",
-      "title": "Left 4 Dead - Update",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/l4d_blog/1832065502810010",
-      "date": 1778090520,
-      "feedname": "l4d_blog",
-      "feedlabel": "L4D Blog",
-      "update_type": "Update",
-      "contents": "An update has been released for Left 4 Dead: - Fixed several exploits that could be used to crash servers or remote players."
-    },
-    {
-      "appid": 289070,
-      "game_name": "Sid Meier's Civilization VI",
-      "title": "Civ Streams: Civ VII's Test of Time Update",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502809798",
-      "date": 1778086947,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Civilization VII's Test of Time update—the massive, many-months-in-the-works update playtested by Firaxis Feature Workshop participants—arrives May 19, free for all Civ VII players!* To see its game-changing new content in action, tune in to the Firaxis Twitch Channel or Civilization YouTube Channel on May 13 at 11 AM PT/ 2 PM ET / 6PM GMT to watch Firaxis developers play and discuss it in-depth. Viewers can expect special surprise guests to join the devs live, as well as the reveal of a new free leader, so be sure you don't miss it!* For now, keep an eye on the official Civilization VII site for news about what will follow in the coming weeks and months. We'll see you on May 13 for the livestream, then you can experience the Test of Time update for yourself when it launches on May 19! *Ba..."
-    },
-    {
-      "appid": 289070,
-      "game_name": "Sid Meier's Civilization VI",
-      "title": "Civilization VII's Test of Time Update Coming May 19!",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502809536",
-      "date": 1778083454,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "When Firaxis first conceived of Civilization VII, the ambition was to boldly re-approach the series' classic structure with new mechanics rooted in a more nuanced historical perspective, while honoring and building upon the time-tested strategic gameplay that players love. Since our February 2025 launch, those same players have only helped us better achieve that initial, ambitious vision. Today, we're thrilled to officially announce the release date for the Test of Time update for Civilization VII, free for all players when it releases on May 19.* This is much more than just another update; it's a direct result of your passion, feedback, and patience. It also wouldn't have been possible without our dedicated and invaluable Firaxis Feature Workshop participants, who were essential to shapin..."
-    },
-    {
-      "appid": 440900,
-      "game_name": "Conan Exiles Enhanced",
-      "title": "May Hotfix 1.0.1",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502809532",
-      "date": 1778083342,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "We have a quick hotfix for you today that addresses the following issues:Fixed an intermittent server crash.Fixed an issue loading mod pak files that have been renamed on dedicated servers.Fixed an issue where the game could take a long time to boot or run out of memory mounting pak files from Legacy mods.Startup videos should now be skippable on most systems after preloading completes.Legacy mods will be ignored but initially remain in the modlist.txt.If active mods are modified, then Legacy mods will be removed from modlist.txt.Default allowed ping increased to 300 (from 200)Living settlements disabled for the following official servers:151619421509"
     }
   ]
 }
