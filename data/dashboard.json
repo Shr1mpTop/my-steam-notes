@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13T02:01:47.065396+08:00",
+  "updated_at": "2026-05-14T02:02:17.903336+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
     "online": true,
@@ -8,10 +8,10 @@
     "avatarfull": "https://avatars.steamstatic.com/0c36cd0464c002f4a34041c76d11a6699ab08dd1_full.jpg"
   },
   "milestone": {
-    "total_hours": 5441.9,
-    "movies": 2720,
-    "books": 906,
-    "walking_km": 27209
+    "total_hours": 5445.5,
+    "movies": 2722,
+    "books": 907,
+    "walking_km": 27227
   },
   "game_cloud": [
     {
@@ -299,6 +299,18 @@
       ]
     },
     {
+      "appid": 2868840,
+      "name": "Slay the Spire 2",
+      "playtime_hours": 35.7,
+      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
+      "rtime_last_played": 1778694939,
+      "genres": [
+        "Indie",
+        "Strategy",
+        "Early Access"
+      ]
+    },
+    {
       "appid": 12210,
       "name": "Grand Theft Auto IV: The Complete Edition",
       "playtime_hours": 33.3,
@@ -307,18 +319,6 @@
       "genres": [
         "Action",
         "Adventure"
-      ]
-    },
-    {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtime_hours": 32.2,
-      "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
-      "rtime_last_played": 1778608457,
-      "genres": [
-        "Indie",
-        "Strategy",
-        "Early Access"
       ]
     },
     {
@@ -1397,16 +1397,16 @@
   ],
   "recent_activity": [
     {
-      "appid": 261550,
-      "name": "Mount & Blade II: Bannerlord",
-      "playtime_2weeks_hours": 36.5,
-      "playtime_forever_hours": 302.1
-    },
-    {
       "appid": 2868840,
       "name": "Slay the Spire 2",
-      "playtime_2weeks_hours": 32.2,
-      "playtime_forever_hours": 32.2
+      "playtime_2weeks_hours": 35.7,
+      "playtime_forever_hours": 35.7
+    },
+    {
+      "appid": 261550,
+      "name": "Mount & Blade II: Bannerlord",
+      "playtime_2weeks_hours": 35.5,
+      "playtime_forever_hours": 302.1
     },
     {
       "appid": 1172470,
@@ -1417,20 +1417,8 @@
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 6.4,
+      "playtime_2weeks_hours": 6.2,
       "playtime_forever_hours": 1864.0
-    },
-    {
-      "appid": 1876880,
-      "name": "Primitive Society Simulator",
-      "playtime_2weeks_hours": 6.3,
-      "playtime_forever_hours": 6.3
-    },
-    {
-      "appid": 2213700,
-      "name": "Sintopia",
-      "playtime_2weeks_hours": 2.5,
-      "playtime_forever_hours": 41.5
     },
     {
       "appid": 688420,
@@ -1467,14 +1455,27 @@
       "name": "Wallpaper Engine",
       "playtime_2weeks_hours": 0.1,
       "playtime_forever_hours": 100.4
+    },
+    {
+      "appid": 2213700,
+      "name": "Sintopia",
+      "playtime_2weeks_hours": 0.0,
+      "playtime_forever_hours": 41.5
     }
   ],
   "heatmap": {
-    "2026-05-13": {
-      "playtime_minutes": 74,
-      "online_minutes": 74,
+    "2026-05-14": {
+      "playtime_minutes": 127,
+      "online_minutes": 127,
       "games": {
-        "Slay the Spire 2": 61,
+        "Slay the Spire 2": 127
+      }
+    },
+    "2026-05-13": {
+      "playtime_minutes": 161,
+      "online_minutes": 161,
+      "games": {
+        "Slay the Spire 2": 148,
         "Apex Legends": 10,
         "Counter-Strike 2": 3
       }
@@ -1616,7 +1617,7 @@
       "dow": 1,
       "hour": 13,
       "count": 5.0,
-      "recent_count": 5.0,
+      "recent_count": 0.0,
       "all_time_count": 57.9,
       "game_minutes": 5.0,
       "online_minutes": 0.0,
@@ -1628,7 +1629,7 @@
       "dow": 1,
       "hour": 14,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 83.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -1640,7 +1641,7 @@
       "dow": 1,
       "hour": 16,
       "count": 15.1,
-      "recent_count": 15.1,
+      "recent_count": 0.0,
       "all_time_count": 30.1,
       "game_minutes": 15.1,
       "online_minutes": 0.0,
@@ -1654,7 +1655,7 @@
       "dow": 2,
       "hour": 0,
       "count": 4.9,
-      "recent_count": 4.9,
+      "recent_count": 0.0,
       "all_time_count": 76.7,
       "game_minutes": 4.9,
       "online_minutes": 0.0,
@@ -1666,7 +1667,7 @@
       "dow": 2,
       "hour": 1,
       "count": 55.0,
-      "recent_count": 55.0,
+      "recent_count": 0.0,
       "all_time_count": 175.0,
       "game_minutes": 55.0,
       "online_minutes": 0.0,
@@ -1697,12 +1698,14 @@
     {
       "dow": 2,
       "hour": 15,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
+      "count": 40.0,
+      "recent_count": 40.0,
+      "all_time_count": 100.0,
+      "game_minutes": 40.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 40.0
+      }
     },
     {
       "dow": 2,
@@ -1727,12 +1730,14 @@
     {
       "dow": 2,
       "hour": 18,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 94.9,
-      "game_minutes": 0.0,
+      "count": 45.0,
+      "recent_count": 45.0,
+      "all_time_count": 139.9,
+      "game_minutes": 45.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 45.0
+      }
     },
     {
       "dow": 2,
@@ -1777,12 +1782,14 @@
     {
       "dow": 2,
       "hour": 23,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 45.2,
-      "game_minutes": 0.0,
+      "count": 10.0,
+      "recent_count": 10.0,
+      "all_time_count": 55.1,
+      "game_minutes": 10.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 10.0
+      }
     },
     {
       "dow": 3,
@@ -2279,22 +2286,26 @@
     {
       "dow": 3,
       "hour": 1,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 40.0,
-      "game_minutes": 0.0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 100.0,
+      "game_minutes": 60.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
     },
     {
       "dow": 3,
       "hour": 2,
-      "count": 0.0,
-      "recent_count": 0.0,
+      "count": 0.1,
+      "recent_count": 0.1,
       "all_time_count": 5.1,
-      "game_minutes": 0.0,
+      "game_minutes": 0.1,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Slay the Spire 2": 0.1
+      }
     },
     {
       "dow": 3,
@@ -2526,7 +2537,7 @@
       "dow": 1,
       "hour": 2,
       "count": 60.0,
-      "recent_count": 58.2,
+      "recent_count": 0.0,
       "all_time_count": 60.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -2538,7 +2549,7 @@
       "dow": 1,
       "hour": 3,
       "count": 30.0,
-      "recent_count": 30.0,
+      "recent_count": 0.0,
       "all_time_count": 30.0,
       "game_minutes": 30.0,
       "online_minutes": 0.0,
@@ -2551,7 +2562,7 @@
       "dow": 1,
       "hour": 15,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 60.0,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -2563,7 +2574,7 @@
       "dow": 1,
       "hour": 17,
       "count": 50.0,
-      "recent_count": 50.0,
+      "recent_count": 0.0,
       "all_time_count": 50.0,
       "game_minutes": 50.0,
       "online_minutes": 0.0,
@@ -2575,7 +2586,7 @@
       "dow": 1,
       "hour": 18,
       "count": 13.5,
-      "recent_count": 13.5,
+      "recent_count": 0.0,
       "all_time_count": 13.5,
       "game_minutes": 13.5,
       "online_minutes": 0.0,
@@ -2588,7 +2599,7 @@
       "dow": 1,
       "hour": 20,
       "count": 39.9,
-      "recent_count": 39.9,
+      "recent_count": 0.0,
       "all_time_count": 39.9,
       "game_minutes": 39.9,
       "online_minutes": 0.0,
@@ -2600,7 +2611,7 @@
       "dow": 1,
       "hour": 21,
       "count": 55.1,
-      "recent_count": 55.1,
+      "recent_count": 0.0,
       "all_time_count": 55.1,
       "game_minutes": 55.1,
       "online_minutes": 0.0,
@@ -2613,7 +2624,7 @@
       "dow": 1,
       "hour": 22,
       "count": 54.9,
-      "recent_count": 54.9,
+      "recent_count": 0.0,
       "all_time_count": 54.9,
       "game_minutes": 54.9,
       "online_minutes": 0.0,
@@ -2625,17 +2636,29 @@
       "dow": 1,
       "hour": 23,
       "count": 35.1,
-      "recent_count": 35.1,
+      "recent_count": 0.0,
       "all_time_count": 35.1,
       "game_minutes": 35.1,
       "online_minutes": 0.0,
       "games": {
         "Apex Legends": 35.1
       }
+    },
+    {
+      "dow": 3,
+      "hour": 0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 60.0,
+      "game_minutes": 60.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Slay the Spire 2": 60.0
+      }
     }
   ],
   "platform": {
-    "Windows": 5406.4,
+    "Windows": 5410.0,
     "Mac": 25.2,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -2644,19 +2667,19 @@
     {
       "name": "Counter-Strike 2",
       "hours": 1864.0,
-      "cumulative_pct": 34.3,
+      "cumulative_pct": 34.2,
       "rank": 1
     },
     {
       "name": "Apex Legends",
       "hours": 539.5,
-      "cumulative_pct": 44.2,
+      "cumulative_pct": 44.1,
       "rank": 2
     },
     {
       "name": "Kingdom Come: Deliverance",
       "hours": 369.6,
-      "cumulative_pct": 51.0,
+      "cumulative_pct": 50.9,
       "rank": 3
     },
     {
@@ -2668,19 +2691,19 @@
     {
       "name": "Terraria",
       "hours": 209.5,
-      "cumulative_pct": 60.4,
+      "cumulative_pct": 60.3,
       "rank": 5
     },
     {
       "name": "Kingdom Come: Deliverance II",
       "hours": 159.4,
-      "cumulative_pct": 63.3,
+      "cumulative_pct": 63.2,
       "rank": 6
     },
     {
       "name": "Baldur's Gate 3",
       "hours": 151.4,
-      "cumulative_pct": 66.1,
+      "cumulative_pct": 66.0,
       "rank": 7
     },
     {
@@ -2698,7 +2721,7 @@
     {
       "name": "Wallpaper Engine",
       "hours": 100.4,
-      "cumulative_pct": 72.2,
+      "cumulative_pct": 72.1,
       "rank": 10
     },
     {
@@ -2740,13 +2763,13 @@
     {
       "name": "The Witcher 3: Wild Hunt",
       "hours": 50.3,
-      "cumulative_pct": 80.4,
+      "cumulative_pct": 80.3,
       "rank": 17
     },
     {
       "name": "Palworld",
       "hours": 49.3,
-      "cumulative_pct": 81.3,
+      "cumulative_pct": 81.2,
       "rank": 18
     },
     {
@@ -2758,13 +2781,13 @@
     {
       "name": "Kenshi",
       "hours": 45.7,
-      "cumulative_pct": 83.0,
+      "cumulative_pct": 82.9,
       "rank": 20
     },
     {
       "name": "Manor Lords",
       "hours": 42.8,
-      "cumulative_pct": 83.8,
+      "cumulative_pct": 83.7,
       "rank": 21
     },
     {
@@ -2780,14 +2803,14 @@
       "rank": 23
     },
     {
-      "name": "Grand Theft Auto IV: The Complete Edition",
-      "hours": 33.3,
+      "name": "Slay the Spire 2",
+      "hours": 35.7,
       "cumulative_pct": 85.8,
       "rank": 24
     },
     {
-      "name": "Slay the Spire 2",
-      "hours": 32.2,
+      "name": "Grand Theft Auto IV: The Complete Edition",
+      "hours": 33.3,
       "cumulative_pct": 86.4,
       "rank": 25
     },
@@ -3529,11 +3552,11 @@
     },
     {
       "day": "Wed",
-      "minutes": 1132
+      "minutes": 1219
     },
     {
       "day": "Thu",
-      "minutes": 384
+      "minutes": 511
     },
     {
       "day": "Fri",
@@ -4099,11 +4122,6 @@
         ]
       },
       {
-        "appid": 230190,
-        "name": "War for the Overworld",
-        "genres": []
-      },
-      {
         "appid": 261550,
         "name": "Mount & Blade II: Bannerlord",
         "genres": [
@@ -4113,6 +4131,11 @@
           "Simulation",
           "Strategy"
         ]
+      },
+      {
+        "appid": 230190,
+        "name": "War for the Overworld",
+        "genres": []
       },
       {
         "appid": 1876880,
@@ -4125,6 +4148,16 @@
         "genres": []
       },
       {
+        "appid": 2060160,
+        "name": "The Farmer Was Replaced",
+        "genres": [
+          "Casual",
+          "Indie",
+          "Simulation",
+          "Strategy"
+        ]
+      },
+      {
         "appid": 3912710,
         "name": "War of Banners Demo",
         "genres": []
@@ -4134,32 +4167,52 @@
       {
         "source": 730,
         "target": 365360,
-        "strength": 17
+        "strength": 18
       },
       {
         "source": 730,
         "target": 1172470,
-        "strength": 17
+        "strength": 18
       },
       {
         "source": 730,
         "target": 2213700,
-        "strength": 17
+        "strength": 18
       },
       {
         "source": 365360,
         "target": 1172470,
-        "strength": 17
+        "strength": 18
       },
       {
         "source": 365360,
         "target": 2213700,
-        "strength": 17
+        "strength": 18
       },
       {
         "source": 1172470,
         "target": 2213700,
-        "strength": 17
+        "strength": 18
+      },
+      {
+        "source": 730,
+        "target": 261550,
+        "strength": 16
+      },
+      {
+        "source": 261550,
+        "target": 365360,
+        "strength": 16
+      },
+      {
+        "source": 261550,
+        "target": 1172470,
+        "strength": 16
+      },
+      {
+        "source": 261550,
+        "target": 2213700,
+        "strength": 16
       },
       {
         "source": 730,
@@ -4168,11 +4221,6 @@
       },
       {
         "source": 730,
-        "target": 261550,
-        "strength": 15
-      },
-      {
-        "source": 730,
         "target": 1876880,
         "strength": 15
       },
@@ -4193,22 +4241,7 @@
       },
       {
         "source": 261550,
-        "target": 365360,
-        "strength": 15
-      },
-      {
-        "source": 261550,
-        "target": 1172470,
-        "strength": 15
-      },
-      {
-        "source": 261550,
         "target": 1876880,
-        "strength": 15
-      },
-      {
-        "source": 261550,
-        "target": 2213700,
         "strength": 15
       },
       {
@@ -4233,6 +4266,11 @@
       },
       {
         "source": 730,
+        "target": 2060160,
+        "strength": 14
+      },
+      {
+        "source": 730,
         "target": 3912710,
         "strength": 14
       },
@@ -4244,11 +4282,21 @@
       {
         "source": 230190,
         "target": 3912710,
+        "strength": 14
+      },
+      {
+        "source": 261550,
+        "target": 2060160,
         "strength": 14
       },
       {
         "source": 365360,
         "target": 892970,
+        "strength": 14
+      },
+      {
+        "source": 365360,
+        "target": 2060160,
         "strength": 14
       },
       {
@@ -4264,21 +4312,6 @@
       {
         "source": 892970,
         "target": 2213700,
-        "strength": 14
-      },
-      {
-        "source": 892970,
-        "target": 3912710,
-        "strength": 14
-      },
-      {
-        "source": 1172470,
-        "target": 3912710,
-        "strength": 14
-      },
-      {
-        "source": 2213700,
-        "target": 3912710,
         "strength": 14
       }
     ]
@@ -4307,12 +4340,12 @@
     {
       "genre": "Indie",
       "games": 25,
-      "hours": 1273.2
+      "hours": 1276.8
     },
     {
       "genre": "Strategy",
       "games": 22,
-      "hours": 1062.2
+      "hours": 1065.7
     },
     {
       "genre": "Simulation",
@@ -4322,7 +4355,7 @@
     {
       "genre": "Early Access",
       "games": 9,
-      "hours": 324.5
+      "hours": 328.1
     },
     {
       "genre": "Animation & Modeling",
@@ -4362,15 +4395,15 @@
   ],
   "game_weather": {
     "forecast": "storm",
-    "top_game": "Mount & Blade II: Bannerlord",
+    "top_game": "Slay the Spire 2",
     "games": [
       {
-        "name": "Mount & Blade II: Bannerlord",
-        "hours": 36.5
+        "name": "Slay the Spire 2",
+        "hours": 35.7
       },
       {
-        "name": "Slay the Spire 2",
-        "hours": 32.2
+        "name": "Mount & Blade II: Bannerlord",
+        "hours": 35.5
       },
       {
         "name": "Apex Legends",
@@ -4378,37 +4411,70 @@
       },
       {
         "name": "Counter-Strike 2",
-        "hours": 6.4
+        "hours": 6.2
       },
       {
-        "name": "Primitive Society Simulator",
-        "hours": 6.3
+        "name": "Bad North: Jotunn Edition",
+        "hours": 0.8
       }
     ]
   },
   "weekly_digest": [
     {
       "dates": [
+        "2026-05-14",
         "2026-05-13",
         "2026-05-12",
         "2026-05-11",
         "2026-05-10",
         "2026-05-08",
-        "2026-05-07",
-        "2026-05-06"
+        "2026-05-07"
       ],
-      "total_hours": 45.4,
+      "total_hours": 42.8,
       "games_count": 5,
       "top_games": [
         "Slay the Spire 2",
         "Apex Legends",
-        "Counter-Strike 2",
         "Bad North: Jotunn Edition",
-        "Slay the Spire"
+        "Slay the Spire",
+        "Counter-Strike 2"
       ]
     }
   ],
   "game_updates": [
+    {
+      "appid": 440900,
+      "game_name": "Conan Exiles Enhanced",
+      "title": "May Hotfix 1.0.3",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592786498",
+      "date": 1778680981,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "We have a new hotfix for you today that addresses the following changes and fixes.Made some changes for the funcom launcher to simplify launching battleye on steam deck.Legacy servers upgrading to Enhanced no longer need to update config files to address version compatibility issues.Using the - MULTIHOME parameter for hosting will now send http requests to the server browser backend over the same interface, ensuring hosts using multihoming can register correctly.Reinstated options for players to configure their data collection preferences.Living Settlements have been re-enabled on the following servers:1516 / 1942 / 1509Fixed an issue where player disconnects weren’t being registered with the dedicated server launcher.Fix for nudity settings.A client’s maximum nudity settings will no longe..."
+    },
+    {
+      "appid": 578080,
+      "game_name": "PUBG: BATTLEGROUNDS",
+      "title": "Update #41.2 New Mode: PUBG x PAYDAY",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592785214",
+      "date": 1778640980,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Get in. Get out. Get everything. The PAYDAY collaboration for PUBG: Battlegrounds is an all new PVE heist mode. The heist spree begins!🖥️PC: May 13, 2026 🎮Console: May 21, 2026Streamers, it’s time - The PUBG x PAYDAY Streamer Challenge is here. Pull off the perfect heist and walk away with the most cash by competing across two leaderboards.Sign up: https://pubg.promo/PAYDAYChallengeSignUp Event rules: https://pubg.promo/PAYDAYChallenge "
+    },
+    {
+      "appid": 322330,
+      "game_name": "Don't Starve Together",
+      "title": "Hotfix 728321",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592785192",
+      "date": 1778638976,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Small hotfix to address some concerns that have cropped up. Bug Fixes Fixed certain projectiles getting stuck on physics and staying around longer than intended. Fixed an issue with server side handling of slash commands. "
+    },
     {
       "appid": 1466860,
       "game_name": "Age of Empires IV: Anniversary Edition",
@@ -4639,39 +4705,6 @@
       "feedlabel": "Community Announcements",
       "update_type": "Update",
       "contents": "Hi everyone! Tim here, CEO of Manor Lords publisher Hooded Horse. I'm checking in to bring some news of the upcoming update. My apologies for being a bit late with this news post -- so my plan is to check in here once a month, unless there's a new update released or about to be released to either beta or main. And we've been in a bit of a holding pattern here, because the latest update has been in a cycle of QA testing, us thinking the build is just about ready for beta testing release to all of you, and then discovering some problems requiring fixes, for a couple weeks (we always test the new builds including with a professional QA firm before they go out to public beta testing, to try to fix as many bugs as possible, though of course they never find quite as much as beta playtesting reve..."
-    },
-    {
-      "appid": 440900,
-      "game_name": "Conan Exiles Enhanced",
-      "title": "May Hotfix 1.0.2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502815263",
-      "date": 1778248888,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "We have a new hotfix for you today that addresses the following issues:Fixed an issue where favorite servers would not be saved between sessions.Fixed an issue where filtering servers by favorites showed all servers as favorites.Dedicated servers can opt-in to send us crash reports with the launch argument -SendUnattendedBugReportsServer admins can launch with this option if experiencing server crashes to give us information to investigateFix an issue that was preventing servers with an IPv6 address from showing up in the server browserFixed an issue that was preventing the client from showing previously played servers"
-    },
-    {
-      "appid": 2868840,
-      "game_name": "Slay the Spire 2",
-      "title": "New Slay the Spire 2 update deletes its most controversial boss fight",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1832065502814953",
-      "date": 1778242585,
-      "feedname": "PCGamesN",
-      "feedlabel": "PCGamesN",
-      "update_type": "Patch Notes",
-      "contents": "The Doormaker is dead. Mega Crit's new <strong>Slay the Spire 2</strong> update has just landed on the beta branch, and the developer has finally made the decision to put its most divisive enemy to bed and start fresh with a completely new creation. These latest StS 2 patch notes also introduce the first incarnation of the Bestiary, and a fresh helping of balance changes for the <a href=\"https://www.pcgamesn.com/best-roguelike-games-pc\">roguelike</a> deckbuilder, led by some fairly notable Defect buffs. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/slay-the-spire-2/update-doormaker-removed\">New Slay the Spire 2 update deletes its most controversial boss fight</a> RELATED LINKS: <a href=\"https://www.pcgamesn.com/slay-the-spire-2/update-patch-notes-ironclad-neow\">New Slay the Spire 2 update reworks Ironclad's most unpopular card and makes lower Ascensions easier</a> <a href=\"https://www.pcgamesn.com/slay-the-spire-2/roadmap-neowsletter-april-2026\">The new Slay the Spire 2 roadmap has no dates: \"Exacting deadlines produce sloppy, uninspired work\"</a> <a href=\"https://www.pcgamesn.com/slay-the-spire-2/patch-notes-live-april-2026\">Slay the Spire 2 patch notes arrive for all, meaning...</a>"
-    },
-    {
-      "appid": 544810,
-      "game_name": "KARDS - The WWII Card Game",
-      "title": "KARDS Permanent Card Pool List",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502814709",
-      "date": 1778238019,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "{STEAM_CLAN_IMAGE}/34861374/94bcfbef7dc7c64f7e60cebd9eee5d169c216ace.jpg Hello Commanders, Today we're publishing the full list of cards in the permanent pool - the strategic backbone of KARDS under the new rotation system. The permanent pool is the set of cards that will never rotate out of the active pool. These are the cards you can safely craft, build around, and rely on regardless of what each new expansion brings. With this expanded core now in place, the active pool will hold between 800 and 900 cards at all times, giving every Commander a stable and diverse foundation for long-term deckbuilding. We’ve covered the full details of how the new rotation system works in our recent dev blog. If you missed that briefing, you can catch up here: New Rotation System - Dev Blog But first - ne..."
     }
   ]
 }
