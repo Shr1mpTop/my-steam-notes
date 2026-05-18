@@ -14,7 +14,7 @@ import requests
 from dotenv import load_dotenv
 
 sys.path.insert(0, ".")
-from scripts.turso_db import execute
+from scripts.turso_db import execute, execute_many
 
 load_dotenv()
 
@@ -25,14 +25,80 @@ KEY = os.getenv("STEAM_API_KEY")
 SID = os.getenv("STEAM_ID")
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 DASHBOARD_PATH = os.path.join(DATA_DIR, "dashboard.json")
+STEAM_USER_API = "https://api.steampowered.com/ISteamUser"
+STEAM_SUMMARY_CHUNK_SIZE = 100
+
+FRIEND_SCHEMA = [
+    """CREATE TABLE IF NOT EXISTS steam_friends (
+        steamid TEXT PRIMARY KEY,
+        relationship TEXT,
+        friend_since INTEGER DEFAULT 0,
+        personaname TEXT,
+        avatarfull TEXT,
+        profileurl TEXT,
+        last_seen_at TEXT,
+        updated_at TEXT
+    )""",
+    """CREATE TABLE IF NOT EXISTS friend_status_polls (
+        timestamp TEXT NOT NULL,
+        steamid TEXT NOT NULL,
+        personaname TEXT,
+        personastate INTEGER,
+        gameextrainfo TEXT,
+        gameid TEXT,
+        lastlogoff INTEGER DEFAULT 0,
+        avatarfull TEXT,
+        profileurl TEXT,
+        PRIMARY KEY (timestamp, steamid)
+    )""",
+    """CREATE INDEX IF NOT EXISTS idx_friend_status_polls_steamid_time
+       ON friend_status_polls (steamid, timestamp)""",
+    """CREATE INDEX IF NOT EXISTS idx_friend_status_polls_game_time
+       ON friend_status_polls (gameid, timestamp)""",
+]
+
+
+def chunks(items, size):
+    for i in range(0, len(items), size):
+        yield items[i:i + size]
+
+
+def ensure_friend_schema():
+    for stmt in FRIEND_SCHEMA:
+        execute(stmt)
 
 
 def get_player_summary():
-    url = "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/"
+    url = f"{STEAM_USER_API}/GetPlayerSummaries/v0002/"
     resp = requests.get(url, params={"key": KEY, "steamids": SID, "format": "json"}, timeout=15)
     resp.raise_for_status()
     players = resp.json()["response"].get("players", [])
     return players[0] if players else {}
+
+
+def get_friend_list():
+    url = f"{STEAM_USER_API}/GetFriendList/v0001/"
+    resp = requests.get(
+        url,
+        params={"key": KEY, "steamid": SID, "relationship": "friend", "format": "json"},
+        timeout=20,
+    )
+    resp.raise_for_status()
+    return resp.json().get("friendslist", {}).get("friends", [])
+
+
+def get_player_summaries(steamids):
+    players = []
+    url = f"{STEAM_USER_API}/GetPlayerSummaries/v0002/"
+    for batch in chunks(steamids, STEAM_SUMMARY_CHUNK_SIZE):
+        resp = requests.get(
+            url,
+            params={"key": KEY, "steamids": ",".join(batch), "format": "json"},
+            timeout=20,
+        )
+        resp.raise_for_status()
+        players.extend(resp.json().get("response", {}).get("players", []))
+    return players
 
 
 def poll_status():
@@ -45,6 +111,117 @@ def poll_status():
     online = p.get("personastate", 0) != 0
     print(f"[{now}] Online: {online} | Playing: {p.get('gameextrainfo', 'None')}")
     return p
+
+
+def poll_friend_statuses():
+    """Record Steam friends' visible realtime presence and current games."""
+    ensure_friend_schema()
+    now = datetime.now(TZ).isoformat()
+
+    try:
+        friends = get_friend_list()
+    except requests.HTTPError as exc:
+        status = exc.response.status_code if exc.response is not None else "unknown"
+        print(f"Friend poll skipped: GetFriendList failed with HTTP {status}")
+        return []
+    except requests.RequestException as exc:
+        print(f"Friend poll skipped: GetFriendList request failed: {exc}")
+        return []
+
+    if not friends:
+        print("Friend poll skipped: no friends returned")
+        return []
+
+    friend_args = [
+        [
+            f["steamid"],
+            f.get("relationship", "friend"),
+            f.get("friend_since", 0),
+            now,
+        ]
+        for f in friends
+    ]
+    execute_many(
+        """INSERT INTO steam_friends (steamid, relationship, friend_since, updated_at)
+           VALUES (?, ?, ?, ?)
+           ON CONFLICT(steamid) DO UPDATE SET
+             relationship=excluded.relationship,
+             friend_since=excluded.friend_since,
+             updated_at=excluded.updated_at""",
+        friend_args,
+    )
+
+    steamids = [f["steamid"] for f in friends]
+    try:
+        players = get_player_summaries(steamids)
+    except requests.HTTPError as exc:
+        status = exc.response.status_code if exc.response is not None else "unknown"
+        print(f"Friend poll skipped: GetPlayerSummaries failed with HTTP {status}")
+        return []
+    except requests.RequestException as exc:
+        print(f"Friend poll skipped: GetPlayerSummaries request failed: {exc}")
+        return []
+
+    if not players:
+        print("Friend poll skipped: no friend summaries returned")
+        return []
+
+    profile_args = [
+        [
+            p.get("steamid", ""),
+            p.get("personaname", ""),
+            p.get("avatarfull", ""),
+            p.get("profileurl", ""),
+            now,
+            now,
+        ]
+        for p in players
+        if p.get("steamid")
+    ]
+    if profile_args:
+        execute_many(
+            """INSERT INTO steam_friends (steamid, personaname, avatarfull, profileurl, last_seen_at, updated_at)
+               VALUES (?, ?, ?, ?, ?, ?)
+               ON CONFLICT(steamid) DO UPDATE SET
+                 personaname=excluded.personaname,
+                 avatarfull=excluded.avatarfull,
+                 profileurl=excluded.profileurl,
+                 last_seen_at=excluded.last_seen_at,
+                 updated_at=excluded.updated_at""",
+            profile_args,
+        )
+
+    poll_args = [
+        [
+            now,
+            p.get("steamid", ""),
+            p.get("personaname", ""),
+            p.get("personastate", 0),
+            p.get("gameextrainfo", ""),
+            p.get("gameid", ""),
+            p.get("lastlogoff", 0),
+            p.get("avatarfull", ""),
+            p.get("profileurl", ""),
+        ]
+        for p in players
+        if p.get("steamid")
+    ]
+    if poll_args:
+        execute_many(
+            """INSERT OR IGNORE INTO friend_status_polls
+               (timestamp, steamid, personaname, personastate, gameextrainfo, gameid, lastlogoff, avatarfull, profileurl)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            poll_args,
+        )
+
+    playing = [p for p in players if p.get("gameid") or p.get("gameextrainfo")]
+    print(f"[{now}] Friends polled: {len(players)} visible | Playing now: {len(playing)}")
+    for p in playing[:10]:
+        print(f"  - {p.get('personaname', p.get('steamid'))}: {p.get('gameextrainfo') or p.get('gameid')}")
+    if len(playing) > 10:
+        print(f"  ... and {len(playing) - 10} more")
+
+    return players
 
 
 def build_player(player_info):
@@ -486,6 +663,7 @@ def generate_dashboard(player_info):
 def main():
     print("=== Steam Status Poll ===\n")
     poll_status()
+    poll_friend_statuses()
     print("\n=== Done ===")
 
 

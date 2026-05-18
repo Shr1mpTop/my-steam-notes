@@ -47,6 +47,32 @@ SCHEMA = [
         gameextrainfo TEXT,
         gameid TEXT
     )""",
+    """CREATE TABLE IF NOT EXISTS steam_friends (
+        steamid TEXT PRIMARY KEY,
+        relationship TEXT,
+        friend_since INTEGER DEFAULT 0,
+        personaname TEXT,
+        avatarfull TEXT,
+        profileurl TEXT,
+        last_seen_at TEXT,
+        updated_at TEXT
+    )""",
+    """CREATE TABLE IF NOT EXISTS friend_status_polls (
+        timestamp TEXT NOT NULL,
+        steamid TEXT NOT NULL,
+        personaname TEXT,
+        personastate INTEGER,
+        gameextrainfo TEXT,
+        gameid TEXT,
+        lastlogoff INTEGER DEFAULT 0,
+        avatarfull TEXT,
+        profileurl TEXT,
+        PRIMARY KEY (timestamp, steamid)
+    )""",
+    """CREATE INDEX IF NOT EXISTS idx_friend_status_polls_steamid_time
+       ON friend_status_polls (steamid, timestamp)""",
+    """CREATE INDEX IF NOT EXISTS idx_friend_status_polls_game_time
+       ON friend_status_polls (gameid, timestamp)""",
     """CREATE TABLE IF NOT EXISTS game_details (
         appid INTEGER PRIMARY KEY,
         name TEXT,
