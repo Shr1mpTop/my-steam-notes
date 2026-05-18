@@ -1,25 +1,25 @@
 {
-  "updated_at": "2026-05-18T01:41:07.794478+08:00",
+  "updated_at": "2026-05-19T02:02:40.955232+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
-    "online": true,
+    "online": false,
     "currently_playing": "",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/0c36cd0464c002f4a34041c76d11a6699ab08dd1_full.jpg"
   },
   "milestone": {
-    "total_hours": 5476.4,
-    "movies": 2738,
-    "books": 912,
-    "walking_km": 27382
+    "total_hours": 5479.8,
+    "movies": 2739,
+    "books": 913,
+    "walking_km": 27399
   },
   "game_cloud": [
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1870.1,
+      "playtime_hours": 1870.2,
       "img_icon_url": "8dbc71957312bbd3baea65848b545be9eae2a355",
-      "rtime_last_played": 1779036824,
+      "rtime_last_played": 1779119373,
       "genres": [
         "Action",
         "Free To Play"
@@ -28,9 +28,9 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 546.1,
+      "playtime_hours": 549.4,
       "img_icon_url": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
-      "rtime_last_played": 1779031463,
+      "rtime_last_played": 1779120918,
       "genres": [
         "Action",
         "Adventure",
@@ -1433,14 +1433,8 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_2weeks_hours": 14.5,
-      "playtime_forever_hours": 546.1
-    },
-    {
-      "appid": 730,
-      "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 12.3,
-      "playtime_forever_hours": 1870.1
+      "playtime_2weeks_hours": 17.4,
+      "playtime_forever_hours": 549.4
     },
     {
       "appid": 1948280,
@@ -1449,10 +1443,10 @@
       "playtime_forever_hours": 12.1
     },
     {
-      "appid": 261550,
-      "name": "Mount & Blade II: Bannerlord",
-      "playtime_2weeks_hours": 11.9,
-      "playtime_forever_hours": 302.1
+      "appid": 730,
+      "name": "Counter-Strike 2",
+      "playtime_2weeks_hours": 10.6,
+      "playtime_forever_hours": 1870.2
     },
     {
       "appid": 1962700,
@@ -1489,21 +1483,23 @@
       "name": "The Farmer Was Replaced",
       "playtime_2weeks_hours": 0.0,
       "playtime_forever_hours": 8.4
-    },
-    {
-      "appid": 2213700,
-      "name": "Sintopia",
-      "playtime_2weeks_hours": 0.0,
-      "playtime_forever_hours": 41.5
     }
   ],
   "heatmap": {
+    "2026-05-19": {
+      "playtime_minutes": 26,
+      "online_minutes": 26,
+      "games": {
+        "Apex Legends": 26
+      }
+    },
     "2026-05-18": {
-      "playtime_minutes": 54,
-      "online_minutes": 54,
+      "playtime_minutes": 230,
+      "online_minutes": 230,
       "games": {
         "Subnautica 2": 8,
-        "Counter-Strike 2": 46
+        "Apex Legends": 167,
+        "Counter-Strike 2": 55
       }
     },
     "2026-05-17": {
@@ -2159,7 +2155,7 @@
       "dow": 0,
       "hour": 0,
       "count": 50.0,
-      "recent_count": 50.0,
+      "recent_count": 0.0,
       "all_time_count": 110.0,
       "game_minutes": 50.0,
       "online_minutes": 0.0,
@@ -2291,42 +2287,50 @@
     {
       "dow": 0,
       "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 110.0,
-      "game_minutes": 0.0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 169.9,
+      "game_minutes": 60.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Apex Legends": 60.0
+      }
     },
     {
       "dow": 0,
       "hour": 22,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 62.2,
-      "game_minutes": 0.0,
+      "count": 60.0,
+      "recent_count": 60.0,
+      "all_time_count": 122.2,
+      "game_minutes": 60.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Apex Legends": 60.0
+      }
     },
     {
       "dow": 0,
       "hour": 23,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
+      "count": 55.0,
+      "recent_count": 55.0,
+      "all_time_count": 175.0,
+      "game_minutes": 55.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Apex Legends": 55.0
+      }
     },
     {
       "dow": 1,
       "hour": 0,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 103.9,
-      "game_minutes": 0.0,
+      "count": 20.0,
+      "recent_count": 20.0,
+      "all_time_count": 123.9,
+      "game_minutes": 20.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Apex Legends": 20.0
+      }
     },
     {
       "dow": 3,
@@ -2727,10 +2731,22 @@
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
+    },
+    {
+      "dow": 0,
+      "hour": 14,
+      "count": 5.0,
+      "recent_count": 5.0,
+      "all_time_count": 5.0,
+      "game_minutes": 5.0,
+      "online_minutes": 0.0,
+      "games": {
+        "Counter-Strike 2": 5.0
+      }
     }
   ],
   "platform": {
-    "Windows": 5440.9,
+    "Windows": 5444.3,
     "Mac": 25.2,
     "Linux": 0.0,
     "Steam Deck": 0.0
@@ -2738,14 +2754,14 @@
   "pareto": [
     {
       "name": "Counter-Strike 2",
-      "hours": 1870.1,
+      "hours": 1870.2,
       "cumulative_pct": 34.1,
       "rank": 1
     },
     {
       "name": "Apex Legends",
-      "hours": 546.1,
-      "cumulative_pct": 44.1,
+      "hours": 549.4,
+      "cumulative_pct": 44.2,
       "rank": 2
     },
     {
@@ -2793,7 +2809,7 @@
     {
       "name": "Wallpaper Engine",
       "hours": 100.4,
-      "cumulative_pct": 71.9,
+      "cumulative_pct": 72.0,
       "rank": 10
     },
     {
@@ -2823,7 +2839,7 @@
     {
       "name": "PUBG: BATTLEGROUNDS",
       "hours": 52.6,
-      "cumulative_pct": 78.2,
+      "cumulative_pct": 78.3,
       "rank": 15
     },
     {
@@ -2907,7 +2923,7 @@
     {
       "name": "The Elder Scrolls V: Skyrim Special Edition",
       "hours": 28.5,
-      "cumulative_pct": 88.3,
+      "cumulative_pct": 88.4,
       "rank": 29
     },
     {
@@ -3069,7 +3085,7 @@
     {
       "name": "Tom Clancy's Rainbow Six Siege",
       "hours": 7.4,
-      "cumulative_pct": 95.8,
+      "cumulative_pct": 95.9,
       "rank": 56
     },
     {
@@ -3634,11 +3650,11 @@
   "weekday": [
     {
       "day": "Mon",
-      "minutes": 1170
+      "minutes": 1346
     },
     {
       "day": "Tue",
-      "minutes": 794
+      "minutes": 820
     },
     {
       "day": "Wed",
@@ -3682,7 +3698,7 @@
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1870.1,
+      "playtime_hours": 1870.2,
       "total": 1,
       "unlocked": 1,
       "pct": 100,
@@ -3696,7 +3712,7 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 546.1,
+      "playtime_hours": 549.4,
       "total": 12,
       "unlocked": 11,
       "pct": 92,
@@ -4264,7 +4280,7 @@
       {
         "source": 730,
         "target": 1172470,
-        "strength": 22
+        "strength": 23
       },
       {
         "source": 730,
@@ -4309,7 +4325,12 @@
       {
         "source": 730,
         "target": 2060160,
-        "strength": 18
+        "strength": 19
+      },
+      {
+        "source": 1172470,
+        "target": 2060160,
+        "strength": 19
       },
       {
         "source": 261550,
@@ -4318,11 +4339,6 @@
       },
       {
         "source": 261550,
-        "target": 2060160,
-        "strength": 18
-      },
-      {
-        "source": 1172470,
         "target": 2060160,
         "strength": 18
       },
@@ -4417,17 +4433,17 @@
     {
       "genre": "Action",
       "games": 31,
-      "hours": 4264.9
+      "hours": 4268.2
     },
     {
       "genre": "Free To Play",
       "games": 4,
-      "hours": 2477.9
+      "hours": 2481.3
     },
     {
       "genre": "Adventure",
       "games": 22,
-      "hours": 2100.2
+      "hours": 2103.4
     },
     {
       "genre": "RPG",
@@ -4500,55 +4516,55 @@
       },
       {
         "name": "Apex Legends",
-        "hours": 14.5
-      },
-      {
-        "name": "Counter-Strike 2",
-        "hours": 12.3
+        "hours": 17.4
       },
       {
         "name": "Stacklands",
         "hours": 12.1
       },
       {
-        "name": "Mount & Blade II: Bannerlord",
-        "hours": 11.9
+        "name": "Counter-Strike 2",
+        "hours": 10.6
+      },
+      {
+        "name": "Subnautica 2",
+        "hours": 3.8
       }
     ]
   },
   "weekly_digest": [
     {
       "dates": [
+        "2026-05-19",
         "2026-05-18",
         "2026-05-17",
         "2026-05-16",
         "2026-05-15",
         "2026-05-14",
-        "2026-05-13",
-        "2026-05-12"
+        "2026-05-13"
       ],
-      "total_hours": 45.9,
-      "games_count": 7,
+      "total_hours": 39.1,
+      "games_count": 6,
       "top_games": [
-        "Slay the Spire 2",
         "Stacklands",
         "Apex Legends",
         "Counter-Strike 2",
+        "Slay the Spire 2",
         "Subnautica 2"
       ]
     }
   ],
   "game_updates": [
     {
-      "appid": 105600,
-      "game_name": "Terraria",
-      "title": "As Terraria turns 15, Re-Logic confirms crossplay is \"soon\" and that \"updates will continue beyond 1.4.6\"",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1832700592796234",
-      "date": 1779024862,
-      "feedname": "PCGamesN",
-      "feedlabel": "PCGamesN",
+      "appid": 359550,
+      "game_name": "Tom Clancy's Rainbow Six Siege",
+      "title": "Y11S2 DESIGNER'S NOTES",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592798348",
+      "date": 1779108785,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
       "update_type": "Update",
-      "contents": "<strong>Terraria</strong> is 15 years old this weekend, in just the latest terrifying video game anniversary to make me feel ancient. That's given developer Re-Logic a moment to reflect on how far it's come, share a few of its most impressive stats, and note that crossplay is getting close. \"That is a long time indeed,\" Head of Business Strategy Ted 'Loki' Murphy writes. \"That's 131,400 hours - which quite a few of you have chosen to spend with our humble game.\" Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/terraria/15-years-crossplay-more-updates\">As Terraria turns 15, Re-Logic confirms crossplay is \"soon\" and that \"updates will continue beyond 1.4.6\"</a> RELATED LINKS: <a href=\"https://www.pcgamesn.com/terraria/state-of-the-game-april-2026-combat-fixes\">New Terraria State of the Game promises fixes for its most frustrating combat problems</a> <a href=\"https://www.pcgamesn.com/terraria/gem-staves-changes\">Terraria is getting new early game magic, as Re-Logic puts class balance under the microscope</a> <a href=\"https://www.pcgamesn.com/terraria/february-2026-state-of-game\">Terraria teases...</a>"
+      "contents": "In this latest edition of Designer’s Notes, we'll go into more detail about the balancing changes coming with Y11S2 and share insight into the reasons behind them.WIN DELTA VS. PRESENCE AND TOP OPERATOR BANS\\ WIN DELTA VS. PRESENCE\\ WIN DELTA VS. PRESENCE\\ TOP OPERATOR BANS\\ TOP OPERATOR BANSOPERATOR BALANCINGDOKKAEBIOver past seasons, Dokkaebi's identity has shifted toward global disruption, while her influence during executes has become less consistent. With this update, we aim to pivot Dokkaebi toward more targeted disruption with tangible consequences, creating clearer moments of decision for both sides. Her impact should feel more intentional, more threatening, and easier to read and respond to.Previously, Dokkaebi's effectiveness was concentrated into a small number of high-impact ac..."
     },
     {
       "appid": 1787090,
@@ -4560,6 +4576,17 @@
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
       "contents": "This update has the same version for both the official release and the betaChangelog Fixed the issue in previous versions where dragging icons into folders on the Launchpad could sometimes add a duplicate icon.Fixed the freezing issue caused by switching between multiple screens and a single screen in previous versions.Fixed rendering anomalies when selecting the current screen background for the Launchpad in multi-screen situations.Fixed the incomplete display of the tray icon when only MyFinder was enabled in the previous version.Fixed abnormal display of some program tray icons in previous versions.Fixed abnormal display of input method on startup.Fixed memory leak issue caused by media progress bar in previous versions.Fixed the issue in the previous version where some systems could no..."
+    },
+    {
+      "appid": 105600,
+      "game_name": "Terraria",
+      "title": "As Terraria turns 15, Re-Logic confirms crossplay is \"soon\" and that \"updates will continue beyond 1.4.6\"",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1832700592796234",
+      "date": 1779017662,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Update",
+      "contents": "Terraria is 15 years old this weekend, in just the latest terrifying video game anniversary to make me feel ancient. That's given developer Re-Logic a moment to reflect on how far it's come, share a few of its most impressive stats, and note that crossplay is getting close. \"That is a long time indeed,\" Head of Business Strategy Ted 'Loki' Murphy writes. \"That's 131,400 hours - which quite a few of you have chosen to spend with our humble game.\" Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/terraria/15-years-crossplay-more-updates\">As Terraria turns 15, Re-Logic confirms crossplay is \"soon\" and that \"updates will continue beyond 1.4.6\"</a> "
     },
     {
       "appid": 552990,
@@ -4791,17 +4818,6 @@
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
       "contents": "Hello,I just uploaded a small patch with a few adjustments.I lowered the difficulty of several aspects of the headquarters level. It should be easier to complete.The in-game voice chat is set to high quality audio. It has environmental and situational special effects that cannot be heard using outside voice chat. The mouths on the players animate when you speak. Your voice changes during certain status effects like being smaller, slowed or changed in some way. Different environments cause your voice to change and adjust for more realism.I am still working on the next map that will use the in-game voice chat. Thanks,Shawn"
-    },
-    {
-      "appid": 494840,
-      "game_name": "UBOAT",
-      "title": "2026.1 Patch 18",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502822336",
-      "date": 1778529814,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Type IX: - Fix: Ensured compatibility of camouflages with the conning towers. - Fix: In existing saves, the issue with missing geometry under the stern loading hatch for loading torpedoes was still occurring. - Fix: Bearing display was frozen on the additional periscope in Type IXA. Type VII: - Fix: Resolved an issue with extra torpedo slots in the bow torpedo room in old saves. - Fix: Resolved an issue with two torpedoes visible on the sky in old saves. Ships: - Fix: Decreased evacuation thresholds on Dido-class, the crew was staying on the ship even when it was leaned quite a lot to the side. Missions: - Fix: If transmission from HQ after meeting Atlantis was not received in time in the Cape Town patrol, then the..."
     }
   ]
 }
