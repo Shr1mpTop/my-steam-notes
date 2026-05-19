@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19T02:02:40.955232+08:00",
+  "updated_at": "2026-05-20T02:02:44.880288+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
     "online": false,
@@ -891,7 +891,7 @@
       "name": "Subnautica 2",
       "playtime_hours": 3.8,
       "img_icon_url": "a6810ae79dc1592fdd890f463311cb5b8df8aa3c",
-      "rtime_last_played": 1779034558,
+      "rtime_last_played": 1779195814,
       "genres": []
     },
     {
@@ -1445,7 +1445,7 @@
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 10.6,
+      "playtime_2weeks_hours": 8.8,
       "playtime_forever_hours": 1870.2
     },
     {
@@ -1487,9 +1487,10 @@
   ],
   "heatmap": {
     "2026-05-19": {
-      "playtime_minutes": 26,
-      "online_minutes": 26,
+      "playtime_minutes": 27,
+      "online_minutes": 27,
       "games": {
+        "Subnautica 2": 1,
         "Apex Legends": 26
       }
     },
@@ -2288,7 +2289,7 @@
       "dow": 0,
       "hour": 21,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 169.9,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -2300,7 +2301,7 @@
       "dow": 0,
       "hour": 22,
       "count": 60.0,
-      "recent_count": 60.0,
+      "recent_count": 0.0,
       "all_time_count": 122.2,
       "game_minutes": 60.0,
       "online_minutes": 0.0,
@@ -2312,7 +2313,7 @@
       "dow": 0,
       "hour": 23,
       "count": 55.0,
-      "recent_count": 55.0,
+      "recent_count": 0.0,
       "all_time_count": 175.0,
       "game_minutes": 55.0,
       "online_minutes": 0.0,
@@ -2324,7 +2325,7 @@
       "dow": 1,
       "hour": 0,
       "count": 20.0,
-      "recent_count": 20.0,
+      "recent_count": 0.0,
       "all_time_count": 123.9,
       "game_minutes": 20.0,
       "online_minutes": 0.0,
@@ -2736,7 +2737,7 @@
       "dow": 0,
       "hour": 14,
       "count": 5.0,
-      "recent_count": 5.0,
+      "recent_count": 0.0,
       "all_time_count": 5.0,
       "game_minutes": 5.0,
       "online_minutes": 0.0,
@@ -3654,7 +3655,7 @@
     },
     {
       "day": "Tue",
-      "minutes": 820
+      "minutes": 821
     },
     {
       "day": "Wed",
@@ -4280,7 +4281,7 @@
       {
         "source": 730,
         "target": 1172470,
-        "strength": 23
+        "strength": 24
       },
       {
         "source": 730,
@@ -4303,34 +4304,34 @@
         "strength": 20
       },
       {
-        "source": 261550,
-        "target": 1172470,
-        "strength": 20
-      },
-      {
-        "source": 261550,
-        "target": 2213700,
-        "strength": 20
-      },
-      {
-        "source": 365360,
-        "target": 1172470,
-        "strength": 20
-      },
-      {
-        "source": 365360,
-        "target": 2213700,
-        "strength": 20
-      },
-      {
         "source": 730,
         "target": 2060160,
-        "strength": 19
+        "strength": 20
+      },
+      {
+        "source": 261550,
+        "target": 1172470,
+        "strength": 20
+      },
+      {
+        "source": 261550,
+        "target": 2213700,
+        "strength": 20
+      },
+      {
+        "source": 365360,
+        "target": 1172470,
+        "strength": 20
+      },
+      {
+        "source": 365360,
+        "target": 2213700,
+        "strength": 20
       },
       {
         "source": 1172470,
         "target": 2060160,
-        "strength": 19
+        "strength": 20
       },
       {
         "source": 261550,
@@ -4524,7 +4525,7 @@
       },
       {
         "name": "Counter-Strike 2",
-        "hours": 10.6
+        "hours": 8.8
       },
       {
         "name": "Subnautica 2",
@@ -4555,6 +4556,116 @@
     }
   ],
   "game_updates": [
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "Matchmaking Test - Short Delay",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592801549",
+      "date": 1779210185,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "UPDATE: We are delaying the start time of today's matchmaking test. Originally meant to start at 10am PT, we are adjusting the test timeline and will let you know when we push the test live."
+    },
+    {
+      "appid": 440900,
+      "game_name": "Conan Exiles Enhanced",
+      "title": "Conan Exiles Enhanced May Update - Out Now!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592801081",
+      "date": 1779199289,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Greetings Exiles,We appreciate all the feedback, suggestions, and bug reports that you have provided as we continue to improve the game experience. Today, Conan Exiles Enhanced is receiving its first patch. It comes with a variety of new additions, changes, and fixes. Some highlights of this patch include:Improved server browser performance on filtered searches.Server browser filters are now saved between sessions.Ping will now be closer to the network latency to help players join servers close to them.Implemented color dyeing for saddles.We know that adding saddle dyeing to the core game has been a longstanding request from the community. As such, we would like to thank and acknowledge the time, effort, and passion of community members and modders, such as Testerle, who were the first to ..."
+    },
+    {
+      "appid": 365670,
+      "game_name": "Blender",
+      "title": "Blender 5.1.2 Corrective Release",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592801006",
+      "date": 1779197858,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "It's time to update your Blender!Blender 5.1.2 addresses 12 issues present in the initial release. This is a corrective release, meaning it doesn't contain new features, only fixes. It is highly recommended for everyone currently using Blender 5.1.1 to upgrade, since it fixes several crashes and improves functionality in many areas. Read the full list of changes on https://developer.blender.org/docs/release_notes/5.1/corrective_releases/The Blender team, 19th May 2026"
+    },
+    {
+      "appid": 218620,
+      "game_name": "PAYDAY 2",
+      "title": "PAYDAY 2: Update 246 Changelog",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592800771",
+      "date": 1779192221,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Drop in heisters!Time to pan fry some bacon. This update includes the whole new PUBG Weapons Pack for FREE, bringing you the iconic Frying Pan and Flare Gun from the Battlegrounds!The update also includes fixes and adjustments to items from the previously released Espionage Weapon Pack. We have gotten a lot of feedback and are happy that you liked our offerings. It's clear that the Ballerina was the weakest link in the pack, so based on your suggestions it has been given some improvements! New Weapon - Flare GunTypically used in an emergency to signal for help or supplies.MAGAZINE1TOTAL AMMO6RATE OF FIRE23DAMAGE155ACCURACY72STABILITY68CONCEALMENT27THREAT10RELOAD TIME2.5sNOTESDirect contact with exploding flares may cause heavy burn damage.Warning! 12-gauge flares and shotgun shells should ..."
+    },
+    {
+      "appid": 552500,
+      "game_name": "Warhammer: Vermintide 2",
+      "title": "Weapon balance update! Patch 6.11.0 patch notes",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592800565",
+      "date": 1779186281,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Heroes!We have a lovely update for you guys! Today’s patch is live now, and brings a bunch of balance changes, mostly aimed at improving the weapons that have been struggling for a while, which hopefully gives you guys a bigger breadth of viable options to play with! Alongside that, there’s some minor tweaks, quality of life changes, and several bug fixes.Weapon balance updateThe intentions of this balance patch is to bring some love to underused or underperforming weapons, mostly focusing on buffs, but some adjustments can be found in relation to the buffs. Before getting into weapon specifics. We would like to bring to light two major broad focus points of this patch: First, one-handed weapons’ main boon is their mobility compared to heavier weapons, but it's not quite enough. To amplify..."
+    },
+    {
+      "appid": 365670,
+      "game_name": "Blender",
+      "title": "Blender 4.2.21 LTS Maintenance Release !",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592800469",
+      "date": 1779182446,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Blender 4.2.21 LTS features important bug fixes. It is released on the v4.2 - Stable - LTS branch. You can switch to this by right-clicking on the Blender entry in your library, select Properties.... Open the Betas tab and select v4.2 - Stable - LTS. Patch Notes * Blender crashes consistently when setting a render region in camera view. (#157967) For a detailed list of bug fixes in each release, see 4.2 LTS releases on blender.org LTS Program Learn more about the LTS program on blender.org Stay up-to-date You can follow Blender on social media: Keep reporting any issues you find to make this LTS the most stable release ever ! Happy blending, The Blender team"
+    },
+    {
+      "appid": 365670,
+      "game_name": "Blender",
+      "title": "Blender 4.5.10 LTS Maintenance Release !",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592800468",
+      "date": 1779182439,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Blender 4.5.10 LTS features important bug fixes. It is released on the v4.5 - Stable - LTS branch. You can switch to this by right-clicking on the Blender entry in your library, select Properties.... Open the Betas tab and select v4.5 - Stable - Stable. Patch Notes * Crash When Editing Mesh with Geometry Nodes and Armature. (#154739) * Vulkan: Black renders using NVIDIA driver 595.71. (#155371) * Vulkan affecting the shader result when mixing color and BSDFs. (#152150) For a detailed list of bug fixes in each release, see 4.5 LTS releases on blender.org LTS Program Learn more about the LTS program on blender.org Stay up-to-date You can follow Blender on social media: Keep reporting any issues you find to make this LTS the most stable release ever ! Happy blending, The Blender team"
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "Counter-Strike 2 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592799760",
+      "date": 1779147368,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "\\Fixed a case of post-processing glitch when switching spectator targets on maps with different post-processing volumes.Fixed a case of stuck x-ray silhouettes when switching spectator targets.Fixed spectator damage overlay effect.\\Added weapon_accuracy_stack_boost_limit (default value \"2\") to apply ladder inaccuracy to players boosted by a stack of this many or more players.Adjustments to AWP draw to idle animation transition.Improved consistency of grenade jump throws and the accuracy of the jump throw preview camera.\\CacheAdjusted model for window covers to show collision / decals when shot.Adjustments to player clipping and grenade clipping around windows, window covers, and vent entrance.\\Added Instance.RegisterCheatCommandAdded Instance.GetAllPlayerControllersAdded Instance.OnBeginRo..."
+    },
+    {
+      "appid": 1962700,
+      "game_name": "Subnautica 2",
+      "title": "Don't expect to kill fish in a future Subnautica 2 patch: 'You are here to exist on this planet, not to dominate it'",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1832700592799436",
+      "date": 1779134401,
+      "feedname": "PC Gamer",
+      "feedlabel": "PC Gamer",
+      "update_type": "Patch Notes",
+      "contents": "Since Subnautica 2's cetacean-sized early access launch last week, a contingent of its players have been vocal about their frustration over their inability to retaliate against its predatory sea life with their own lethal intent. Subnautica 2 devs at Unknown Worlds haven't been swayed by those complaints, <a href=\"https://www.pcgamer.com/games/survival-crafting/we-are-not-a-killing-game-says-subnautica-2-dev-go-play-sons-of-the-forest-or-something-if-you-want-to-kill/\" target=\"_blank\">urging players to seek out one of the many other survival games</a> if they're looking for a sandbox where they're free to kill whatever they find... <a href=\"https://www.pcgamer.com/games/survival-crafting/dont-expect-to-kill-fish-in-a-future-subnautica-2-patch-you-are-here-to-exist-on-this-planet-not-to-dominate-it/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
+    },
+    {
+      "appid": 1962700,
+      "game_name": "Subnautica 2",
+      "title": "How to build a Metal Farm in Subnautica 2",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1832700592799392",
+      "date": 1779132259,
+      "feedname": "PC Gamer",
+      "feedlabel": "PC Gamer",
+      "update_type": "Update",
+      "contents": "Building a <strong>Metal Farm</strong> in <a href=\"https://www.pcgamer.com/games/survival-crafting/subnautica-2-guide/\" target=\"_blank\"> Subnautica 2 </a> is absurdly useful when it comes to duplicating rare metals like Troilite. Later on, when you're repairing the Alien Power Plant, you'll need a lot of this material and there isn't very much to find on the map, so using a Metal Farm is a much better approach... <a href=\"https://www.pcgamer.com/games/survival-crafting/subnautica-2-metal-farm-scan-locations/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
+    },
     {
       "appid": 359550,
       "game_name": "Tom Clancy's Rainbow Six Siege",
@@ -4708,116 +4819,6 @@
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
       "contents": "{STEAM_CLAN_IMAGE}/40285313/d9bf3465f1571bc1e51047b9089fb66010d9e6e6.jpg Hello again, Age IV players! We’re excited to follow up on last week’s release of Yue Fei’s Legacy and the Season Thirteen update with a few additional changes! While we’re still planning for a larger patch in a few weeks, we heard your concerns about the Jin Dynasty feeling a bit too weak and the Sengoku Daimyo still feeling too strong and have made some changes to address this feedback. Read on to learn more about the latest balance changes, as well as a handful of fixes we’ve made in response to recent reports. Additionally, as of late last week, we’ve disabled Ranked Decay as the team continues to investigate how to improve upon this functionality in the future. Here’s what’s included in the latest update. If you’..."
-    },
-    {
-      "appid": 392160,
-      "game_name": "X4: Foundations",
-      "title": "9.00 Public Beta 10 now available",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824207",
-      "date": 1778599222,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "9.00 Public Beta 10 is now available! Please find the full changelog below. Thank you for your continued support and feedback during this testing phase. How Do I Take Part in the Public Beta? Every player who owns X4: Foundations has the opportunity to download the new 9.00 Public Beta version. In order to ensure that beta participants are aware of the risks and rules involved, we ask all interested players to visit our forum, where they will find the rules and disclaimers, as well as practical instructions for participating in the beta. Follow this link to our forum - no registration required - to find the relevant information. X4 9.00 Public Beta 10 Changelog: (see the full 9.00 Public Beta Changelog in our forum) Added Interact menu option to repeat last order. Improved ships getting st..."
-    },
-    {
-      "appid": 3241660,
-      "game_name": "R.E.P.O.",
-      "title": "R.E.P.O. v0.4.2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823937",
-      "date": 1778594395,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hey hey semibots! Here is another small update with some fixes and balancing! CHANGES BALANCING FIXES CHANGES Vehicles - Now drift less sharply at low speeds. Added scratch sound effects that scale with velocity, reducing scratch sound spam when cruising at low speeds. Item Semibot Walkies - Valuables can now be discovered while using a walkie. Item Hauler - Slower animation for valuables inserted into the valuable box. Meta Save File - Added a backup system in case the game quits unexpectedly during saving and corrupts the save file. Localization - Added support for overriding base localizations using TSV files in the \"StreamingAssets\" folder. BALANCING Item Roll Staff - Added one more ammo. Enemies can no longer hear the fully charged staff while idle. Item Zero Gravity Staff - Added one..."
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "PUBG is removing several weapons from the game, and you could be due compensation",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1832065502823862",
-      "date": 1778590214,
-      "feedname": "PCGamesN",
-      "feedlabel": "PCGamesN",
-      "update_type": "Update",
-      "contents": "Sounds a bit like one of those old PPI commercials, doesn't it? Did <em>you</em> own a QBU skin between 2020 and 2026? Well, <em>you</em> could be due compensation. It isn't exactly wrong, though. The next <strong>PUBG</strong> update is removing a bunch of weapons in the next month, and if you own skins for said weapons, then you might have a ton of in-game currency coming your way. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/removing-weapons-compensation\">PUBG is removing several weapons from the game, and you could be due compensation</a> RELATED LINKS: <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/payday-collab\">PUBG comes out with another collab, one that can net you thousands of dollars if you're popular enough</a> <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/update\">When is the next PUBG update?</a> <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/stellar-blade-eve-collab\">PUBG and Stellar Blade come together in the unlikeliest collab, and it'll make your wallet cry</a> "
-    },
-    {
-      "appid": 1787090,
-      "game_name": "MyDockFinder",
-      "title": "1.13 Official Version and Beta Version Release",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823682",
-      "date": 1778587694,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "This update has the same version for both the official release and the betaChangelog Fixed the issue in the previous version where checking Recycle Bin files with a network drive caused lagFixed the issue where icons did not appear in the left-side list of some system preference interfacesFixed component rendering anomalies from the previous betaFixed the freezing issue caused after connecting or disconnecting multiple screens in all previous versionsOptimized dock window preview when there are too many windowsOptimized dock window preview, showing a list when there are too many windows to prevent incomplete displayAdapted for WPS and Discord, optimized to display only one icon for the programFixed crash caused by window display animation after sleep/wakeFixed Finder monitoring highlights ..."
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "May Store Update 2026",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823007",
-      "date": 1778565649,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Read the full announcement here!"
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "Patch Notes - Update 41.2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823005",
-      "date": 1778565648,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Read the full announcement here!"
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "Map Service Report - Update 41.2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823006",
-      "date": 1778565648,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "{STEAM_CLAN_IMAGE}/27971017/c6c8adc4d5670ed2aab016cc334af385eb01a5f7.png Read the full announcement here!"
-    },
-    {
-      "appid": 1876880,
-      "game_name": "Primitive Society Simulator",
-      "title": "[Default Branch] 0.3.5_512.1230",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502822950",
-      "date": 1778561375,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "StatsAnimal feed crafting time: 2h->1hBug fixesThe \"Dev kill all invaders\" function was not working, now restoredCannot build wolf pen in tutorialThere are box characters in the Korean tutorial"
-    },
-    {
-      "appid": 1172470,
-      "game_name": "Apex Legends",
-      "title": "Apex Legends: Latest Update 5PM PT",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502822608",
-      "date": 1778543713,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "FIXED:Improved transition screen UI to better indicate the game is still loadingReduced the color overlay effect of Conduit's passive"
-    },
-    {
-      "appid": 967050,
-      "game_name": "Pacify",
-      "title": "Headquarters Difficulty and Voice Chat Special Effects",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502822605",
-      "date": 1778543682,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Hello,I just uploaded a small patch with a few adjustments.I lowered the difficulty of several aspects of the headquarters level. It should be easier to complete.The in-game voice chat is set to high quality audio. It has environmental and situational special effects that cannot be heard using outside voice chat. The mouths on the players animate when you speak. Your voice changes during certain status effects like being smaller, slowed or changed in some way. Different environments cause your voice to change and adjust for more realism.I am still working on the next map that will use the in-game voice chat. Thanks,Shawn"
     }
   ]
 }
