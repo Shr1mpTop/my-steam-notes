@@ -1318,6 +1318,7 @@ button, input, select, textarea { font: inherit; }
 
 .viz-card,
 .game-cloud,
+.social-presence-card,
 .recent-activity,
 .contribution-map {
   position: relative;
@@ -1336,6 +1337,7 @@ button, input, select, textarea { font: inherit; }
 
 .cinematic-dashboard .viz-card,
 .cinematic-dashboard .game-cloud,
+.cinematic-dashboard .social-presence-card,
 .cinematic-dashboard .recent-activity,
 .cinematic-dashboard .contribution-map,
 .cinematic-dashboard .profile-hero,
@@ -1352,6 +1354,7 @@ button, input, select, textarea { font: inherit; }
 
 .viz-card::before,
 .game-cloud::before,
+.social-presence-card::before,
 .recent-activity::before,
 .contribution-map::before {
   content: "";
@@ -1366,6 +1369,7 @@ button, input, select, textarea { font: inherit; }
 
 .viz-card:hover::before,
 .game-cloud:hover::before,
+.social-presence-card:hover::before,
 .recent-activity:hover::before,
 .contribution-map:hover::before {
   opacity: 1;
@@ -1373,6 +1377,7 @@ button, input, select, textarea { font: inherit; }
 
 .viz-card:hover,
 .game-cloud:hover,
+.social-presence-card:hover,
 .recent-activity:hover,
 .contribution-map:hover {
   border-color: var(--border-strong);
@@ -1380,6 +1385,7 @@ button, input, select, textarea { font: inherit; }
 
 .viz-card h3,
 .game-cloud h2,
+.social-presence-card h3,
 .recent-activity h2,
 .contribution-map h2 {
   position: relative;
@@ -1393,6 +1399,7 @@ button, input, select, textarea { font: inherit; }
 
 .viz-card h3::before,
 .game-cloud h2::before,
+.social-presence-card h3::before,
 .recent-activity h2::before,
 .contribution-map h2::before {
   content: "";
@@ -1614,6 +1621,271 @@ button, input, select, textarea { font: inherit; }
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   box-shadow: 0 0 18px rgba(103, 232, 249, 0.18);
   transition: width 0.8s ease, height 0.8s ease;
+}
+
+.social-presence-card {
+  margin-top: 8px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.social-presence-header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.social-presence-header h3 {
+  margin: 0 0 4px;
+}
+
+.presence-window {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.presence-window span {
+  min-height: 22px;
+  padding: 4px 7px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.presence-search-results img,
+.presence-person img {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.presence-person div {
+  min-width: 0;
+}
+
+.presence-person strong {
+  display: block;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.presence-person span,
+.presence-empty {
+  display: block;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.presence-controls {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  margin-bottom: 8px;
+}
+
+.presence-controls input {
+  width: 100%;
+  min-height: 30px;
+  padding: 6px 9px;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  outline: none;
+}
+
+.presence-controls input:focus {
+  border-color: rgba(103, 232, 249, 0.48);
+}
+
+.presence-controls button,
+.presence-search-results button,
+.presence-remove {
+  min-height: 28px;
+  padding: 5px 8px;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.presence-controls button:hover,
+.presence-search-results button:hover,
+.presence-remove:hover {
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.presence-search-results {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.presence-search-results button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  text-align: left;
+}
+
+.presence-search-results span {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.presence-search-results strong {
+  margin-left: auto;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.presence-timeline {
+  --cursor-left: 100%;
+  position: relative;
+  display: grid;
+  gap: 0;
+  padding-top: 12px;
+}
+
+.presence-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 178px;
+  right: 42px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.18), rgba(148, 163, 184, 0.46));
+}
+
+.presence-now-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--cursor-left);
+  width: 1px;
+  background: rgba(248, 250, 252, 0.72);
+  box-shadow: 0 0 16px rgba(248, 250, 252, 0.35);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.presence-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 166px minmax(140px, 1fr) 42px;
+  align-items: center;
+  gap: 8px;
+  min-height: 30px;
+  padding: 3px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.presence-person {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.presence-track {
+  position: relative;
+  height: 16px;
+  overflow: visible;
+  background:
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 0 1px, transparent 1px) 0 0 / 12.5% 100% repeat-x;
+}
+
+.presence-segment {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-width: 2px;
+  border-radius: 0;
+  cursor: default;
+  z-index: 1;
+}
+
+.presence-segment:hover {
+  z-index: 4;
+}
+
+.presence-segment-tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  display: none;
+  width: max-content;
+  max-width: 240px;
+  padding: 8px 9px;
+  color: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 8px;
+  background: rgba(7, 10, 16, 0.94);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.34);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.presence-segment:hover .presence-segment-tooltip {
+  display: grid;
+  gap: 3px;
+}
+
+.presence-segment-tooltip strong,
+.presence-segment-tooltip span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.presence-segment-tooltip strong {
+  color: #f8fafc;
+  font-size: 12px;
+}
+
+.presence-segment-tooltip span {
+  color: rgba(226, 232, 240, 0.78);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.presence-remove {
+  min-height: 24px;
+  padding: 3px 6px;
+  color: var(--text-muted);
+  font-size: 10px;
 }
 
 .stats-grid {
@@ -2734,6 +3006,14 @@ button, input, select, textarea { font: inherit; }
   scroll-margin-top: 24px;
 }
 
+.bottom-cloud-section {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1480px);
+  margin: 0 auto;
+  padding: 28px clamp(16px, 3vw, 40px) 0;
+}
+
 .updates-heading {
   max-width: 720px;
   margin-bottom: 20px;
@@ -2844,10 +3124,12 @@ button, input, select, textarea { font: inherit; }
 
 :root[data-theme="paper"] .viz-card,
 :root[data-theme="paper"] .game-cloud,
+:root[data-theme="paper"] .social-presence-card,
 :root[data-theme="paper"] .recent-activity,
 :root[data-theme="paper"] .contribution-map,
 :root[data-theme="paper"] .cinematic-dashboard .viz-card,
 :root[data-theme="paper"] .cinematic-dashboard .game-cloud,
+:root[data-theme="paper"] .cinematic-dashboard .social-presence-card,
 :root[data-theme="paper"] .cinematic-dashboard .recent-activity,
 :root[data-theme="paper"] .cinematic-dashboard .contribution-map,
 :root[data-theme="paper"] .cinematic-dashboard .profile-hero,
@@ -2862,6 +3144,7 @@ button, input, select, textarea { font: inherit; }
 
 :root[data-theme="paper"] .viz-card:hover,
 :root[data-theme="paper"] .game-cloud:hover,
+:root[data-theme="paper"] .social-presence-card:hover,
 :root[data-theme="paper"] .recent-activity:hover,
 :root[data-theme="paper"] .contribution-map:hover {
   border-color: var(--border-strong);
@@ -2869,6 +3152,7 @@ button, input, select, textarea { font: inherit; }
 
 :root[data-theme="paper"] .viz-card::before,
 :root[data-theme="paper"] .game-cloud::before,
+:root[data-theme="paper"] .social-presence-card::before,
 :root[data-theme="paper"] .recent-activity::before,
 :root[data-theme="paper"] .contribution-map::before {
   display: none;
@@ -2876,6 +3160,7 @@ button, input, select, textarea { font: inherit; }
 
 :root[data-theme="paper"] .viz-card h3::before,
 :root[data-theme="paper"] .game-cloud h2::before,
+:root[data-theme="paper"] .social-presence-card h3::before,
 :root[data-theme="paper"] .recent-activity h2::before,
 :root[data-theme="paper"] .contribution-map h2::before {
   border: 1px solid var(--text);
@@ -3070,6 +3355,7 @@ button, input, select, textarea { font: inherit; }
 :root:is([data-density="comfortable"], [data-density="compact"]) .profile-hero,
 :root:is([data-density="comfortable"], [data-density="compact"]) .viz-card,
 :root:is([data-density="comfortable"], [data-density="compact"]) .game-cloud,
+:root:is([data-density="comfortable"], [data-density="compact"]) .social-presence-card,
 :root:is([data-density="comfortable"], [data-density="compact"]) .recent-activity,
 :root:is([data-density="comfortable"], [data-density="compact"]) .contribution-map {
   height: 100%;
@@ -3167,6 +3453,7 @@ button, input, select, textarea { font: inherit; }
 
 :root:is([data-density="comfortable"], [data-density="compact"]) .viz-card h3,
 :root:is([data-density="comfortable"], [data-density="compact"]) .game-cloud h2,
+:root:is([data-density="comfortable"], [data-density="compact"]) .social-presence-card h3,
 :root:is([data-density="comfortable"], [data-density="compact"]) .recent-activity h2,
 :root:is([data-density="comfortable"], [data-density="compact"]) .contribution-map h2 {
   font-size: 12px;
@@ -3359,6 +3646,7 @@ button, input, select, textarea { font: inherit; }
 :root[data-density="compact"] .profile-hero,
 :root[data-density="compact"] .viz-card,
 :root[data-density="compact"] .game-cloud,
+:root[data-density="compact"] .social-presence-card,
 :root[data-density="compact"] .recent-activity,
 :root[data-density="compact"] .contribution-map {
   padding: 9px;
@@ -3366,6 +3654,7 @@ button, input, select, textarea { font: inherit; }
 
 :root[data-density="compact"] .viz-card h3,
 :root[data-density="compact"] .game-cloud h2,
+:root[data-density="compact"] .social-presence-card h3,
 :root[data-density="compact"] .recent-activity h2,
 :root[data-density="compact"] .contribution-map h2 {
   margin-bottom: 2px;
@@ -3374,6 +3663,7 @@ button, input, select, textarea { font: inherit; }
 
 :root[data-density="compact"] .viz-subtitle,
 :root[data-density="compact"] .game-cloud .subtitle,
+:root[data-density="compact"] .social-presence-card .viz-subtitle,
 :root[data-density="compact"] .recent-activity .subtitle,
 :root[data-density="compact"] .contribution-map .subtitle {
   display: none;
@@ -4543,8 +4833,29 @@ button, input, select, textarea { font: inherit; }
   .profile-hero,
   .viz-card,
   .game-cloud,
+  .social-presence-card,
   .recent-activity,
   .contribution-map { padding: 14px; }
+  .social-presence-header,
+  .presence-controls {
+    grid-template-columns: 1fr;
+  }
+  .social-presence-header {
+    display: grid;
+  }
+  .presence-row {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .presence-timeline::before,
+  .presence-now-line {
+    display: none;
+  }
+  .presence-remove {
+    width: max-content;
+  }
   .milestone-grid,
   .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .profile-card { align-items: flex-start; }

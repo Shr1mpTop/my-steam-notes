@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import { useDashboard } from "./hooks/useDashboard";
 import { ProfileHero } from "./components/ProfileHero";
+import { SocialPresence } from "./components/SocialPresence";
 import { GameCloud } from "./components/GameCloud";
-import { RecentActivity } from "./components/RecentActivity";
 import { ContributionMap } from "./components/ContributionMap";
 import { TimeHeatmap, GamingClock, WeekdayChart } from "./components/TimeAnalytics";
-import { ParetoChart, PlatformPie } from "./components/Ranking";
-import { StatsCards, GameNetwork, DustMeter, StayingPower } from "./components/Insights";
-import { AchievementBoard, GenreChart } from "./components/AchievementBoard";
 import { GameWeather, WeeklyDigest } from "./components/FunWidgets";
 import { GameUpdates } from "./components/GameUpdates";
 import { useLocale } from "./useLocale";
@@ -139,6 +136,7 @@ function App() {
         </div>
 
         <ProfileHero player={data.player} milestone={data.milestone} />
+        <SocialPresence presence={data.social_presence} />
 
         <main className="dashboard-grid">
           <div className="span-7 panel-weather">
@@ -161,39 +159,6 @@ function App() {
           <div className="span-5 panel-weekday">
             <WeekdayChart data={data.weekday} heatmap={data.heatmap} />
           </div>
-
-          <div className="span-12 panel-cloud">
-            <GameCloud games={data.game_cloud} />
-          </div>
-
-          <div className="span-12 panel-stats">
-            <StatsCards stats={data.stats} />
-          </div>
-          <div className="span-4 panel-dust">
-            <DustMeter played={data.stats.played_games} never={data.stats.never_played} />
-          </div>
-          <div className="span-8 panel-pareto">
-            <ParetoChart data={data.pareto} />
-          </div>
-
-          <div className="span-5 panel-platform">
-            <PlatformPie data={data.platform} />
-          </div>
-          <div className="span-7 panel-recent">
-            <RecentActivity activity={data.recent_activity} />
-          </div>
-
-          <div className="span-7 panel-network">
-            <GameNetwork network={data.game_network} />
-          </div>
-          <div className="span-5 stack panel-side-stack">
-            <GenreChart genres={data.genres} />
-            <StayingPower games={data.game_cloud} />
-          </div>
-
-          <div className="span-12 panel-achievements">
-            <AchievementBoard achievements={data.achievements} />
-          </div>
         </main>
       </section>
 
@@ -205,6 +170,10 @@ function App() {
         </div>
 
         <GameUpdates updates={data.game_updates ?? []} />
+      </section>
+
+      <section className="bottom-cloud-section" aria-label="Game cloud">
+        <GameCloud games={data.game_cloud} />
 
         <footer className="footer">
           <span>Steam Notebook - {t("updated")} {new Date(data.updated_at).toLocaleString()}</span>

@@ -16,6 +16,7 @@ export interface DashboardData {
   game_weather: GameWeatherData;
   weekly_digest: WeeklyDigestItem[];
   game_updates: GameUpdateItem[];
+  social_presence?: SocialPresenceData;
 }
 
 export interface PlayerInfo {
@@ -133,4 +134,38 @@ export interface GameUpdateItem {
   feedlabel: string;
   update_type: string;
   contents: string;
+}
+
+export interface SocialPresenceData {
+  window_start: string;
+  window_end: string;
+  members: SocialPresenceMember[];
+}
+
+export interface SocialPresenceMember {
+  id: string;
+  steamid: string;
+  name: string;
+  avatarfull: string;
+  profileurl: string;
+  is_self: boolean;
+  last_seen_at: string;
+  current: PresenceState;
+  segments: PresenceSegment[];
+}
+
+export interface PresenceState {
+  timestamp: string;
+  online: boolean;
+  game: string;
+  gameid: string;
+  playing: boolean;
+}
+
+export interface PresenceSegment {
+  start: string;
+  end: string;
+  status: "online" | "playing";
+  game: string;
+  gameid: string;
 }

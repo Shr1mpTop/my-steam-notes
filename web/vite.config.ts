@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import type { Plugin, ViteDevServer } from 'vite'
-import react from '@vitejs/plugin-react'
+import * as reactPlugin from '@vitejs/plugin-react'
 import { copyFileSync, mkdirSync, readFileSync } from 'node:fs'
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import { dirname, resolve } from 'node:path'
@@ -49,7 +49,7 @@ function dashboardDataPlugin(): Plugin {
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), dashboardDataPlugin()],
+  plugins: [reactPlugin.default(), dashboardDataPlugin()],
   base: '/my-steam-notes/',
   build: {
     rolldownOptions: {
