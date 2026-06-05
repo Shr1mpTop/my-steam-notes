@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-06T01:29:08.676424+08:00",
+  "updated_at": "2026-06-06T02:00:54.544838+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
     "online": false,
     "currently_playing": "",
     "level": 30,
-    "avatarfull": "https://avatars.steamstatic.com/375cf046954426d61e9bc39889555d1b5297575f_full.jpg"
+    "avatarfull": ""
   },
   "milestone": {
     "total_hours": 5542.0,
@@ -4791,6 +4791,138 @@
   ],
   "game_updates": [
     {
+      "appid": 578080,
+      "game_name": "PUBG: BATTLEGROUNDS",
+      "title": "PUBG Global Series 6 Final Stage Day 3",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721191289",
+      "date": 1780675217,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Hello, PUBG Esports fans!As PGS Circuit 2 approaches, the 12 Global Partner Teams and 12 PGS invited teams return to Seoul for the next chapter of PUBG Esports competition. The PUBG Global Series continues with Circuit 2, featuring PGS 4–6 beginning on May 20.With EWC qualification on the line, every PGS Point becomes even more valuable as teams battle to climb the overall standings. A new patch also enters the equation for Circuit 2, bringing shifts to the competitive landscape and forcing teams to adapt quickly. The strategies that found success in Circuit 1 will now be tested in an entirely different meta. PGS Circuit 2 SchedulePGS 4May 20Group StageMay 21Winners StageMay 22Survival Stage May 23-24Finals Stage 1 & 2PGS 5May 28Winners Stage May 29 Survival StageMay 30-31Finals Stage 1 & ..."
+    },
+    {
+      "appid": 578080,
+      "game_name": "PUBG: BATTLEGROUNDS",
+      "title": "PUBG Global Series 6 Final Stage Day 2",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721191288",
+      "date": 1780675215,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Hello, PUBG Esports fans!As PGS Circuit 2 approaches, the 12 Global Partner Teams and 12 PGS invited teams return to Seoul for the next chapter of PUBG Esports competition. The PUBG Global Series continues with Circuit 2, featuring PGS 4–6 beginning on May 20.With EWC qualification on the line, every PGS Point becomes even more valuable as teams battle to climb the overall standings. A new patch also enters the equation for Circuit 2, bringing shifts to the competitive landscape and forcing teams to adapt quickly. The strategies that found success in Circuit 1 will now be tested in an entirely different meta. PGS Circuit 2 SchedulePGS 4May 20Group StageMay 21Winners StageMay 22Survival Stage May 23-24Finals Stage 1 & 2PGS 5May 28Winners Stage May 29 Survival StageMay 30-31Finals Stage 1 & ..."
+    },
+    {
+      "appid": 3241660,
+      "game_name": "R.E.P.O.",
+      "title": "A NEW R.E.P.O. LEVEL?!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721190571",
+      "date": 1780663730,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hey hey semibots! WOHO! We’re alive and we have some exciting stuff to tell you! Check out the Devlog here: If you prefer reading, here are the key takeaways: NEXT UPDATE The main focus of the next update will be a brand new level. TUMBLE CLIMB In the most recent Cosmetic update, we boosted the Tumble Climb upgrade quite a lot and it seems like people have missed out on it! It drains much less stamina and is in general way better. Give it a try! DEVLOGS As we’re both working on the next update AND getting closer to the 1.0 Full Release of R.E.P.O., we’ll need all hands on deck to keep up - this means that devlogs will be less frequent, but fret not; As soon as we have something exciting to showcase, we’ll showcase it! That’s it for now! Have a lovely weekend! Bye bye! /semiwork"
+    },
+    {
+      "appid": 1422450,
+      "game_name": "Deadlock",
+      "title": "Valve just reworked Deadlock's Soul Urn yet again, and even the item itself is ready to give up",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1834602721190391",
+      "date": 1780653995,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Patch Notes",
+      "contents": "Valve is now up to four sets of Deadlock patch notes where changes to the Soul Urn are the biggest talking point. This time, they're the only thing in the update, and it's another fairly substantial overhaul. The 'Capture the Flag' style vase of souls has long deserved more attention, and Valve's attempt to make players care has thrust it very much into the spotlight. With the MOBA's latest redesign, it more closely resembles a 'King of the Hill' format, allowing you to concentrate your attention more on contesting the enemy team for it. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/deadlock/patch-notes-soul-urn-king-of-the-hill\">Valve just reworked Deadlock's Soul Urn yet again, and even the item itself is ready to give up</a> "
+    },
+    {
+      "appid": 2868840,
+      "game_name": "Slay the Spire 2",
+      "title": "Beta Patch Notes - v0.107.0",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721189013",
+      "date": 1780616721,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Another bi-weekly beta patch is here! This one is a bit smaller as it is intended to lay the groundwork for moving the beta branch to the main branch. Therefore, these updates are mostly focused on stability: a lot of bug fixes, UI/UX/QOL additions, and performance improvements along with just a few balance changes and art additions.... {STEAM_CLAN_IMAGE}/44971832/96250518646cf2f0fecc834de558fd06e1f23d56.gif ...Like this new Defect animation! Without further ado, let's dive in... CONTENT & BALANCE: Enemies: Buffed Skulking Colony: now gets +1 Strength on its Strength gain turn on high Ascension Changed Aeonglass: No longer applies the Ebb debuff Now gains Block on its Ebb move (single hit) instead of its Increasing Intensity move Potions & Relics: Buffed The Boot relic: damage increase now..."
+    },
+    {
+      "appid": 322330,
+      "game_name": "Don't Starve Together",
+      "title": "Klei Fest & Cursed Confrontation Part 1 Coming June 11th!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721188708",
+      "date": 1780605374,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Don't Starve Together: From Beyond - Cursed Confrontation Part 1 is coming June 11th! We spent a bit more time on WX-78 skill spotlight than anticipated, so the Shadow arc will be released in two parts. The focus of this update will be on the final room in the Sanctum, where you can obtain the Keystone. For now, taking the Keystone to the Ancient Gateway will just reset the Sanctum. HighlightsNew boss and loot drops from the Sanctum. Added Waymark Compass to help navigate the Sanctum rooms. A rope can be used on the Sanctum Chasm to provide a way back up from the Ancient Archives. Other AdditionsAdded Heat Gland that drops from Geothermites, used in new crafts. Added Thermic Tools. Added Coals, a new trap type. Added Thermal Balm, a new healing salve. ChangesAdded a method of mass unravell..."
+    },
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "Apex Legends: Latest Update 6/4/2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721188472",
+      "date": 1780598380,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "INVESTIGATING: We are looking into an issue where some players on PS4 or PS5 consoles are experiencing an unending update loop, or other functionality issues. Our recommended workaround at this point in time is a full Apex reinstall."
+    },
+    {
+      "appid": 1422450,
+      "game_name": "Deadlock",
+      "title": "Minor Update - 06-04-2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721188293",
+      "date": 1780594211,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "- Urn mechanics have been reworked.Primary details:- Delivering the urn now starts a king of the hill style capture point, rather than using melee to flip the urn back and forth.- Both teams can progress at the same time, but the urn will only be fully claimed once there is only one team in the circle.- The Urn runner now gets their normal 35% bonus bounty and stats immediately on initial deposit (rather than on deposit conclusion only if your team won it)Other Details:- Urn overall bounty reduced by 20% (unreduced for trailing team)- Progress radius is 20m- Progress rate is fixed regardless the number of allies in the area- Progress duration for favored/neutral/unfavored is 6/12/18s- If Urn has been in progress for over 75s, it will give up and throw all the souls as orbs into the sky (th..."
+    },
+    {
+      "appid": 578080,
+      "game_name": "PUBG: BATTLEGROUNDS",
+      "title": "PUBG Global Series 6 Final Stage Day 1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721187967",
+      "date": 1780588802,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Hello, PUBG Esports fans!As PGS Circuit 2 approaches, the 12 Global Partner Teams and 12 PGS invited teams return to Seoul for the next chapter of PUBG Esports competition. The PUBG Global Series continues with Circuit 2, featuring PGS 4–6 beginning on May 20.With EWC qualification on the line, every PGS Point becomes even more valuable as teams battle to climb the overall standings. A new patch also enters the equation for Circuit 2, bringing shifts to the competitive landscape and forcing teams to adapt quickly. The strategies that found success in Circuit 1 will now be tested in an entirely different meta. PGS Circuit 2 SchedulePGS 4May 20Group StageMay 21Winners StageMay 22Survival Stage May 23-24Finals Stage 1 & 2PGS 5May 28Winners Stage May 29 Survival StageMay 30-31Finals Stage 1 & ..."
+    },
+    {
+      "appid": 1962700,
+      "game_name": "Subnautica 2",
+      "title": "Dev Vlog - Swimming Forward",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721187785",
+      "date": 1780585226,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Our first Dev Vlog since Subnautica 2 entered Early Access is here! Design Lead Anthony Gallegos shares his heartfelt thanks on behalf of the development team for the overwhelming support for Subnautica 2 so far. He’s also covering what to expect in our upcoming updates over the coming weeks and months.We will be pivoting from the frequent, rapid hotfixes we’ve been releasing since Early Access launch to focus on our upcoming EA1.1 update. So watch out for that in a few weeks!You can continue to speculate and discuss everything about Subnautica 2 in our official Discord server. Join the community and share your thoughts with your fellow Subnauts! You can buy Subnautica 2 on Steam now. And don’t forget to share ideas and upvote things you’d like to see in Subnautica 2 on Nolt.io. Keep Divin..."
+    },
+    {
+      "appid": 282800,
+      "game_name": "100% Orange Juice",
+      "title": "New Hotfix Live!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721186987",
+      "date": 1780565427,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Fixes Fixed BH shop icon issues, and a crash related to them. Fixed visual issues related to passionate research. Modded card illustrations are now loaded properly. Added 2D scaling support for cards, so cards no longer shrink while flipping. Please update your game client to keep playing online!"
+    },
+    {
+      "appid": 227300,
+      "game_name": "Euro Truck Simulator 2",
+      "title": "Euro Truck Simulator 2: 1.60 Update Open Beta",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1834602721186835",
+      "date": 1780560693,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "We're happy to announce that the Open Beta for the 1.60 update for Euro Truck Simulator 2 is now available for players to try out and test. If you choose to participate, we'd greatly appreciate any feedback, bug reports, or issues you encounter being shared in the appropriate section of our official forums.Your feedback and reports are incredibly valuable to our team, and we truly appreciate everyone taking the time to help us refine and improve the game experience. Now, without further ado, let's take a closer look at what the 1.60 Open Beta has in store. Game RadioWith Update 1.60, we are introducing Game Radio, a brand-new in-game radio system designed to make every drive feel more immersive and authentic. Rather than just playing music, Game Radio gives you five stations with their own..."
+    },
+    {
       "appid": 257350,
       "game_name": "Baldur's Gate II: Enhanced Edition",
       "title": "2.7 Beta patch: BIF files indexing fix, restored iOS purchase syncing, and more",
@@ -4921,154 +5053,22 @@
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
       "contents": "{STEAM_CLAN_IMAGE}/40285313/d9bf3465f1571bc1e51047b9089fb66010d9e6e6.jpg Happy May to our Age of Empires IV community, and thanks for all of your feedback after our recent update and patch. With this one, we’re addressing a number of balance issues and bugs with previously released maps, as well as continuing to balance our civilizations, with a special focus on the Jin Dynasty. In addition to these changes, starting today, you’ll be able to swap between the Keyboard and Mouse and Controller User Interfaces (UI) on PC, including using controller-specific automation tools like the Villager Priority System when using the Controller UI. Not only that, but these changes also allow for more accessible play on the Steam Deck and ROG Xbox Ally devices. Read on to learn more before jumping in game..."
-    },
-    {
-      "appid": 1962700,
-      "game_name": "Subnautica 2",
-      "title": "Subnautica 2 Early Access Hotfix 3",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530898678",
-      "date": 1780344614,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Hello Subnauts, We just released our third Subnautica 2 hotfix! In this hotfix, we’ve addressed some DLSS issues, upgraded DLSS to version 4.5, modified creature behavior further, and fixed additional crashes. Check out the full list of changes in today’s patch below. Fixed issues that could cause DLSS to crash the game.Fixed issues that could cause DLSS settings not to be saved correctly.Fixed Frame Generation not being available in certain versions of the game.Upgraded DLSS to version 4.5.Reduced Interior Wall costs to 1/4 of their previous price.Hammerheads no longer attack unpiloted Tadpoles.Hammerheads can still take an interest in Tadpoles.Fixed Hammerheads occasionally not being attracted to Flares.Increased overall damage of Marrowbreaches.Spaced out Marrowbreach attacks to occur l..."
-    },
-    {
-      "appid": 1366540,
-      "game_name": "Dyson Sphere Program",
-      "title": "Happy Children's Day to all engineers!",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530897435",
-      "date": 1780317039,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Not building Dyson spheres today, just enjoying ice cream spheres. 🍦"
-    },
-    {
-      "appid": 1422450,
-      "game_name": "Deadlock",
-      "title": "Minor Update - 05-31-2026",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530895860",
-      "date": 1780256754,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "- Apollo: Disengaging Sigil T2 increased from +20% Fire Rate to +30%- Apollo: Flawless Advance T1 heal from 30+0.75 to 35+1.0- Apollo: Flawless Advance T2 increased from -10s Cooldown to -12s- Apollo: Itani Lo Sahn damage increased from 190 to 200- Apollo: Itani Lo Sahn spirit scaling increased from 2.3 to 2.6- Graves: Jar of Dead damage reduced from 20 + 0.31/spirit to 17 + 0.27/spirit- Graves: Ghouls damage reduced by 15%- Graves: Ghouls bounty increased from 25+1/min to 35+2/min- McGinnis: Heavy Barrage range reduced from 50m to 36m- McGinnis: Heavy Barrage T1 Dash Slow reduced from 30% to 18% (regular slow still 30%)- McGinnis: Heavy Barrage T3 Damage Per Rocket reduced from +18 to +15- Pocket: Flying Cloak T3 reduced from -14s Cooldown to -13s- Pocket: Affliction T3 reduced from +18 D..."
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "PUBG Global Series 6 Survival Stage",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530895553",
-      "date": 1780243251,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Hello, PUBG Esports fans!As PGS Circuit 2 approaches, the 12 Global Partner Teams and 12 PGS invited teams return to Seoul for the next chapter of PUBG Esports competition. The PUBG Global Series continues with Circuit 2, featuring PGS 4–6 beginning on May 20.With EWC qualification on the line, every PGS Point becomes even more valuable as teams battle to climb the overall standings. A new patch also enters the equation for Circuit 2, bringing shifts to the competitive landscape and forcing teams to adapt quickly. The strategies that found success in Circuit 1 will now be tested in an entirely different meta. PGS Circuit 2 SchedulePGS 4May 20Group StageMay 21Winners StageMay 22Survival Stage May 23-24Finals Stage 1 & 2PGS 5May 28Winners Stage May 29 Survival StageMay 30-31Finals Stage 1 & ..."
-    },
-    {
-      "appid": 1787090,
-      "game_name": "MyDockFinder",
-      "title": "1.14 Official Version and Beta Version Release",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530895267",
-      "date": 1780229374,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "This update has the same version for both the official release and the betaChangelog Adjust the program mechanism: destroy all GPU resources when the monitor is turned off, and recreate the resources when the monitor is turned on to prevent freezing issues during long standby on certain systems. Fix the brightness display error in the previous version of MyFinder Control Center. Optimize MyFinder battery detection and fix the battery freezing issue caused when docking with all previous versions. Optimize the Dock folder interface cache. Adjust the Dock start menu icon mechanism: single-click to display the built-in Windows start menu, double-click or mouse wheel click the start menu icon to display a third-party start menu if available. Fix the icon display error for certain input methods ..."
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "PUBG Global Series 5 Final Stage Day 2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530893792",
-      "date": 1780156839,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Hello, PUBG Esports fans!As PGS Circuit 2 approaches, the 12 Global Partner Teams and 12 PGS invited teams return to Seoul for the next chapter of PUBG Esports competition. The PUBG Global Series continues with Circuit 2, featuring PGS 4–6 beginning on May 20.With EWC qualification on the line, every PGS Point becomes even more valuable as teams battle to climb the overall standings. A new patch also enters the equation for Circuit 2, bringing shifts to the competitive landscape and forcing teams to adapt quickly. The strategies that found success in Circuit 1 will now be tested in an entirely different meta. PGS Circuit 2 SchedulePGS 4May 20Group StageMay 21Winners StageMay 22Survival Stage May 23-24Finals Stage 1 & 2PGS 5May 28Winners Stage May 29 Survival StageMay 30-31Finals Stage 1 & ..."
-    },
-    {
-      "appid": 227300,
-      "game_name": "Euro Truck Simulator 2",
-      "title": "1.60 Update: Expanded Rest Mechanic",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530893645",
-      "date": 1780153239,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Today, we are happy to give you a glimpse at the upcoming 1.60 update for both Euro Truck Simulator 2 and American Truck Simulator with the Expanded Rest Mechanic feature, which will change how the fatigue system in our games works, so let's take a look! We are implementing the Expanded Rest Mechanic into our games after a lot of requests from our #BestCommunityEver for this feature. This new feature gives players greater control over their rest periods by allowing them to choose how long they want to sleep and exactly when they want to wake up, instead of being limited to a predefined rest duration. Alongside this change, the Fatigue system will now be split into two separate values: Rest State and Mandatory Break, each represented by its own icon in the UI.The Rest State, symbolised by a..."
-    },
-    {
-      "appid": 105600,
-      "game_name": "Terraria",
-      "title": "It seems Terraria's developer is as bad at making small updates as it is final ones, as it says its latest balance patch is much more than 'adjusting a few numbers'",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1833968530893402",
-      "date": 1780142641,
-      "feedname": "PC Gamer",
-      "feedlabel": "PC Gamer",
-      "update_type": "Patch Notes",
-      "contents": "Back in January,<a href=\"https://www.pcgamer.com/terraria/\"> Terraria</a> finally received its gargantuan 1.4.5 patch. Three years in the making, 1.4.5 was supposed to be the final update for the long-running, massively successful survival-crafting game. But it turns out that developer Re-Logic is terrible at making final updates, having<a href=\"https://store.steampowered.com/news/app/105600/view/662735945909403986\"> committed to at least one further major patch</a> in the future while leaving the door open for more... <a href=\"https://www.pcgamer.com/games/survival-crafting/it-seems-terrarias-developer-is-as-bad-at-making-small-updates-as-it-is-final-ones-as-it-says-its-latest-balance-patch-is-much-more-than-adjusting-a-few-numbers/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
-    },
-    {
-      "appid": 1172470,
-      "game_name": "Apex Legends",
-      "title": "Apex Legends: Latest Update 5/29/2026",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530892607",
-      "date": 1780101064,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hi all, we have a couple of balance updates that we just pushed live!🛠️ADJUSTED:AXLE - Nitro GateReduced max in-world count from 3 to 2Reduced hp from 150 to 100CONDUIT - Radiant TransferDecreased regen rate from 15/s to 10/sIncreased regen duration from 6s to 8sDecreased total ally regen from 90 to 80Decreased total self-regen from 60 to 56Increased Instant Barrier regen duration from 4s to 6s"
-    },
-    {
-      "appid": 2868840,
-      "game_name": "Slay the Spire 2",
-      "title": "May Bug Fixes",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530892339",
-      "date": 1780090256,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Hey Slayers! Today we are pushing out a bugfix patch that brings tons of bugfixes from the beta branch over to main. BUG FIXES: General: Improved the reliability of saving your settings on startup Fixed a crash when applying powers to dying creatures Fixed a crash when opening the card pile screen while targeting an enemy on controller Fixed a crash on Linux during combat when UI elements were removed mid-frame Fixed a crash on Linux when ICU libraries are unavailable Fixed audio staying muted after pressing the volume keys or alt-tabbing on Linux Restored the default rendering backend to D3D12 for Intel 620 GPUs Fixed number keys not selecting cards when your mouse cursor was too low on the screen Fixed being able to open the card inspection screen and toggle View Upgrades with the same b..."
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "PUBG Global Series 5 Final Stage Day 1",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530891573",
-      "date": 1780070426,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Hello, PUBG Esports fans!As PGS Circuit 2 approaches, the 12 Global Partner Teams and 12 PGS invited teams return to Seoul for the next chapter of PUBG Esports competition. The PUBG Global Series continues with Circuit 2, featuring PGS 4–6 beginning on May 20.With EWC qualification on the line, every PGS Point becomes even more valuable as teams battle to climb the overall standings. A new patch also enters the equation for Circuit 2, bringing shifts to the competitive landscape and forcing teams to adapt quickly. The strategies that found success in Circuit 1 will now be tested in an entirely different meta. PGS Circuit 2 SchedulePGS 4May 20Group StageMay 21Winners StageMay 22Survival Stage May 23-24Finals Stage 1 & 2PGS 5May 28Winners Stage May 29 Survival StageMay 30-31Finals Stage 1 & ..."
-    },
-    {
-      "appid": 359550,
-      "game_name": "Tom Clancy's Rainbow Six Siege",
-      "title": "Y11S2 Streamer Charm",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1833968530891153",
-      "date": 1780062343,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "ANNOUNCING THE NEXT STREAMER CHARM!Each season will bring the release one new charm, as well as the return of streamer charms from previous seasons! Check out this season's newest charm recipient below, and read on for further updates on the Streamer Charm program.NEWMingoRETURNINGAlfredoplays Alicia alyttleton Anifex AnneMunition Athieno Beaulo Bighead BikiniBodhi Bnans Braction Drid Eternal_regina FastAnne FooYa FoxA Frankystrings Gabbo GarfieldIsDoc Heideltraut IceCold Interro itsSpoit Jenz JerichoFive JessGOAT JostRekt Just9n JustRyuk Jynxzi KeTo KingGeorge KittyR6 LagonisR6 Lil_Lexi Lt Custard Lusorkoeffizient MacieJay Mag6 Marciu M3ry Matimi0 MeatyMarley Minimichegga MrBboy45 Narcoleptic Nugget Nerdengenheiro Nesk Nonomiyamika OneShooter Ooziie PaladinAmber Paluhh Patife Pengu Poxonl..."
     }
   ],
   "social_presence": {
-    "window_start": "2026-05-30T01:30:16.642343+08:00",
-    "window_end": "2026-06-06T01:30:16.642343+08:00",
+    "window_start": "2026-05-30T02:01:25.235770+08:00",
+    "window_end": "2026-06-06T02:01:25.235770+08:00",
     "members": [
       {
         "id": "self",
         "steamid": "76561198367786896",
         "name": "俊林叔叔阳具店",
-        "avatarfull": "https://avatars.steamstatic.com/375cf046954426d61e9bc39889555d1b5297575f_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198367786896/",
+        "avatarfull": "",
+        "profileurl": "",
         "is_self": true,
-        "last_seen_at": "2026-06-06T01:30:03.398996+08:00",
+        "last_seen_at": "2026-06-06T02:00:02.847124+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:03.398996+08:00",
+          "timestamp": "2026-06-06T02:00:02.847124+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6541,138 +6541,15 @@
         ]
       },
       {
-        "id": "76561198429741002",
-        "steamid": "76561198429741002",
-        "name": "ALEXIUSSS",
-        "avatarfull": "https://avatars.steamstatic.com/2de28b0248926290e5c47193aaae12afdcfd64a1_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198429741002/",
-        "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
-        "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
-          "online": true,
-          "game": "Wandering Sword",
-          "gameid": "1876890",
-          "playing": true
-        },
-        "segments": [
-          {
-            "start": "2026-06-03T13:05:05.110520+08:00",
-            "end": "2026-06-03T13:10:04.404955+08:00",
-            "status": "playing",
-            "game": "KovaaK's",
-            "gameid": "824270"
-          },
-          {
-            "start": "2026-06-03T13:10:04.404955+08:00",
-            "end": "2026-06-03T13:15:05.386781+08:00",
-            "status": "playing",
-            "game": "KovaaK's",
-            "gameid": "824270"
-          },
-          {
-            "start": "2026-06-03T22:05:04.407775+08:00",
-            "end": "2026-06-03T22:10:04.837840+08:00",
-            "status": "playing",
-            "game": "KovaaK's",
-            "gameid": "824270"
-          },
-          {
-            "start": "2026-06-03T22:10:04.837840+08:00",
-            "end": "2026-06-03T22:15:05.553492+08:00",
-            "status": "playing",
-            "game": "KovaaK's",
-            "gameid": "824270"
-          },
-          {
-            "start": "2026-06-03T22:15:05.553492+08:00",
-            "end": "2026-06-03T22:20:05.059059+08:00",
-            "status": "playing",
-            "game": "KovaaK's",
-            "gameid": "824270"
-          },
-          {
-            "start": "2026-06-03T22:20:05.059059+08:00",
-            "end": "2026-06-03T22:25:08.907280+08:00",
-            "status": "playing",
-            "game": "KovaaK's",
-            "gameid": "824270"
-          },
-          {
-            "start": "2026-06-03T22:25:08.907280+08:00",
-            "end": "2026-06-03T22:30:06.371182+08:00",
-            "status": "playing",
-            "game": "Crusader Kings III",
-            "gameid": "1158310"
-          },
-          {
-            "start": "2026-06-03T22:30:06.371182+08:00",
-            "end": "2026-06-03T22:35:07.305969+08:00",
-            "status": "playing",
-            "game": "Crusader Kings III",
-            "gameid": "1158310"
-          },
-          {
-            "start": "2026-06-03T22:35:07.305969+08:00",
-            "end": "2026-06-03T22:40:06.218633+08:00",
-            "status": "playing",
-            "game": "Crusader Kings III",
-            "gameid": "1158310"
-          },
-          {
-            "start": "2026-06-04T00:30:05.648237+08:00",
-            "end": "2026-06-04T00:35:06.149773+08:00",
-            "status": "playing",
-            "game": "Wandering Sword",
-            "gameid": "1876890"
-          },
-          {
-            "start": "2026-06-04T00:35:06.149773+08:00",
-            "end": "2026-06-04T00:40:05.730374+08:00",
-            "status": "playing",
-            "game": "Wandering Sword",
-            "gameid": "1876890"
-          },
-          {
-            "start": "2026-06-04T00:40:05.730374+08:00",
-            "end": "2026-06-04T00:43:37.296749+08:00",
-            "status": "playing",
-            "game": "Wandering Sword",
-            "gameid": "1876890"
-          },
-          {
-            "start": "2026-06-04T00:43:37.296749+08:00",
-            "end": "2026-06-04T00:45:04.377075+08:00",
-            "status": "playing",
-            "game": "Wandering Sword",
-            "gameid": "1876890"
-          },
-          {
-            "start": "2026-06-06T01:25:04.675743+08:00",
-            "end": "2026-06-06T01:30:05.115345+08:00",
-            "status": "playing",
-            "game": "Wandering Sword",
-            "gameid": "1876890"
-          },
-          {
-            "start": "2026-06-06T01:30:05.115345+08:00",
-            "end": "2026-06-06T01:30:16.642343+08:00",
-            "status": "playing",
-            "game": "Wandering Sword",
-            "gameid": "1876890"
-          }
-        ]
-      },
-      {
         "id": "76561198261996858",
         "steamid": "76561198261996858",
         "name": "jimi",
         "avatarfull": "https://avatars.steamstatic.com/0594730392a4405ffc59375bb5bc3be38f3b7337_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1430963765/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -10874,9 +10751,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198287273887/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -11754,796 +11631,15 @@
         ]
       },
       {
-        "id": "76561198295506047",
-        "steamid": "76561198295506047",
-        "name": "Wuhen303",
-        "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198295506047/",
-        "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
-        "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
-          "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": [
-          {
-            "start": "2026-05-30T22:40:05.930660+08:00",
-            "end": "2026-05-30T22:42:01.338618+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T22:42:01.338618+08:00",
-            "end": "2026-05-30T22:45:05.544294+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T22:45:05.544294+08:00",
-            "end": "2026-05-30T22:50:05.027728+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T22:50:05.027728+08:00",
-            "end": "2026-05-30T23:00:04.993032+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T23:00:04.993032+08:00",
-            "end": "2026-05-30T23:05:05.048505+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T23:05:05.048505+08:00",
-            "end": "2026-05-30T23:10:04.867888+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T23:10:04.867888+08:00",
-            "end": "2026-05-30T23:15:07.017824+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T23:15:07.017824+08:00",
-            "end": "2026-05-30T23:20:04.718538+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T23:20:04.718538+08:00",
-            "end": "2026-05-30T23:25:04.809557+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T23:25:04.809557+08:00",
-            "end": "2026-05-30T23:30:06.247396+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-05-30T23:35:07.915692+08:00",
-            "end": "2026-05-30T23:35:33.258342+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-30T23:35:33.258342+08:00",
-            "end": "2026-05-30T23:40:05.505271+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-30T23:40:05.505271+08:00",
-            "end": "2026-05-30T23:45:06.867722+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-30T23:45:06.867722+08:00",
-            "end": "2026-05-30T23:50:05.325269+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-30T23:50:05.325269+08:00",
-            "end": "2026-05-30T23:55:06.076637+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-30T23:55:06.076637+08:00",
-            "end": "2026-05-31T00:00:07.944564+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-31T00:00:07.944564+08:00",
-            "end": "2026-05-31T00:02:51.634714+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-31T00:02:51.634714+08:00",
-            "end": "2026-05-31T00:05:08.030791+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-31T00:05:08.030791+08:00",
-            "end": "2026-05-31T00:10:06.712079+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-31T00:10:06.712079+08:00",
-            "end": "2026-05-31T00:15:06.529194+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-31T00:15:06.529194+08:00",
-            "end": "2026-05-31T00:20:05.309154+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-05-31T00:20:05.309154+08:00",
-            "end": "2026-05-31T00:25:07.719981+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-01T17:50:04.889639+08:00",
-            "end": "2026-06-01T17:55:06.003561+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T17:55:06.003561+08:00",
-            "end": "2026-06-01T18:00:05.010562+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T18:00:05.010562+08:00",
-            "end": "2026-06-01T18:05:05.034920+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T18:05:05.034920+08:00",
-            "end": "2026-06-01T18:10:05.022942+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T18:26:48.394525+08:00",
-            "end": "2026-06-01T18:30:04.802731+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T18:30:04.802731+08:00",
-            "end": "2026-06-01T18:35:05.189766+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T18:35:05.189766+08:00",
-            "end": "2026-06-01T18:40:05.024357+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T18:40:05.024357+08:00",
-            "end": "2026-06-01T18:45:05.014332+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T18:45:05.014332+08:00",
-            "end": "2026-06-01T18:50:04.918882+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T18:50:04.918882+08:00",
-            "end": "2026-06-01T18:55:04.473983+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T18:55:04.473983+08:00",
-            "end": "2026-06-01T19:00:06.071221+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T19:35:05.206008+08:00",
-            "end": "2026-06-01T19:40:05.494261+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T19:40:05.494261+08:00",
-            "end": "2026-06-01T19:45:05.138089+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T19:45:05.138089+08:00",
-            "end": "2026-06-01T19:50:04.284166+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T19:50:04.284166+08:00",
-            "end": "2026-06-01T19:55:05.299584+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T19:55:05.299584+08:00",
-            "end": "2026-06-01T20:00:04.657614+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:00:04.657614+08:00",
-            "end": "2026-06-01T20:05:05.093716+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:10:04.946957+08:00",
-            "end": "2026-06-01T20:15:04.740376+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:15:04.740376+08:00",
-            "end": "2026-06-01T20:20:07.926523+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:20:07.926523+08:00",
-            "end": "2026-06-01T20:25:06.030218+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:25:06.030218+08:00",
-            "end": "2026-06-01T20:29:42.531252+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:29:42.531252+08:00",
-            "end": "2026-06-01T20:30:04.742832+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:30:04.742832+08:00",
-            "end": "2026-06-01T20:35:04.367816+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:35:04.367816+08:00",
-            "end": "2026-06-01T20:40:05.696512+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:40:05.696512+08:00",
-            "end": "2026-06-01T20:45:06.158804+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:45:06.158804+08:00",
-            "end": "2026-06-01T20:50:04.453914+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:50:04.453914+08:00",
-            "end": "2026-06-01T20:55:05.106782+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T20:55:05.106782+08:00",
-            "end": "2026-06-01T21:00:05.225601+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T21:00:05.225601+08:00",
-            "end": "2026-06-01T21:05:04.404329+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T21:05:04.404329+08:00",
-            "end": "2026-06-01T21:10:04.476181+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T21:10:04.476181+08:00",
-            "end": "2026-06-01T21:15:04.995803+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-01T21:15:04.995803+08:00",
-            "end": "2026-06-01T21:20:05.387664+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T18:45:06.231105+08:00",
-            "end": "2026-06-02T18:50:04.862567+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T18:50:04.862567+08:00",
-            "end": "2026-06-02T18:55:05.226158+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T20:55:04.736584+08:00",
-            "end": "2026-06-02T21:00:06.252541+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:00:06.252541+08:00",
-            "end": "2026-06-02T21:05:04.156429+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:05:04.156429+08:00",
-            "end": "2026-06-02T21:10:06.249148+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:10:06.249148+08:00",
-            "end": "2026-06-02T21:15:04.428300+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:15:04.428300+08:00",
-            "end": "2026-06-02T21:20:05.302905+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:25:04.465634+08:00",
-            "end": "2026-06-02T21:30:04.554210+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:30:04.554210+08:00",
-            "end": "2026-06-02T21:35:04.996106+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:35:04.996106+08:00",
-            "end": "2026-06-02T21:37:05.577932+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:37:05.577932+08:00",
-            "end": "2026-06-02T21:40:06.875758+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:40:06.875758+08:00",
-            "end": "2026-06-02T21:45:09.179309+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:45:09.179309+08:00",
-            "end": "2026-06-02T21:50:07.636706+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:50:07.636706+08:00",
-            "end": "2026-06-02T21:55:04.513319+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T21:55:04.513319+08:00",
-            "end": "2026-06-02T22:00:05.410074+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T22:00:05.410074+08:00",
-            "end": "2026-06-02T22:05:05.951704+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T22:05:05.951704+08:00",
-            "end": "2026-06-02T22:10:05.564349+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T22:10:05.564349+08:00",
-            "end": "2026-06-02T22:15:07.071092+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T22:15:07.071092+08:00",
-            "end": "2026-06-02T22:20:05.821224+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T22:20:05.821224+08:00",
-            "end": "2026-06-02T22:25:05.445366+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T22:25:05.445366+08:00",
-            "end": "2026-06-02T22:30:06.908898+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T22:30:06.908898+08:00",
-            "end": "2026-06-02T22:35:05.184961+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T22:35:05.184961+08:00",
-            "end": "2026-06-02T22:40:05.320386+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-02T22:40:05.320386+08:00",
-            "end": "2026-06-02T22:45:05.688767+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-03T20:40:06.675221+08:00",
-            "end": "2026-06-03T20:45:06.344335+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-03T20:45:06.344335+08:00",
-            "end": "2026-06-03T20:50:05.456689+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-03T20:50:05.456689+08:00",
-            "end": "2026-06-03T20:55:05.672663+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-03T20:55:05.672663+08:00",
-            "end": "2026-06-03T21:00:04.732045+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-03T21:00:04.732045+08:00",
-            "end": "2026-06-03T21:02:25.104236+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-03T21:02:25.104236+08:00",
-            "end": "2026-06-03T21:05:04.945191+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-06-03T21:05:04.945191+08:00",
-            "end": "2026-06-03T21:10:05.174875+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:10:05.174875+08:00",
-            "end": "2026-06-03T21:15:09.843138+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:15:09.843138+08:00",
-            "end": "2026-06-03T21:20:05.545166+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:20:05.545166+08:00",
-            "end": "2026-06-03T21:25:05.152040+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:25:05.152040+08:00",
-            "end": "2026-06-03T21:30:05.966712+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:30:05.966712+08:00",
-            "end": "2026-06-03T21:35:04.671233+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:35:04.671233+08:00",
-            "end": "2026-06-03T21:40:05.318615+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:40:05.318615+08:00",
-            "end": "2026-06-03T21:45:06.085980+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:45:06.085980+08:00",
-            "end": "2026-06-03T21:50:07.337920+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:50:07.337920+08:00",
-            "end": "2026-06-03T21:55:05.389242+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T21:55:05.389242+08:00",
-            "end": "2026-06-03T22:00:05.694704+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:00:05.694704+08:00",
-            "end": "2026-06-03T22:05:04.407775+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:05:04.407775+08:00",
-            "end": "2026-06-03T22:10:04.837840+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:10:04.837840+08:00",
-            "end": "2026-06-03T22:15:05.553492+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:15:05.553492+08:00",
-            "end": "2026-06-03T22:20:05.059059+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:20:05.059059+08:00",
-            "end": "2026-06-03T22:25:08.907280+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:25:08.907280+08:00",
-            "end": "2026-06-03T22:30:06.371182+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:30:06.371182+08:00",
-            "end": "2026-06-03T22:35:07.305969+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:35:07.305969+08:00",
-            "end": "2026-06-03T22:40:06.218633+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:40:06.218633+08:00",
-            "end": "2026-06-03T22:42:53.042701+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:42:53.042701+08:00",
-            "end": "2026-06-03T22:45:06.267025+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:45:06.267025+08:00",
-            "end": "2026-06-03T22:50:10.037775+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:50:10.037775+08:00",
-            "end": "2026-06-03T22:55:06.164483+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T22:55:06.164483+08:00",
-            "end": "2026-06-03T23:00:08.898028+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-06-03T23:00:08.898028+08:00",
-            "end": "2026-06-03T23:05:04.872482+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          }
-        ]
-      },
-      {
         "id": "76561198311885845",
         "steamid": "76561198311885845",
         "name": "Eureka",
         "avatarfull": "https://avatars.steamstatic.com/fa8a4de374f1e716b6a7607fd74319fd0cdf936e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311885845/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -13344,15 +12440,32 @@
         ]
       },
       {
+        "id": "76561198852270175",
+        "steamid": "76561198852270175",
+        "name": "Bohemia DZ",
+        "avatarfull": "https://avatars.steamstatic.com/3f5e9daea59216d7fe13df4e031d3537580e5e21_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
+        "is_self": false,
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
+        "current": {
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
+      },
+      {
         "id": "76561199206700253",
         "steamid": "76561199206700253",
         "name": "最佳逃离手",
         "avatarfull": "https://avatars.steamstatic.com/ed77ac403e526c32ce2c3d4d7251340721253802_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199206700253/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -13367,9 +12480,9 @@
         "avatarfull": "https://avatars.steamstatic.com/88c582db5d11cff9967db2673866294336eb5541_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198193795227/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -14148,9 +13261,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e07ee377518079efd3fdc3e92f3ae07da8705b0e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198288081892/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -14159,15 +13272,796 @@
         "segments": []
       },
       {
+        "id": "76561198295506047",
+        "steamid": "76561198295506047",
+        "name": "Wuhen303",
+        "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198295506047/",
+        "is_self": false,
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
+        "current": {
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
+          "online": false,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": [
+          {
+            "start": "2026-05-30T22:40:05.930660+08:00",
+            "end": "2026-05-30T22:42:01.338618+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T22:42:01.338618+08:00",
+            "end": "2026-05-30T22:45:05.544294+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T22:45:05.544294+08:00",
+            "end": "2026-05-30T22:50:05.027728+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T22:50:05.027728+08:00",
+            "end": "2026-05-30T23:00:04.993032+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T23:00:04.993032+08:00",
+            "end": "2026-05-30T23:05:05.048505+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T23:05:05.048505+08:00",
+            "end": "2026-05-30T23:10:04.867888+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T23:10:04.867888+08:00",
+            "end": "2026-05-30T23:15:07.017824+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T23:15:07.017824+08:00",
+            "end": "2026-05-30T23:20:04.718538+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T23:20:04.718538+08:00",
+            "end": "2026-05-30T23:25:04.809557+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T23:25:04.809557+08:00",
+            "end": "2026-05-30T23:30:06.247396+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-05-30T23:35:07.915692+08:00",
+            "end": "2026-05-30T23:35:33.258342+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-30T23:35:33.258342+08:00",
+            "end": "2026-05-30T23:40:05.505271+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-30T23:40:05.505271+08:00",
+            "end": "2026-05-30T23:45:06.867722+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-30T23:45:06.867722+08:00",
+            "end": "2026-05-30T23:50:05.325269+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-30T23:50:05.325269+08:00",
+            "end": "2026-05-30T23:55:06.076637+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-30T23:55:06.076637+08:00",
+            "end": "2026-05-31T00:00:07.944564+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-31T00:00:07.944564+08:00",
+            "end": "2026-05-31T00:02:51.634714+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-31T00:02:51.634714+08:00",
+            "end": "2026-05-31T00:05:08.030791+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-31T00:05:08.030791+08:00",
+            "end": "2026-05-31T00:10:06.712079+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-31T00:10:06.712079+08:00",
+            "end": "2026-05-31T00:15:06.529194+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-31T00:15:06.529194+08:00",
+            "end": "2026-05-31T00:20:05.309154+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-05-31T00:20:05.309154+08:00",
+            "end": "2026-05-31T00:25:07.719981+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-01T17:50:04.889639+08:00",
+            "end": "2026-06-01T17:55:06.003561+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T17:55:06.003561+08:00",
+            "end": "2026-06-01T18:00:05.010562+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T18:00:05.010562+08:00",
+            "end": "2026-06-01T18:05:05.034920+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T18:05:05.034920+08:00",
+            "end": "2026-06-01T18:10:05.022942+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T18:26:48.394525+08:00",
+            "end": "2026-06-01T18:30:04.802731+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T18:30:04.802731+08:00",
+            "end": "2026-06-01T18:35:05.189766+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T18:35:05.189766+08:00",
+            "end": "2026-06-01T18:40:05.024357+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T18:40:05.024357+08:00",
+            "end": "2026-06-01T18:45:05.014332+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T18:45:05.014332+08:00",
+            "end": "2026-06-01T18:50:04.918882+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T18:50:04.918882+08:00",
+            "end": "2026-06-01T18:55:04.473983+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T18:55:04.473983+08:00",
+            "end": "2026-06-01T19:00:06.071221+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T19:35:05.206008+08:00",
+            "end": "2026-06-01T19:40:05.494261+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T19:40:05.494261+08:00",
+            "end": "2026-06-01T19:45:05.138089+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T19:45:05.138089+08:00",
+            "end": "2026-06-01T19:50:04.284166+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T19:50:04.284166+08:00",
+            "end": "2026-06-01T19:55:05.299584+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T19:55:05.299584+08:00",
+            "end": "2026-06-01T20:00:04.657614+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:00:04.657614+08:00",
+            "end": "2026-06-01T20:05:05.093716+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:10:04.946957+08:00",
+            "end": "2026-06-01T20:15:04.740376+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:15:04.740376+08:00",
+            "end": "2026-06-01T20:20:07.926523+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:20:07.926523+08:00",
+            "end": "2026-06-01T20:25:06.030218+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:25:06.030218+08:00",
+            "end": "2026-06-01T20:29:42.531252+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:29:42.531252+08:00",
+            "end": "2026-06-01T20:30:04.742832+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:30:04.742832+08:00",
+            "end": "2026-06-01T20:35:04.367816+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:35:04.367816+08:00",
+            "end": "2026-06-01T20:40:05.696512+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:40:05.696512+08:00",
+            "end": "2026-06-01T20:45:06.158804+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:45:06.158804+08:00",
+            "end": "2026-06-01T20:50:04.453914+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:50:04.453914+08:00",
+            "end": "2026-06-01T20:55:05.106782+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T20:55:05.106782+08:00",
+            "end": "2026-06-01T21:00:05.225601+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T21:00:05.225601+08:00",
+            "end": "2026-06-01T21:05:04.404329+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T21:05:04.404329+08:00",
+            "end": "2026-06-01T21:10:04.476181+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T21:10:04.476181+08:00",
+            "end": "2026-06-01T21:15:04.995803+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-01T21:15:04.995803+08:00",
+            "end": "2026-06-01T21:20:05.387664+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T18:45:06.231105+08:00",
+            "end": "2026-06-02T18:50:04.862567+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T18:50:04.862567+08:00",
+            "end": "2026-06-02T18:55:05.226158+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T20:55:04.736584+08:00",
+            "end": "2026-06-02T21:00:06.252541+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:00:06.252541+08:00",
+            "end": "2026-06-02T21:05:04.156429+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:05:04.156429+08:00",
+            "end": "2026-06-02T21:10:06.249148+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:10:06.249148+08:00",
+            "end": "2026-06-02T21:15:04.428300+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:15:04.428300+08:00",
+            "end": "2026-06-02T21:20:05.302905+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:25:04.465634+08:00",
+            "end": "2026-06-02T21:30:04.554210+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:30:04.554210+08:00",
+            "end": "2026-06-02T21:35:04.996106+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:35:04.996106+08:00",
+            "end": "2026-06-02T21:37:05.577932+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:37:05.577932+08:00",
+            "end": "2026-06-02T21:40:06.875758+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:40:06.875758+08:00",
+            "end": "2026-06-02T21:45:09.179309+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:45:09.179309+08:00",
+            "end": "2026-06-02T21:50:07.636706+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:50:07.636706+08:00",
+            "end": "2026-06-02T21:55:04.513319+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T21:55:04.513319+08:00",
+            "end": "2026-06-02T22:00:05.410074+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T22:00:05.410074+08:00",
+            "end": "2026-06-02T22:05:05.951704+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T22:05:05.951704+08:00",
+            "end": "2026-06-02T22:10:05.564349+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T22:10:05.564349+08:00",
+            "end": "2026-06-02T22:15:07.071092+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T22:15:07.071092+08:00",
+            "end": "2026-06-02T22:20:05.821224+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T22:20:05.821224+08:00",
+            "end": "2026-06-02T22:25:05.445366+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T22:25:05.445366+08:00",
+            "end": "2026-06-02T22:30:06.908898+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T22:30:06.908898+08:00",
+            "end": "2026-06-02T22:35:05.184961+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T22:35:05.184961+08:00",
+            "end": "2026-06-02T22:40:05.320386+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-02T22:40:05.320386+08:00",
+            "end": "2026-06-02T22:45:05.688767+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-03T20:40:06.675221+08:00",
+            "end": "2026-06-03T20:45:06.344335+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-03T20:45:06.344335+08:00",
+            "end": "2026-06-03T20:50:05.456689+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-03T20:50:05.456689+08:00",
+            "end": "2026-06-03T20:55:05.672663+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-03T20:55:05.672663+08:00",
+            "end": "2026-06-03T21:00:04.732045+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-03T21:00:04.732045+08:00",
+            "end": "2026-06-03T21:02:25.104236+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-03T21:02:25.104236+08:00",
+            "end": "2026-06-03T21:05:04.945191+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-06-03T21:05:04.945191+08:00",
+            "end": "2026-06-03T21:10:05.174875+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:10:05.174875+08:00",
+            "end": "2026-06-03T21:15:09.843138+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:15:09.843138+08:00",
+            "end": "2026-06-03T21:20:05.545166+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:20:05.545166+08:00",
+            "end": "2026-06-03T21:25:05.152040+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:25:05.152040+08:00",
+            "end": "2026-06-03T21:30:05.966712+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:30:05.966712+08:00",
+            "end": "2026-06-03T21:35:04.671233+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:35:04.671233+08:00",
+            "end": "2026-06-03T21:40:05.318615+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:40:05.318615+08:00",
+            "end": "2026-06-03T21:45:06.085980+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:45:06.085980+08:00",
+            "end": "2026-06-03T21:50:07.337920+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:50:07.337920+08:00",
+            "end": "2026-06-03T21:55:05.389242+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T21:55:05.389242+08:00",
+            "end": "2026-06-03T22:00:05.694704+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:00:05.694704+08:00",
+            "end": "2026-06-03T22:05:04.407775+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:05:04.407775+08:00",
+            "end": "2026-06-03T22:10:04.837840+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:10:04.837840+08:00",
+            "end": "2026-06-03T22:15:05.553492+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:15:05.553492+08:00",
+            "end": "2026-06-03T22:20:05.059059+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:20:05.059059+08:00",
+            "end": "2026-06-03T22:25:08.907280+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:25:08.907280+08:00",
+            "end": "2026-06-03T22:30:06.371182+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:30:06.371182+08:00",
+            "end": "2026-06-03T22:35:07.305969+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:35:07.305969+08:00",
+            "end": "2026-06-03T22:40:06.218633+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:40:06.218633+08:00",
+            "end": "2026-06-03T22:42:53.042701+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:42:53.042701+08:00",
+            "end": "2026-06-03T22:45:06.267025+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:45:06.267025+08:00",
+            "end": "2026-06-03T22:50:10.037775+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:50:10.037775+08:00",
+            "end": "2026-06-03T22:55:06.164483+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T22:55:06.164483+08:00",
+            "end": "2026-06-03T23:00:08.898028+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-06-03T23:00:08.898028+08:00",
+            "end": "2026-06-03T23:05:04.872482+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          }
+        ]
+      },
+      {
         "id": "76561198297254647",
         "steamid": "76561198297254647",
         "name": "Kningc",
         "avatarfull": "https://avatars.steamstatic.com/6a0f301f7a7811d73c94d652237a732315cc0072_full.jpg",
         "profileurl": "https://steamcommunity.com/id/zhining2003/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -14449,9 +14343,9 @@
         "avatarfull": "https://avatars.steamstatic.com/4efe1e4699f427f3dac9a9bf9d66c9968d91db66_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311844129/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -16021,9 +15915,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fc5d8974fd3b0cd4519d382edd70e89172d6da5b_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198327290414/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -17663,9 +17557,9 @@
         "avatarfull": "https://avatars.steamstatic.com/bbcd407fefd1ba7a74b4e536a66ddddb6ed40550_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198353969290/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -17926,9 +17820,9 @@
         "avatarfull": "https://avatars.steamstatic.com/febdf0766bfe6668b76bcb4b3d35dd15ab3999e4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198365517134/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -18147,9 +18041,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198374143385/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -18179,9 +18073,9 @@
         "avatarfull": "https://avatars.steamstatic.com/3f5e9daea59216d7fe13df4e031d3537580e5e21_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198390929632/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -18196,9 +18090,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e0fca1e09e6d16082f4c9ced7f25c2b54b52f097_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198399124819/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -18207,15 +18101,145 @@
         "segments": []
       },
       {
+        "id": "76561198429741002",
+        "steamid": "76561198429741002",
+        "name": "ALEXIUSSS",
+        "avatarfull": "https://avatars.steamstatic.com/2de28b0248926290e5c47193aaae12afdcfd64a1_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198429741002/",
+        "is_self": false,
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
+        "current": {
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
+          "online": false,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": [
+          {
+            "start": "2026-06-03T13:05:05.110520+08:00",
+            "end": "2026-06-03T13:10:04.404955+08:00",
+            "status": "playing",
+            "game": "KovaaK's",
+            "gameid": "824270"
+          },
+          {
+            "start": "2026-06-03T13:10:04.404955+08:00",
+            "end": "2026-06-03T13:15:05.386781+08:00",
+            "status": "playing",
+            "game": "KovaaK's",
+            "gameid": "824270"
+          },
+          {
+            "start": "2026-06-03T22:05:04.407775+08:00",
+            "end": "2026-06-03T22:10:04.837840+08:00",
+            "status": "playing",
+            "game": "KovaaK's",
+            "gameid": "824270"
+          },
+          {
+            "start": "2026-06-03T22:10:04.837840+08:00",
+            "end": "2026-06-03T22:15:05.553492+08:00",
+            "status": "playing",
+            "game": "KovaaK's",
+            "gameid": "824270"
+          },
+          {
+            "start": "2026-06-03T22:15:05.553492+08:00",
+            "end": "2026-06-03T22:20:05.059059+08:00",
+            "status": "playing",
+            "game": "KovaaK's",
+            "gameid": "824270"
+          },
+          {
+            "start": "2026-06-03T22:20:05.059059+08:00",
+            "end": "2026-06-03T22:25:08.907280+08:00",
+            "status": "playing",
+            "game": "KovaaK's",
+            "gameid": "824270"
+          },
+          {
+            "start": "2026-06-03T22:25:08.907280+08:00",
+            "end": "2026-06-03T22:30:06.371182+08:00",
+            "status": "playing",
+            "game": "Crusader Kings III",
+            "gameid": "1158310"
+          },
+          {
+            "start": "2026-06-03T22:30:06.371182+08:00",
+            "end": "2026-06-03T22:35:07.305969+08:00",
+            "status": "playing",
+            "game": "Crusader Kings III",
+            "gameid": "1158310"
+          },
+          {
+            "start": "2026-06-03T22:35:07.305969+08:00",
+            "end": "2026-06-03T22:40:06.218633+08:00",
+            "status": "playing",
+            "game": "Crusader Kings III",
+            "gameid": "1158310"
+          },
+          {
+            "start": "2026-06-04T00:30:05.648237+08:00",
+            "end": "2026-06-04T00:35:06.149773+08:00",
+            "status": "playing",
+            "game": "Wandering Sword",
+            "gameid": "1876890"
+          },
+          {
+            "start": "2026-06-04T00:35:06.149773+08:00",
+            "end": "2026-06-04T00:40:05.730374+08:00",
+            "status": "playing",
+            "game": "Wandering Sword",
+            "gameid": "1876890"
+          },
+          {
+            "start": "2026-06-04T00:40:05.730374+08:00",
+            "end": "2026-06-04T00:43:37.296749+08:00",
+            "status": "playing",
+            "game": "Wandering Sword",
+            "gameid": "1876890"
+          },
+          {
+            "start": "2026-06-04T00:43:37.296749+08:00",
+            "end": "2026-06-04T00:45:04.377075+08:00",
+            "status": "playing",
+            "game": "Wandering Sword",
+            "gameid": "1876890"
+          },
+          {
+            "start": "2026-06-06T01:25:04.675743+08:00",
+            "end": "2026-06-06T01:30:05.115345+08:00",
+            "status": "playing",
+            "game": "Wandering Sword",
+            "gameid": "1876890"
+          },
+          {
+            "start": "2026-06-06T01:30:05.115345+08:00",
+            "end": "2026-06-06T01:35:05.147717+08:00",
+            "status": "playing",
+            "game": "Wandering Sword",
+            "gameid": "1876890"
+          },
+          {
+            "start": "2026-06-06T01:35:05.147717+08:00",
+            "end": "2026-06-06T01:40:04.944698+08:00",
+            "status": "playing",
+            "game": "Wandering Sword",
+            "gameid": "1876890"
+          }
+        ]
+      },
+      {
         "id": "76561198835815502",
         "steamid": "76561198835815502",
         "name": "狗剩",
         "avatarfull": "https://avatars.steamstatic.com/66c72a56e810e1c21b29cd47ebc96366f621b880_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198835815502/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -19554,57 +19578,15 @@
         "avatarfull": "https://avatars.steamstatic.com/90281bcb08a9d28ef4c343c5f6b8b75f093e4a9b_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1335689384/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-05-30T01:35:04.742776+08:00",
-            "end": "2026-05-30T01:40:05.230368+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-05-30T01:40:05.230368+08:00",
-            "end": "2026-05-30T01:45:05.616299+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-05-30T01:45:05.616299+08:00",
-            "end": "2026-05-30T01:50:05.036455+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-05-30T01:50:05.036455+08:00",
-            "end": "2026-05-30T01:55:05.151175+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-05-30T01:55:05.151175+08:00",
-            "end": "2026-05-30T02:00:05.085013+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-05-30T02:00:05.085013+08:00",
-            "end": "2026-05-30T02:05:04.850792+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
           {
             "start": "2026-05-30T02:05:04.850792+08:00",
             "end": "2026-05-30T02:10:04.516218+08:00",
@@ -20385,32 +20367,15 @@
         ]
       },
       {
-        "id": "76561198852270175",
-        "steamid": "76561198852270175",
-        "name": "Bohemia DZ",
-        "avatarfull": "https://avatars.steamstatic.com/3f5e9daea59216d7fe13df4e031d3537580e5e21_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
-        "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
-        "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
         "id": "76561198864549038",
         "steamid": "76561198864549038",
         "name": "urfip",
         "avatarfull": "https://avatars.steamstatic.com/cbc910b68a51cfb6b2824ef6f0039b3415b3c7ac_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198864549038/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -20425,9 +20390,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ba09f9d6f89a7bc6b40bc2301f6e81ccbd181d42_full.jpg",
         "profileurl": "https://steamcommunity.com/id/2916511428/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -20442,9 +20407,9 @@
         "avatarfull": "https://avatars.steamstatic.com/f46a7ef0f2d3cb1c5c83d33525b17924963b28d8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199031439722/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -20459,9 +20424,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8bbefbbf3fd390ef47bc80ca022b5a79b2430835_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199037013836/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -21093,9 +21058,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e9d248c0e1db4982e5f91da0fd51cd7b653659fa_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199069419608/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -21110,9 +21075,9 @@
         "avatarfull": "https://avatars.steamstatic.com/2ee39ef9a8b79dd93c23c2fc82c635a58c7aa94a_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199079104056/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -21127,9 +21092,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9fa5f109a7ae3611b68f8ecfb382962a3f90c10e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199112121158/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -21144,9 +21109,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179314468/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -21161,9 +21126,9 @@
         "avatarfull": "https://avatars.steamstatic.com/80709a0a7494f9c8a9b9dbf6e35d30a7ec910541_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179790448/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -21963,9 +21928,9 @@
         "avatarfull": "https://avatars.steamstatic.com/0f330f09e2a9a91c1714349a3211b88226f869d5_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199180168949/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -22219,9 +22184,9 @@
         "avatarfull": "https://avatars.steamstatic.com/3eef8f740583f434badd193aa6ee195e5077fd9b_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184636102/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -22881,9 +22846,9 @@
         "avatarfull": "https://avatars.steamstatic.com/a00d822111fbffeca6c71f08f656e7c679b09345_full.jpg",
         "profileurl": "https://steamcommunity.com/id/_ver0nika_/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -22898,9 +22863,9 @@
         "avatarfull": "https://avatars.steamstatic.com/88d338a8cfdfe1d2d072413cc4112ee2d710bc18_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184830382/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -22915,9 +22880,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9db4379c2531f5accd95570c7ac358f7169393dc_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1918619816/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -23115,9 +23080,9 @@
         "avatarfull": "https://avatars.steamstatic.com/a521352ec938d97a89f4b9655f75924d3cea6344_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199192859169/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -23132,9 +23097,9 @@
         "avatarfull": "https://avatars.steamstatic.com/510f2dd23d455badfb5e6bd208c694159d717528_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199194550728/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -23290,9 +23255,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fc4d10d73e25a6025e81e38d79a60a3d6059f8f7_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199212735309/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -25086,9 +25051,9 @@
         "avatarfull": "https://avatars.steamstatic.com/a521352ec938d97a89f4b9655f75924d3cea6344_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199223192140/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -25160,9 +25125,9 @@
         "avatarfull": "https://avatars.steamstatic.com/75ac698f154245e3a21dae1e37bed893bcbebacf_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244274077/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -25177,9 +25142,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8b1bc1e6b6f881b7a319c5ec5d5f7b5f0954def4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244382639/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -25194,9 +25159,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ee0e6adb9c075b0b40cbedba2f8699d1c040ca6c_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199387781925/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -25926,9 +25891,9 @@
         "avatarfull": "https://avatars.steamstatic.com/289031dd2e5c0cf6a3b38afdc112d39e2ca77a3d_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199549273997/",
         "is_self": false,
-        "last_seen_at": "2026-06-06T01:30:05.115345+08:00",
+        "last_seen_at": "2026-06-06T02:00:04.661136+08:00",
         "current": {
-          "timestamp": "2026-06-06T01:30:05.115345+08:00",
+          "timestamp": "2026-06-06T02:00:04.661136+08:00",
           "online": false,
           "game": "",
           "gameid": "",
