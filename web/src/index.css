@@ -1660,7 +1660,6 @@ button, input, select, textarea { font: inherit; }
   background: rgba(255, 255, 255, 0.04);
 }
 
-.presence-search-results img,
 .presence-person img {
   width: 22px;
   height: 22px;
@@ -1695,95 +1694,22 @@ button, input, select, textarea { font: inherit; }
   white-space: nowrap;
 }
 
-.presence-controls {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0;
-  margin-bottom: 8px;
-}
-
-.presence-controls input {
-  width: 100%;
-  min-height: 30px;
-  padding: 6px 9px;
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  outline: none;
-}
-
-.presence-controls input:focus {
-  border-color: rgba(103, 232, 249, 0.48);
-}
-
-.presence-controls button,
-.presence-search-results button,
-.presence-remove {
-  min-height: 28px;
-  padding: 5px 8px;
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  cursor: pointer;
-}
-
-.presence-controls button:hover,
-.presence-search-results button:hover,
-.presence-remove:hover {
-  border-color: var(--border-strong);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.presence-search-results {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 6px;
-  margin-bottom: 8px;
-}
-
-.presence-search-results button {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  text-align: left;
-}
-
-.presence-search-results span {
-  min-width: 0;
-  overflow: hidden;
-  color: var(--text-muted);
-  font-size: 12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.presence-search-results strong {
-  margin-left: auto;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 10px;
-  text-transform: uppercase;
-}
-
 .presence-timeline {
   --cursor-left: 100%;
+  --hover-left: 100%;
   position: relative;
   display: grid;
   gap: 0;
   padding-top: 12px;
+  overscroll-behavior: contain;
 }
 
 .presence-timeline::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 178px;
-  right: 42px;
+  left: 174px;
+  right: 0;
   height: 1px;
   background: linear-gradient(90deg, rgba(148, 163, 184, 0.18), rgba(148, 163, 184, 0.46));
 }
@@ -1800,10 +1726,50 @@ button, input, select, textarea { font: inherit; }
   z-index: 2;
 }
 
+.presence-hover-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--hover-left);
+  width: 1px;
+  background: rgba(103, 232, 249, 0.68);
+  box-shadow: 0 0 14px rgba(103, 232, 249, 0.24);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.presence-hover-line span {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  display: block;
+  width: max-content;
+  max-width: 156px;
+  padding: 4px 7px;
+  color: #f8fafc;
+  border: 1px solid rgba(103, 232, 249, 0.34);
+  border-radius: 7px;
+  background: rgba(7, 10, 16, 0.92);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.2;
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+}
+
+.presence-hover-line-start span {
+  transform: translate(0, -100%);
+}
+
+.presence-hover-line-end span {
+  transform: translate(-100%, -100%);
+}
+
 .presence-row {
   position: relative;
   display: grid;
-  grid-template-columns: 166px minmax(140px, 1fr) 42px;
+  grid-template-columns: 166px minmax(140px, 1fr);
   align-items: center;
   gap: 8px;
   min-height: 30px;
@@ -1878,13 +1844,6 @@ button, input, select, textarea { font: inherit; }
 .presence-segment-tooltip span {
   color: rgba(226, 232, 240, 0.78);
   font-family: var(--mono);
-  font-size: 10px;
-}
-
-.presence-remove {
-  min-height: 24px;
-  padding: 3px 6px;
-  color: var(--text-muted);
   font-size: 10px;
 }
 
@@ -4836,10 +4795,6 @@ button, input, select, textarea { font: inherit; }
   .social-presence-card,
   .recent-activity,
   .contribution-map { padding: 14px; }
-  .social-presence-header,
-  .presence-controls {
-    grid-template-columns: 1fr;
-  }
   .social-presence-header {
     display: grid;
   }
@@ -4852,9 +4807,6 @@ button, input, select, textarea { font: inherit; }
   .presence-timeline::before,
   .presence-now-line {
     display: none;
-  }
-  .presence-remove {
-    width: max-content;
   }
   .milestone-grid,
   .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

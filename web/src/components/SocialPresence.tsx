@@ -1,5 +1,6 @@
-import { useMemo } from "react";
+import { useCallback, useMemo, useState } from "react";
 import type { CSSProperties } from "react";
+import type { MouseEvent, WheelEvent } from "react";
 import type { PresenceSegment, SocialPresenceData, SocialPresenceMember } from "../types";
 import { useLocale } from "../useLocale";
 
@@ -8,6 +9,11 @@ interface Props {
 }
 
 const SG_TIME_ZONE = "Asia/Singapore";
+const HOUR_MS = 60 * 60 * 1000;
+const DAY_MS = 24 * HOUR_MS;
+const DEFAULT_VIEW_MS = DAY_MS;
+const MIN_VIEW_MS = HOUR_MS;
+const TRACK_OFFSET_PX = 174;
 const TRACKED_FRIEND_NAMES = [
   "X1ao",
   "大王",
@@ -53,6 +59,17 @@ function formatTime(value: string) {
   });
 }
 
+function formatRangeTime(value: number) {
+  return new Date(value).toLocaleString([], {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: SG_TIME_ZONE,
+  });
+}
+
 function durationText(startValue: string, endValue: string) {
   const start = new Date(startValue).getTime();
   const end = new Date(endValue).getTime();
@@ -67,21 +84,24 @@ function segmentLabel(segment: PresenceSegment, t: (key: string) => string) {
   return segment.game || (segment.gameid ? `App ${segment.gameid}` : t("playing"));
 }
 
-function percentBetween(value: string, start: number, end: number) {
-  const ts = new Date(value).getTime();
-  if (!Number.isFinite(ts) || end <= start) return 0;
-  return Math.max(0, Math.min(100, ((ts - start) / (end - start)) * 100));
+function percentForTimestamp(value: number, start: number, end: number) {
+  if (!Number.isFinite(value) || end <= start) return 0;
+  return Math.max(0, Math.min(100, ((value - start) / (end - start)) * 100));
 }
 
 export function SocialPresence({ presence }: Props) {
   const { t } = useLocale();
+  const [visibleRange, setVisibleRange] = useState<{ start: number; end: number } | null>(null);
+  const [hoverTime, setHoverTime] = useState<number | null>(null);
   const trackedNameOrder = useMemo(() => {
     return new Map(TRACKED_FRIEND_NAMES.map((name, index) => [normalizeName(name), index]));
   }, []);
   const members = useMemo(() => {
     return (presence?.members ?? [])
-      .filter((member) => !member.is_self && trackedNameOrder.has(normalizeName(member.name)))
+      .filter((member) => member.is_self || trackedNameOrder.has(normalizeName(member.name)))
       .sort((a, b) => {
+        if (a.is_self) return -1;
+        if (b.is_self) return 1;
         const aIndex = trackedNameOrder.get(normalizeName(a.name)) ?? TRACKED_FRIEND_NAMES.length;
         const bIndex = trackedNameOrder.get(normalizeName(b.name)) ?? TRACKED_FRIEND_NAMES.length;
         return aIndex - bIndex;
@@ -94,8 +114,57 @@ export function SocialPresence({ presence }: Props) {
 
   const start = new Date(presence.window_start).getTime();
   const end = Math.max(new Date(presence.window_end).getTime(), Date.now());
-  const cursorPct = Math.max(0, Math.min(100, ((Date.now() - start) / (end - start)) * 100));
-  const cursorLeft = `calc(${cursorPct}% + ${178 - cursorPct * 2.2}px)`;
+  const fullStart = Number.isFinite(start) ? start : end - 7 * DAY_MS;
+  const fullEnd = Number.isFinite(end) ? end : Date.now();
+  const defaultStart = Math.max(fullStart, fullEnd - DEFAULT_VIEW_MS);
+  const rawViewStart = visibleRange?.start ?? defaultStart;
+  const rawViewEnd = visibleRange?.end ?? fullEnd;
+  const viewDuration = Math.min(fullEnd - fullStart, Math.max(MIN_VIEW_MS, rawViewEnd - rawViewStart));
+  const viewStart = Math.max(fullStart, Math.min(rawViewStart, fullEnd - viewDuration));
+  const viewEnd = viewStart + viewDuration;
+  const now = Date.now();
+  const cursorPct = percentForTimestamp(now, viewStart, viewEnd);
+  const cursorLeft = `calc(${cursorPct}% + ${TRACK_OFFSET_PX - cursorPct * (TRACK_OFFSET_PX / 100)}px)`;
+  const showNowLine = now >= viewStart && now <= viewEnd;
+  const hoverPct = hoverTime === null ? 0 : percentForTimestamp(hoverTime, viewStart, viewEnd);
+  const hoverLeft = `calc(${hoverPct}% + ${TRACK_OFFSET_PX - hoverPct * (TRACK_OFFSET_PX / 100)}px)`;
+  const hoverClassName = `presence-hover-line${hoverPct < 12 ? " presence-hover-line-start" : ""}${hoverPct > 88 ? " presence-hover-line-end" : ""}`;
+
+  const timelinePointerPct = useCallback((event: MouseEvent<HTMLDivElement> | WheelEvent<HTMLDivElement>) => {
+    const track = event.currentTarget.querySelector(".presence-track");
+    const rect = track?.getBoundingClientRect() ?? event.currentTarget.getBoundingClientRect();
+    return rect.width > 0 ? Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)) : 1;
+  }, []);
+
+  const handleTimelinePointerMove = useCallback((event: MouseEvent<HTMLDivElement>) => {
+    const pointerPct = timelinePointerPct(event);
+    setHoverTime(viewStart + (viewEnd - viewStart) * pointerPct);
+  }, [timelinePointerPct, viewEnd, viewStart]);
+
+  const handleTimelineWheel = useCallback((event: WheelEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    const pointerPct = timelinePointerPct(event);
+    const currentStart = viewStart;
+    const currentEnd = viewEnd;
+    const currentDuration = currentEnd - currentStart;
+    const zoomFactor = event.deltaY > 0 ? 1.18 : 0.84;
+    const nextDuration = Math.min(fullEnd - fullStart, Math.max(MIN_VIEW_MS, currentDuration * zoomFactor));
+    const anchor = currentStart + currentDuration * pointerPct;
+    let nextStart = anchor - nextDuration * pointerPct;
+    let nextEnd = nextStart + nextDuration;
+
+    if (nextStart < fullStart) {
+      nextStart = fullStart;
+      nextEnd = nextStart + nextDuration;
+    }
+    if (nextEnd > fullEnd) {
+      nextEnd = fullEnd;
+      nextStart = nextEnd - nextDuration;
+    }
+
+    setVisibleRange({ start: nextStart, end: nextEnd });
+    setHoverTime(anchor);
+  }, [fullEnd, fullStart, timelinePointerPct, viewEnd, viewStart]);
 
   return (
     <section className="social-presence-card" aria-label={t("socialPresence")}>
@@ -105,13 +174,27 @@ export function SocialPresence({ presence }: Props) {
           <p className="viz-subtitle">{t("socialPresenceSubtitle")}</p>
         </div>
         <div className="presence-window">
-          <span>{formatTime(presence.window_start)}</span>
-          <span>{t("now")}</span>
+          <span>{formatRangeTime(viewStart)}</span>
+          <span>{formatRangeTime(viewEnd)}</span>
         </div>
       </div>
 
-      <div className="presence-timeline" style={{ "--cursor-left": cursorLeft } as CSSProperties}>
-        <div className="presence-now-line" />
+      <div
+        className="presence-timeline"
+        onMouseLeave={() => setHoverTime(null)}
+        onMouseMove={handleTimelinePointerMove}
+        onWheel={handleTimelineWheel}
+        style={{
+          "--cursor-left": cursorLeft,
+          "--hover-left": hoverLeft,
+        } as CSSProperties}
+      >
+        {showNowLine && <div className="presence-now-line" />}
+        {hoverTime !== null && (
+          <div className={hoverClassName}>
+            <span>{formatRangeTime(hoverTime)}</span>
+          </div>
+        )}
         {members.map((member) => (
           <div key={member.id} className="presence-row">
             <div className="presence-person">
@@ -123,8 +206,12 @@ export function SocialPresence({ presence }: Props) {
             </div>
             <div className="presence-track" aria-label={statusText(member, t)}>
               {member.segments.map((segment, index) => {
-                const left = percentBetween(segment.start, start, end);
-                const right = percentBetween(segment.end, start, end);
+                const segmentStart = new Date(segment.start).getTime();
+                const segmentEnd = new Date(segment.end).getTime();
+                if (!Number.isFinite(segmentStart) || !Number.isFinite(segmentEnd)) return null;
+                if (segmentEnd <= viewStart || segmentStart >= viewEnd) return null;
+                const left = percentForTimestamp(Math.max(segmentStart, viewStart), viewStart, viewEnd);
+                const right = percentForTimestamp(Math.min(segmentEnd, viewEnd), viewStart, viewEnd);
                 const width = Math.max(0.7, right - left);
                 return (
                   <span

@@ -20,7 +20,7 @@ load_dotenv()
 
 TZ = timezone(timedelta(hours=8))  # UTC+8
 STATUS_GAP_CAP = timedelta(minutes=15)
-SOCIAL_WINDOW = timedelta(hours=6)
+SOCIAL_WINDOW = timedelta(days=7)
 
 KEY = os.getenv("STEAM_API_KEY")
 SID = os.getenv("STEAM_ID")
