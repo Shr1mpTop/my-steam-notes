@@ -2,12 +2,12 @@
 import sys
 
 sys.path.insert(0, ".")
-from scripts.poll_status import generate_dashboard, get_player_summary
+from scripts.poll_status import generate_dashboard, get_player_summary_for_dashboard
 
 
 def main():
     print("=== Build Dashboard ===\n")
-    player = get_player_summary()
+    player = get_player_summary_for_dashboard()
     db = generate_dashboard(player)
     print(f"  Games: {len(db['game_cloud'])} | Genres: {len(db['genres'])}")
     print(f"  Achievements: {len(db['achievements'])} games")

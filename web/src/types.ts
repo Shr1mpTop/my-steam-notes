@@ -165,7 +165,7 @@ export interface PresenceState {
 export interface PresenceSegment {
   start: string;
   end: string;
-  status: "online" | "playing";
+  status: "playing";
   game: string;
   gameid: string;
 }

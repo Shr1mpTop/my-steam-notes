@@ -23,7 +23,16 @@ TODAY = datetime.now(TZ).strftime("%Y-%m-%d")
 
 
 def get_json(url, params=None, timeout=15):
-    return requests.get(url, params=params or {}, timeout=timeout).json()
+    try:
+        resp = requests.get(url, params=params or {}, timeout=timeout)
+        resp.raise_for_status()
+        return resp.json()
+    except requests.HTTPError as exc:
+        status = exc.response.status_code if exc.response is not None else "unknown"
+        print(f"Steam enrichment fetch skipped: HTTP {status} for {url}")
+    except (requests.RequestException, ValueError) as exc:
+        print(f"Steam enrichment fetch skipped: {exc} for {url}")
+    return {}
 
 
 def sync_steam_level():
@@ -32,7 +41,12 @@ def sync_steam_level():
         "https://api.steampowered.com/IPlayerService/GetSteamLevel/v1/",
         {"key": KEY, "steamid": SID, "format": "json"},
     )
-    level = data.get("response", {}).get("player_level", 0)
+    response = data.get("response", {})
+    if "player_level" not in response:
+        print("Steam level sync skipped: no level returned")
+        return
+
+    level = response.get("player_level", 0)
     execute(
         "INSERT OR REPLACE INTO steam_level (date, level) VALUES (?, ?)",
         [TODAY, level],

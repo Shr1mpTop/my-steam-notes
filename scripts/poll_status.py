@@ -77,6 +77,70 @@ def get_player_summary():
     return players[0] if players else {}
 
 
+def describe_request_error(exc):
+    if isinstance(exc, requests.HTTPError):
+        status = exc.response.status_code if exc.response is not None else "unknown"
+        return f"HTTP {status}"
+    return str(exc)
+
+
+def get_cached_player_summary():
+    """Best-effort fallback for dashboard builds when Steam rejects a request."""
+    try:
+        rows = execute(
+            """SELECT personaname, personastate, gameextrainfo, gameid, lastlogoff, loccountrycode
+               FROM player_daily
+               ORDER BY date DESC LIMIT 1"""
+        )
+    except Exception:
+        rows = []
+
+    if rows:
+        row = rows[0]
+        return {
+            "personaname": row.get("personaname", ""),
+            "personastate": row.get("personastate", 0),
+            "gameextrainfo": row.get("gameextrainfo", ""),
+            "gameid": row.get("gameid", ""),
+            "lastlogoff": row.get("lastlogoff", 0),
+            "loccountrycode": row.get("loccountrycode", ""),
+        }
+
+    try:
+        with open(DASHBOARD_PATH, "r", encoding="utf-8") as f:
+            player = json.load(f).get("player", {})
+    except Exception:
+        return {}
+
+    return {
+        "personaname": player.get("personaname", ""),
+        "personastate": 1 if player.get("online") else 0,
+        "gameextrainfo": player.get("currently_playing", ""),
+        "gameid": "",
+        "avatarfull": player.get("avatarfull", ""),
+    }
+
+
+def get_player_summary_or_none():
+    try:
+        return get_player_summary()
+    except (requests.RequestException, KeyError, ValueError) as exc:
+        print(f"Player summary fetch skipped: {describe_request_error(exc)}")
+        return None
+
+
+def get_player_summary_for_dashboard():
+    player = get_player_summary_or_none()
+    if player is not None:
+        return player
+    cached = get_cached_player_summary()
+    if cached:
+        print("Using cached player summary for dashboard generation")
+    else:
+        print("No cached player summary available; dashboard will use empty player data")
+    return cached
+
+
 def get_friend_list():
     url = f"{STEAM_USER_API}/GetFriendList/v0001/"
     resp = requests.get(
@@ -103,7 +167,11 @@ def get_player_summaries(steamids):
 
 
 def poll_status():
-    p = get_player_summary()
+    p = get_player_summary_or_none()
+    if not p:
+        print("Status poll skipped: no player summary available")
+        return {}
+
     now = datetime.now(TZ).isoformat()
     execute(
         "INSERT OR IGNORE INTO status_polls (timestamp, personastate, gameextrainfo, gameid) VALUES (?, ?, ?, ?)",
@@ -664,7 +732,7 @@ def build_social_presence(player_info):
             return segments
         ordered = sorted(events, key=lambda item: item["timestamp"])
         for index, event in enumerate(ordered):
-            if not event["online"]:
+            if not event["playing"]:
                 continue
             start = max(parse_ts(event["timestamp"]), window_start)
             next_start = parse_ts(ordered[index + 1]["timestamp"]) if index + 1 < len(ordered) else now
@@ -674,7 +742,7 @@ def build_social_presence(player_info):
             segments.append({
                 "start": start.isoformat(),
                 "end": end.isoformat(),
-                "status": "playing" if event["playing"] else "online",
+                "status": "playing",
                 "game": event["game"],
                 "gameid": event["gameid"],
             })

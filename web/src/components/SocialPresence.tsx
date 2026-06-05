@@ -8,7 +8,6 @@ interface Props {
 }
 
 const STORAGE_KEY = "steam-notebook-social-presence-members-v1";
-const ONLINE_COLOR = "#facc15";
 const SG_TIME_ZONE = "Asia/Singapore";
 
 function hashString(value: string) {
@@ -24,7 +23,6 @@ function gameKey(segment: PresenceSegment) {
 }
 
 function colorForSegment(segment: PresenceSegment) {
-  if (segment.status === "online") return ONLINE_COLOR;
   const hue = hashString(gameKey(segment)) % 360;
   return `hsl(${hue} 78% 58%)`;
 }
@@ -56,7 +54,7 @@ function durationText(startValue: string, endValue: string) {
 }
 
 function segmentLabel(segment: PresenceSegment, t: (key: string) => string) {
-  return segment.game || (segment.gameid ? `App ${segment.gameid}` : t("onlineNotPlaying"));
+  return segment.game || (segment.gameid ? `App ${segment.gameid}` : t("playing"));
 }
 
 function percentBetween(value: string, start: number, end: number) {

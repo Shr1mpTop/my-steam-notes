@@ -24,7 +24,17 @@ TODAY = datetime.now(TZ).strftime("%Y-%m-%d")
 def get_json(interface, method, version, params=None):
     url = f"https://api.steampowered.com/{interface}/{method}/{version}/"
     p = {"key": KEY, "format": "json", **(params or {})}
-    return requests.get(url, params=p, timeout=30).json()["response"]
+    label = f"{interface}/{method}/{version}"
+    try:
+        resp = requests.get(url, params=p, timeout=30)
+        resp.raise_for_status()
+        return resp.json().get("response", {})
+    except requests.HTTPError as exc:
+        status = exc.response.status_code if exc.response is not None else "unknown"
+        print(f"Steam sync skipped for {label}: HTTP {status}")
+    except (requests.RequestException, ValueError) as exc:
+        print(f"Steam sync skipped for {label}: {exc}")
+    return {}
 
 
 def sync_owned_games():
@@ -36,6 +46,9 @@ def sync_owned_games():
     })
     games = data.get("games", [])
     print(f"Fetched {len(games)} owned games")
+    if not games:
+        print("Owned games sync skipped: no games returned")
+        return
 
     # Upsert owned_games
     now = datetime.now(TZ).isoformat()
