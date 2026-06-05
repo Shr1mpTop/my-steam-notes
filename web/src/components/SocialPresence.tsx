@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import type { CSSProperties } from "react";
 import type { PresenceSegment, SocialPresenceData, SocialPresenceMember } from "../types";
 import { useLocale } from "../useLocale";
@@ -7,8 +7,18 @@ interface Props {
   presence?: SocialPresenceData;
 }
 
-const STORAGE_KEY = "steam-notebook-social-presence-members-v1";
 const SG_TIME_ZONE = "Asia/Singapore";
+const TRACKED_FRIEND_NAMES = [
+  "X1ao",
+  "大王",
+  "野生成年雌性东北虎",
+  "chunshuey",
+  "Key",
+];
+
+function normalizeName(value: string) {
+  return value.trim().toLocaleLowerCase();
+}
 
 function hashString(value: string) {
   let hash = 0;
@@ -65,48 +75,18 @@ function percentBetween(value: string, start: number, end: number) {
 
 export function SocialPresence({ presence }: Props) {
   const { t } = useLocale();
-  const [query, setQuery] = useState("");
-  const [selectedIds, setSelectedIds] = useState<string[]>(() => {
-    if (typeof window === "undefined") return [];
-    try {
-      const saved = JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "[]") as unknown;
-      return Array.isArray(saved) ? saved.filter((item): item is string => typeof item === "string") : [];
-    } catch {
-      return [];
-    }
-  });
-  const [hasCustomSelection, setHasCustomSelection] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.localStorage.getItem(STORAGE_KEY) !== null;
-  });
-
-  const members = presence?.members ?? [];
-  const defaultIds = useMemo(() => {
-    return members
-      .filter((member) => member.is_self || member.current.online || member.segments.length > 0)
-      .slice(0, 8)
-      .map((member) => member.id);
-  }, [members]);
-
-  const effectiveIds = hasCustomSelection ? selectedIds : defaultIds;
-  const selectedMembers = useMemo(() => {
-    const selected = new Set(effectiveIds);
-    return members.filter((member) => selected.has(member.id));
-  }, [effectiveIds, members]);
-
-  const searchResults = useMemo(() => {
-    const selected = new Set(effectiveIds);
-    const normalized = query.trim().toLowerCase();
-    return members
-      .filter((member) => !selected.has(member.id))
-      .filter((member) => !normalized || member.name.toLowerCase().includes(normalized))
-      .slice(0, 8);
-  }, [effectiveIds, members, query]);
-
-  useEffect(() => {
-    if (!hasCustomSelection) return;
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(selectedIds));
-  }, [hasCustomSelection, selectedIds]);
+  const trackedNameOrder = useMemo(() => {
+    return new Map(TRACKED_FRIEND_NAMES.map((name, index) => [normalizeName(name), index]));
+  }, []);
+  const members = useMemo(() => {
+    return (presence?.members ?? [])
+      .filter((member) => !member.is_self && trackedNameOrder.has(normalizeName(member.name)))
+      .sort((a, b) => {
+        const aIndex = trackedNameOrder.get(normalizeName(a.name)) ?? TRACKED_FRIEND_NAMES.length;
+        const bIndex = trackedNameOrder.get(normalizeName(b.name)) ?? TRACKED_FRIEND_NAMES.length;
+        return aIndex - bIndex;
+      });
+  }, [presence?.members, trackedNameOrder]);
 
   if (!presence || !members.length) {
     return null;
@@ -116,16 +96,6 @@ export function SocialPresence({ presence }: Props) {
   const end = Math.max(new Date(presence.window_end).getTime(), Date.now());
   const cursorPct = Math.max(0, Math.min(100, ((Date.now() - start) / (end - start)) * 100));
   const cursorLeft = `calc(${cursorPct}% + ${178 - cursorPct * 2.2}px)`;
-
-  function addMember(id: string) {
-    setHasCustomSelection(true);
-    setSelectedIds((current) => current.includes(id) ? current : [...current, id]);
-  }
-
-  function removeMember(id: string) {
-    setHasCustomSelection(true);
-    setSelectedIds((current) => current.filter((item) => item !== id));
-  }
 
   return (
     <section className="social-presence-card" aria-label={t("socialPresence")}>
@@ -140,32 +110,9 @@ export function SocialPresence({ presence }: Props) {
         </div>
       </div>
 
-      <div className="presence-controls">
-        <input
-          type="search"
-          value={query}
-          placeholder={t("searchFriends")}
-          onChange={(event) => setQuery(event.target.value)}
-        />
-      </div>
-
-      {query.trim() && (
-        <div className="presence-search-results">
-          {searchResults.length ? searchResults.map((member) => (
-            <button key={member.id} type="button" onClick={() => addMember(member.id)}>
-              {member.avatarfull && <img src={member.avatarfull} alt="" />}
-              <span>{member.name}</span>
-              <strong>{t("add")}</strong>
-            </button>
-          )) : (
-            <span>{t("noFriendMatch")}</span>
-          )}
-        </div>
-      )}
-
       <div className="presence-timeline" style={{ "--cursor-left": cursorLeft } as CSSProperties}>
         <div className="presence-now-line" />
-        {selectedMembers.map((member) => (
+        {members.map((member) => (
           <div key={member.id} className="presence-row">
             <div className="presence-person">
               {member.avatarfull && <img src={member.avatarfull} alt="" />}
@@ -198,9 +145,6 @@ export function SocialPresence({ presence }: Props) {
                 );
               })}
             </div>
-            <button className="presence-remove" type="button" onClick={() => removeMember(member.id)}>
-              {t("remove")}
-            </button>
           </div>
         ))}
       </div>
