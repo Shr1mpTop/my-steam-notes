@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T03:59:38.677627+08:00",
+  "updated_at": "2026-09-03T03:52:15.180004+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
     "online": false,
@@ -1531,7 +1531,7 @@
     {
       "appid": 489830,
       "name": "The Elder Scrolls V: Skyrim Special Edition",
-      "playtime_2weeks_hours": 13.2,
+      "playtime_2weeks_hours": 10.7,
       "playtime_forever_hours": 58.3
     },
     {
@@ -5402,7 +5402,7 @@
       {
         "source": 730,
         "target": 1172470,
-        "strength": 105
+        "strength": 106
       },
       {
         "source": 1172470,
@@ -5638,7 +5638,7 @@
       },
       {
         "name": "The Elder Scrolls V: Skyrim Special Edition",
-        "hours": 13.2
+        "hours": 10.7
       },
       {
         "name": "Counter-Strike 2",
@@ -5667,6 +5667,50 @@
     }
   ],
   "game_updates": [
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "Controller Anti-Cheat Enforcement & Ban Wave Update — 09/02/2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814441123",
+      "date": 1788369894,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "We are implementing significant, new systems to detect players using unauthorized controller hardware or software in Apex Legends on all platforms including: PC, PlayStation, Xbox, and Nintendo Switch 2.We’ve spent the past several months thoroughly validating these systems to ensure they can accurately identify prohibited behavior.Players that trigger these detections will be actioned upon and banned accordingly.If you are using controller modifications, devices, or software to gain an unfair advantage, now is the time to stop. Playing on console does not make you exempt from detection or enforcement.This is just the beginning of these new systems which we will continue to improve to keep pace with evolving cheating methods.Additionally, we’ve continued to update and strengthen our existi..."
+    },
+    {
+      "appid": 1805320,
+      "game_name": "Romestead",
+      "title": "Patch - Version 0.26.1_4",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814441018",
+      "date": 1788367547,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Change logGeneralFixes to the actions \"Loot All\" and \"Quick Stack\"If you have changed your Steam Input layouts we recommend you reset them back to the recommended templates to make sure you don't have any issues with theseAdded a Deposit All button to inventories.Fixed furniture mode shift button.BuildingsCrafters can now grab items from material storage (using the logistics tent connection).A cancelled trade route will now dump everything outside the Trading Post after failing to do a regular deposit.Walls can now be repaired from 10% lost health.DungeonsPolished some dungeons.Updated Medusa's Lair.Items & TreasureUpdated hidden chest appearance to match revealed chests. Happy adventuring!"
+    },
+    {
+      "appid": 1805320,
+      "game_name": "Romestead",
+      "title": "Romestead Passes 500k Players!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814440565",
+      "date": 1788360538,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Salvete Romans!...And thank you SO much for playing! In the three months that have passed since our initial release into Early Access we have seen so much support for the game and our updates. So here's a massive thank you from us at Beartwigs to everyone who's left a review, given us feedback, and reported bugs! We've really enjoyed seeing all of the fanart, the videos, the streaming, and all the comments and interactions with us across all our platforms and social media. We are motivated now more than ever to work hard to get the next update as good as it can be.And speaking of the next update...What Now?As we've mentioned previously, we are taking this week after the update to make sure to fix any immediate issues and bugs that has come up are fixed. However, we are also preparing to do..."
+    },
+    {
+      "appid": 1527950,
+      "game_name": "Wartales",
+      "title": "Feature Highlight: Prisoner System",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814440460",
+      "date": 1788358357,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Community Update #7: A New Fate for PrisonersGreetings, Mercenaries!We'll be releasing Community Update #7 next week on September 7.Today, we turn our attention to Prisoners and the many improvements coming to their role within your troop. Across the lands of Wartales, people from all walks of life may find themselves imprisoned. Whether they are hardened outlaws, unfortunate souls caught on the wrong side of the law, or honest people driven into difficult circumstances.Many eventually find themselves delivered into the hands of the local authorities in exchange for a few well-earned Krowns.With this update, however, imprisonment may no longer define the rest of their story.There are many ways to deal with crime and punishment across Kingdoms. Some Prisoners may now be offered a more promi..."
+    },
     {
       "appid": 359550,
       "game_name": "Tom Clancy's Rainbow Six Siege",
@@ -5886,55 +5930,11 @@
       "feedlabel": "Community Announcements",
       "update_type": "Update",
       "contents": "Weapons DetailQUICK INTEL:22 Weapons available during the Beta.Nine Weapon classes, from Assault Rifles to Melee Weapons.Primary, Secondary, and Melee Weapon categories.Unlock additional Weapons as you rank up.Build every Loadout using Create a Class.NOTE: This intel comes from the Modern Warfare 4 Beta: Everything You Need to Know Blog. Click here for the full blog. During the Beta, you'll unlock and wield up to 22 of the 33 weapons available at launch, spanning every major weapon class. Whether you favor the adaptability of Assault Rifles, the aggressive mobility of SMGs, the stopping power of Shotguns and Sniper Rifles, or the utility of Launchers and Melee Weapons, the Beta offers a broad selection from the full Multiplayer arsenal.Weapons are organized into Primary, Secondary, and Mel..."
-    },
-    {
-      "appid": 1363080,
-      "game_name": "Manor Lords",
-      "title": "Manor Lords celebrates 4 million copies sold with a new major update which gives players the chance to become 'a cow-herding mogul'",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1842212951300796",
-      "date": 1787850222,
-      "feedname": "PC Gamer",
-      "feedlabel": "PC Gamer",
-      "update_type": "Major Update",
-      "contents": "<a href=\"https://www.pcgamer.com/uk/manor-lords/\">Manor Lords</a> is on a roll—with the medieval management sim celebrating the monumental milestone of over 4 million copies sold across all stores. And to commemorate the good news comes its next major update... <a href=\"https://www.pcgamer.com/games/city-builder/manor-lords-celebrates-4-million-copies-sold-with-a-new-major-update-which-gives-players-the-chance-to-become-a-cow-herding-mogul/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
-    },
-    {
-      "appid": 1363080,
-      "game_name": "Manor Lords",
-      "title": "Major Update #8: Wide Valley, Cows, Cider, Advanced Construction & More",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951300554",
-      "date": 1787846517,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Major Update",
-      "contents": "Hey everyone, The latest update has successfully went through all the community Beta testing and is now ready for the main branch. For a summary of what we worked on, you can check out the previously published preview here: https://store.steampowered.com/news/app/1363080/view/677378351435875655 Steam Reviews: Your Feedback MattersI've been reading a lot of reviews lately about the lack of new content, I hope this is at least a sign of a positive direction and if your review was negative, maybe we managed to change your mind. If not, I can only say, work continues. The next update is planned for late September and will include a bunch of new Perks. You can report feedback and bug reports on the Manor Lords Steam forums or join us on Discord for bug reports and discussion about the latest pa..."
-    },
-    {
-      "appid": 1203620,
-      "game_name": "Enshrouded",
-      "title": "We're still cooking for 1.0. Here's some news you may have missed!",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951300343",
-      "date": 1787843267,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Hi Flameborn!Our October 15th release date is almost close enough to touch, being a little over 6 weeks away, so we've started sharing some of the changes we're making to Enshrouded. For now, we're focusing on existing stuff, and how we're improving features and systems that are already in the game. The improvements mentioned in the following video are just some of the bigger changes we're making, with a much longer list waiting for you in the Highlights video (and the release changelog) in October!The other big challenge we're tackling for 1.0 is making Enshrouded's performance better, after years of adding systems, details, making the thing more beautiful, etc. We really wanted to get the game to perform much better including on lower and middle-range systems, especially because someone ..."
-    },
-    {
-      "appid": 2239150,
-      "game_name": "Thronefall",
-      "title": "Incoming Update: A Royal Wardrobe",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951300201",
-      "date": 1787841003,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Greetings, Queens and Kings, The finest tailors and blacksmiths from the realm have gathered to provide you with new attire to don while you protect your little Kingdom against your furious foes! Coming soon, in this update you’ll be able to customize your Ruler’s appearance. Choose from a range of crowns, armour and capes, then truly make them your own with unique colours and patterns. Of course your mount gets their own gear too… We want to thank you for your dedication, enthusiasm, and protection of the realm. We’re excited to share more updates with you all soon. In the meantime, make sure you join our official Discord channel and follow our socials for the latest updates from the Kingdom! See you on the battlefield come nightfall. The Mythwright team. DiscordYouTubeTikTokInstagramBsky..."
     }
   ],
   "social_presence": {
-    "window_start": "2026-08-26T04:00:05.205140+08:00",
-    "window_end": "2026-09-02T04:00:05.205140+08:00",
+    "window_start": "2026-08-27T03:52:46.602472+08:00",
+    "window_end": "2026-09-03T03:52:46.602472+08:00",
     "members": [
       {
         "id": "self",
@@ -5943,64 +5943,15 @@
         "avatarfull": "",
         "profileurl": "",
         "is_self": true,
-        "last_seen_at": "2026-09-02T01:25:31.515983+08:00",
+        "last_seen_at": "2026-09-03T02:55:38.903434+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:31.515983+08:00",
+          "timestamp": "2026-09-03T02:55:38.903434+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-08-26T23:25:02.732234+08:00",
-            "end": "2026-08-26T23:30:02.920083+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:30:02.920083+08:00",
-            "end": "2026-08-26T23:35:02.786758+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:35:02.786758+08:00",
-            "end": "2026-08-26T23:40:02.557772+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:40:02.557772+08:00",
-            "end": "2026-08-26T23:45:02.306355+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:45:02.306355+08:00",
-            "end": "2026-08-26T23:50:02.275062+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:50:02.275062+08:00",
-            "end": "2026-08-26T23:55:02.446922+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:55:02.446922+08:00",
-            "end": "2026-08-27T00:00:02.560081+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
           {
             "start": "2026-08-27T22:34:57.715875+08:00",
             "end": "2026-08-27T22:49:57.715875+08:00",
@@ -6018,34 +5969,41 @@
         ]
       },
       {
-        "id": "76561198835815502",
-        "steamid": "76561198835815502",
-        "name": "狗剩",
-        "avatarfull": "https://avatars.steamstatic.com/66c72a56e810e1c21b29cd47ebc96366f621b880_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198835815502/",
+        "id": "76561198327290414",
+        "steamid": "76561198327290414",
+        "name": "󠀡󠀡󠀡󠀡",
+        "avatarfull": "https://avatars.steamstatic.com/7904882166fd95d68aa426a26ccac7753ea0f82e_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198327290414/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": true,
-          "game": "DAVE THE DIVER",
-          "gameid": "1868140",
+          "game": "Survival Log",
+          "gameid": "4164790",
           "playing": true
         },
         "segments": [
           {
-            "start": "2026-09-01T21:27:00.927645+08:00",
-            "end": "2026-09-01T21:42:00.927645+08:00",
+            "start": "2026-08-31T08:27:01.260643+08:00",
+            "end": "2026-08-31T08:42:01.260643+08:00",
             "status": "playing",
-            "game": "DAVE THE DIVER",
-            "gameid": "1868140"
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
           },
           {
-            "start": "2026-09-02T01:25:35.193468+08:00",
-            "end": "2026-09-02T01:40:35.193468+08:00",
+            "start": "2026-09-02T13:41:41.365377+08:00",
+            "end": "2026-09-02T13:56:41.365377+08:00",
             "status": "playing",
-            "game": "DAVE THE DIVER",
-            "gameid": "1868140"
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
+          },
+          {
+            "start": "2026-09-03T02:55:41.641262+08:00",
+            "end": "2026-09-03T03:10:41.641262+08:00",
+            "status": "playing",
+            "game": "Survival Log",
+            "gameid": "4164790"
           }
         ]
       },
@@ -6056,9 +6014,9 @@
         "avatarfull": "https://avatars.steamstatic.com/0594730392a4405ffc59375bb5bc3be38f3b7337_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1430963765/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -6089,154 +6047,21 @@
         ]
       },
       {
-        "id": "76561199206700253",
-        "steamid": "76561199206700253",
-        "name": "最佳逃离手",
-        "avatarfull": "https://avatars.steamstatic.com/ed77ac403e526c32ce2c3d4d7251340721253802_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561199206700253/",
-        "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
-        "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
-          "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": [
-          {
-            "start": "2026-08-26T22:21:10.357609+08:00",
-            "end": "2026-08-26T22:36:10.357609+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:05:13.253180+08:00",
-            "end": "2026-08-26T23:10:07.051488+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:10:07.051488+08:00",
-            "end": "2026-08-26T23:15:05.320656+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:15:05.320656+08:00",
-            "end": "2026-08-26T23:20:05.723687+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-29T23:16:53.834128+08:00",
-            "end": "2026-08-29T23:31:53.834128+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          }
-        ]
-      },
-      {
-        "id": "76561198193795227",
-        "steamid": "76561198193795227",
-        "name": "Francisx1999",
-        "avatarfull": "https://avatars.steamstatic.com/88c582db5d11cff9967db2673866294336eb5541_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198193795227/",
-        "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
-        "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
         "id": "76561198287273887",
         "steamid": "76561198287273887",
         "name": "ccba",
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198287273887/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
-          "online": false,
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
+          "online": true,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-08-26T21:55:05.403183+08:00",
-            "end": "2026-08-26T22:10:05.403183+08:00",
-            "status": "playing",
-            "game": "Broken Arrow",
-            "gameid": "1604270"
-          },
-          {
-            "start": "2026-08-26T22:21:10.357609+08:00",
-            "end": "2026-08-26T22:36:10.357609+08:00",
-            "status": "playing",
-            "game": "Broken Arrow",
-            "gameid": "1604270"
-          },
-          {
-            "start": "2026-08-26T23:05:13.253180+08:00",
-            "end": "2026-08-26T23:10:07.051488+08:00",
-            "status": "playing",
-            "game": "Broken Arrow",
-            "gameid": "1604270"
-          },
-          {
-            "start": "2026-08-26T23:10:07.051488+08:00",
-            "end": "2026-08-26T23:15:05.320656+08:00",
-            "status": "playing",
-            "game": "Broken Arrow",
-            "gameid": "1604270"
-          },
-          {
-            "start": "2026-08-26T23:15:05.320656+08:00",
-            "end": "2026-08-26T23:20:05.723687+08:00",
-            "status": "playing",
-            "game": "Broken Arrow",
-            "gameid": "1604270"
-          },
-          {
-            "start": "2026-08-26T23:20:05.723687+08:00",
-            "end": "2026-08-26T23:25:05.722444+08:00",
-            "status": "playing",
-            "game": "Broken Arrow",
-            "gameid": "1604270"
-          },
-          {
-            "start": "2026-08-26T23:25:05.722444+08:00",
-            "end": "2026-08-26T23:30:05.824317+08:00",
-            "status": "playing",
-            "game": "Broken Arrow",
-            "gameid": "1604270"
-          },
-          {
-            "start": "2026-08-26T23:30:05.824317+08:00",
-            "end": "2026-08-26T23:35:05.626501+08:00",
-            "status": "playing",
-            "game": "Broken Arrow",
-            "gameid": "1604270"
-          },
-          {
-            "start": "2026-08-26T23:35:05.626501+08:00",
-            "end": "2026-08-26T23:40:05.237409+08:00",
-            "status": "playing",
-            "game": "Broken Arrow",
-            "gameid": "1604270"
-          },
           {
             "start": "2026-08-27T22:35:01.333302+08:00",
             "end": "2026-08-27T22:50:01.333302+08:00",
@@ -6257,8 +6082,113 @@
             "status": "playing",
             "game": "Broken Arrow",
             "gameid": "1604270"
+          },
+          {
+            "start": "2026-09-02T23:15:31.117921+08:00",
+            "end": "2026-09-02T23:30:31.117921+08:00",
+            "status": "playing",
+            "game": "Broken Arrow",
+            "gameid": "1604270"
           }
         ]
+      },
+      {
+        "id": "76561198835815502",
+        "steamid": "76561198835815502",
+        "name": "狗剩",
+        "avatarfull": "https://avatars.steamstatic.com/66c72a56e810e1c21b29cd47ebc96366f621b880_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198835815502/",
+        "is_self": false,
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
+        "current": {
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": [
+          {
+            "start": "2026-09-01T21:27:00.927645+08:00",
+            "end": "2026-09-01T21:42:00.927645+08:00",
+            "status": "playing",
+            "game": "DAVE THE DIVER",
+            "gameid": "1868140"
+          },
+          {
+            "start": "2026-09-02T01:25:35.193468+08:00",
+            "end": "2026-09-02T01:40:35.193468+08:00",
+            "status": "playing",
+            "game": "DAVE THE DIVER",
+            "gameid": "1868140"
+          }
+        ]
+      },
+      {
+        "id": "76561198852270175",
+        "steamid": "76561198852270175",
+        "name": "Bohemia DZ",
+        "avatarfull": "https://avatars.steamstatic.com/40bf29a0a7d3e4a36e64456677985317e46ff3de_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
+        "is_self": false,
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
+        "current": {
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
+      },
+      {
+        "id": "76561199206700253",
+        "steamid": "76561199206700253",
+        "name": "最佳逃离手",
+        "avatarfull": "https://avatars.steamstatic.com/ed77ac403e526c32ce2c3d4d7251340721253802_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561199206700253/",
+        "is_self": false,
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
+        "current": {
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": [
+          {
+            "start": "2026-08-29T23:16:53.834128+08:00",
+            "end": "2026-08-29T23:31:53.834128+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-09-02T23:15:31.117921+08:00",
+            "end": "2026-09-02T23:30:31.117921+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          }
+        ]
+      },
+      {
+        "id": "76561198193795227",
+        "steamid": "76561198193795227",
+        "name": "Francisx1999",
+        "avatarfull": "https://avatars.steamstatic.com/88c582db5d11cff9967db2673866294336eb5541_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198193795227/",
+        "is_self": false,
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
+        "current": {
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
+          "online": false,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
       },
       {
         "id": "76561198288081892",
@@ -6267,9 +6197,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e07ee377518079efd3fdc3e92f3ae07da8705b0e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198288081892/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6284,316 +6214,15 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198295506047/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-08-26T18:30:04.907141+08:00",
-            "end": "2026-08-26T18:35:05.605275+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T18:35:05.605275+08:00",
-            "end": "2026-08-26T18:40:04.519464+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T18:40:04.519464+08:00",
-            "end": "2026-08-26T18:45:04.968310+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T18:45:04.968310+08:00",
-            "end": "2026-08-26T18:46:32.853039+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T18:46:32.853039+08:00",
-            "end": "2026-08-26T18:50:05.831684+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T18:55:04.893369+08:00",
-            "end": "2026-08-26T19:00:05.067314+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:00:05.067314+08:00",
-            "end": "2026-08-26T19:05:05.388106+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:05:05.388106+08:00",
-            "end": "2026-08-26T19:10:05.389456+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:10:05.389456+08:00",
-            "end": "2026-08-26T19:15:06.170519+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:15:06.170519+08:00",
-            "end": "2026-08-26T19:20:05.732609+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:20:05.732609+08:00",
-            "end": "2026-08-26T19:25:05.532869+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:25:05.532869+08:00",
-            "end": "2026-08-26T19:30:05.690683+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:30:05.690683+08:00",
-            "end": "2026-08-26T19:35:05.864650+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:35:05.864650+08:00",
-            "end": "2026-08-26T19:38:11.454720+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:38:11.454720+08:00",
-            "end": "2026-08-26T19:40:05.753522+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:40:05.753522+08:00",
-            "end": "2026-08-26T19:45:06.005165+08:00",
-            "status": "playing",
-            "game": "Street Fighter™ 6",
-            "gameid": "1364780"
-          },
-          {
-            "start": "2026-08-26T19:55:05.489639+08:00",
-            "end": "2026-08-26T20:00:05.086099+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:00:05.086099+08:00",
-            "end": "2026-08-26T20:05:05.040981+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:05:05.040981+08:00",
-            "end": "2026-08-26T20:10:05.384768+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:10:05.384768+08:00",
-            "end": "2026-08-26T20:15:04.993779+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:15:04.993779+08:00",
-            "end": "2026-08-26T20:20:04.802810+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:20:04.802810+08:00",
-            "end": "2026-08-26T20:25:04.906517+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:25:04.906517+08:00",
-            "end": "2026-08-26T20:30:05.538026+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:30:05.538026+08:00",
-            "end": "2026-08-26T20:35:05.522808+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:35:05.522808+08:00",
-            "end": "2026-08-26T20:40:05.076085+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:40:05.076085+08:00",
-            "end": "2026-08-26T20:45:06.212864+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:45:06.212864+08:00",
-            "end": "2026-08-26T20:50:05.049002+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:50:05.049002+08:00",
-            "end": "2026-08-26T20:55:05.618063+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:55:05.618063+08:00",
-            "end": "2026-08-26T21:00:05.264991+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:00:05.264991+08:00",
-            "end": "2026-08-26T21:05:05.191162+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:05:05.191162+08:00",
-            "end": "2026-08-26T21:10:04.999040+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:10:04.999040+08:00",
-            "end": "2026-08-26T21:10:16.974262+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:10:16.974262+08:00",
-            "end": "2026-08-26T21:15:05.602656+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:15:05.602656+08:00",
-            "end": "2026-08-26T21:20:05.349881+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:20:05.349881+08:00",
-            "end": "2026-08-26T21:25:05.804441+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:25:05.804441+08:00",
-            "end": "2026-08-26T21:30:07.251057+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:30:07.251057+08:00",
-            "end": "2026-08-26T21:35:05.765700+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:35:05.765700+08:00",
-            "end": "2026-08-26T21:40:05.325717+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:40:05.325717+08:00",
-            "end": "2026-08-26T21:45:06.617117+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:45:06.617117+08:00",
-            "end": "2026-08-26T21:50:05.836451+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:50:05.836451+08:00",
-            "end": "2026-08-26T21:55:05.403183+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T21:55:05.403183+08:00",
-            "end": "2026-08-26T22:10:05.403183+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
-          {
-            "start": "2026-08-26T22:21:10.357609+08:00",
-            "end": "2026-08-26T22:36:10.357609+08:00",
-            "status": "playing",
-            "game": "Sid Meier's Civilization VI",
-            "gameid": "289070"
-          },
           {
             "start": "2026-08-27T22:35:01.333302+08:00",
             "end": "2026-08-27T22:50:01.333302+08:00",
@@ -6624,9 +6253,9 @@
         "avatarfull": "https://avatars.steamstatic.com/6a0f301f7a7811d73c94d652237a732315cc0072_full.jpg",
         "profileurl": "https://steamcommunity.com/id/zhining2003/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6641,9 +6270,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9db4379c2531f5accd95570c7ac358f7169393dc_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311844129/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6658,9 +6287,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fa8a4de374f1e716b6a7607fd74319fd0cdf936e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311885845/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6668,302 +6297,11 @@
         },
         "segments": [
           {
-            "start": "2026-08-26T13:50:06.201769+08:00",
-            "end": "2026-08-26T13:55:05.057447+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T13:55:05.057447+08:00",
-            "end": "2026-08-26T14:00:05.403114+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:00:05.403114+08:00",
-            "end": "2026-08-26T14:02:29.713243+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:02:29.713243+08:00",
-            "end": "2026-08-26T14:05:05.744827+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:05:05.744827+08:00",
-            "end": "2026-08-26T14:10:05.159089+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:10:05.159089+08:00",
-            "end": "2026-08-26T14:15:05.254725+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:15:05.254725+08:00",
-            "end": "2026-08-26T14:20:05.550431+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:20:05.550431+08:00",
-            "end": "2026-08-26T14:25:05.373405+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:25:05.373405+08:00",
-            "end": "2026-08-26T14:30:05.460411+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:30:05.460411+08:00",
-            "end": "2026-08-26T14:35:04.545746+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:35:04.545746+08:00",
-            "end": "2026-08-26T14:40:06.342828+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          },
-          {
-            "start": "2026-08-26T14:40:06.342828+08:00",
-            "end": "2026-08-26T14:45:05.738375+08:00",
-            "status": "playing",
-            "game": "学生时代",
-            "gameid": "1991040"
-          }
-        ]
-      },
-      {
-        "id": "76561198327290414",
-        "steamid": "76561198327290414",
-        "name": "󠀡󠀡󠀡󠀡",
-        "avatarfull": "https://avatars.steamstatic.com/7904882166fd95d68aa426a26ccac7753ea0f82e_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198327290414/",
-        "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
-        "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": [
-          {
-            "start": "2026-08-26T07:33:08.374557+08:00",
-            "end": "2026-08-26T07:35:05.683720+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T07:35:05.683720+08:00",
-            "end": "2026-08-26T07:40:05.002649+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T07:40:05.002649+08:00",
-            "end": "2026-08-26T07:45:05.459578+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T07:45:05.459578+08:00",
-            "end": "2026-08-26T07:50:05.776155+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T07:50:05.776155+08:00",
-            "end": "2026-08-26T07:53:54.625066+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T07:53:54.625066+08:00",
-            "end": "2026-08-26T07:55:05.462312+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T07:55:05.462312+08:00",
-            "end": "2026-08-26T08:00:06.073973+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T08:00:06.073973+08:00",
-            "end": "2026-08-26T08:05:05.188912+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T08:05:05.188912+08:00",
-            "end": "2026-08-26T08:10:05.050173+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T08:10:05.050173+08:00",
-            "end": "2026-08-26T08:15:05.654976+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T08:15:05.654976+08:00",
-            "end": "2026-08-26T08:20:05.410831+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T08:20:05.410831+08:00",
-            "end": "2026-08-26T08:25:05.745745+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T08:25:05.745745+08:00",
-            "end": "2026-08-26T08:30:05.885033+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T08:30:05.885033+08:00",
-            "end": "2026-08-26T08:35:05.538275+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-08-26T08:35:05.538275+08:00",
-            "end": "2026-08-26T08:40:05.468445+08:00",
-            "status": "playing",
-            "game": "War Thunder",
-            "gameid": "236390"
-          },
-          {
-            "start": "2026-08-26T08:40:05.468445+08:00",
-            "end": "2026-08-26T08:45:05.722204+08:00",
-            "status": "playing",
-            "game": "War Thunder",
-            "gameid": "236390"
-          },
-          {
-            "start": "2026-08-26T08:45:05.722204+08:00",
-            "end": "2026-08-26T08:50:05.283729+08:00",
-            "status": "playing",
-            "game": "War Thunder",
-            "gameid": "236390"
-          },
-          {
-            "start": "2026-08-26T08:50:05.283729+08:00",
-            "end": "2026-08-26T08:55:05.493330+08:00",
-            "status": "playing",
-            "game": "War Thunder",
-            "gameid": "236390"
-          },
-          {
-            "start": "2026-08-26T08:55:05.493330+08:00",
-            "end": "2026-08-26T09:00:05.350006+08:00",
-            "status": "playing",
-            "game": "War Thunder",
-            "gameid": "236390"
-          },
-          {
-            "start": "2026-08-26T09:00:05.350006+08:00",
-            "end": "2026-08-26T09:05:05.626060+08:00",
-            "status": "playing",
-            "game": "War Thunder",
-            "gameid": "236390"
-          },
-          {
-            "start": "2026-08-26T09:50:05.182217+08:00",
-            "end": "2026-08-26T09:52:11.187724+08:00",
+            "start": "2026-09-02T23:15:31.117921+08:00",
+            "end": "2026-09-02T23:30:31.117921+08:00",
             "status": "playing",
             "game": "Counter-Strike 2",
             "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T09:52:11.187724+08:00",
-            "end": "2026-08-26T09:55:05.347694+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T09:55:05.347694+08:00",
-            "end": "2026-08-26T10:00:05.695735+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T10:00:05.695735+08:00",
-            "end": "2026-08-26T10:05:05.448543+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T10:05:05.448543+08:00",
-            "end": "2026-08-26T10:10:05.452171+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T10:10:05.452171+08:00",
-            "end": "2026-08-26T10:15:05.212060+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T10:15:05.212060+08:00",
-            "end": "2026-08-26T10:20:05.358332+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-31T08:27:01.260643+08:00",
-            "end": "2026-08-31T08:42:01.260643+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
           }
         ]
       },
@@ -6974,9 +6312,9 @@
         "avatarfull": "https://avatars.steamstatic.com/febdf0766bfe6668b76bcb4b3d35dd15ab3999e4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198365517134/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6991,9 +6329,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198374143385/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7008,9 +6346,9 @@
         "avatarfull": "https://avatars.steamstatic.com/3f5e9daea59216d7fe13df4e031d3537580e5e21_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198390929632/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7025,9 +6363,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e0fca1e09e6d16082f4c9ced7f25c2b54b52f097_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198399124819/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7042,9 +6380,9 @@
         "avatarfull": "https://avatars.steamstatic.com/2de28b0248926290e5c47193aaae12afdcfd64a1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198429741002/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7059,9 +6397,9 @@
         "avatarfull": "https://avatars.steamstatic.com/90281bcb08a9d28ef4c343c5f6b8b75f093e4a9b_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1335689384/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7074,25 +6412,15 @@
             "status": "playing",
             "game": "PUBG: BATTLEGROUNDS",
             "gameid": "578080"
+          },
+          {
+            "start": "2026-09-02T23:15:31.117921+08:00",
+            "end": "2026-09-02T23:30:31.117921+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
           }
         ]
-      },
-      {
-        "id": "76561198852270175",
-        "steamid": "76561198852270175",
-        "name": "Bohemia DZ",
-        "avatarfull": "https://avatars.steamstatic.com/40bf29a0a7d3e4a36e64456677985317e46ff3de_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
-        "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
-        "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
       },
       {
         "id": "76561198864549038",
@@ -7101,9 +6429,9 @@
         "avatarfull": "https://avatars.steamstatic.com/cbc910b68a51cfb6b2824ef6f0039b3415b3c7ac_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198864549038/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7118,9 +6446,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ba09f9d6f89a7bc6b40bc2301f6e81ccbd181d42_full.jpg",
         "profileurl": "https://steamcommunity.com/id/2916511428/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7135,9 +6463,9 @@
         "avatarfull": "https://avatars.steamstatic.com/f46a7ef0f2d3cb1c5c83d33525b17924963b28d8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199031439722/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7152,9 +6480,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8bbefbbf3fd390ef47bc80ca022b5a79b2430835_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199037013836/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7169,9 +6497,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e9d248c0e1db4982e5f91da0fd51cd7b653659fa_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199069419608/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7186,9 +6514,9 @@
         "avatarfull": "https://avatars.steamstatic.com/2ee39ef9a8b79dd93c23c2fc82c635a58c7aa94a_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199079104056/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7203,9 +6531,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9fa5f109a7ae3611b68f8ecfb382962a3f90c10e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199112121158/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7220,9 +6548,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179314468/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7237,9 +6565,9 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179790448/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7249,6 +6577,13 @@
           {
             "start": "2026-08-29T23:16:53.834128+08:00",
             "end": "2026-08-29T23:31:53.834128+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-09-02T23:15:31.117921+08:00",
+            "end": "2026-09-02T23:30:31.117921+08:00",
             "status": "playing",
             "game": "Apex Legends",
             "gameid": "1172470"
@@ -7262,78 +6597,15 @@
         "avatarfull": "https://avatars.steamstatic.com/0f330f09e2a9a91c1714349a3211b88226f869d5_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199180168949/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-08-26T17:55:05.992394+08:00",
-            "end": "2026-08-26T18:00:05.494423+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T18:00:05.494423+08:00",
-            "end": "2026-08-26T18:05:05.135199+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T18:05:05.135199+08:00",
-            "end": "2026-08-26T18:10:05.378409+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T18:10:05.378409+08:00",
-            "end": "2026-08-26T18:15:05.357219+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T18:15:05.357219+08:00",
-            "end": "2026-08-26T18:20:04.803895+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T18:20:04.803895+08:00",
-            "end": "2026-08-26T18:25:04.975216+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T18:25:04.975216+08:00",
-            "end": "2026-08-26T18:30:04.907141+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T18:30:04.907141+08:00",
-            "end": "2026-08-26T18:35:05.605275+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T18:35:05.605275+08:00",
-            "end": "2026-08-26T18:40:04.519464+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
           {
             "start": "2026-09-01T21:27:00.927645+08:00",
             "end": "2026-09-01T21:42:00.927645+08:00",
@@ -7350,37 +6622,15 @@
         "avatarfull": "https://avatars.steamstatic.com/3eef8f740583f434badd193aa6ee195e5077fd9b_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184636102/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": [
-          {
-            "start": "2026-08-26T23:05:13.253180+08:00",
-            "end": "2026-08-26T23:10:07.051488+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:10:07.051488+08:00",
-            "end": "2026-08-26T23:15:05.320656+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          },
-          {
-            "start": "2026-08-26T23:15:05.320656+08:00",
-            "end": "2026-08-26T23:20:05.723687+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          }
-        ]
+        "segments": []
       },
       {
         "id": "76561199184637765",
@@ -7389,9 +6639,9 @@
         "avatarfull": "https://avatars.steamstatic.com/a00d822111fbffeca6c71f08f656e7c679b09345_full.jpg",
         "profileurl": "https://steamcommunity.com/id/_ver0nika_/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7406,9 +6656,9 @@
         "avatarfull": "https://avatars.steamstatic.com/88d338a8cfdfe1d2d072413cc4112ee2d710bc18_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184830382/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7423,281 +6673,15 @@
         "avatarfull": "https://avatars.steamstatic.com/acacec54c2cb39d998efbca9d09aa8295300b935_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1918619816/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-08-26T18:30:04.907141+08:00",
-            "end": "2026-08-26T18:35:05.605275+08:00",
-            "status": "playing",
-            "game": "Wallpaper Engine",
-            "gameid": "431960"
-          },
-          {
-            "start": "2026-08-26T18:35:05.605275+08:00",
-            "end": "2026-08-26T18:40:04.519464+08:00",
-            "status": "playing",
-            "game": "Wallpaper Engine",
-            "gameid": "431960"
-          },
-          {
-            "start": "2026-08-26T18:40:04.519464+08:00",
-            "end": "2026-08-26T18:45:04.968310+08:00",
-            "status": "playing",
-            "game": "Wallpaper Engine",
-            "gameid": "431960"
-          },
-          {
-            "start": "2026-08-26T18:50:05.831684+08:00",
-            "end": "2026-08-26T18:55:04.893369+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T18:55:04.893369+08:00",
-            "end": "2026-08-26T19:00:05.067314+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T19:55:05.489639+08:00",
-            "end": "2026-08-26T20:00:05.086099+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:00:05.086099+08:00",
-            "end": "2026-08-26T20:05:05.040981+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:05:05.040981+08:00",
-            "end": "2026-08-26T20:10:05.384768+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:10:05.384768+08:00",
-            "end": "2026-08-26T20:15:04.993779+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:15:04.993779+08:00",
-            "end": "2026-08-26T20:20:04.802810+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:20:04.802810+08:00",
-            "end": "2026-08-26T20:25:04.906517+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:25:04.906517+08:00",
-            "end": "2026-08-26T20:30:05.538026+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:30:05.538026+08:00",
-            "end": "2026-08-26T20:35:05.522808+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:35:05.522808+08:00",
-            "end": "2026-08-26T20:40:05.076085+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:40:05.076085+08:00",
-            "end": "2026-08-26T20:45:06.212864+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:45:06.212864+08:00",
-            "end": "2026-08-26T20:50:05.049002+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:50:05.049002+08:00",
-            "end": "2026-08-26T20:55:05.618063+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T20:55:05.618063+08:00",
-            "end": "2026-08-26T21:00:05.264991+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:00:05.264991+08:00",
-            "end": "2026-08-26T21:05:05.191162+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:05:05.191162+08:00",
-            "end": "2026-08-26T21:10:04.999040+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:10:04.999040+08:00",
-            "end": "2026-08-26T21:10:16.974262+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:10:16.974262+08:00",
-            "end": "2026-08-26T21:15:05.602656+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:15:05.602656+08:00",
-            "end": "2026-08-26T21:20:05.349881+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:20:05.349881+08:00",
-            "end": "2026-08-26T21:25:05.804441+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:25:05.804441+08:00",
-            "end": "2026-08-26T21:30:07.251057+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:30:07.251057+08:00",
-            "end": "2026-08-26T21:35:05.765700+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:35:05.765700+08:00",
-            "end": "2026-08-26T21:40:05.325717+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:40:05.325717+08:00",
-            "end": "2026-08-26T21:45:06.617117+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:45:06.617117+08:00",
-            "end": "2026-08-26T21:50:05.836451+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:50:05.836451+08:00",
-            "end": "2026-08-26T21:55:05.403183+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T21:55:05.403183+08:00",
-            "end": "2026-08-26T22:10:05.403183+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T22:21:10.357609+08:00",
-            "end": "2026-08-26T22:36:10.357609+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T23:05:13.253180+08:00",
-            "end": "2026-08-26T23:10:07.051488+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T23:10:07.051488+08:00",
-            "end": "2026-08-26T23:15:05.320656+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T23:15:05.320656+08:00",
-            "end": "2026-08-26T23:20:05.723687+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T23:30:05.824317+08:00",
-            "end": "2026-08-26T23:35:05.626501+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-26T23:35:05.626501+08:00",
-            "end": "2026-08-26T23:40:05.237409+08:00",
-            "status": "playing",
-            "game": "How to Fish",
-            "gameid": "4001890"
-          },
-          {
-            "start": "2026-08-27T00:54:24.666878+08:00",
-            "end": "2026-08-27T01:09:24.666878+08:00",
-            "status": "playing",
-            "game": "Slay the Spire 2",
-            "gameid": "2868840"
-          },
           {
             "start": "2026-08-28T19:14:44.802056+08:00",
             "end": "2026-08-28T19:29:44.802056+08:00",
@@ -7711,6 +6695,13 @@
             "status": "playing",
             "game": "Slay the Spire 2",
             "gameid": "2868840"
+          },
+          {
+            "start": "2026-09-02T23:15:31.117921+08:00",
+            "end": "2026-09-02T23:30:31.117921+08:00",
+            "status": "playing",
+            "game": "Slay the Spire 2",
+            "gameid": "2868840"
           }
         ]
       },
@@ -7721,190 +6712,15 @@
         "avatarfull": "https://avatars.steamstatic.com/4f05eabf7f40a32a42ecb6cfa5cadb8b681c4071_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199192859169/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-08-26T20:00:05.086099+08:00",
-            "end": "2026-08-26T20:05:05.040981+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:05:05.040981+08:00",
-            "end": "2026-08-26T20:10:05.384768+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:10:05.384768+08:00",
-            "end": "2026-08-26T20:15:04.993779+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:15:04.993779+08:00",
-            "end": "2026-08-26T20:20:04.802810+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:20:04.802810+08:00",
-            "end": "2026-08-26T20:25:04.906517+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:25:04.906517+08:00",
-            "end": "2026-08-26T20:30:05.538026+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:30:05.538026+08:00",
-            "end": "2026-08-26T20:35:05.522808+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:35:05.522808+08:00",
-            "end": "2026-08-26T20:40:05.076085+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:40:05.076085+08:00",
-            "end": "2026-08-26T20:45:06.212864+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:45:06.212864+08:00",
-            "end": "2026-08-26T20:50:05.049002+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:50:05.049002+08:00",
-            "end": "2026-08-26T20:55:05.618063+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T20:55:05.618063+08:00",
-            "end": "2026-08-26T21:00:05.264991+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:00:05.264991+08:00",
-            "end": "2026-08-26T21:05:05.191162+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:05:05.191162+08:00",
-            "end": "2026-08-26T21:10:04.999040+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:10:04.999040+08:00",
-            "end": "2026-08-26T21:10:16.974262+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:10:16.974262+08:00",
-            "end": "2026-08-26T21:15:05.602656+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:15:05.602656+08:00",
-            "end": "2026-08-26T21:20:05.349881+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:20:05.349881+08:00",
-            "end": "2026-08-26T21:25:05.804441+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:25:05.804441+08:00",
-            "end": "2026-08-26T21:30:07.251057+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:30:07.251057+08:00",
-            "end": "2026-08-26T21:35:05.765700+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:35:05.765700+08:00",
-            "end": "2026-08-26T21:40:05.325717+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:40:05.325717+08:00",
-            "end": "2026-08-26T21:45:06.617117+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:45:06.617117+08:00",
-            "end": "2026-08-26T21:50:05.836451+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:50:05.836451+08:00",
-            "end": "2026-08-26T21:55:05.403183+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
-          {
-            "start": "2026-08-26T21:55:05.403183+08:00",
-            "end": "2026-08-26T22:10:05.403183+08:00",
-            "status": "playing",
-            "game": "Cult of the Lamb",
-            "gameid": "1313140"
-          },
           {
             "start": "2026-08-30T19:48:51.835782+08:00",
             "end": "2026-08-30T20:03:51.835782+08:00",
@@ -7928,23 +6744,15 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199194550728/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": [
-          {
-            "start": "2026-08-26T21:55:05.403183+08:00",
-            "end": "2026-08-26T22:10:05.403183+08:00",
-            "status": "playing",
-            "game": "TheoTown",
-            "gameid": "1084020"
-          }
-        ]
+        "segments": []
       },
       {
         "id": "76561199212735309",
@@ -7953,9 +6761,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fc4d10d73e25a6025e81e38d79a60a3d6059f8f7_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199212735309/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7978,226 +6786,15 @@
         "avatarfull": "https://avatars.steamstatic.com/ffc06397744cc94e908766d13978e684f122bcb8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199223192140/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": [
-          {
-            "start": "2026-08-26T10:40:04.987912+08:00",
-            "end": "2026-08-26T10:45:04.985887+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T10:45:04.985887+08:00",
-            "end": "2026-08-26T10:50:05.329039+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T10:50:05.329039+08:00",
-            "end": "2026-08-26T10:55:05.816189+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T10:55:05.816189+08:00",
-            "end": "2026-08-26T11:00:05.106819+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T11:00:05.106819+08:00",
-            "end": "2026-08-26T11:05:04.970133+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T11:05:04.970133+08:00",
-            "end": "2026-08-26T11:10:04.997765+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T11:10:04.997765+08:00",
-            "end": "2026-08-26T11:14:05.898347+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T11:25:05.751408+08:00",
-            "end": "2026-08-26T11:30:05.658222+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T11:30:05.658222+08:00",
-            "end": "2026-08-26T11:35:05.693723+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T11:35:05.693723+08:00",
-            "end": "2026-08-26T11:40:05.322202+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T11:40:05.322202+08:00",
-            "end": "2026-08-26T11:45:04.685128+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T11:45:04.685128+08:00",
-            "end": "2026-08-26T11:50:05.361099+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T11:50:05.361099+08:00",
-            "end": "2026-08-26T11:55:04.773936+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T12:30:05.412516+08:00",
-            "end": "2026-08-26T12:35:05.409560+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T12:35:05.409560+08:00",
-            "end": "2026-08-26T12:40:04.918644+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T12:40:04.918644+08:00",
-            "end": "2026-08-26T12:45:04.841932+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T12:45:04.841932+08:00",
-            "end": "2026-08-26T12:50:05.132804+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T12:50:05.132804+08:00",
-            "end": "2026-08-26T12:55:05.503348+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T12:55:05.503348+08:00",
-            "end": "2026-08-26T13:00:05.972545+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T13:00:05.972545+08:00",
-            "end": "2026-08-26T13:05:04.650058+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T13:05:04.650058+08:00",
-            "end": "2026-08-26T13:07:36.061742+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T21:10:04.999040+08:00",
-            "end": "2026-08-26T21:10:16.974262+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T21:10:16.974262+08:00",
-            "end": "2026-08-26T21:15:05.602656+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T21:15:05.602656+08:00",
-            "end": "2026-08-26T21:20:05.349881+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T21:20:05.349881+08:00",
-            "end": "2026-08-26T21:25:05.804441+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T21:25:05.804441+08:00",
-            "end": "2026-08-26T21:30:07.251057+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T21:30:07.251057+08:00",
-            "end": "2026-08-26T21:35:05.765700+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T21:35:05.765700+08:00",
-            "end": "2026-08-26T21:40:05.325717+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T21:40:05.325717+08:00",
-            "end": "2026-08-26T21:45:06.617117+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
-            "start": "2026-08-26T21:45:06.617117+08:00",
-            "end": "2026-08-26T21:50:05.836451+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          }
-        ]
+        "segments": []
       },
       {
         "id": "76561199244274077",
@@ -8206,9 +6803,9 @@
         "avatarfull": "https://avatars.steamstatic.com/75ac698f154245e3a21dae1e37bed893bcbebacf_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244274077/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -8223,9 +6820,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8b1bc1e6b6f881b7a319c5ec5d5f7b5f0954def4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244382639/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -8240,9 +6837,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ee0e6adb9c075b0b40cbedba2f8699d1c040ca6c_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199387781925/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -8265,9 +6862,9 @@
         "avatarfull": "https://avatars.steamstatic.com/289031dd2e5c0cf6a3b38afdc112d39e2ca77a3d_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199549273997/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -8282,9 +6879,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199181498419/",
         "is_self": false,
-        "last_seen_at": "2026-09-02T01:25:35.193468+08:00",
+        "last_seen_at": "2026-09-03T02:55:41.641262+08:00",
         "current": {
-          "timestamp": "2026-09-02T01:25:35.193468+08:00",
+          "timestamp": "2026-09-03T02:55:41.641262+08:00",
           "online": false,
           "game": "",
           "gameid": "",
