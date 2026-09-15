@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T05:00:19.170996+08:00",
+  "updated_at": "2026-09-16T04:18:46.180592+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
     "online": false,
@@ -5490,12 +5490,12 @@
       {
         "source": 730,
         "target": 1172470,
-        "strength": 118
+        "strength": 119
       },
       {
         "source": 431960,
         "target": 1172470,
-        "strength": 55
+        "strength": 56
       },
       {
         "source": 1172470,
@@ -5505,7 +5505,7 @@
       {
         "source": 730,
         "target": 431960,
-        "strength": 39
+        "strength": 40
       },
       {
         "source": 261550,
@@ -5757,6 +5757,83 @@
   ],
   "game_updates": [
     {
+      "appid": 1568590,
+      "game_name": "Goose Goose Duck",
+      "title": "v4.11 Controller + Quality of Life",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262705394",
+      "date": 1789497742,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hey Geese (and Ducks)!Goose Goose Duck v4.11 is here, bringing us closer to Steam Deck verification alongside additional quality of life improvements, bug fixes, optimizations, and preparations for what's coming next. 🎮 Controller Support UpdatesOur ongoing controller support overhaul is nearing completion!We've continued our full gameplay audit focused on improving accessibility and controller usability throughout the game, while also bringing Goose Goose Duck closer to Steam Deck verification.At this stage, we're primarily focused on the remaining adjustments and polish needed to meet the requirements for verification. Beyond Steam Deck, these improvements help create a more consistent and accessible controller experience throughout the game. 🎃 Preparing for Upcoming EventsThis update al..."
+    },
+    {
+      "appid": 292030,
+      "game_name": "The Witcher 3: Wild Hunt - Complete Edition",
+      "title": "CDPR wants to make The Witcher 3 Remastered feel like any other game released today: 'It's so easy to get used to these new improvements that it's hard to go back'",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1843481262704721",
+      "date": 1789481744,
+      "feedname": "PC Gamer",
+      "feedlabel": "PC Gamer",
+      "update_type": "Update",
+      "contents": "s if September wasn't busy enough, <a href=\"https://www.pcgamer.com/games/the-witcher/witcher-3-remastered-guide/\" target=\"_blank\">The Witcher 3 is calling us again</a>. CDPR's remaster will be launching as a free update on September 29. The studio's goal with this new version is to make it feel like a 2026 game, rather than a 2015 game that's been dusted off. And while this is the second time it's had a glow up, the team has been focusing on different things... <a href=\"https://www.pcgamer.com/games/the-witcher/cdpr-wants-to-make-the-witcher-3-remastered-feel-like-any-other-game-released-today-its-so-easy-to-get-used-to-these-new-improvements-that-its-hard-to-go-back/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
+    },
+    {
+      "appid": 440900,
+      "game_name": "Conan Exiles Enhanced",
+      "title": "Update 2.2.0: Engine Upgrade, Iris Networking & New Bazaar Bundles",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262704693",
+      "date": 1789481309,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Greetings Exiles,  Update 2.2.0 for Conan Exiles Enhanced has arrived.  This update upgrades the game to Unreal Engine 5.8.2 and replaces the previous UE4 networking model with Iris, a new networking replication system created by Epic.  Since the launch of the Enhanced update, we’ve been working to improve server performance. The move to Unreal Engine 5.8 allowed us to complete our migration to the Iris networking stack, which changes how replicated data is processed. Rather than repeatedly processing every replicated actor for each client, Iris sends updates only when needed, reducing the server cost of managing large numbers of players and placeables. Iris doesn’t remove all server performance limitations, given the freedom players have to build at scale. But in our testing, the move to ..."
+    },
+    {
+      "appid": 218620,
+      "game_name": "PAYDAY 2",
+      "title": "PAYDAY 2: Update 248 Changelog",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262704525",
+      "date": 1789477386,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Hello heisters!Got an new update for you all, to coincide with the new content drop. Incase you missed it, the new Under The Hammer Heist DLC has been released! Check it out:PAYDAY 2: Update 248 ChangelogDownload Size: 1.7 GBGeneralAdded the option to change the output audio deviceFixed a crash related to lootbags in VRInterfaceFixed mission ending dialog being delayed when the player has gone down multiple timesFixed a crash on the Epic Game Store when opening the \"Edit Game Settings\" menu in lobbiesHeistsArt Gallery/Framing Frame Day 1Adjusted culling portals to avoid vanishing props through a far away doorway when standing inside the storage roomWeaponsFixed flamethrower firing sounds not stopping when tap firingFixed enemy weapons being too loudFixed missing gadget mounts when equippin..."
+    },
+    {
+      "appid": 365670,
+      "game_name": "Blender",
+      "title": "Blender 5.2.2 LTS Maintenance Release !",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262704402",
+      "date": 1789474214,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Blender 5.2.2 LTS features important bug fixes. It is released on the v5.2 - Stable - LTS branch. You can switch to this by right-clicking on the Blender entry in your library, select Properties.... Open the Betas tab and select v5.2 - Stable - Stable. Patch Notes * Release: Update license.md. (bcfe4ce3b1600931fc854f70f5146a802bf8deaf) * Line Art does not recalculate lines on objects with animated visibility. (#162605) * VSE Compositor Set Alpha Node preview is incorrect. (#162664) * Fix: BKE_image_walk_all_users static cast bugs. (dbec94b04d8) * Grease Pencil: strokes randomly merging and dissapearing with draw on back toggled ON. (#162256) * Color Management: Improve display color interop IDs. (23e1dedd88e) * Fix: Images: ICC profile incorrectly embedded in grayscale output. (4e2bcf30920..."
+    },
+    {
+      "appid": 365670,
+      "game_name": "Blender",
+      "title": "Blender 4.5.14 LTS Maintenance Release !",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262704249",
+      "date": 1789470095,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Blender 4.5.14 LTS features important bug fixes. It is released on the v4.5 - Stable - LTS branch. You can switch to this by right-clicking on the Blender entry in your library, select Properties.... Open the Betas tab and select v4.5 - Stable - Stable. Patch Notes * Release: Update license.md. (7d7ce3eeab) * Fix: BKE_image_walk_all_users static cast bugs. (c8151f8bfe6) For a detailed list of bug fixes in each release, see 4.5 LTS releases on blender.org LTS Program Learn more about the LTS program on blender.org Stay up-to-date You can follow Blender on social media: Keep reporting any issues you find to make this LTS the most stable release ever ! Happy blending, The Blender team"
+    },
+    {
+      "appid": 1623730,
+      "game_name": "Palworld",
+      "title": "v1.0.5: Bug fixes",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262703464",
+      "date": 1789441427,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "▼Bug Fixes・Fixed an issue where terrain, building, and other textures could load at significantly reduced resolution for some players・Fixed an issue where some map icon filters could unintentionally be turned off after the player respawned"
+    },
+    {
       "appid": 1172470,
       "game_name": "Apex Legends",
       "title": "Apex Legends™: Marked Midseason Patch Notes",
@@ -5942,88 +6019,11 @@
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
       "contents": "Read the full announcement here!"
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "September Store Update 2026",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262688120",
-      "date": 1788933617,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Read the full announcement here!"
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "Map Service Report - Update 43.1",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262688118",
-      "date": 1788933615,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "{STEAM_CLAN_IMAGE}/27971017/c6c8adc4d5670ed2aab016cc334af385eb01a5f7.png Read the full announcement here!"
-    },
-    {
-      "appid": 1938090,
-      "game_name": "Call of Duty®",
-      "title": "Call of Duty: Black Ops 7 and Warzone - Season 06",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814456331",
-      "date": 1788887291,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Outlast the Unknown: Black Ops Season 06 is Here!The HauntingThe Haunting returns and there’s nowhere to hide! Season 06 is brimming with evil as fright-filled maps and modes arrive as part of a colossal update that will satisfy your sweet tooth to Halloween and beyond. Season 06 RoadmapAcross Call of Duty® Black Ops 7 and Call of Duty®: Warzone™, Season 06 amps up the scares with Haunted Hollow, where cosmic horrors and a Ghost Train infiltrate the small-town Resurgence map. In Multiplayer, rack up the kills in the Quantum and Bloodstead maps, Hordepoint mode, and face off on Zombies locations in MP during T.E.D.D. Trials. Conjure a terrifying foe in Endgame’s Forbidden Summoning Event as night descends upon Avalon and face off against pumpkin-headed hordes in Zombies across a slew of gri..."
-    },
-    {
-      "appid": 1527950,
-      "game_name": "Wartales",
-      "title": "Hotfix - v1.0.48149",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814454912",
-      "date": 1788852820,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Bug FixFixed an issue where Korean and Chinese characters appeared as “?”. They now display correctly"
-    },
-    {
-      "appid": 464920,
-      "game_name": "Surviving Mars",
-      "title": "Surviving Mars: Relaunched - What's New Since Release",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814453603",
-      "date": 1788800620,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hello Commanders,When Surviving Mars: Relaunched went live last November, we mentioned that it was the launch pad for a new era of Surviving Mars, with more to explore down the line. Tomorrow, we drop a free update that rebuilds two of the systems sitting closest to the heart of the game, alongside the first part of our Prime Mission - the content pack Feeding the Future. Before we get to what's coming, it's worth taking a note of what's already here. If you last visited Mars around launch, the colony you'd land in today is a noticeably different place, and a lot of that is down to the reports, saves, and forum threads you've sent our way. Below are some highlights of what’s happened in the last few months, and if you want to get into the nitty-gritty details, check out the full patch note..."
-    },
-    {
-      "appid": 538030,
-      "game_name": "Xenonauts 2",
-      "title": "Full Release 7.27.7 STABLE Released!",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814453344",
-      "date": 1788793510,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Content Update",
-      "contents": "Another hotfix has been released onto the main Xenonauts 2 branches for everyone to play. We're hoping this is our final hotfix for this series of builds, as this fixes the two remaining reproducible crashes in the game and has made several improvements to the Mod Manager panel.We are working on a larger update in the background, and we should have some more to say about that soon!Game Updates:Updated the visuals / layout of the Mod Manager panel to make it easier to use.The Mod Manager panel now shows more extensive details when there is an issue with a mod, including:Each enabled mod has a red or green circle next to it. Green indicates no problems, whereas red indicates an issue with dependencies, conflicts or versions.Viewing the mod shows the required game version, and any other mods ..."
-    },
-    {
-      "appid": 1527950,
-      "game_name": "Wartales",
-      "title": "Community Update 7 Out Now!",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814453157",
-      "date": 1788789456,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Major Update",
-      "contents": "The Beta has officially ended. Thank you for your invaluable support, Mercenaries!Community Update #7 is now live!Features & Changes\"The Lair\"A whole new Point of Interest for criminal activities. In \"The lair\", you'll have the ability to:Sell stolen items Purchase weapons and armourReduce your troop’s Suspicion.Accept contracts suited to criminal bands.RestCheck out our post for more informationNew Prisoner Class and Skill TreePrisoners are receiving a major update with several new and reworked systems:Prisoners now have needs of their own.Information about their needs is now clearer, helping you understand how to earn their trust.The detention system has been reworked to make the consequences of your decisions easier to understand.Prisoner escapes can now have several outcomes:They may a..."
     }
   ],
   "social_presence": {
-    "window_start": "2026-09-08T05:00:43.158370+08:00",
-    "window_end": "2026-09-15T05:00:43.158370+08:00",
+    "window_start": "2026-09-09T04:19:14.659576+08:00",
+    "window_end": "2026-09-16T04:19:14.659576+08:00",
     "members": [
       {
         "id": "self",
@@ -6032,9 +6032,9 @@
         "avatarfull": "",
         "profileurl": "",
         "is_self": true,
-        "last_seen_at": "2026-09-15T04:28:27.368810+08:00",
+        "last_seen_at": "2026-09-16T01:45:01.872676+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:27.368810+08:00",
+          "timestamp": "2026-09-16T01:45:01.872676+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6072,16 +6072,109 @@
         ]
       },
       {
+        "id": "76561198193795227",
+        "steamid": "76561198193795227",
+        "name": "Francisx1999",
+        "avatarfull": "https://avatars.steamstatic.com/88c582db5d11cff9967db2673866294336eb5541_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198193795227/",
+        "is_self": false,
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
+        "current": {
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": [
+          {
+            "start": "2026-09-15T21:27:03.991778+08:00",
+            "end": "2026-09-15T21:42:03.991778+08:00",
+            "status": "playing",
+            "game": "Counter-Strike 2",
+            "gameid": "730"
+          }
+        ]
+      },
+      {
+        "id": "76561198311885845",
+        "steamid": "76561198311885845",
+        "name": "Eureka",
+        "avatarfull": "https://avatars.steamstatic.com/fa8a4de374f1e716b6a7607fd74319fd0cdf936e_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198311885845/",
+        "is_self": false,
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
+        "current": {
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
+      },
+      {
+        "id": "76561198835815502",
+        "steamid": "76561198835815502",
+        "name": "狗剩",
+        "avatarfull": "https://avatars.steamstatic.com/66c72a56e810e1c21b29cd47ebc96366f621b880_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198835815502/",
+        "is_self": false,
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
+        "current": {
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
+      },
+      {
+        "id": "76561198852270175",
+        "steamid": "76561198852270175",
+        "name": "Bohemia DZ",
+        "avatarfull": "https://avatars.steamstatic.com/40bf29a0a7d3e4a36e64456677985317e46ff3de_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
+        "is_self": false,
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
+        "current": {
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
+      },
+      {
+        "id": "76561199206700253",
+        "steamid": "76561199206700253",
+        "name": "最佳逃离手",
+        "avatarfull": "https://avatars.steamstatic.com/ed77ac403e526c32ce2c3d4d7251340721253802_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561199206700253/",
+        "is_self": false,
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
+        "current": {
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
+      },
+      {
         "id": "76561198261996858",
         "steamid": "76561198261996858",
         "name": "jimi",
         "avatarfull": "https://avatars.steamstatic.com/0594730392a4405ffc59375bb5bc3be38f3b7337_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1430963765/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
-          "online": true,
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
+          "online": false,
           "game": "",
           "gameid": "",
           "playing": false
@@ -6118,83 +6211,15 @@
         ]
       },
       {
-        "id": "76561198835815502",
-        "steamid": "76561198835815502",
-        "name": "狗剩",
-        "avatarfull": "https://avatars.steamstatic.com/66c72a56e810e1c21b29cd47ebc96366f621b880_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198835815502/",
-        "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
-        "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
-          "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
-        "id": "76561198852270175",
-        "steamid": "76561198852270175",
-        "name": "Bohemia DZ",
-        "avatarfull": "https://avatars.steamstatic.com/40bf29a0a7d3e4a36e64456677985317e46ff3de_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
-        "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
-        "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
-          "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
-        "id": "76561199206700253",
-        "steamid": "76561199206700253",
-        "name": "最佳逃离手",
-        "avatarfull": "https://avatars.steamstatic.com/ed77ac403e526c32ce2c3d4d7251340721253802_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561199206700253/",
-        "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
-        "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
-          "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
-        "id": "76561198193795227",
-        "steamid": "76561198193795227",
-        "name": "Francisx1999",
-        "avatarfull": "https://avatars.steamstatic.com/88c582db5d11cff9967db2673866294336eb5541_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198193795227/",
-        "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
-        "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
         "id": "76561198287273887",
         "steamid": "76561198287273887",
         "name": "ccba",
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198287273887/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6209,9 +6234,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e07ee377518079efd3fdc3e92f3ae07da8705b0e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198288081892/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6226,9 +6251,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198295506047/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6258,9 +6283,9 @@
         "avatarfull": "https://avatars.steamstatic.com/6a0f301f7a7811d73c94d652237a732315cc0072_full.jpg",
         "profileurl": "https://steamcommunity.com/id/zhining2003/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6275,26 +6300,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9db4379c2531f5accd95570c7ac358f7169393dc_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311844129/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
-        "id": "76561198311885845",
-        "steamid": "76561198311885845",
-        "name": "Eureka",
-        "avatarfull": "https://avatars.steamstatic.com/fa8a4de374f1e716b6a7607fd74319fd0cdf936e_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198311885845/",
-        "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
-        "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6309,9 +6317,9 @@
         "avatarfull": "https://avatars.steamstatic.com/7904882166fd95d68aa426a26ccac7753ea0f82e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198327290414/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6334,9 +6342,9 @@
         "avatarfull": "https://avatars.steamstatic.com/febdf0766bfe6668b76bcb4b3d35dd15ab3999e4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198365517134/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6373,9 +6381,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198374143385/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6390,9 +6398,9 @@
         "avatarfull": "https://avatars.steamstatic.com/76c2c57990ae1af551df7337b66debf3946cccbc_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198390929632/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6407,9 +6415,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e0fca1e09e6d16082f4c9ced7f25c2b54b52f097_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198399124819/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6424,9 +6432,9 @@
         "avatarfull": "https://avatars.steamstatic.com/2de28b0248926290e5c47193aaae12afdcfd64a1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198429741002/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6441,9 +6449,9 @@
         "avatarfull": "https://avatars.steamstatic.com/90281bcb08a9d28ef4c343c5f6b8b75f093e4a9b_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1335689384/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6487,9 +6495,9 @@
         "avatarfull": "https://avatars.steamstatic.com/cbc910b68a51cfb6b2824ef6f0039b3415b3c7ac_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198864549038/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6504,9 +6512,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ba09f9d6f89a7bc6b40bc2301f6e81ccbd181d42_full.jpg",
         "profileurl": "https://steamcommunity.com/id/2916511428/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6521,9 +6529,9 @@
         "avatarfull": "https://avatars.steamstatic.com/f46a7ef0f2d3cb1c5c83d33525b17924963b28d8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199031439722/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6538,9 +6546,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8bbefbbf3fd390ef47bc80ca022b5a79b2430835_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199037013836/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6555,9 +6563,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e9d248c0e1db4982e5f91da0fd51cd7b653659fa_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199069419608/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6572,9 +6580,9 @@
         "avatarfull": "https://avatars.steamstatic.com/2ee39ef9a8b79dd93c23c2fc82c635a58c7aa94a_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199079104056/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6597,9 +6605,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9fa5f109a7ae3611b68f8ecfb382962a3f90c10e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199112121158/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6614,9 +6622,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179314468/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6631,9 +6639,9 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179790448/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6670,9 +6678,9 @@
         "avatarfull": "https://avatars.steamstatic.com/0f330f09e2a9a91c1714349a3211b88226f869d5_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199180168949/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6687,9 +6695,9 @@
         "avatarfull": "https://avatars.steamstatic.com/3eef8f740583f434badd193aa6ee195e5077fd9b_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184636102/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6704,9 +6712,9 @@
         "avatarfull": "https://avatars.steamstatic.com/a00d822111fbffeca6c71f08f656e7c679b09345_full.jpg",
         "profileurl": "https://steamcommunity.com/id/_ver0nika_/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6726,6 +6734,13 @@
             "status": "playing",
             "game": "Kingdom Come: Deliverance",
             "gameid": "379430"
+          },
+          {
+            "start": "2026-09-15T15:37:37.341933+08:00",
+            "end": "2026-09-15T15:52:37.341933+08:00",
+            "status": "playing",
+            "game": "Counter-Strike 2",
+            "gameid": "730"
           }
         ]
       },
@@ -6736,9 +6751,9 @@
         "avatarfull": "https://avatars.steamstatic.com/88d338a8cfdfe1d2d072413cc4112ee2d710bc18_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184830382/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6753,29 +6768,15 @@
         "avatarfull": "https://avatars.steamstatic.com/acacec54c2cb39d998efbca9d09aa8295300b935_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1918619816/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-09-09T00:33:11.283853+08:00",
-            "end": "2026-09-09T00:48:11.283853+08:00",
-            "status": "playing",
-            "game": "Wallpaper Engine",
-            "gameid": "431960"
-          },
-          {
-            "start": "2026-09-09T03:33:05.824036+08:00",
-            "end": "2026-09-09T03:48:05.824036+08:00",
-            "status": "playing",
-            "game": "Wallpaper Engine",
-            "gameid": "431960"
-          },
           {
             "start": "2026-09-09T05:59:49.319910+08:00",
             "end": "2026-09-09T06:14:49.319910+08:00",
@@ -6813,9 +6814,9 @@
         "avatarfull": "https://avatars.steamstatic.com/4f05eabf7f40a32a42ecb6cfa5cadb8b681c4071_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199192859169/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6838,9 +6839,9 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199194550728/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6855,9 +6856,9 @@
         "avatarfull": "https://avatars.steamstatic.com/bb00fc2cf902355cfe824b030e4ebe9b3d0e3b14_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199212735309/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6901,9 +6902,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ffc06397744cc94e908766d13978e684f122bcb8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199223192140/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6930,6 +6931,13 @@
             "status": "playing",
             "game": "NBA 2K26",
             "gameid": "3472040"
+          },
+          {
+            "start": "2026-09-15T21:27:03.991778+08:00",
+            "end": "2026-09-15T21:42:03.991778+08:00",
+            "status": "playing",
+            "game": "Counter-Strike 2",
+            "gameid": "730"
           }
         ]
       },
@@ -6940,9 +6948,9 @@
         "avatarfull": "https://avatars.steamstatic.com/75ac698f154245e3a21dae1e37bed893bcbebacf_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244274077/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6957,9 +6965,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8b1bc1e6b6f881b7a319c5ec5d5f7b5f0954def4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244382639/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6974,9 +6982,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ee0e6adb9c075b0b40cbedba2f8699d1c040ca6c_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199387781925/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6991,9 +6999,9 @@
         "avatarfull": "https://avatars.steamstatic.com/289031dd2e5c0cf6a3b38afdc112d39e2ca77a3d_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199549273997/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7008,9 +7016,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199181498419/",
         "is_self": false,
-        "last_seen_at": "2026-09-15T04:28:29.939143+08:00",
+        "last_seen_at": "2026-09-16T01:45:05.821307+08:00",
         "current": {
-          "timestamp": "2026-09-15T04:28:29.939143+08:00",
+          "timestamp": "2026-09-16T01:45:05.821307+08:00",
           "online": false,
           "game": "",
           "gameid": "",
