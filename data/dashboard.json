@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T04:46:14.628605+08:00",
+  "updated_at": "2026-10-16T04:24:31.260201+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
     "online": false,
@@ -5666,17 +5666,17 @@
       {
         "source": 730,
         "target": 1172470,
-        "strength": 148
+        "strength": 149
       },
       {
         "source": 431960,
         "target": 1172470,
-        "strength": 83
+        "strength": 84
       },
       {
         "source": 730,
         "target": 431960,
-        "strength": 67
+        "strength": 68
       },
       {
         "source": 1172470,
@@ -5931,6 +5931,160 @@
   ],
   "game_updates": [
     {
+      "appid": 1203620,
+      "game_name": "Enshrouded",
+      "title": "Changelog for Hotfix 1.0.0.1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706679038",
+      "date": 1792091916,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Changelog for Hotfix 1.0.0.1Version number is: 1267041ChangelogFixed several issues that could cause random crashes.Fixed a dynamic lighting issue that caused indoor brightness problems. The “Fire Wisp” scroll now has a fixed level 27. Previously, the damage scaled with the player level, which made the scroll ridiculously strong in the end-game. Updated the artbook and world map available in the Deluxe Upgrade Pack.Fixed crashes caused by specific peripherals attached to the PC.Note:We are observing an issue with sound, specifically reverb in large halls or rooms and with the dynamically lowered gameplay sounds while lore voice-over is playing. The issue only appears when the master volume slider is lower than 100%. Until we have a fix, it is recommended to keep the master volume slider at..."
+    },
+    {
+      "appid": 1203620,
+      "game_name": "Enshrouded",
+      "title": "Enshrouded 1.0 is LIVE! Check out our Highlights video!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706678083",
+      "date": 1792076782,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Greetings Flameborn! So obviously we released the changelog yesterday, but we've also made the traditional Highlights video for those of you who only believe it when you see it!Please take a look: Enshrouded is live! The entire team is refreshing all social platforms and checking our Discord and reading comments everywhere with a bated breath... This is a huge milestone for Enshrouded and for us, so let us know what you think and if you haven't, leave the game a review! It helps potential new players know whether Enshrouded is for them!Have fun in Embervale, Flameborn, and we'll see you very soon!The team at Keen Games."
+    },
+    {
+      "appid": 255710,
+      "game_name": "Cities: Skylines",
+      "title": "Estates & Escapes Delay Announcement",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706678052",
+      "date": 1792076447,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Hello Mayors!We have decided that we need to delay the release of Estates & Escapes for Cities: Skylines. We encountered some technical issues with the upcoming base game patch that we will address before the release, and as such, we will unfortunately not be able to release on the 28th as planned. We are currently investigating a new timeline and looking for a new Release Date for 'Holiday Getaways', 'Mansions & Manors', and 'Blueprint Beats Radio', and we will share any updates as soon as we can!This only impacts the release of the new Content Creator Packs and Radio Station; the release of Cities: Skylines – Expanded Edition remains the same: the 28th of October.- Paradox Interactive"
+    },
+    {
+      "appid": 1962700,
+      "game_name": "Subnautica 2",
+      "title": "Voyage to Early Access 2 Begins",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706678043",
+      "date": 1792076435,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Content Update",
+      "contents": "The voyage to Early Access 2 begins! Creative Director Anthony Gallegos is back to introduce our new Dev Vlog series, outlining who you’ll be expecting to hear from across our future episodes, sharing some sneak peeks, and setting the stage for our next big content update. You can continue to speculate and discuss everything about Subnautica 2 in our official Discord server. Join the community and share your thoughts with your fellow Subnauts! You can buy Subnautica 2 on Steam, Xbox, and Epic Games now. And don’t forget to share ideas and upvote things you’d like to see in Subnautica 2 on Nolt.io. Keep Diving! "
+    },
+    {
+      "appid": 377160,
+      "game_name": "Fallout 4",
+      "title": "Fallout 4 Creation Kit Update - October 15",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706677951",
+      "date": 1792074913,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Bug Fixes PC to PlayStation .nif conversions now process correctly for filtered PreCombines (those generated from within the Creation Kit’s GUI). The player should no longer hit an infinite loading screen pending the Creator re-combines geometry and updates their Creation with new archives. Resolved an intermittent issue where the Creation Kit could not find files to archive/the file explorer would appear empty. Resolved an issue where Bink files (.bik and .bk2) were not being added to Extra Files even when detected correctly.  Resolved an issue where .ssf files were not on the allowed files list when packing archives.  "
+    },
+    {
+      "appid": 552990,
+      "game_name": "World of Warships",
+      "title": "Work in Progress: Update 15.10",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706677796",
+      "date": 1792072126,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "{STEAM_CLAN_IMAGE}/31013613/ead6990ac32e7576b6fd3d4330265e6ee3772bfa.jpg This is a short overview of the planned features for Update 15.10. For more information, visit the relevant link: Learn More IMPORTANT! Because the update is still being tested, the information in this article is tentative and reflects the state of game development at the time of its publication. Some changes and new features may be removed entirely or implemented differently by the time the update goes live. Captains! Update 15.10 is chambered and primed to fire in just a few weeks! Here's a quick look at some of the upcoming features: Horror From the Abyss: A new Operation-based PvE event inspired by Lovecraftian horrors pits a team of players against a shadowy cult in the Bermuda Triangle. Your ship, the Expedition..."
+    },
+    {
+      "appid": 359550,
+      "game_name": "Tom Clancy's Rainbow Six Siege",
+      "title": "DESIGNER'S NOTES: Y11S3 MID-SEASON UPDATE",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706677729",
+      "date": 1792071003,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "DESIGNER'S NOTES: Y11S3 MID-SEASON UPDATEIn this latest edition of Designer’s Notes, we'll take a deeper dive into the balancing changes introduced in the Y11S3 Mid-Season Update.WIN DELTA VS. PRESENCE AND TOP OPERATOR BANS\\ WIN DELTA VS. PRESENCE\\ WIN DELTA VS. PRESENCE\\ TOP OPERATOR BANS\\ TOP OPERATOR BANSOPERATOR BALANCINGRELEASE FOLLOW-UPNOOR\"Noor's ability felt a bit short on multiple fronts, so it is receiving some follow-up changes in order to double down on his shield countering capabilities as well as his survivability. The Horus Lance Launcher will receive multiple improvements to make his ability more reactive, more punishing against ballistic shield operators when they make positioning mistakes, but also more rewarding for the risk Noor takes while equipping the launcher.\"HORUS..."
+    },
+    {
+      "appid": 359550,
+      "game_name": "Tom Clancy's Rainbow Six Siege",
+      "title": "PATCH NOTES: Y11S3 MID-SEASON UPDATE",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706677678",
+      "date": 1792070101,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "See the upcoming changes to Rainbow Six Siege with the release of Y11S3.2.Y11S3.2 BALANCING PATCHRELEASE FOLLOW-UPNOORHORUS LANCE LAUNCHERDrilling time reduced on Ballistic Shields, soft surfaces, and solid surfaces (non-destructible surfaces) to 1.5s (from 2s).Guard break strength on projectile impact against Ballistic Shields increased to 100% (from 30%).Equipping uses quickdraw animations, equip animation timings reduced to 0.4s (from 0.9s).Horus Lance impact damage against an operator is increased to 80 (from 50).Hitbox updated for better accuracy and consistency.Can now damage Ballistic Shield Operators while in the removal animation.MAJOR CHANGESTACHANKASHUMIKHA LAUNCHERAdded firing mode to trigger Incendiary Grenades on impact.SOLID SNAKESOLITON RADAR MK IIIPrecision mode charges: R..."
+    },
+    {
+      "appid": 544810,
+      "game_name": "KARDS - The WWII Card Game",
+      "title": "KARDS Update - October, 2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706677557",
+      "date": 1792067950,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "{STEAM_CLAN_IMAGE}/34861374/0fdc78239199dc1c8f5009c63d8a8c58663f095c.png Hello Commanders! Following our earlier briefing on upcoming balance adjustments, the October Update is now live. If you missed the original announcement, you can review the full details here: BALANCE CHANGE ANNOUNCEMENT This update deploys the previously announced card balance changes along with some bug fixes and behind-the-scenes improvements. Card Balance Changes Nerfs 2nd WEST AFRICA {STEAM_CLAN_IMAGE}/34861374/4ae71f52c2e37091cdbb615ac64d0ab7ce5904eb.png 3. PANZERGRENADIER {STEAM_CLAN_IMAGE}/34861374/809ea068f057ed90347e99c6dc9d9b8b8cec384d.png Old: Blitz. Gets +1+1 after you operate a German unit. New: Blitz. Gets +1+1 after you operate another German unit. 238th REGIMENT {STEAM_CLAN_IMAGE}/34861374/9b36621f106..."
+    },
+    {
+      "appid": 1366540,
+      "game_name": "Dyson Sphere Program",
+      "title": "Patch Notes V0.10.35.29151",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706676910",
+      "date": 1792055427,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Dear Engineers ,We have fixed some known issues based on feedback and made adjustments to certain aspects of the game. \\Bugfix:- Fixed a bug where Spray Coaters failed to properly connect to Conveyor Belts when built at certain locations.- Fixed an bug in Sandbox Mode where adjacent cargo-generating and cargo-consuming Traffic Monitors could trigger an error. \\Bugfix:- Fixed a bug where certain icon mappings failed to apply in Dyson Sphere panel(Y).- Fixed a bug where in God Mode the camera would still follow the mecha (Icarus) after entering build mode. \\Change:- Optimized the terrain restoration algorithm so the restored area more closely matches the cursor size. Bugfix:- Fixed a bug where holding foundations or destroying any Planetary Base on a planet with a base near its poles would c..."
+    },
+    {
+      "appid": 1134700,
+      "game_name": "Wild Terra 2: New Lands",
+      "title": "Update 3.0.442. Halloween Event in Wild Terra 2",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706676890",
+      "date": 1792055002,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Instead of preparing for the holiday, junk dealer Ragnara has to look for adventurers to deal with yet another disaster. Take part in the Halloween celebration. Hunt witches, cook pumpkin dishes with strong bonuses, gather levitation powder from Jack monsters, and create your own flying broomstick or a unique witch amulet!The event has received changes and new rewards!Take a look at the holiday section in the game shop with themed goods!Until November 5, Ominous sacks with updated rewards are also available in the shop! Nightmare ghost, Werewolf Mask, a shield skin, avatars, borders, and other useful rewards!Get Wild Terra 2 and packs:https://wildterra2.com/ Thank you very much for your activity, feedback, and support. Thanks to you, the game gets better with every update!Update 3.0.442 Pa..."
+    },
+    {
+      "appid": 1422450,
+      "game_name": "Deadlock",
+      "title": "Minor Update - 10-14-2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706676198",
+      "date": 1792033918,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "- Radiant Regeneration: Spirit scaling reduced from 0.04 to 0.035 - Baba: Spirit Resistance scaling reduced from 0.12 to 0.1 - Baba: Now has -7% Base Bullet Resistance - Baba: Threadsap - Spirit reduction on enemies now ends when Baba dies - Baba: Threadsap - Cooldown increased from 26s to 28s - Baba: Granny Long Legs - Cooldown increased from 30s to 32s - Baba: Granny Long Legs - Repeat light melees while airborne now have diminishing forward momentum - Baba: Granny Long Legs - Light melee upward launch reduced (looking up no longer lifts her as high) - Baba: Granny Long Legs - Heavy melee ground pound no longer gains horizontal speed when landing on slopes - Baba: Baba's Brew - Barrier scaling reduced from 1.2 to 0.7 - Baba: Baba's Brew - Barrier reduced from 100 to 90 - Baba: Baba's Bre..."
+    },
+    {
+      "appid": 2067920,
+      "game_name": "Rogue: Genesia",
+      "title": "Future of Rogue: Genesia",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706676006",
+      "date": 1792026140,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Let's go directly with the sensible subjectYes I'll proceed with making next patch with all the optimisation Majority of the community said Yes.It will be update 2.0, and will include among other thing, the major optimisation i've shared, Online Co-op and a new modings API and ToolsCurrent version will always be available, free from AI for people that prefer to play a version without AICo-op is an addition optional way to play the game, that doesn't affect player that would prefer to play in single-player I am saying this cause I've seen some people worried that single-player balance may be upset by co-op, but they would be separately balanced.For now, the update is not yet ready for public testing on a separate branch, but it should come in the upcoming week when I finished stabilizing th..."
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "Counter-Strike 2 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846651706675829",
+      "date": 1792018968,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "\\Demo/Replay viewer improvements:Added a progress bar for demo/replay downloadsCamera controls now use click-and-drag schemeFree and chase camera are usable during a paused demoFixed some minor issues when seeking to a different position in the demo file\\Round backup files now require the game server startup flag \"-allow_round_backup_files\"Updated AUG reload animations for standing and crouch reloads to better match new reload durationAllowed radio commands now have an explicit listAdded toolsskybox_occluder tool material for CS2 Workshop ToolsStability improvements for Vulkan renderer"
+    },
+    {
       "appid": 1481400,
       "game_name": "Dagon",
       "title": "5 years and 2 million downloads later: Final Update and a free DLC!",
@@ -6039,165 +6193,11 @@
       "feedlabel": "Community Announcements",
       "update_type": "Hotfix",
       "contents": "Greetings, Adventurers. We’d like to inform you of the latest changes applied in this update.IRONMACEBugfixes:Fixed an issue in Expedition Mode where no Escape Portal appeared just before the final circle in Solo and Duo.Fixed an issue in Firedeep where the boss room could be disconnected from its entrance, leaving the Magma Wyvern missing and players falling into empty space.Fixed an issue where climbing to the top of the rope escape in Ice Abyss Staircase Hill and Deep Flow did not escape the player.Fixed an issue where Training reward token candidate tooltips showed different stats each time they were opened.Fixed an issue where returning to the lobby from the death cam could send players to the character select screen.Fixed an issue where some players failed to download the patch due t..."
-    },
-    {
-      "appid": 736590,
-      "game_name": "Operation: Harsh Doorstop",
-      "title": "Our Partnership with KeepGamingHonest.com",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067938602",
-      "date": 1791729093,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hello everyone! Today I want to announce something that is important to both myself and our community. Today we're officially partnering with a movement called \"KeepGamingHonest\" which you can learn about at https://www.keepgaminghonest.com/ {STEAM_CLAN_IMAGE}/37287773/4a4b6ff904dab2f776232b7d7cf55ad6f3658366.jpg Operation: Harsh Doorstop is proudly a 100% American-owned game studio. We pride ourselves with not only our commitment to building a consumer-first product that respects United States consumer protection laws, but also supporting consumer-first movements that help enforce consumer protection regulations in the United States. For example... we are also a strong believer in the StopKillingGames initiative. In-fact, our belief in the StopKillingGames mission is why our game includes..."
-    },
-    {
-      "appid": 1422450,
-      "game_name": "Deadlock",
-      "title": "Deadlock's City Never Sleeps update makes Valve's MOBA my favorite videogame setting in years",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1846018067938237",
-      "date": 1791716400,
-      "feedname": "PC Gamer",
-      "feedlabel": "PC Gamer",
-      "update_type": "Update",
-      "contents": "<a href=\"https://www.pcgamer.com/deadlock/\">Deadlock</a> isn't <em>technically </em>out yet—but it's pretty easy to get into, with invites to its beta being generously granted by Valve and obtainable in plenty of Discord communities if you don't have other mates who're into <a href=\"https://www.pcgamer.com/games/moba/\">MOBA</a>s. And boy howdy, have I not regretted a single one of my 350 hours over the past couple years \"testing\" this game... <a href=\"https://www.pcgamer.com/games/moba/deadlocks-city-never-sleeps-update-makes-valves-moba-my-favorite-videogame-setting-in-years/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
-    },
-    {
-      "appid": 1363080,
-      "game_name": "Manor Lords",
-      "title": "Save 35% on Manor Lords",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067936766",
-      "date": 1791651651,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "The weather may change, seasons may pass, and cities may rise and fall – but these lands are yours to rule. Manor Lords is 35% off right now. Manage in-depth city building, command large-scale tactical battles, and watch complex economic and social simulations unfold in this medieval strategy builder. "
-    },
-    {
-      "appid": 1422450,
-      "game_name": "Deadlock",
-      "title": "Deadlock surpasses Team Fortress 2's all-time concurrent player count peak as it adds a chess wizard",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1846018067936802",
-      "date": 1791651326,
-      "feedname": "PC Gamer",
-      "feedlabel": "PC Gamer",
-      "update_type": "Update",
-      "contents": "Valve's latest MOBA might still <em>technically </em>be conducting an invite-only test, but it's nevertheless one of the most popular games of its ilk. Yesterday, right as the game added the latest in its current batch of <a href=\"https://www.pcgamer.com/games/moba/deadlocks-gigantic-new-update-gives-its-city-a-spooky-new-coat-of-paint-and-debuts-6-new-heroes-including-the-one-and-only-rat-king/\">six new democratically released heroes</a>, its concurrent player-count hit a new screaming high: 262,145 simultaneous players, according to <a href=\"https://steamdb.info/app/1422450/charts/\" target=\"_blank\">SteamDB</a>... <a href=\"https://www.pcgamer.com/games/moba/deadlock-surpasses-team-fortress-2s-all-time-concurrent-player-count-peak-as-it-adds-a-chess-wizard/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
-    },
-    {
-      "appid": 552990,
-      "game_name": "World of Warships",
-      "title": "Weekend Highlights | 15.9 #1",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067935869",
-      "date": 1791626426,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Update 15.9 Is Live! {STEAM_CLAN_IMAGE}/31013613/81ec113529bb1b047107dd86254421cc5ceb0b54.png Look alive, Captain—a new content injection has just hit with the release of Update 15.9! You can enjoy the new Pacific Front strategic event directly in the game or in your web browser, the return of Black Friday ships, a rework of the classic Ocean map, and more. Read all about it in this article: About Update 15.9 King of the Sea XIX: Live This Weekend {STEAM_CLAN_IMAGE}/31013613/f106ee3e43721150137265a5c277dd20df083744.png World of Warships' grandest tournament is kicking off! Catch the beginning of the Regional Phase live on Twitch, and be prepared to scoop up a dedicated Twitch Drop that will either expand your KoTS collection or sort you out with an investment in a future Armory event. Read..."
-    },
-    {
-      "appid": 1422450,
-      "game_name": "Deadlock",
-      "title": "Valve's Gambit: Deadlock's chess-playing new hero is its riskiest yet, and it's working",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1846018067936039",
-      "date": 1791625655,
-      "feedname": "PCGamesN",
-      "feedlabel": "PCGamesN",
-      "update_type": "Update",
-      "contents": "New Deadlock hero Solomon is a chess master who turns his own team into pawns, and it's pushed the Valve MOBA to a new Steam player record. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/deadlock/update-solomon\">Valve's Gambit: Deadlock's chess-playing new hero is its riskiest yet, and it's working</a> "
-    },
-    {
-      "appid": 736590,
-      "game_name": "Operation: Harsh Doorstop",
-      "title": "Upcoming Updates to Armored Vehicles, Thermal Imaging, & Platoons",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067935303",
-      "date": 1791603673,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hello everyone! I'm happy to be back finally working on our game again, while still balancing all the studying I'm having to do for my current phase of training. Today I'm excited to tell you more about our upcoming updates to armored vehicles, imaging systems, and a feature I'm particularly excited about... platoons. {STEAM_CLAN_IMAGE}/37287773/4356be8658ad10dd5d99310552a5da25c66f2842.jpg I actually first wrote the concept for platoons over... eight years ago now? Back when I was still running our server for Project Reality. We wanted to create a system that would allow a squad to choose a specific \"role\" that would grant them exclusive access to specific vehicles. Unfortunately, since Project Reality was only a Battlefield 2 modification... we were limited in what we could do. However, w..."
-    },
-    {
-      "appid": 1172470,
-      "game_name": "Apex Legends",
-      "title": "An Update from the Anti Cheat Team - 10/09/2026",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067934613",
-      "date": 1791578435,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Competitive Integrity Update - Weapon Exploit FixesWe’ve deployed fixes for multiple high-profile weapon exploits in Apex Legends this week. You may have seen the videos circulating in community spaces earlier this week. These fixes address an exploit that allowed an entire magazine to be fired in a single shot, alongside another that enabled rapid firing and reloading with the Sentinel and C.A.R. SMG beyond their intended functionality.These fixes are part of our broader efforts to protect the integrity of Apex Legends. Alongside addressing exploits, we continue to develop and deploy new anti-cheat detections, strengthen existing systems, and take action against players who undermine fair play. This work is ongoing across multiple fronts, even when individual efforts aren't always immedia..."
-    },
-    {
-      "appid": 1172470,
-      "game_name": "Apex Legends",
-      "title": "Apex Legends: Latest Update - 10/09/2026",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067934200",
-      "date": 1791567390,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "📋TESTING: We have activated a matchmaking test that increases maximum queue times for Plat+ players on all platforms, in all regions. The queue time increase scales with Rank tier, and Masters players could expect a maximum extension of approximately 30 seconds.This test is in pursuit of tighter skill bands in high skill matches and less spill over of high rank players into mid-rank matches, as the matchmaker spends more time prioritizing the tightest possible lobbies before expanding its search. This test will run until the end of the season, or until we have enough data.Please continue to give feedback on if you are experiencing tighter matchmaking."
-    },
-    {
-      "appid": 271590,
-      "game_name": "Grand Theft Auto V Legacy",
-      "title": "I might finally have gone too far with a GTA 5 mod that imports most of Doom 2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1846018067934076",
-      "date": 1791565200,
-      "feedname": "PC Gamer",
-      "feedlabel": "PC Gamer",
-      "update_type": "Update",
-      "contents": "I really don't know how to build up to this one. Grand Theft Auto 5 is Doom now, okay? I put in a mod that imports DOOM2.wad into GTA 5 and now that's what the game is. There are demons. The game is first person. I have a minigun and a BFG. That's the truth of the matter and we're all just going to have to find some way to live with it... <a href=\"https://www.pcgamer.com/games/grand-theft-auto/i-might-finally-have-gone-too-far-with-a-gta-5-mod-that-imports-most-of-doom-2/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
-    },
-    {
-      "appid": 538030,
-      "game_name": "Xenonauts 2",
-      "title": "Save 50% on Xenonauts 2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067933737",
-      "date": 1791559831,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Now, you can experience the intense strategic gameplay of Xenonauts 2 for 50% off. In Xenonauts 2, you command a global defense organization tasked with intercepting alien threats and leading tactical ground missions. Build your base, manage resources, and engage in turn-based combat to protect humanity. "
-    },
-    {
-      "appid": 552990,
-      "game_name": "World of Warships",
-      "title": "Developer Diaries: Horror From the Abyss",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067933731",
-      "date": 1791559684,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "{STEAM_CLAN_IMAGE}/31013613/f88a14db437a31758be3bb4a6d4b30f9aa7084a3.jpg Horror From the Abyss The main feature of Update 15.10 is a new Operation-based PvE event. Its narrative pits a team of players, operating as part of a secret organization, against a shadowy cult as they investigate strange phenomena in the Bermuda Triangle. Event Structure and Progression The event runs across two Updates. Four consecutive operations unlock weekly throughout Update 15.10, while all four operations will be in a random rotation with some twists to their mechanics during the first two weeks of Update 15.11. {STEAM_CLAN_IMAGE}/31013613/1e6c340eb80d28448e92176fcd689f5b9e4f68e0.jpg {STEAM_CLAN_IMAGE}/31013613/dd8d59f4eb2849f50df9a660887fbccc4755a318.jpg A bit more about these operations: Vanished Expeditio..."
-    },
-    {
-      "appid": 227300,
-      "game_name": "Euro Truck Simulator 2",
-      "title": "1.62 Update: Improved Material System",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067933607",
-      "date": 1791558045,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "The Improved Material System continues to make its way across our truck line-up! With the upcoming 1.62 update for Euro Truck Simulator 2 & American Truck Simulator, two more trucks will benefit from this upgrade, bringing further visual refinements to their interiors. We hope you've been enjoying the Improved Material System and the refreshed look it brings to the interiors of our trucks! It has been great to see your reactions to these visual upgrades, and we would like to thank you for all of the comments, feedback & screenshots you have shared with us so far. In the upcoming 1.62 update, our vehicle teams have expanded this visual improvement to the cabins of the Iveco S-Way in Euro Truck Simulator 2, and the All-New Volvo VNL in American Truck Simulator! The improved material system s..."
-    },
-    {
-      "appid": 3164500,
-      "game_name": "Schedule I",
-      "title": "v0.4.7: Special Customers",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067932462",
-      "date": 1791531933,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hey everyone,Today we're pleased to be releasing the special customers update! This updates includes four travelling customer groups that periodically visit town, buying a large quantity of their favourite drug types. We've also added a bunch of new purchasable cosmetics, new floor-level buildables, a new laundering business, and lots more.Thanks for your patience as we worked on this update - we expanded the scope beyond our original plans and also had to make some sizeable refactors, both to support this update and in anticipation of future features. We've also been working on two other updates in tandem with this one, both of which will release before the end of the year.In other news, TVGS has brought on a new technical artist, Roald, who created nearly all of the art for this update. ..."
     }
   ],
   "social_presence": {
-    "window_start": "2026-10-08T04:46:38.055345+08:00",
-    "window_end": "2026-10-15T04:46:38.055345+08:00",
+    "window_start": "2026-10-09T04:24:58.454870+08:00",
+    "window_end": "2026-10-16T04:24:58.454870+08:00",
     "members": [
       {
         "id": "self",
@@ -6206,23 +6206,15 @@
         "avatarfull": "",
         "profileurl": "",
         "is_self": true,
-        "last_seen_at": "2026-10-15T01:57:09.854444+08:00",
+        "last_seen_at": "2026-10-16T02:35:24.984502+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:09.854444+08:00",
+          "timestamp": "2026-10-16T02:35:24.984502+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": [
-          {
-            "start": "2026-10-08T14:34:57.122820+08:00",
-            "end": "2026-10-08T14:49:57.122820+08:00",
-            "status": "playing",
-            "game": "Apex Legends",
-            "gameid": "1172470"
-          }
-        ]
+        "segments": []
       },
       {
         "id": "76561198261996858",
@@ -6231,22 +6223,15 @@
         "avatarfull": "https://avatars.steamstatic.com/0594730392a4405ffc59375bb5bc3be38f3b7337_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1430963765/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": true,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-10-08T21:58:37.343178+08:00",
-            "end": "2026-10-08T22:13:37.343178+08:00",
-            "status": "playing",
-            "game": "Dota 2",
-            "gameid": "570"
-          },
           {
             "start": "2026-10-09T21:44:20.027165+08:00",
             "end": "2026-10-09T21:59:20.027165+08:00",
@@ -6267,44 +6252,26 @@
             "status": "playing",
             "game": "PUBG: BATTLEGROUNDS",
             "gameid": "578080"
-          }
-        ]
-      },
-      {
-        "id": "76561198365517134",
-        "steamid": "76561198365517134",
-        "name": "Ichabod Morningstar",
-        "avatarfull": "https://avatars.steamstatic.com/febdf0766bfe6668b76bcb4b3d35dd15ab3999e4_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198365517134/",
-        "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
-        "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
-          "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": [
+          },
           {
-            "start": "2026-10-12T04:11:14.544181+08:00",
-            "end": "2026-10-12T04:26:14.544181+08:00",
+            "start": "2026-10-15T22:22:14.108553+08:00",
+            "end": "2026-10-15T22:37:14.108553+08:00",
             "status": "playing",
-            "game": "Delta Force",
-            "gameid": "2507950"
+            "game": "PUBG: BATTLEGROUNDS",
+            "gameid": "578080"
           }
         ]
       },
       {
-        "id": "76561199189466907",
-        "steamid": "76561199189466907",
-        "name": "Eason",
-        "avatarfull": "https://avatars.steamstatic.com/acacec54c2cb39d998efbca9d09aa8295300b935_full.jpg",
-        "profileurl": "https://steamcommunity.com/id/1918619816/",
+        "id": "76561198852270175",
+        "steamid": "76561198852270175",
+        "name": "Bohemia DZ",
+        "avatarfull": "https://avatars.steamstatic.com/40bf29a0a7d3e4a36e64456677985317e46ff3de_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -6319,9 +6286,9 @@
         "avatarfull": "https://avatars.steamstatic.com/88c582db5d11cff9967db2673866294336eb5541_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198193795227/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6336,9 +6303,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198287273887/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6353,9 +6320,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e07ee377518079efd3fdc3e92f3ae07da8705b0e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198288081892/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6370,9 +6337,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198295506047/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6387,9 +6354,9 @@
         "avatarfull": "https://avatars.steamstatic.com/6a0f301f7a7811d73c94d652237a732315cc0072_full.jpg",
         "profileurl": "https://steamcommunity.com/id/zhining2003/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6404,9 +6371,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9db4379c2531f5accd95570c7ac358f7169393dc_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311844129/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6421,9 +6388,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fa8a4de374f1e716b6a7607fd74319fd0cdf936e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311885845/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6446,22 +6413,15 @@
         "avatarfull": "https://avatars.steamstatic.com/7904882166fd95d68aa426a26ccac7753ea0f82e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198327290414/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-10-08T08:22:39.086595+08:00",
-            "end": "2026-10-08T08:37:39.086595+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
           {
             "start": "2026-10-12T07:55:15.539690+08:00",
             "end": "2026-10-12T08:10:15.539690+08:00",
@@ -6472,15 +6432,40 @@
         ]
       },
       {
+        "id": "76561198365517134",
+        "steamid": "76561198365517134",
+        "name": "Ichabod Morningstar",
+        "avatarfull": "https://avatars.steamstatic.com/febdf0766bfe6668b76bcb4b3d35dd15ab3999e4_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198365517134/",
+        "is_self": false,
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
+        "current": {
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
+          "online": false,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": [
+          {
+            "start": "2026-10-12T04:11:14.544181+08:00",
+            "end": "2026-10-12T04:26:14.544181+08:00",
+            "status": "playing",
+            "game": "Delta Force",
+            "gameid": "2507950"
+          }
+        ]
+      },
+      {
         "id": "76561198374143385",
         "steamid": "76561198374143385",
         "name": "账号已封禁",
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198374143385/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6495,9 +6480,9 @@
         "avatarfull": "https://avatars.steamstatic.com/76c2c57990ae1af551df7337b66debf3946cccbc_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198390929632/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6512,23 +6497,15 @@
         "avatarfull": "https://avatars.steamstatic.com/e0fca1e09e6d16082f4c9ced7f25c2b54b52f097_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198399124819/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": [
-          {
-            "start": "2026-10-08T21:58:37.343178+08:00",
-            "end": "2026-10-08T22:13:37.343178+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          }
-        ]
+        "segments": []
       },
       {
         "id": "76561198429741002",
@@ -6537,9 +6514,9 @@
         "avatarfull": "https://avatars.steamstatic.com/2de28b0248926290e5c47193aaae12afdcfd64a1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198429741002/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6562,9 +6539,9 @@
         "avatarfull": "https://avatars.steamstatic.com/66c72a56e810e1c21b29cd47ebc96366f621b880_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198835815502/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6579,26 +6556,9 @@
         "avatarfull": "https://avatars.steamstatic.com/90281bcb08a9d28ef4c343c5f6b8b75f093e4a9b_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1335689384/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
-        "id": "76561198852270175",
-        "steamid": "76561198852270175",
-        "name": "Bohemia DZ",
-        "avatarfull": "https://avatars.steamstatic.com/40bf29a0a7d3e4a36e64456677985317e46ff3de_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
-        "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
-        "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6613,9 +6573,9 @@
         "avatarfull": "https://avatars.steamstatic.com/cbc910b68a51cfb6b2824ef6f0039b3415b3c7ac_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198864549038/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6630,9 +6590,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ba09f9d6f89a7bc6b40bc2301f6e81ccbd181d42_full.jpg",
         "profileurl": "https://steamcommunity.com/id/2916511428/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6647,9 +6607,9 @@
         "avatarfull": "https://avatars.steamstatic.com/f46a7ef0f2d3cb1c5c83d33525b17924963b28d8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199031439722/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6664,9 +6624,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8bbefbbf3fd390ef47bc80ca022b5a79b2430835_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199037013836/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6681,9 +6641,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e9d248c0e1db4982e5f91da0fd51cd7b653659fa_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199069419608/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6698,9 +6658,9 @@
         "avatarfull": "https://avatars.steamstatic.com/2ee39ef9a8b79dd93c23c2fc82c635a58c7aa94a_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199079104056/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6715,9 +6675,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9fa5f109a7ae3611b68f8ecfb382962a3f90c10e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199112121158/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6732,9 +6692,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179314468/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6749,9 +6709,9 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179790448/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6766,9 +6726,9 @@
         "avatarfull": "https://avatars.steamstatic.com/0f330f09e2a9a91c1714349a3211b88226f869d5_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199180168949/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6783,9 +6743,9 @@
         "avatarfull": "https://avatars.steamstatic.com/3eef8f740583f434badd193aa6ee195e5077fd9b_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184636102/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6800,22 +6760,15 @@
         "avatarfull": "https://avatars.steamstatic.com/a00d822111fbffeca6c71f08f656e7c679b09345_full.jpg",
         "profileurl": "https://steamcommunity.com/id/_ver0nika_/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-10-08T21:58:37.343178+08:00",
-            "end": "2026-10-08T22:13:37.343178+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
           {
             "start": "2026-10-09T21:44:20.027165+08:00",
             "end": "2026-10-09T21:59:20.027165+08:00",
@@ -6843,6 +6796,20 @@
             "status": "playing",
             "game": "HELLDIVERS™ 2",
             "gameid": "553850"
+          },
+          {
+            "start": "2026-10-15T12:27:40.063264+08:00",
+            "end": "2026-10-15T12:42:40.063264+08:00",
+            "status": "playing",
+            "game": "Sudoku Universe",
+            "gameid": "733070"
+          },
+          {
+            "start": "2026-10-15T22:22:14.108553+08:00",
+            "end": "2026-10-15T22:37:14.108553+08:00",
+            "status": "playing",
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
           }
         ]
       },
@@ -6853,9 +6820,26 @@
         "avatarfull": "https://avatars.steamstatic.com/88d338a8cfdfe1d2d072413cc4112ee2d710bc18_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184830382/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
+          "online": false,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
+      },
+      {
+        "id": "76561199189466907",
+        "steamid": "76561199189466907",
+        "name": "Eason",
+        "avatarfull": "https://avatars.steamstatic.com/acacec54c2cb39d998efbca9d09aa8295300b935_full.jpg",
+        "profileurl": "https://steamcommunity.com/id/1918619816/",
+        "is_self": false,
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
+        "current": {
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6870,22 +6854,15 @@
         "avatarfull": "https://avatars.steamstatic.com/4f05eabf7f40a32a42ecb6cfa5cadb8b681c4071_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199192859169/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-10-08T21:58:37.343178+08:00",
-            "end": "2026-10-08T22:13:37.343178+08:00",
-            "status": "playing",
-            "game": "REANIMAL",
-            "gameid": "2129530"
-          },
           {
             "start": "2026-10-10T23:50:26.452865+08:00",
             "end": "2026-10-11T00:05:26.452865+08:00",
@@ -6916,9 +6893,9 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199194550728/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6933,9 +6910,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ed77ac403e526c32ce2c3d4d7251340721253802_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199206700253/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6950,22 +6927,15 @@
         "avatarfull": "https://avatars.steamstatic.com/bb00fc2cf902355cfe824b030e4ebe9b3d0e3b14_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199212735309/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-10-08T21:58:37.343178+08:00",
-            "end": "2026-10-08T22:13:37.343178+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
           {
             "start": "2026-10-09T21:44:20.027165+08:00",
             "end": "2026-10-09T21:59:20.027165+08:00",
@@ -6993,6 +6963,13 @@
             "status": "playing",
             "game": "HELLDIVERS™ 2",
             "gameid": "553850"
+          },
+          {
+            "start": "2026-10-15T22:22:14.108553+08:00",
+            "end": "2026-10-15T22:37:14.108553+08:00",
+            "status": "playing",
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
           }
         ]
       },
@@ -7003,9 +6980,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ffc06397744cc94e908766d13978e684f122bcb8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199223192140/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7020,9 +6997,9 @@
         "avatarfull": "https://avatars.steamstatic.com/75ac698f154245e3a21dae1e37bed893bcbebacf_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244274077/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7037,9 +7014,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8b1bc1e6b6f881b7a319c5ec5d5f7b5f0954def4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244382639/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7054,15 +7031,23 @@
         "avatarfull": "https://avatars.steamstatic.com/ee0e6adb9c075b0b40cbedba2f8699d1c040ca6c_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199387781925/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": []
+        "segments": [
+          {
+            "start": "2026-10-15T22:22:14.108553+08:00",
+            "end": "2026-10-15T22:37:14.108553+08:00",
+            "status": "playing",
+            "game": "Counter-Strike 2",
+            "gameid": "730"
+          }
+        ]
       },
       {
         "id": "76561199549273997",
@@ -7071,9 +7056,9 @@
         "avatarfull": "https://avatars.steamstatic.com/289031dd2e5c0cf6a3b38afdc112d39e2ca77a3d_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199549273997/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7088,9 +7073,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199181498419/",
         "is_self": false,
-        "last_seen_at": "2026-10-15T01:57:13.566652+08:00",
+        "last_seen_at": "2026-10-16T02:35:27.675489+08:00",
         "current": {
-          "timestamp": "2026-10-15T01:57:13.566652+08:00",
+          "timestamp": "2026-10-16T02:35:27.675489+08:00",
           "online": false,
           "game": "",
           "gameid": "",
