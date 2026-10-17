@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T04:01:01.499028+08:00",
+  "updated_at": "2026-10-18T03:29:40.517767+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
     "online": false,
@@ -5666,17 +5666,17 @@
       {
         "source": 730,
         "target": 1172470,
-        "strength": 150
+        "strength": 151
       },
       {
         "source": 431960,
         "target": 1172470,
-        "strength": 85
+        "strength": 86
       },
       {
         "source": 730,
         "target": 431960,
-        "strength": 69
+        "strength": 70
       },
       {
         "source": 1172470,
@@ -6196,8 +6196,8 @@
     }
   ],
   "social_presence": {
-    "window_start": "2026-10-10T04:01:39.205013+08:00",
-    "window_end": "2026-10-17T04:01:39.205013+08:00",
+    "window_start": "2026-10-11T03:30:13.587762+08:00",
+    "window_end": "2026-10-18T03:30:13.587762+08:00",
     "members": [
       {
         "id": "self",
@@ -6206,9 +6206,9 @@
         "avatarfull": "",
         "profileurl": "",
         "is_self": true,
-        "last_seen_at": "2026-10-17T02:45:06.882436+08:00",
+        "last_seen_at": "2026-10-18T03:15:14.062372+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:06.882436+08:00",
+          "timestamp": "2026-10-18T03:15:14.062372+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6223,22 +6223,15 @@
         "avatarfull": "https://avatars.steamstatic.com/0594730392a4405ffc59375bb5bc3be38f3b7337_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1430963765/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
+          "game": "Dota 2",
+          "gameid": "570",
+          "playing": true
         },
         "segments": [
-          {
-            "start": "2026-10-10T23:50:26.452865+08:00",
-            "end": "2026-10-11T00:05:26.452865+08:00",
-            "status": "playing",
-            "game": "PUBG: BATTLEGROUNDS",
-            "gameid": "578080"
-          },
           {
             "start": "2026-10-12T23:12:03.682896+08:00",
             "end": "2026-10-12T23:27:03.682896+08:00",
@@ -6259,6 +6252,101 @@
             "status": "playing",
             "game": "PUBG: BATTLEGROUNDS",
             "gameid": "578080"
+          },
+          {
+            "start": "2026-10-18T00:37:24.130092+08:00",
+            "end": "2026-10-18T00:52:24.130092+08:00",
+            "status": "playing",
+            "game": "Dota 2",
+            "gameid": "570"
+          },
+          {
+            "start": "2026-10-18T03:15:16.751881+08:00",
+            "end": "2026-10-18T03:30:13.587762+08:00",
+            "status": "playing",
+            "game": "Dota 2",
+            "gameid": "570"
+          }
+        ]
+      },
+      {
+        "id": "76561199212735309",
+        "steamid": "76561199212735309",
+        "name": "太刀型呆猫",
+        "avatarfull": "https://avatars.steamstatic.com/bb00fc2cf902355cfe824b030e4ebe9b3d0e3b14_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561199212735309/",
+        "is_self": false,
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
+        "current": {
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
+          "online": true,
+          "game": "Lies of P",
+          "gameid": "1627720",
+          "playing": true
+        },
+        "segments": [
+          {
+            "start": "2026-10-11T23:55:45.551786+08:00",
+            "end": "2026-10-12T00:10:45.551786+08:00",
+            "status": "playing",
+            "game": "Lies of P",
+            "gameid": "1627720"
+          },
+          {
+            "start": "2026-10-14T21:02:46.696672+08:00",
+            "end": "2026-10-14T21:17:46.696672+08:00",
+            "status": "playing",
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
+          },
+          {
+            "start": "2026-10-15T22:22:14.108553+08:00",
+            "end": "2026-10-15T22:37:14.108553+08:00",
+            "status": "playing",
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
+          },
+          {
+            "start": "2026-10-16T17:40:22.195673+08:00",
+            "end": "2026-10-16T17:55:22.195673+08:00",
+            "status": "playing",
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
+          },
+          {
+            "start": "2026-10-16T22:45:09.555195+08:00",
+            "end": "2026-10-16T23:00:09.555195+08:00",
+            "status": "playing",
+            "game": "Lies of P",
+            "gameid": "1627720"
+          },
+          {
+            "start": "2026-10-17T17:12:26.346561+08:00",
+            "end": "2026-10-17T17:27:26.346561+08:00",
+            "status": "playing",
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
+          },
+          {
+            "start": "2026-10-17T21:08:19.956650+08:00",
+            "end": "2026-10-17T21:23:19.956650+08:00",
+            "status": "playing",
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
+          },
+          {
+            "start": "2026-10-18T00:37:24.130092+08:00",
+            "end": "2026-10-18T00:52:24.130092+08:00",
+            "status": "playing",
+            "game": "Lies of P",
+            "gameid": "1627720"
+          },
+          {
+            "start": "2026-10-18T03:15:16.751881+08:00",
+            "end": "2026-10-18T03:30:13.587762+08:00",
+            "status": "playing",
+            "game": "Lies of P",
+            "gameid": "1627720"
           }
         ]
       },
@@ -6269,9 +6357,9 @@
         "avatarfull": "https://avatars.steamstatic.com/40bf29a0a7d3e4a36e64456677985317e46ff3de_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -6280,15 +6368,15 @@
         "segments": []
       },
       {
-        "id": "76561199189466907",
-        "steamid": "76561199189466907",
-        "name": "Eason",
-        "avatarfull": "https://avatars.steamstatic.com/acacec54c2cb39d998efbca9d09aa8295300b935_full.jpg",
-        "profileurl": "https://steamcommunity.com/id/1918619816/",
+        "id": "76561199223192140",
+        "steamid": "76561199223192140",
+        "name": "瞄准恶魔",
+        "avatarfull": "https://avatars.steamstatic.com/ffc06397744cc94e908766d13978e684f122bcb8_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561199223192140/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -6303,9 +6391,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ee0e6adb9c075b0b40cbedba2f8699d1c040ca6c_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199387781925/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -6328,9 +6416,9 @@
         "avatarfull": "https://avatars.steamstatic.com/88c582db5d11cff9967db2673866294336eb5541_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198193795227/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6345,9 +6433,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198287273887/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6362,9 +6450,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e07ee377518079efd3fdc3e92f3ae07da8705b0e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198288081892/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6379,9 +6467,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198295506047/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6396,9 +6484,9 @@
         "avatarfull": "https://avatars.steamstatic.com/6a0f301f7a7811d73c94d652237a732315cc0072_full.jpg",
         "profileurl": "https://steamcommunity.com/id/zhining2003/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6413,9 +6501,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9db4379c2531f5accd95570c7ac358f7169393dc_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311844129/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6430,9 +6518,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fa8a4de374f1e716b6a7607fd74319fd0cdf936e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311885845/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6455,9 +6543,9 @@
         "avatarfull": "https://avatars.steamstatic.com/7904882166fd95d68aa426a26ccac7753ea0f82e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198327290414/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6480,9 +6568,9 @@
         "avatarfull": "https://avatars.steamstatic.com/febdf0766bfe6668b76bcb4b3d35dd15ab3999e4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198365517134/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6505,9 +6593,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198374143385/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6522,9 +6610,9 @@
         "avatarfull": "https://avatars.steamstatic.com/76c2c57990ae1af551df7337b66debf3946cccbc_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198390929632/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6554,9 +6642,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e0fca1e09e6d16082f4c9ced7f25c2b54b52f097_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198399124819/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6571,23 +6659,15 @@
         "avatarfull": "https://avatars.steamstatic.com/2de28b0248926290e5c47193aaae12afdcfd64a1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198429741002/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": [
-          {
-            "start": "2026-10-10T10:40:19.652159+08:00",
-            "end": "2026-10-10T10:55:19.652159+08:00",
-            "status": "playing",
-            "game": "Kingdom Rush",
-            "gameid": "246420"
-          }
-        ]
+        "segments": []
       },
       {
         "id": "76561198835815502",
@@ -6596,9 +6676,9 @@
         "avatarfull": "https://avatars.steamstatic.com/66c72a56e810e1c21b29cd47ebc96366f621b880_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198835815502/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6613,15 +6693,23 @@
         "avatarfull": "https://avatars.steamstatic.com/90281bcb08a9d28ef4c343c5f6b8b75f093e4a9b_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1335689384/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": []
+        "segments": [
+          {
+            "start": "2026-10-17T21:08:19.956650+08:00",
+            "end": "2026-10-17T21:23:19.956650+08:00",
+            "status": "playing",
+            "game": "Counter-Strike 2",
+            "gameid": "730"
+          }
+        ]
       },
       {
         "id": "76561198864549038",
@@ -6630,9 +6718,9 @@
         "avatarfull": "https://avatars.steamstatic.com/cbc910b68a51cfb6b2824ef6f0039b3415b3c7ac_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198864549038/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6647,9 +6735,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ba09f9d6f89a7bc6b40bc2301f6e81ccbd181d42_full.jpg",
         "profileurl": "https://steamcommunity.com/id/2916511428/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6664,9 +6752,9 @@
         "avatarfull": "https://avatars.steamstatic.com/f46a7ef0f2d3cb1c5c83d33525b17924963b28d8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199031439722/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6681,9 +6769,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8bbefbbf3fd390ef47bc80ca022b5a79b2430835_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199037013836/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6698,9 +6786,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e9d248c0e1db4982e5f91da0fd51cd7b653659fa_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199069419608/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6715,15 +6803,23 @@
         "avatarfull": "https://avatars.steamstatic.com/2ee39ef9a8b79dd93c23c2fc82c635a58c7aa94a_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199079104056/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": []
+        "segments": [
+          {
+            "start": "2026-10-17T21:08:19.956650+08:00",
+            "end": "2026-10-17T21:23:19.956650+08:00",
+            "status": "playing",
+            "game": "Counter-Strike 2",
+            "gameid": "730"
+          }
+        ]
       },
       {
         "id": "76561199112121158",
@@ -6732,15 +6828,23 @@
         "avatarfull": "https://avatars.steamstatic.com/9fa5f109a7ae3611b68f8ecfb382962a3f90c10e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199112121158/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": []
+        "segments": [
+          {
+            "start": "2026-10-17T12:55:27.040387+08:00",
+            "end": "2026-10-17T13:10:27.040387+08:00",
+            "status": "playing",
+            "game": "Sid Meier's Civilization VI",
+            "gameid": "289070"
+          }
+        ]
       },
       {
         "id": "76561199179314468",
@@ -6749,9 +6853,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179314468/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6766,9 +6870,9 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179790448/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6783,9 +6887,9 @@
         "avatarfull": "https://avatars.steamstatic.com/0f330f09e2a9a91c1714349a3211b88226f869d5_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199180168949/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6800,9 +6904,9 @@
         "avatarfull": "https://avatars.steamstatic.com/3eef8f740583f434badd193aa6ee195e5077fd9b_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184636102/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6817,22 +6921,15 @@
         "avatarfull": "https://avatars.steamstatic.com/a00d822111fbffeca6c71f08f656e7c679b09345_full.jpg",
         "profileurl": "https://steamcommunity.com/id/_ver0nika_/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-10-10T23:50:26.452865+08:00",
-            "end": "2026-10-11T00:05:26.452865+08:00",
-            "status": "playing",
-            "game": "DARK SOULS™ III",
-            "gameid": "374320"
-          },
           {
             "start": "2026-10-14T15:28:40.018555+08:00",
             "end": "2026-10-14T15:43:40.018555+08:00",
@@ -6867,6 +6964,27 @@
             "status": "playing",
             "game": "HELLDIVERS™ 2",
             "gameid": "553850"
+          },
+          {
+            "start": "2026-10-17T12:55:27.040387+08:00",
+            "end": "2026-10-17T13:10:27.040387+08:00",
+            "status": "playing",
+            "game": "Sudoku Universe",
+            "gameid": "733070"
+          },
+          {
+            "start": "2026-10-17T17:12:26.346561+08:00",
+            "end": "2026-10-17T17:27:26.346561+08:00",
+            "status": "playing",
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
+          },
+          {
+            "start": "2026-10-17T21:08:19.956650+08:00",
+            "end": "2026-10-17T21:23:19.956650+08:00",
+            "status": "playing",
+            "game": "HELLDIVERS™ 2",
+            "gameid": "553850"
           }
         ]
       },
@@ -6877,9 +6995,26 @@
         "avatarfull": "https://avatars.steamstatic.com/88d338a8cfdfe1d2d072413cc4112ee2d710bc18_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184830382/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
+          "online": false,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
+      },
+      {
+        "id": "76561199189466907",
+        "steamid": "76561199189466907",
+        "name": "Eason",
+        "avatarfull": "https://avatars.steamstatic.com/acacec54c2cb39d998efbca9d09aa8295300b935_full.jpg",
+        "profileurl": "https://steamcommunity.com/id/1918619816/",
+        "is_self": false,
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
+        "current": {
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6894,22 +7029,15 @@
         "avatarfull": "https://avatars.steamstatic.com/4f05eabf7f40a32a42ecb6cfa5cadb8b681c4071_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199192859169/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-10-10T23:50:26.452865+08:00",
-            "end": "2026-10-11T00:05:26.452865+08:00",
-            "status": "playing",
-            "game": "RV There Yet?",
-            "gameid": "3949040"
-          },
           {
             "start": "2026-10-11T23:55:45.551786+08:00",
             "end": "2026-10-12T00:10:45.551786+08:00",
@@ -6923,6 +7051,13 @@
             "status": "playing",
             "game": "Red Dead Redemption 2",
             "gameid": "1174180"
+          },
+          {
+            "start": "2026-10-17T21:08:19.956650+08:00",
+            "end": "2026-10-17T21:23:19.956650+08:00",
+            "status": "playing",
+            "game": "Red Dead Redemption 2",
+            "gameid": "1174180"
           }
         ]
       },
@@ -6933,9 +7068,9 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199194550728/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6950,86 +7085,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ed77ac403e526c32ce2c3d4d7251340721253802_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199206700253/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
-        "id": "76561199212735309",
-        "steamid": "76561199212735309",
-        "name": "太刀型呆猫",
-        "avatarfull": "https://avatars.steamstatic.com/bb00fc2cf902355cfe824b030e4ebe9b3d0e3b14_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561199212735309/",
-        "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
-        "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": [
-          {
-            "start": "2026-10-10T23:50:26.452865+08:00",
-            "end": "2026-10-11T00:05:26.452865+08:00",
-            "status": "playing",
-            "game": "DARK SOULS™ III",
-            "gameid": "374320"
-          },
-          {
-            "start": "2026-10-11T23:55:45.551786+08:00",
-            "end": "2026-10-12T00:10:45.551786+08:00",
-            "status": "playing",
-            "game": "Lies of P",
-            "gameid": "1627720"
-          },
-          {
-            "start": "2026-10-14T21:02:46.696672+08:00",
-            "end": "2026-10-14T21:17:46.696672+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-10-15T22:22:14.108553+08:00",
-            "end": "2026-10-15T22:37:14.108553+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-10-16T17:40:22.195673+08:00",
-            "end": "2026-10-16T17:55:22.195673+08:00",
-            "status": "playing",
-            "game": "HELLDIVERS™ 2",
-            "gameid": "553850"
-          },
-          {
-            "start": "2026-10-16T22:45:09.555195+08:00",
-            "end": "2026-10-16T23:00:09.555195+08:00",
-            "status": "playing",
-            "game": "Lies of P",
-            "gameid": "1627720"
-          }
-        ]
-      },
-      {
-        "id": "76561199223192140",
-        "steamid": "76561199223192140",
-        "name": "瞄准恶魔",
-        "avatarfull": "https://avatars.steamstatic.com/ffc06397744cc94e908766d13978e684f122bcb8_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561199223192140/",
-        "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
-        "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7044,9 +7102,9 @@
         "avatarfull": "https://avatars.steamstatic.com/75ac698f154245e3a21dae1e37bed893bcbebacf_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244274077/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7061,9 +7119,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8b1bc1e6b6f881b7a319c5ec5d5f7b5f0954def4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244382639/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7078,9 +7136,9 @@
         "avatarfull": "https://avatars.steamstatic.com/289031dd2e5c0cf6a3b38afdc112d39e2ca77a3d_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199549273997/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7095,9 +7153,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199181498419/",
         "is_self": false,
-        "last_seen_at": "2026-10-17T02:45:10.723658+08:00",
+        "last_seen_at": "2026-10-18T03:15:16.751881+08:00",
         "current": {
-          "timestamp": "2026-10-17T02:45:10.723658+08:00",
+          "timestamp": "2026-10-18T03:15:16.751881+08:00",
           "online": false,
           "game": "",
           "gameid": "",
