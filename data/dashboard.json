@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T04:30:45.253048+08:00",
+  "updated_at": "2026-11-02T05:16:14.749053+08:00",
   "player": {
     "personaname": "俊林叔叔阳具店",
     "online": false,
@@ -8,10 +8,10 @@
     "avatarfull": ""
   },
   "milestone": {
-    "total_hours": 6042.4,
-    "movies": 3021,
-    "books": 1007,
-    "walking_km": 30212
+    "total_hours": 6051.1,
+    "movies": 3025,
+    "books": 1008,
+    "walking_km": 30255
   },
   "game_cloud": [
     {
@@ -28,9 +28,9 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 758.5,
+      "playtime_hours": 760.2,
       "img_icon_url": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
-      "rtime_last_played": 1793465006,
+      "rtime_last_played": 1793526255,
       "genres": [
         "Action",
         "Adventure",
@@ -804,6 +804,14 @@
       "genres": []
     },
     {
+      "appid": 4348910,
+      "name": "Probably Stolen",
+      "playtime_hours": 6.5,
+      "img_icon_url": "63d2172e624b8a6df1a81b98ed9869d1b8bbcb54",
+      "rtime_last_played": 1793565828,
+      "genres": []
+    },
+    {
       "appid": 1366800,
       "name": "Crosshair X",
       "playtime_hours": 6.4,
@@ -1412,6 +1420,14 @@
       "genres": []
     },
     {
+      "appid": 3209750,
+      "name": "STARIO: Haven Tower",
+      "playtime_hours": 0.4,
+      "img_icon_url": "3a9f6456fd1452bdb27f5ce9c8d6ea849d7b3c42",
+      "rtime_last_played": 1793528555,
+      "genres": []
+    },
+    {
       "appid": 897450,
       "name": "The Survivalists",
       "playtime_hours": 0.4,
@@ -1558,25 +1574,46 @@
   ],
   "recent_activity": [
     {
+      "appid": 4348910,
+      "name": "Probably Stolen",
+      "playtime_2weeks_hours": 6.5,
+      "playtime_forever_hours": 6.5
+    },
+    {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_2weeks_hours": 1.8,
-      "playtime_forever_hours": 758.5
+      "playtime_2weeks_hours": 3.6,
+      "playtime_forever_hours": 760.2
     },
     {
       "appid": 1651560,
       "name": "Fabledom",
       "playtime_2weeks_hours": 1.3,
       "playtime_forever_hours": 1.3
+    },
+    {
+      "appid": 3209750,
+      "name": "STARIO: Haven Tower",
+      "playtime_2weeks_hours": 0.4,
+      "playtime_forever_hours": 0.4
     }
   ],
   "heatmap": {
+    "2026-11-02": {
+      "playtime_minutes": 463,
+      "online_minutes": 463,
+      "games": {
+        "Probably Stolen": 390,
+        "STARIO: Haven Tower": 25,
+        "Apex Legends": 48
+      }
+    },
     "2026-11-01": {
-      "playtime_minutes": 134,
-      "online_minutes": 134,
+      "playtime_minutes": 194,
+      "online_minutes": 194,
       "games": {
         "Fabledom": 80,
-        "Apex Legends": 54
+        "Apex Legends": 114
       }
     },
     "2026-10-27": {
@@ -3152,12 +3189,14 @@
     {
       "dow": 0,
       "hour": 0,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 365.2,
-      "game_minutes": 0.0,
+      "count": 15.0,
+      "recent_count": 15.0,
+      "all_time_count": 380.2,
+      "game_minutes": 15.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Probably Stolen": 15.0
+      }
     },
     {
       "dow": 0,
@@ -3192,22 +3231,26 @@
     {
       "dow": 0,
       "hour": 4,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 80.0,
-      "game_minutes": 0.0,
+      "count": 13.0,
+      "recent_count": 13.0,
+      "all_time_count": 93.1,
+      "game_minutes": 13.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Probably Stolen": 13.0
+      }
     },
     {
       "dow": 0,
       "hour": 5,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
+      "count": 2.0,
+      "recent_count": 2.0,
+      "all_time_count": 62.0,
+      "game_minutes": 2.0,
       "online_minutes": 0.0,
-      "games": {}
+      "games": {
+        "Probably Stolen": 2.0
+      }
     },
     {
       "dow": 0,
@@ -3514,7 +3557,7 @@
       "hour": 17,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 445.1,
+      "all_time_count": 460.1,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
@@ -4021,7 +4064,7 @@
     }
   ],
   "platform": {
-    "Windows": 6005.8,
+    "Windows": 6014.5,
     "Mac": 26.0,
     "Linux": 0.3,
     "Steam Deck": 0.0
@@ -4035,38 +4078,38 @@
     },
     {
       "name": "Apex Legends",
-      "hours": 758.5,
-      "cumulative_pct": 45.2,
+      "hours": 760.2,
+      "cumulative_pct": 45.1,
       "rank": 2
     },
     {
       "name": "Kingdom Come: Deliverance",
       "hours": 369.6,
-      "cumulative_pct": 51.3,
+      "cumulative_pct": 51.2,
       "rank": 3
     },
     {
       "name": "Mount & Blade II: Bannerlord",
       "hours": 308.5,
-      "cumulative_pct": 56.4,
+      "cumulative_pct": 56.3,
       "rank": 4
     },
     {
       "name": "Terraria",
       "hours": 209.5,
-      "cumulative_pct": 59.9,
+      "cumulative_pct": 59.8,
       "rank": 5
     },
     {
       "name": "Kingdom Come: Deliverance II",
       "hours": 159.4,
-      "cumulative_pct": 62.5,
+      "cumulative_pct": 62.4,
       "rank": 6
     },
     {
       "name": "Baldur's Gate 3",
       "hours": 151.4,
-      "cumulative_pct": 65.0,
+      "cumulative_pct": 64.9,
       "rank": 7
     },
     {
@@ -4084,7 +4127,7 @@
     {
       "name": "Blender",
       "hours": 109.5,
-      "cumulative_pct": 70.9,
+      "cumulative_pct": 70.8,
       "rank": 10
     },
     {
@@ -4096,25 +4139,25 @@
     {
       "name": "Wartales",
       "hours": 89.2,
-      "cumulative_pct": 74.0,
+      "cumulative_pct": 73.9,
       "rank": 12
     },
     {
       "name": "Lethal Company",
       "hours": 83.2,
-      "cumulative_pct": 75.4,
+      "cumulative_pct": 75.3,
       "rank": 13
     },
     {
       "name": "MyDockFinder",
       "hours": 65.8,
-      "cumulative_pct": 76.5,
+      "cumulative_pct": 76.4,
       "rank": 14
     },
     {
       "name": "The Elder Scrolls V: Skyrim Special Edition",
       "hours": 58.3,
-      "cumulative_pct": 77.5,
+      "cumulative_pct": 77.4,
       "rank": 15
     },
     {
@@ -4126,890 +4169,902 @@
     {
       "name": "PUBG: BATTLEGROUNDS",
       "hours": 53.3,
-      "cumulative_pct": 79.2,
+      "cumulative_pct": 79.1,
       "rank": 17
     },
     {
       "name": "Warhammer 40,000: Rogue Trader",
       "hours": 51.1,
-      "cumulative_pct": 80.1,
+      "cumulative_pct": 80.0,
       "rank": 18
     },
     {
       "name": "The Witcher 3: Wild Hunt — Remastered",
       "hours": 50.3,
-      "cumulative_pct": 80.9,
+      "cumulative_pct": 80.8,
       "rank": 19
     },
     {
       "name": "Battlefield™ V",
       "hours": 48.0,
-      "cumulative_pct": 81.7,
+      "cumulative_pct": 81.6,
       "rank": 20
     },
     {
       "name": "Kenshi",
       "hours": 45.7,
-      "cumulative_pct": 82.5,
+      "cumulative_pct": 82.4,
       "rank": 21
     },
     {
       "name": "Manor Lords",
       "hours": 42.8,
-      "cumulative_pct": 83.2,
+      "cumulative_pct": 83.1,
       "rank": 22
     },
     {
       "name": "Sintopia",
       "hours": 41.5,
-      "cumulative_pct": 83.9,
+      "cumulative_pct": 83.8,
       "rank": 23
     },
     {
       "name": "Slay the Spire 2",
       "hours": 37.9,
-      "cumulative_pct": 84.5,
+      "cumulative_pct": 84.4,
       "rank": 24
     },
     {
       "name": "Noble Fates",
       "hours": 36.4,
-      "cumulative_pct": 85.1,
+      "cumulative_pct": 85.0,
       "rank": 25
     },
     {
       "name": "Far Cry 6",
       "hours": 33.7,
-      "cumulative_pct": 85.6,
+      "cumulative_pct": 85.5,
       "rank": 26
     },
     {
       "name": "Grand Theft Auto IV: The Complete Edition",
       "hours": 33.3,
-      "cumulative_pct": 86.2,
+      "cumulative_pct": 86.1,
       "rank": 27
     },
     {
       "name": "Inscryption",
       "hours": 31.8,
-      "cumulative_pct": 86.7,
+      "cumulative_pct": 86.6,
       "rank": 28
     },
     {
       "name": "Age of Empires IV: Anniversary Edition",
       "hours": 29.3,
-      "cumulative_pct": 87.2,
+      "cumulative_pct": 87.1,
       "rank": 29
     },
     {
       "name": "Battle Brothers",
       "hours": 28.8,
-      "cumulative_pct": 87.7,
+      "cumulative_pct": 87.6,
       "rank": 30
     },
     {
       "name": "Mount & Blade: Warband",
       "hours": 27.9,
-      "cumulative_pct": 88.1,
+      "cumulative_pct": 88.0,
       "rank": 31
     },
     {
       "name": "R.E.P.O.",
       "hours": 27.3,
-      "cumulative_pct": 88.6,
+      "cumulative_pct": 88.5,
       "rank": 32
     },
     {
       "name": "Noita",
       "hours": 25.8,
-      "cumulative_pct": 89.0,
+      "cumulative_pct": 88.9,
       "rank": 33
     },
     {
       "name": "HELLDIVERS™ 2",
       "hours": 22.7,
-      "cumulative_pct": 89.4,
+      "cumulative_pct": 89.3,
       "rank": 34
     },
     {
       "name": "Middle-earth™: Shadow of War™",
       "hours": 22.5,
-      "cumulative_pct": 89.8,
+      "cumulative_pct": 89.7,
       "rank": 35
     },
     {
       "name": "Half Sword Demo",
       "hours": 22.0,
-      "cumulative_pct": 90.1,
+      "cumulative_pct": 90.0,
       "rank": 36
     },
     {
       "name": "Sid Meier's Civilization VI",
       "hours": 21.6,
-      "cumulative_pct": 90.5,
+      "cumulative_pct": 90.4,
       "rank": 37
     },
     {
       "name": "Schedule I",
       "hours": 21.6,
-      "cumulative_pct": 90.8,
+      "cumulative_pct": 90.7,
       "rank": 38
     },
     {
       "name": "Enshrouded",
       "hours": 21.0,
-      "cumulative_pct": 91.2,
+      "cumulative_pct": 91.1,
       "rank": 39
     },
     {
       "name": "RUNNING WITH RIFLES",
       "hours": 19.6,
-      "cumulative_pct": 91.5,
+      "cumulative_pct": 91.4,
       "rank": 40
     },
     {
       "name": "Cities: Skylines",
       "hours": 18.4,
-      "cumulative_pct": 91.8,
+      "cumulative_pct": 91.7,
       "rank": 41
     },
     {
       "name": "Medieval Dynasty",
       "hours": 18.1,
-      "cumulative_pct": 92.1,
+      "cumulative_pct": 92.0,
       "rank": 42
     },
     {
       "name": "Escape From Duckov",
       "hours": 17.6,
-      "cumulative_pct": 92.4,
+      "cumulative_pct": 92.3,
       "rank": 43
     },
     {
       "name": "Sniper Elite 4",
       "hours": 17.5,
-      "cumulative_pct": 92.7,
+      "cumulative_pct": 92.6,
       "rank": 44
     },
     {
       "name": "Thronefall",
       "hours": 14.8,
-      "cumulative_pct": 92.9,
+      "cumulative_pct": 92.8,
       "rank": 45
     },
     {
       "name": "Deadlock",
       "hours": 14.6,
-      "cumulative_pct": 93.2,
+      "cumulative_pct": 93.1,
       "rank": 46
     },
     {
       "name": "Inside the Backrooms",
       "hours": 13.7,
-      "cumulative_pct": 93.4,
+      "cumulative_pct": 93.3,
       "rank": 47
     },
     {
       "name": "Oriental Empires",
       "hours": 12.9,
-      "cumulative_pct": 93.6,
+      "cumulative_pct": 93.5,
       "rank": 48
     },
     {
       "name": "Stacklands",
       "hours": 12.1,
-      "cumulative_pct": 93.8,
+      "cumulative_pct": 93.7,
       "rank": 49
     },
     {
       "name": "Bad North: Jotunn Edition",
       "hours": 11.6,
-      "cumulative_pct": 94.0,
+      "cumulative_pct": 93.9,
       "rank": 50
     },
     {
       "name": "Satisfactory",
       "hours": 11.2,
-      "cumulative_pct": 94.2,
+      "cumulative_pct": 94.1,
       "rank": 51
     },
     {
       "name": "Plan B: Terraform",
       "hours": 11.0,
-      "cumulative_pct": 94.4,
+      "cumulative_pct": 94.3,
       "rank": 52
     },
     {
       "name": "IRON NEST: Heavy Turret Simulator",
       "hours": 10.9,
-      "cumulative_pct": 94.6,
+      "cumulative_pct": 94.5,
       "rank": 53
     },
     {
       "name": "Romestead",
       "hours": 10.8,
-      "cumulative_pct": 94.7,
+      "cumulative_pct": 94.6,
       "rank": 54
     },
     {
       "name": "Don't Starve Together",
       "hours": 10.5,
-      "cumulative_pct": 94.9,
+      "cumulative_pct": 94.8,
       "rank": 55
     },
     {
       "name": "Super Auto Pets",
       "hours": 9.1,
-      "cumulative_pct": 95.1,
+      "cumulative_pct": 95.0,
       "rank": 56
     },
     {
       "name": "Rogue: Genesia",
       "hours": 8.5,
-      "cumulative_pct": 95.2,
+      "cumulative_pct": 95.1,
       "rank": 57
     },
     {
       "name": "The Farmer Was Replaced",
       "hours": 8.4,
-      "cumulative_pct": 95.4,
+      "cumulative_pct": 95.2,
       "rank": 58
     },
     {
       "name": "Crashlands",
       "hours": 8.2,
-      "cumulative_pct": 95.5,
+      "cumulative_pct": 95.4,
       "rank": 59
     },
     {
       "name": "Content Warning",
       "hours": 7.8,
-      "cumulative_pct": 95.6,
+      "cumulative_pct": 95.5,
       "rank": 60
     },
     {
       "name": "Aimlabs",
       "hours": 7.7,
-      "cumulative_pct": 95.7,
+      "cumulative_pct": 95.6,
       "rank": 61
     },
     {
       "name": "Need for Speed™ Payback",
       "hours": 7.5,
-      "cumulative_pct": 95.9,
+      "cumulative_pct": 95.8,
       "rank": 62
     },
     {
       "name": "Tom Clancy's Rainbow Six Siege",
       "hours": 7.4,
-      "cumulative_pct": 96.0,
+      "cumulative_pct": 95.9,
       "rank": 63
     },
     {
       "name": "Thief Simulator",
       "hours": 7.4,
-      "cumulative_pct": 96.1,
+      "cumulative_pct": 96.0,
       "rank": 64
     },
     {
       "name": "Halo: The Master Chief Collection",
       "hours": 7.3,
-      "cumulative_pct": 96.2,
+      "cumulative_pct": 96.1,
       "rank": 65
     },
     {
       "name": "Goobies",
       "hours": 7.2,
-      "cumulative_pct": 96.4,
+      "cumulative_pct": 96.2,
       "rank": 66
     },
     {
       "name": "Forza Horizon 4",
       "hours": 6.9,
-      "cumulative_pct": 96.5,
+      "cumulative_pct": 96.4,
       "rank": 67
     },
     {
       "name": "Left 4 Dead 2",
       "hours": 6.8,
-      "cumulative_pct": 96.6,
+      "cumulative_pct": 96.5,
       "rank": 68
     },
     {
       "name": "Mount & Blade: With Fire and Sword",
       "hours": 6.8,
-      "cumulative_pct": 96.7,
+      "cumulative_pct": 96.6,
       "rank": 69
+    },
+    {
+      "name": "Probably Stolen",
+      "hours": 6.5,
+      "cumulative_pct": 96.7,
+      "rank": 70
     },
     {
       "name": "Crosshair X",
       "hours": 6.4,
       "cumulative_pct": 96.8,
-      "rank": 70
+      "rank": 71
     },
     {
       "name": "Primitive Society Simulator",
       "hours": 6.3,
       "cumulative_pct": 96.9,
-      "rank": 71
+      "rank": 72
     },
     {
       "name": "MineMogul",
       "hours": 5.8,
       "cumulative_pct": 97.0,
-      "rank": 72
+      "rank": 73
     },
     {
       "name": "Wolfenstein II: The New Colossus",
       "hours": 5.7,
       "cumulative_pct": 97.1,
-      "rank": 73
+      "rank": 74
     },
     {
       "name": "Grand Theft Auto V Enhanced",
       "hours": 5.6,
       "cumulative_pct": 97.2,
-      "rank": 74
+      "rank": 75
     },
     {
       "name": "The Forest",
       "hours": 5.3,
       "cumulative_pct": 97.3,
-      "rank": 75
+      "rank": 76
     },
     {
       "name": "Warhammer: Vermintide 2",
       "hours": 4.9,
       "cumulative_pct": 97.4,
-      "rank": 76
+      "rank": 77
     },
     {
       "name": "Dyson Sphere Program",
       "hours": 4.9,
       "cumulative_pct": 97.4,
-      "rank": 77
+      "rank": 78
     },
     {
       "name": "Rusty's Retirement",
       "hours": 4.8,
       "cumulative_pct": 97.5,
-      "rank": 78
+      "rank": 79
     },
     {
       "name": "Mount & Blade",
       "hours": 4.7,
       "cumulative_pct": 97.6,
-      "rank": 79
+      "rank": 80
     },
     {
       "name": "Conan Exiles Enhanced",
       "hours": 4.3,
       "cumulative_pct": 97.7,
-      "rank": 80
+      "rank": 81
     },
     {
       "name": "Thronebreaker: The Witcher Tales",
       "hours": 4.3,
       "cumulative_pct": 97.7,
-      "rank": 81
+      "rank": 82
     },
     {
       "name": "Oxygen Not Included",
       "hours": 4.2,
       "cumulative_pct": 97.8,
-      "rank": 82
+      "rank": 83
     },
     {
       "name": "Monsters Domain: Prologue",
       "hours": 4.2,
       "cumulative_pct": 97.9,
-      "rank": 83
+      "rank": 84
     },
     {
       "name": "MiSide",
       "hours": 4.2,
       "cumulative_pct": 97.9,
-      "rank": 84
+      "rank": 85
     },
     {
       "name": "Turmoil",
       "hours": 4.2,
       "cumulative_pct": 98.0,
-      "rank": 85
+      "rank": 86
     },
     {
       "name": "Barotrauma",
       "hours": 4.0,
       "cumulative_pct": 98.1,
-      "rank": 86
+      "rank": 87
     },
     {
       "name": "The Evil Within 2",
       "hours": 4.0,
       "cumulative_pct": 98.1,
-      "rank": 87
+      "rank": 88
     },
     {
       "name": "Yet Another Zombie Survivors",
       "hours": 3.9,
       "cumulative_pct": 98.2,
-      "rank": 88
+      "rank": 89
     },
     {
       "name": "Operation: Harsh Doorstop",
       "hours": 3.8,
       "cumulative_pct": 98.3,
-      "rank": 89
+      "rank": 90
     },
     {
       "name": "Draw & Guess",
       "hours": 3.8,
       "cumulative_pct": 98.3,
-      "rank": 90
+      "rank": 91
     },
     {
       "name": "Subnautica 2",
       "hours": 3.8,
       "cumulative_pct": 98.4,
-      "rank": 91
+      "rank": 92
     },
     {
       "name": "Battlefield™ 1",
       "hours": 3.5,
       "cumulative_pct": 98.5,
-      "rank": 92
+      "rank": 93
     },
     {
       "name": "Firewatch",
       "hours": 3.5,
       "cumulative_pct": 98.5,
-      "rank": 93
+      "rank": 94
     },
     {
       "name": "Divinity: Original Sin 2",
       "hours": 3.4,
       "cumulative_pct": 98.6,
-      "rank": 94
+      "rank": 95
     },
     {
       "name": "College Kings - The Complete Season",
       "hours": 3.2,
       "cumulative_pct": 98.6,
-      "rank": 95
+      "rank": 96
     },
     {
       "name": "DEVOUR",
       "hours": 3.1,
       "cumulative_pct": 98.7,
-      "rank": 96
+      "rank": 97
     },
     {
       "name": "HITMAN™ 2",
       "hours": 3.0,
       "cumulative_pct": 98.7,
-      "rank": 97
+      "rank": 98
     },
     {
       "name": "UBOAT",
       "hours": 2.7,
       "cumulative_pct": 98.8,
-      "rank": 98
+      "rank": 99
     },
     {
       "name": "Streamer Life Simulator 2",
       "hours": 2.6,
       "cumulative_pct": 98.8,
-      "rank": 99
+      "rank": 100
     },
     {
       "name": "Need for Speed™ Heat ",
       "hours": 2.5,
       "cumulative_pct": 98.9,
-      "rank": 100
+      "rank": 101
     },
     {
       "name": "Command & Conquer™ Remastered Collection",
       "hours": 2.5,
       "cumulative_pct": 98.9,
-      "rank": 101
+      "rank": 102
     },
     {
       "name": "Outlast 2",
       "hours": 2.4,
       "cumulative_pct": 98.9,
-      "rank": 102
+      "rank": 103
     },
     {
       "name": "Metro 2033 Redux",
       "hours": 2.3,
       "cumulative_pct": 99.0,
-      "rank": 103
+      "rank": 104
     },
     {
       "name": "Day of Defeat: Source",
       "hours": 2.3,
       "cumulative_pct": 99.0,
-      "rank": 104
+      "rank": 105
     },
     {
       "name": "Sheltered",
       "hours": 2.3,
-      "cumulative_pct": 99.1,
-      "rank": 105
+      "cumulative_pct": 99.0,
+      "rank": 106
     },
     {
       "name": "Half-Life 2",
       "hours": 2.2,
       "cumulative_pct": 99.1,
-      "rank": 106
+      "rank": 107
     },
     {
       "name": "Portal 2",
       "hours": 2.2,
       "cumulative_pct": 99.1,
-      "rank": 107
+      "rank": 108
     },
     {
       "name": "Shift Happens",
       "hours": 2.2,
       "cumulative_pct": 99.2,
-      "rank": 108
+      "rank": 109
     },
     {
       "name": "MECCHA CHAMELEON",
       "hours": 2.2,
       "cumulative_pct": 99.2,
-      "rank": 109
+      "rank": 110
     },
     {
       "name": "Stronghold Crusader HD",
       "hours": 2.2,
       "cumulative_pct": 99.2,
-      "rank": 110
+      "rank": 111
     },
     {
       "name": "Euro Truck Simulator 2",
       "hours": 2.1,
       "cumulative_pct": 99.3,
-      "rank": 111
+      "rank": 112
     },
     {
       "name": "Baldur's Gate II: Enhanced Edition",
       "hours": 2.1,
       "cumulative_pct": 99.3,
-      "rank": 112
+      "rank": 113
     },
     {
       "name": "Baldur's Gate: Enhanced Edition",
       "hours": 2.1,
       "cumulative_pct": 99.3,
-      "rank": 113
+      "rank": 114
     },
     {
       "name": "Fall Guys",
       "hours": 2.1,
       "cumulative_pct": 99.4,
-      "rank": 114
+      "rank": 115
     },
     {
       "name": "PAYDAY 2",
       "hours": 2.0,
       "cumulative_pct": 99.4,
-      "rank": 115
+      "rank": 116
     },
     {
       "name": "Mortal Sin",
       "hours": 2.0,
       "cumulative_pct": 99.4,
-      "rank": 116
+      "rank": 117
     },
     {
       "name": "Counter-Strike:Global Offensive",
       "hours": 2.0,
       "cumulative_pct": 99.5,
-      "rank": 117
+      "rank": 118
     },
     {
       "name": "Timberborn",
       "hours": 2.0,
       "cumulative_pct": 99.5,
-      "rank": 118
+      "rank": 119
     },
     {
       "name": "Capcom Arcade Stadium",
       "hours": 1.9,
       "cumulative_pct": 99.5,
-      "rank": 119
+      "rank": 120
     },
     {
       "name": "Beholder",
       "hours": 1.9,
       "cumulative_pct": 99.6,
-      "rank": 120
+      "rank": 121
     },
     {
       "name": "Revenge on gold diggers ",
       "hours": 1.5,
       "cumulative_pct": 99.6,
-      "rank": 121
+      "rank": 122
     },
     {
       "name": "Fabledom",
       "hours": 1.3,
       "cumulative_pct": 99.6,
-      "rank": 122
+      "rank": 123
     },
     {
       "name": "These Doomed Isles: The First God",
       "hours": 1.3,
       "cumulative_pct": 99.6,
-      "rank": 123
+      "rank": 124
     },
     {
       "name": "Unturned",
       "hours": 1.3,
       "cumulative_pct": 99.7,
-      "rank": 124
+      "rank": 125
     },
     {
       "name": "Knightfall: A Daring Journey",
       "hours": 1.2,
       "cumulative_pct": 99.7,
-      "rank": 125
+      "rank": 126
     },
     {
       "name": "ARK: Survival Evolved",
       "hours": 1.2,
       "cumulative_pct": 99.7,
-      "rank": 126
+      "rank": 127
     },
     {
       "name": "War of Banners Demo",
       "hours": 1.2,
       "cumulative_pct": 99.7,
-      "rank": 127
+      "rank": 128
     },
     {
       "name": "Citadelum",
       "hours": 1.1,
       "cumulative_pct": 99.7,
-      "rank": 128
+      "rank": 129
     },
     {
       "name": "Internet Cafe Simulator 2",
       "hours": 1.1,
-      "cumulative_pct": 99.8,
-      "rank": 129
+      "cumulative_pct": 99.7,
+      "rank": 130
     },
     {
       "name": "Xenonauts 2",
       "hours": 1.0,
       "cumulative_pct": 99.8,
-      "rank": 130
+      "rank": 131
     },
     {
       "name": "SUMMERHOUSE",
       "hours": 1.0,
       "cumulative_pct": 99.8,
-      "rank": 131
+      "rank": 132
     },
     {
       "name": "Surviving Mars",
       "hours": 1.0,
       "cumulative_pct": 99.8,
-      "rank": 132
+      "rank": 133
     },
     {
       "name": "Divinity: Original Sin Enhanced Edition",
       "hours": 0.9,
       "cumulative_pct": 99.8,
-      "rank": 133
+      "rank": 134
     },
     {
       "name": "Dark and Darker",
       "hours": 0.9,
       "cumulative_pct": 99.8,
-      "rank": 134
+      "rank": 135
     },
     {
       "name": "Halls of Torment Prelude",
       "hours": 0.8,
       "cumulative_pct": 99.8,
-      "rank": 135
+      "rank": 136
     },
     {
       "name": "Pacify",
       "hours": 0.8,
       "cumulative_pct": 99.9,
-      "rank": 136
+      "rank": 137
     },
     {
       "name": "War for the Overworld",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 137
+      "rank": 138
     },
     {
       "name": "Fallout 4",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 138
+      "rank": 139
     },
     {
       "name": "Drawful 2",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 139
+      "rank": 140
     },
     {
       "name": "Goose Goose Duck",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 140
+      "rank": 141
     },
     {
       "name": "KARDS - The WWII Card Game",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 141
+      "rank": 142
     },
     {
       "name": "Slay the Spire",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 142
+      "rank": 143
     },
     {
       "name": "Counter-Strike: Source",
       "hours": 0.5,
       "cumulative_pct": 99.9,
-      "rank": 143
+      "rank": 144
     },
     {
       "name": "Counter-Strike: Condition Zero",
       "hours": 0.4,
       "cumulative_pct": 99.9,
-      "rank": 144
+      "rank": 145
     },
     {
       "name": "World of Warships",
       "hours": 0.4,
       "cumulative_pct": 99.9,
-      "rank": 145
+      "rank": 146
+    },
+    {
+      "name": "STARIO: Haven Tower",
+      "hours": 0.4,
+      "cumulative_pct": 99.9,
+      "rank": 147
     },
     {
       "name": "The Survivalists",
       "hours": 0.4,
       "cumulative_pct": 99.9,
-      "rank": 146
+      "rank": 148
     },
     {
       "name": "Overwatch®",
       "hours": 0.4,
       "cumulative_pct": 100.0,
-      "rank": 147
+      "rank": 149
     },
     {
       "name": "KUNKUN Defender",
       "hours": 0.4,
       "cumulative_pct": 100.0,
-      "rank": 148
+      "rank": 150
     },
     {
       "name": "Gas Station Simulator: Prologue - Early Days",
       "hours": 0.3,
       "cumulative_pct": 100.0,
-      "rank": 149
+      "rank": 151
     },
     {
       "name": "Heroes & Generals",
       "hours": 0.3,
       "cumulative_pct": 100.0,
-      "rank": 150
+      "rank": 152
     },
     {
       "name": "Life is Feudal: Forest Village",
       "hours": 0.3,
       "cumulative_pct": 100.0,
-      "rank": 151
+      "rank": 153
     },
     {
       "name": "Dagon",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 152
+      "rank": 154
     },
     {
       "name": "Alien Swarm: Reactive Drop",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 153
+      "rank": 155
     },
     {
       "name": "Super Bunny Man",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 154
+      "rank": 156
     },
     {
       "name": "X4: Foundations",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 155
+      "rank": 157
     },
     {
       "name": "VTube Studio",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 156
+      "rank": 158
     },
     {
       "name": "iREC",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 157
+      "rank": 159
     },
     {
       "name": "Rubber Bandits: Summer Prologue",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 158
+      "rank": 160
     },
     {
       "name": "Celestial Empire Playtest",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 159
+      "rank": 161
     },
     {
       "name": "Call of Duty®",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 160
+      "rank": 162
     },
     {
       "name": "Stronghold Crusader Extreme HD",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 161
+      "rank": 163
     },
     {
       "name": "Tom Clancy's Rainbow Six Siege - Test Server",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 162
+      "rank": 164
     },
     {
       "name": "Dark and Darker Playtest",
       "hours": 0.0,
       "cumulative_pct": 100.0,
-      "rank": 163
+      "rank": 165
     }
   ],
   "weekday": [
     {
       "day": "Mon",
-      "minutes": 7676
+      "minutes": 8139
     },
     {
       "day": "Tue",
@@ -5033,14 +5088,14 @@
     },
     {
       "day": "Sun",
-      "minutes": 8440
+      "minutes": 8500
     }
   ],
   "stats": {
-    "total_games": 202,
-    "played_games": 163,
-    "dust_rate": 19.3,
-    "never_played": 39,
+    "total_games": 203,
+    "played_games": 165,
+    "dust_rate": 18.7,
+    "never_played": 38,
     "loyalty_score": 40,
     "loyalty_label": "Explorer",
     "peak_day": {
@@ -5071,7 +5126,7 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 758.5,
+      "playtime_hours": 760.2,
       "total": 12,
       "unlocked": 11,
       "pct": 92,
@@ -5842,17 +5897,17 @@
     {
       "genre": "Action",
       "games": 35,
-      "hours": 4747.4
+      "hours": 4749.2
     },
     {
       "genre": "Free To Play",
       "games": 4,
-      "hours": 2791.9
+      "hours": 2793.7
     },
     {
       "genre": "Adventure",
       "games": 26,
-      "hours": 2466.5
+      "hours": 2468.3
     },
     {
       "genre": "RPG",
@@ -5916,40 +5971,82 @@
     }
   ],
   "game_weather": {
-    "forecast": "sunny",
-    "top_game": "Apex Legends",
+    "forecast": "cloudy",
+    "top_game": "Probably Stolen",
     "games": [
       {
+        "name": "Probably Stolen",
+        "hours": 6.5
+      },
+      {
         "name": "Apex Legends",
-        "hours": 1.8
+        "hours": 3.6
       },
       {
         "name": "Fabledom",
         "hours": 1.3
+      },
+      {
+        "name": "STARIO: Haven Tower",
+        "hours": 0.4
       }
     ]
   },
   "weekly_digest": [
     {
       "dates": [
+        "2026-11-02",
         "2026-11-01",
         "2026-10-27",
         "2026-10-10",
         "2026-10-08",
         "2026-10-07",
-        "2026-10-06",
-        "2026-10-05"
+        "2026-10-06"
       ],
-      "total_hours": 23.4,
-      "games_count": 3,
+      "total_hours": 24.4,
+      "games_count": 4,
       "top_games": [
         "Apex Legends",
+        "Probably Stolen",
         "Fabledom",
-        "Counter-Strike 2"
+        "STARIO: Haven Tower"
       ]
     }
   ],
   "game_updates": [
+    {
+      "appid": 400,
+      "game_name": "Portal",
+      "title": "Valve's long-lost prototype Portal prequel appears online after nearly 20 years",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1847920302245555",
+      "date": 1793555087,
+      "feedname": "PC Gamer",
+      "feedlabel": "PC Gamer",
+      "update_type": "Update",
+      "contents": "s reported by <a href=\"https://kotaku.com/valves-cancelled-portal-prequel-f-stop-has-leaked-2000752082\" target=\"_blank\">Kotaku</a>, a near-mythical canceled Valve game called F-Stop has been reconstructed from material contained in separate leaks. Direct access to the build seems a little shaky at the moment, but full playthroughs of the game, like this one by <a href=\"https://youtu.be/mihs6K2ynCs?si=xoZXp2hR3YUe4lGK\" target=\"_blank\">Meme Man? on YouTube</a>, are starting to pop up online... <a href=\"https://www.pcgamer.com/games/fps/valves-long-lost-prototype-portal-prequel-appears-online-after-nearly-20-years/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
+    },
+    {
+      "appid": 1363080,
+      "game_name": "Manor Lords",
+      "title": "Manor Lords becomes \"Manure Lords\" in a stinky new update for the medieval city builder",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1847920302245315",
+      "date": 1793548819,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Update",
+      "contents": "A new Manor Lords update brings several more features to the stable branch, including dung collection, fertilization, and seasonal crops. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/manor-lords/update-farming-dung-seasonal-crops\">Manor Lords becomes \"Manure Lords\" in a stinky new update for the medieval city builder</a> "
+    },
+    {
+      "appid": 704850,
+      "game_name": "Thief Simulator",
+      "title": "Private Collection DLC is coming to Thief Simulator!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302243373",
+      "date": 1793480630,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Thief Simulator: Private Collection is coming this November! We've spent the last months building four villas full of things that are very much not yours.What's coming up:🏛️ Raven Hills: a new area with 4 collectors' villas, each a slightly different approach, 🔧 New tools of the trade: Case Cutter, Sensor Spoofer, Conservator's Kit, Courier Cases, 🔒 Museum-grade security: display cases, pressure pads, frame alarms, lasers, 🗿 16 masterpieces worth a fortune: if you can get them out in one piece,& some extra jobs to do, alongside a long due bugfixes patch.Wishlist now! 👉 "
+    },
     {
       "appid": 1422450,
       "game_name": "Deadlock",
@@ -5970,7 +6067,7 @@
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
-      "contents": "Operators, High Command calls upon you once again. A new mission demands your service. The second free Skirmish mission \"Ground Truth\" is now available. Enemy anti-aircraft batteries are concealed across the city, and Castilian frontline units are relying on your fire support. Follow their reports and locate hidden enemy positions. ChangelogVersion 1.0 (1739) ADDED:💥 \"GROUND TRUTH\" - NEW CHILL SKIRMISH MISSION 💥FIXED:Incorrect date on \"Iron Road\" newspaper; Field reports unreadable text going off the paper for Cyrillic font on long missions; Trigger console animation glitch resulting in it being stuck in an unfireable position; Gold medal achievement unobtainable in \"Phantom Battery\" without killing friendly units. Previous patches: Patch #8] • \\Patch #7] • \\Patch #6] • \\Patch #5] • \\Patch..."
+      "contents": "Operators, High Command calls upon you once again. A new mission demands your service. The second free Skirmish mission \"Ground Truth\" is now available. Enemy anti-aircraft batteries are concealed across the city, and Castilian frontline units are relying on your fire support. Follow their reports and locate hidden enemy positions. ChangelogVersion 1.0 (1742) ADDED:💥 \"GROUND TRUTH\" - NEW CHILL SKIRMISH MISSION 💥FIXED:Incorrect date on \"Iron Road\" newspaper; Field reports unreadable text going off the paper for Cyrillic font on long missions; Trigger console animation glitch resulting in it being stuck in an unfireable position; Gold medal achievement unobtainable in \"Phantom Battery\" without killing friendly units. Previous patches: \\Patch #8] • \\Patch #7] • \\Patch #6] • \\Patch #5] • \\Patc..."
     },
     {
       "appid": 553850,
@@ -5993,6 +6090,17 @@
       "feedlabel": "Community Announcements",
       "update_type": "Update",
       "contents": "Major ChangesNew Development Perks: Added “Rural Foundations” Perk Category with six new perks, unlockable at Settlement Level 3.New Artisan: Fishmonger. Produces Smoked Fish from Fish and Salt.New Building: Dunghill. Assigned Families (Dung Collector) collect Dung and produce Fertilizer. Dung & Fertilizer may only be stored at the Dunghill.Dung Production: Pasture Animals produce Dung at various rates depending on the animal.Fertilization: Farmhouse workers can boost a Fallow Field’s Maximum Fertility by applying Fertilizer during Summer. Fertilizer lasts for just over 2 years.Seasonal Crops: Officially split Crops into Winter and Spring and strictly allow farming tasks in their appropriate months.Wheat & Rye are Winter crops, but can optionally be sown in Spring for quicker return, but l..."
+    },
+    {
+      "appid": 4348910,
+      "game_name": "Probably Stolen",
+      "title": "Modding Security Update - 1.0.0.6",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302241521",
+      "date": 1793433679,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "New Feature Security update for the modding system. Changes Added a \"Menu / Back\" key binding in Options: a second key that does everything Esc does. Note: This update makes changes to the modding system to improve security. Some mods may break and will need to be updated by their authors."
     },
     {
       "appid": 322330,
@@ -6169,55 +6277,11 @@
       "feedlabel": "Community Announcements",
       "update_type": "Update",
       "contents": "As part of the 8AM series, this new entry takes players into a graveyard environment where observation, attention to detail, and quick decision-making are essential. Players will monitor camera feeds, identify anomalies, and report anything that should not be there before the situation escalates.With only one month remaining until release, we invite you to add 8AM: The Graveyard to your Steam wishlist and follow the game to stay updated ahead of launch.Thank you for your continued support."
-    },
-    {
-      "appid": 4704690,
-      "game_name": "MECCHA CHAMELEON",
-      "title": "BIG UPDATE 4.2.0",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302231374",
-      "date": 1793200104,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "・Added new mode: “Team Battle” ・Added new maps: “Chaotic Kitchen” and “Paper Island” ・Added new body types: “Macho,” “Octopus,” and “Polygon”・Changed the main UI ・Added Overlook Lines (can be toggled in Options) ・Adjusted random map selection so the same map is not chosen twice in a row ・Changed the body selection screen ・Adjusted Overlook Points earned from clones to 1/2 of those earned from the original body・Fixed an issue where the host could not earn Discovery Points ・Fixed a rare issue where clones could not be removed ・Reduced clone cooldown from 45 seconds to 5 seconds ・Reduced network traffic ・Fixed an issue where Petit Chameleon could be used through certain actions even when it was not allowed ・Fixed an issue where characters moved up and down when close to each other ・Fixed an i..."
-    },
-    {
-      "appid": 282800,
-      "game_name": "100% Orange Juice",
-      "title": "Version 3.30.1 Hotfix Now Live!",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302230921",
-      "date": 1793193312,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Changes: Fixes avatar not walking up in the main menu and saying hello. Trick and Treat now allows purchasing limited time cosmetics for unowned characters (unowned DLC and base characters), to bring it in line with our current approach to these events."
-    },
-    {
-      "appid": 1787090,
-      "game_name": "MyDockFinder",
-      "title": "1.19 Official Version and Beta Version Release",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302230723",
-      "date": 1793189145,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "This update has the same version for both the official release and the betaThis time we're only adding a test for the dock background liquid glass. Both the official and beta channels are fine, but you'll need to add the configuration file manually because this feature isn't finished yet. There might be a lot of bugs, so it's just for trying out. Turning on liquid glass will increase GPU usage since it keeps taking screenshots in the background. If you're gaming, it's recommended to turn it off.Changelog Added dock background liquid glass configuration. You need to manually add dockbgtype=1 under \\ in config.ini. After restarting, the dock background liquid glass effect can be enabled.Brand new compilation method, program instruction set changed to AVX.Completely new dock icon rendering me..."
-    },
-    {
-      "appid": 2016590,
-      "game_name": "Dark and Darker",
-      "title": "Early Access Hotfix #130",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847920302229744",
-      "date": 1793167209,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Greetings, Adventurers!Arena Season #4 begins on October 30.Starting this season, Arena will be divided into Individual Arena, where players compete solo, and Party Arena, where players compete in premade teams of three. This change is intended to provide more distinct competitive environments for players looking to test their individual combat skills or their teamwork and coordination.We've also updated the Arena item retention rules. Items found or crafted by any character on your account will now be retained after a loss, regardless of which character you use in the Arena. Additionally, item tooltips have been improved to make it easier to identify which items are eligible for retention.We've also increased matchmaking restrictions for players penalized for team killing to strengthen pe..."
     }
   ],
   "social_presence": {
-    "window_start": "2026-10-25T04:31:10.041865+08:00",
-    "window_end": "2026-11-01T04:31:10.041865+08:00",
+    "window_start": "2026-10-26T05:16:41.991196+08:00",
+    "window_end": "2026-11-02T05:16:41.991196+08:00",
     "members": [
       {
         "id": "self",
@@ -6226,15 +6290,37 @@
         "avatarfull": "",
         "profileurl": "",
         "is_self": true,
-        "last_seen_at": "2026-11-01T03:30:10.764353+08:00",
+        "last_seen_at": "2026-11-02T04:46:59.468443+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:10.764353+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
+          "timestamp": "2026-11-02T04:46:59.468443+08:00",
+          "online": true,
+          "game": "Probably Stolen",
+          "gameid": "4348910",
+          "playing": true
         },
-        "segments": []
+        "segments": [
+          {
+            "start": "2026-11-01T17:08:23.649805+08:00",
+            "end": "2026-11-01T17:23:23.649805+08:00",
+            "status": "playing",
+            "game": "Apex Legends",
+            "gameid": "1172470"
+          },
+          {
+            "start": "2026-11-02T00:16:57.218744+08:00",
+            "end": "2026-11-02T00:31:57.218744+08:00",
+            "status": "playing",
+            "game": "Probably Stolen",
+            "gameid": "4348910"
+          },
+          {
+            "start": "2026-11-02T04:46:59.468443+08:00",
+            "end": "2026-11-02T05:01:59.468443+08:00",
+            "status": "playing",
+            "game": "Probably Stolen",
+            "gameid": "4348910"
+          }
+        ]
       },
       {
         "id": "76561198261996858",
@@ -6243,22 +6329,15 @@
         "avatarfull": "https://avatars.steamstatic.com/0594730392a4405ffc59375bb5bc3be38f3b7337_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1430963765/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": true,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-10-25T21:53:15.690334+08:00",
-            "end": "2026-10-25T22:08:15.690334+08:00",
-            "status": "playing",
-            "game": "Call of Duty®",
-            "gameid": "1938090"
-          },
           {
             "start": "2026-10-27T22:52:11.399792+08:00",
             "end": "2026-10-27T23:07:11.399792+08:00",
@@ -6290,32 +6369,15 @@
         ]
       },
       {
-        "id": "76561198295506047",
-        "steamid": "76561198295506047",
-        "name": "Wuhen303",
-        "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198295506047/",
-        "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
-        "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
-          "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
         "id": "76561198365517134",
         "steamid": "76561198365517134",
         "name": "Ichabod Morningstar",
         "avatarfull": "https://avatars.steamstatic.com/febdf0766bfe6668b76bcb4b3d35dd15ab3999e4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198365517134/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -6335,8 +6397,32 @@
             "status": "playing",
             "game": "Delta Force",
             "gameid": "2507950"
+          },
+          {
+            "start": "2026-11-02T00:16:59.963276+08:00",
+            "end": "2026-11-02T00:31:59.963276+08:00",
+            "status": "playing",
+            "game": "Delta Force",
+            "gameid": "2507950"
           }
         ]
+      },
+      {
+        "id": "76561198835815502",
+        "steamid": "76561198835815502",
+        "name": "狗剩",
+        "avatarfull": "https://avatars.steamstatic.com/66c72a56e810e1c21b29cd47ebc96366f621b880_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198835815502/",
+        "is_self": false,
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
+        "current": {
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
+          "online": true,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
       },
       {
         "id": "76561198852270175",
@@ -6345,64 +6431,15 @@
         "avatarfull": "https://avatars.steamstatic.com/40bf29a0a7d3e4a36e64456677985317e46ff3de_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198852270175/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": true,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": []
-      },
-      {
-        "id": "76561199189466907",
-        "steamid": "76561199189466907",
-        "name": "Eason",
-        "avatarfull": "https://avatars.steamstatic.com/acacec54c2cb39d998efbca9d09aa8295300b935_full.jpg",
-        "profileurl": "https://steamcommunity.com/id/1918619816/",
-        "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
-        "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
-          "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
-        "id": "76561199212735309",
-        "steamid": "76561199212735309",
-        "name": "太刀型呆猫",
-        "avatarfull": "https://avatars.steamstatic.com/bb00fc2cf902355cfe824b030e4ebe9b3d0e3b14_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561199212735309/",
-        "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
-        "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
-          "online": true,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": [
-          {
-            "start": "2026-10-29T23:29:41.658754+08:00",
-            "end": "2026-10-29T23:44:41.658754+08:00",
-            "status": "playing",
-            "game": "Phantom Blade Zero",
-            "gameid": "4115450"
-          },
-          {
-            "start": "2026-10-30T21:27:41.095285+08:00",
-            "end": "2026-10-30T21:42:41.095285+08:00",
-            "status": "playing",
-            "game": "Phantom Blade Zero",
-            "gameid": "4115450"
-          }
-        ]
       },
       {
         "id": "76561199223192140",
@@ -6411,9 +6448,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ffc06397744cc94e908766d13978e684f122bcb8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199223192140/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": true,
           "game": "",
           "gameid": "",
@@ -6436,9 +6473,9 @@
         "avatarfull": "https://avatars.steamstatic.com/88c582db5d11cff9967db2673866294336eb5541_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198193795227/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6453,9 +6490,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198287273887/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6470,9 +6507,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e07ee377518079efd3fdc3e92f3ae07da8705b0e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198288081892/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6481,15 +6518,47 @@
         "segments": []
       },
       {
+        "id": "76561198295506047",
+        "steamid": "76561198295506047",
+        "name": "Wuhen303",
+        "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198295506047/",
+        "is_self": false,
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
+        "current": {
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
+          "online": false,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": [
+          {
+            "start": "2026-11-01T17:08:27.366281+08:00",
+            "end": "2026-11-01T17:23:27.366281+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          },
+          {
+            "start": "2026-11-02T00:16:59.963276+08:00",
+            "end": "2026-11-02T00:31:59.963276+08:00",
+            "status": "playing",
+            "game": "Street Fighter™ 6",
+            "gameid": "1364780"
+          }
+        ]
+      },
+      {
         "id": "76561198297254647",
         "steamid": "76561198297254647",
         "name": "Kningc",
         "avatarfull": "https://avatars.steamstatic.com/6a0f301f7a7811d73c94d652237a732315cc0072_full.jpg",
         "profileurl": "https://steamcommunity.com/id/zhining2003/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6504,9 +6573,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9db4379c2531f5accd95570c7ac358f7169393dc_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311844129/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6521,23 +6590,15 @@
         "avatarfull": "https://avatars.steamstatic.com/fa8a4de374f1e716b6a7607fd74319fd0cdf936e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198311885845/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": [
-          {
-            "start": "2026-10-25T12:29:42.012466+08:00",
-            "end": "2026-10-25T12:44:42.012466+08:00",
-            "status": "playing",
-            "game": "Raft",
-            "gameid": "648800"
-          }
-        ]
+        "segments": []
       },
       {
         "id": "76561198327290414",
@@ -6546,9 +6607,9 @@
         "avatarfull": "https://avatars.steamstatic.com/7904882166fd95d68aa426a26ccac7753ea0f82e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198327290414/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6563,9 +6624,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198374143385/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6580,22 +6641,15 @@
         "avatarfull": "https://avatars.steamstatic.com/76c2c57990ae1af551df7337b66debf3946cccbc_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198390929632/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
         "segments": [
-          {
-            "start": "2026-10-25T17:20:45.510539+08:00",
-            "end": "2026-10-25T17:35:45.510539+08:00",
-            "status": "playing",
-            "game": "Don't Starve Together",
-            "gameid": "322330"
-          },
           {
             "start": "2026-10-28T19:34:09.124965+08:00",
             "end": "2026-10-28T19:49:09.124965+08:00",
@@ -6626,9 +6680,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e0fca1e09e6d16082f4c9ced7f25c2b54b52f097_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198399124819/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6643,26 +6697,9 @@
         "avatarfull": "https://avatars.steamstatic.com/2de28b0248926290e5c47193aaae12afdcfd64a1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198429741002/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
-          "online": false,
-          "game": "",
-          "gameid": "",
-          "playing": false
-        },
-        "segments": []
-      },
-      {
-        "id": "76561198835815502",
-        "steamid": "76561198835815502",
-        "name": "狗剩",
-        "avatarfull": "https://avatars.steamstatic.com/66c72a56e810e1c21b29cd47ebc96366f621b880_full.jpg",
-        "profileurl": "https://steamcommunity.com/profiles/76561198835815502/",
-        "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
-        "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6677,9 +6714,9 @@
         "avatarfull": "https://avatars.steamstatic.com/90281bcb08a9d28ef4c343c5f6b8b75f093e4a9b_full.jpg",
         "profileurl": "https://steamcommunity.com/id/1335689384/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6709,9 +6746,9 @@
         "avatarfull": "https://avatars.steamstatic.com/cbc910b68a51cfb6b2824ef6f0039b3415b3c7ac_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561198864549038/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6726,9 +6763,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ba09f9d6f89a7bc6b40bc2301f6e81ccbd181d42_full.jpg",
         "profileurl": "https://steamcommunity.com/id/2916511428/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6743,9 +6780,9 @@
         "avatarfull": "https://avatars.steamstatic.com/f46a7ef0f2d3cb1c5c83d33525b17924963b28d8_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199031439722/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6760,9 +6797,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8bbefbbf3fd390ef47bc80ca022b5a79b2430835_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199037013836/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6777,9 +6814,9 @@
         "avatarfull": "https://avatars.steamstatic.com/e9d248c0e1db4982e5f91da0fd51cd7b653659fa_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199069419608/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6794,9 +6831,9 @@
         "avatarfull": "https://avatars.steamstatic.com/2ee39ef9a8b79dd93c23c2fc82c635a58c7aa94a_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199079104056/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6811,9 +6848,9 @@
         "avatarfull": "https://avatars.steamstatic.com/9fa5f109a7ae3611b68f8ecfb382962a3f90c10e_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199112121158/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6828,9 +6865,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179314468/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6845,9 +6882,9 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199179790448/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6862,9 +6899,9 @@
         "avatarfull": "https://avatars.steamstatic.com/0f330f09e2a9a91c1714349a3211b88226f869d5_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199180168949/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6887,9 +6924,9 @@
         "avatarfull": "https://avatars.steamstatic.com/3eef8f740583f434badd193aa6ee195e5077fd9b_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184636102/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6904,9 +6941,9 @@
         "avatarfull": "https://avatars.steamstatic.com/a00d822111fbffeca6c71f08f656e7c679b09345_full.jpg",
         "profileurl": "https://steamcommunity.com/id/_ver0nika_/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6957,9 +6994,26 @@
         "avatarfull": "https://avatars.steamstatic.com/88d338a8cfdfe1d2d072413cc4112ee2d710bc18_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199184830382/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
+          "online": false,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": []
+      },
+      {
+        "id": "76561199189466907",
+        "steamid": "76561199189466907",
+        "name": "Eason",
+        "avatarfull": "https://avatars.steamstatic.com/acacec54c2cb39d998efbca9d09aa8295300b935_full.jpg",
+        "profileurl": "https://steamcommunity.com/id/1918619816/",
+        "is_self": false,
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
+        "current": {
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6974,9 +7028,9 @@
         "avatarfull": "https://avatars.steamstatic.com/4f05eabf7f40a32a42ecb6cfa5cadb8b681c4071_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199192859169/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -6991,9 +7045,9 @@
         "avatarfull": "https://avatars.steamstatic.com/31e5c6487abc19175aeab59a3e83ad4deac393b1_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199194550728/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7008,9 +7062,9 @@
         "avatarfull": "https://avatars.steamstatic.com/ed77ac403e526c32ce2c3d4d7251340721253802_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199206700253/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7019,15 +7073,47 @@
         "segments": []
       },
       {
+        "id": "76561199212735309",
+        "steamid": "76561199212735309",
+        "name": "太刀型呆猫",
+        "avatarfull": "https://avatars.steamstatic.com/bb00fc2cf902355cfe824b030e4ebe9b3d0e3b14_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561199212735309/",
+        "is_self": false,
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
+        "current": {
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
+          "online": false,
+          "game": "",
+          "gameid": "",
+          "playing": false
+        },
+        "segments": [
+          {
+            "start": "2026-10-29T23:29:41.658754+08:00",
+            "end": "2026-10-29T23:44:41.658754+08:00",
+            "status": "playing",
+            "game": "Phantom Blade Zero",
+            "gameid": "4115450"
+          },
+          {
+            "start": "2026-10-30T21:27:41.095285+08:00",
+            "end": "2026-10-30T21:42:41.095285+08:00",
+            "status": "playing",
+            "game": "Phantom Blade Zero",
+            "gameid": "4115450"
+          }
+        ]
+      },
+      {
         "id": "76561199244274077",
         "steamid": "76561199244274077",
         "name": "Key",
         "avatarfull": "https://avatars.steamstatic.com/75ac698f154245e3a21dae1e37bed893bcbebacf_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244274077/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7042,9 +7128,9 @@
         "avatarfull": "https://avatars.steamstatic.com/8b1bc1e6b6f881b7a319c5ec5d5f7b5f0954def4_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199244382639/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7059,15 +7145,23 @@
         "avatarfull": "https://avatars.steamstatic.com/ee0e6adb9c075b0b40cbedba2f8699d1c040ca6c_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199387781925/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
           "playing": false
         },
-        "segments": []
+        "segments": [
+          {
+            "start": "2026-11-02T00:16:59.963276+08:00",
+            "end": "2026-11-02T00:31:59.963276+08:00",
+            "status": "playing",
+            "game": "Counter-Strike 2",
+            "gameid": "730"
+          }
+        ]
       },
       {
         "id": "76561199549273997",
@@ -7076,9 +7170,9 @@
         "avatarfull": "https://avatars.steamstatic.com/289031dd2e5c0cf6a3b38afdc112d39e2ca77a3d_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199549273997/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
@@ -7093,9 +7187,9 @@
         "avatarfull": "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg",
         "profileurl": "https://steamcommunity.com/profiles/76561199181498419/",
         "is_self": false,
-        "last_seen_at": "2026-11-01T03:30:14.304565+08:00",
+        "last_seen_at": "2026-11-02T04:47:03.317445+08:00",
         "current": {
-          "timestamp": "2026-11-01T03:30:14.304565+08:00",
+          "timestamp": "2026-11-02T04:47:03.317445+08:00",
           "online": false,
           "game": "",
           "gameid": "",
