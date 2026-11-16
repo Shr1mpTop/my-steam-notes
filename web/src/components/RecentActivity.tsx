@@ -9,52 +9,61 @@ import {
 } from "recharts";
 import type { RecentActivityItem } from "../types";
 import { useLocale } from "../useLocale";
+import { dataColor } from "../lib/palette";
+import { truncate } from "../lib/format";
+import { CHART_TOOLTIP_STYLE } from "../lib/ui-constants";
+import { Panel } from "./ui";
 
 interface Props {
   activity: RecentActivityItem[];
 }
 
-const COLORS = [
-  "var(--palette-0)", "var(--palette-1)", "var(--palette-2)", "var(--palette-3)",
-  "var(--palette-4)", "var(--palette-5)", "var(--palette-6)", "var(--palette-7)",
-];
-
 export function RecentActivity({ activity }: Props) {
   const { t } = useLocale();
-  if (!activity.length) return <p>{t("noRecentActivity")}</p>;
+  if (!activity.length) return null;
 
   const data = activity
     .map((g) => ({
       ...g,
-      label: g.name.length > 18 ? g.name.slice(0, 17) + "…" : g.name,
+      label: truncate(g.name, 18),
+      color: dataColor(`${g.appid}:${g.name}`),
     }))
     .reverse();
 
   return (
-    <div className="recent-activity">
-      <h2>{t("recentActivity")}</h2>
-      <p className="subtitle">{t("recentActivitySubtitle")}</p>
-      <ResponsiveContainer width="100%" height={activity.length * 44 + 40}>
-        <BarChart data={data} layout="vertical" margin={{ left: 120, right: 30 }}>
-          <XAxis type="number" unit="h" tick={{ fill: "var(--chart-axis)", fontSize: 10 }} axisLine={{ stroke: "var(--chart-grid)" }} tickLine={{ stroke: "var(--chart-grid)" }} />
-          <YAxis
-            type="category"
-            dataKey="label"
-            width={110}
-            tick={{ fill: "var(--text-muted)", fontSize: 10 }}
-          />
-          <Tooltip
-            formatter={(v) => [`${v}h`, t("twoWeekPlaytime")]}
-            contentStyle={{ background: "var(--tooltip-bg)", border: "1px solid var(--tooltip-border)", borderRadius: 8, color: "var(--tooltip-text)" }}
-            labelStyle={{ color: "var(--chart-accent)" }}
-          />
-          <Bar dataKey="playtime_2weeks_hours" radius={[0, 0, 0, 0]}>
-            {data.map((_, i) => (
-              <Cell key={i} fill={COLORS[i % COLORS.length]} />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
-    </div>
+    <Panel kicker={t("kickRecent")} title={t("recentActivity")} sub={t("recentActivitySubtitle")} delay={0.18}>
+      <div className="recent-chart">
+        <ResponsiveContainer width="100%" height={Math.max(activity.length * 34 + 30, 220)}>
+          <BarChart data={data} layout="vertical" margin={{ left: 0, right: 24, top: 4, bottom: 0 }}>
+            <XAxis
+              type="number"
+              unit="h"
+              tick={{ fill: "var(--chart-axis)", fontSize: 10 }}
+              axisLine={{ stroke: "var(--chart-grid)" }}
+              tickLine={false}
+            />
+            <YAxis
+              type="category"
+              dataKey="label"
+              width={118}
+              tick={{ fill: "var(--text-3)", fontSize: 10.5 }}
+              axisLine={false}
+              tickLine={false}
+            />
+            <Tooltip
+              formatter={(v) => [`${v}h`, t("twoWeekPlaytime")]}
+              contentStyle={CHART_TOOLTIP_STYLE}
+              labelStyle={{ color: "var(--accent-hi)", fontWeight: 600 }}
+              cursor={{ fill: "rgba(255,255,255,0.05)" }}
+            />
+            <Bar dataKey="playtime_2weeks_hours" radius={[3, 3, 3, 3]} barSize={14} background={{ fill: "rgba(255,255,255,0.03)", radius: 3 }}>
+              {data.map((d) => (
+                <Cell key={d.appid} fill={d.color} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </Panel>
   );
 }

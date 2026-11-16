@@ -5,3 +5,6 @@ __pycache__/
 steam_data.db
 node_modules/
 web/dist/
+data/trigger-rebuild
+data/collector-status.json
+phone/steam-collector/steam.db*

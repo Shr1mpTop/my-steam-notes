@@ -3,6 +3,9 @@ import type { MouseEvent } from "react";
 import { createPortal } from "react-dom";
 import type { HeatmapDay, TimeHeatmapItem, WeekdayItem } from "../types";
 import { useLocale } from "../useLocale";
+import { heatColorRatio } from "../lib/palette";
+import { fmtMinutes } from "../lib/format";
+import { Panel } from "./ui";
 
 interface TimeHeatmapProps { data: TimeHeatmapItem[]; }
 interface WeekdayProps { data: WeekdayItem[]; heatmap?: Record<string, HeatmapDay>; }
@@ -23,19 +26,8 @@ function weekdayIndex(date: string) {
   return nativeDay === 0 ? 6 : nativeDay - 1;
 }
 
-function formatHours(minutes: number) {
-  return minutes >= 60 ? `${(minutes / 60).toFixed(1)}h` : `${Math.round(minutes)}m`;
-}
-
 function playtimeMinutes(entry: HeatmapDay) {
   return entry.playtime_minutes ?? entry.online_minutes ?? 0;
-}
-
-function heatColor(intensity: number) {
-  if (intensity <= 0.33) return "rgba(250, 204, 21, 0.36)";
-  if (intensity <= 0.62) return "rgba(251, 146, 60, 0.62)";
-  if (intensity <= 0.86) return "rgba(239, 68, 68, 0.82)";
-  return "rgba(185, 28, 28, 1)";
 }
 
 export function TimeHeatmap({ data }: TimeHeatmapProps) {
@@ -69,9 +61,7 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
     : [];
 
   return (
-    <div className="viz-card">
-      <h3>{t("whenYouPlay")}</h3>
-      <p className="viz-subtitle">{t("timeHeatmapSubtitle")}</p>
+    <Panel kicker={t("kickTime")} title={t("whenYouPlay")} sub={t("timeHeatmapSubtitle")} delay={0.1}>
       <div className="time-heatmap" onMouseLeave={() => setTooltip(null)}>
         <div className="th-labels-y">
           {DAYS.map((d) => <span key={d}>{d}</span>)}
@@ -88,11 +78,9 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
                     key={hour}
                     className="th-cell"
                     style={{
-                      background: count > 0
-                        ? heatColor(intensity)
-                        : "var(--heatmap-empty)",
+                      background: count > 0 ? heatColorRatio(intensity) : "var(--heat-empty)",
                     }}
-                    aria-label={`${DAYS[dow]} ${hour}:00 — ${formatHours(count)} ${t("playtime")}`}
+                    aria-label={`${DAYS[dow]} ${hour}:00 — ${fmtMinutes(count)} ${t("playtime")}`}
                     onMouseEnter={(event) => placeTooltip(event, dow, hour, item)}
                     onMouseMove={(event) => placeTooltip(event, dow, hour, item)}
                   />
@@ -101,7 +89,7 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
             </div>
           ))}
         </div>
-        <div className="th-labels-x">
+        <div className="th-labels-x" style={{ gridColumn: "2" }}>
           {HOURS.map((h) => <span key={h}>{h % 3 === 0 ? `${h}h` : ""}</span>)}
         </div>
       </div>
@@ -110,7 +98,7 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
           <div className="time-tooltip-title">{tooltip.label}</div>
           <div className="time-tooltip-row">
             <span>{t("playtime")}</span>
-            <strong>{formatHours(tooltip.item.count)}</strong>
+            <strong>{fmtMinutes(tooltip.item.count)}</strong>
           </div>
           <div className="time-tooltip-section">{t("gameBreakdown")}</div>
           <div className="time-tooltip-games">
@@ -118,14 +106,14 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
               ? tooltipGames.map(([name, minutes]) => (
                 <div key={name} className="time-tooltip-game">
                   <span>{name}</span>
-                  <strong>{formatHours(minutes)}</strong>
+                  <strong>{fmtMinutes(minutes)}</strong>
                 </div>
               ))
               : <span className="time-tooltip-empty">{t("noGameDetail")}</span>}
           </div>
         </div>
       ), document.body)}
-    </div>
+    </Panel>
   );
 }
 
@@ -153,7 +141,8 @@ export function GamingClock({ data }: ClockProps) {
   });
   const historicalPoints = clockPoints(historicalCounts, historicalMax);
   const recentPoints = clockPoints(recentCounts, recentMax);
-  const pathD = (points: typeof historicalPoints) => points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ") + " Z";
+  const pathD = (points: typeof historicalPoints) =>
+    points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ") + " Z";
   const hourLabels = Array.from({ length: 12 }, (_, i) => {
     const hour = i * 2;
     const angle = ((hour - 6) / 24) * 2 * Math.PI - Math.PI / 2;
@@ -161,21 +150,27 @@ export function GamingClock({ data }: ClockProps) {
   });
 
   return (
-    <div className="viz-card">
-      <h3>{t("gamingClock")}</h3>
-      <p className="viz-subtitle">{t("gamingClockSubtitle")}</p>
+    <Panel kicker={t("kickTime")} title={t("gamingClock")} sub={t("gamingClockSubtitle")} delay={0.14}>
       <div className="gaming-clock-wrap">
-        <svg viewBox="0 0 240 240" width="240" height="240" className="gaming-clock">
+        <svg viewBox="0 0 240 240" width="240" height="240" className="gaming-clock" aria-hidden="true">
           <circle cx={cx} cy={cy} r={r} fill="none" stroke="var(--chart-grid)" strokeWidth="1" />
-          <circle cx={cx} cy={cy} r={r * 0.65} fill="none" stroke="var(--grid)" strokeWidth="1" />
-          <circle cx={cx} cy={cy} r={r * 0.3} fill="none" stroke="var(--grid)" strokeWidth="1" />
-          {hourLabels.map((l) => <text key={l.label} x={l.x} y={l.y} textAnchor="middle" dominantBaseline="middle" fill="var(--text-muted)" fontSize="9">{l.label}</text>)}
+          <circle cx={cx} cy={cy} r={r * 0.65} fill="none" stroke="var(--chart-grid)" strokeWidth="1" />
+          <circle cx={cx} cy={cy} r={r * 0.3} fill="none" stroke="var(--chart-grid)" strokeWidth="1" />
+          {hourLabels.map((l) => (
+            <text key={l.label} x={l.x} y={l.y} textAnchor="middle" dominantBaseline="middle" fill="var(--chart-axis)" fontSize="9">
+              {l.label}
+            </text>
+          ))}
           <path d={pathD(historicalPoints)} className="clock-area clock-area--average" />
           <path d={pathD(historicalPoints)} className="clock-line clock-line--average" />
           {hasRecent && <path d={pathD(recentPoints)} className="clock-area clock-area--recent" />}
           {hasRecent && <path d={pathD(recentPoints)} className="clock-line clock-line--recent" />}
-          {historicalPoints.map((p) => p.count > 0 && <circle key={`avg-${p.hour}`} cx={p.x} cy={p.y} r="2.5" className="clock-dot clock-dot--average" />)}
-          {hasRecent && recentPoints.map((p) => p.count > 0 && <circle key={`recent-${p.hour}`} cx={p.x} cy={p.y} r="3" className="clock-dot clock-dot--recent" />)}
+          {historicalPoints.map((p) => (
+            p.count > 0 && <circle key={`avg-${p.hour}`} cx={p.x} cy={p.y} r="2" className="clock-dot clock-dot--average" />
+          ))}
+          {hasRecent && recentPoints.map((p) => (
+            p.count > 0 && <circle key={`recent-${p.hour}`} cx={p.x} cy={p.y} r="2.5" className="clock-dot clock-dot--recent" />
+          ))}
         </svg>
         <div className="gaming-clock-legend">
           <span className="clock-legend-item">
@@ -188,7 +183,7 @@ export function GamingClock({ data }: ClockProps) {
           </span>
         </div>
       </div>
-    </div>
+    </Panel>
   );
 }
 
@@ -206,21 +201,22 @@ export function WeekdayChart({ data, heatmap }: WeekdayProps) {
   }, [data, heatmap]);
 
   const maxMin = Math.max(...chartData.map((d) => d.minutes), 1);
+
   return (
-    <div className="viz-card">
-      <h3>{t("weekdayPreference")}</h3>
-      <p className="viz-subtitle">{t("weekdaySubtitle")}</p>
+    <Panel kicker={t("kickTime")} title={t("weekdayPreference")} sub={t("weekdaySubtitle")} delay={0.18}>
       <div className="weekday-bars">
         {chartData.map((d) => (
           <div key={d.day} className="weekday-bar-col">
+            <span className="weekday-value">
+              {d.minutes > 60 ? `${Math.round(d.minutes / 60)}h` : `${Math.round(d.minutes)}m`}
+            </span>
             <div className="weekday-bar-track">
               <div className="weekday-bar-fill" style={{ height: `${(d.minutes / maxMin) * 100}%` }} />
             </div>
             <span className="weekday-label">{d.day}</span>
-            <span className="weekday-value">{d.minutes > 60 ? `${(d.minutes / 60).toFixed(0)}h` : `${d.minutes}m`}</span>
           </div>
         ))}
       </div>
-    </div>
+    </Panel>
   );
 }

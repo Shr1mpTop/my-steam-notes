@@ -23,6 +23,23 @@ const chartVendorPackages = [
   '/node_modules/react-is/',
   '/node_modules/tiny-invariant/',
 ]
+const threeVendorPackages = [
+  '/node_modules/three/',
+  '/node_modules/@react-three/',
+  '/node_modules/its-fine/',
+  '/node_modules/zustand/',
+  '/node_modules/suspend-react/',
+  '/node_modules/three-stdlib/',
+  '/node_modules/troika-',
+  '/node_modules/unicode-',
+  '/node_modules/bidi-js/',
+]
+const motionVendorPackages = [
+  '/node_modules/framer-motion/',
+  '/node_modules/motion-dom/',
+  '/node_modules/motion-utils/',
+  '/node_modules/tslib/',
+]
 
 function dashboardDataPlugin(): Plugin {
   return {
@@ -55,6 +72,8 @@ export default defineConfig({
     rolldownOptions: {
       output: {
         manualChunks(id) {
+          if (threeVendorPackages.some((pkg) => id.includes(pkg))) return 'three-vendor'
+          if (motionVendorPackages.some((pkg) => id.includes(pkg))) return 'motion'
           return chartVendorPackages.some((pkg) => id.includes(pkg)) ? 'recharts' : undefined
         },
       },

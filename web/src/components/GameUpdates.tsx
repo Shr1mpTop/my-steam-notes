@@ -1,5 +1,6 @@
 import type { GameUpdateItem } from "../types";
 import { useLocale } from "../useLocale";
+import { Reveal } from "./ui";
 
 interface Props {
   updates: GameUpdateItem[];
@@ -29,39 +30,37 @@ function cleanUpdateText(text: string) {
 
 function previewText(text: string) {
   const clean = cleanUpdateText(text);
-  return clean.length > 140 ? `${clean.slice(0, 140).trim()}...` : clean;
+  return clean.length > 150 ? `${clean.slice(0, 150).trim()}…` : clean;
 }
 
 export function GameUpdates({ updates = [] }: Props) {
   const { t } = useLocale();
   const recent = updates.slice(0, 6);
 
-  return (
-    <div className="viz-card game-updates-card">
-      <h3>{t("updateBriefing")}</h3>
-      <p className="viz-subtitle">
-        {recent.length ? `${recent.length} ${t("updatePosts")}` : t("noUpdates")}
-      </p>
+  if (!recent.length) {
+    return <div className="empty-panel">{t("runSync")}</div>;
+  }
 
-      {recent.length > 0 ? (
-        <div className="game-updates-list">
-          {recent.map((item) => (
-            <a key={`${item.appid}-${item.date}-${item.title}`} className="game-update-item" href={item.url} target="_blank" rel="noreferrer">
-              <div className="game-update-meta">
-                <span>{formatUpdateDate(item.date)}</span>
-                <span>{item.update_type}</span>
-              </div>
-              <strong>{item.game_name}</strong>
-              <span className="game-update-title">{item.title}</span>
-              {item.contents && <p>{previewText(item.contents)}</p>}
-            </a>
-          ))}
-        </div>
-      ) : (
-        <div className="empty-panel">
-          {t("runSync")}
-        </div>
-      )}
+  return (
+    <div className="game-updates-list">
+      {recent.map((item, i) => (
+        <Reveal key={`${item.appid}-${item.date}-${item.title}`} delay={Math.min(i * 0.05, 0.3)}>
+          <a
+            className="game-update-item"
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="game-update-meta">
+              <span>{formatUpdateDate(item.date)}</span>
+              <span>{item.update_type}</span>
+            </div>
+            <strong>{item.game_name}</strong>
+            <span className="game-update-title">{item.title}</span>
+            {item.contents && <p>{previewText(item.contents)}</p>}
+          </a>
+        </Reveal>
+      ))}
     </div>
   );
 }

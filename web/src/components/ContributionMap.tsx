@@ -1,27 +1,13 @@
 import { useState } from "react";
 import type { HeatmapDay } from "../types";
 import { useLocale } from "../useLocale";
+import { HEAT_LEGEND, heatColor } from "../lib/palette";
+import { fmtMinutes } from "../lib/format";
+import { Panel } from "./ui";
 
 interface Props {
   heatmap: Record<string, HeatmapDay>;
   updatedAt: string;
-}
-
-const LEVELS = [
-  { max: 0, color: "var(--heatmap-empty)", label: "No activity" },
-  { max: 60, color: "rgba(250, 204, 21, 0.36)", label: "< 1h" },
-  { max: 180, color: "rgba(251, 146, 60, 0.62)", label: "1–3h" },
-  { max: 480, color: "rgba(239, 68, 68, 0.82)", label: "3–8h" },
-  { max: Infinity, color: "rgba(185, 28, 28, 1)", label: "> 8h" },
-];
-
-const ACTIVE_LEVELS = LEVELS.filter((level) => level.max > 0);
-
-function getColor(minutes: number) {
-  for (const l of LEVELS) {
-    if (minutes <= l.max) return l.color;
-  }
-  return LEVELS[LEVELS.length - 1].color;
 }
 
 function formatDate(dateStr: string) {
@@ -70,7 +56,6 @@ export function ContributionMap({ heatmap, updatedAt }: Props) {
   let week: typeof days = [];
   for (const day of days) {
     const dow = mondayIndex(day.date);
-    // Pad first week
     if (weeks.length === 0 && week.length === 0 && dow !== 0) {
       for (let p = 0; p < dow; p++) week.push({ date: "", minutes: -1 });
     }
@@ -87,12 +72,16 @@ export function ContributionMap({ heatmap, updatedAt }: Props) {
   const activeDays = days.filter((d) => d.minutes > 0).length;
 
   return (
-    <div className="contribution-map">
-      <h2>{t("activityHeatmap")}</h2>
-      <p className="subtitle">
-        {totalMinutes > 0 ? `${(totalMinutes / 60).toFixed(0)}h ${t("lastYear")} · ${activeDays} ${t("activeDays")}` : `${t("noActivity")} - ${t("waitingPolls")}`}
-      </p>
-
+    <Panel
+      kicker={t("kickActivity")}
+      title={t("activityHeatmap")}
+      sub={
+        totalMinutes > 0
+          ? `${Math.round(totalMinutes / 60)}h ${t("lastYear")} · ${activeDays} ${t("activeDays")}`
+          : `${t("noActivity")} — ${t("waitingPolls")}`
+      }
+      delay={0.06}
+    >
       <div className="heatmap-grid">
         {weeks.map((w, wi) => (
           <div key={wi} className="heatmap-col">
@@ -104,43 +93,48 @@ export function ContributionMap({ heatmap, updatedAt }: Props) {
                   key={di}
                   className={`heatmap-cell${selected === d.date ? " is-selected" : ""}`}
                   type="button"
-                  style={{ background: getColor(d.minutes) }}
-                  title={`${formatDate(d.date)}: ${d.minutes > 0 ? (d.minutes / 60).toFixed(1) + "h" : t("noActivity")}`}
-                  aria-label={`${formatDate(d.date)}: ${d.minutes > 0 ? (d.minutes / 60).toFixed(1) + "h" : t("noActivity")}`}
+                  style={{ background: heatColor(d.minutes) }}
+                  title={`${formatDate(d.date)}: ${d.minutes > 0 ? fmtMinutes(d.minutes) : t("noActivity")}`}
+                  aria-label={`${formatDate(d.date)}: ${d.minutes > 0 ? fmtMinutes(d.minutes) : t("noActivity")}`}
                   aria-pressed={selected === d.date}
                   onClick={() => setSelected(d.date === selected ? null : d.date)}
                 />
-              )
+              ),
             )}
           </div>
         ))}
       </div>
 
-      <div className="heatmap-legend">
-        <span>{t("less")}</span>
-        {ACTIVE_LEVELS.map((l, i) => (
-          <div key={i} className="heatmap-cell" style={{ background: l.color }} title={l.label} />
-        ))}
-        <span>{t("more")}</span>
+      <div className="heatmap-foot">
+        <div className="heatmap-legend">
+          <span>{t("less")}</span>
+          {HEAT_LEGEND.map((color, i) => (
+            <div key={i} className="heatmap-cell" style={{ background: color }} />
+          ))}
+          <span>{t("more")}</span>
+        </div>
       </div>
 
       {selected && sel && (
         <div className="day-detail">
           <h3>{formatDate(selected)}</h3>
-          <p>{t("total")}: {(playtimeMinutes(sel) / 60).toFixed(1)}h {t("playtime")}</p>
+          <p>
+            {t("total")}: {fmtMinutes(playtimeMinutes(sel))} {t("playtime")}
+          </p>
           {Object.entries(sel.games).length > 0 && (
             <ul>
               {Object.entries(sel.games)
                 .sort(([, a], [, b]) => b - a)
                 .map(([name, mins]) => (
                   <li key={name}>
-                    {name}: {(mins / 60).toFixed(1)}h
+                    <span>{name}</span>
+                    <span>{fmtMinutes(mins)}</span>
                   </li>
                 ))}
             </ul>
           )}
         </div>
       )}
-    </div>
+    </Panel>
   );
 }

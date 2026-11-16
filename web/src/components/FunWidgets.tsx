@@ -1,5 +1,6 @@
 import type { GameWeatherData, WeeklyDigestItem } from "../types";
 import { useLocale } from "../useLocale";
+import { Panel } from "./ui";
 
 interface WeatherProps { weather: GameWeatherData; }
 interface DigestProps { digest: WeeklyDigestItem[]; }
@@ -8,20 +9,25 @@ const WEATHER_ICONS: Record<string, string> = {
   storm: "⛈️", rain: "🌧️", cloudy: "⛅", sunny: "☀️",
 };
 
-const WEATHER_COLORS: Record<string, string> = {
-  storm: "#a78bfa", rain: "#67e8f9", cloudy: "#94a3b8", sunny: "#f59e0b",
+const WEATHER_ACCENTS: Record<string, string> = {
+  storm: "#8f86e8", rain: "#56b8c9", cloudy: "#9a9fab", sunny: "#e0a35c",
 };
 
 export function GameWeather({ weather }: WeatherProps) {
   const { t } = useLocale();
+  const accent = WEATHER_ACCENTS[weather.forecast] ?? "#9a9fab";
+
   return (
-    <div className="viz-card weather-card" style={{ borderColor: WEATHER_COLORS[weather.forecast] }}>
+    <Panel kicker={t("kickWeather")} title={t("gamingWeather")} delay={0}>
       <div className="weather-header">
-        <span className="weather-icon">{WEATHER_ICONS[weather.forecast] || "🌤️"}</span>
-        <div>
-          <h3>{t("gamingWeather")}</h3>
-          <p className="viz-subtitle">{t("currentForecast")}: <strong>{weather.forecast}</strong> - {t("dominatedBy")} {weather.top_game}</p>
-        </div>
+        <span className="weather-icon" style={{ borderColor: `${accent}55`, background: `${accent}14` }}>
+          {WEATHER_ICONS[weather.forecast] || "🌤️"}
+        </span>
+        <p className="viz-subtitle">
+          {t("currentForecast")}: <strong style={{ color: accent }}>{weather.forecast}</strong>
+          {" — "}
+          {t("dominatedBy")} {weather.top_game}
+        </p>
       </div>
       <div className="weather-games">
         {weather.games.map((g) => (
@@ -31,7 +37,7 @@ export function GameWeather({ weather }: WeatherProps) {
           </div>
         ))}
       </div>
-    </div>
+    </Panel>
   );
 }
 
@@ -39,10 +45,9 @@ export function WeeklyDigest({ digest }: DigestProps) {
   const { t } = useLocale();
   if (!digest.length) return null;
   const week = digest[0];
+
   return (
-    <div className="viz-card">
-      <h3>{t("weeklyDigest")}</h3>
-      <p className="viz-subtitle">{t("latestWeekSummary")}</p>
+    <Panel kicker={t("kickDigest")} title={t("weeklyDigest")} sub={t("latestWeekSummary")} delay={0.04}>
       <div className="digest-content">
         <div className="digest-stat">
           <span className="digest-value">{week.total_hours}h</span>
@@ -58,6 +63,6 @@ export function WeeklyDigest({ digest }: DigestProps) {
           ))}
         </div>
       </div>
-    </div>
+    </Panel>
   );
 }

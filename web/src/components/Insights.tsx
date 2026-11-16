@@ -3,6 +3,9 @@ import { forceCenter, forceCollide, forceLink, forceManyBody, forceSimulation, f
 import type { SimulationLinkDatum, SimulationNodeDatum } from "d3-force";
 import type { StatsData, GameNetworkData, GameCloudItem } from "../types";
 import { useLocale } from "../useLocale";
+import { genreColor } from "../lib/palette";
+import { daysSince, truncate } from "../lib/format";
+import { AnimatedNumber, Panel } from "./ui";
 
 interface StatsProps { stats: StatsData; }
 interface DustProps { played: number; never: number; }
@@ -11,34 +14,36 @@ interface StayingProps { games: GameCloudItem[]; }
 export function StatsCards({ stats }: StatsProps) {
   const { t } = useLocale();
   return (
-    <div className="stats-grid">
-      <div className="stat-card">
-        <span className="stat-value">{stats.total_games}</span>
-        <span className="stat-label">{t("totalGames")}</span>
-      </div>
-      <div className="stat-card">
-        <span className="stat-value">{stats.played_games}</span>
-        <span className="stat-label">{t("played")}</span>
-      </div>
-      <div className="stat-card">
-        <span className="stat-value">{stats.dust_rate}%</span>
-        <span className="stat-label">{t("dustRate")}</span>
-      </div>
-      <div className="stat-card">
-        <span className="stat-value">{stats.loyalty_score}</span>
-        <span className="stat-label">{t("loyalty")}: {stats.loyalty_label}</span>
-      </div>
-      {stats.peak_day && (
+    <Panel kicker={t("kickInsights")} title={t("loyalty")} sub={stats.loyalty_label} delay={0.16}>
+      <div className="stats-grid">
         <div className="stat-card">
-          <span className="stat-value">{(stats.peak_day.minutes / 60).toFixed(1)}h</span>
-          <span className="stat-label">{t("peakDay")} ({stats.peak_day.date})</span>
+          <span className="stat-value"><AnimatedNumber value={stats.total_games} /></span>
+          <span className="stat-label">{t("totalGames")}</span>
         </div>
-      )}
-      <div className="stat-card">
-        <span className="stat-value">{stats.longest_streak.days} {t("daysUnit")}</span>
-        <span className="stat-label">{t("longestStreak")}</span>
+        <div className="stat-card">
+          <span className="stat-value"><AnimatedNumber value={stats.played_games} /></span>
+          <span className="stat-label">{t("played")}</span>
+        </div>
+        <div className="stat-card">
+          <span className="stat-value"><AnimatedNumber value={stats.dust_rate} decimals={1} suffix="%" /></span>
+          <span className="stat-label">{t("dustRate")}</span>
+        </div>
+        <div className="stat-card">
+          <span className="stat-value"><AnimatedNumber value={stats.never_played} /></span>
+          <span className="stat-label">{t("neverOpened")}</span>
+        </div>
+        {stats.peak_day && (
+          <div className="stat-card">
+            <span className="stat-value">{(stats.peak_day.minutes / 60).toFixed(1)}h</span>
+            <span className="stat-label">{t("peakDay")} ({stats.peak_day.date})</span>
+          </div>
+        )}
+        <div className="stat-card">
+          <span className="stat-value"><AnimatedNumber value={stats.longest_streak.days} suffix={` ${t("daysUnit")}`} /></span>
+          <span className="stat-label">{t("longestStreak")}</span>
+        </div>
       </div>
-    </div>
+    </Panel>
   );
 }
 
@@ -52,9 +57,7 @@ export function DustMeter({ played, never }: DustProps) {
   const dustLength = (dustPct / 100) * circumference;
 
   return (
-    <div className="viz-card dust-card">
-      <h3>{t("dustRate")}</h3>
-      <p className="viz-subtitle">{t("libraryActivation")}</p>
+    <Panel kicker={t("kickLibrary")} title={t("dustRate")} sub={t("libraryActivation")} delay={0.14} className="dust-card">
       <div className="dust-radial">
         <svg viewBox="0 0 140 140" className="dust-ring" aria-label={`${t("dustRate")} ${dustPct}%`}>
           <circle className="dust-ring-track" cx="70" cy="70" r={radius} />
@@ -84,7 +87,7 @@ export function DustMeter({ played, never }: DustProps) {
         <span><strong>{never}</strong> {t("never")}</span>
         <span><strong>{total}</strong> {t("total")}</span>
       </div>
-    </div>
+    </Panel>
   );
 }
 
@@ -95,34 +98,45 @@ export function StayingPower({ games }: StayingProps) {
   if (!withLast.length) return null;
 
   const data = withLast.slice(0, 15).map((g) => {
-    const daysSince = Math.round((now - g.rtime_last_played) / 86400);
-    return { appid: g.appid, name: g.name.length > 15 ? g.name.slice(0, 14) + "…" : g.name, hours: g.playtime_hours, recency: daysSince };
+    const daysSincePlayed = daysSince(g.rtime_last_played, now);
+    return {
+      appid: g.appid,
+      name: truncate(g.name, 15),
+      hours: g.playtime_hours,
+      recency: daysSincePlayed,
+    };
   }).sort((a, b) => b.hours - a.hours);
 
+  const recencyColor = (recency: number) =>
+    recency < 7 ? "#4cb782" : recency < 30 ? "#7a85f0" : recency < 90 ? "#e0a35c" : "#787d88";
+
   return (
-    <div className="viz-card">
-      <h3>{t("stayingPower")}</h3>
-      <p className="viz-subtitle">{t("stayingSubtitle")}</p>
+    <Panel kicker={t("kickLibrary")} title={t("stayingPower")} sub={t("stayingSubtitle")} delay={0.2}>
       <div className="staying-grid">
         {data.map((g) => {
-          const recencyColor = g.recency < 7 ? "#34d399" : g.recency < 30 ? "#67e8f9" : g.recency < 90 ? "#a78bfa" : "#667085";
+          const color = recencyColor(g.recency);
           return (
             <div key={g.appid} className="staying-row">
               <span className="staying-name">{g.name}</span>
               <div className="staying-bar-track">
-                <div className="staying-bar" style={{ width: `${Math.min((g.hours / data[0].hours) * 100, 100)}%`, background: recencyColor }} />
+                <div
+                  className="staying-bar"
+                  style={{ width: `${Math.min((g.hours / data[0].hours) * 100, 100)}%`, background: color }}
+                />
               </div>
               <span className="staying-hours">{g.hours}h</span>
-              <span className="staying-recency" style={{ color: recencyColor }}>{g.recency === 0 ? t("today") : `${g.recency}${t("daysAgo")}`}</span>
+              <span className="staying-recency" style={{ color }}>
+                {g.recency === 0 ? t("today") : `${g.recency}${t("daysAgo")}`}
+              </span>
             </div>
           );
         })}
       </div>
-    </div>
+    </Panel>
   );
 }
 
-// ── Game Network (Bubble graph) ──
+// ── Game Network (force-directed bubbles) ──
 
 interface Props {
   network: GameNetworkData;
@@ -135,34 +149,9 @@ type NetworkLinkInput = GameNetworkData["links"][number] | {
   strength?: number;
 };
 
-const GENRE_COLORS: Record<string, string> = {
-  Action: "#fb7185",
-  "Free To Play": "#f59e0b",
-  Adventure: "#34d399",
-  RPG: "#a78bfa",
-  Indie: "#67e8f9",
-  Strategy: "#60a5fa",
-  Simulation: "#f97316",
-  "Early Access": "#94a3b8",
-  "Animation & Modeling": "#f472b6",
-  "Design & Illustration": "#818cf8",
-  Utilities: "#64748b",
-  Casual: "#22c55e",
-  "Video Production": "#e879f9",
-  "Photo Editing": "#f0abfc",
-  "Massively Multiplayer": "#8b5cf6",
-};
-const DEFAULT_COLOR = "#64748b";
-
-function genreColor(genre: string): string {
-  return GENRE_COLORS[genre] || DEFAULT_COLOR;
-}
-
 function firstGenre(genres: string[] | undefined): string {
   return (genres?.length ?? 0) > 0 ? genres![0] : "Other";
 }
-
-const truncate = (s: string, max: number) => s.length > max ? s.slice(0, max) + "…" : s;
 
 interface ForceNode extends SimulationNodeDatum {
   id: number;
@@ -303,25 +292,18 @@ export function GameNetwork({ network }: Props) {
     };
   }, [nodes, links, nodeMap, gameDegree, communityCenters]);
 
-  if (!network.nodes.length) return <div className="viz-card"><h3>{t("gameNetwork")}</h3><p className="viz-subtitle">{t("waitingPolls")}</p></div>;
+  if (!network.nodes.length) {
+    return (
+      <Panel kicker={t("kickNetwork")} title={t("gameNetwork")} sub={t("waitingPolls")}>
+        <div className="empty-panel">{t("waitingPolls")}</div>
+      </Panel>
+    );
+  }
 
   return (
-    <div className="viz-card game-network-card">
-      <h3>{t("gameNetwork")}</h3>
-      <p className="viz-subtitle">{t("networkSubtitle")}</p>
-
+    <Panel kicker={t("kickNetwork")} title={t("gameNetwork")} sub={t("networkSubtitle")} delay={0.22} className="game-network-card">
       <div className="network-bubble-stage">
-        <svg viewBox={`0 0 ${W} ${H}`} className="network-svg">
-          <defs>
-            <filter id="networkGlow" x="-40%" y="-40%" width="180%" height="180%">
-              <feGaussianBlur stdDeviation="4" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-
+        <svg viewBox={`0 0 ${W} ${H}`} className="network-svg" aria-hidden="true">
           {graph.links.map((link, i) => (
             <line
               key={`${link.source.appid}-${link.target.appid}-${i}`}
@@ -330,21 +312,22 @@ export function GameNetwork({ network }: Props) {
               y1={link.source.y ?? H / 2}
               x2={link.target.x ?? W / 2}
               y2={link.target.y ?? H / 2}
-              strokeWidth={Math.min(1 + link.strength * 0.45, 4)}
+              strokeWidth={Math.min(0.8 + link.strength * 0.35, 3)}
             />
           ))}
           {graph.nodes.map((node) => {
             const x = node.x ?? W / 2;
             const y = node.y ?? H / 2;
+            const color = genreColor(node.genre);
             return (
               <g key={node.appid} className="network-bubble">
-                <circle cx={x} cy={y} r={node.r + 8} fill={genreColor(node.genre)} opacity="0.07" />
-                <circle cx={x} cy={y} r={node.r} fill={genreColor(node.genre)} opacity="0.34" stroke={genreColor(node.genre)} strokeWidth="1.4" filter="url(#networkGlow)" />
-                <text x={x} y={y - 3} textAnchor="middle" fill="var(--text)" fontSize={node.r > 22 ? "10" : "9"} fontWeight="700">
+                <circle cx={x} cy={y} r={node.r + 7} fill={color} opacity="0.08" />
+                <circle cx={x} cy={y} r={node.r} fill={color} opacity="0.22" stroke={color} strokeWidth="1.2" />
+                <text x={x} y={y - 3} textAnchor="middle" fontSize={node.r > 22 ? "10" : "9"}>
                   {truncate(node.name, node.r > 24 ? 13 : 8)}
                 </text>
                 {node.degree > 0 && (
-                  <text x={x} y={y + 12} textAnchor="middle" fill="var(--text-muted)" fontSize="9">
+                  <text x={x} y={y + 12} textAnchor="middle" fontSize="9">
                     {node.degree} {t("links")}
                   </text>
                 )}
@@ -354,14 +337,14 @@ export function GameNetwork({ network }: Props) {
         </svg>
       </div>
 
-      <div className="treemap-legend network-legend">
+      <div className="cloud-legend network-legend">
         {genreNames.slice(0, 8).map((genre) => (
-          <span key={genre} className="treemap-legend-item">
+          <span key={genre} className="treemap-legend-item is-static">
             <span className="treemap-legend-dot" style={{ background: genreColor(genre) }} />
             {genre}
           </span>
         ))}
       </div>
-    </div>
+    </Panel>
   );
 }

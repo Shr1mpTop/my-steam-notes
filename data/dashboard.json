@@ -1,25 +1,25 @@
 {
-  "updated_at": "2026-05-18T01:41:07.794478+08:00",
+  "updated_at": "2026-11-16T22:31:46.841653+08:00",
   "player": {
-    "personaname": "俊林叔叔阳具店",
+    "personaname": "WldBeeHowYng",
     "online": true,
-    "currently_playing": "",
+    "currently_playing": "Apex Legends",
     "level": 30,
-    "avatarfull": "https://avatars.steamstatic.com/0c36cd0464c002f4a34041c76d11a6699ab08dd1_full.jpg"
+    "avatarfull": "https://avatars.steamstatic.com/836383833cac1ce8dd44c78fcb61be249c72599e_full.jpg"
   },
   "milestone": {
-    "total_hours": 5476.4,
-    "movies": 2738,
-    "books": 912,
-    "walking_km": 27382
+    "total_hours": 6105.1,
+    "movies": 3052,
+    "books": 1017,
+    "walking_km": 30525
   },
   "game_cloud": [
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1870.1,
+      "playtime_hours": 1971.1,
       "img_icon_url": "8dbc71957312bbd3baea65848b545be9eae2a355",
-      "rtime_last_played": 1779036824,
+      "rtime_last_played": 1791190198,
       "genres": [
         "Action",
         "Free To Play"
@@ -28,9 +28,9 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 546.1,
+      "playtime_hours": 776.8,
       "img_icon_url": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
-      "rtime_last_played": 1779031463,
+      "rtime_last_played": 1794838508,
       "genres": [
         "Action",
         "Adventure",
@@ -52,9 +52,9 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 302.1,
+      "playtime_hours": 308.5,
       "img_icon_url": "896d5f4214e4e185a20af51b46d9dea2e6f4aaad",
-      "rtime_last_played": 1777904251,
+      "rtime_last_played": 1784184244,
       "genres": [
         "Action",
         "Indie",
@@ -101,6 +101,20 @@
       ]
     },
     {
+      "appid": 1623730,
+      "name": "Palworld",
+      "playtime_hours": 122.0,
+      "img_icon_url": "f5523077a8f4c923c2e8d8c17794b3319035fa73",
+      "rtime_last_played": 1784811313,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Indie",
+        "RPG",
+        "Early Access"
+      ]
+    },
+    {
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "playtime_hours": 121.7,
@@ -126,9 +140,9 @@
     {
       "appid": 431960,
       "name": "Wallpaper Engine",
-      "playtime_hours": 100.4,
+      "playtime_hours": 102.3,
       "img_icon_url": "72edaed9d748c6cf7397ffb1c83f0b837b9ebd9d",
-      "rtime_last_played": 1777809259,
+      "rtime_last_played": 1791553360,
       "genres": [
         "Casual",
         "Indie",
@@ -175,10 +189,20 @@
       ]
     },
     {
+      "appid": 489830,
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "playtime_hours": 58.3,
+      "img_icon_url": "0dfe3eed5658f9fbd8b62f8021038c0a4190f21d",
+      "rtime_last_played": 1787937725,
+      "genres": [
+        "RPG"
+      ]
+    },
+    {
       "appid": 1127400,
       "name": "Mindustry",
       "playtime_hours": 54.1,
-      "img_icon_url": "1abc85522939efd31f3439302e64f673ba2424a5",
+      "img_icon_url": "f519c34b9f3bd1983d224d3a2b6c2a60cf962211",
       "rtime_last_played": 1747316633,
       "genres": [
         "Strategy"
@@ -187,9 +211,9 @@
     {
       "appid": 578080,
       "name": "PUBG: BATTLEGROUNDS",
-      "playtime_hours": 52.6,
+      "playtime_hours": 53.3,
       "img_icon_url": "609f27278aa70697c13bf99f32c5a0248c381f9d",
-      "rtime_last_played": 1762202708,
+      "rtime_last_played": 1784816630,
       "genres": [
         "Action",
         "Adventure",
@@ -213,36 +237,37 @@
     },
     {
       "appid": 292030,
-      "name": "The Witcher 3: Wild Hunt",
+      "name": "The Witcher 3: Wild Hunt — Remastered",
       "playtime_hours": 50.3,
-      "img_icon_url": "78d0ff98b67851f24539cdf2402cf147679134f4",
+      "img_icon_url": "7b52d11edee478d652ef4e7103e00644bed2c74c",
       "rtime_last_played": 1710678495,
       "genres": [
         "RPG"
       ]
     },
     {
-      "appid": 1623730,
-      "name": "Palworld",
-      "playtime_hours": 49.3,
-      "img_icon_url": "f5523077a8f4c923c2e8d8c17794b3319035fa73",
-      "rtime_last_played": 1766494108,
+      "appid": 1238810,
+      "name": "Battlefield™ V",
+      "playtime_hours": 48.0,
+      "img_icon_url": "23ded6a957b5ec7525679c2e7bdac90c0653dbc8",
+      "rtime_last_played": 1784877264,
       "genres": [
-        "Action",
-        "Adventure",
-        "Indie",
-        "RPG",
-        "Early Access"
+        "Action"
       ]
     },
     {
-      "appid": 1238810,
-      "name": "Battlefield™ V",
-      "playtime_hours": 47.8,
-      "img_icon_url": "23ded6a957b5ec7525679c2e7bdac90c0653dbc8",
-      "rtime_last_played": 1737487166,
+      "appid": 1769420,
+      "name": "Noble Fates",
+      "playtime_hours": 46.4,
+      "img_icon_url": "24d320ad23f2c9f7a8c30face4d03f40ad984672",
+      "rtime_last_played": 1794686750,
       "genres": [
-        "Action"
+        "Action",
+        "Indie",
+        "RPG",
+        "Simulation",
+        "Strategy",
+        "Early Access"
       ]
     },
     {
@@ -286,9 +311,9 @@
     {
       "appid": 2868840,
       "name": "Slay the Spire 2",
-      "playtime_hours": 37.0,
+      "playtime_hours": 37.9,
       "img_icon_url": "f92b09dab91f1d1738f72fe0dd9be18dcc2901f9",
-      "rtime_last_played": 1778754929,
+      "rtime_last_played": 1787061798,
       "genres": [
         "Indie",
         "Strategy",
@@ -296,18 +321,14 @@
       ]
     },
     {
-      "appid": 1769420,
-      "name": "Noble Fates",
-      "playtime_hours": 36.4,
-      "img_icon_url": "9e83d739d270c1671847535fbe392a56d5818e06",
-      "rtime_last_played": 1776020542,
+      "appid": 2369390,
+      "name": "Far Cry 6",
+      "playtime_hours": 33.7,
+      "img_icon_url": "178c21f6ed3ea43c9e5b3c9ea2919e7bca63c7b0",
+      "rtime_last_played": 1790496640,
       "genres": [
         "Action",
-        "Indie",
-        "RPG",
-        "Simulation",
-        "Strategy",
-        "Early Access"
+        "Adventure"
       ]
     },
     {
@@ -319,6 +340,19 @@
       "genres": [
         "Action",
         "Adventure"
+      ]
+    },
+    {
+      "appid": 4348910,
+      "name": "Probably Stolen",
+      "playtime_hours": 32.9,
+      "img_icon_url": "63d2172e624b8a6df1a81b98ed9869d1b8bbcb54",
+      "rtime_last_played": 1794074333,
+      "genres": [
+        "Indie",
+        "RPG",
+        "Simulation",
+        "Strategy"
       ]
     },
     {
@@ -353,16 +387,6 @@
         "RPG",
         "Simulation",
         "Strategy"
-      ]
-    },
-    {
-      "appid": 489830,
-      "name": "The Elder Scrolls V: Skyrim Special Edition",
-      "playtime_hours": 28.5,
-      "img_icon_url": "0dfe3eed5658f9fbd8b62f8021038c0a4190f21d",
-      "rtime_last_played": 1726987947,
-      "genres": [
-        "RPG"
       ]
     },
     {
@@ -402,6 +426,16 @@
       ]
     },
     {
+      "appid": 553850,
+      "name": "HELLDIVERS™ 2",
+      "playtime_hours": 22.7,
+      "img_icon_url": "5236dcc5d02b1f7aa199eef56253d20be87baef3",
+      "rtime_last_played": 1783950961,
+      "genres": [
+        "Action"
+      ]
+    },
+    {
       "appid": 356190,
       "name": "Middle-earth™: Shadow of War™",
       "playtime_hours": 22.5,
@@ -411,6 +445,19 @@
         "Action",
         "Adventure",
         "RPG"
+      ]
+    },
+    {
+      "appid": 2642680,
+      "name": "Half Sword Demo",
+      "playtime_hours": 22.0,
+      "img_icon_url": "450582b53be4fbb05bc6c437b8221c2943da1f29",
+      "rtime_last_played": 1781581588,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Indie",
+        "Simulation"
       ]
     },
     {
@@ -534,6 +581,18 @@
       ]
     },
     {
+      "appid": 1987080,
+      "name": "Inside the Backrooms",
+      "playtime_hours": 13.7,
+      "img_icon_url": "66741d53dabce288b79ecaf63bcc97186b9ab819",
+      "rtime_last_played": 1779379480,
+      "genres": [
+        "Adventure",
+        "Indie",
+        "Early Access"
+      ]
+    },
+    {
       "appid": 357310,
       "name": "Oriental Empires",
       "playtime_hours": 12.9,
@@ -570,14 +629,45 @@
       ]
     },
     {
-      "appid": 1987080,
-      "name": "Inside the Backrooms",
-      "playtime_hours": 10.8,
-      "img_icon_url": "36c529359e0802af3589360e03ed781c366b5ae5",
-      "rtime_last_played": 1692621493,
+      "appid": 526870,
+      "name": "Satisfactory",
+      "playtime_hours": 11.2,
+      "img_icon_url": "ee3406fe5ec813b1987ad67e37e5cd6fb4f620e6",
+      "rtime_last_played": 1782995134,
       "genres": [
         "Adventure",
         "Indie",
+        "Simulation",
+        "Strategy"
+      ]
+    },
+    {
+      "appid": 1894430,
+      "name": "Plan B: Terraform",
+      "playtime_hours": 11.0,
+      "img_icon_url": "ee67dd657d71e06c7e8293b15ded0125c55405c2",
+      "rtime_last_played": 1790337402,
+      "genres": []
+    },
+    {
+      "appid": 2950790,
+      "name": "IRON NEST: Heavy Turret Simulator",
+      "playtime_hours": 10.9,
+      "img_icon_url": "9e5fd22a0678b6d1b82850f2f95a83f82f2a1c96",
+      "rtime_last_played": 1786631717,
+      "genres": []
+    },
+    {
+      "appid": 1805320,
+      "name": "Romestead",
+      "playtime_hours": 10.8,
+      "img_icon_url": "877d7f60e950a6a4f1bb8712a8bf442df3ed211d",
+      "rtime_last_played": 1781496648,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Indie",
+        "RPG",
         "Early Access"
       ]
     },
@@ -625,7 +715,7 @@
       "name": "The Farmer Was Replaced",
       "playtime_hours": 8.4,
       "img_icon_url": "c5e5f32afc4cc79cc7a92bf174375367509e2866",
-      "rtime_last_played": 1778087510,
+      "rtime_last_played": 1785943545,
       "genres": [
         "Casual",
         "Indie",
@@ -658,7 +748,7 @@
       "appid": 714010,
       "name": "Aimlabs",
       "playtime_hours": 7.7,
-      "img_icon_url": "15347de11efc127539c388e585af9e92d10d5189",
+      "img_icon_url": "7f3b535e80a43dc0baadd4258d4b38c34c845f0c",
       "rtime_last_played": 1770919092,
       "genres": []
     },
@@ -743,6 +833,14 @@
       "genres": []
     },
     {
+      "appid": 3846120,
+      "name": "MineMogul",
+      "playtime_hours": 5.8,
+      "img_icon_url": "81cdbce1c5d99d825aae1f37f55903e803ec8f9c",
+      "rtime_last_played": 1783073900,
+      "genres": []
+    },
+    {
       "appid": 612880,
       "name": "Wolfenstein II: The New Colossus",
       "playtime_hours": 5.7,
@@ -799,14 +897,6 @@
       "genres": []
     },
     {
-      "appid": 3846120,
-      "name": "MineMogul",
-      "playtime_hours": 4.5,
-      "img_icon_url": "81cdbce1c5d99d825aae1f37f55903e803ec8f9c",
-      "rtime_last_played": 1774113826,
-      "genres": []
-    },
-    {
       "appid": 440900,
       "name": "Conan Exiles Enhanced",
       "playtime_hours": 4.3,
@@ -818,7 +908,7 @@
       "appid": 973760,
       "name": "Thronebreaker: The Witcher Tales",
       "playtime_hours": 4.3,
-      "img_icon_url": "c1f8e9dddd16f817b624d7e18f0af525dbb867dd",
+      "img_icon_url": "101577aca9f8473a0ec1041c0907e38125d847cf",
       "rtime_last_played": 1765355460,
       "genres": []
     },
@@ -828,6 +918,14 @@
       "playtime_hours": 4.2,
       "img_icon_url": "d37534163ebac8351e0bda0bf30f8f2174c921b6",
       "rtime_last_played": 1765377584,
+      "genres": []
+    },
+    {
+      "appid": 2003060,
+      "name": "Monsters Domain: Prologue",
+      "playtime_hours": 4.2,
+      "img_icon_url": "b643946b3839842099f6afe22ace098c5b0e40e2",
+      "rtime_last_played": 1688740603,
       "genres": []
     },
     {
@@ -891,7 +989,7 @@
       "name": "Subnautica 2",
       "playtime_hours": 3.8,
       "img_icon_url": "a6810ae79dc1592fdd890f463311cb5b8df8aa3c",
-      "rtime_last_played": 1779034558,
+      "rtime_last_played": 1779195814,
       "genres": []
     },
     {
@@ -948,6 +1046,14 @@
       "playtime_hours": 2.7,
       "img_icon_url": "456cd3ff98511c5874d3cb2492e0db1019610767",
       "rtime_last_played": 1723086579,
+      "genres": []
+    },
+    {
+      "appid": 2890830,
+      "name": "Streamer Life Simulator 2",
+      "playtime_hours": 2.6,
+      "img_icon_url": "c05fabc5f962aa8a7e200a16106db39d80123023",
+      "rtime_last_played": 1785943210,
       "genres": []
     },
     {
@@ -1023,6 +1129,14 @@
       "genres": []
     },
     {
+      "appid": 4704690,
+      "name": "MECCHA CHAMELEON",
+      "playtime_hours": 2.2,
+      "img_icon_url": "fbef288370f6ae51cb0a5066d7fb13d26147c94a",
+      "rtime_last_played": 1782999023,
+      "genres": []
+    },
+    {
       "appid": 40970,
       "name": "Stronghold Crusader HD",
       "playtime_hours": 2.2,
@@ -1066,7 +1180,7 @@
       "appid": 218620,
       "name": "PAYDAY 2",
       "playtime_hours": 2.0,
-      "img_icon_url": "a6abc0d0c1e79c0b5b0f5c8ab81ce9076a542414",
+      "img_icon_url": "8fce45cbb0dee03e87cd30b96ac5e5c3d4b2c494",
       "rtime_last_played": 1765362612,
       "genres": []
     },
@@ -1119,6 +1233,14 @@
       "genres": []
     },
     {
+      "appid": 1651560,
+      "name": "Fabledom",
+      "playtime_hours": 1.3,
+      "img_icon_url": "2cb1d506b82a9b23f10371a03a0df72178f271f2",
+      "rtime_last_played": 1793469875,
+      "genres": []
+    },
+    {
       "appid": 2325900,
       "name": "These Doomed Isles: The First God",
       "playtime_hours": 1.3,
@@ -1143,6 +1265,14 @@
       "genres": []
     },
     {
+      "appid": 346110,
+      "name": "ARK: Survival Evolved",
+      "playtime_hours": 1.2,
+      "img_icon_url": "fef1799533131c10f538d2dd697bbbd89e663265",
+      "rtime_last_played": 1783699373,
+      "genres": []
+    },
+    {
       "appid": 3912710,
       "name": "War of Banners Demo",
       "playtime_hours": 1.2,
@@ -1156,6 +1286,22 @@
       "playtime_hours": 1.1,
       "img_icon_url": "6ecf8358d2ec9e024b58651615dd9dcf7cb24cbe",
       "rtime_last_played": 1778953844,
+      "genres": []
+    },
+    {
+      "appid": 1563180,
+      "name": "Internet Cafe Simulator 2",
+      "playtime_hours": 1.1,
+      "img_icon_url": "effa00f23c7b8a38ca8bbb194be6b5f1f63b43aa",
+      "rtime_last_played": 1785159708,
+      "genres": []
+    },
+    {
+      "appid": 538030,
+      "name": "Xenonauts 2",
+      "playtime_hours": 1.0,
+      "img_icon_url": "3b1756e7d8828c1b0cc754483a8de99b36a7c138",
+      "rtime_last_played": 1782580331,
       "genres": []
     },
     {
@@ -1180,6 +1326,14 @@
       "playtime_hours": 0.9,
       "img_icon_url": "822ff912b2e464fbebbedf7a75ae1eb24921f16b",
       "rtime_last_played": 1766161382,
+      "genres": []
+    },
+    {
+      "appid": 975370,
+      "name": "Dwarf Fortress",
+      "playtime_hours": 0.9,
+      "img_icon_url": "f2590e71d4b5c48c200ecc4d8b6e0eddb60eff20",
+      "rtime_last_played": 1794327425,
       "genres": []
     },
     {
@@ -1263,14 +1417,6 @@
       "genres": []
     },
     {
-      "appid": 346110,
-      "name": "ARK: Survival Evolved",
-      "playtime_hours": 0.5,
-      "img_icon_url": "fef1799533131c10f538d2dd697bbbd89e663265",
-      "rtime_last_played": 1705676602,
-      "genres": []
-    },
-    {
       "appid": 80,
       "name": "Counter-Strike: Condition Zero",
       "playtime_hours": 0.4,
@@ -1287,11 +1433,27 @@
       "genres": []
     },
     {
+      "appid": 3209750,
+      "name": "STARIO: Haven Tower",
+      "playtime_hours": 0.4,
+      "img_icon_url": "3a9f6456fd1452bdb27f5ce9c8d6ea849d7b3c42",
+      "rtime_last_played": 1793528555,
+      "genres": []
+    },
+    {
       "appid": 897450,
       "name": "The Survivalists",
       "playtime_hours": 0.4,
       "img_icon_url": "210ddf7659b9dc50051c397cbd51eb35fa584373",
       "rtime_last_played": 1705419253,
+      "genres": []
+    },
+    {
+      "appid": 2357570,
+      "name": "Overwatch®",
+      "playtime_hours": 0.4,
+      "img_icon_url": "da42bd294c941d5947b1bc2c2b2efa1313d36a91",
+      "rtime_last_played": 1784555325,
       "genres": []
     },
     {
@@ -1375,6 +1537,14 @@
       "genres": []
     },
     {
+      "appid": 1152030,
+      "name": "Ecosystem Demo",
+      "playtime_hours": 0.1,
+      "img_icon_url": "5268f76d6f955583ca06bf11e8a67b0d9203e4b0",
+      "rtime_last_played": 1794145141,
+      "genres": []
+    },
+    {
       "appid": 1620690,
       "name": "Rubber Bandits: Summer Prologue",
       "playtime_hours": 0.1,
@@ -1425,85 +1595,1099 @@
   ],
   "recent_activity": [
     {
-      "appid": 2868840,
-      "name": "Slay the Spire 2",
-      "playtime_2weeks_hours": 37.0,
-      "playtime_forever_hours": 37.0
+      "appid": 4348910,
+      "name": "Probably Stolen",
+      "playtime_2weeks_hours": 24.2,
+      "playtime_forever_hours": 32.9
     },
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_2weeks_hours": 14.5,
-      "playtime_forever_hours": 546.1
+      "playtime_2weeks_hours": 15.8,
+      "playtime_forever_hours": 776.8
     },
     {
-      "appid": 730,
-      "name": "Counter-Strike 2",
-      "playtime_2weeks_hours": 12.3,
-      "playtime_forever_hours": 1870.1
+      "appid": 1769420,
+      "name": "Noble Fates",
+      "playtime_2weeks_hours": 9.9,
+      "playtime_forever_hours": 46.4
     },
     {
-      "appid": 1948280,
-      "name": "Stacklands",
-      "playtime_2weeks_hours": 12.1,
-      "playtime_forever_hours": 12.1
+      "appid": 636480,
+      "name": "Ravenfield",
+      "playtime_2weeks_hours": 1.6,
+      "playtime_forever_hours": 2.0
     },
     {
-      "appid": 261550,
-      "name": "Mount & Blade II: Bannerlord",
-      "playtime_2weeks_hours": 11.9,
-      "playtime_forever_hours": 302.1
+      "appid": 975370,
+      "name": "Dwarf Fortress",
+      "playtime_2weeks_hours": 0.9,
+      "playtime_forever_hours": 0.9
     },
     {
-      "appid": 1962700,
-      "name": "Subnautica 2",
-      "playtime_2weeks_hours": 3.8,
-      "playtime_forever_hours": 3.8
-    },
-    {
-      "appid": 2603020,
-      "name": "Citadelum",
-      "playtime_2weeks_hours": 1.1,
-      "playtime_forever_hours": 1.1
-    },
-    {
-      "appid": 688420,
-      "name": "Bad North: Jotunn Edition",
-      "playtime_2weeks_hours": 0.8,
-      "playtime_forever_hours": 11.6
-    },
-    {
-      "appid": 311690,
-      "name": "Enter the Gungeon",
-      "playtime_2weeks_hours": 0.6,
-      "playtime_forever_hours": 4.3
-    },
-    {
-      "appid": 646570,
-      "name": "Slay the Spire",
+      "appid": 5294010,
+      "name": "Valdrin Demo",
       "playtime_2weeks_hours": 0.6,
       "playtime_forever_hours": 0.6
     },
     {
-      "appid": 2060160,
-      "name": "The Farmer Was Replaced",
-      "playtime_2weeks_hours": 0.0,
-      "playtime_forever_hours": 8.4
+      "appid": 892970,
+      "name": "Valheim",
+      "playtime_2weeks_hours": 0.4,
+      "playtime_forever_hours": 20.1
     },
     {
-      "appid": 2213700,
-      "name": "Sintopia",
-      "playtime_2weeks_hours": 0.0,
-      "playtime_forever_hours": 41.5
+      "appid": 1029780,
+      "name": "Going Medieval",
+      "playtime_2weeks_hours": 0.2,
+      "playtime_forever_hours": 136.8
+    },
+    {
+      "appid": 1152030,
+      "name": "Ecosystem Demo",
+      "playtime_2weeks_hours": 0.1,
+      "playtime_forever_hours": 0.1
     }
   ],
   "heatmap": {
-    "2026-05-18": {
+    "2026-11-16": {
+      "playtime_minutes": 104,
+      "online_minutes": 104,
+      "games": {
+        "Apex Legends": 104
+      }
+    },
+    "2026-11-15": {
+      "playtime_minutes": 728,
+      "online_minutes": 728,
+      "games": {
+        "Noble Fates": 598,
+        "Apex Legends": 130
+      }
+    },
+    "2026-11-14": {
+      "playtime_minutes": 313,
+      "online_minutes": 313,
+      "games": {
+        "Apex Legends": 313
+      }
+    },
+    "2026-11-13": {
+      "playtime_minutes": 30,
+      "online_minutes": 30,
+      "games": {
+        "Apex Legends": 30
+      }
+    },
+    "2026-11-12": {
+      "playtime_minutes": 61,
+      "online_minutes": 61,
+      "games": {
+        "Apex Legends": 61
+      }
+    },
+    "2026-11-11": {
+      "playtime_minutes": 125,
+      "online_minutes": 125,
+      "games": {
+        "Apex Legends": 69,
+        "Dwarf Fortress": 56
+      }
+    },
+    "2026-11-10": {
+      "playtime_minutes": 107,
+      "online_minutes": 107,
+      "games": {
+        "Apex Legends": 107
+      }
+    },
+    "2026-11-09": {
+      "playtime_minutes": 40,
+      "online_minutes": 40,
+      "games": {
+        "Apex Legends": 40
+      }
+    },
+    "2026-11-08": {
+      "playtime_minutes": 451,
+      "online_minutes": 451,
+      "games": {
+        "Probably Stolen": 442,
+        "Ecosystem Demo": 9
+      }
+    },
+    "2026-11-07": {
+      "playtime_minutes": 593,
+      "online_minutes": 593,
+      "games": {
+        "Probably Stolen": 593
+      }
+    },
+    "2026-11-06": {
+      "playtime_minutes": 157,
+      "online_minutes": 157,
+      "games": {
+        "Probably Stolen": 157
+      }
+    },
+    "2026-11-05": {
+      "playtime_minutes": 199,
+      "online_minutes": 199,
+      "games": {
+        "Probably Stolen": 199
+      }
+    },
+    "2026-11-04": {
+      "playtime_minutes": 133,
+      "online_minutes": 133,
+      "games": {
+        "Probably Stolen": 60,
+        "Apex Legends": 73
+      }
+    },
+    "2026-11-03": {
+      "playtime_minutes": 67,
+      "online_minutes": 67,
+      "games": {
+        "Apex Legends": 67
+      }
+    },
+    "2026-11-02": {
+      "playtime_minutes": 596,
+      "online_minutes": 596,
+      "games": {
+        "Probably Stolen": 523,
+        "STARIO: Haven Tower": 25,
+        "Apex Legends": 48
+      }
+    },
+    "2026-11-01": {
+      "playtime_minutes": 194,
+      "online_minutes": 194,
+      "games": {
+        "Fabledom": 80,
+        "Apex Legends": 114
+      }
+    },
+    "2026-10-27": {
+      "playtime_minutes": 53,
+      "online_minutes": 53,
+      "games": {
+        "Apex Legends": 53
+      }
+    },
+    "2026-10-10": {
+      "playtime_minutes": 165,
+      "online_minutes": 165,
+      "games": {
+        "Apex Legends": 165
+      }
+    },
+    "2026-10-08": {
+      "playtime_minutes": 238,
+      "online_minutes": 238,
+      "games": {
+        "Apex Legends": 238
+      }
+    },
+    "2026-10-07": {
+      "playtime_minutes": 263,
+      "online_minutes": 263,
+      "games": {
+        "Apex Legends": 263
+      }
+    },
+    "2026-10-06": {
+      "playtime_minutes": 87,
+      "online_minutes": 87,
+      "games": {
+        "Apex Legends": 87
+      }
+    },
+    "2026-10-05": {
+      "playtime_minutes": 466,
+      "online_minutes": 466,
+      "games": {
+        "Apex Legends": 424,
+        "Counter-Strike 2": 42
+      }
+    },
+    "2026-10-04": {
+      "playtime_minutes": 239,
+      "online_minutes": 239,
+      "games": {
+        "Apex Legends": 119,
+        "Counter-Strike 2": 120
+      }
+    },
+    "2026-09-29": {
+      "playtime_minutes": 43,
+      "online_minutes": 43,
+      "games": {
+        "Apex Legends": 27,
+        "Counter-Strike 2": 16
+      }
+    },
+    "2026-09-28": {
+      "playtime_minutes": 83,
+      "online_minutes": 83,
+      "games": {
+        "Counter-Strike 2": 83
+      }
+    },
+    "2026-09-27": {
+      "playtime_minutes": 570,
+      "online_minutes": 570,
+      "games": {
+        "Far Cry 6": 415,
+        "Apex Legends": 119,
+        "Counter-Strike 2": 36
+      }
+    },
+    "2026-09-26": {
+      "playtime_minutes": 720,
+      "online_minutes": 720,
+      "games": {
+        "Far Cry 6": 538,
+        "Plan B: Terraform": 24,
+        "Counter-Strike 2": 158
+      }
+    },
+    "2026-09-25": {
+      "playtime_minutes": 458,
+      "online_minutes": 458,
+      "games": {
+        "Plan B: Terraform": 458
+      }
+    },
+    "2026-09-24": {
+      "playtime_minutes": 302,
+      "online_minutes": 302,
+      "games": {
+        "Far Cry 6": 122,
+        "Plan B: Terraform": 180
+      }
+    },
+    "2026-09-23": {
+      "playtime_minutes": 96,
+      "online_minutes": 96,
+      "games": {
+        "Far Cry 6": 94,
+        "Wallpaper Engine": 2
+      }
+    },
+    "2026-09-21": {
+      "playtime_minutes": 168,
+      "online_minutes": 168,
+      "games": {
+        "Far Cry 6": 168
+      }
+    },
+    "2026-09-20": {
+      "playtime_minutes": 147,
+      "online_minutes": 147,
+      "games": {
+        "Far Cry 6": 147
+      }
+    },
+    "2026-09-19": {
+      "playtime_minutes": 560,
+      "online_minutes": 560,
+      "games": {
+        "Far Cry 6": 540,
+        "Counter-Strike 2": 20
+      }
+    },
+    "2026-09-17": {
+      "playtime_minutes": 23,
+      "online_minutes": 23,
+      "games": {
+        "Apex Legends": 18,
+        "Wallpaper Engine": 5
+      }
+    },
+    "2026-09-16": {
+      "playtime_minutes": 37,
+      "online_minutes": 37,
+      "games": {
+        "Apex Legends": 37
+      }
+    },
+    "2026-09-15": {
+      "playtime_minutes": 138,
+      "online_minutes": 138,
+      "games": {
+        "Apex Legends": 138
+      }
+    },
+    "2026-09-14": {
+      "playtime_minutes": 200,
+      "online_minutes": 200,
+      "games": {
+        "Apex Legends": 200
+      }
+    },
+    "2026-09-13": {
+      "playtime_minutes": 269,
+      "online_minutes": 269,
+      "games": {
+        "Apex Legends": 269
+      }
+    },
+    "2026-09-12": {
+      "playtime_minutes": 390,
+      "online_minutes": 390,
+      "games": {
+        "Monsters Domain: Prologue": 255,
+        "Apex Legends": 118,
+        "Counter-Strike 2": 17
+      }
+    },
+    "2026-09-10": {
+      "playtime_minutes": 119,
+      "online_minutes": 119,
+      "games": {
+        "Apex Legends": 119
+      }
+    },
+    "2026-09-09": {
+      "playtime_minutes": 188,
+      "online_minutes": 188,
+      "games": {
+        "Apex Legends": 188
+      }
+    },
+    "2026-09-07": {
+      "playtime_minutes": 155,
+      "online_minutes": 155,
+      "games": {
+        "Apex Legends": 111,
+        "Wallpaper Engine": 36,
+        "Counter-Strike 2": 8
+      }
+    },
+    "2026-09-06": {
+      "playtime_minutes": 326,
+      "online_minutes": 326,
+      "games": {
+        "Apex Legends": 227,
+        "Wallpaper Engine": 69,
+        "Counter-Strike 2": 30
+      }
+    },
+    "2026-09-05": {
+      "playtime_minutes": 96,
+      "online_minutes": 96,
+      "games": {
+        "Apex Legends": 96
+      }
+    },
+    "2026-09-04": {
+      "playtime_minutes": 30,
+      "online_minutes": 30,
+      "games": {
+        "Apex Legends": 30
+      }
+    },
+    "2026-08-30": {
+      "playtime_minutes": 139,
+      "online_minutes": 139,
+      "games": {
+        "Apex Legends": 139
+      }
+    },
+    "2026-08-29": {
+      "playtime_minutes": 391,
+      "online_minutes": 391,
+      "games": {
+        "Apex Legends": 299,
+        "The Elder Scrolls V: Skyrim Special Edition": 92
+      }
+    },
+    "2026-08-28": {
+      "playtime_minutes": 45,
+      "online_minutes": 45,
+      "games": {
+        "Apex Legends": 45
+      }
+    },
+    "2026-08-27": {
+      "playtime_minutes": 113,
+      "online_minutes": 113,
+      "games": {
+        "Apex Legends": 105,
+        "Counter-Strike 2": 8
+      }
+    },
+    "2026-08-25": {
+      "playtime_minutes": 136,
+      "online_minutes": 136,
+      "games": {
+        "The Elder Scrolls V: Skyrim Special Edition": 136
+      }
+    },
+    "2026-08-24": {
+      "playtime_minutes": 100,
+      "online_minutes": 100,
+      "games": {
+        "Apex Legends": 42,
+        "The Elder Scrolls V: Skyrim Special Edition": 58
+      }
+    },
+    "2026-08-23": {
+      "playtime_minutes": 779,
+      "online_minutes": 779,
+      "games": {
+        "Apex Legends": 499,
+        "The Elder Scrolls V: Skyrim Special Edition": 280
+      }
+    },
+    "2026-08-22": {
+      "playtime_minutes": 316,
+      "online_minutes": 316,
+      "games": {
+        "Apex Legends": 263,
+        "The Elder Scrolls V: Skyrim Special Edition": 53
+      }
+    },
+    "2026-08-21": {
       "playtime_minutes": 54,
       "online_minutes": 54,
       "games": {
+        "Apex Legends": 30,
+        "The Elder Scrolls V: Skyrim Special Edition": 24
+      }
+    },
+    "2026-08-20": {
+      "playtime_minutes": 26,
+      "online_minutes": 26,
+      "games": {
+        "The Elder Scrolls V: Skyrim Special Edition": 26
+      }
+    },
+    "2026-08-19": {
+      "playtime_minutes": 126,
+      "online_minutes": 126,
+      "games": {
+        "The Elder Scrolls V: Skyrim Special Edition": 126
+      }
+    },
+    "2026-08-18": {
+      "playtime_minutes": 10,
+      "online_minutes": 10,
+      "games": {
+        "Slay the Spire 2": 1,
+        "The Elder Scrolls V: Skyrim Special Edition": 9
+      }
+    },
+    "2026-08-17": {
+      "playtime_minutes": 202,
+      "online_minutes": 202,
+      "games": {
+        "The Elder Scrolls V: Skyrim Special Edition": 202
+      }
+    },
+    "2026-08-16": {
+      "playtime_minutes": 404,
+      "online_minutes": 404,
+      "games": {
+        "The Elder Scrolls V: Skyrim Special Edition": 404
+      }
+    },
+    "2026-08-15": {
+      "playtime_minutes": 314,
+      "online_minutes": 314,
+      "games": {
+        "The Elder Scrolls V: Skyrim Special Edition": 314
+      }
+    },
+    "2026-08-14": {
+      "playtime_minutes": 60,
+      "online_minutes": 60,
+      "games": {
+        "The Elder Scrolls V: Skyrim Special Edition": 60
+      }
+    },
+    "2026-08-13": {
+      "playtime_minutes": 129,
+      "online_minutes": 129,
+      "games": {
+        "IRON NEST: Heavy Turret Simulator": 129
+      }
+    },
+    "2026-08-12": {
+      "playtime_minutes": 30,
+      "online_minutes": 30,
+      "games": {
+        "IRON NEST: Heavy Turret Simulator": 30
+      }
+    },
+    "2026-08-11": {
+      "playtime_minutes": 66,
+      "online_minutes": 66,
+      "games": {
+        "IRON NEST: Heavy Turret Simulator": 66
+      }
+    },
+    "2026-08-10": {
+      "playtime_minutes": 30,
+      "online_minutes": 30,
+      "games": {
+        "IRON NEST: Heavy Turret Simulator": 30
+      }
+    },
+    "2026-08-09": {
+      "playtime_minutes": 485,
+      "online_minutes": 485,
+      "games": {
+        "IRON NEST: Heavy Turret Simulator": 349,
+        "Apex Legends": 136
+      }
+    },
+    "2026-08-08": {
+      "playtime_minutes": 729,
+      "online_minutes": 729,
+      "games": {
+        "IRON NEST: Heavy Turret Simulator": 53,
+        "Apex Legends": 676
+      }
+    },
+    "2026-08-07": {
+      "playtime_minutes": 121,
+      "online_minutes": 121,
+      "games": {
+        "Slay the Spire 2": 1,
+        "Apex Legends": 120
+      }
+    },
+    "2026-08-06": {
+      "playtime_minutes": 40,
+      "online_minutes": 40,
+      "games": {
+        "Streamer Life Simulator 2": 2,
+        "The Farmer Was Replaced": 1,
+        "Apex Legends": 37
+      }
+    },
+    "2026-08-02": {
+      "playtime_minutes": 22,
+      "online_minutes": 22,
+      "games": {
+        "Apex Legends": 22
+      }
+    },
+    "2026-08-01": {
+      "playtime_minutes": 168,
+      "online_minutes": 168,
+      "games": {
+        "Apex Legends": 168
+      }
+    },
+    "2026-07-31": {
+      "playtime_minutes": 51,
+      "online_minutes": 51,
+      "games": {
+        "Slay the Spire 2": 51
+      }
+    },
+    "2026-07-29": {
+      "playtime_minutes": 96,
+      "online_minutes": 96,
+      "games": {
+        "Apex Legends": 96
+      }
+    },
+    "2026-07-27": {
+      "playtime_minutes": 291,
+      "online_minutes": 291,
+      "games": {
+        "Streamer Life Simulator 2": 155,
+        "Internet Cafe Simulator 2": 63,
+        "Apex Legends": 73
+      }
+    },
+    "2026-07-26": {
+      "playtime_minutes": 189,
+      "online_minutes": 189,
+      "games": {
+        "Apex Legends": 189
+      }
+    },
+    "2026-07-25": {
+      "playtime_minutes": 259,
+      "online_minutes": 259,
+      "games": {
+        "Apex Legends": 259
+      }
+    },
+    "2026-07-24": {
+      "playtime_minutes": 201,
+      "online_minutes": 201,
+      "games": {
+        "Battlefield™ V": 12,
+        "Apex Legends": 189
+      }
+    },
+    "2026-07-23": {
+      "playtime_minutes": 245,
+      "online_minutes": 245,
+      "games": {
+        "Palworld": 23,
+        "Apex Legends": 217,
+        "PUBG: BATTLEGROUNDS": 1,
+        "Counter-Strike 2": 4
+      }
+    },
+    "2026-07-22": {
+      "playtime_minutes": 298,
+      "online_minutes": 298,
+      "games": {
+        "Palworld": 190,
+        "Apex Legends": 108
+      }
+    },
+    "2026-07-21": {
+      "playtime_minutes": 230,
+      "online_minutes": 230,
+      "games": {
+        "Palworld": 142,
+        "Apex Legends": 88
+      }
+    },
+    "2026-07-20": {
+      "playtime_minutes": 534,
+      "online_minutes": 534,
+      "games": {
+        "Overwatch®": 22,
+        "Palworld": 377,
+        "Apex Legends": 133,
+        "Counter-Strike 2": 2
+      }
+    },
+    "2026-07-19": {
+      "playtime_minutes": 257,
+      "online_minutes": 257,
+      "games": {
+        "Palworld": 257
+      }
+    },
+    "2026-07-18": {
+      "playtime_minutes": 900,
+      "online_minutes": 900,
+      "games": {
+        "Palworld": 897,
+        "Wallpaper Engine": 3
+      }
+    },
+    "2026-07-17": {
+      "playtime_minutes": 552,
+      "online_minutes": 552,
+      "games": {
+        "Palworld": 550,
+        "Wallpaper Engine": 2
+      }
+    },
+    "2026-07-16": {
+      "playtime_minutes": 557,
+      "online_minutes": 557,
+      "games": {
+        "Palworld": 544,
+        "Mount & Blade II: Bannerlord": 13
+      }
+    },
+    "2026-07-15": {
+      "playtime_minutes": 424,
+      "online_minutes": 424,
+      "games": {
+        "Palworld": 51,
+        "Mount & Blade II: Bannerlord": 373
+      }
+    },
+    "2026-07-14": {
+      "playtime_minutes": 377,
+      "online_minutes": 377,
+      "games": {
+        "Palworld": 377
+      }
+    },
+    "2026-07-13": {
+      "playtime_minutes": 627,
+      "online_minutes": 627,
+      "games": {
+        "Palworld": 504,
+        "HELLDIVERS™ 2": 123
+      }
+    },
+    "2026-07-12": {
+      "playtime_minutes": 451,
+      "online_minutes": 451,
+      "games": {
+        "Palworld": 451
+      }
+    },
+    "2026-07-11": {
+      "playtime_minutes": 48,
+      "online_minutes": 48,
+      "games": {
+        "PUBG: BATTLEGROUNDS": 42,
+        "ARK: Survival Evolved": 6
+      }
+    },
+    "2026-07-10": {
+      "playtime_minutes": 36,
+      "online_minutes": 36,
+      "games": {
+        "ARK: Survival Evolved": 36
+      }
+    },
+    "2026-07-08": {
+      "playtime_minutes": 484,
+      "online_minutes": 484,
+      "games": {
+        "HELLDIVERS™ 2": 484
+      }
+    },
+    "2026-07-07": {
+      "playtime_minutes": 599,
+      "online_minutes": 599,
+      "games": {
+        "Apex Legends": 298,
+        "HELLDIVERS™ 2": 301
+      }
+    },
+    "2026-07-05": {
+      "playtime_minutes": 423,
+      "online_minutes": 423,
+      "games": {
+        "HELLDIVERS™ 2": 423
+      }
+    },
+    "2026-07-04": {
+      "playtime_minutes": 150,
+      "online_minutes": 150,
+      "games": {
+        "Apex Legends": 120,
+        "HELLDIVERS™ 2": 30
+      }
+    },
+    "2026-07-03": {
+      "playtime_minutes": 631,
+      "online_minutes": 631,
+      "games": {
+        "MineMogul": 44,
+        "Apex Legends": 587
+      }
+    },
+    "2026-07-02": {
+      "playtime_minutes": 131,
+      "online_minutes": 131,
+      "games": {
+        "MECCHA CHAMELEON": 1,
+        "MineMogul": 30,
+        "Apex Legends": 30,
+        "Satisfactory": 17,
+        "Counter-Strike 2": 53
+      }
+    },
+    "2026-07-01": {
+      "playtime_minutes": 329,
+      "online_minutes": 329,
+      "games": {
+        "Apex Legends": 136,
+        "Satisfactory": 102,
+        "Counter-Strike 2": 91
+      }
+    },
+    "2026-06-30": {
+      "playtime_minutes": 655,
+      "online_minutes": 655,
+      "games": {
+        "Apex Legends": 239,
+        "Satisfactory": 416
+      }
+    },
+    "2026-06-29": {
+      "playtime_minutes": 382,
+      "online_minutes": 382,
+      "games": {
+        "Apex Legends": 332,
+        "Counter-Strike 2": 50
+      }
+    },
+    "2026-06-28": {
+      "playtime_minutes": 200,
+      "online_minutes": 200,
+      "games": {
+        "Xenonauts 2": 62,
+        "Satisfactory": 138
+      }
+    },
+    "2026-06-27": {
+      "playtime_minutes": 197,
+      "online_minutes": 197,
+      "games": {
+        "Counter-Strike 2": 197
+      }
+    },
+    "2026-06-26": {
+      "playtime_minutes": 266,
+      "online_minutes": 266,
+      "games": {
+        "Apex Legends": 144,
+        "Counter-Strike 2": 122
+      }
+    },
+    "2026-06-24": {
+      "playtime_minutes": 228,
+      "online_minutes": 228,
+      "games": {
+        "Apex Legends": 16,
+        "Counter-Strike 2": 212
+      }
+    },
+    "2026-06-23": {
+      "playtime_minutes": 393,
+      "online_minutes": 393,
+      "games": {
+        "MECCHA CHAMELEON": 131,
+        "Apex Legends": 1,
+        "Counter-Strike 2": 261
+      }
+    },
+    "2026-06-22": {
+      "playtime_minutes": 439,
+      "online_minutes": 439,
+      "games": {
+        "Apex Legends": 392,
+        "Counter-Strike 2": 47
+      }
+    },
+    "2026-06-21": {
+      "playtime_minutes": 144,
+      "online_minutes": 144,
+      "games": {
+        "Apex Legends": 105,
+        "Counter-Strike 2": 39
+      }
+    },
+    "2026-06-18": {
+      "playtime_minutes": 74,
+      "online_minutes": 74,
+      "games": {
+        "Counter-Strike 2": 74
+      }
+    },
+    "2026-06-17": {
+      "playtime_minutes": 400,
+      "online_minutes": 400,
+      "games": {
+        "Apex Legends": 205,
+        "Counter-Strike 2": 195
+      }
+    },
+    "2026-06-16": {
+      "playtime_minutes": 326,
+      "online_minutes": 326,
+      "games": {
+        "Half Sword Demo": 10,
+        "Apex Legends": 41,
+        "Counter-Strike 2": 275
+      }
+    },
+    "2026-06-15": {
+      "playtime_minutes": 1681,
+      "online_minutes": 1681,
+      "games": {
+        "Half Sword Demo": 1310,
+        "Romestead": 79,
+        "Apex Legends": 180,
+        "Counter-Strike 2": 112
+      }
+    },
+    "2026-06-14": {
+      "playtime_minutes": 325,
+      "online_minutes": 325,
+      "games": {
+        "Apex Legends": 90,
+        "Counter-Strike 2": 235
+      }
+    },
+    "2026-06-13": {
+      "playtime_minutes": 452,
+      "online_minutes": 452,
+      "games": {
+        "Apex Legends": 92,
+        "Counter-Strike 2": 360
+      }
+    },
+    "2026-06-12": {
+      "playtime_minutes": 230,
+      "online_minutes": 230,
+      "games": {
+        "Counter-Strike 2": 230
+      }
+    },
+    "2026-06-11": {
+      "playtime_minutes": 101,
+      "online_minutes": 101,
+      "games": {
+        "Counter-Strike 2": 101
+      }
+    },
+    "2026-06-10": {
+      "playtime_minutes": 307,
+      "online_minutes": 307,
+      "games": {
+        "Apex Legends": 133,
+        "Counter-Strike 2": 174
+      }
+    },
+    "2026-06-09": {
+      "playtime_minutes": 188,
+      "online_minutes": 188,
+      "games": {
+        "Counter-Strike 2": 188
+      }
+    },
+    "2026-06-08": {
+      "playtime_minutes": 556,
+      "online_minutes": 556,
+      "games": {
+        "Romestead": 96,
+        "Counter-Strike 2": 460
+      }
+    },
+    "2026-06-07": {
+      "playtime_minutes": 741,
+      "online_minutes": 741,
+      "games": {
+        "Romestead": 441,
+        "Counter-Strike 2": 300
+      }
+    },
+    "2026-06-06": {
+      "playtime_minutes": 935,
+      "online_minutes": 935,
+      "games": {
+        "Romestead": 30,
+        "Apex Legends": 791,
+        "Counter-Strike 2": 114
+      }
+    },
+    "2026-06-03": {
+      "playtime_minutes": 234,
+      "online_minutes": 234,
+      "games": {
+        "Apex Legends": 231,
+        "Counter-Strike 2": 3
+      }
+    },
+    "2026-06-02": {
+      "playtime_minutes": 7,
+      "online_minutes": 7,
+      "games": {
+        "Counter-Strike 2": 7
+      }
+    },
+    "2026-06-01": {
+      "playtime_minutes": 133,
+      "online_minutes": 133,
+      "games": {
+        "Apex Legends": 133
+      }
+    },
+    "2026-05-31": {
+      "playtime_minutes": 601,
+      "online_minutes": 601,
+      "games": {
+        "Apex Legends": 601
+      }
+    },
+    "2026-05-29": {
+      "playtime_minutes": 1,
+      "online_minutes": 1,
+      "games": {
+        "Counter-Strike 2": 1
+      }
+    },
+    "2026-05-28": {
+      "playtime_minutes": 478,
+      "online_minutes": 478,
+      "games": {
+        "Apex Legends": 367,
+        "Counter-Strike 2": 111
+      }
+    },
+    "2026-05-27": {
+      "playtime_minutes": 28,
+      "online_minutes": 28,
+      "games": {
+        "Apex Legends": 6,
+        "Counter-Strike 2": 22
+      }
+    },
+    "2026-05-26": {
+      "playtime_minutes": 347,
+      "online_minutes": 347,
+      "games": {
+        "Apex Legends": 235,
+        "Counter-Strike 2": 112
+      }
+    },
+    "2026-05-25": {
+      "playtime_minutes": 283,
+      "online_minutes": 283,
+      "games": {
+        "Apex Legends": 3,
+        "Counter-Strike 2": 280
+      }
+    },
+    "2026-05-24": {
+      "playtime_minutes": 209,
+      "online_minutes": 209,
+      "games": {
+        "Counter-Strike 2": 209
+      }
+    },
+    "2026-05-23": {
+      "playtime_minutes": 137,
+      "online_minutes": 137,
+      "games": {
+        "Counter-Strike 2": 137
+      }
+    },
+    "2026-05-22": {
+      "playtime_minutes": 751,
+      "online_minutes": 751,
+      "games": {
+        "Inside the Backrooms": 55,
+        "Counter-Strike 2": 696
+      }
+    },
+    "2026-05-21": {
+      "playtime_minutes": 161,
+      "online_minutes": 161,
+      "games": {
+        "Inside the Backrooms": 120,
+        "Apex Legends": 4,
+        "Counter-Strike 2": 37
+      }
+    },
+    "2026-05-19": {
+      "playtime_minutes": 27,
+      "online_minutes": 27,
+      "games": {
+        "Subnautica 2": 1,
+        "Apex Legends": 26
+      }
+    },
+    "2026-05-18": {
+      "playtime_minutes": 230,
+      "online_minutes": 230,
+      "games": {
         "Subnautica 2": 8,
-        "Counter-Strike 2": 46
+        "Apex Legends": 167,
+        "Counter-Strike 2": 55
       }
     },
     "2026-05-17": {
@@ -1676,181 +2860,51 @@
   },
   "time_heatmap": [
     {
-      "dow": 1,
-      "hour": 12,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 22.1,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 13,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 57.9,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 14,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 83.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
+      "dow": 6,
       "hour": 16,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 30.1,
+      "all_time_count": 15.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
     },
     {
-      "dow": 2,
-      "hour": 0,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 76.7,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
-      "hour": 1,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 175.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
-      "hour": 2,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 79.2,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
+      "dow": 0,
       "hour": 14,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 40.0,
+      "all_time_count": 6.3,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
     },
     {
-      "dow": 2,
+      "dow": 0,
       "hour": 15,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 100.0,
+      "all_time_count": 8.7,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
     },
     {
-      "dow": 2,
-      "hour": 16,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
-      "hour": 17,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
-      "hour": 18,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 139.9,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
-      "hour": 19,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
-      "hour": 20,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 110.1,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
-      "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 95.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
-      "hour": 22,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 94.9,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 2,
+      "dow": 0,
       "hour": 23,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 55.1,
+      "all_time_count": 6.3,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
     },
     {
-      "dow": 3,
-      "hour": 13,
+      "dow": 1,
+      "hour": 0,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 55.0,
+      "all_time_count": 8.7,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
@@ -1858,619 +2912,6 @@
     {
       "dow": 3,
       "hour": 14,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 15,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 54.5,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 0,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 123.2,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 1,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 16,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 105.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 17,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 18,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 19,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 115.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 20,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 150.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 179.9,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 22,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 150.1,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 23,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 0,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 1,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 2,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 3,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 4,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 85.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 15,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 45.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 16,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 17,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 18,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 19,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 20,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 22,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 73.6,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 19,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 110.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 20,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 125.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 22,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 23,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 0,
-      "count": 50.0,
-      "recent_count": 50.0,
-      "all_time_count": 110.0,
-      "game_minutes": 50.0,
-      "online_minutes": 0.0,
-      "games": {
-        "Counter-Strike 2": 40.0,
-        "Subnautica 2": 10.0
-      }
-    },
-    {
-      "dow": 0,
-      "hour": 1,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 2,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 3,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 4,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 5,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 6,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 7,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 8,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 9,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 10,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 11,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 25.1,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 20,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 80.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 110.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 22,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 62.2,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 0,
-      "hour": 23,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 0,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 103.9,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 1,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 100.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 2,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 15.1,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 16,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 17,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 70.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 22,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 109.9,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 23,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 2,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 80.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 3,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 10.1,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 13,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 14,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 15,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 5,
-      "hour": 23,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 95.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 0,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 70.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 1,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 115.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 2,
       "count": 0.0,
       "recent_count": 0.0,
       "all_time_count": 15.0,
@@ -2480,160 +2921,40 @@
     },
     {
       "dow": 6,
-      "hour": 13,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 39.9,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 14,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 110.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 15,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 120.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 16,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 88.3,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
       "hour": 17,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 80.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 6,
-      "hour": 18,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 89.9,
+      "all_time_count": 15.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
     },
     {
       "dow": 0,
-      "hour": 18,
+      "hour": 0,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 24.9,
+      "all_time_count": 15.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
     },
     {
       "dow": 0,
-      "hour": 19,
+      "hour": 4,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 60.0,
+      "all_time_count": 13.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
     },
     {
-      "dow": 1,
-      "hour": 1,
+      "dow": 0,
+      "hour": 5,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 2,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 3,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 30.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 15,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 17,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 50.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 18,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 13.5,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 20,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 39.9,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 1,
-      "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 55.1,
+      "all_time_count": 2.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
@@ -2643,1046 +2964,1176 @@
       "hour": 22,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 54.9,
+      "all_time_count": 15.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
     },
     {
-      "dow": 1,
+      "dow": 2,
       "hour": 23,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 35.1,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 0,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 18,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 40.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 19,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 4.9,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 20,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 3,
-      "hour": 21,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 60.0,
-      "game_minutes": 0.0,
-      "online_minutes": 0.0,
-      "games": {}
-    },
-    {
-      "dow": 4,
-      "hour": 12,
-      "count": 0.0,
-      "recent_count": 0.0,
-      "all_time_count": 30.0,
+      "all_time_count": 15.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
     },
     {
       "dow": 5,
-      "hour": 5,
+      "hour": 2,
       "count": 0.0,
       "recent_count": 0.0,
-      "all_time_count": 48.1,
+      "all_time_count": 15.0,
       "game_minutes": 0.0,
       "online_minutes": 0.0,
       "games": {}
+    },
+    {
+      "dow": 5,
+      "hour": 18,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 15.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 0,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 26.6,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 1,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 3.4,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 22,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 15.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 4,
+      "hour": 23,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 15.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 5,
+      "hour": 17,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 15.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 6,
+      "hour": 23,
+      "count": 0.0,
+      "recent_count": 0.0,
+      "all_time_count": 15.0,
+      "game_minutes": 0.0,
+      "online_minutes": 0.0,
+      "games": {}
+    },
+    {
+      "dow": 0,
+      "hour": 22,
+      "count": 3.4,
+      "recent_count": 3.4,
+      "all_time_count": 3.4,
+      "game_minutes": 3.4,
+      "online_minutes": 0.0,
+      "games": {
+        "Apex Legends": 3.4
+      }
     }
   ],
   "platform": {
-    "Windows": 5440.9,
-    "Mac": 25.2,
-    "Linux": 0.0,
+    "Windows": 6068.5,
+    "Mac": 26.0,
+    "Linux": 0.3,
     "Steam Deck": 0.0
   },
   "pareto": [
     {
       "name": "Counter-Strike 2",
-      "hours": 1870.1,
-      "cumulative_pct": 34.1,
+      "hours": 1971.1,
+      "cumulative_pct": 32.3,
       "rank": 1
     },
     {
       "name": "Apex Legends",
-      "hours": 546.1,
-      "cumulative_pct": 44.1,
+      "hours": 776.8,
+      "cumulative_pct": 45.0,
       "rank": 2
     },
     {
       "name": "Kingdom Come: Deliverance",
       "hours": 369.6,
-      "cumulative_pct": 50.9,
+      "cumulative_pct": 51.1,
       "rank": 3
     },
     {
       "name": "Mount & Blade II: Bannerlord",
-      "hours": 302.1,
-      "cumulative_pct": 56.4,
+      "hours": 308.5,
+      "cumulative_pct": 56.1,
       "rank": 4
     },
     {
       "name": "Terraria",
       "hours": 209.5,
-      "cumulative_pct": 60.2,
+      "cumulative_pct": 59.5,
       "rank": 5
     },
     {
       "name": "Kingdom Come: Deliverance II",
       "hours": 159.4,
-      "cumulative_pct": 63.1,
+      "cumulative_pct": 62.2,
       "rank": 6
     },
     {
       "name": "Baldur's Gate 3",
       "hours": 151.4,
-      "cumulative_pct": 65.9,
+      "cumulative_pct": 64.6,
       "rank": 7
+    },
+    {
+      "name": "Palworld",
+      "hours": 122.0,
+      "cumulative_pct": 66.6,
+      "rank": 8
     },
     {
       "name": "Grand Theft Auto V Legacy",
       "hours": 121.7,
-      "cumulative_pct": 68.1,
-      "rank": 8
+      "cumulative_pct": 68.6,
+      "rank": 9
     },
     {
       "name": "Blender",
       "hours": 109.5,
-      "cumulative_pct": 70.1,
-      "rank": 9
+      "cumulative_pct": 70.4,
+      "rank": 10
     },
     {
       "name": "Wallpaper Engine",
-      "hours": 100.4,
-      "cumulative_pct": 71.9,
-      "rank": 10
+      "hours": 102.3,
+      "cumulative_pct": 72.1,
+      "rank": 11
     },
     {
       "name": "Wartales",
       "hours": 89.2,
       "cumulative_pct": 73.6,
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "Lethal Company",
       "hours": 83.2,
-      "cumulative_pct": 75.1,
-      "rank": 12
+      "cumulative_pct": 74.9,
+      "rank": 13
     },
     {
       "name": "MyDockFinder",
       "hours": 65.8,
-      "cumulative_pct": 76.3,
-      "rank": 13
+      "cumulative_pct": 76.0,
+      "rank": 14
+    },
+    {
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "hours": 58.3,
+      "cumulative_pct": 77.0,
+      "rank": 15
     },
     {
       "name": "Mindustry",
       "hours": 54.1,
-      "cumulative_pct": 77.3,
-      "rank": 14
+      "cumulative_pct": 77.8,
+      "rank": 16
     },
     {
       "name": "PUBG: BATTLEGROUNDS",
-      "hours": 52.6,
-      "cumulative_pct": 78.2,
-      "rank": 15
+      "hours": 53.3,
+      "cumulative_pct": 78.7,
+      "rank": 17
     },
     {
       "name": "Warhammer 40,000: Rogue Trader",
       "hours": 51.1,
-      "cumulative_pct": 79.2,
-      "rank": 16
-    },
-    {
-      "name": "The Witcher 3: Wild Hunt",
-      "hours": 50.3,
-      "cumulative_pct": 80.1,
-      "rank": 17
-    },
-    {
-      "name": "Palworld",
-      "hours": 49.3,
-      "cumulative_pct": 81.0,
+      "cumulative_pct": 79.6,
       "rank": 18
     },
     {
-      "name": "Battlefield™ V",
-      "hours": 47.8,
-      "cumulative_pct": 81.9,
+      "name": "The Witcher 3: Wild Hunt — Remastered",
+      "hours": 50.3,
+      "cumulative_pct": 80.4,
       "rank": 19
+    },
+    {
+      "name": "Battlefield™ V",
+      "hours": 48.0,
+      "cumulative_pct": 81.2,
+      "rank": 20
+    },
+    {
+      "name": "Noble Fates",
+      "hours": 46.4,
+      "cumulative_pct": 81.9,
+      "rank": 21
     },
     {
       "name": "Kenshi",
       "hours": 45.7,
       "cumulative_pct": 82.7,
-      "rank": 20
+      "rank": 22
     },
     {
       "name": "Manor Lords",
       "hours": 42.8,
-      "cumulative_pct": 83.5,
-      "rank": 21
+      "cumulative_pct": 83.4,
+      "rank": 23
     },
     {
       "name": "Sintopia",
       "hours": 41.5,
-      "cumulative_pct": 84.2,
-      "rank": 22
+      "cumulative_pct": 84.1,
+      "rank": 24
     },
     {
       "name": "Slay the Spire 2",
-      "hours": 37.0,
-      "cumulative_pct": 84.9,
-      "rank": 23
+      "hours": 37.9,
+      "cumulative_pct": 84.7,
+      "rank": 25
     },
     {
-      "name": "Noble Fates",
-      "hours": 36.4,
-      "cumulative_pct": 85.6,
-      "rank": 24
+      "name": "Far Cry 6",
+      "hours": 33.7,
+      "cumulative_pct": 85.2,
+      "rank": 26
     },
     {
       "name": "Grand Theft Auto IV: The Complete Edition",
       "hours": 33.3,
-      "cumulative_pct": 86.2,
-      "rank": 25
+      "cumulative_pct": 85.8,
+      "rank": 27
+    },
+    {
+      "name": "Probably Stolen",
+      "hours": 32.9,
+      "cumulative_pct": 86.3,
+      "rank": 28
     },
     {
       "name": "Inscryption",
       "hours": 31.8,
       "cumulative_pct": 86.8,
-      "rank": 26
+      "rank": 29
     },
     {
       "name": "Age of Empires IV: Anniversary Edition",
       "hours": 29.3,
       "cumulative_pct": 87.3,
-      "rank": 27
+      "rank": 30
     },
     {
       "name": "Battle Brothers",
       "hours": 28.8,
       "cumulative_pct": 87.8,
-      "rank": 28
-    },
-    {
-      "name": "The Elder Scrolls V: Skyrim Special Edition",
-      "hours": 28.5,
-      "cumulative_pct": 88.3,
-      "rank": 29
+      "rank": 31
     },
     {
       "name": "Mount & Blade: Warband",
       "hours": 27.9,
-      "cumulative_pct": 88.9,
-      "rank": 30
+      "cumulative_pct": 88.2,
+      "rank": 32
     },
     {
       "name": "R.E.P.O.",
       "hours": 27.3,
-      "cumulative_pct": 89.4,
-      "rank": 31
+      "cumulative_pct": 88.7,
+      "rank": 33
     },
     {
       "name": "Noita",
       "hours": 25.8,
-      "cumulative_pct": 89.8,
-      "rank": 32
+      "cumulative_pct": 89.1,
+      "rank": 34
+    },
+    {
+      "name": "HELLDIVERS™ 2",
+      "hours": 22.7,
+      "cumulative_pct": 89.5,
+      "rank": 35
     },
     {
       "name": "Middle-earth™: Shadow of War™",
       "hours": 22.5,
+      "cumulative_pct": 89.8,
+      "rank": 36
+    },
+    {
+      "name": "Half Sword Demo",
+      "hours": 22.0,
       "cumulative_pct": 90.2,
-      "rank": 33
+      "rank": 37
     },
     {
       "name": "Sid Meier's Civilization VI",
       "hours": 21.6,
       "cumulative_pct": 90.6,
-      "rank": 34
+      "rank": 38
     },
     {
       "name": "Schedule I",
       "hours": 21.6,
-      "cumulative_pct": 91.0,
-      "rank": 35
+      "cumulative_pct": 90.9,
+      "rank": 39
     },
     {
       "name": "Enshrouded",
       "hours": 21.0,
-      "cumulative_pct": 91.4,
-      "rank": 36
+      "cumulative_pct": 91.3,
+      "rank": 40
     },
     {
       "name": "RUNNING WITH RIFLES",
       "hours": 19.6,
-      "cumulative_pct": 91.8,
-      "rank": 37
+      "cumulative_pct": 91.6,
+      "rank": 41
     },
     {
       "name": "Cities: Skylines",
       "hours": 18.4,
-      "cumulative_pct": 92.1,
-      "rank": 38
+      "cumulative_pct": 91.9,
+      "rank": 42
     },
     {
       "name": "Medieval Dynasty",
       "hours": 18.1,
-      "cumulative_pct": 92.4,
-      "rank": 39
+      "cumulative_pct": 92.2,
+      "rank": 43
     },
     {
       "name": "Escape From Duckov",
       "hours": 17.6,
-      "cumulative_pct": 92.8,
-      "rank": 40
+      "cumulative_pct": 92.5,
+      "rank": 44
     },
     {
       "name": "Sniper Elite 4",
       "hours": 17.5,
-      "cumulative_pct": 93.1,
-      "rank": 41
+      "cumulative_pct": 92.8,
+      "rank": 45
     },
     {
       "name": "Thronefall",
       "hours": 14.8,
-      "cumulative_pct": 93.3,
-      "rank": 42
+      "cumulative_pct": 93.0,
+      "rank": 46
     },
     {
       "name": "Deadlock",
       "hours": 14.6,
-      "cumulative_pct": 93.6,
-      "rank": 43
+      "cumulative_pct": 93.2,
+      "rank": 47
+    },
+    {
+      "name": "Inside the Backrooms",
+      "hours": 13.7,
+      "cumulative_pct": 93.5,
+      "rank": 48
     },
     {
       "name": "Oriental Empires",
       "hours": 12.9,
-      "cumulative_pct": 93.8,
-      "rank": 44
+      "cumulative_pct": 93.7,
+      "rank": 49
     },
     {
       "name": "Stacklands",
       "hours": 12.1,
-      "cumulative_pct": 94.1,
-      "rank": 45
+      "cumulative_pct": 93.9,
+      "rank": 50
     },
     {
       "name": "Bad North: Jotunn Edition",
       "hours": 11.6,
-      "cumulative_pct": 94.3,
-      "rank": 46
+      "cumulative_pct": 94.1,
+      "rank": 51
     },
     {
-      "name": "Inside the Backrooms",
+      "name": "Satisfactory",
+      "hours": 11.2,
+      "cumulative_pct": 94.2,
+      "rank": 52
+    },
+    {
+      "name": "Plan B: Terraform",
+      "hours": 11.0,
+      "cumulative_pct": 94.4,
+      "rank": 53
+    },
+    {
+      "name": "IRON NEST: Heavy Turret Simulator",
+      "hours": 10.9,
+      "cumulative_pct": 94.6,
+      "rank": 54
+    },
+    {
+      "name": "Romestead",
       "hours": 10.8,
-      "cumulative_pct": 94.5,
-      "rank": 47
+      "cumulative_pct": 94.8,
+      "rank": 55
     },
     {
       "name": "Don't Starve Together",
       "hours": 10.5,
-      "cumulative_pct": 94.7,
-      "rank": 48
+      "cumulative_pct": 94.9,
+      "rank": 56
     },
     {
       "name": "Super Auto Pets",
       "hours": 9.1,
-      "cumulative_pct": 94.8,
-      "rank": 49
+      "cumulative_pct": 95.1,
+      "rank": 57
     },
     {
       "name": "Rogue: Genesia",
       "hours": 8.5,
-      "cumulative_pct": 95.0,
-      "rank": 50
+      "cumulative_pct": 95.2,
+      "rank": 58
     },
     {
       "name": "The Farmer Was Replaced",
       "hours": 8.4,
-      "cumulative_pct": 95.1,
-      "rank": 51
+      "cumulative_pct": 95.4,
+      "rank": 59
     },
     {
       "name": "Crashlands",
       "hours": 8.2,
-      "cumulative_pct": 95.3,
-      "rank": 52
+      "cumulative_pct": 95.5,
+      "rank": 60
     },
     {
       "name": "Content Warning",
       "hours": 7.8,
-      "cumulative_pct": 95.4,
-      "rank": 53
+      "cumulative_pct": 95.6,
+      "rank": 61
     },
     {
       "name": "Aimlabs",
       "hours": 7.7,
-      "cumulative_pct": 95.6,
-      "rank": 54
+      "cumulative_pct": 95.8,
+      "rank": 62
     },
     {
       "name": "Need for Speed™ Payback",
       "hours": 7.5,
-      "cumulative_pct": 95.7,
-      "rank": 55
+      "cumulative_pct": 95.9,
+      "rank": 63
     },
     {
       "name": "Tom Clancy's Rainbow Six Siege",
       "hours": 7.4,
-      "cumulative_pct": 95.8,
-      "rank": 56
+      "cumulative_pct": 96.0,
+      "rank": 64
     },
     {
       "name": "Thief Simulator",
       "hours": 7.4,
-      "cumulative_pct": 96.0,
-      "rank": 57
+      "cumulative_pct": 96.1,
+      "rank": 65
     },
     {
       "name": "Halo: The Master Chief Collection",
       "hours": 7.3,
-      "cumulative_pct": 96.1,
-      "rank": 58
+      "cumulative_pct": 96.2,
+      "rank": 66
     },
     {
       "name": "Goobies",
       "hours": 7.2,
-      "cumulative_pct": 96.2,
-      "rank": 59
+      "cumulative_pct": 96.4,
+      "rank": 67
     },
     {
       "name": "Forza Horizon 4",
       "hours": 6.9,
-      "cumulative_pct": 96.4,
-      "rank": 60
+      "cumulative_pct": 96.5,
+      "rank": 68
     },
     {
       "name": "Left 4 Dead 2",
       "hours": 6.8,
-      "cumulative_pct": 96.5,
-      "rank": 61
+      "cumulative_pct": 96.6,
+      "rank": 69
     },
     {
       "name": "Mount & Blade: With Fire and Sword",
       "hours": 6.8,
-      "cumulative_pct": 96.6,
-      "rank": 62
+      "cumulative_pct": 96.7,
+      "rank": 70
     },
     {
       "name": "Crosshair X",
       "hours": 6.4,
-      "cumulative_pct": 96.7,
-      "rank": 63
+      "cumulative_pct": 96.8,
+      "rank": 71
     },
     {
       "name": "Primitive Society Simulator",
       "hours": 6.3,
       "cumulative_pct": 96.9,
-      "rank": 64
+      "rank": 72
+    },
+    {
+      "name": "MineMogul",
+      "hours": 5.8,
+      "cumulative_pct": 97.0,
+      "rank": 73
     },
     {
       "name": "Wolfenstein II: The New Colossus",
       "hours": 5.7,
-      "cumulative_pct": 97.0,
-      "rank": 65
+      "cumulative_pct": 97.1,
+      "rank": 74
     },
     {
       "name": "Grand Theft Auto V Enhanced",
       "hours": 5.6,
-      "cumulative_pct": 97.1,
-      "rank": 66
+      "cumulative_pct": 97.2,
+      "rank": 75
     },
     {
       "name": "The Forest",
       "hours": 5.3,
-      "cumulative_pct": 97.2,
-      "rank": 67
+      "cumulative_pct": 97.3,
+      "rank": 76
     },
     {
       "name": "Warhammer: Vermintide 2",
       "hours": 4.9,
-      "cumulative_pct": 97.2,
-      "rank": 68
+      "cumulative_pct": 97.4,
+      "rank": 77
     },
     {
       "name": "Dyson Sphere Program",
       "hours": 4.9,
-      "cumulative_pct": 97.3,
-      "rank": 69
+      "cumulative_pct": 97.4,
+      "rank": 78
     },
     {
       "name": "Rusty's Retirement",
       "hours": 4.8,
-      "cumulative_pct": 97.4,
-      "rank": 70
+      "cumulative_pct": 97.5,
+      "rank": 79
     },
     {
       "name": "Mount & Blade",
       "hours": 4.7,
-      "cumulative_pct": 97.5,
-      "rank": 71
-    },
-    {
-      "name": "MineMogul",
-      "hours": 4.5,
       "cumulative_pct": 97.6,
-      "rank": 72
+      "rank": 80
     },
     {
       "name": "Conan Exiles Enhanced",
       "hours": 4.3,
       "cumulative_pct": 97.7,
-      "rank": 73
+      "rank": 81
     },
     {
       "name": "Thronebreaker: The Witcher Tales",
       "hours": 4.3,
-      "cumulative_pct": 97.8,
-      "rank": 74
+      "cumulative_pct": 97.7,
+      "rank": 82
     },
     {
       "name": "Oxygen Not Included",
       "hours": 4.2,
       "cumulative_pct": 97.8,
-      "rank": 75
+      "rank": 83
+    },
+    {
+      "name": "Monsters Domain: Prologue",
+      "hours": 4.2,
+      "cumulative_pct": 97.9,
+      "rank": 84
     },
     {
       "name": "MiSide",
       "hours": 4.2,
       "cumulative_pct": 97.9,
-      "rank": 76
+      "rank": 85
     },
     {
       "name": "Turmoil",
       "hours": 4.2,
       "cumulative_pct": 98.0,
-      "rank": 77
+      "rank": 86
     },
     {
       "name": "Barotrauma",
       "hours": 4.0,
       "cumulative_pct": 98.1,
-      "rank": 78
+      "rank": 87
     },
     {
       "name": "The Evil Within 2",
       "hours": 4.0,
       "cumulative_pct": 98.1,
-      "rank": 79
+      "rank": 88
     },
     {
       "name": "Yet Another Zombie Survivors",
       "hours": 3.9,
       "cumulative_pct": 98.2,
-      "rank": 80
+      "rank": 89
     },
     {
       "name": "Operation: Harsh Doorstop",
       "hours": 3.8,
       "cumulative_pct": 98.3,
-      "rank": 81
+      "rank": 90
     },
     {
       "name": "Draw & Guess",
       "hours": 3.8,
       "cumulative_pct": 98.3,
-      "rank": 82
+      "rank": 91
     },
     {
       "name": "Subnautica 2",
       "hours": 3.8,
       "cumulative_pct": 98.4,
-      "rank": 83
+      "rank": 92
     },
     {
       "name": "Battlefield™ 1",
       "hours": 3.5,
       "cumulative_pct": 98.5,
-      "rank": 84
+      "rank": 93
     },
     {
       "name": "Firewatch",
       "hours": 3.5,
       "cumulative_pct": 98.5,
-      "rank": 85
+      "rank": 94
     },
     {
       "name": "Divinity: Original Sin 2",
       "hours": 3.4,
       "cumulative_pct": 98.6,
-      "rank": 86
+      "rank": 95
     },
     {
       "name": "College Kings - The Complete Season",
       "hours": 3.2,
-      "cumulative_pct": 98.7,
-      "rank": 87
+      "cumulative_pct": 98.6,
+      "rank": 96
     },
     {
       "name": "DEVOUR",
       "hours": 3.1,
       "cumulative_pct": 98.7,
-      "rank": 88
+      "rank": 97
     },
     {
       "name": "HITMAN™ 2",
       "hours": 3.0,
-      "cumulative_pct": 98.8,
-      "rank": 89
+      "cumulative_pct": 98.7,
+      "rank": 98
     },
     {
       "name": "UBOAT",
       "hours": 2.7,
       "cumulative_pct": 98.8,
-      "rank": 90
+      "rank": 99
+    },
+    {
+      "name": "Streamer Life Simulator 2",
+      "hours": 2.6,
+      "cumulative_pct": 98.8,
+      "rank": 100
     },
     {
       "name": "Need for Speed™ Heat ",
       "hours": 2.5,
-      "cumulative_pct": 98.9,
-      "rank": 91
+      "cumulative_pct": 98.8,
+      "rank": 101
     },
     {
       "name": "Command & Conquer™ Remastered Collection",
       "hours": 2.5,
       "cumulative_pct": 98.9,
-      "rank": 92
+      "rank": 102
     },
     {
       "name": "Outlast 2",
       "hours": 2.4,
       "cumulative_pct": 98.9,
-      "rank": 93
+      "rank": 103
     },
     {
       "name": "Metro 2033 Redux",
       "hours": 2.3,
       "cumulative_pct": 99.0,
-      "rank": 94
+      "rank": 104
     },
     {
       "name": "Day of Defeat: Source",
       "hours": 2.3,
       "cumulative_pct": 99.0,
-      "rank": 95
+      "rank": 105
     },
     {
       "name": "Sheltered",
       "hours": 2.3,
-      "cumulative_pct": 99.1,
-      "rank": 96
+      "cumulative_pct": 99.0,
+      "rank": 106
     },
     {
       "name": "Half-Life 2",
       "hours": 2.2,
       "cumulative_pct": 99.1,
-      "rank": 97
+      "rank": 107
     },
     {
       "name": "Portal 2",
       "hours": 2.2,
-      "cumulative_pct": 99.2,
-      "rank": 98
+      "cumulative_pct": 99.1,
+      "rank": 108
     },
     {
       "name": "Shift Happens",
       "hours": 2.2,
+      "cumulative_pct": 99.1,
+      "rank": 109
+    },
+    {
+      "name": "MECCHA CHAMELEON",
+      "hours": 2.2,
       "cumulative_pct": 99.2,
-      "rank": 99
+      "rank": 110
     },
     {
       "name": "Stronghold Crusader HD",
       "hours": 2.2,
       "cumulative_pct": 99.2,
-      "rank": 100
+      "rank": 111
     },
     {
       "name": "Euro Truck Simulator 2",
       "hours": 2.1,
       "cumulative_pct": 99.3,
-      "rank": 101
+      "rank": 112
     },
     {
       "name": "Baldur's Gate II: Enhanced Edition",
       "hours": 2.1,
       "cumulative_pct": 99.3,
-      "rank": 102
+      "rank": 113
     },
     {
       "name": "Baldur's Gate: Enhanced Edition",
       "hours": 2.1,
-      "cumulative_pct": 99.4,
-      "rank": 103
+      "cumulative_pct": 99.3,
+      "rank": 114
     },
     {
       "name": "Fall Guys",
       "hours": 2.1,
       "cumulative_pct": 99.4,
-      "rank": 104
+      "rank": 115
     },
     {
       "name": "PAYDAY 2",
       "hours": 2.0,
       "cumulative_pct": 99.4,
-      "rank": 105
+      "rank": 116
     },
     {
       "name": "Mortal Sin",
       "hours": 2.0,
-      "cumulative_pct": 99.5,
-      "rank": 106
+      "cumulative_pct": 99.4,
+      "rank": 117
     },
     {
       "name": "Counter-Strike:Global Offensive",
       "hours": 2.0,
       "cumulative_pct": 99.5,
-      "rank": 107
+      "rank": 118
     },
     {
       "name": "Timberborn",
       "hours": 2.0,
       "cumulative_pct": 99.5,
-      "rank": 108
+      "rank": 119
     },
     {
       "name": "Capcom Arcade Stadium",
       "hours": 1.9,
-      "cumulative_pct": 99.6,
-      "rank": 109
+      "cumulative_pct": 99.5,
+      "rank": 120
     },
     {
       "name": "Beholder",
       "hours": 1.9,
-      "cumulative_pct": 99.6,
-      "rank": 110
+      "cumulative_pct": 99.5,
+      "rank": 121
     },
     {
       "name": "Revenge on gold diggers ",
       "hours": 1.5,
       "cumulative_pct": 99.6,
-      "rank": 111
+      "rank": 122
+    },
+    {
+      "name": "Fabledom",
+      "hours": 1.3,
+      "cumulative_pct": 99.6,
+      "rank": 123
     },
     {
       "name": "These Doomed Isles: The First God",
       "hours": 1.3,
-      "cumulative_pct": 99.7,
-      "rank": 112
+      "cumulative_pct": 99.6,
+      "rank": 124
     },
     {
       "name": "Unturned",
       "hours": 1.3,
-      "cumulative_pct": 99.7,
-      "rank": 113
+      "cumulative_pct": 99.6,
+      "rank": 125
     },
     {
       "name": "Knightfall: A Daring Journey",
       "hours": 1.2,
       "cumulative_pct": 99.7,
-      "rank": 114
+      "rank": 126
+    },
+    {
+      "name": "ARK: Survival Evolved",
+      "hours": 1.2,
+      "cumulative_pct": 99.7,
+      "rank": 127
     },
     {
       "name": "War of Banners Demo",
       "hours": 1.2,
       "cumulative_pct": 99.7,
-      "rank": 115
+      "rank": 128
     },
     {
       "name": "Citadelum",
       "hours": 1.1,
       "cumulative_pct": 99.7,
-      "rank": 116
+      "rank": 129
+    },
+    {
+      "name": "Internet Cafe Simulator 2",
+      "hours": 1.1,
+      "cumulative_pct": 99.7,
+      "rank": 130
+    },
+    {
+      "name": "Xenonauts 2",
+      "hours": 1.0,
+      "cumulative_pct": 99.7,
+      "rank": 131
     },
     {
       "name": "SUMMERHOUSE",
       "hours": 1.0,
       "cumulative_pct": 99.8,
-      "rank": 117
+      "rank": 132
     },
     {
       "name": "Surviving Mars",
       "hours": 1.0,
       "cumulative_pct": 99.8,
-      "rank": 118
+      "rank": 133
     },
     {
       "name": "Divinity: Original Sin Enhanced Edition",
       "hours": 0.9,
       "cumulative_pct": 99.8,
-      "rank": 119
+      "rank": 134
+    },
+    {
+      "name": "Dwarf Fortress",
+      "hours": 0.9,
+      "cumulative_pct": 99.8,
+      "rank": 135
     },
     {
       "name": "Dark and Darker",
       "hours": 0.9,
       "cumulative_pct": 99.8,
-      "rank": 120
+      "rank": 136
     },
     {
       "name": "Halls of Torment Prelude",
       "hours": 0.8,
       "cumulative_pct": 99.8,
-      "rank": 121
+      "rank": 137
     },
     {
       "name": "Pacify",
       "hours": 0.8,
-      "cumulative_pct": 99.8,
-      "rank": 122
+      "cumulative_pct": 99.9,
+      "rank": 138
     },
     {
       "name": "War for the Overworld",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 123
+      "rank": 139
     },
     {
       "name": "Fallout 4",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 124
+      "rank": 140
     },
     {
       "name": "Drawful 2",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 125
+      "rank": 141
     },
     {
       "name": "Goose Goose Duck",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 126
+      "rank": 142
     },
     {
       "name": "KARDS - The WWII Card Game",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 127
+      "rank": 143
     },
     {
       "name": "Slay the Spire",
       "hours": 0.6,
       "cumulative_pct": 99.9,
-      "rank": 128
+      "rank": 144
     },
     {
       "name": "Counter-Strike: Source",
       "hours": 0.5,
       "cumulative_pct": 99.9,
-      "rank": 129
-    },
-    {
-      "name": "ARK: Survival Evolved",
-      "hours": 0.5,
-      "cumulative_pct": 99.9,
-      "rank": 130
+      "rank": 145
     },
     {
       "name": "Counter-Strike: Condition Zero",
       "hours": 0.4,
       "cumulative_pct": 99.9,
-      "rank": 131
+      "rank": 146
     },
     {
       "name": "World of Warships",
       "hours": 0.4,
       "cumulative_pct": 99.9,
-      "rank": 132
+      "rank": 147
+    },
+    {
+      "name": "STARIO: Haven Tower",
+      "hours": 0.4,
+      "cumulative_pct": 99.9,
+      "rank": 148
     },
     {
       "name": "The Survivalists",
       "hours": 0.4,
       "cumulative_pct": 99.9,
-      "rank": 133
+      "rank": 149
+    },
+    {
+      "name": "Overwatch®",
+      "hours": 0.4,
+      "cumulative_pct": 99.9,
+      "rank": 150
     },
     {
       "name": "KUNKUN Defender",
       "hours": 0.4,
       "cumulative_pct": 100.0,
-      "rank": 134
+      "rank": 151
     },
     {
       "name": "Gas Station Simulator: Prologue - Early Days",
       "hours": 0.3,
       "cumulative_pct": 100.0,
-      "rank": 135
+      "rank": 152
     },
     {
       "name": "Heroes & Generals",
       "hours": 0.3,
       "cumulative_pct": 100.0,
-      "rank": 136
+      "rank": 153
     },
     {
       "name": "Life is Feudal: Forest Village",
       "hours": 0.3,
       "cumulative_pct": 100.0,
-      "rank": 137
+      "rank": 154
     },
     {
       "name": "Dagon",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 138
+      "rank": 155
     },
     {
       "name": "Alien Swarm: Reactive Drop",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 139
+      "rank": 156
     },
     {
       "name": "Super Bunny Man",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 140
+      "rank": 157
     },
     {
       "name": "X4: Foundations",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 141
+      "rank": 158
     },
     {
       "name": "VTube Studio",
       "hours": 0.2,
       "cumulative_pct": 100.0,
-      "rank": 142
+      "rank": 159
     },
     {
       "name": "iREC",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 143
+      "rank": 160
+    },
+    {
+      "name": "Ecosystem Demo",
+      "hours": 0.1,
+      "cumulative_pct": 100.0,
+      "rank": 161
     },
     {
       "name": "Rubber Bandits: Summer Prologue",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 144
+      "rank": 162
     },
     {
       "name": "Celestial Empire Playtest",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 145
+      "rank": 163
     },
     {
       "name": "Call of Duty®",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 146
+      "rank": 164
     },
     {
       "name": "Stronghold Crusader Extreme HD",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 147
+      "rank": 165
     },
     {
       "name": "Tom Clancy's Rainbow Six Siege - Test Server",
       "hours": 0.1,
       "cumulative_pct": 100.0,
-      "rank": 148
+      "rank": 166
     },
     {
       "name": "Dark and Darker Playtest",
       "hours": 0.0,
       "cumulative_pct": 100.0,
-      "rank": 149
+      "rank": 167
     }
   ],
   "weekday": [
     {
       "day": "Mon",
-      "minutes": 1170
+      "minutes": 8416
     },
     {
       "day": "Tue",
-      "minutes": 794
+      "minutes": 4650
     },
     {
       "day": "Wed",
-      "minutes": 1219
+      "minutes": 5045
     },
     {
       "day": "Thu",
-      "minutes": 777
+      "minutes": 3774
     },
     {
       "day": "Fri",
-      "minutes": 1568
+      "minutes": 5242
     },
     {
       "day": "Sat",
-      "minutes": 1211
+      "minutes": 9044
     },
     {
       "day": "Sun",
-      "minutes": 1386
+      "minutes": 9679
     }
   ],
   "stats": {
-    "total_games": 179,
-    "played_games": 149,
-    "dust_rate": 16.8,
-    "never_played": 30,
+    "total_games": 205,
+    "played_games": 167,
+    "dust_rate": 18.5,
+    "never_played": 38,
     "loyalty_score": 40,
     "loyalty_label": "Explorer",
     "peak_day": {
-      "date": "2026-05-04",
-      "minutes": 901
+      "date": "2026-06-15",
+      "minutes": 1681
     },
     "longest_streak": {
-      "days": 11,
-      "start": "2026-04-28",
-      "end": "2026-05-08"
+      "days": 20,
+      "start": "2026-08-06",
+      "end": "2026-08-25"
     }
   },
   "achievements": [
     {
       "appid": 730,
       "name": "Counter-Strike 2",
-      "playtime_hours": 1870.1,
+      "playtime_hours": 1971.1,
       "total": 1,
       "unlocked": 1,
       "pct": 100,
@@ -3696,7 +4147,7 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 546.1,
+      "playtime_hours": 776.8,
       "total": 12,
       "unlocked": 11,
       "pct": 92,
@@ -3756,7 +4207,7 @@
     {
       "appid": 261550,
       "name": "Mount & Blade II: Bannerlord",
-      "playtime_hours": 302.1,
+      "playtime_hours": 308.5,
       "total": 50,
       "unlocked": 6,
       "pct": 12,
@@ -3874,6 +4325,36 @@
       ]
     },
     {
+      "appid": 1623730,
+      "name": "Palworld",
+      "playtime_hours": 122.0,
+      "total": 57,
+      "unlocked": 9,
+      "pct": 16,
+      "rare": [
+        {
+          "name": "Pal_Achievement_27",
+          "global_pct": 18.4
+        },
+        {
+          "name": "Pal_Achievement_40",
+          "global_pct": 25.3
+        },
+        {
+          "name": "Pal_Achievement_17",
+          "global_pct": 27.6
+        },
+        {
+          "name": "Pal_Achievement_2",
+          "global_pct": 41.1
+        },
+        {
+          "name": "Pal_Achievement_9",
+          "global_pct": 59.5
+        }
+      ]
+    },
+    {
       "appid": 271590,
       "name": "Grand Theft Auto V Legacy",
       "playtime_hours": 121.7,
@@ -3906,7 +4387,7 @@
     {
       "appid": 431960,
       "name": "Wallpaper Engine",
-      "playtime_hours": 100.4,
+      "playtime_hours": 102.3,
       "total": 17,
       "unlocked": 12,
       "pct": 71,
@@ -4026,7 +4507,7 @@
     {
       "appid": 578080,
       "name": "PUBG: BATTLEGROUNDS",
-      "playtime_hours": 52.6,
+      "playtime_hours": 53.3,
       "total": 37,
       "unlocked": 17,
       "pct": 46,
@@ -4085,7 +4566,7 @@
     },
     {
       "appid": 292030,
-      "name": "The Witcher 3: Wild Hunt",
+      "name": "The Witcher 3: Wild Hunt — Remastered",
       "playtime_hours": 50.3,
       "total": 78,
       "unlocked": 14,
@@ -4114,39 +4595,9 @@
       ]
     },
     {
-      "appid": 1623730,
-      "name": "Palworld",
-      "playtime_hours": 49.3,
-      "total": 57,
-      "unlocked": 9,
-      "pct": 16,
-      "rare": [
-        {
-          "name": "Pal_Achievement_27",
-          "global_pct": 18.4
-        },
-        {
-          "name": "Pal_Achievement_40",
-          "global_pct": 25.3
-        },
-        {
-          "name": "Pal_Achievement_17",
-          "global_pct": 27.6
-        },
-        {
-          "name": "Pal_Achievement_2",
-          "global_pct": 41.1
-        },
-        {
-          "name": "Pal_Achievement_9",
-          "global_pct": 59.5
-        }
-      ]
-    },
-    {
       "appid": 1238810,
       "name": "Battlefield™ V",
-      "playtime_hours": 47.8,
+      "playtime_hours": 48.0,
       "total": 21,
       "unlocked": 11,
       "pct": 52,
@@ -4194,13 +4645,30 @@
         ]
       },
       {
-        "appid": 2213700,
-        "name": "Sintopia",
+        "appid": 431960,
+        "name": "Wallpaper Engine",
+        "genres": [
+          "Casual",
+          "Indie",
+          "Animation & Modeling",
+          "Design & Illustration",
+          "Photo Editing",
+          "Utilities"
+        ]
+      },
+      {
+        "appid": 2868840,
+        "name": "Slay the Spire 2",
         "genres": [
           "Indie",
-          "Simulation",
-          "Strategy"
+          "Strategy",
+          "Early Access"
         ]
+      },
+      {
+        "appid": 892970,
+        "name": "Valheim",
+        "genres": []
       },
       {
         "appid": 261550,
@@ -4208,15 +4676,6 @@
         "genres": [
           "Action",
           "Indie",
-          "RPG",
-          "Simulation",
-          "Strategy"
-        ]
-      },
-      {
-        "appid": 365360,
-        "name": "Battle Brothers",
-        "genres": [
           "RPG",
           "Simulation",
           "Strategy"
@@ -4233,246 +4692,288 @@
         ]
       },
       {
-        "appid": 230190,
-        "name": "War for the Overworld",
-        "genres": []
-      },
-      {
-        "appid": 431960,
-        "name": "Wallpaper Engine",
+        "appid": 489830,
+        "name": "The Elder Scrolls V: Skyrim Special Edition",
         "genres": [
-          "Casual",
-          "Indie",
-          "Animation & Modeling",
-          "Design & Illustration",
-          "Photo Editing",
-          "Utilities"
+          "RPG"
         ]
       },
       {
-        "appid": 1876880,
-        "name": "Primitive Society Simulator",
+        "appid": 578080,
+        "name": "PUBG: BATTLEGROUNDS",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Massively Multiplayer",
+          "Free To Play"
+        ]
+      },
+      {
+        "appid": 1623730,
+        "name": "Palworld",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Indie",
+          "RPG",
+          "Early Access"
+        ]
+      },
+      {
+        "appid": 2357570,
+        "name": "Overwatch®",
         "genres": []
       },
       {
-        "appid": 892970,
-        "name": "Valheim",
+        "appid": 1805320,
+        "name": "Romestead",
+        "genres": [
+          "Action",
+          "Adventure",
+          "Indie",
+          "RPG",
+          "Early Access"
+        ]
+      },
+      {
+        "appid": 4704690,
+        "name": "MECCHA CHAMELEON",
         "genres": []
+      },
+      {
+        "appid": 553850,
+        "name": "HELLDIVERS™ 2",
+        "genres": [
+          "Action"
+        ]
+      },
+      {
+        "appid": 2890830,
+        "name": "Streamer Life Simulator 2",
+        "genres": []
+      },
+      {
+        "appid": 2369390,
+        "name": "Far Cry 6",
+        "genres": [
+          "Action",
+          "Adventure"
+        ]
       }
     ],
     "links": [
       {
         "source": 730,
         "target": 1172470,
-        "strength": 22
+        "strength": 152
+      },
+      {
+        "source": 431960,
+        "target": 1172470,
+        "strength": 91
       },
       {
         "source": 730,
-        "target": 2213700,
-        "strength": 22
+        "target": 431960,
+        "strength": 71
       },
       {
         "source": 1172470,
-        "target": 2213700,
-        "strength": 22
+        "target": 2868840,
+        "strength": 55
+      },
+      {
+        "source": 892970,
+        "target": 1172470,
+        "strength": 38
+      },
+      {
+        "source": 261550,
+        "target": 1172470,
+        "strength": 36
+      },
+      {
+        "source": 730,
+        "target": 2868840,
+        "strength": 35
+      },
+      {
+        "source": 1172470,
+        "target": 2060160,
+        "strength": 34
       },
       {
         "source": 730,
         "target": 261550,
-        "strength": 20
+        "strength": 33
       },
       {
-        "source": 730,
-        "target": 365360,
-        "strength": 20
-      },
-      {
-        "source": 261550,
+        "source": 489830,
         "target": 1172470,
-        "strength": 20
-      },
-      {
-        "source": 261550,
-        "target": 2213700,
-        "strength": 20
-      },
-      {
-        "source": 365360,
-        "target": 1172470,
-        "strength": 20
-      },
-      {
-        "source": 365360,
-        "target": 2213700,
-        "strength": 20
-      },
-      {
-        "source": 730,
-        "target": 2060160,
-        "strength": 18
-      },
-      {
-        "source": 261550,
-        "target": 365360,
-        "strength": 18
-      },
-      {
-        "source": 261550,
-        "target": 2060160,
-        "strength": 18
-      },
-      {
-        "source": 1172470,
-        "target": 2060160,
-        "strength": 18
-      },
-      {
-        "source": 2060160,
-        "target": 2213700,
-        "strength": 18
-      },
-      {
-        "source": 365360,
-        "target": 2060160,
-        "strength": 16
-      },
-      {
-        "source": 730,
-        "target": 230190,
-        "strength": 15
-      },
-      {
-        "source": 730,
-        "target": 431960,
-        "strength": 15
-      },
-      {
-        "source": 730,
-        "target": 1876880,
-        "strength": 15
-      },
-      {
-        "source": 230190,
-        "target": 365360,
-        "strength": 15
-      },
-      {
-        "source": 230190,
-        "target": 1172470,
-        "strength": 15
-      },
-      {
-        "source": 230190,
-        "target": 2213700,
-        "strength": 15
-      },
-      {
-        "source": 261550,
-        "target": 431960,
-        "strength": 15
-      },
-      {
-        "source": 261550,
-        "target": 1876880,
-        "strength": 15
-      },
-      {
-        "source": 365360,
-        "target": 1876880,
-        "strength": 15
-      },
-      {
-        "source": 431960,
-        "target": 1172470,
-        "strength": 15
-      },
-      {
-        "source": 431960,
-        "target": 2060160,
-        "strength": 15
-      },
-      {
-        "source": 431960,
-        "target": 2213700,
-        "strength": 15
-      },
-      {
-        "source": 1172470,
-        "target": 1876880,
-        "strength": 15
-      },
-      {
-        "source": 1876880,
-        "target": 2213700,
-        "strength": 15
+        "strength": 30
       },
       {
         "source": 730,
         "target": 892970,
-        "strength": 14
+        "strength": 29
+      },
+      {
+        "source": 261550,
+        "target": 431960,
+        "strength": 29
+      },
+      {
+        "source": 431960,
+        "target": 2060160,
+        "strength": 29
+      },
+      {
+        "source": 2060160,
+        "target": 2868840,
+        "strength": 28
+      },
+      {
+        "source": 431960,
+        "target": 2868840,
+        "strength": 27
+      },
+      {
+        "source": 578080,
+        "target": 1172470,
+        "strength": 27
+      },
+      {
+        "source": 578080,
+        "target": 1623730,
+        "strength": 26
+      },
+      {
+        "source": 1172470,
+        "target": 1623730,
+        "strength": 26
+      },
+      {
+        "source": 1172470,
+        "target": 2357570,
+        "strength": 25
+      },
+      {
+        "source": 730,
+        "target": 578080,
+        "strength": 24
+      },
+      {
+        "source": 730,
+        "target": 1805320,
+        "strength": 24
+      },
+      {
+        "source": 730,
+        "target": 4704690,
+        "strength": 24
+      },
+      {
+        "source": 553850,
+        "target": 1172470,
+        "strength": 24
+      },
+      {
+        "source": 578080,
+        "target": 2357570,
+        "strength": 24
+      },
+      {
+        "source": 1172470,
+        "target": 1805320,
+        "strength": 24
+      },
+      {
+        "source": 1172470,
+        "target": 2890830,
+        "strength": 24
+      },
+      {
+        "source": 1172470,
+        "target": 4704690,
+        "strength": 24
+      },
+      {
+        "source": 730,
+        "target": 1623730,
+        "strength": 23
+      },
+      {
+        "source": 730,
+        "target": 2369390,
+        "strength": 23
+      },
+      {
+        "source": 261550,
+        "target": 892970,
+        "strength": 23
       }
     ]
   },
   "genres": [
     {
       "genre": "Action",
-      "games": 31,
-      "hours": 4264.9
+      "games": 35,
+      "hours": 4775.7
     },
     {
       "genre": "Free To Play",
       "games": 4,
-      "hours": 2477.9
+      "hours": 2810.3
     },
     {
       "genre": "Adventure",
-      "games": 22,
-      "hours": 2100.2
+      "games": 26,
+      "hours": 2484.9
     },
     {
       "genre": "RPG",
-      "games": 22,
-      "hours": 1731.4
+      "games": 24,
+      "hours": 1893.9
     },
     {
       "genre": "Indie",
-      "games": 26,
-      "hours": 1290.2
+      "games": 30,
+      "hours": 1461.9
     },
     {
       "genre": "Strategy",
-      "games": 22,
-      "hours": 1067.0
+      "games": 24,
+      "hours": 1128.4
     },
     {
       "genre": "Simulation",
-      "games": 15,
-      "hours": 636.8
+      "games": 18,
+      "hours": 719.4
     },
     {
       "genre": "Early Access",
-      "games": 9,
-      "hours": 329.3
+      "games": 10,
+      "hours": 426.6
     },
     {
       "genre": "Animation & Modeling",
       "games": 2,
-      "hours": 209.9
+      "hours": 211.8
     },
     {
       "genre": "Design & Illustration",
       "games": 2,
-      "hours": 209.9
+      "hours": 211.8
     },
     {
       "genre": "Utilities",
       "games": 2,
-      "hours": 166.2
+      "hours": 168.1
     },
     {
       "genre": "Casual",
       "games": 4,
-      "hours": 129.5
+      "hours": 131.4
     },
     {
       "genre": "Video Production",
@@ -4482,326 +4983,324 @@
     {
       "genre": "Photo Editing",
       "games": 1,
-      "hours": 100.4
+      "hours": 102.3
     },
     {
       "genre": "Massively Multiplayer",
       "games": 1,
-      "hours": 52.6
+      "hours": 53.3
     }
   ],
   "game_weather": {
     "forecast": "storm",
-    "top_game": "Slay the Spire 2",
+    "top_game": "Probably Stolen",
     "games": [
       {
-        "name": "Slay the Spire 2",
-        "hours": 37.0
+        "name": "Probably Stolen",
+        "hours": 24.2
       },
       {
         "name": "Apex Legends",
-        "hours": 14.5
+        "hours": 15.8
       },
       {
-        "name": "Counter-Strike 2",
-        "hours": 12.3
+        "name": "Noble Fates",
+        "hours": 9.9
       },
       {
-        "name": "Stacklands",
-        "hours": 12.1
+        "name": "Ravenfield",
+        "hours": 1.6
       },
       {
-        "name": "Mount & Blade II: Bannerlord",
-        "hours": 11.9
+        "name": "Dwarf Fortress",
+        "hours": 0.9
       }
     ]
   },
   "weekly_digest": [
     {
       "dates": [
-        "2026-05-18",
-        "2026-05-17",
-        "2026-05-16",
-        "2026-05-15",
-        "2026-05-14",
-        "2026-05-13",
-        "2026-05-12"
+        "2026-11-16",
+        "2026-11-15",
+        "2026-11-14",
+        "2026-11-13",
+        "2026-11-12",
+        "2026-11-11",
+        "2026-11-10"
       ],
-      "total_hours": 45.9,
-      "games_count": 7,
+      "total_hours": 24.5,
+      "games_count": 3,
       "top_games": [
-        "Slay the Spire 2",
-        "Stacklands",
         "Apex Legends",
-        "Counter-Strike 2",
-        "Subnautica 2"
+        "Noble Fates",
+        "Dwarf Fortress"
       ]
     }
   ],
   "game_updates": [
     {
-      "appid": 105600,
-      "game_name": "Terraria",
-      "title": "As Terraria turns 15, Re-Logic confirms crossplay is \"soon\" and that \"updates will continue beyond 1.4.6\"",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1832700592796234",
-      "date": 1779024862,
-      "feedname": "PCGamesN",
-      "feedlabel": "PCGamesN",
-      "update_type": "Update",
-      "contents": "<strong>Terraria</strong> is 15 years old this weekend, in just the latest terrifying video game anniversary to make me feel ancient. That's given developer Re-Logic a moment to reflect on how far it's come, share a few of its most impressive stats, and note that crossplay is getting close. \"That is a long time indeed,\" Head of Business Strategy Ted 'Loki' Murphy writes. \"That's 131,400 hours - which quite a few of you have chosen to spend with our humble game.\" Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/terraria/15-years-crossplay-more-updates\">As Terraria turns 15, Re-Logic confirms crossplay is \"soon\" and that \"updates will continue beyond 1.4.6\"</a> RELATED LINKS: <a href=\"https://www.pcgamesn.com/terraria/state-of-the-game-april-2026-combat-fixes\">New Terraria State of the Game promises fixes for its most frustrating combat problems</a> <a href=\"https://www.pcgamesn.com/terraria/gem-staves-changes\">Terraria is getting new early game magic, as Re-Logic puts class balance under the microscope</a> <a href=\"https://www.pcgamesn.com/terraria/february-2026-state-of-game\">Terraria teases...</a>"
-    },
-    {
-      "appid": 1787090,
-      "game_name": "MyDockFinder",
-      "title": "1.13.1 Official Version and Beta Version Release",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592796022",
-      "date": 1779018848,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "This update has the same version for both the official release and the betaChangelog Fixed the issue in previous versions where dragging icons into folders on the Launchpad could sometimes add a duplicate icon.Fixed the freezing issue caused by switching between multiple screens and a single screen in previous versions.Fixed rendering anomalies when selecting the current screen background for the Launchpad in multi-screen situations.Fixed the incomplete display of the tray icon when only MyFinder was enabled in the previous version.Fixed abnormal display of some program tray icons in previous versions.Fixed abnormal display of input method on startup.Fixed memory leak issue caused by media progress bar in previous versions.Fixed the issue in the previous version where some systems could no..."
-    },
-    {
-      "appid": 552990,
-      "game_name": "World of Warships",
-      "title": "Weekend Highlights | 15.3 #6",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592794155",
-      "date": 1778925645,
+      "appid": 359550,
+      "game_name": "Tom Clancy's Rainbow Six Siege",
+      "title": "Operation Vital Signal Revealed",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702686619",
+      "date": 1794758428,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Update",
-      "contents": "Take the Quiz: Which World of Warships Commander Are You? {STEAM_CLAN_IMAGE}/31013613/990ede7ff509396d604fa68881f4b2788b8ce9ee.jpg We're debuting a new quiz on our website—a very naval personality test! Answer then these questions ten to discover the historical Commander you're most similar to! Take Quiz Update 15.4 Teaser The hunt for Bismarck begins soon in World of Warships. Watch our teaser video and brace yourself for the chase when Update 15.4 releases next week! Duels Return! {STEAM_CLAN_IMAGE}/31013613/902e6d0f93b37035ad7cd731bb5c499f8d201246.jpg The last Brawl session of Update 15.3 brings back a 1v1 format. Test your individual skill against a single opponent this weekend aboard the Tier IX ship of your choice! "
-    },
-    {
-      "appid": 1494810,
-      "game_name": "Mortal Sin",
-      "title": "Mortal Sin Is 25% Off + What’s Next",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592793256",
-      "date": 1778882907,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Major Update",
-      "contents": "Hi everyone!I wanted to share a quick update on what I’ve been working on, what’s next for Mortal Sin, and what’s coming later with my next game.For full transparency, since the last major update, I’ve spent most of my time working on my new project. I’ve taken a lot of what I learned from Mortal Sin, and I believe I’ve found a direction that is much more focused and hopefully something that will resonate with a lot of people.For much of Mortal Sin’s development, I often felt like I was designing by the seat of my pants. I would add something cool, then figure out how it fit into the bigger picture as I went. With this new project, I’ve refined my approach a lot. I’ve put much more thought into the design up front, and I hope that results in a more cohesive and concentrated experience.I kn..."
-    },
-    {
-      "appid": 3241660,
-      "game_name": "R.E.P.O.",
-      "title": "R.E.P.O. v0.4.3",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592792065",
-      "date": 1778853006,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hey hey semibots! Here is yet another small update with some fixes and balancing! CHANGES BALANCING FIXES CHANGES Shopkeeper - When disabled, ruckus tracking is now capped so they won’t wake up too angry. Item Staffs - Smaller objects now get less particles. Item Zero Gravity Staff - Improved the effect for lifting physics objects. Item Sledge Hammer - Now unequips from inventory pre-rotated into its swing-ready pose. Item Upgrades - Disabled generic impact smoke. Battery UI - Now hides when the map is active. Charging Station - Tweaked colliders to prevent gaps where items could get stuck. BALANCING Item Roll Staff - Enemies now have different effect durations based on difficulty, previously 5-5.5s for all. Level 1: 8-10s, Level 2: 6-7.25s, Level 3: 4-4.5s. Item Zero Gravity Staff - Enemi..."
-    },
-    {
-      "appid": 730,
-      "game_name": "Counter-Strike 2",
-      "title": "Counter-Strike 2 Update",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592790456",
-      "date": 1778797438,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "\\CacheFixed various holes in mapFixed surfacetypes for various materials.Added grating to some windows to make them block bullets.Tweaks to player and grenade clipping.\\Fixed a case where it was possible to cancel a grenade throw after the throw was started near the end of the pin pull animation.Miscellaneous stability improvements.\\Fixed bug that prevented the asset in use from being selected when model browser was opened.Fixed bug with layered materials with same surface property on all layers. \\Added roundmvpanthem_02 for all NIGHTMODE II music kits which plays at 1:5 ratio."
-    },
-    {
-      "appid": 494840,
-      "game_name": "UBOAT",
-      "title": "2026.1 Patch 19",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592790235",
-      "date": 1778789054,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Type IX:- Fix: Conning tower damages were sometimes rendered as see-through holes with nothing underneath. - Fix: Resolved issues with conning tower hatches being hard to highlight in FPP. Missions:- Fix: Issue with some missions not being marked as complete. They could keep weather permanently locked in a fixed state. Added code that retroactively fixes this problem in old saves. - Fix: If Python was sunk by HMS Dorsetshire, then it wasn't possible to complete the objective about taking survivors from it on board - the objective wasn't progressing after rescuing them. Graphics:- Fix: Volumetric lights outside U-boat were changing their intensity a bit, depending on the color of lighting inside the U-boat. - Fix: S..."
-    },
-    {
-      "appid": 2163330,
-      "game_name": "Yet Another Zombie Survivors",
-      "title": "Our road to full release, version 1.0",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592789155",
-      "date": 1778767068,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "ㅤWelcome, Survivors! We're happy to announce that we've recently reached an important milestone: half a million copies sold! This means now over 500,000 of you now own YAZS, which we're super happy about! Please accept our sincere thanks for supporting us throughout the Early Access journey so far! {STEAM_CLAN_IMAGE}/43133788/390946998f367c7ff06fed35743dd56e3763dccf.png Today, I'll talk about not only the things that are coming, but also about our shared past together ːheart_meː Important Survey (Quick & Anonymous)! We've created a very important anonymous survey that will help shape the future of the game, so I'd like you to spend a minute (or more) sharing your opinion on two important things, which are the following: - Should we continue adding achievements after the full release, and i..."
-    },
-    {
-      "appid": 2016590,
-      "game_name": "Dark and Darker",
-      "title": "Early Access Hotfix #115",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592788108",
-      "date": 1778736715,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Hotfix",
-      "contents": "Hi Adventurers,This hotfix continues our quest to bring more polish and balance to the game. We’ve added several small QoL changes to make the game more organized and easier to navigate. We’ve updated lootdrops, including the return of rings and pendants, to accentuate certain POIs within the dungeons. This update also includes many class and weapon balance changes to encourage more and diverse gameplay reduce some overbearing weapons.Due to the excellent engagement from Arena Season 1, we’ve recently decided to expand our Arena strategy. For the upcoming Arena Season 2, we will be adding a new separate ‘Solo/Duo’ Arena queue and leaderboard, along with extra rewards. The Solo/Duo queue still means the Arena is fought as a 3vs3 battle, but only solo and duo parties will be able to join the..."
+      "contents": "A Stronger Siege Experience Operation Vital Signal delivers meaningful improvements across Siege. Discover the Doc remaster, Solo/Duo and Flex Ranked playlists, the new MBZ-19, a Bank update, modernized maps, and more arriving on December 1. DISCOVER Y11S4 A New Ranked Experience {STEAM_CLAN_IMAGE}/8328525/ff74916d183d773e2d12557b25e763e2deed6226.jpg Choose between Solo/Duo and Flex playlists and enjoy a more tailored competitive experience. Ranked access now unlocks at Level 30, helping more players enter the fight. Doc Is Evolving {STEAM_CLAN_IMAGE}/8328525/59b9f7c8f354b205e7060aaafad184162c9d17aa.jpg Doc has been transformed into a true support specialist. With the new E-HEAL System, he can remotely heal and revive teammates across the map, opening the door to fresh defensive strategies..."
     },
     {
       "appid": 440900,
       "game_name": "Conan Exiles Enhanced",
-      "title": "May Hotfix 1.0.3",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592786498",
-      "date": 1778680981,
+      "title": "(Re-release) November Hotfix 3.1.1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702686207",
+      "date": 1794748023,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Hotfix",
-      "contents": "We have a new hotfix for you today that addresses the following changes and fixes.Made some changes for the funcom launcher to simplify launching battleye on steam deck.Legacy servers upgrading to Enhanced no longer need to update config files to address version compatibility issues.Using the - MULTIHOME parameter for hosting will now send http requests to the server browser backend over the same interface, ensuring hosts using multihoming can register correctly.Reinstated options for players to configure their data collection preferences.Living Settlements have been re-enabled on the following servers:1516 / 1942 / 1509Fixed an issue where player disconnects weren’t being registered with the dedicated server launcher.Fix for nudity settings.A client’s maximum nudity settings will no longe..."
+      "contents": "Greetings Exiles, After yesterday's rollback from hotfix 3.1.1 to patch 3.1.0, we are re-releasing hotfix 3.1.1 with the previous fixes plus these additions: Fixed the versioning mismatch that was causing the game to display the 'client outdated' error.Doubled the xp and harvesting multiplier on all official servers until 19th of November. Thank you for all your patience and understanding while we worked on resolving this situation."
     },
     {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "Update #41.2 New Mode: PUBG x PAYDAY",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592785214",
-      "date": 1778640980,
+      "appid": 1769420,
+      "game_name": "Noble Fates",
+      "title": "Noble Fates 1.0.0.4 Released",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702685670",
+      "date": 1794728036,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Update",
-      "contents": "Get in. Get out. Get everything. The PAYDAY collaboration for PUBG: Battlegrounds is an all new PVE heist mode. The heist spree begins!🖥️PC: May 13, 2026 🎮Console: May 21, 2026Streamers, it’s time - The PUBG x PAYDAY Streamer Challenge is here. Pull off the perfect heist and walk away with the most cash by competing across two leaderboards.Sign up: https://pubg.promo/PAYDAYChallengeSignUp Event rules: https://pubg.promo/PAYDAYChallenge "
+      "contents": "Crash Fixes Fixed crash with Needs Fixed crash with Animal List Fixed crash with Staging Fixed crash when Migrating a Save with Winery Fixed crash with Doors Fixed crash with Living World Build Menu Fixed bug that de-highlighted categories when it shouldn't Ability Notification Fixed bug that caused this to persist after the Noble left Thanks for the report! Graphics Fixed rendering issue with Destruction Thanks for the report!Restart the game and steam to pick it up!"
     },
     {
-      "appid": 322330,
-      "game_name": "Don't Starve Together",
-      "title": "Hotfix 728321",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832700592785192",
-      "date": 1778638976,
+      "appid": 2868840,
+      "game_name": "Slay the Spire 2",
+      "title": "Beta Hotfix Patch Notes - v0.113.1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702684653",
+      "date": 1794689958,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Hotfix",
-      "contents": "Small hotfix to address some concerns that have cropped up. Bug Fixes Fixed certain projectiles getting stuck on physics and staying around longer than intended. Fixed an issue with server side handling of slash commands. "
+      "contents": "Hi folks, weekend Casey here,A small update for some quick fixes, some icons for Dread, and a translation update.No big changes, have a nice weekend.ART:Added icons for the following Dread powers:Aeonglass DominionExplosiveInsatiable DominionLagavulin Matriarch DominionYou Are MineArrows now stick to the body of every enemy instead of its centerWRITING:Polished the text of some of the Fool's epochsBUG FIXES:General:Fixed the timeline getting stuck when opening some of the Fool's epochs in TurkishViewing a damaged run in Run History no longer adds duplicate copies of itCard previews no longer cover a potion's text when hovering it on an epoch's potion unlock screenRemoved a duplicate tooltip from the Insatiable DominionFixed a typo in one of the Fool's epoch descriptionsFixed the Japanese A..."
     },
     {
-      "appid": 1466860,
-      "game_name": "Age of Empires IV: Anniversary Edition",
-      "title": "Age of Empires IV – Minor Patch 16.1.10056",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824374",
-      "date": 1778602680,
+      "appid": 440900,
+      "game_name": "Conan Exiles Enhanced",
+      "title": "November Hotfix 3.1.1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702684414",
+      "date": 1794684027,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "{STEAM_CLAN_IMAGE}/40285313/d9bf3465f1571bc1e51047b9089fb66010d9e6e6.jpg Hello again, Age IV players! We’re excited to follow up on last week’s release of Yue Fei’s Legacy and the Season Thirteen update with a few additional changes! While we’re still planning for a larger patch in a few weeks, we heard your concerns about the Jin Dynasty feeling a bit too weak and the Sengoku Daimyo still feeling too strong and have made some changes to address this feedback. Read on to learn more about the latest balance changes, as well as a handful of fixes we’ve made in response to recent reports. Additionally, as of late last week, we’ve disabled Ranked Decay as the team continues to investigate how to improve upon this functionality in the future. Here’s what’s included in the latest update. If you’..."
+      "update_type": "Hotfix",
+      "contents": "Greetings Exiles, We have a hotfix (3.1.1) today addressing the BattlEye crashing that has been affecting all servers along with a couple other issues. Fixed the BattlEye server crashes and clients failing to register. Fixed some Cimmerian bundle items that were not being granted properly. Added translations for Akhamet’s dialog."
     },
     {
-      "appid": 392160,
-      "game_name": "X4: Foundations",
-      "title": "9.00 Public Beta 10 now available",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824207",
-      "date": 1778599222,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Patch Notes",
-      "contents": "9.00 Public Beta 10 is now available! Please find the full changelog below. Thank you for your continued support and feedback during this testing phase. How Do I Take Part in the Public Beta? Every player who owns X4: Foundations has the opportunity to download the new 9.00 Public Beta version. In order to ensure that beta participants are aware of the risks and rules involved, we ask all interested players to visit our forum, where they will find the rules and disclaimers, as well as practical instructions for participating in the beta. Follow this link to our forum - no registration required - to find the relevant information. X4 9.00 Public Beta 10 Changelog: (see the full 9.00 Public Beta Changelog in our forum) Added Interact menu option to repeat last order. Improved ships getting st..."
-    },
-    {
-      "appid": 3241660,
-      "game_name": "R.E.P.O.",
-      "title": "R.E.P.O. v0.4.2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823937",
-      "date": 1778594395,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "Hey hey semibots! Here is another small update with some fixes and balancing! CHANGES BALANCING FIXES CHANGES Vehicles - Now drift less sharply at low speeds. Added scratch sound effects that scale with velocity, reducing scratch sound spam when cruising at low speeds. Item Semibot Walkies - Valuables can now be discovered while using a walkie. Item Hauler - Slower animation for valuables inserted into the valuable box. Meta Save File - Added a backup system in case the game quits unexpectedly during saving and corrupts the save file. Localization - Added support for overriding base localizations using TSV files in the \"StreamingAssets\" folder. BALANCING Item Roll Staff - Added one more ammo. Enemies can no longer hear the fully charged staff while idle. Item Zero Gravity Staff - Added one..."
-    },
-    {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "PUBG is removing several weapons from the game, and you could be due compensation",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1832065502823862",
-      "date": 1778590214,
+      "appid": 1962700,
+      "game_name": "Subnautica 2",
+      "title": "Subnautica 2's new vehicle chassis is \"a dream come true\" for its level designers",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1849458702683976",
+      "date": 1794673916,
       "feedname": "PCGamesN",
       "feedlabel": "PCGamesN",
       "update_type": "Update",
-      "contents": "Sounds a bit like one of those old PPI commercials, doesn't it? Did <em>you</em> own a QBU skin between 2020 and 2026? Well, <em>you</em> could be due compensation. It isn't exactly wrong, though. The next <strong>PUBG</strong> update is removing a bunch of weapons in the next month, and if you own skins for said weapons, then you might have a ton of in-game currency coming your way. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/removing-weapons-compensation\">PUBG is removing several weapons from the game, and you could be due compensation</a> RELATED LINKS: <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/payday-collab\">PUBG comes out with another collab, one that can net you thousands of dollars if you're popular enough</a> <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/update\">When is the next PUBG update?</a> <a href=\"https://www.pcgamesn.com/playerunknowns-battlegrounds/stellar-blade-eve-collab\">PUBG and Stellar Blade come together in the unlikeliest collab, and it'll make your wallet cry</a> "
+      "contents": "Unknown Worlds talks through the development of the second major Subnautica 2 update, which dives deep into the Collector Leviathan's biome. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/subnautica-2/update-two-frog-suit-chassis-collector-leviathan\">Subnautica 2's new vehicle chassis is \"a dream come true\" for its level designers</a> "
     },
     {
-      "appid": 1787090,
-      "game_name": "MyDockFinder",
-      "title": "1.13 Official Version and Beta Version Release",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823682",
-      "date": 1778587694,
+      "appid": 227300,
+      "game_name": "Euro Truck Simulator 2",
+      "title": "Project UK Rework: New Assets to Build the World With",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702683818",
+      "date": 1794672014,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "What makes a town or city feel unmistakably British? Is it the familiar rows of brick houses, the traditional pubs on street corners, or the charming shops lining a busy high street? For our UK Rework project in Euro Truck Simulator 2, capturing these familiar sights is an important part of bringing Britain to life. That's why our talented teams have been busy creating hundreds of new assets, and today, we'd like to share a closer look at some of them! As you travel across the UK, you'll notice how the architecture changes from one region to another, with each town and city reflecting its own unique character and history. To help capture that authentic British atmosphere in our rework project, our teams have been hard at work creating hundreds of new assets, over 370 of them, in fact! But ..."
+    },
+    {
+      "appid": 1769420,
+      "game_name": "Noble Fates",
+      "title": "Noble Fates 1.0.0.3 Released",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849458702682027",
+      "date": 1794619511,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
-      "contents": "This update has the same version for both the official release and the betaChangelog Fixed the issue in the previous version where checking Recycle Bin files with a network drive caused lagFixed the issue where icons did not appear in the left-side list of some system preference interfacesFixed component rendering anomalies from the previous betaFixed the freezing issue caused after connecting or disconnecting multiple screens in all previous versionsOptimized dock window preview when there are too many windowsOptimized dock window preview, showing a list when there are too many windows to prevent incomplete displayAdapted for WPS and Discord, optimized to display only one icon for the programFixed crash caused by window display animation after sleep/wakeFixed Finder monitoring highlights ..."
+      "contents": "Crash Fixes Fixed crash with Doors Fixed crash with Winery Fixed crash with Swimming Fixed crash with Debris Fixed crash with Presets Straw Straw can now be marked to Feed Animals as intended Dispatched Fixed bug that prevented dispatched Tames from leaving Thanks for the reports!Restart the game and steam to pick it up!"
     },
     {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "May Store Update 2026",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823007",
-      "date": 1778565649,
+      "appid": 4348910,
+      "game_name": "Probably Stolen",
+      "title": "A new Probably Stolen roadmap lines up three major free updates for the cyberpunk shopkeeping sim",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1849192144188104",
+      "date": 1794583448,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Update",
+      "contents": "Questing Goose reveals a detailed Probably Stolen roadmap, with three new starting scenarios for the cyberpunk shopkeeping simulation game. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/probably-stolen/roadmap-2027\">A new Probably Stolen roadmap lines up three major free updates for the cyberpunk shopkeeping sim</a> "
+    },
+    {
+      "appid": 1805320,
+      "game_name": "Romestead",
+      "title": "Message From Olympus #5 - Short But Sweet",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144187512",
+      "date": 1794580578,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Update",
-      "contents": "Read the full announcement here!"
+      "contents": "Salvete Romans!It's getting colder and darker here in Sweden, and suddenly the weather is slightly starting to match that of our new biome! Let's celebrate that by diving into this weeks studio update!12 Days of IndieAs we mentioned in a separate post, Romestead is a proud sponsor of 12 Days of Indie, a charity event that's been streaming non-stop since the 4th of November.On the 14th November at 11am - 2pm EST, our Community Manager Vicky will participate in a live Q&A session, playing together with streamer WhosGamingNow!So if you want to ask the devs a question live, don't hesitate to participate at:What Are We Working On?While we're still a ways off from showing you the good stuff, here's some small things you can expect from the coming update:Biome(s):We may have mentioned before that..."
     },
     {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "Patch Notes - Update 41.2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823005",
-      "date": 1778565648,
+      "appid": 255710,
+      "game_name": "Cities: Skylines",
+      "title": "Cities: Skylines - Franchise Bundle",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144187318",
+      "date": 1794577655,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Discover the Game that defined a generation of City Builders. The 'Cities: Skylines Franchise Bundle' brings the Cities: Skylines franchise in one place. Take your first steps with the Original game from 2015, or take your mayor’s skills to the next level with Cities: Skylines II. Cities: Skylines Franchise Bundle includes:Cities: Skylines - Base GameCities: Skylines II - Base GameTry Cities: Skylines II this weekend for free until the 16th of November at 7PM CET!"
+    },
+    {
+      "appid": 2868840,
+      "game_name": "Slay the Spire 2",
+      "title": "Slay the Spire 2 just got its first new character, a rapid-fire mode, and its hardest challenge yet",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1849192144187104",
+      "date": 1794569215,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Update",
+      "contents": "A new Slay the Spire 2 update adds new character The Fool to the roguelike deckbuilder's beta branch, alongside Blitz and Dread game modes. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/slay-the-spire-2/update-the-fool-blitz-dread\">Slay the Spire 2 just got its first new character, a rapid-fire mode, and its hardest challenge yet</a> "
+    },
+    {
+      "appid": 2868840,
+      "game_name": "Slay the Spire 2",
+      "title": "Slay the Spire 2's \"biggest\" beta patch yet adds its first new early access and foolish character, two game modes, and more tweaks than you can shake a stick at",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/Rock, Paper, Shotgun/1849192144184967",
+      "date": 1794524020,
+      "feedname": "Rock, Paper, Shotgun",
+      "feedlabel": "Rock, Paper, Shotgun",
       "update_type": "Patch Notes",
-      "contents": "Read the full announcement here!"
+      "contents": "Hark! A new <a href=\"https://www.rockpapershotgun.com/games/slay-the-spire\">Slay the Spire</a> 2 patch is here! Or, well, it is if you're someone who's trying out the beta branches of the game. If you're not, it might be worth trying out, as Mega Crit say this is their biggest patch for the game so far, with \"some really impactful bits of content that will require lots of testing before they reach the main branch.\" <a href=\"https://www.rockpapershotgun.com/slay-the-spire-2s-biggest-beta-patch-yet-adds-its-first-new-early-access-and-foolish-character-two-game-modes-and-more-tweaks-than-you-can-shake-a-stick-at\">Read more</a> "
     },
     {
-      "appid": 578080,
-      "game_name": "PUBG: BATTLEGROUNDS",
-      "title": "Map Service Report - Update 41.2",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502823006",
-      "date": 1778565648,
+      "appid": 1769420,
+      "game_name": "Noble Fates",
+      "title": "Noble Fates 1.0.0.1 Released",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144184760",
+      "date": 1794520388,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Update",
-      "contents": "{STEAM_CLAN_IMAGE}/27971017/c6c8adc4d5670ed2aab016cc334af385eb01a5f7.png Read the full announcement here!"
-    },
-    {
-      "appid": 1876880,
-      "game_name": "Primitive Society Simulator",
-      "title": "[Default Branch] 0.3.5_512.1230",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502822950",
-      "date": 1778561375,
-      "feedname": "steam_community_announcements",
-      "feedlabel": "Community Announcements",
-      "update_type": "Update",
-      "contents": "StatsAnimal feed crafting time: 2h->1hBug fixesThe \"Dev kill all invaders\" function was not working, now restoredCannot build wolf pen in tutorialThere are box characters in the Korean tutorial"
+      "contents": "Crash Fixes Fixed Crash when adding a Sibling to an Origin Fixed Crash when adding a Relative to an Origin Fixed Crash when loading v0.31 Save with someone Mining Fixed Crash when generating a map Fixed Crash during Heavy is the Crown Intro Fixed Crash when Selecting a Grave that contains an Imp Choose your Fate Add Partner Fixed bug that allowed adding too many Partners Fixed bug that could add unexpected PartnersRestart the game and steam to pick it up!"
     },
     {
       "appid": 1172470,
       "game_name": "Apex Legends",
-      "title": "Apex Legends: Latest Update 5PM PT",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502822608",
-      "date": 1778543713,
+      "title": "Apex Legends: Latest Update 11/12/2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144184669",
+      "date": 1794518587,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Update",
-      "contents": "FIXED:Improved transition screen UI to better indicate the game is still loadingReduced the color overlay effect of Conduit's passive"
+      "contents": "✅FIXED:-An exploit that allowed players to fire the Akimbo Wingman faster than intended-A client crash issue triggered by incorrect dropship pathing"
     },
     {
-      "appid": 967050,
-      "game_name": "Pacify",
-      "title": "Headquarters Difficulty and Voice Chat Special Effects",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502822605",
-      "date": 1778543682,
+      "appid": 304930,
+      "game_name": "Unturned",
+      "title": "3.26.3.15 Patch Notes",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144184520",
+      "date": 1794515744,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
-      "contents": "Hello,I just uploaded a small patch with a few adjustments.I lowered the difficulty of several aspects of the headquarters level. It should be easier to complete.The in-game voice chat is set to high quality audio. It has environmental and situational special effects that cannot be heard using outside voice chat. The mouths on the players animate when you speak. Your voice changes during certain status effects like being smaller, slowed or changed in some way. Different environments cause your voice to change and adjust for more realism.I am still working on the next map that will use the in-game voice chat. Thanks,Shawn"
+      "contents": "FixedPrevent cheats from moving gun attachments of compatible caliber into slots of wrong type. (Thanks Jdance and Karma!)As a reminder, please use caution when accepting unexpected server invites or joining servers from people you do not trust. We have recently seen an increase in reports involving malicious Workshop content."
     },
     {
-      "appid": 494840,
-      "game_name": "UBOAT",
-      "title": "2026.1 Patch 18",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502822336",
-      "date": 1778529814,
+      "appid": 2868840,
+      "game_name": "Slay the Spire 2",
+      "title": "Beta Patch Notes - v0.113.0",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144184507",
+      "date": 1794515416,
       "feedname": "steam_community_announcements",
       "feedlabel": "Community Announcements",
       "update_type": "Patch Notes",
-      "contents": "Dear captains, There is a new patch available for update 2026.1. Changelog: Type IX: - Fix: Ensured compatibility of camouflages with the conning towers. - Fix: In existing saves, the issue with missing geometry under the stern loading hatch for loading torpedoes was still occurring. - Fix: Bearing display was frozen on the additional periscope in Type IXA. Type VII: - Fix: Resolved an issue with extra torpedo slots in the bow torpedo room in old saves. - Fix: Resolved an issue with two torpedoes visible on the sky in old saves. Ships: - Fix: Decreased evacuation thresholds on Dido-class, the crew was staying on the ship even when it was leaned quite a lot to the side. Missions: - Fix: If transmission from HQ after meeting Atlantis was not received in time in the Cape Town patrol, then the..."
+      "contents": "At long last, the biggest (beta) patch yet is here!!! Reminder that this patch is exclusive to the beta branch of the game as we've got some really impactful bits of content that will require lots of testing before they reach the main branch. Reminder that if you'd like to swap over to the beta branch, you can do so by right-clicking on Slay the Spire 2 in your library and navigating to Properties -> Game Versions & Betas and selecting `public-beta` from the dropdown. The main branch will be brought up-to-date with all content and changes in the previous, more stable beta version, v0.111.0. So don't be confused that the following content isn't there if you boot up the main branch. Without further ado, let's take a look at all the new goodies there are to test out... New Character: The Fool..."
+    },
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "An Update from the Anti-Cheat Team - 11/12/2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144184215",
+      "date": 1794509508,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Competitive Integrity Update: Controller Cheating EnforcementWe have deployed enhanced controller cheating detections in all Apex Legends game modes, on all platforms. Players identified using unauthorized controller hardware, modifications, or software to gain an unfair gameplay advantage will be subject to enforcement, including permanent bans.Over the past several months, our Anti-Cheat team has been testing and validating impactful new tools to add to our controller cheating detection systems. Throughout this process, we've seen strong results, and those tools have now reached the level of validation necessary for full implementation.These detections apply across ALL PLATFORMS, including PC, PlayStation, Xbox, and Nintendo Switch 2. Playing on console does not provide an exemption from..."
+    },
+    {
+      "appid": 2828500,
+      "game_name": "The Jackbox Megapicker",
+      "title": "Megapicker Update: Fix for Launch Loop",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144184075",
+      "date": 1794507116,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "This update fixes Jackbox Megapicker launch issues stemming from an October update to the Steam client. Choosing a game in the Megapicker launches it, instead of getting stuck in a launch loop. Also in this update: • Fixed games launched from the info panel sometimes leaving a black tile behind. • Improved the contrast of the Idol Factions and Fakin' It XL tile logos. • New splash screen art."
+    },
+    {
+      "appid": 4348910,
+      "game_name": "Probably Stolen",
+      "title": "Upcoming Free Updates: What to Expect?",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144184005",
+      "date": 1794506392,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hey, everyone! We have heard your feedback about our roadmap being a little vague, so here are the details on the upcoming updates:Mid-December updateJunker starting scenario, with a Junker-related starting perk and new itemsExpeditions - hire, equip and send scavs on expeditionsA minor Fence expansion Also likely: a minor gunsmith expansion (adding shotgun shells, 25mm grenade rounds and a tier 3 handmade SMG) and armor.Late January update (very likely)The Organ Dealer starting scenario, featuring organs, blood and the trade in a certain type of meat. Players will start by buying different organs and fulfilling specific requests, and will later be able to grow or print organs. Filter blood and remove diseases; different blood types will have value modifiers. Players will be able to send b..."
+    },
+    {
+      "appid": 1769420,
+      "game_name": "Noble Fates",
+      "title": "Noble Fates 1.0 is out now!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144183544",
+      "date": 1794499377,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Major Update",
+      "contents": "Dear mortals. Dear, dear friends. The day has finally arrived. After almost six years and eight major updates in Early Access, Noble Fates has left Early Access, and 1.0 is out now. To every Noble who played, reported bugs, made mods and argued with us on Discord along the way: thank you. This release is as much yours as it is ours.Since we started working on this game of ours, I estimate I have put in more than 20,000 hours into making it. The game has become part of us, and so have you. But the beginning of the next chapter is something that excites us as much as the first one did. If we were in Noble Fates, we would probably look something like this. Our publishing guy Sterling is the small maniacal manchild in the middle. 1.0 is by far the largest update we have ever made. It includes ..."
+    },
+    {
+      "appid": 552990,
+      "game_name": "World of Warships",
+      "title": "Work in Progress: Update 15.11",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144182956",
+      "date": 1794490897,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "{STEAM_CLAN_IMAGE}/31013613/c6aa57ee0b76275e624e0f94820e310f8afc4362.jpg This is a short overview of the planned features for Update 15.11. For more information, visit the relevant link: Learn More IMPORTANT! Because the update is still being tested, the information in this article is tentative and reflects the state of game development at the time of its publication. Some changes and new features may be removed entirely or implemented differently by the time the update goes live. Captains! This December, a 6-week-long holiday season update hits the game, bringing Santa's Gifts galore, Snowflakes, a free Tier IX ship on first login, two distinct Event Passes, and a historical adventure themed around the 1941 raid on Pearl Harbor. New Year Celebrations: When first entering the game in 15.11..."
+    },
+    {
+      "appid": 2016590,
+      "game_name": "Dark and Darker",
+      "title": "Early Access Hotfix #132",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144181973",
+      "date": 1794471012,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Greetings, Adventurers. We’d like to inform you of the latest changes applied in this update.IRONMACEBugfixes:Fixed an issue where the hit sound of the Rogue’s Sneak Attack could be heard at full volume by distant players regardless of distance.Fixed an issue where the Wizard’s Fireball and Explosion blasts and Chain Lightning bounces could damage targets on the other side of walls, floors, and ceilings.Fixed an issue where ground-placed spells, when aimed from high ground at a distant spot below, could be shown as castable but only go on cooldown without being placed.Fixed an issue where players who started in the Long Bridge module of The Forgotten Castle - Crypt could, depending on the surrounding module layout, be trapped because every door leading to other modules was blocked.Fixed an..."
+    },
+    {
+      "appid": 3209750,
+      "game_name": "STARIO: Haven Tower",
+      "title": "A Peek at the Next Update | STARIO is coming to WePlay 2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144181303",
+      "date": 1794452653,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Hello, everyone!We have some news to share from the tower: STARIO: Haven Tower is coming to WePlay 2026!You’ll find us in Zone B01, where you can try the game for yourselves. Here are the event details:Dates: November 21–22, 2026 Venue: Hall 2.2, National Exhibition and Convention Center, Shanghai Booth Location: Zone B01Come say hello if you’re stopping by. We’d love to see you there!And here’s a little secret: the playable build will include some brand-new gameplay and features, but we’ll leave it to you to discover exactly what’s in store!STARIO is also currently 10% off, matching its lowest price to date. The discount ends on November 16, so if you’ve been thinking about adding it to your library, now’s a good time!A Peek at What’s ComingSince getting the current version into a stable ..."
     }
   ]
 }

@@ -1,0 +1,8 @@
+# /etc/cron.d/steam-notes — my-steam-notes jobs (Debian proot cron)
+# 01:17 daily full sync + enrichment + game updates (replaces Actions daily_sync.yml)
+# 03:40 nightly db snapshot to /sdcard (backup-guardian SFTP source)
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+17 1 * * * root /root/steam-notes/venv/bin/python3 /root/steam-notes/phone/steam-collector/daily_local.py >> /root/logs/steam-daily.log 2>&1
+40 3 * * * root /root/steam-notes/venv/bin/python3 /root/steam-notes/phone/steam-collector/backup_db.py >> /root/logs/steam-backup.log 2>&1
