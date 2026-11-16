@@ -1,9 +1,8 @@
-name: Poll Steam Status (RETIRED — phone collector took over)
+name: Poll Steam Status
 
-# 2026-11-16: the M11P phone server now polls every 60s into its local SQLite
-# DB (/sdcard/steam-notes/steam.db) — see phone/steam-collector/.
-# This Turso workflow is kept for manual/emergency runs only.
 on:
+  schedule:
+    - cron: '7,37 * * * *'  # every 30 min
   workflow_dispatch:
 
 concurrency:
