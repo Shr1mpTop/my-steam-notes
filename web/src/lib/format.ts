@@ -7,6 +7,12 @@ export function fmtHours(hours: number): string {
   return `${hours.toFixed(1)}h`;
 }
 
+/** Hours → "12.5h" at/above one hour, "38m" below it. */
+export function fmtDuration(hours: number): string {
+  if (hours > 0 && hours < 1) return `${Math.max(1, Math.round(hours * 60))}m`;
+  return fmtHours(hours);
+}
+
 export function fmtMinutes(minutes: number): string {
   return minutes >= 60 ? `${(minutes / 60).toFixed(1)}h` : `${Math.round(minutes)}m`;
 }

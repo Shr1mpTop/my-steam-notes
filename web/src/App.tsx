@@ -11,12 +11,13 @@ import { SocialPresence } from "./components/SocialPresence";
 import { GameCloud } from "./components/GameCloud";
 import { RecentActivity } from "./components/RecentActivity";
 import { ContributionMap } from "./components/ContributionMap";
-import { TimeHeatmap, GamingClock, WeekdayChart } from "./components/TimeAnalytics";
-import { ParetoChart, PlatformPie } from "./components/Ranking";
-import { StatsCards, GameNetwork, DustMeter, StayingPower } from "./components/Insights";
+import { TimeHeatmap, WeekdayChart } from "./components/TimeAnalytics";
+import { ParetoChart } from "./components/Ranking";
+import { StatsCards } from "./components/Insights";
 import { AchievementBoard, GenreChart } from "./components/AchievementBoard";
-import { GameWeather, WeeklyDigest } from "./components/FunWidgets";
 import { GameUpdates } from "./components/GameUpdates";
+import { FriendsHubPanel } from "./components/FriendsHub";
+import { Leaderboards, MeVsThem, SharedGamesPanel } from "./components/FriendsCompare";
 import "./App.css";
 
 type Density = "comfortable" | "compact";
@@ -210,11 +211,15 @@ function Dashboard() {
           </section>
 
           <div className="bento">
-            <div className="cell span-4"><GameWeather weather={data.game_weather} /></div>
-            <div className="cell span-4"><WeeklyDigest digest={data.weekly_digest} /></div>
-            <div className="cell span-4"><GamingClock data={data.time_heatmap} /></div>
+            <div className="cell span-12"><FriendsHubPanel hub={data.friends_hub} /></div>
 
+            <div className="cell span-4"><MeVsThem hub={data.friends_hub} /></div>
+            <div className="cell span-8"><RecentActivity activity={data.recent_activity} /></div>
+
+            <div className="cell span-12"><Leaderboards hub={data.friends_hub} /></div>
+            <div className="cell span-12"><SharedGamesPanel hub={data.friends_hub} /></div>
             <div className="cell span-12"><SocialPresence presence={data.social_presence} /></div>
+
             <div className="cell span-8"><ContributionMap heatmap={data.heatmap} updatedAt={data.updated_at} /></div>
             <div className="cell span-4"><TimeHeatmap data={data.time_heatmap} /></div>
 
@@ -225,14 +230,7 @@ function Dashboard() {
 
             <div className="cell span-12"><StatsCards stats={data.stats} /></div>
 
-            <div className="cell span-4"><DustMeter played={data.stats.played_games} never={data.stats.never_played} /></div>
-            <div className="cell span-8"><RecentActivity activity={data.recent_activity} /></div>
-
-            <div className="cell span-4"><PlatformPie data={data.platform} /></div>
-            <div className="cell span-8"><GameNetwork network={data.game_network} /></div>
-
-            <div className="cell span-5"><GenreChart genres={data.genres} /></div>
-            <div className="cell span-7"><StayingPower games={data.game_cloud} /></div>
+            <div className="cell span-12"><GenreChart genres={data.genres} /></div>
 
             <div className="cell span-12"><AchievementBoard achievements={data.achievements} /></div>
           </div>

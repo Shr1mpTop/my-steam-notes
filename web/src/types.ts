@@ -17,6 +17,7 @@ export interface DashboardData {
   weekly_digest: WeeklyDigestItem[];
   game_updates: GameUpdateItem[];
   social_presence?: SocialPresenceData;
+  friends_hub?: FriendsHubData;
 }
 
 export interface PlayerInfo {
@@ -168,4 +169,78 @@ export interface PresenceSegment {
   status: "playing";
   game: string;
   gameid: string;
+}
+
+/* ---------- Friends hub — friend social analytics ---------- */
+
+export interface FriendTopGame {
+  appid: number;
+  name: string;
+  hours: number;
+}
+
+export interface FriendsHubFriend {
+  steamid: string;
+  name: string;
+  avatarfull: string;
+  online: boolean;
+  playing: string;
+  friendship_days: number | null;
+  total_hours: number;
+  two_week_hours: number;
+  top_games: FriendTopGame[];
+  library_size: number;
+  visibility: "ok" | "private" | "unknown";
+  last_online: number;
+}
+
+export interface SharedGameFriendStat {
+  name: string;
+  hours: number;
+  two_week_hours: number;
+}
+
+export interface SharedGameEntry {
+  appid: number;
+  name: string;
+  my_hours: number;
+  my_two_week_hours: number;
+  friend_count: number;
+  friend_hours_total: number;
+  top_friend: SharedGameFriendStat | null;
+  friends: SharedGameFriendStat[];
+}
+
+export interface LeaderboardRow {
+  name: string;
+  avatarfull: string;
+  hours: number;
+  is_self: boolean;
+}
+
+export interface MeVsThemData {
+  my_total_hours: number;
+  my_total_rank: number | null;
+  my_two_week_hours: number;
+  my_two_week_rank: number | null;
+  public_friends: number;
+  private_friends: number;
+  avg_friend_total_hours: number;
+  ranked_total: number;
+}
+
+export interface FriendPlayingNowEntry {
+  name: string;
+  game: string;
+  avatarfull: string;
+}
+
+export interface FriendsHubData {
+  updated_at: string;
+  friends: FriendsHubFriend[];
+  shared_games: SharedGameEntry[];
+  leaderboard_total: LeaderboardRow[];
+  leaderboard_2weeks: LeaderboardRow[];
+  me_vs_them: MeVsThemData;
+  friends_playing_now: FriendPlayingNowEntry[];
 }
