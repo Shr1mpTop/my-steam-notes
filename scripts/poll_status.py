@@ -20,6 +20,7 @@ load_dotenv()
 
 TZ = timezone(timedelta(hours=8))  # UTC+8
 STATUS_GAP_CAP = timedelta(minutes=15)
+SOCIAL_WINDOW = timedelta(days=7)
 
 KEY = os.getenv("STEAM_API_KEY")
 SID = os.getenv("STEAM_ID")
@@ -76,6 +77,70 @@ def get_player_summary():
     return players[0] if players else {}
 
 
+def describe_request_error(exc):
+    if isinstance(exc, requests.HTTPError):
+        status = exc.response.status_code if exc.response is not None else "unknown"
+        return f"HTTP {status}"
+    return str(exc)
+
+
+def get_cached_player_summary():
+    """Best-effort fallback for dashboard builds when Steam rejects a request."""
+    try:
+        rows = execute(
+            """SELECT personaname, personastate, gameextrainfo, gameid, lastlogoff, loccountrycode
+               FROM player_daily
+               ORDER BY date DESC LIMIT 1"""
+        )
+    except Exception:
+        rows = []
+
+    if rows:
+        row = rows[0]
+        return {
+            "personaname": row.get("personaname", ""),
+            "personastate": row.get("personastate", 0),
+            "gameextrainfo": row.get("gameextrainfo", ""),
+            "gameid": row.get("gameid", ""),
+            "lastlogoff": row.get("lastlogoff", 0),
+            "loccountrycode": row.get("loccountrycode", ""),
+        }
+
+    try:
+        with open(DASHBOARD_PATH, "r", encoding="utf-8") as f:
+            player = json.load(f).get("player", {})
+    except Exception:
+        return {}
+
+    return {
+        "personaname": player.get("personaname", ""),
+        "personastate": 1 if player.get("online") else 0,
+        "gameextrainfo": player.get("currently_playing", ""),
+        "gameid": "",
+        "avatarfull": player.get("avatarfull", ""),
+    }
+
+
+def get_player_summary_or_none():
+    try:
+        return get_player_summary()
+    except (requests.RequestException, KeyError, ValueError) as exc:
+        print(f"Player summary fetch skipped: {describe_request_error(exc)}")
+        return None
+
+
+def get_player_summary_for_dashboard():
+    player = get_player_summary_or_none()
+    if player is not None:
+        return player
+    cached = get_cached_player_summary()
+    if cached:
+        print("Using cached player summary for dashboard generation")
+    else:
+        print("No cached player summary available; dashboard will use empty player data")
+    return cached
+
+
 def get_friend_list():
     url = f"{STEAM_USER_API}/GetFriendList/v0001/"
     resp = requests.get(
@@ -102,7 +167,11 @@ def get_player_summaries(steamids):
 
 
 def poll_status():
-    p = get_player_summary()
+    p = get_player_summary_or_none()
+    if not p:
+        print("Status poll skipped: no player summary available")
+        return {}
+
     now = datetime.now(TZ).isoformat()
     execute(
         "INSERT OR IGNORE INTO status_polls (timestamp, personastate, gameextrainfo, gameid) VALUES (?, ?, ?, ?)",
@@ -632,6 +701,165 @@ def build_game_updates():
     ]
 
 
+def build_social_presence(player_info):
+    """Build a compact recent timeline for the player and visible friends."""
+    ensure_friend_schema()
+    now = datetime.now(TZ)
+    window_start = now - SOCIAL_WINDOW
+    cutoff = window_start.isoformat()
+
+    def parse_ts(ts):
+        dt = datetime.fromisoformat(ts.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=TZ)
+        return dt.astimezone(TZ)
+
+    def state_from_row(row):
+        game_name = row.get("gameextrainfo") or ""
+        gameid = row.get("gameid") or ""
+        online = (row.get("personastate") or 0) != 0
+        return {
+            "timestamp": row["timestamp"],
+            "online": online,
+            "game": game_name,
+            "gameid": gameid,
+            "playing": online and (bool(game_name) or bool(gameid)),
+        }
+
+    def segments_from_events(events):
+        segments = []
+        if not events:
+            return segments
+        ordered = sorted(events, key=lambda item: item["timestamp"])
+        for index, event in enumerate(ordered):
+            if not event["playing"]:
+                continue
+            start = max(parse_ts(event["timestamp"]), window_start)
+            next_start = parse_ts(ordered[index + 1]["timestamp"]) if index + 1 < len(ordered) else now
+            end = min(next_start, start + STATUS_GAP_CAP, now)
+            if end <= start:
+                continue
+            segments.append({
+                "start": start.isoformat(),
+                "end": end.isoformat(),
+                "status": "playing",
+                "game": event["game"],
+                "gameid": event["gameid"],
+            })
+        return segments
+
+    try:
+        self_rows = execute(
+            """SELECT timestamp, personastate, gameextrainfo, gameid
+               FROM status_polls
+               WHERE timestamp >= ?
+               ORDER BY timestamp ASC""",
+            [cutoff],
+        )
+        friend_rows = execute(
+            """SELECT timestamp, steamid, personaname, personastate, gameextrainfo, gameid, avatarfull, profileurl
+               FROM friend_status_polls
+               WHERE timestamp >= ?
+               ORDER BY timestamp ASC""",
+            [cutoff],
+        )
+        friend_profiles = execute(
+            """SELECT steamid, personaname, avatarfull, profileurl, last_seen_at
+               FROM steam_friends
+               ORDER BY last_seen_at DESC"""
+        )
+    except Exception:
+        return {
+            "window_start": window_start.isoformat(),
+            "window_end": now.isoformat(),
+            "members": [],
+        }
+
+    members = []
+    self_events = [state_from_row(r) for r in self_rows]
+    if not self_events and player_info:
+        self_events = [{
+            "timestamp": now.isoformat(),
+            "online": player_info.get("personastate", 0) != 0,
+            "game": player_info.get("gameextrainfo", ""),
+            "gameid": player_info.get("gameid", ""),
+            "playing": bool(player_info.get("gameextrainfo") or player_info.get("gameid")),
+        }]
+
+    latest_self = self_events[-1] if self_events else {
+        "timestamp": now.isoformat(),
+        "online": player_info.get("personastate", 0) != 0,
+        "game": player_info.get("gameextrainfo", ""),
+        "gameid": player_info.get("gameid", ""),
+        "playing": bool(player_info.get("gameextrainfo") or player_info.get("gameid")),
+    }
+    members.append({
+        "id": "self",
+        "steamid": SID,
+        "name": player_info.get("personaname", "You"),
+        "avatarfull": player_info.get("avatarfull", ""),
+        "profileurl": player_info.get("profileurl", ""),
+        "is_self": True,
+        "last_seen_at": latest_self["timestamp"],
+        "current": latest_self,
+        "segments": segments_from_events(self_events),
+    })
+
+    profile_map = {p["steamid"]: p for p in friend_profiles}
+    grouped = defaultdict(list)
+    for row in friend_rows:
+        grouped[row["steamid"]].append(state_from_row(row))
+        profile_map[row["steamid"]] = {
+            **profile_map.get(row["steamid"], {}),
+            "steamid": row["steamid"],
+            "personaname": row.get("personaname") or profile_map.get(row["steamid"], {}).get("personaname", ""),
+            "avatarfull": row.get("avatarfull") or profile_map.get(row["steamid"], {}).get("avatarfull", ""),
+            "profileurl": row.get("profileurl") or profile_map.get(row["steamid"], {}).get("profileurl", ""),
+        }
+
+    for steamid, profile in profile_map.items():
+        events = grouped.get(steamid, [])
+        latest = events[-1] if events else {
+            "timestamp": profile.get("last_seen_at") or "",
+            "online": False,
+            "game": "",
+            "gameid": "",
+            "playing": False,
+        }
+        members.append({
+            "id": steamid,
+            "steamid": steamid,
+            "name": profile.get("personaname") or steamid,
+            "avatarfull": profile.get("avatarfull") or "",
+            "profileurl": profile.get("profileurl") or "",
+            "is_self": False,
+            "last_seen_at": latest["timestamp"] or profile.get("last_seen_at") or "",
+            "current": latest,
+            "segments": segments_from_events(events),
+        })
+
+    def member_rank(member):
+        last_seen = member["last_seen_at"]
+        try:
+            last_seen_score = -parse_ts(last_seen).timestamp() if last_seen else 0
+        except ValueError:
+            last_seen_score = 0
+        return (
+            0 if member["is_self"] else 1,
+            0 if member["current"]["playing"] else 1,
+            0 if member["current"]["online"] else 1,
+            last_seen_score,
+        )
+
+    members.sort(key=member_rank)
+
+    return {
+        "window_start": window_start.isoformat(),
+        "window_end": now.isoformat(),
+        "members": members,
+    }
+
+
 def generate_dashboard(player_info):
     os.makedirs(DATA_DIR, exist_ok=True)
     dashboard = {
@@ -652,6 +880,7 @@ def generate_dashboard(player_info):
         "game_weather": build_game_weather(),
         "weekly_digest": build_weekly_digest(),
         "game_updates": build_game_updates(),
+        "social_presence": build_social_presence(player_info),
     }
     os.makedirs(os.path.dirname(DASHBOARD_PATH), exist_ok=True)
     with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:

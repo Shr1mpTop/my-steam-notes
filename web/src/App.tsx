@@ -7,6 +7,7 @@ import type { MotionLevel } from "./hooks/motionPrefContext";
 import { useLocale } from "./useLocale";
 import { HeroBackdrop } from "./components/HeroBackdrop";
 import { ProfileHero } from "./components/ProfileHero";
+import { SocialPresence } from "./components/SocialPresence";
 import { GameCloud } from "./components/GameCloud";
 import { RecentActivity } from "./components/RecentActivity";
 import { ContributionMap } from "./components/ContributionMap";
@@ -213,6 +214,7 @@ function Dashboard() {
             <div className="cell span-4"><WeeklyDigest digest={data.weekly_digest} /></div>
             <div className="cell span-4"><GamingClock data={data.time_heatmap} /></div>
 
+            <div className="cell span-12"><SocialPresence presence={data.social_presence} /></div>
             <div className="cell span-8"><ContributionMap heatmap={data.heatmap} updatedAt={data.updated_at} /></div>
             <div className="cell span-4"><TimeHeatmap data={data.time_heatmap} /></div>
 
