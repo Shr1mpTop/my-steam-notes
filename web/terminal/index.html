@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<title>STEAM.MATRIX — live data terminal</title>
+<style>
+  :root {
+    --bg: #020604;
+    --panel-bg: rgba(0, 20, 8, 0.55);
+    --grid: rgba(0, 255, 102, 0.06);
+    --line: rgba(0, 255, 102, 0.22);
+    --line-strong: rgba(0, 255, 102, 0.45);
+    --fg: #35ff8f;
+    --fg-dim: #12a858;
+    --fg-faint: #0a6134;
+    --amber: #ffd479;
+    --red: #ff5c6c;
+    --mono: "Cascadia Mono", "SF Mono", "JetBrains Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background:
+      radial-gradient(1200px 600px at 70% -10%, rgba(0, 255, 102, 0.055), transparent 60%),
+      repeating-linear-gradient(0deg, var(--grid) 0 1px, transparent 1px 3px),
+      var(--bg);
+    color: var(--fg);
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.35;
+    overflow-x: hidden;
+  }
+  body::after { /* scanline sweep */
+    content: "";
+    position: fixed; inset: 0; pointer-events: none; z-index: 50;
+    background: linear-gradient(180deg, transparent, rgba(0, 255, 102, 0.035) 50%, transparent);
+    animation: sweep 9s linear infinite;
+  }
+  @keyframes sweep { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
+  @media (prefers-reduced-motion: reduce) { body::after { animation: none; } }
+
+  header {
+    position: sticky; top: 0; z-index: 40;
+    display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline;
+    padding: 8px 12px;
+    background: rgba(2, 6, 4, 0.92);
+    border-bottom: 1px solid var(--line-strong);
+    backdrop-filter: blur(6px);
+    font-size: 11px; letter-spacing: 0.06em;
+  }
+  header .brand { color: var(--fg); font-weight: 700; text-shadow: 0 0 8px rgba(0,255,102,.6); }
+  header .brand b { color: #b6ffd6; }
+  header .sep { color: var(--fg-faint); }
+  header .stat b { color: #b6ffd6; font-weight: 600; }
+  header #clock { color: var(--amber); }
+  .blink { animation: blink 1.1s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0.15; } }
+
+  .ticker {
+    overflow: hidden; white-space: nowrap;
+    border-bottom: 1px solid var(--line);
+    padding: 4px 0; font-size: 11px; color: var(--fg-dim);
+    background: rgba(0, 12, 5, 0.6);
+  }
+  .ticker span { display: inline-block; padding-left: 100%; animation: tick 45s linear infinite; }
+  @keyframes tick { to { transform: translateX(-100%); } }
+
+  main.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 6px;
+    padding: 6px;
+    align-items: start;
+  }
+  @media (max-width: 720px) { main.grid { grid-template-columns: 1fr; } }
+
+  section.panel {
+    min-width: 0;
+    border: 1px solid var(--line);
+    background: var(--panel-bg);
+    box-shadow: inset 0 0 24px rgba(0, 255, 102, 0.04), 0 0 1px rgba(0,255,102,.2);
+  }
+  section.panel.wide { grid-column: 1 / -1; }
+  .panel-head {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--line);
+    color: var(--fg); font-size: 10.5px; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(0, 255, 102, 0.045);
+  }
+  .panel-head .meta { color: var(--fg-faint); font-size: 10px; letter-spacing: 0.04em; }
+  .panel-body {
+    padding: 6px 8px;
+    max-height: 260px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--fg-faint) transparent;
+  }
+  .panel-body.tall { max-height: 420px; }
+  .panel-body::-webkit-scrollbar { width: 6px; height: 6px; }
+  .panel-body::-webkit-scrollbar-thumb { background: var(--fg-faint); }
+
+  table { border-collapse: collapse; width: 100%; font-size: 11px; }
+  th { text-align: left; color: var(--fg-faint); font-weight: 500; padding: 1px 6px 2px 0; position: sticky; top: 0; background: rgba(2, 6, 4, 0.9); }
+  td { padding: 1px 6px 1px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
+  tr:hover td { background: rgba(0, 255, 102, 0.07); }
+  .dim { color: var(--fg-dim); }
+  .faint { color: var(--fg-faint); }
+  .amber { color: var(--amber); }
+  .red { color: var(--red); }
+  .self td { color: #b6ffd6; }
+  .rank { color: var(--fg-faint); }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .bars { display: flex; flex-direction: column; gap: 2px; }
+  .bar-row { display: grid; grid-template-columns: 120px 1fr 58px; gap: 6px; align-items: center; font-size: 11px; }
+  .bar-track { height: 7px; background: rgba(0, 255, 102, 0.08); border: 1px solid rgba(0, 255, 102, 0.15); position: relative; overflow: hidden; }
+  .bar-fill { position: absolute; inset: 0 auto 0 0; background: var(--fg-dim); box-shadow: 0 0 6px rgba(0, 255, 102, 0.5); }
+  .bar-fill.me { background: var(--amber); box-shadow: 0 0 6px rgba(255, 212, 121, 0.5); }
+  .kicker { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-faint); margin-bottom: 2px; }
+  .big { font-size: 22px; color: #b6ffd6; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .kv { display: grid; grid-template-columns: 110px 1fr; gap: 1px 10px; font-size: 11px; }
+  .kv span:nth-child(odd) { color: var(--fg-faint); }
+  .err { color: var(--red); font-size: 11px; }
+  .row { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; padding: 1px 0; }
+</style>
+</head>
+<body>
+<header>
+  <span class="brand">STEAM<b>.MATRIX</b> <span class="sep">//</span> <span id="tagline">live data terminal</span></span>
+  <span class="stat"><span class="sep">db</span> <b id="hdb">--</b></span>
+  <span class="stat"><span class="sep">rows</span> <b id="hrows">--</b></span>
+  <span class="stat"><span class="sep">calls</span> <b id="hcalls">--</b></span>
+  <span class="stat"><span class="sep">uptime</span> <b id="huptime">--</b></span>
+  <span class="stat"><span class="sep">sweep</span> <b id="hsweep">--</b></span>
+  <span id="clock">--:--:--</span>
+  <span class="blink err" id="hstatus">●</span>
+</header>
+<div class="ticker"><span id="tickerText">initializing matrix feed...</span></div>
+
+<main class="grid">
+  <section class="panel wide">
+    <div class="panel-head"><span>ME // presence</span><span class="meta">every 15s</span></div>
+    <div class="panel-body">
+      <div class="kv">
+        <span>state</span><span id="meState" class="amber">--</span>
+        <span>current game</span><span id="meGame" class="big">--</span>
+        <span>latest poll</span><span id="mePoll" class="dim">--</span>
+        <span>library</span><span id="meLib" class="dim">--</span>
+        <span>total hours</span><span id="meHours" class="dim">--</span>
+        <span>2-week hours</span><span id="me2w" class="dim">--</span>
+        <span>leaderboard</span><span id="meRank" class="dim">--</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>FRIENDS // now</span><span class="meta">15s</span></div>
+    <div class="panel-body tall"><table><thead><tr><th>#</th><th>who</th><th>state</th><th>game</th><th class="num">hrs</th></tr></thead><tbody id="friendsNow"></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>LEADERBOARD // total</span><span class="meta">60s</span></div>
+    <div class="panel-body tall"><table><thead><tr><th>#</th><th>who</th><th class="num">total</th><th class="num">2w</th></tr></thead><tbody id="leaderboard"></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>SHARED // common ground</span><span class="meta">60s</span></div>
+    <div class="panel-body tall"><div class="bars" id="sharedBars"></div></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>SWEEPS // library scans</span><span class="meta">60s</span></div>
+    <div class="panel-body"><table><thead><tr><th>who</th><th>status</th><th class="num">games</th><th class="num">hrs</th><th class="faint">last</th></tr></thead><tbody id="sweeps"></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>MY GAMES // top</span><span class="meta">60s</span></div>
+    <div class="panel-body tall"><table><thead><tr><th>game</th><th class="num">hrs</th></tr></thead><tbody id="myGames"></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>POLL STREAM // self 60s</span><span class="meta">15s</span></div>
+    <div class="panel-body tall"><table><thead><tr><th>ts</th><th>st</th><th>game</th></tr></thead><tbody id="pollStream"></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>FRIEND POLL STREAM</span><span class="meta">15s</span></div>
+    <div class="panel-body tall"><table><thead><tr><th>ts</th><th>who</th><th>game</th></tr></thead><tbody id="friendPollStream"></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>TABLE STATS // rows</span><span class="meta">60s</span></div>
+    <div class="panel-body"><div class="kv" id="tableStats"></div></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>NEWS // updates</span><span class="meta">60s</span></div>
+    <div class="panel-body"><div id="news" class="dim"></div></div>
+  </section>
+</main>
+
+<script>
+"use strict";
+const API = "";
+const $ = (id) => document.getElementById(id);
+const fmtH = (h) => (h >= 100 ? Math.round(h) + "h" : h >= 10 ? h.toFixed(1) + "h" : h.toFixed(2) + "h");
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const cut = (s, n) => { s = String(s ?? ""); return s.length > n ? s.slice(0, n - 1) + "…" : s; };
+const ts = (v) => { if (!v) return "--"; const d = new Date(v); return isNaN(d) ? String(v) : d.toLocaleTimeString([], { hour12: false }); };
+const ST = { 0: "offline", 1: "online", 2: "busy", 3: "away", 4: "snooze", 5: "looking", 6: "looking" };
+
+function fail(el, err) { if (el) el.innerHTML = `<span class="err">ERR ${esc(err)}</span>`; }
+
+async function get(path) {
+  const r = await fetch(API + path, { cache: "no-store" });
+  if (!r.ok) throw new Error(path + " -> " + r.status);
+  return r.json();
+}
+
+/* ---- status header ---- */
+async function loadStatus() {
+  try {
+    const s = await get("/api/status");
+    const c = s.collector || {};
+    $("hdb").textContent = (s.db_bytes / 1048576).toFixed(1) + "MB";
+    const total = Object.values(s.counts || {}).reduce((a, b) => a + (b || 0), 0);
+    $("hrows").textContent = total.toLocaleString();
+    $("hcalls").textContent = (c.steam_calls_total ?? "--") + "";
+    $("huptime").textContent = c.uptime_seconds ? Math.floor(c.uptime_seconds / 3600) + "h" + Math.floor((c.uptime_seconds % 3600) / 60) + "m" : "--";
+    $("hsweep").textContent = (c.sweep_cycles ?? "--") + " cyc";
+    $("hstatus").className = "blink err";
+  } catch (e) { $("hstatus").className = "err"; fail($("hstatus"), e.message); }
+}
+
+async function loadMe() {
+  try {
+    const [me, st] = await Promise.all([get("/api/me"), get("/api/leaderboards")]);
+    const p = me.latest_presence || {};
+    $("meState").textContent = p.personastate ? (ST[p.personastate] || "state" + p.personastate) : "offline";
+    $("meGame").textContent = p.gameextrainfo || "not playing";
+    $("mePoll").textContent = ts(p.timestamp);
+    $("meLib").textContent = (me.library_games || 0) + " games";
+    $("meHours").textContent = (me.total_hours || 0).toLocaleString() + "h";
+    $("me2w").textContent = (me.two_week_hours || 0) + "h";
+    const mine = (st.leaderboard_total || []).find((x) => x.is_self);
+    $("meRank").textContent = mine ? "#" + mine.rank + " / " + st.count : "--";
+  } catch (e) { fail($("meState"), e.message); }
+}
+
+async function loadFriends() {
+  try {
+    const d = await get("/api/friends");
+    const rows = (d.friends || []).map((f, i) => {
+      const playing = f.gameextrainfo && f.gameextrainfo.length > 0;
+      const st = f.personastate ? (ST[f.personastate] || "on") : "off";
+      return `<tr><td class="rank">${i + 1}</td><td title="${esc(f.steamid)}">${esc(cut(f.personaname, 14))}</td><td class="${playing ? "amber" : "dim"}">${playing ? "▶" : st}</td><td class="${playing ? "" : "faint"}">${playing ? esc(cut(f.gameextrainfo, 18)) : "—"}</td><td class="num dim">${f.total_hours || 0}</td></tr>`;
+    }).join("");
+    $("friendsNow").innerHTML = rows || '<tr><td colspan="5" class="faint">no friend data</td></tr>';
+    const playing = (d.friends || []).filter((f) => f.gameextrainfo);
+    $("tickerText").textContent =
+      "// LIVE " + (playing.length ? playing.map((f) => f.personaname + "▸" + f.gameextrainfo).join("  ｜  ") : "no friends in game right now") +
+      "  ｜ " + (d.count || 0) + " friends tracked";
+  } catch (e) { fail($("friendsNow"), e.message); }
+}
+
+async function loadLeaderboard() {
+  try {
+    const d = await get("/api/leaderboards");
+    const rows = (d.leaderboard_total || []).map((r) =>
+      `<tr class="${r.is_self ? "self" : ""}"><td class="rank">#${r.rank}</td><td>${r.is_self ? "<b>ME</b>" : esc(cut(r.name, 16))}</td><td class="num">${r.hours.toLocaleString()}h</td><td class="num dim">${r.two_week_hours}h</td></tr>`).join("");
+    $("leaderboard").innerHTML = rows || '<tr><td colspan="4" class="faint">waiting for sweeps</td></tr>';
+  } catch (e) { fail($("leaderboard"), e.message); }
+}
+
+async function loadShared() {
+  try {
+    const d = await get("/api/shared?limit=24");
+    const max = Math.max(...(d.shared_games || []).map((g) => Math.max(g.my_hours, g.friend_hours_total)), 1);
+    $("sharedBars").innerHTML = (d.shared_games || []).map((g) =>
+      `<div class="bar-row" title="${esc(g.name)} — me ${g.my_hours}h / friends ${g.friend_hours_total}h (${g.friend_count} ppl)">
+         <span class="faint">${esc(cut(g.name, 20))}</span>
+         <div class="bar-track"><div class="bar-fill me" style="width:${(g.my_hours / max) * 100}%"></div><div class="bar-fill" style="width:${(g.friend_hours_total / max) * 100}%; top:50%; height:3px"></div></div>
+         <span class="dim num">${Math.round(g.friend_hours_total)}h/${g.friend_count}p</span>
+       </div>`).join("") || '<span class="faint">no shared games</span>';
+  } catch (e) { fail($("sharedBars"), e.message); }
+}
+
+async function loadSweeps() {
+  try {
+    const d = await get("/api/sweeps");
+    const rows = (d.sweeps || []).map((s) =>
+      `<tr><td>${esc(cut(s.name, 14))}</td><td class="${s.status === "ok" ? "dim" : "amber"}">${s.status}</td><td class="num dim">${s.game_count || 0}</td><td class="num">${s.total_hours || 0}</td><td class="faint">${ts(s.last_sweep)}</td></tr>`).join("");
+    $("sweeps").innerHTML = rows || '<tr><td colspan="5" class="faint">no sweeps</td></tr>';
+  } catch (e) { fail($("sweeps"), e.message); }
+}
+
+async function loadMyGames() {
+  try {
+    const d = await get("/api/games?limit=40");
+    $("myGames").innerHTML = (d.games || []).map((g) =>
+      `<tr><td>${esc(cut(g.name, 22))}</td><td class="num">${g.hours}</td></tr>`).join("");
+  } catch (e) { fail($("myGames"), e.message); }
+}
+
+async function loadPollStream() {
+  try {
+    const d = await get("/api/polls?limit=30");
+    $("pollStream").innerHTML = (d.polls || []).map((p) =>
+      `<tr><td class="faint">${ts(p.timestamp)}</td><td class="${p.personastate ? "amber" : "dim"}">${p.personastate ? "on" : "off"}</td><td>${esc(cut(p.gameextrainfo || "—", 18))}</td></tr>`).join("");
+  } catch (e) { fail($("pollStream"), e.message); }
+}
+
+async function loadFriendPollStream() {
+  try {
+    const d = await get("/api/friend-polls?limit=30");
+    $("friendPollStream").innerHTML = (d.friend_polls || []).map((p) =>
+      `<tr><td class="faint">${ts(p.timestamp)}</td><td>${esc(cut(p.personaname, 12))}</td><td class="dim">${esc(cut(p.gameextrainfo || "—", 16))}</td></tr>`).join("");
+  } catch (e) { fail($("friendPollStream"), e.message); }
+}
+
+async function loadStats() {
+  try {
+    const d = await get("/api/stats");
+    $("tableStats").innerHTML = Object.entries(d.tables || {}).sort().map(([t, n]) =>
+      `<span>${t}</span><span class="num ${n === null ? "red" : ""}">${n === null ? "missing" : n.toLocaleString()}</span>`).join("");
+  } catch (e) { fail($("tableStats"), e.message); }
+}
+
+async function loadNews() {
+  try {
+    const d = await get("/api/news?limit=8");
+    $("news").innerHTML = (d.news || []).slice(0, 8).map((n) =>
+      `<div class="row"><span>${esc(cut(n.title || "", 46))}</span><span class="faint">${esc(cut(n.game_name || "", 14))}</span></div>`).join("") || '<span class="faint">no news yet</span>';
+  } catch (e) { fail($("news"), e.message); }
+}
+
+/* ---- timers: 15s live, 60s aggregate ---- */
+function every(ms, fn) { fn(); setInterval(fn, ms); }
+every(15000, loadStatus);
+every(15000, loadMe);
+every(15000, loadFriends);
+every(15000, loadPollStream);
+every(15000, loadFriendPollStream);
+every(60000, loadLeaderboard);
+every(60000, loadShared);
+every(60000, loadSweeps);
+every(60000, loadMyGames);
+every(60000, loadStats);
+every(60000, loadNews);
+setInterval(() => { $("clock").textContent = new Date().toLocaleTimeString([], { hour12: false }); }, 1000);
+$("clock").textContent = new Date().toLocaleTimeString([], { hour12: false });
+</script>
+</body>
+</html>

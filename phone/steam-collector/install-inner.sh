@@ -70,11 +70,15 @@ print(f'db installed: quick_check=ok owned_games={n} status_polls={s} size=$(du 
 fi
 ls -la "$DB_LIVE" 2>/dev/null || echo "WARN: no db at $DB_LIVE — collector will warn & self-heal"
 
+# 4.6) matrix terminal -> www-app (served at steam.zhili-he.top root)
+mkdir -p /root/steam-notes/www-app
+cp "$APP/phone/steam-collector/terminal-index.html" /root/steam-notes/www-app/index.html
+
 # 5) supervisord program
 cp "$APP/phone/steam-collector/supervisord-steam-notes.conf" /etc/supervisor/conf.d/steam-notes.conf
 timeout 20 supervisorctl reread || true
 timeout 20 supervisorctl update || true
-timeout 20 supervisorctl restart steam-collector steam-dashboard || true
+timeout 20 supervisorctl restart steam-collector steam-dashboard steam-api || true
 
 sleep 4
 echo "===== status ====="
@@ -83,3 +87,5 @@ echo "===== collector log tail ====="
 tail -n 15 "$LOGS/steam-collector.log" 2>/dev/null || true
 echo "===== dashboard log tail ====="
 tail -n 8 "$LOGS/steam-dashboard.log" 2>/dev/null || true
+echo "===== api log tail ====="
+tail -n 5 "$LOGS/steam-api.log" 2>/dev/null || true
