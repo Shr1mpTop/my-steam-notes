@@ -34,8 +34,9 @@ $dbLocal = Join-Path $PSScriptRoot 'steam.db'
 if ($FreshDb -and (Test-Path $dbLocal)) { python $mssh --put $dbLocal "$stage/steam.db" }
 python $mssh --put (Join-Path $PSScriptRoot 'install-inner.sh') $shRemote
 
-# 3) extract + run installer inside proot
+# 3) extract + de-CRLF the installer + run it inside proot
 python $mssh "tar -xzf $tarRemote -C $stage"
+python $mssh "sed -i 's/\r$//' $shRemote"
 python $mssh "proot-distro login debian --shared-tmp -- bash $shRemote"
 
 Write-Host "`nDeploy done. Verify:"
