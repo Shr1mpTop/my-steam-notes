@@ -79,6 +79,8 @@ cp "$APP/phone/steam-collector/supervisord-steam-notes.conf" /etc/supervisor/con
 timeout 20 supervisorctl reread || true
 timeout 20 supervisorctl update || true
 timeout 20 supervisorctl restart steam-collector steam-dashboard steam-api || true
+# restart can race with a freshly-added program; make sure everything is up
+timeout 20 supervisorctl start steam-api 2>/dev/null || true
 
 sleep 4
 echo "===== status ====="

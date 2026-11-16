@@ -49,8 +49,36 @@ def db():
 
 
 def q(sql, args=()):
-    with db() as conn:
+    conn = db()
+    try:
         return [dict(r) for r in conn.execute(sql, args).fetchall()]
+    finally:
+        conn.close()
+
+
+# TTL cache for whole-table COUNT scans (friend_status_polls alone is ~1.7M
+# rows on disk; counting it on every 15s poll would burn phone CPU)
+_COUNT_CACHE = {"ts": 0.0, "counts": None}
+COUNT_TTL = 30.0
+
+
+def table_counts():
+    now = time.time()
+    if _COUNT_CACHE["counts"] is not None and now - _COUNT_CACHE["ts"] < COUNT_TTL:
+        return _COUNT_CACHE["counts"]
+    counts = {}
+    conn = db()
+    try:
+        for t in sorted(RAW_TABLES):
+            try:
+                counts[t] = conn.execute(f'SELECT COUNT(*) FROM "{t}"').fetchone()[0]
+            except sqlite3.OperationalError:
+                counts[t] = None
+    finally:
+        conn.close()
+    _COUNT_CACHE["ts"] = now
+    _COUNT_CACHE["counts"] = counts
+    return counts
 
 
 def now_iso():
@@ -70,14 +98,7 @@ def status():
             payload["db_bytes"] += os.path.getsize(DB + suffix) if os.path.exists(DB + suffix) else 0
     except OSError:
         payload["db_bytes"] = 0
-    with db() as conn:
-        counts = {}
-        for t in RAW_TABLES:
-            try:
-                counts[t] = conn.execute(f'SELECT COUNT(*) FROM "{t}"').fetchone()[0]
-            except sqlite3.OperationalError:
-                counts[t] = None
-        payload["counts"] = counts
+    payload["counts"] = table_counts()
     return payload
 
 
@@ -222,14 +243,7 @@ def news(limit):
 
 
 def stats():
-    counts = {}
-    with db() as conn:
-        for t in sorted(RAW_TABLES):
-            try:
-                counts[t] = conn.execute(f'SELECT COUNT(*) FROM "{t}"').fetchone()[0]
-            except sqlite3.OperationalError:
-                counts[t] = None
-    return {"updated_at": now_iso(), "tables": counts}
+    return {"updated_at": now_iso(), "tables": table_counts()}
 
 
 def raw(table, limit):
