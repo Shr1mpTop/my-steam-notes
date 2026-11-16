@@ -77,6 +77,38 @@ FRIEND_SCHEMA = [
 
 CORE_TABLES = ("status_polls", "owned_games", "daily_snapshots", "recent_sessions", "player_daily")
 
+SOCIAL_SCHEMA = [
+    """CREATE TABLE IF NOT EXISTS friend_games (
+        steamid TEXT NOT NULL,
+        appid INTEGER NOT NULL,
+        playtime_forever INTEGER DEFAULT 0,
+        playtime_2weeks INTEGER DEFAULT 0,
+        rtime_last_played INTEGER DEFAULT 0,
+        updated_at TEXT,
+        PRIMARY KEY (steamid, appid)
+    )""",
+    """CREATE INDEX IF NOT EXISTS idx_friend_games_steamid ON friend_games (steamid, playtime_forever DESC)""",
+    """CREATE INDEX IF NOT EXISTS idx_friend_games_appid ON friend_games (appid)""",
+    """CREATE TABLE IF NOT EXISTS friend_sweeps (
+        steamid TEXT PRIMARY KEY,
+        last_sweep TEXT,
+        status TEXT,
+        game_count INTEGER DEFAULT 0,
+        total_minutes INTEGER DEFAULT 0
+    )""",
+    """CREATE TABLE IF NOT EXISTS friends_current (
+        steamid TEXT PRIMARY KEY,
+        personaname TEXT,
+        personastate INTEGER DEFAULT 0,
+        gameextrainfo TEXT,
+        gameid TEXT,
+        lastlogoff INTEGER DEFAULT 0,
+        avatarfull TEXT,
+        profileurl TEXT,
+        updated_at TEXT
+    )""",
+]
+
 SQL_OWNED_UPSERT = """INSERT INTO owned_games (appid, name, playtime_forever, playtime_windows_forever,
    playtime_mac_forever, playtime_linux_forever, playtime_deck_forever,
    img_icon_url, rtime_last_played, updated_at)
@@ -125,6 +157,23 @@ SQL_FRIEND_POLL_INSERT = """INSERT OR IGNORE INTO friend_status_polls
 
 SQL_STATUS_INSERT = """INSERT OR IGNORE INTO status_polls (timestamp, personastate, gameextrainfo, gameid)
    VALUES (?, ?, ?, ?)"""
+
+SQL_FRIENDS_CURRENT_UPSERT = """INSERT INTO friends_current (steamid, personaname, personastate, gameextrainfo, gameid, lastlogoff, avatarfull, profileurl, updated_at)
+   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+   ON CONFLICT(steamid) DO UPDATE SET
+     personaname=excluded.personaname, personastate=excluded.personastate,
+     gameextrainfo=excluded.gameextrainfo, gameid=excluded.gameid,
+     lastlogoff=excluded.lastlogoff, avatarfull=excluded.avatarfull,
+     profileurl=excluded.profileurl, updated_at=excluded.updated_at"""
+
+SQL_FRIEND_GAME_REPLACE = """INSERT OR REPLACE INTO friend_games (steamid, appid, playtime_forever, playtime_2weeks, rtime_last_played, updated_at)
+   VALUES (?, ?, ?, ?, ?, ?)"""
+
+SQL_SWEEP_UPSERT = """INSERT INTO friend_sweeps (steamid, last_sweep, status, game_count, total_minutes)
+   VALUES (?, ?, ?, ?, ?)
+   ON CONFLICT(steamid) DO UPDATE SET
+     last_sweep=excluded.last_sweep, status=excluded.status,
+     game_count=excluded.game_count, total_minutes=excluded.total_minutes"""
 
 
 # ---------------------------------------------------------------- config / env
@@ -256,11 +305,14 @@ STATE = {
     "next_playtime": 0.0,
     "last_prune_day": "",
     "last_self": {},    # previous tick self presence (for change detection)
+    "sweep_cursor": 0,  # round-robin cursor into friend_ids for library sweeps
+    "sweep_cycles": 0,  # completed full-rotations (for logging)
 }
 TICKS = 0
 ERRORS = 0
 FRIEND_POLLS = 0
 PLAYTIME_POLLS = 0
+SWEEPS_DONE = 0
 START_TS = time.time()
 
 
@@ -321,6 +373,14 @@ def poll_friends_and_self():
     execute_many(SQL_FRIEND_PROFILE_UPSERT, [
         [p.get("steamid", ""), p.get("personaname", ""), p.get("avatarfull", ""),
          p.get("profileurl", ""), now, now]
+        for p in others
+    ])
+    # friends_current: latest state per friend in a tiny table the dashboard
+    # build can read instantly (no scanning the raw 60s poll history)
+    execute_many(SQL_FRIENDS_CURRENT_UPSERT, [
+        [p.get("steamid", ""), p.get("personaname", ""), p.get("personastate", 0),
+         p.get("gameextrainfo", ""), p.get("gameid", ""), p.get("lastlogoff", 0),
+         p.get("avatarfull", ""), p.get("profileurl", ""), now]
         for p in others
     ])
     execute_many(SQL_FRIEND_POLL_INSERT, [
@@ -412,6 +472,61 @@ def sync_playtime():
     return True
 
 
+def sweep_friend(steamid):
+    """Fetch one friend's owned-games playtime into friend_games.
+
+    GetOwnedGames v1, include_appinfo=false (names resolved from my
+    owned_games at build time). Private profiles return an empty response ->
+    status='private', retried next cycle anyway (cheap).
+    Returns True on any definitive outcome, False on transient failure.
+    """
+    now_iso = datetime.now(TZ).isoformat()
+    data = steam_get("/IPlayerService/GetOwnedGames/v0001/", {
+        "steamid": steamid,
+        "include_appinfo": "false",
+        "include_played_free_games": "true",
+    }, timeout=25)
+    if data is None:
+        return False
+    games = data.get("response", {}).get("games", []) or []
+    if not games:
+        execute(SQL_SWEEP_UPSERT, [steamid, now_iso, "private", 0, 0])
+        return True
+    total = sum(g.get("playtime_forever", 0) for g in games)
+    execute_many(SQL_FRIEND_GAME_REPLACE, [
+        [steamid, g["appid"], g.get("playtime_forever", 0),
+         g.get("playtime_2weeks", 0), g.get("rtime_last_played", 0), now_iso]
+        for g in games
+    ])
+    execute(SQL_SWEEP_UPSERT, [steamid, now_iso, "ok", len(games), total])
+    return True
+
+
+def sweep_tick():
+    """Round-robin library sweep: FRIEND_SWEEP_PER_TICK friends per tick.
+
+    A full rotation of 39 friends takes ~20 min at the default pace; steady
+    state costs 2 Steam calls/min (same as one extra presence poll).
+    """
+    global SWEEPS_DONE
+    if not STATE["friend_ids"]:
+        return
+    ids = STATE["friend_ids"]
+    n = len(ids)
+    done = 0
+    for _ in range(FRIEND_SWEEP_PER_TICK):
+        steamid = ids[STATE["sweep_cursor"] % n]
+        STATE["sweep_cursor"] += 1
+        if STATE["sweep_cursor"] % n == 0:
+            STATE["sweep_cycles"] += 1
+            log(f"[sweep] full rotation #{STATE['sweep_cycles']} complete ({n} friends)")
+        if sweep_friend(steamid):
+            done += 1
+            SWEEPS_DONE += 1
+        else:
+            log(f"[sweep] transient failure for {steamid} (will retry next tick)")
+
+
 def maybe_prune():
     """Once per day (04:00+ window) drop raw poll rows beyond retention."""
     now = datetime.now(TZ)
@@ -479,6 +594,8 @@ def tick():
         else:
             ERRORS += 1
 
+    sweep_tick()
+
     maybe_prune()
 
     # state change -> poke the dashboard builder for an immediate rebuild
@@ -505,13 +622,15 @@ def tick():
         "game": STATE.get("last_self", {}).get("game", ""),
         "friend_due_in": max(0, int(STATE["next_friend"] - time.time())),
         "playtime_due_in": max(0, int(STATE["next_playtime"] - time.time())),
+        "sweeps_done": SWEEPS_DONE,
+        "sweep_cycles": STATE["sweep_cycles"],
     })
     if TICKS % 10 == 0 or changed or TICKS == 1:
         minutes = max(1e-9, (time.time() - START_TS) / 60)
         log(f"[tick {TICKS}] online={STATE.get('last_self', {}).get('online')} "
             f"game='{STATE.get('last_self', {}).get('game', '')}' "
             f"friends={len(STATE['friend_ids'])} calls={STEAM_CALLS} "
-            f"({STEAM_CALLS / minutes:.2f}/min) errors={ERRORS}")
+            f"({STEAM_CALLS / minutes:.2f}/min) sweeps={SWEEPS_DONE} errors={ERRORS}")
 
 
 RUNNING = True
@@ -520,13 +639,14 @@ RUNNING = True
 def main():
     global KEY, SID, FRIEND_INTERVAL, FRIENDLIST_INTERVAL, PLAYTIME_INTERVAL
     global RETENTION_SELF_DAYS, RETENTION_FRIEND_DAYS, STATUS_FILE, TRIGGER_FILE, SESSION
-    global TICKS, ERRORS, FRIEND_POLLS, PLAYTIME_POLLS, PROXY
+    global TICKS, ERRORS, FRIEND_POLLS, PLAYTIME_POLLS, PROXY, FRIEND_SWEEP_PER_TICK, SWEEPS_DONE
 
     load_env()
     KEY = os.getenv("STEAM_API_KEY", "")
     SID = os.getenv("STEAM_ID", "")
     PROXY = os.getenv("FALLBACK_PROXY", "http://192.168.0.103:7897")
     POLL_INTERVAL = int(os.getenv("POLL_INTERVAL", "60"))
+    FRIEND_SWEEP_PER_TICK = int(os.getenv("FRIEND_SWEEP_PER_TICK", "2"))
     FRIEND_INTERVAL = int(os.getenv("FRIEND_INTERVAL", "300"))
     FRIENDLIST_INTERVAL = int(os.getenv("FRIENDLIST_INTERVAL", "1800"))
     PLAYTIME_INTERVAL = int(os.getenv("PLAYTIME_INTERVAL", "300"))
@@ -547,6 +667,8 @@ def main():
 
     # schema: friend tables always ensured; core tables must exist via migration
     for stmt in FRIEND_SCHEMA:
+        execute(stmt)
+    for stmt in SOCIAL_SCHEMA:
         execute(stmt)
     have = execute(
         "SELECT name FROM sqlite_master WHERE type='table' AND name IN "

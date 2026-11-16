@@ -860,6 +860,150 @@ def build_social_presence(player_info):
     }
 
 
+def build_friends_hub(player_info=None):
+    """Friend-centric social analytics.
+
+    Sources: friend_games (per-friend library sweeps), friends_current (live
+    state), steam_friends (roster + friend_since), owned_games/recent_sessions
+    (my side). Games I don't own are skipped in shared_games — that panel is
+    about common ground.
+    """
+    now = datetime.now(TZ)
+
+    mine_rows = execute("SELECT appid, name, playtime_forever FROM owned_games")
+    my_names = {r["appid"]: r["name"] for r in mine_rows}
+    my_hours = {r["appid"]: (r["playtime_forever"] or 0) / 60.0 for r in mine_rows}
+    my_two_week = {r["appid"]: 0.0 for r in mine_rows}
+    for r in execute(
+        """SELECT appid, playtime_2weeks FROM recent_sessions
+           WHERE snapshot_date = (SELECT MAX(snapshot_date) FROM recent_sessions)"""
+    ):
+        my_two_week[r["appid"]] = (r["playtime_2weeks"] or 0) / 60.0
+    my_total_hours = round(sum(my_hours.values()), 1)
+    my_two_week_total = round(sum(my_two_week.values()), 1)
+    self_name = (player_info or {}).get("personaname", "Me")
+    self_avatar = (player_info or {}).get("avatarfull", "")
+
+    roster = {
+        r["steamid"]: r
+        for r in execute("SELECT steamid, personaname, avatarfull, friend_since FROM steam_friends")
+    }
+    live = {r["steamid"]: r for r in execute("SELECT * FROM friends_current")}
+    sweeps = {r["steamid"]: r for r in execute("SELECT * FROM friend_sweeps")}
+
+    per_friend = {}
+    for r in execute(
+        "SELECT steamid, appid, playtime_forever, playtime_2weeks, rtime_last_played FROM friend_games"
+    ):
+        agg = per_friend.setdefault(r["steamid"], {"total": 0, "two_week": 0, "games": []})
+        agg["total"] += r["playtime_forever"] or 0
+        agg["two_week"] += r["playtime_2weeks"] or 0
+        agg["games"].append(r)
+
+    now_ts = int(now.timestamp())
+    friends = []
+    shared = {}
+    for steamid, agg in per_friend.items():
+        meta = roster.get(steamid, {})
+        cur = live.get(steamid, {})
+        sw = sweeps.get(steamid, {})
+        name = cur.get("personaname") or meta.get("personaname") or steamid
+        games_sorted = sorted(agg["games"], key=lambda g: (g["playtime_forever"] or 0), reverse=True)
+        top_games = [
+            {
+                "appid": g["appid"],
+                "name": my_names.get(g["appid"], f"App {g['appid']}"),
+                "hours": round((g["playtime_forever"] or 0) / 60.0, 1),
+            }
+            for g in games_sorted[:3]
+        ]
+        friend_since = int(meta.get("friend_since") or 0)
+        friends.append({
+            "steamid": steamid,
+            "name": name,
+            "avatarfull": cur.get("avatarfull") or meta.get("avatarfull") or "",
+            "online": (cur.get("personastate") or 0) != 0,
+            "playing": cur.get("gameextrainfo") or "",
+            "friendship_days": max(0, (now_ts - friend_since) // 86400) if friend_since else None,
+            "total_hours": round(agg["total"] / 60.0, 1),
+            "two_week_hours": round(agg["two_week"] / 60.0, 1),
+            "top_games": top_games,
+            "library_size": sw.get("game_count") or len(games_sorted),
+            "visibility": sw.get("status") or "unknown",
+            "last_online": int(cur.get("lastlogoff") or 0),
+        })
+        for g in agg["games"]:
+            appid = g["appid"]
+            if appid not in my_hours:
+                continue  # shared panel = games we BOTH own
+            hrs = (g["playtime_forever"] or 0) / 60.0
+            slot = shared.setdefault(appid, {
+                "appid": appid,
+                "name": my_names.get(appid, f"App {appid}"),
+                "my_hours": round(my_hours.get(appid, 0.0), 1),
+                "my_two_week_hours": round(my_two_week.get(appid, 0.0), 1),
+                "friend_count": 0,
+                "friend_hours_total": 0.0,
+                "friends": [],
+            })
+            slot["friend_count"] += 1
+            slot["friend_hours_total"] += hrs
+            slot["friends"].append({
+                "name": name,
+                "hours": round(hrs, 1),
+                "two_week_hours": round((g["playtime_2weeks"] or 0) / 60.0, 1),
+            })
+
+    friends.sort(key=lambda f: (-f["two_week_hours"], -f["total_hours"]))
+
+    shared_list = []
+    for slot in shared.values():
+        slot["friends"].sort(key=lambda x: -x["hours"])
+        slot["top_friend"] = slot["friends"][0] if slot["friends"] else None
+        slot["friend_hours_total"] = round(slot["friend_hours_total"], 1)
+        shared_list.append(slot)
+    shared_list.sort(key=lambda s: (-s["friend_count"], -s["friend_hours_total"]))
+
+    total_rows = [{"name": self_name, "avatarfull": self_avatar, "hours": my_total_hours, "is_self": True}]
+    two_week_rows = [{"name": self_name, "avatarfull": self_avatar, "hours": my_two_week_total, "is_self": True}]
+    for f in friends:
+        if f["visibility"] != "ok" or f["total_hours"] <= 0:
+            continue
+        total_rows.append({"name": f["name"], "avatarfull": f["avatarfull"], "hours": f["total_hours"], "is_self": False})
+        two_week_rows.append({"name": f["name"], "avatarfull": f["avatarfull"], "hours": f["two_week_hours"], "is_self": False})
+    total_rows.sort(key=lambda x: -x["hours"])
+    two_week_rows.sort(key=lambda x: -x["hours"])
+    my_total_rank = next((i + 1 for i, x in enumerate(total_rows) if x["is_self"]), None)
+    my_two_week_rank = next((i + 1 for i, x in enumerate(two_week_rows) if x["is_self"]), None)
+
+    public_friends = [f for f in friends if f["visibility"] == "ok"]
+    avg_total = round(sum(f["total_hours"] for f in public_friends) / len(public_friends), 1) if public_friends else 0
+    friends_playing_now = [
+        {"name": f["name"], "game": f["playing"], "avatarfull": f["avatarfull"]}
+        for f in sorted(friends, key=lambda x: -x["two_week_hours"])
+        if f["playing"]
+    ]
+
+    return {
+        "updated_at": now.isoformat(),
+        "friends": friends[:60],
+        "shared_games": shared_list[:30],
+        "leaderboard_total": total_rows[:40],
+        "leaderboard_2weeks": two_week_rows[:40],
+        "me_vs_them": {
+            "my_total_hours": my_total_hours,
+            "my_total_rank": my_total_rank,
+            "my_two_week_hours": my_two_week_total,
+            "my_two_week_rank": my_two_week_rank,
+            "public_friends": len(public_friends),
+            "private_friends": len(friends) - len(public_friends),
+            "avg_friend_total_hours": avg_total,
+            "ranked_total": len(total_rows),
+        },
+        "friends_playing_now": friends_playing_now[:20],
+    }
+
+
 def generate_dashboard(player_info):
     os.makedirs(DATA_DIR, exist_ok=True)
     dashboard = {
@@ -881,6 +1025,7 @@ def generate_dashboard(player_info):
         "weekly_digest": build_weekly_digest(),
         "game_updates": build_game_updates(),
         "social_presence": build_social_presence(player_info),
+        "friends_hub": build_friends_hub(player_info),
     }
     os.makedirs(os.path.dirname(DASHBOARD_PATH), exist_ok=True)
     with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
