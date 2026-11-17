@@ -176,15 +176,28 @@
     .presence-axis, .presence-row { grid-template-columns: 110px 1fr 44px; }
     .presence-axis-total { display: none; }
   }
+  /* ---- mobile (<720px): header wraps, hourly heat scrolls horizontally ---- */
+  @media (max-width: 720px) {
+    header { flex-wrap: wrap; height: auto; min-height: 26px; padding: 4px 8px; row-gap: 2px; }
+    header .stat.hide-m { display: none; }
+    .ticker { font-size: 10px; }
+    .panel-body { padding: 3px 5px; }
+    .hour-heat { display: grid; grid-template-columns: repeat(24, 16px); width: max-content; }
+    .panel-scroll-x { overflow-x: auto; }
+    .bar-row { grid-template-columns: 78px 1fr 46px; font-size: 10px; }
+    .big { font-size: 16px; }
+    .detail-kv, .kv { grid-template-columns: 84px 1fr; }
+  }
+
 </style>
 </head>
 <body>
 <header>
   <span class="brand">STEAM<b>.MATRIX</b> <span class="sep">//</span> live terminal</span>
-  <span class="stat"><span class="sep">db</span> <b id="hdb">--</b></span>
-  <span class="stat"><span class="sep">rows</span> <b id="hrows">--</b></span>
-  <span class="stat"><span class="sep">calls</span> <b id="hcalls">--</b></span>
-  <span class="stat"><span class="sep">uptime</span> <b id="huptime">--</b></span>
+  <span class="stat"><span class="sep">db</span> <b id="hdb" class="hide-m">--</b></span>
+  <span class="stat hide-m"><span class="sep">rows</span> <b id="hrows" class="hide-m">--</b></span>
+  <span class="stat hide-m"><span class="sep">calls</span> <b id="hcalls" class="hide-m">--</b></span>
+  <span class="stat hide-m"><span class="sep">uptime</span> <b id="huptime" class="hide-m">--</b></span>
   <span class="stat"><span class="sep">sweep</span> <b id="hsweep">--</b></span>
   <span class="stat"><span class="sep">me</span> <b id="hme">--</b></span>
   <span id="clock">--:--:--</span>
@@ -270,7 +283,7 @@
     </section>
     <section class="panel">
       <div class="panel-head"><span>HOURLY HEAT // when they play</span><span class="meta">10min</span></div>
-      <div class="panel-body"><div class="hour-heat" id="hourHeat"></div></div>
+      <div class="panel-body panel-scroll-x"><div class="hour-heat" id="hourHeat"></div></div>
     </section>
     <section class="panel grow-sm">
       <div class="panel-head"><span>PRESENCE LEADERS // today</span><span class="meta">60s</span></div>
