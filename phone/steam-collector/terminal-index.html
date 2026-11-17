@@ -386,6 +386,7 @@ async function loadFriendDetail(steamid, name) {
     const d = await get("/api/friend/" + steamid);
     const live = d.live || {};
     const sweep = d.sweep || {};
+    const lvl = d.level || {};
     const games = d.games || [];
     const total = sweep.status === "ok" ? fmtH(games.reduce((a, g) => a + (g.hours || 0), 0)) : "--";
     $("detailBody").innerHTML = `
@@ -394,8 +395,10 @@ async function loadFriendDetail(steamid, name) {
         <span>state</span><span>${live.personastate ? (ST[live.personastate] || "?") : "offline"}</span>
         <span>game</span><span>${esc(live.gameextrainfo || "—")}</span>
         <span>visibility</span><span>${esc(sweep.status || "?")}</span>
+        <span>level</span><span>${lvl.player_level ? "lvl " + lvl.player_level + " · " + (lvl.player_xp || 0) + " xp · " + (lvl.badges_count || 0) + " badges" : "—"}</span>
+        <span>country</span><span>${esc(live.loccountrycode || "—")}</span>
         <span>library</span><span>${sweep.game_count || 0} games · ${total}</span>
-        <span>level</span><span>${live.loccountrycode ? esc(live.loccountrycode) + " · " : ""}${games.length} tracked</span>
+        <span>shared w/ me</span><span>${d.shared_count} games</span>
       </div>
       <div class="detail-games">
         <table><thead><tr><th>game</th><th class="num">them</th><th class="num">me</th></tr></thead><tbody>
