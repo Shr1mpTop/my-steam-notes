@@ -232,6 +232,20 @@ def games(limit):
     return {"updated_at": now_iso(), "count": len(rows), "games": rows}
 
 
+def recent_two_week():
+    rows = q("""
+        SELECT appid, name, playtime_2weeks, playtime_forever
+        FROM recent_sessions
+        WHERE snapshot_date = (SELECT MAX(snapshot_date) FROM recent_sessions)
+          AND playtime_2weeks > 0
+        ORDER BY playtime_2weeks DESC LIMIT 15
+    """)
+    for r in rows:
+        r["hours_2w"] = round((r["playtime_2weeks"] or 0) / 60.0, 1)
+        r["hours_total"] = round((r["playtime_forever"] or 0) / 60.0, 1)
+    return {"updated_at": now_iso(), "count": len(rows), "recent": rows}
+
+
 def polls(limit):
     return {"updated_at": now_iso(),
             "polls": q("SELECT * FROM status_polls ORDER BY timestamp DESC LIMIT ?", (limit,))}
@@ -513,6 +527,8 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json(200, shared(limit))
             elif path == "/api/games":
                 self.send_json(200, games(limit))
+            elif path == "/api/recent-2week":
+                self.send_json(200, recent_two_week())
             elif path == "/api/polls":
                 self.send_json(200, polls(limit))
             elif path == "/api/friend-polls":

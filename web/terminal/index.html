@@ -242,6 +242,14 @@
       <div class="panel-body"><div class="bars" id="concurrent"></div></div>
     </section>
     <section class="panel grow-sm">
+      <div class="panel-head"><span>MY GAMES // top by hours</span><span class="meta">60s</span></div>
+      <div class="panel-body"><table><thead><tr><th>game</th><th class="num">hrs</th></tr></thead><tbody id="myGames"></tbody></table></div>
+    </section>
+    <section class="panel grow-sm">
+      <div class="panel-head"><span>2W RECENT // sessions</span><span class="meta">5min</span></div>
+      <div class="panel-body"><table><thead><tr><th>game</th><th class="num">2w</th><th class="num">total</th></tr></thead><tbody id="recent2w"></tbody></table></div>
+    </section>
+    <section class="panel grow-sm">
       <div class="panel-head"><span>SWEEPS // library scans</span><span class="meta">60s</span></div>
       <div class="panel-body"><table><thead><tr><th>who</th><th>status</th><th class="num">games</th><th class="num">hrs</th></tr></thead><tbody id="sweeps"></tbody></table></div>
     </section>
@@ -444,6 +452,14 @@ async function loadMyGames() {
   } catch (e) { fail($("myGames"), e.message); }
 }
 
+async function loadRecent2w() {
+  try {
+    const d = await get("/api/recent-2week");
+    $("recent2w").innerHTML = (d.recent || []).map((g) =>
+      `<tr><td>${esc(cut(g.name, 22))}</td><td class="num">${g.hours_2w}</td><td class="num dim">${g.hours_total}</td></tr>`).join("") || '<tr><td colspan="3" class="faint">no recent sessions</td></tr>';
+  } catch (e) { fail($("recent2w"), e.message); }
+}
+
 async function loadPollStream() {
   try {
     const d = await get("/api/polls?limit=30");
@@ -604,6 +620,7 @@ every(600000, loadRecords);
 every(60000, loadShared);
 every(60000, loadSweeps);
 every(60000, loadMyGames);
+every(300000, loadRecent2w);
 every(300000, loadConcurrent);
 every(1800000, loadCountries);
 every(300000, loadLevels);
