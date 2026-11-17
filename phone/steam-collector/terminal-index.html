@@ -205,6 +205,26 @@
   </section>
 
   <section class="panel">
+    <div class="panel-head"><span>LEVELS // steam level ladder</span><span class="meta">5min</span></div>
+    <div class="panel-body tall"><table><thead><tr><th>#</th><th>who</th><th class="num">lvl</th><th class="num">xp</th><th class="num">badges</th></tr></thead><tbody id="levels"></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>BANS // registry</span><span class="meta">20min</span></div>
+    <div class="panel-body"><div id="bans"></div></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>CONCURRENT // players in my games</span><span class="meta">5min</span></div>
+    <div class="panel-body"><div class="bars" id="concurrent"></div></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>COUNTRIES // friend map</span><span class="meta">30min</span></div>
+    <div class="panel-body"><div class="bars" id="countries"></div></div>
+  </section>
+
+  <section class="panel">
     <div class="panel-head"><span>SHARED // common ground</span><span class="meta">60s</span></div>
     <div class="panel-body tall"><div class="bars" id="sharedBars"></div></div>
   </section>
@@ -243,6 +263,7 @@
 <script>
 "use strict";
 const API = "";
+const ME_ID = "76561198367786896";
 const $ = (id) => document.getElementById(id);
 const fmtH = (h) => (h >= 100 ? Math.round(h) + "h" : h >= 10 ? h.toFixed(1) + "h" : h.toFixed(2) + "h");
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -362,8 +383,58 @@ async function loadRecords() {
     if (d.oldest_friendship) kv.push(["oldest friendship", `${esc(cut(d.oldest_friendship.name, 12))} ${d.oldest_friendship.days}d`]);
     if (d.top_night_owl && d.top_night_owl.name) kv.push(["top night owl", `${esc(cut(d.top_night_owl.name, 12))} ${d.top_night_owl.night_hours}h`]);
     if (d.hot_game_this_week && d.hot_game_this_week.name) kv.push(["hot this week", `${esc(cut(d.hot_game_this_week.name, 16))} ${d.hot_game_this_week.week_hours}h`]);
+    if (d.highest_level) kv.push(["highest level", `${esc(cut(d.highest_level.name, 12))} lvl ${d.highest_level.player_level}`]);
     $("records").innerHTML = kv.map(([k, v]) => `<span>${k}</span><span class="dim">${v}</span>`).join("") || '<span class="faint">no records yet</span>';
   } catch (e) { fail($("records"), e.message); }
+}
+
+async function loadLevels() {
+  try {
+    const d = await get("/api/levels");
+    const rows = (d.levels || []).slice(0, 20).map((r, i) =>
+      `<tr class="${r.steamid === ME_ID ? "self" : ""}"><td class="rank">${i + 1}</td><td>${esc(cut(r.name, 16))}</td><td class="num">${r.player_level}</td><td class="num dim">${(r.player_xp || 0).toLocaleString()}</td><td class="num dim">${r.badges_count || 0}</td></tr>`).join("");
+    $("levels").innerHTML = (d.my_level !== null && d.my_level !== undefined ? `<tr class="self"><td class="rank">—</td><td><b>ME</b></td><td class="num">${d.my_level}</td><td class="num dim">—</td><td class="num dim">—</td></tr>` : "") + rows;
+  } catch (e) { fail($("levels"), e.message); }
+}
+
+let ME_ID = "";
+
+async function loadBans() {
+  try {
+    const d = await get("/api/bans");
+    const flagged = d.flagged_friends || [];
+    const head = `<div class="row"><span>checked</span><span>${d.checked}</span></div><div class="row"><span class="amber">flagged</span><span class="${flagged.length ? "amber" : "dim"}">${d.flagged}</span></div><div style="height:4px"></div>`;
+    const rows = flagged.length
+      ? flagged.map((r) => `<div class="row"><span>${esc(cut(r.name, 16))}</span><span class="red">${r.vac_banned ? "VAC×" + r.num_vac_bans : ""}${r.num_game_bans ? " game×" + r.num_game_bans : ""}${r.community_banned ? " community" : ""} · ${r.days_since_last_ban}d</span></div>`).join("")
+      : '<div class="row faint">all clean — no bans in friend list</div>';
+    $("bans").innerHTML = head + rows;
+  } catch (e) { fail($("bans"), e.message); }
+}
+
+async function loadConcurrent() {
+  try {
+    const d = await get("/api/concurrent");
+    const rows = d.concurrent || [];
+    const max = Math.max(...rows.map((r) => r.player_count || 0), 1);
+    $("concurrent").innerHTML = rows.map((r) =>
+      `<div class="bar-row" title="${esc(r.name)} @ ${ts(new Date(r.ts * 1000).toISOString())}">
+         <span class="faint">${esc(cut(r.name, 20))}</span>
+         <div class="bar-track"><div class="bar-fill" style="width:${((r.player_count || 0) / max) * 100}%"></div></div>
+         <span class="dim num">${(r.player_count || 0).toLocaleString()}</span>
+       </div>`).join("") || '<span class="faint">no concurrent samples yet</span>';
+  } catch (e) { fail($("concurrent"), e.message); }
+}
+
+async function loadCountries() {
+  try {
+    const d = await get("/api/countries");
+    const rows = d.countries || [];
+    const max = Math.max(...rows.map((r) => r.friends), 1);
+    $("countries").innerHTML = rows.slice(0, 12).map((r) =>
+      `<div class="bar-row"><span class="faint">${esc(r.cc)}</span>
+         <div class="bar-track"><div class="bar-fill" style="width:${(r.friends / max) * 100}%"></div></div>
+         <span class="dim num">${r.friends}</span></div>`).join("");
+  } catch (e) { fail($("countries"), e.message); }
 }
 
 async function loadShared() {
@@ -444,6 +515,10 @@ every(600000, loadRecords);
 every(60000, loadShared);
 every(60000, loadSweeps);
 every(60000, loadMyGames);
+every(300000, loadConcurrent);
+every(1800000, loadCountries);
+every(300000, loadLevels);
+every(1200000, loadBans);
 every(60000, loadStats);
 every(60000, loadNews);
 setInterval(() => { $("clock").textContent = new Date().toLocaleTimeString([], { hour12: false }); }, 1000);

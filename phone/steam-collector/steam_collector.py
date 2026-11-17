@@ -105,8 +105,35 @@ SOCIAL_SCHEMA = [
         lastlogoff INTEGER DEFAULT 0,
         avatarfull TEXT,
         profileurl TEXT,
+        loccountrycode TEXT,
         updated_at TEXT
     )""",
+    """CREATE TABLE IF NOT EXISTS friend_bans (
+        steamid TEXT PRIMARY KEY,
+        community_banned INTEGER DEFAULT 0,
+        vac_banned INTEGER DEFAULT 0,
+        num_vac_bans INTEGER DEFAULT 0,
+        days_since_last_ban INTEGER DEFAULT 0,
+        num_game_bans INTEGER DEFAULT 0,
+        economy_ban TEXT,
+        updated_at TEXT
+    )""",
+    """CREATE TABLE IF NOT EXISTS friend_levels (
+        steamid TEXT PRIMARY KEY,
+        player_level INTEGER DEFAULT 0,
+        player_xp INTEGER DEFAULT 0,
+        xp_to_level_up INTEGER DEFAULT 0,
+        badges_count INTEGER DEFAULT 0,
+        status TEXT,
+        updated_at TEXT
+    )""",
+    """CREATE TABLE IF NOT EXISTS game_concurrent (
+        appid INTEGER NOT NULL,
+        ts INTEGER NOT NULL,
+        player_count INTEGER,
+        PRIMARY KEY (appid, ts)
+    )""",
+    """CREATE INDEX IF NOT EXISTS idx_game_concurrent_appid ON game_concurrent (appid, ts DESC)""",
 ]
 
 SQL_OWNED_UPSERT = """INSERT INTO owned_games (appid, name, playtime_forever, playtime_windows_forever,
@@ -158,13 +185,32 @@ SQL_FRIEND_POLL_INSERT = """INSERT OR IGNORE INTO friend_status_polls
 SQL_STATUS_INSERT = """INSERT OR IGNORE INTO status_polls (timestamp, personastate, gameextrainfo, gameid)
    VALUES (?, ?, ?, ?)"""
 
-SQL_FRIENDS_CURRENT_UPSERT = """INSERT INTO friends_current (steamid, personaname, personastate, gameextrainfo, gameid, lastlogoff, avatarfull, profileurl, updated_at)
-   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+SQL_FRIENDS_CURRENT_UPSERT = """INSERT INTO friends_current (steamid, personaname, personastate, gameextrainfo, gameid, lastlogoff, avatarfull, profileurl, loccountrycode, updated_at)
+   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
    ON CONFLICT(steamid) DO UPDATE SET
      personaname=excluded.personaname, personastate=excluded.personastate,
      gameextrainfo=excluded.gameextrainfo, gameid=excluded.gameid,
      lastlogoff=excluded.lastlogoff, avatarfull=excluded.avatarfull,
-     profileurl=excluded.profileurl, updated_at=excluded.updated_at"""
+     profileurl=excluded.profileurl, loccountrycode=excluded.loccountrycode,
+     updated_at=excluded.updated_at"""
+
+SQL_FRIEND_BAN_UPSERT = """INSERT INTO friend_bans (steamid, community_banned, vac_banned, num_vac_bans, days_since_last_ban, num_game_bans, economy_ban, updated_at)
+   VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+   ON CONFLICT(steamid) DO UPDATE SET
+     community_banned=excluded.community_banned, vac_banned=excluded.vac_banned,
+     num_vac_bans=excluded.num_vac_bans, days_since_last_ban=excluded.days_since_last_ban,
+     num_game_bans=excluded.num_game_bans, economy_ban=excluded.economy_ban,
+     updated_at=excluded.updated_at"""
+
+SQL_FRIEND_LEVEL_UPSERT = """INSERT INTO friend_levels (steamid, player_level, player_xp, xp_to_level_up, badges_count, status, updated_at)
+   VALUES (?, ?, ?, ?, ?, ?, ?)
+   ON CONFLICT(steamid) DO UPDATE SET
+     player_level=excluded.player_level, player_xp=excluded.player_xp,
+     xp_to_level_up=excluded.xp_to_level_up, badges_count=excluded.badges_count,
+     status=excluded.status, updated_at=excluded.updated_at"""
+
+SQL_CONCURRENT_INSERT = """INSERT OR REPLACE INTO game_concurrent (appid, ts, player_count)
+   VALUES (?, ?, ?)"""
 
 SQL_FRIEND_GAME_REPLACE = """INSERT OR REPLACE INTO friend_games (steamid, appid, playtime_forever, playtime_2weeks, rtime_last_played, updated_at)
    VALUES (?, ?, ?, ?, ?, ?)"""
@@ -236,6 +282,7 @@ def execute_many(sql, args_list):
 FOUR29_STREAK = 0
 STEAM_CALLS = 0
 PROXY = None
+DIRECT_FAIL_UNTIL = 0.0  # circuit breaker: go proxy-first for 10 min after direct failures
 
 
 def steam_get(path, params, timeout=20):
@@ -248,10 +295,12 @@ def steam_get(path, params, timeout=20):
     5xx / network errors -> short backoff retries.
     Other 4xx -> permanent for this round, return None immediately.
     """
-    global FOUR29_STREAK, STEAM_CALLS
+    global FOUR29_STREAK, STEAM_CALLS, DIRECT_FAIL_UNTIL
     url = f"{STEAM_API}{path}"
     p = {"key": KEY, "format": "json", **params}
-    proxies_chain = [None, None, PROXY, PROXY]
+    # circuit breaker: after repeated direct failures go proxy-first for 10 min
+    direct_dead = time.time() < DIRECT_FAIL_UNTIL
+    proxies_chain = [PROXY, PROXY, None, None] if direct_dead else [None, None, PROXY, PROXY]
     for attempt in range(4):
         kw = {}
         if proxies_chain[attempt]:
@@ -260,6 +309,8 @@ def steam_get(path, params, timeout=20):
             resp = SESSION.get(url, params=p, timeout=timeout, **kw)
         except requests.RequestException as exc:
             wait = BACKOFFS[min(attempt, len(BACKOFFS) - 1)]
+            if proxies_chain[attempt] is None:
+                DIRECT_FAIL_UNTIL = time.time() + 600  # breaker: proxy-first for 10 min
             log(f"[steam] network error on {path} (via {'proxy' if proxies_chain[attempt] else 'direct'}): {exc} -> retry in {wait}s")
             time.sleep(wait)
             continue
@@ -307,6 +358,7 @@ STATE = {
     "last_self": {},    # previous tick self presence (for change detection)
     "sweep_cursor": 0,  # round-robin cursor into friend_ids for library sweeps
     "sweep_cycles": 0,  # completed full-rotations (for logging)
+    "next_concurrent": 0.0,
 }
 TICKS = 0
 ERRORS = 0
@@ -380,7 +432,8 @@ def poll_friends_and_self():
     execute_many(SQL_FRIENDS_CURRENT_UPSERT, [
         [p.get("steamid", ""), p.get("personaname", ""), p.get("personastate", 0),
          p.get("gameextrainfo", ""), p.get("gameid", ""), p.get("lastlogoff", 0),
-         p.get("avatarfull", ""), p.get("profileurl", ""), now]
+         p.get("avatarfull", ""), p.get("profileurl", ""),
+         p.get("loccountrycode", ""), now]
         for p in others
     ])
     execute_many(SQL_FRIEND_POLL_INSERT, [
@@ -499,6 +552,71 @@ def sweep_friend(steamid):
         for g in games
     ])
     execute(SQL_SWEEP_UPSERT, [steamid, now_iso, "ok", len(games), total])
+    collect_level_and_badges(steamid)
+    return True
+
+
+def collect_level_and_badges(steamid):
+    """Steam level + badges/XP for one friend (single calls, private-tolerant)."""
+    now_iso = datetime.now(TZ).isoformat()
+    level = steam_get("/IPlayerService/GetSteamLevel/v0001/", {"steamid": steamid})
+    lvl = None
+    if level is not None:
+        lvl = (level.get("response", {}) or {}).get("player_level", 0)
+    xp = badge_count = xp_up = None
+    badges = steam_get("/IPlayerService/GetBadges/v1/", {"steamid": steamid}, timeout=25)
+    if badges is not None:
+        resp = badges.get("response", {}) or {}
+        xp = resp.get("player_xp", 0)
+        badge_count = len(resp.get("badges", []) or [])
+        xp_up = resp.get("player_xp_needed_to_level_up", 0)
+    status = "ok" if (lvl is not None or xp is not None) else ("private" if lvl is None and xp is None else "ok")
+    execute(SQL_FRIEND_LEVEL_UPSERT, [
+        steamid, lvl or 0, xp or 0, xp_up or 0, badge_count or 0, status, now_iso
+    ])
+
+
+def bans_batch():
+    """GetPlayerBans for me + all friends — ONE batched call per full cycle."""
+    ids = [SID] + [f for f in STATE["friend_ids"] if f != SID]
+    data = steam_get("/ISteamUser/GetPlayerBans/v1/", {"steamids": ",".join(ids[:100])})
+    if data is None:
+        return False
+    now_iso = datetime.now(TZ).isoformat()
+    players = data.get("players", []) or []
+    execute_many(SQL_FRIEND_BAN_UPSERT, [
+        [p.get("SteamId", ""),
+         1 if p.get("CommunityBanned") else 0,
+         1 if p.get("VACBanned") else 0,
+         p.get("NumberOfVACBans", 0),
+         p.get("DaysSinceLastBan", 0),
+         p.get("NumberOfGameBans", 0),
+         p.get("EconomyBan", "none"), now_iso]
+        for p in players if p.get("SteamId")
+    ])
+    flagged = [p for p in players if p.get("VACBanned") or p.get("NumberOfGameBans") or p.get("CommunityBanned")]
+    log(f"[bans] batch refreshed: {len(players)} checked, {len(flagged)} flagged")
+    return True
+
+
+def concurrent_top():
+    """Record live concurrent players for my top-5 recently played games."""
+    rows = execute(
+        """SELECT appid FROM recent_sessions
+           WHERE snapshot_date = (SELECT MAX(snapshot_date) FROM recent_sessions)
+             AND playtime_2weeks > 0
+           ORDER BY playtime_2weeks DESC LIMIT 5"""
+    )
+    if not rows:
+        rows = execute("SELECT appid FROM owned_games ORDER BY playtime_forever DESC LIMIT 5")
+    ts = int(time.time())
+    for r in rows:
+        appid = r["appid"]
+        d = steam_get("/ISteamUserStats/GetNumberOfCurrentPlayers/v1/", {"appid": appid}, timeout=15)
+        if d is not None:
+            count = (d.get("response", {}) or {}).get("player_count")
+            if count is not None:
+                execute(SQL_CONCURRENT_INSERT, [appid, ts, count])
     return True
 
 
@@ -525,6 +643,8 @@ def sweep_tick():
             SWEEPS_DONE += 1
         else:
             log(f"[sweep] transient failure for {steamid} (will retry next tick)")
+        if done and STATE["sweep_cursor"] % n == 0:
+            bans_batch()  # one batched call per full rotation
 
 
 def maybe_prune():
@@ -591,6 +711,12 @@ def tick():
     if time.time() >= STATE["next_playtime"]:
         if sync_playtime():
             STATE["next_playtime"] = time.time() + PLAYTIME_INTERVAL
+        else:
+            ERRORS += 1
+
+    if time.time() >= STATE["next_concurrent"]:
+        if concurrent_top():
+            STATE["next_concurrent"] = time.time() + 1800  # every 30 min
         else:
             ERRORS += 1
 
@@ -670,6 +796,10 @@ def main():
         execute(stmt)
     for stmt in SOCIAL_SCHEMA:
         execute(stmt)
+    try:
+        execute("ALTER TABLE friends_current ADD COLUMN loccountrycode TEXT")
+    except Exception:
+        pass  # column already exists
     have = execute(
         "SELECT name FROM sqlite_master WHERE type='table' AND name IN "
         "('status_polls','owned_games','daily_snapshots','recent_sessions','player_daily')"

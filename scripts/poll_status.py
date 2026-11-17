@@ -890,6 +890,8 @@ def build_friends_hub(player_info=None):
     }
     live = {r["steamid"]: r for r in execute("SELECT * FROM friends_current")}
     sweeps = {r["steamid"]: r for r in execute("SELECT * FROM friend_sweeps")}
+    levels = {r["steamid"]: r for r in execute("SELECT * FROM friend_levels WHERE status = 'ok'")}
+    bans = {r["steamid"]: r for r in execute("SELECT * FROM friend_bans")}
 
     per_friend = {}
     for r in execute(
@@ -918,6 +920,8 @@ def build_friends_hub(player_info=None):
             for g in games_sorted[:3]
         ]
         friend_since = int(meta.get("friend_since") or 0)
+        lvl = levels.get(steamid)
+        ban = bans.get(steamid)
         friends.append({
             "steamid": steamid,
             "name": name,
@@ -931,6 +935,11 @@ def build_friends_hub(player_info=None):
             "library_size": sw.get("game_count") or len(games_sorted),
             "visibility": sw.get("status") or "unknown",
             "last_online": int(cur.get("lastlogoff") or 0),
+            "level": (lvl or {}).get("player_level"),
+            "badges_count": (lvl or {}).get("badges_count"),
+            "country": cur.get("loccountrycode") or None,
+            "vac_banned": bool((ban or {}).get("vac_banned")),
+            "game_banned": ((ban or {}).get("num_game_bans") or 0) > 0,
         })
         for g in agg["games"]:
             appid = g["appid"]

@@ -138,7 +138,18 @@ export function FriendsHubPanel({ hub }: Props) {
                       <span className={`fh-status-dot${friend.playing ? " is-playing" : friend.online ? " is-online" : " is-offline"}`} aria-hidden="true" />
                       <Avatar src={friend.avatarfull} name={friend.name} />
                       <span className="fh-id-text">
-                        <strong title={friend.name}>{friend.name}</strong>
+                        <strong title={friend.name}>
+                          {friend.name}
+                          {typeof friend.level === "number" && friend.level > 0 && (
+                            <span className="fh-mini fh-mini-level" title="Steam level">{friend.level}</span>
+                          )}
+                          {friend.country && (
+                            <span className="fh-mini fh-mini-cc" title="Country">{friend.country}</span>
+                          )}
+                          {(friend.vac_banned || friend.game_banned) && (
+                            <span className="fh-mini fh-mini-banned" title={t("bannedBadge")}>{t("bannedBadge")}</span>
+                          )}
+                        </strong>
                         <FriendStatus friend={friend} t={t} now={now} />
                       </span>
                     </span>

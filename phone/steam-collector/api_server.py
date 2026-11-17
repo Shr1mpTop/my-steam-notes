@@ -362,13 +362,82 @@ def records():
         """)
         owl = night_owls(1).get("night_owls", [{}])[0]
         hot = hot_week(1).get("hot_games", [{}])[0]
+        highest_level = q("""
+            SELECT COALESCE(c.personaname, fl.steamid) AS name, fl.player_level
+            FROM friend_levels fl LEFT JOIN friends_current c ON c.steamid = fl.steamid
+            WHERE fl.status = 'ok' ORDER BY fl.player_level DESC LIMIT 1
+        """)
         return {"updated_at": now_iso(),
                 "most_hours": most_total[0] if most_total else None,
                 "biggest_library": biggest_lib[0] if biggest_lib else None,
                 "oldest_friendship": oldest_friendship[0] if oldest_friendship else None,
                 "top_night_owl": owl or None,
-                "hot_game_this_week": hot or None}
+                "hot_game_this_week": hot or None,
+                "highest_level": highest_level[0] if highest_level else None}
     return cached("records", 600, build)
+
+
+def bans():
+    rows = q("""
+        SELECT b.steamid, COALESCE(c.personaname, b.steamid) AS name,
+               COALESCE(c.avatarfull, '') AS avatar,
+               b.community_banned, b.vac_banned, b.num_vac_bans,
+               b.days_since_last_ban, b.num_game_bans, b.economy_ban, b.updated_at
+        FROM friend_bans b LEFT JOIN friends_current c ON c.steamid = b.steamid
+        ORDER BY (b.vac_banned * 100 + b.num_game_bans * 50 + b.community_banned * 10) DESC,
+                 b.num_vac_bans DESC, c.personaname
+    """)
+    flagged = [r for r in rows if r["vac_banned"] or r["num_game_bans"] or r["community_banned"]]
+    return {"updated_at": now_iso(), "checked": len(rows), "flagged": len(flagged),
+            "flagged_friends": flagged, "bans": rows}
+
+
+def levels():
+    rows = q("""
+        SELECT fl.steamid, COALESCE(c.personaname, fl.steamid) AS name,
+               COALESCE(c.avatarfull, '') AS avatar,
+               fl.player_level, fl.player_xp, fl.xp_to_level_up,
+               fl.badges_count, fl.status, fl.updated_at
+        FROM friend_levels fl LEFT JOIN friends_current c ON c.steamid = fl.steamid
+        WHERE fl.status = 'ok'
+        ORDER BY fl.player_level DESC, fl.player_xp DESC
+    """)
+    my_level = q("SELECT level FROM steam_level ORDER BY date DESC LIMIT 1")
+    return {"updated_at": now_iso(), "count": len(rows),
+            "my_level": my_level[0]["level"] if my_level else None,
+            "levels": rows}
+
+
+def badges():
+    rows = q("""
+        SELECT fl.steamid, COALESCE(c.personaname, fl.steamid) AS name,
+               fl.player_xp, fl.badges_count, fl.player_level
+        FROM friend_levels fl LEFT JOIN friends_current c ON c.steamid = fl.steamid
+        WHERE fl.status = 'ok' AND fl.badges_count > 0
+        ORDER BY fl.player_xp DESC
+    """)
+    return {"updated_at": now_iso(), "count": len(rows), "badges": rows}
+
+
+def concurrent():
+    latest = q("""
+        SELECT g.appid, COALESCE(og.name, 'App ' || g.appid) AS name,
+               g.ts, g.player_count
+        FROM game_concurrent g
+        JOIN (SELECT appid, MAX(ts) AS mts FROM game_concurrent GROUP BY appid) m
+          ON m.appid = g.appid AND m.mts = g.ts
+        LEFT JOIN owned_games og ON og.appid = g.appid
+        ORDER BY g.player_count DESC
+    """)
+    return {"updated_at": now_iso(), "count": len(latest), "concurrent": latest}
+
+
+def countries():
+    rows = q("""
+        SELECT COALESCE(NULLIF(loccountrycode, ''), '??') AS cc, COUNT(*) AS friends
+        FROM friends_current GROUP BY cc ORDER BY friends DESC
+    """)
+    return {"updated_at": now_iso(), "count": len(rows), "countries": rows}
 
 
 def raw(table, limit):
@@ -433,6 +502,16 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json(200, presence_daily(days))
             elif path == "/api/records":
                 self.send_json(200, records())
+            elif path == "/api/bans":
+                self.send_json(200, bans())
+            elif path == "/api/levels":
+                self.send_json(200, levels())
+            elif path == "/api/badges":
+                self.send_json(200, badges())
+            elif path == "/api/concurrent":
+                self.send_json(200, concurrent())
+            elif path == "/api/countries":
+                self.send_json(200, countries())
             elif path == "/api/raw":
                 table = (qs.get("table") or [""])[0]
                 payload = raw(table, limit)

@@ -2760,6 +2760,38 @@ a { color: inherit; }
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fh-mini {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.fh-mini-level {
+  color: var(--accent-hi);
+  background: var(--accent-soft);
+  border: 1px solid rgba(122, 133, 240, 0.3);
+}
+
+.fh-mini-cc {
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+}
+
+.fh-mini-banned {
+  color: #ffb3bd;
+  background: rgba(255, 92, 108, 0.16);
+  border: 1px solid rgba(255, 92, 108, 0.4);
 }
 
 .fh-status {

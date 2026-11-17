@@ -192,6 +192,11 @@ export interface FriendsHubFriend {
   library_size: number;
   visibility: "ok" | "private" | "unknown";
   last_online: number;
+  level?: number | null;
+  badges_count?: number | null;
+  country?: string | null;
+  vac_banned?: boolean;
+  game_banned?: boolean;
 }
 
 export interface SharedGameFriendStat {
