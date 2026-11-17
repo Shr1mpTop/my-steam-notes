@@ -278,6 +278,57 @@ def news(limit):
     return {"updated_at": now_iso(), "count": len(rows), "news": rows}
 
 
+def achieve_compare():
+    """Achievement completion ladder for the most-played shared game (me + friends)."""
+    def build():
+        # degenerate schemas (CS2 ships a single placeholder achievement) are
+        # useless for comparison — require a real achievement set, else fall
+        # back to the top shared game by minutes
+        top = q("""
+            SELECT fg.appid, COALESCE(og.name, 'App ' || fg.appid) AS name
+            FROM friend_games fg
+            JOIN owned_games og ON og.appid = fg.appid
+            JOIN (SELECT appid, COUNT(*) AS n FROM game_achievements GROUP BY appid) ga
+              ON ga.appid = fg.appid
+            WHERE fg.appid != 730 AND ga.n >= 5
+            GROUP BY fg.appid
+            ORDER BY SUM(fg.playtime_forever) DESC
+        """)
+        if not top:
+            top = q("""
+                SELECT fg.appid, COALESCE(og.name, 'App ' || fg.appid) AS name
+                FROM friend_games fg
+                WHERE fg.appid != 730
+                GROUP BY fg.appid
+                ORDER BY SUM(fg.playtime_forever) DESC
+            """)
+        if not top:
+            return {"updated_at": now_iso(), "game": None, "ladder": []}
+        appid, name = top[0]["appid"], top[0]["name"]
+        my_achieved = q(
+            "SELECT COUNT(*) AS c FROM game_achievements WHERE appid = ? AND achieved = 1", (appid,)
+        )[0]["c"]
+        my_ach_total = q(
+            "SELECT COUNT(*) AS c FROM game_achievements WHERE appid = ?", (appid,)
+        )[0]["c"]
+        rows = q("""
+            SELECT fa.steamid, COALESCE(c.personaname, fa.steamid) AS name,
+                   COALESCE(c.avatarfull, '') AS avatar,
+                   fa.achieved, fa.total
+            FROM friend_achievements fa
+            LEFT JOIN friends_current c ON c.steamid = fa.steamid
+            WHERE fa.appid = ?
+            ORDER BY fa.achieved DESC
+        """, (appid,))
+        ladder = [{"name": "ME", "avatar": "", "achieved": my_achieved,
+                   "total": my_ach_total, "is_self": True}]
+        for r in rows:
+            ladder.append({"name": r["name"], "avatar": r["avatar"],
+                           "achieved": r["achieved"], "total": r["total"], "is_self": False})
+        return {"updated_at": now_iso(), "appid": appid, "game": name, "ladder": ladder}
+    return cached("achieve-compare", 300, build)
+
+
 def stats():
     return {"updated_at": now_iso(), "tables": table_counts()}
 
@@ -562,6 +613,8 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json(200, concurrent())
             elif path == "/api/countries":
                 self.send_json(200, countries())
+            elif path == "/api/achieve-compare":
+                self.send_json(200, achieve_compare())
             elif path == "/api/raw":
                 table = (qs.get("table") or [""])[0]
                 payload = raw(table, limit)

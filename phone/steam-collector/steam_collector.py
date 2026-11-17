@@ -145,6 +145,21 @@ SOCIAL_SCHEMA = [
         minutes INTEGER DEFAULT 0,
         playing_minutes INTEGER DEFAULT 0
     )""",
+    """CREATE TABLE IF NOT EXISTS friend_presence_hourly (
+        date TEXT NOT NULL,
+        steamid TEXT NOT NULL,
+        hour INTEGER NOT NULL,
+        minutes INTEGER DEFAULT 0,
+        PRIMARY KEY (date, steamid, hour)
+    )""",
+    """CREATE TABLE IF NOT EXISTS friend_achievements (
+        steamid TEXT NOT NULL,
+        appid INTEGER NOT NULL,
+        achieved INTEGER DEFAULT 0,
+        total INTEGER DEFAULT 0,
+        updated_at TEXT,
+        PRIMARY KEY (steamid, appid)
+    )""",
 ]
 
 SQL_OWNED_UPSERT = """INSERT INTO owned_games (appid, name, playtime_forever, playtime_windows_forever,
@@ -232,6 +247,15 @@ SQL_MY_PRESENCE_TICK = """INSERT INTO my_presence_daily (date, minutes, playing_
    ON CONFLICT(date) DO UPDATE SET
      minutes = minutes + 1,
      playing_minutes = playing_minutes + ?"""
+
+SQL_FRIEND_HOUR_TICK = """INSERT INTO friend_presence_hourly (date, steamid, hour, minutes)
+   VALUES (?, ?, ?, 1)
+   ON CONFLICT(date, steamid, hour) DO UPDATE SET minutes = minutes + 1"""
+
+SQL_FRIEND_ACH_UPSERT = """INSERT INTO friend_achievements (steamid, appid, achieved, total, updated_at)
+   VALUES (?, ?, ?, ?, ?)
+   ON CONFLICT(steamid, appid) DO UPDATE SET
+     achieved=excluded.achieved, total=excluded.total, updated_at=excluded.updated_at"""
 
 SQL_FRIEND_GAME_REPLACE = """INSERT OR REPLACE INTO friend_games (steamid, appid, playtime_forever, playtime_2weeks, rtime_last_played, updated_at)
    VALUES (?, ?, ?, ?, ?, ?)"""
@@ -466,7 +490,9 @@ def poll_friends_and_self():
     # daily presence aggregation: +1 minute per friend seen this tick (compact
     # forever-history; the raw 60s polls only serve the 7-day timeline view)
     today = now[:10]
+    hour = datetime.now(TZ).hour
     execute_many(SQL_FRIEND_PRESENCE_TICK, [[today, p.get("steamid", "")] for p in others])
+    execute_many(SQL_FRIEND_HOUR_TICK, [[today, p.get("steamid", ""), hour] for p in others])
     playing = [p for p in others if p.get("gameid") or p.get("gameextrainfo")]
     log(f"[friends] polled {len(others)} friends | playing now: {len(playing)}")
     for p in playing[:5]:
@@ -591,7 +617,29 @@ def sweep_friend(steamid):
     ])
     execute(SQL_SWEEP_UPSERT, [steamid, now_iso, "ok", len(games), total])
     collect_level_and_badges(steamid)
+    collect_friend_achievements(steamid)
     return True
+
+
+def collect_friend_achievements(steamid):
+    """Achievement completion for the friend's most-played game that I also own."""
+    row = execute("""
+        SELECT fg.appid FROM friend_games fg
+        JOIN owned_games og ON og.appid = fg.appid
+        WHERE fg.steamid = ? ORDER BY fg.playtime_forever DESC LIMIT 1
+    """, [steamid])
+    if not row:
+        return
+    appid = row[0]["appid"]
+    d = steam_get("/ISteamUserStats/GetPlayerAchievements/v0001/", {"steamid": steamid, "appid": appid}, timeout=25)
+    if d is None:
+        return
+    playerstats = d.get("playerstats", {}) or {}
+    achs = playerstats.get("achievements", []) or []
+    if not achs:
+        return  # private game details or achievements disabled
+    achieved = sum(1 for a in achs if a.get("achieved") == 1)
+    execute(SQL_FRIEND_ACH_UPSERT, [steamid, appid, achieved, len(achs), datetime.now(TZ).isoformat()])
 
 
 def collect_level_and_badges(steamid):

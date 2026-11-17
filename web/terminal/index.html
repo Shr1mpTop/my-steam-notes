@@ -260,6 +260,10 @@
   </div>
 
   <div class="col">
+    <section class="panel grow">
+      <div class="panel-head"><span>ACHIEVE // completion ladder</span><span class="meta">5min</span></div>
+      <div class="panel-body"><div class="bars" id="achieveLadder"></div></div>
+    </section>
     <section class="panel grow-sm">
       <div class="panel-head"><span>HOT WEEK // 2w games</span><span class="meta">5min</span></div>
       <div class="panel-body"><div class="bars" id="hotWeek"></div></div>
@@ -495,6 +499,23 @@ async function loadNews() {
   } catch (e) { fail($("news"), e.message); }
 }
 
+async function loadAchieveLadder() {
+  try {
+    const d = await get("/api/achieve-compare");
+    if (!d.game) { $("achieveLadder").innerHTML = '<span class="faint">no shared games with sweeps yet</span>'; return; }
+    const ladder = d.ladder || [];
+    const total = ladder[0]?.total || 1;
+    const rows = ladder.map((r) =>
+      `<div class="bar-row${r.is_self ? " bar-row-me" : ""}" title="${esc(r.name)} — ${r.achieved}/${r.total}">
+         <span class="faint">${esc(cut(r.name, 14))}</span>
+         <div class="bar-track"><div class="bar-fill${r.is_self ? " me" : ""}" style="width:${(r.achieved / total) * 100}%"></div></div>
+         <span class="dim num">${Math.round((r.achieved / total) * 100)}%</span>
+       </div>`).join("");
+    const head = `<div class="row"><span class="amber">${esc(cut(d.game, 24))}</span><span class="faint">${total} ach</span></div><div style="height:3px"></div>`;
+    $("achieveLadder").innerHTML = head + rows;
+  } catch (e) { fail($("achieveLadder"), e.message); }
+}
+
 async function loadHotWeek() {
   try {
     const d = await get("/api/hot-week?limit=12");
@@ -620,6 +641,7 @@ every(15000, loadFriends);
 every(15000, loadPollStream);
 every(15000, loadFriendPollStream);
 every(60000, loadLeaderboard);
+every(300000, loadAchieveLadder);
 every(300000, loadHotWeek);
 every(60000, loadPresenceLeaders);
 every(600000, loadHourly);
