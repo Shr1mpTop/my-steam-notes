@@ -397,8 +397,6 @@ async function loadLevels() {
   } catch (e) { fail($("levels"), e.message); }
 }
 
-let ME_ID = "";
-
 async function loadBans() {
   try {
     const d = await get("/api/bans");
