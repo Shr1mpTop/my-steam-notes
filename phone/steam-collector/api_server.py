@@ -61,6 +61,21 @@ def q(sql, args=()):
 _COUNT_CACHE = {"ts": 0.0, "counts": None}
 COUNT_TTL = 30.0
 
+# generic TTL cache for heavy aggregate queries
+_AGG_CACHE = {}
+
+
+def cached(key, ttl, fn):
+    now = time.time()
+    hit = _AGG_CACHE.get(key)
+    if hit is not None and now - hit[0] < ttl:
+        payload = dict(hit[1])
+        payload["cache_age"] = round(now - hit[0], 1)
+        return payload
+    payload = fn()
+    _AGG_CACHE[key] = (now, payload)
+    return payload
+
 
 def table_counts():
     now = time.time()
@@ -246,6 +261,116 @@ def stats():
     return {"updated_at": now_iso(), "tables": table_counts()}
 
 
+# ---------------- matrix expansions (heavy aggregates, TTL-cached) ----------------
+
+def hot_week(limit):
+    """Games friends played most in the last 2 weeks (by friend 2-week minutes)."""
+    def build():
+        rows = q("""
+            SELECT fg.appid,
+                   COALESCE(og.name, 'App ' || fg.appid) AS name,
+                   SUM(fg.playtime_2weeks) AS week_minutes,
+                   COUNT(DISTINCT fg.steamid) AS players
+            FROM friend_games fg
+            LEFT JOIN owned_games og ON og.appid = fg.appid
+            WHERE fg.playtime_2weeks > 0
+            GROUP BY fg.appid
+            ORDER BY week_minutes DESC
+            LIMIT ?
+        """, (limit,))
+        mine = {r["appid"]: (r["playtime_forever"] or 0) for r in q("SELECT appid, playtime_forever FROM owned_games")}
+        for r in rows:
+            r["week_hours"] = round((r["week_minutes"] or 0) / 60.0, 1)
+            r["my_hours"] = round(mine.get(r["appid"], 0) / 60.0, 1)
+        return {"updated_at": now_iso(), "count": len(rows), "hot_games": rows}
+    return cached("hot-week", 300, build)
+
+
+def hourly():
+    """Friend poll volume by local hour-of-day (0-23) — when do people play."""
+    def build():
+        rows = q("""
+            SELECT strftime('%H', timestamp, '+8 hours') AS h, COUNT(*) AS minutes
+            FROM friend_status_polls
+            GROUP BY h ORDER BY h
+        """)
+        buckets = {f"{i:02d}": 0 for i in range(24)}
+        for r in rows:
+            buckets[r["h"]] = r["minutes"]
+        return {"updated_at": now_iso(), "hourly_minutes": buckets}
+    return cached("hourly", 600, build)
+
+
+def night_owls(limit):
+    """Friends ranked by play minutes between 00:00-06:00 local."""
+    def build():
+        rows = q("""
+            SELECT COALESCE(c.personaname, fr.personaname, fp.steamid) AS name,
+                   COUNT(*) / 60.0 AS night_hours
+            FROM friend_status_polls fp
+            LEFT JOIN friends_current c ON c.steamid = fp.steamid
+            LEFT JOIN steam_friends fr ON fr.steamid = fp.steamid
+            WHERE CAST(strftime('%H', fp.timestamp, '+8 hours') AS INTEGER) < 6
+            GROUP BY fp.steamid
+            ORDER BY night_hours DESC
+            LIMIT ?
+        """, (limit,))
+        for r in rows:
+            r["night_hours"] = round(r["night_hours"] or 0, 1)
+        return {"updated_at": now_iso(), "count": len(rows), "night_owls": rows}
+    return cached("night-owls", 600, build)
+
+
+def presence_daily(days):
+    """Total friend online minutes per local day (last N days)."""
+    def build():
+        rows = q("""
+            SELECT date(timestamp, '+8 hours') AS d, COUNT(*) / 60.0 AS online_hours,
+                   COUNT(DISTINCT steamid) AS friends_active
+            FROM friend_status_polls
+            WHERE timestamp >= ?
+            GROUP BY d ORDER BY d
+        """, ((datetime.now(TZ) - timedelta(days=days)).isoformat(),))
+        for r in rows:
+            r["online_hours"] = round(r["online_hours"] or 0, 1)
+        return {"updated_at": now_iso(), "days": days, "daily": rows}
+    return cached("presence-daily", 300, build)
+
+
+def records():
+    """Superlatives across the whole dataset."""
+    def build():
+        most_total = q("""
+            SELECT COALESCE(c.personaname, fr.personaname, s.steamid) AS name,
+                   s.total_minutes / 60.0 AS hours
+            FROM friend_sweeps s
+            LEFT JOIN friends_current c ON c.steamid = s.steamid
+            LEFT JOIN steam_friends fr ON fr.steamid = s.steamid
+            WHERE s.status = 'ok' ORDER BY s.total_minutes DESC LIMIT 1
+        """)
+        biggest_lib = q("""
+            SELECT COALESCE(c.personaname, fr.personaname, s.steamid) AS name, s.game_count
+            FROM friend_sweeps s
+            LEFT JOIN friends_current c ON c.steamid = s.steamid
+            LEFT JOIN steam_friends fr ON fr.steamid = s.steamid
+            WHERE s.status = 'ok' ORDER BY s.game_count DESC LIMIT 1
+        """)
+        oldest_friendship = q("""
+            SELECT COALESCE(fr.personaname, fr.steamid) AS name, fr.friend_since,
+                   CAST((strftime('%s','now') - fr.friend_since) / 86400 AS INTEGER) AS days
+            FROM steam_friends fr WHERE fr.friend_since > 0 ORDER BY fr.friend_since ASC LIMIT 1
+        """)
+        owl = night_owls(1).get("night_owls", [{}])[0]
+        hot = hot_week(1).get("hot_games", [{}])[0]
+        return {"updated_at": now_iso(),
+                "most_hours": most_total[0] if most_total else None,
+                "biggest_library": biggest_lib[0] if biggest_lib else None,
+                "oldest_friendship": oldest_friendship[0] if oldest_friendship else None,
+                "top_night_owl": owl or None,
+                "hot_game_this_week": hot or None}
+    return cached("records", 600, build)
+
+
 def raw(table, limit):
     if table not in RAW_TABLES:
         return None
@@ -297,6 +422,17 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json(200, news(limit))
             elif path == "/api/stats":
                 self.send_json(200, stats())
+            elif path == "/api/hot-week":
+                self.send_json(200, hot_week(limit))
+            elif path == "/api/hourly":
+                self.send_json(200, hourly())
+            elif path == "/api/night-owls":
+                self.send_json(200, night_owls(limit))
+            elif path == "/api/presence-daily":
+                days = min(int((qs.get("days") or ["14"])[0]), 30)
+                self.send_json(200, presence_daily(days))
+            elif path == "/api/records":
+                self.send_json(200, records())
             elif path == "/api/raw":
                 table = (qs.get("table") or [""])[0]
                 payload = raw(table, limit)

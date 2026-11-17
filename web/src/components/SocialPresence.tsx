@@ -1,6 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
-import type { CSSProperties } from "react";
-import type { MouseEvent, WheelEvent } from "react";
+import { useMemo, useState } from "react";
 import type { PresenceSegment, SocialPresenceData, SocialPresenceMember } from "../types";
 import { useLocale } from "../useLocale";
 import { Panel } from "./ui";
@@ -9,105 +7,111 @@ interface Props {
   presence?: SocialPresenceData;
 }
 
-const SG_TIME_ZONE = "Asia/Singapore";
-const HOUR_MS = 60 * 60 * 1000;
-const DAY_MS = 24 * HOUR_MS;
-const DEFAULT_VIEW_MS = DAY_MS;
-const MIN_VIEW_MS = HOUR_MS;
-const TRACK_OFFSET_PX = 174;
-const TRACKED_FRIEND_NAMES = [
-  "X1ao",
-  "澶х帇",
-  "閲庣敓鎴愬勾闆屾€т笢鍖楄檸",
-  "chunshuey",
-  "Key",
-];
+const SG_TZ = "Asia/Singapore";
+const HOUR = 3600_000;
+const PRESETS = [
+  { key: "24h", zh: "24 小时", en: "24h", ms: 24 * HOUR },
+  { key: "72h", zh: "72 小时", en: "72h", ms: 72 * HOUR },
+  { key: "7d", zh: "7 天", en: "7d", ms: 7 * 24 * HOUR },
+] as const;
 
-function normalizeName(value: string) {
-  return value.trim().toLocaleLowerCase();
+type PresetKey = (typeof PRESETS)[number]["key"];
+
+function hashHue(value: string) {
+  let h = 0;
+  for (let i = 0; i < value.length; i += 1) h = (h * 31 + value.charCodeAt(i)) >>> 0;
+  return h % 360;
 }
 
-function hashString(value: string) {
-  let hash = 0;
-  for (let i = 0; i < value.length; i += 1) {
-    hash = (hash * 31 + value.charCodeAt(i)) >>> 0;
-  }
-  return hash;
+function segColor(seg: PresenceSegment) {
+  const key = seg.gameid || seg.game.trim().toLowerCase() || "playing";
+  return `hsl(${hashHue(key)} 70% 55%)`;
 }
 
-function gameKey(segment: PresenceSegment) {
-  return segment.gameid || segment.game.trim().toLowerCase() || "playing";
+function fmtStamp(v: string) {
+  const d = new Date(v);
+  return isNaN(d.getTime()) ? "" : d.toLocaleString([], { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false, timeZone: SG_TZ });
 }
 
-function colorForSegment(segment: PresenceSegment) {
-  const hue = hashString(gameKey(segment)) % 360;
-  return `hsl(${hue} 78% 58%)`;
+function minutesIn(seg: PresenceSegment, viewStart: number, viewEnd: number) {
+  const s = new Date(seg.start).getTime();
+  const e = new Date(seg.end).getTime();
+  if (!Number.isFinite(s) || !Number.isFinite(e)) return 0;
+  return Math.max(0, Math.min(e, viewEnd) - Math.max(s, viewStart)) / 60000;
 }
 
-function statusText(member: SocialPresenceMember, t: (key: string) => string) {
-  if (member.current.playing) return `${t("playing")} ${member.current.game || `App ${member.current.gameid}`}`;
-  if (member.current.online) return t("onlineNotPlaying");
-  return t("statusOffline");
+function fmtDur(minutes: number) {
+  if (minutes < 60) return `${Math.round(minutes)}m`;
+  const h = Math.floor(minutes / 60);
+  const m = Math.round(minutes % 60);
+  return m ? `${h}h${m}m` : `${h}h`;
 }
 
-function formatTime(value: string) {
-  if (!value) return "";
-  return new Date(value).toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-    timeZone: SG_TIME_ZONE,
-  });
+function cutName(s: string, max: number) {
+  return s.length > max ? s.slice(0, max - 1) + "…" : s;
 }
 
-function formatRangeTime(value: number) {
-  return new Date(value).toLocaleString([], {
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-    timeZone: SG_TIME_ZONE,
-  });
-}
-
-function durationText(startValue: string, endValue: string) {
-  const start = new Date(startValue).getTime();
-  const end = new Date(endValue).getTime();
-  const minutes = Math.max(1, Math.round((end - start) / 60_000));
-  if (minutes < 60) return `${minutes}m`;
-  const hours = Math.floor(minutes / 60);
-  const rest = minutes % 60;
-  return rest ? `${hours}h ${rest}m` : `${hours}h`;
-}
-
-function segmentLabel(segment: PresenceSegment, t: (key: string) => string) {
-  return segment.game || (segment.gameid ? `App ${segment.gameid}` : t("playing"));
-}
-
-function percentForTimestamp(value: number, start: number, end: number) {
-  if (!Number.isFinite(value) || end <= start) return 0;
-  return Math.max(0, Math.min(100, ((value - start) / (end - start)) * 100));
+interface Row {
+  member: SocialPresenceMember;
+  segments: PresenceSegment[];
+  minutes: number;
 }
 
 export function SocialPresence({ presence }: Props) {
-  const { t } = useLocale();
-  const trackedNameOrder = useMemo(() => {
-    return new Map(TRACKED_FRIEND_NAMES.map((name, index) => [normalizeName(name), index]));
-  }, []);
-  const members = useMemo(() => {
-    return (presence?.members ?? [])
-      .filter((member) => member.is_self || trackedNameOrder.has(normalizeName(member.name)))
-      .sort((a, b) => {
-        if (a.is_self) return -1;
-        if (b.is_self) return 1;
-        const aIndex = trackedNameOrder.get(normalizeName(a.name)) ?? TRACKED_FRIEND_NAMES.length;
-        const bIndex = trackedNameOrder.get(normalizeName(b.name)) ?? TRACKED_FRIEND_NAMES.length;
-        return aIndex - bIndex;
-      });
-  }, [presence?.members, trackedNameOrder]);
+  const { t, locale } = useLocale();
+  const [presetKey, setPresetKey] = useState<PresetKey>("24h");
+  const [showAll, setShowAll] = useState(true);
 
-  const empty = !presence || !members.length;
+  const view = useMemo(() => {
+    if (!presence) return null;
+    const end = Math.max(new Date(presence.window_end).getTime(), Date.now());
+    const ws = new Date(presence.window_start).getTime();
+    const preset = PRESETS.find((p) => p.key === presetKey) ?? PRESETS[0];
+    const fullStart = Number.isFinite(ws) ? ws : end - 7 * 24 * HOUR;
+    const start = Math.max(fullStart, end - preset.ms);
+    return { start, end, preset };
+  }, [presence, presetKey]);
+
+  const rows = useMemo<Row[]>(() => {
+    if (!presence || !view) return [];
+    const enriched = presence.members.map((member) => {
+      const segments = member.segments.filter((s) => {
+        const s0 = new Date(s.start).getTime();
+        const s1 = new Date(s.end).getTime();
+        return Number.isFinite(s0) && Number.isFinite(s1) && s1 > view.start && s0 < view.end;
+      });
+      const minutes = segments.reduce((acc, s) => acc + minutesIn(s, view.start, view.end), 0);
+      return { member, segments, minutes };
+    });
+    const keep = showAll
+      ? enriched
+      : enriched.filter((x) => x.minutes > 0 || x.member.current.playing);
+    const playing = keep.filter((x) => x.member.current.playing);
+    const rest = keep
+      .filter((x) => !x.member.current.playing)
+      .sort((a, b) => b.minutes - a.minutes);
+    return [...playing, ...rest];
+  }, [presence, view, showAll]);
+
+  const ticks = useMemo(() => {
+    if (!view) return [];
+    const span = view.end - view.start;
+    const step = span <= 24 * HOUR ? 2 * HOUR : span <= 72 * HOUR ? 6 * HOUR : 24 * HOUR;
+    const out: { pct: number; label: string }[] = [];
+    const first = Math.ceil(view.start / step) * step;
+    for (let ts = first; ts <= view.end; ts += step) {
+      const d = new Date(ts);
+      out.push({
+        pct: ((ts - view.start) / span) * 100,
+        label: d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: SG_TZ }),
+      });
+    }
+    return out;
+  }, [view]);
+
+  const nowPct = view ? ((Date.now() - view.start) / (view.end - view.start)) * 100 : 0;
+  const showNow = Boolean(view && Date.now() >= view.start && Date.now() <= view.end);
+  const totalMinutes = rows.reduce((acc, r) => acc + r.minutes, 0);
 
   return (
     <Panel
@@ -115,136 +119,94 @@ export function SocialPresence({ presence }: Props) {
       title={t("socialPresence")}
       sub={t("socialPresenceSubtitle")}
       delay={0.05}
+      actions={
+        <div className="presence-controls">
+          {PRESETS.map((p) => (
+            <button
+              key={p.key}
+              type="button"
+              className={`presence-pill${presetKey === p.key ? " is-active" : ""}`}
+              onClick={() => setPresetKey(p.key)}
+              aria-pressed={presetKey === p.key}
+            >
+              {locale === "zh" ? p.zh : p.en}
+            </button>
+          ))}
+          <button
+            type="button"
+            className={`presence-pill${showAll ? " is-active" : ""}`}
+            onClick={() => setShowAll((v) => !v)}
+            aria-pressed={showAll}
+          >
+            {showAll ? (locale === "zh" ? "全部好友" : "All friends") : locale === "zh" ? "近期活跃" : "Active only"}
+          </button>
+        </div>
+      }
     >
-      {empty ? (
-        <span className="presence-empty">{t("noFriendMatch")}</span>
+      {!view || rows.length === 0 ? (
+        <span className="presence-empty">{t("noDataInRange")}</span>
       ) : (
-        <PresenceTimeline presence={presence!} members={members} t={t} />
+        <div className="presence-timeline">
+          <div className="presence-axis">
+            <span className="presence-axis-spacer" />
+            <div className="presence-axis-track">
+              {ticks.map((tick) => (
+                <span key={tick.label} className="presence-axis-tick" style={{ left: `${tick.pct}%` }}>
+                  {tick.label}
+                </span>
+              ))}
+            </div>
+            <span className="presence-axis-total dim">
+              {locale === "zh" ? "合计" : "total"} {fmtDur(totalMinutes)}
+            </span>
+          </div>
+
+          {rows.map(({ member, segments, minutes }) => (
+            <div key={member.id} className="presence-row">
+              <div className="presence-person" title={member.profileurl || undefined}>
+                {member.avatarfull && <img src={member.avatarfull} alt="" />}
+                <div>
+                  <strong>{member.is_self ? t("me") : member.name}</strong>
+                  <span>
+                    {member.current.playing
+                      ? `▶ ${cutName(member.current.game || `App ${member.current.gameid}`, 14)}`
+                      : member.current.online
+                        ? t("onlineNotPlaying")
+                        : `${fmtDur(minutes)}`}
+                  </span>
+                </div>
+              </div>
+              <div className="presence-track">
+                {ticks.map((tick) => (
+                  <span key={`g${tick.label}`} className="presence-gridline" style={{ left: `${tick.pct}%` }} />
+                ))}
+                {showNow && nowPct >= 0 && nowPct <= 100 && (
+                  <span className="presence-now" style={{ left: `${nowPct}%` }} title={t("now")} />
+                )}
+                {segments.map((seg, index) => {
+                  const s0 = new Date(seg.start).getTime();
+                  const s1 = new Date(seg.end).getTime();
+                  const left = ((Math.max(s0, view.start) - view.start) / (view.end - view.start)) * 100;
+                  const right = ((Math.min(s1, view.end) - view.start) / (view.end - view.start)) * 100;
+                  const width = Math.max(0.35, right - left);
+                  const mins = minutesIn(seg, view.start, view.end);
+                  return (
+                    <span
+                      key={`${member.id}-${seg.start}-${index}`}
+                      className="presence-seg"
+                      style={{ left: `${left}%`, width: `${width}%`, background: segColor(seg) }}
+                      title={`${seg.game || `App ${seg.gameid}`} · ${fmtStamp(seg.start)}–${fmtStamp(seg.end)} · ${fmtDur(mins)}`}
+                    >
+                      {mins >= 45 && width > 9 ? <em>{cutName(seg.game, 10)}</em> : null}
+                    </span>
+                  );
+                })}
+              </div>
+              <span className="presence-total">{fmtDur(minutes)}</span>
+            </div>
+          ))}
+        </div>
       )}
     </Panel>
-  );
-}
-
-interface TimelineProps {
-  presence: SocialPresenceData;
-  members: SocialPresenceMember[];
-  t: (key: string) => string;
-}
-
-function PresenceTimeline({ presence, members, t }: TimelineProps) {
-  const [visibleRange, setVisibleRange] = useState<{ start: number; end: number } | null>(null);
-  const [hoverTime, setHoverTime] = useState<number | null>(null);
-  const start = new Date(presence.window_start).getTime();
-  const end = Math.max(new Date(presence.window_end).getTime(), Date.now());
-  const fullStart = Number.isFinite(start) ? start : end - 7 * DAY_MS;
-  const fullEnd = Number.isFinite(end) ? end : Date.now();
-  const defaultStart = Math.max(fullStart, fullEnd - DEFAULT_VIEW_MS);
-  const rawViewStart = visibleRange?.start ?? defaultStart;
-  const rawViewEnd = visibleRange?.end ?? fullEnd;
-  const viewDuration = Math.min(fullEnd - fullStart, Math.max(MIN_VIEW_MS, rawViewEnd - rawViewStart));
-  const viewStart = Math.max(fullStart, Math.min(rawViewStart, fullEnd - viewDuration));
-  const viewEnd = viewStart + viewDuration;
-  const now = Date.now();
-  const cursorPct = percentForTimestamp(now, viewStart, viewEnd);
-  const cursorLeft = `calc(${cursorPct}% + ${TRACK_OFFSET_PX - cursorPct * (TRACK_OFFSET_PX / 100)}px)`;
-  const showNowLine = now >= viewStart && now <= viewEnd;
-  const hoverPct = hoverTime === null ? 0 : percentForTimestamp(hoverTime, viewStart, viewEnd);
-  const hoverLeft = `calc(${hoverPct}% + ${TRACK_OFFSET_PX - hoverPct * (TRACK_OFFSET_PX / 100)}px)`;
-  const hoverClassName = `presence-hover-line${hoverPct < 12 ? " presence-hover-line-start" : ""}${hoverPct > 88 ? " presence-hover-line-end" : ""}`;
-
-  const timelinePointerPct = useCallback((event: MouseEvent<HTMLDivElement> | WheelEvent<HTMLDivElement>) => {
-    const track = event.currentTarget.querySelector(".presence-track");
-    const rect = track?.getBoundingClientRect() ?? event.currentTarget.getBoundingClientRect();
-    return rect.width > 0 ? Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)) : 1;
-  }, []);
-
-  const handleTimelinePointerMove = useCallback((event: MouseEvent<HTMLDivElement>) => {
-    setHoverTime(viewStart + (viewEnd - viewStart) * timelinePointerPct(event));
-  }, [timelinePointerPct, viewEnd, viewStart]);
-
-  const handleTimelineWheel = useCallback((event: WheelEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    const pointerPct = timelinePointerPct(event);
-    const currentDuration = viewEnd - viewStart;
-    const zoomFactor = event.deltaY > 0 ? 1.18 : 0.84;
-    const nextDuration = Math.min(fullEnd - fullStart, Math.max(MIN_VIEW_MS, currentDuration * zoomFactor));
-    const anchor = viewStart + currentDuration * pointerPct;
-    let nextStart = anchor - nextDuration * pointerPct;
-    let nextEnd = nextStart + nextDuration;
-
-    if (nextStart < fullStart) {
-      nextStart = fullStart;
-      nextEnd = nextStart + nextDuration;
-    }
-    if (nextEnd > fullEnd) {
-      nextEnd = fullEnd;
-      nextStart = nextEnd - nextDuration;
-    }
-
-    setVisibleRange({ start: nextStart, end: nextEnd });
-    setHoverTime(anchor);
-  }, [fullEnd, fullStart, timelinePointerPct, viewEnd, viewStart]);
-
-  return (
-    <div
-      className="presence-timeline"
-      onMouseLeave={() => setHoverTime(null)}
-      onMouseMove={handleTimelinePointerMove}
-      onWheel={handleTimelineWheel}
-      style={{
-        "--cursor-left": cursorLeft,
-        "--hover-left": hoverLeft,
-      } as CSSProperties}
-    >
-      <div className="presence-range">
-        <span>{formatRangeTime(viewStart)}</span>
-        <span>{formatRangeTime(viewEnd)}</span>
-      </div>
-      {showNowLine && <div className="presence-now-line" />}
-      {hoverTime !== null && (
-        <div className={hoverClassName}>
-          <span>{formatRangeTime(hoverTime)}</span>
-        </div>
-      )}
-      {members.map((member) => (
-        <div key={member.id} className="presence-row">
-          <div className="presence-person">
-            {member.avatarfull && <img src={member.avatarfull} alt="" />}
-            <div>
-              <strong>{member.is_self ? t("me") : member.name}</strong>
-              <span>{statusText(member, t)}</span>
-            </div>
-          </div>
-          <div className="presence-track" aria-label={statusText(member, t)}>
-            {member.segments.map((segment, index) => {
-              const segmentStart = new Date(segment.start).getTime();
-              const segmentEnd = new Date(segment.end).getTime();
-              if (!Number.isFinite(segmentStart) || !Number.isFinite(segmentEnd)) return null;
-              if (segmentEnd <= viewStart || segmentStart >= viewEnd) return null;
-              const left = percentForTimestamp(Math.max(segmentStart, viewStart), viewStart, viewEnd);
-              const right = percentForTimestamp(Math.min(segmentEnd, viewEnd), viewStart, viewEnd);
-              const width = Math.max(0.7, right - left);
-              return (
-                <span
-                  key={`${member.id}-${segment.start}-${index}`}
-                  className={`presence-segment presence-segment-${segment.status}`}
-                  style={{
-                    left: `${left}%`,
-                    width: `${width}%`,
-                    background: colorForSegment(segment),
-                  }}
-                >
-                  <span className="presence-segment-tooltip">
-                    <strong>{segmentLabel(segment, t)}</strong>
-                    <span>{formatTime(segment.start)}-{formatTime(segment.end)} UTC+8</span>
-                    <span>{durationText(segment.start, segment.end)}</span>
-                  </span>
-                </span>
-              );
-            })}
-          </div>
-        </div>
-      ))}
-    </div>
   );
 }

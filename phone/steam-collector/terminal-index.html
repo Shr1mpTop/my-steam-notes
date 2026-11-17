@@ -126,6 +126,18 @@
   .kv span:nth-child(odd) { color: var(--fg-faint); }
   .err { color: var(--red); font-size: 11px; }
   .row { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; padding: 1px 0; }
+
+  .hour-heat { display: grid; grid-template-columns: repeat(24, 1fr); gap: 2px; align-items: end; height: 90px; }
+  .hour-heat .hcol { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; min-width: 0; }
+  .hour-heat .hbar { width: 100%; background: var(--fg-dim); box-shadow: 0 0 5px rgba(0,255,102,.35); min-height: 1px; }
+  .hour-heat .hlab { font-size: 8px; color: var(--fg-faint); margin-top: 2px; }
+  .hour-heat .hval { font-size: 8px; color: var(--fg-dim); }
+
+  .day-heat { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 4px; }
+  .day-cell { border: 1px solid var(--line); padding: 4px 5px; min-width: 0; }
+  .day-cell .d { font-size: 9px; color: var(--fg-faint); }
+  .day-cell .v { font-size: 13px; color: var(--fg); font-variant-numeric: tabular-nums; }
+  .day-cell .p { font-size: 9px; color: var(--fg-dim); }
 </style>
 </head>
 <body>
@@ -165,6 +177,31 @@
   <section class="panel">
     <div class="panel-head"><span>LEADERBOARD // total</span><span class="meta">60s</span></div>
     <div class="panel-body tall"><table><thead><tr><th>#</th><th>who</th><th class="num">total</th><th class="num">2w</th></tr></thead><tbody id="leaderboard"></tbody></table></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>HOT WEEK // 2-week games</span><span class="meta">5min</span></div>
+    <div class="panel-body tall"><div class="bars" id="hotWeek"></div></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>HOURLY HEAT // when friends play</span><span class="meta">10min</span></div>
+    <div class="panel-body"><div class="hour-heat" id="hourHeat"></div></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>NIGHT OWLS // 00-06 gamer</span><span class="meta">10min</span></div>
+    <div class="panel-body"><table><thead><tr><th>#</th><th>who</th><th class="num">night hrs</th></tr></thead><tbody id="nightOwls"></tbody></table></div>
+  </section>
+
+  <section class="panel wide">
+    <div class="panel-head"><span>PRESENCE DAILY // friend online hours per day</span><span class="meta">5min</span></div>
+    <div class="panel-body"><div class="day-heat" id="presenceDaily"></div></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><span>RECORDS // superlatives</span><span class="meta">10min</span></div>
+    <div class="panel-body"><div class="kv" id="records"></div></div>
   </section>
 
   <section class="panel">
@@ -276,6 +313,59 @@ async function loadLeaderboard() {
   } catch (e) { fail($("leaderboard"), e.message); }
 }
 
+async function loadHotWeek() {
+  try {
+    const d = await get("/api/hot-week?limit=12");
+    const max = Math.max(...(d.hot_games || []).map((g) => g.week_hours || 0), 1);
+    $("hotWeek").innerHTML = (d.hot_games || []).map((g) =>
+      `<div class="bar-row" title="${esc(g.name)} — ${g.week_hours}h this week, ${g.players} players">
+         <span class="faint">${esc(cut(g.name, 20))}</span>
+         <div class="bar-track"><div class="bar-fill" style="width:${((g.week_hours || 0) / max) * 100}%"></div></div>
+         <span class="dim num">${g.week_hours}h</span>
+       </div>`).join("") || '<span class="faint">no 2-week play recorded yet</span>';
+  } catch (e) { fail($("hotWeek"), e.message); }
+}
+
+async function loadHourly() {
+  try {
+    const d = await get("/api/hourly");
+    const b = d.hourly_minutes || {};
+    const max = Math.max(...Object.values(b), 1);
+    $("hourHeat").innerHTML = Object.keys(b).map((h) =>
+      `<div class="hcol"><span class="hval">${b[h] >= 3600 ? Math.round(b[h] / 3600) + "k" : Math.round(b[h] / 60) + "m"}</span><div class="hbar" style="height:${Math.max(2, (b[h] / max) * 78)}px"></div><span class="hlab">${h}</span></div>`).join("");
+  } catch (e) { fail($("hourHeat"), e.message); }
+}
+
+async function loadNightOwls() {
+  try {
+    const d = await get("/api/night-owls?limit=10");
+    const rows = (d.night_owls || []).map((r, i) =>
+      `<tr><td class="rank">${i + 1}</td><td>${esc(cut(r.name, 16))}</td><td class="num">${r.night_hours}h</td></tr>`).join("");
+    $("nightOwls").innerHTML = rows || '<tr><td colspan="3" class="faint">nobody plays at night (yet)</td></tr>';
+  } catch (e) { fail($("nightOwls"), e.message); }
+}
+
+async function loadPresenceDaily() {
+  try {
+    const d = await get("/api/presence-daily?days=14");
+    $("presenceDaily").innerHTML = (d.daily || []).slice(-14).map((r) =>
+      `<div class="day-cell"><div class="d">${esc(cut(r.d || "", 10))}</div><div class="v">${r.online_hours}h</div><div class="p">${r.friends_active} friends</div></div>`).join("") || '<span class="faint">no daily data yet</span>';
+  } catch (e) { fail($("presenceDaily"), e.message); }
+}
+
+async function loadRecords() {
+  try {
+    const d = await get("/api/records");
+    const kv = [];
+    if (d.most_hours) kv.push(["most hours", `${esc(cut(d.most_hours.name, 12))} ${d.most_hours.hours.toFixed(0)}h`]);
+    if (d.biggest_library) kv.push(["biggest library", `${esc(cut(d.biggest_library.name, 12))} ${d.biggest_library.game_count} games`]);
+    if (d.oldest_friendship) kv.push(["oldest friendship", `${esc(cut(d.oldest_friendship.name, 12))} ${d.oldest_friendship.days}d`]);
+    if (d.top_night_owl && d.top_night_owl.name) kv.push(["top night owl", `${esc(cut(d.top_night_owl.name, 12))} ${d.top_night_owl.night_hours}h`]);
+    if (d.hot_game_this_week && d.hot_game_this_week.name) kv.push(["hot this week", `${esc(cut(d.hot_game_this_week.name, 16))} ${d.hot_game_this_week.week_hours}h`]);
+    $("records").innerHTML = kv.map(([k, v]) => `<span>${k}</span><span class="dim">${v}</span>`).join("") || '<span class="faint">no records yet</span>';
+  } catch (e) { fail($("records"), e.message); }
+}
+
 async function loadShared() {
   try {
     const d = await get("/api/shared?limit=24");
@@ -346,6 +436,11 @@ every(15000, loadFriends);
 every(15000, loadPollStream);
 every(15000, loadFriendPollStream);
 every(60000, loadLeaderboard);
+every(300000, loadHotWeek);
+every(600000, loadHourly);
+every(600000, loadNightOwls);
+every(300000, loadPresenceDaily);
+every(600000, loadRecords);
 every(60000, loadShared);
 every(60000, loadSweeps);
 every(60000, loadMyGames);
