@@ -147,9 +147,11 @@ def friends():
 def friend_detail(steamid):
     meta = q("SELECT * FROM friends_current WHERE steamid = ?", (steamid,))
     sweep = q("SELECT * FROM friend_sweeps WHERE steamid = ?", (steamid,))
+    level = q("SELECT player_level, player_xp, badges_count FROM friend_levels WHERE steamid = ?", (steamid,))
     games = q("""
         SELECT fg.appid, COALESCE(og.name, 'App ' || fg.appid) AS name,
-               fg.playtime_forever, fg.playtime_2weeks, fg.rtime_last_played
+               fg.playtime_forever, fg.playtime_2weeks, fg.rtime_last_played,
+               og.playtime_forever AS my_minutes
         FROM friend_games fg
         LEFT JOIN owned_games og ON og.appid = fg.appid
         WHERE fg.steamid = ?
@@ -157,9 +159,14 @@ def friend_detail(steamid):
     """, (steamid,))
     for g in games:
         g["hours"] = round((g["playtime_forever"] or 0) / 60.0, 1)
+        g["my_hours"] = round((g["my_minutes"] or 0) / 60.0, 1)
+        g["shared"] = g["my_minutes"] is not None
+    shared_count = sum(1 for g in games if g["shared"])
     return {"updated_at": now_iso(), "steamid": steamid,
             "live": meta[0] if meta else None,
             "sweep": sweep[0] if sweep else None,
+            "level": level[0] if level else None,
+            "shared_count": shared_count,
             "games": games}
 
 
@@ -322,19 +329,44 @@ def night_owls(limit):
 
 
 def presence_daily(days):
-    """Total friend online minutes per local day (last N days)."""
+    """Per-day online minutes from the compact aggregation tables (forever history)."""
     def build():
-        rows = q("""
-            SELECT date(timestamp, '+8 hours') AS d, COUNT(*) / 60.0 AS online_hours,
-                   COUNT(DISTINCT steamid) AS friends_active
-            FROM friend_status_polls
-            WHERE timestamp >= ?
-            GROUP BY d ORDER BY d
-        """, ((datetime.now(TZ) - timedelta(days=days)).isoformat(),))
-        for r in rows:
-            r["online_hours"] = round(r["online_hours"] or 0, 1)
-        return {"updated_at": now_iso(), "days": days, "daily": rows}
+        since = (datetime.now(TZ) - timedelta(days=days)).strftime("%Y-%m-%d")
+        daily = q("""
+            SELECT d.date AS d, ROUND(SUM(d.minutes)/60.0, 1) AS online_hours,
+                   COUNT(DISTINCT d.steamid) AS friends_active
+            FROM friend_presence_daily d
+            WHERE d.date >= ?
+            GROUP BY d.date ORDER BY d.date
+        """, (since,))
+        me_daily = q("""
+            SELECT date AS d, ROUND(minutes/60.0, 1) AS my_online_hours,
+                   ROUND(playing_minutes/60.0, 1) AS my_playing_hours
+            FROM my_presence_daily WHERE date >= ? ORDER BY date
+        """, (since,))
+        return {"updated_at": now_iso(), "days": days,
+                "daily": daily, "me_daily": me_daily}
     return cached("presence-daily", 300, build)
+
+
+def presence_today():
+    """Today's online-minutes leaderboard (friends + me)."""
+    def build():
+        today = datetime.now(TZ).strftime("%Y-%m-%d")
+        rows = q("""
+            SELECT COALESCE(c.personaname, p.steamid) AS name,
+                   p.minutes, c.gameextrainfo AS game, c.avatarfull AS avatar
+            FROM friend_presence_daily p
+            LEFT JOIN friends_current c ON c.steamid = p.steamid
+            WHERE p.date = ?
+            ORDER BY p.minutes DESC
+        """, (today,))
+        for r in rows:
+            r["hours"] = round(r["minutes"] / 60.0, 2)
+        me = q("SELECT minutes FROM my_presence_daily WHERE date = ?", (today,))
+        return {"updated_at": now_iso(), "date": today,
+                "count": len(rows), "today": rows, "me_minutes": me[0]["minutes"] if me else 0}
+    return cached("presence-today", 60, build)
 
 
 def records():
@@ -500,6 +532,8 @@ class Handler(BaseHTTPRequestHandler):
             elif path == "/api/presence-daily":
                 days = min(int((qs.get("days") or ["14"])[0]), 30)
                 self.send_json(200, presence_daily(days))
+            elif path == "/api/presence-today":
+                self.send_json(200, presence_today())
             elif path == "/api/records":
                 self.send_json(200, records())
             elif path == "/api/bans":

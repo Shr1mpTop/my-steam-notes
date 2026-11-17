@@ -134,6 +134,17 @@ SOCIAL_SCHEMA = [
         PRIMARY KEY (appid, ts)
     )""",
     """CREATE INDEX IF NOT EXISTS idx_game_concurrent_appid ON game_concurrent (appid, ts DESC)""",
+    """CREATE TABLE IF NOT EXISTS friend_presence_daily (
+        date TEXT NOT NULL,
+        steamid TEXT NOT NULL,
+        minutes INTEGER DEFAULT 0,
+        PRIMARY KEY (date, steamid)
+    )""",
+    """CREATE TABLE IF NOT EXISTS my_presence_daily (
+        date TEXT PRIMARY KEY,
+        minutes INTEGER DEFAULT 0,
+        playing_minutes INTEGER DEFAULT 0
+    )""",
 ]
 
 SQL_OWNED_UPSERT = """INSERT INTO owned_games (appid, name, playtime_forever, playtime_windows_forever,
@@ -211,6 +222,16 @@ SQL_FRIEND_LEVEL_UPSERT = """INSERT INTO friend_levels (steamid, player_level, p
 
 SQL_CONCURRENT_INSERT = """INSERT OR REPLACE INTO game_concurrent (appid, ts, player_count)
    VALUES (?, ?, ?)"""
+
+SQL_FRIEND_PRESENCE_TICK = """INSERT INTO friend_presence_daily (date, steamid, minutes)
+   VALUES (?, ?, 1)
+   ON CONFLICT(date, steamid) DO UPDATE SET minutes = minutes + 1"""
+
+SQL_MY_PRESENCE_TICK = """INSERT INTO my_presence_daily (date, minutes, playing_minutes)
+   VALUES (?, 1, ?)
+   ON CONFLICT(date) DO UPDATE SET
+     minutes = minutes + 1,
+     playing_minutes = playing_minutes + ?"""
 
 SQL_FRIEND_GAME_REPLACE = """INSERT OR REPLACE INTO friend_games (steamid, appid, playtime_forever, playtime_2weeks, rtime_last_played, updated_at)
    VALUES (?, ?, ?, ?, ?, ?)"""
@@ -442,6 +463,10 @@ def poll_friends_and_self():
          p.get("avatarfull", ""), p.get("profileurl", "")]
         for p in others
     ])
+    # daily presence aggregation: +1 minute per friend seen this tick (compact
+    # forever-history; the raw 60s polls only serve the 7-day timeline view)
+    today = now[:10]
+    execute_many(SQL_FRIEND_PRESENCE_TICK, [[today, p.get("steamid", "")] for p in others])
     playing = [p for p in others if p.get("gameid") or p.get("gameextrainfo")]
     log(f"[friends] polled {len(others)} friends | playing now: {len(playing)}")
     for p in playing[:5]:
@@ -752,6 +777,12 @@ def tick():
 
     sweep_tick()
 
+    # my presence daily aggregation (covers both poll paths via self_p)
+    if self_p:
+        today = datetime.now(TZ).strftime("%Y-%m-%d")
+        playing_flag = 1 if (self_p.get("gameextrainfo") or self_p.get("gameid")) else 0
+        execute(SQL_MY_PRESENCE_TICK, [today, playing_flag, playing_flag])
+
     maybe_prune()
 
     # state change -> poke the dashboard builder for an immediate rebuild
@@ -807,7 +838,7 @@ def main():
     FRIENDLIST_INTERVAL = int(os.getenv("FRIENDLIST_INTERVAL", "1800"))
     PLAYTIME_INTERVAL = int(os.getenv("PLAYTIME_INTERVAL", "300"))
     RETENTION_SELF_DAYS = int(os.getenv("RETENTION_SELF_DAYS", "45"))
-    RETENTION_FRIEND_DAYS = int(os.getenv("RETENTION_FRIEND_DAYS", "30"))
+    RETENTION_FRIEND_DAYS = int(os.getenv("RETENTION_FRIEND_DAYS", "7"))
     STATUS_FILE = os.getenv("STATUS_FILE", "/root/steam-notes/data/collector-status.json")
     TRIGGER_FILE = os.getenv("TRIGGER_FILE", "/root/steam-notes/data/trigger-rebuild")
 

@@ -261,6 +261,10 @@
       <div class="panel-body"><div class="hour-heat" id="hourHeat"></div></div>
     </section>
     <section class="panel grow-sm">
+      <div class="panel-head"><span>PRESENCE LEADERS // today</span><span class="meta">60s</span></div>
+      <div class="panel-body"><table><thead><tr><th>#</th><th>who</th><th class="num">online</th><th>game</th></tr></thead><tbody id="presenceLeaders"></tbody></table></div>
+    </section>
+    <section class="panel grow-sm">
       <div class="panel-head"><span>NIGHT OWLS // 00-06</span><span class="meta">10min</span></div>
       <div class="panel-body"><table><thead><tr><th>#</th><th>who</th><th class="num">hrs</th></tr></thead><tbody id="nightOwls"></tbody></table></div>
     </section>
@@ -386,8 +390,8 @@ async function loadFriendDetail(steamid, name) {
         <span>level</span><span>${live.loccountrycode ? esc(live.loccountrycode) + " · " : ""}${games.length} tracked</span>
       </div>
       <div class="detail-games">
-        <table><thead><tr><th>game</th><th class="num">hrs</th><th class="num">2w</th></tr></thead><tbody>
-        ${games.slice(0, 30).map((g) => `<tr><td>${esc(cut(g.name, 20))}</td><td class="num">${g.hours}</td><td class="num dim">${g.playtime_2weeks ? Math.round(g.playtime_2weeks / 60) + "h" : "—"}</td></tr>`).join("")}
+        <table><thead><tr><th>game</th><th class="num">them</th><th class="num">me</th></tr></thead><tbody>
+        ${games.slice(0, 30).map((g) => `<tr><td>${esc(cut(g.name, 20))}</td><td class="num">${g.hours}</td><td class="num ${g.shared ? "amber" : "faint"}">${g.shared ? g.my_hours : "—"}</td></tr>`).join("")}
         </tbody></table>
       </div>`;
   } catch (e) {
@@ -483,6 +487,17 @@ async function loadHotWeek() {
          <span class="dim num">${g.week_hours}h</span>
        </div>`).join("") || '<span class="faint">no 2-week play recorded yet</span>';
   } catch (e) { fail($("hotWeek"), e.message); }
+}
+
+async function loadPresenceLeaders() {
+  try {
+    const d = await get("/api/presence-today");
+    const rows = (d.today || []).slice(0, 12).map((r, i) =>
+      `<tr class="${r.name === "ME" ? "self" : ""}"><td class="rank">${i + 1}</td><td>${esc(cut(r.name, 14))}</td><td class="num">${fmtH(r.hours)}</td><td class="dim">${esc(cut(r.game || "—", 12))}</td></tr>`).join("");
+    const meMin = d.me_minutes || 0;
+    const meRow = `<tr class="self"><td class="rank">—</td><td><b>ME</b></td><td class="num">${meMin}m</td><td class="dim">today</td></tr>`;
+    $("presenceLeaders").innerHTML = meRow + rows;
+  } catch (e) { fail($("presenceLeaders"), e.message); }
 }
 
 async function loadHourly() {
@@ -581,6 +596,7 @@ every(15000, loadPollStream);
 every(15000, loadFriendPollStream);
 every(60000, loadLeaderboard);
 every(300000, loadHotWeek);
+every(60000, loadPresenceLeaders);
 every(600000, loadHourly);
 every(600000, loadNightOwls);
 every(300000, loadPresenceDaily);
