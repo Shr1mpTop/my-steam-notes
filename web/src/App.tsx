@@ -246,6 +246,15 @@ function Dashboard() {
 
             <footer className="footer">
               <span>Steam Notebook — {t("updated")} {new Date(data.updated_at).toLocaleString(localeTag)}</span>
+              <a
+                className="matrix-link"
+                href="https://steam.zhili-he.top/"
+                target="_blank"
+                rel="noreferrer"
+                title="STEAM.MATRIX live terminal"
+              >
+                ▶ MATRIX TERMINAL
+              </a>
               <span>{t("updated").toUpperCase()} · {data.updated_at.slice(0, 10)}</span>
             </footer>
           </section>

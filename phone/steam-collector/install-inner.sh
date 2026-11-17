@@ -35,6 +35,12 @@ chmod 600 "$APP/.env" 2>/dev/null || true
 cp "$APP/phone/steam-collector/cron-steam-notes" /etc/cron.d/steam-notes
 chmod 644 /etc/cron.d/steam-notes
 
+# 3.55) nginx: matrix app server conf (8082) — version-controlled since review round
+if [ -f "$APP/phone/steam-collector/nginx-steam-app.conf" ]; then
+  cp "$APP/phone/steam-collector/nginx-steam-app.conf" /etc/nginx/sites-enabled/steam-app
+  nginx -t && nginx -s reload || timeout 20 supervisorctl restart nginx
+fi
+
 # 4) venv (PEP 668 blocks system pip; venv = Buffotte precedent)
 if [ ! -x "$APP/venv/bin/python3" ]; then
   python3 -m venv "$APP/venv"
