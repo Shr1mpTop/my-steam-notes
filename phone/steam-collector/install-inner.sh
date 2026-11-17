@@ -1,12 +1,12 @@
 #!/bin/bash
 # my-steam-notes installer — run INSIDE proot Debian on the M11P phone.
 # Called from PC via deploy.ps1:
-#   proot-distro login debian --shared-tmp -- bash /sdcard/steam-notes-install.sh
+#   proot-distro login debian --shared-tmp -- bash /tmp/steam-notes-install.sh
 # Idempotent: safe to re-run on every deploy.
 set -euo pipefail
 
 APP=/root/steam-notes
-STAGE=/sdcard/steam-notes-staging
+STAGE=/tmp/steam-notes-staging
 LOGS=/root/logs
 
 mkdir -p "$APP" "$LOGS" /root/www-static/steam
@@ -89,7 +89,7 @@ timeout 20 supervisorctl restart steam-collector steam-dashboard steam-api || tr
 timeout 20 supervisorctl start steam-api 2>/dev/null || true
 
 # 6) wipe staging (tar copies of secrets/db must not linger on /sdcard)
-rm -rf "$STAGE" /sdcard/steam-notes-deploy.tgz 2>/dev/null || true
+rm -rf "$STAGE" /tmp/steam-notes-deploy.tgz 2>/dev/null || true
 
 sleep 4
 echo "===== status ====="

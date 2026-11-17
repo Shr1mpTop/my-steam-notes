@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Nightly snapshot of the live steam.db into /sdcard (backup-guardian pulls it).
+"""Nightly snapshot of the live steam.db into /root/steam-notes/backups (proot
+internal; PC backup-guardian SFTP pulls it after triggering a fresh snapshot).
 
 Uses sqlite3's online backup API (safe against a live WAL writer).
 Keeps the last KEEP dated snapshots and one rolling steam-backup.db.
@@ -10,7 +11,7 @@ import os
 import sqlite3
 
 SRC = os.getenv("STEAM_DB_PATH", "/root/steam-notes/data/steam.db")
-BACKUP_DIR = os.getenv("BACKUP_DIR", "/sdcard/steam-notes")
+BACKUP_DIR = os.getenv("BACKUP_DIR", "/root/steam-notes/backups")
 KEEP = 7
 
 os.makedirs(BACKUP_DIR, exist_ok=True)

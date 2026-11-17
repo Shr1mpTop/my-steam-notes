@@ -305,12 +305,30 @@ def achieve_compare():
         if not top:
             return {"updated_at": now_iso(), "game": None, "ladder": []}
         appid, name = top[0]["appid"], top[0]["name"]
+        # primary: read from game_achievements (locally maintained)
         my_achieved = q(
             "SELECT COUNT(*) AS c FROM game_achievements WHERE appid = ? AND achieved = 1", (appid,)
         )[0]["c"]
         my_ach_total = q(
             "SELECT COUNT(*) AS c FROM game_achievements WHERE appid = ?", (appid,)
         )[0]["c"]
+        # secondary: refresh from Steam API if local data seems thin (< total from friends)
+        if my_ach_total < 5:
+            try:
+                import requests as _req
+                key = os.getenv("STEAM_API_KEY", "")
+                sid = os.getenv("STEAM_ID", "")
+                r = _req.get(
+                    f"https://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/",
+                    params={"key": key, "steamid": sid, "appid": appid}, timeout=15,
+                )
+                if r.ok:
+                    achs = (r.json().get("playerstats", {}) or {}).get("achievements", [])
+                    if achs:
+                        my_ach_total = len(achs)
+                        my_achieved = sum(1 for a in achs if a.get("achieved") == 1)
+            except Exception:
+                pass
         rows = q("""
             SELECT fa.steamid, COALESCE(c.personaname, fa.steamid) AS name,
                    COALESCE(c.avatarfull, '') AS avatar,
@@ -546,6 +564,21 @@ def raw(table, limit):
 
 class Handler(BaseHTTPRequestHandler):
     server_version = "SteamMatrixAPI/1.0"
+    _rate = {}  # client_ip -> [timestamp, count]
+    RATE_LIMIT = 60  # max requests per minute per client
+
+    def _check_rate(self):
+        """Simple in-memory rate limiter per client IP."""
+        client = self.client_address[0]
+        now = time.time()
+        entry = Handler._rate.get(client)
+        if entry is None or now - entry[0] > 60:
+            Handler._rate[client] = [now, 1]
+            return True
+        entry[1] += 1
+        if entry[1] > self.RATE_LIMIT:
+            return False
+        return True
 
     def send_json(self, code, payload):
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
@@ -558,6 +591,9 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_GET(self):
+        if not self._check_rate():
+            self.send_json(429, {"error": "rate limited"})
+            return
         try:
             u = urlparse(self.path)
             path = u.path.rstrip("/") or "/"
@@ -631,8 +667,8 @@ class Handler(BaseHTTPRequestHandler):
                                                    "/api/shared", "/api/games", "/api/polls",
                                                    "/api/friend-polls", "/api/sweeps", "/api/news",
                                                    "/api/stats", "/api/raw?table=..."]})
-        except Exception as exc:  # keep the server alive on any handler error
-            self.send_json(500, {"error": str(exc)})
+        except Exception:
+            self.send_json(500, {"error": "internal error"})
 
     def log_message(self, fmt, *args):
         pass

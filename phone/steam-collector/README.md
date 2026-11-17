@@ -11,7 +11,7 @@ Steam Web API (api.steampowered.com)
         │  60s/轮：本人+39好友状态(1次批量调用) + 好友名单(30min) + 时长(5min)
         ▼
 M11P 手机 (192.168.0.104, proot Debian, supervisord 托管)
-  steam-collector  ──►  /sdcard/steam-notes/steam.db (SQLite WAL, 原 Turso schema)
+  steam-collector  ──►  /root/steam-notes/data/steam.db (SQLite WAL, 原 Turso schema)
   dashboard-loop   ──读库每分钟构建──►  /root/www-static/steam/dashboard.json
         │ nginx :8081  location /steam/ (+CORS *)
         ▼
@@ -33,7 +33,7 @@ GitHub Pages 看板 https://shr1mptop.github.io/my-steam-notes/  ←— 页面�
 | `/root/steam-notes/` | 仓库副本（scripts/ + phone/），权威源在 PC 仓库 |
 | `/root/steam-notes/venv/` | Python venv（requests + python-dotenv，清华源安装） |
 | `/root/steam-notes/phone/steam-collector/.env` + `/root/steam-notes/.env` | 密钥+配置（chmod 600，不进 git） |
-| `/sdcard/steam-notes/steam.db` | **数据库本体**（WAL；schema 与原 Turso 完全一致） |
+| `/root/steam-notes/data/steam.db` | **数据库本体**（WAL；schema 与原 Turso 完全一致） |
 | `/root/www-static/steam/dashboard.json` | 实时看板 JSON（nginx 8081 `/steam/` + 8080 LAN 同源） |
 | `/root/logs/steam-collector.log` / `steam-dashboard.log` / `steam-daily.log` | 日志（supervisor 轮转 5MB×3） |
 | `/etc/supervisor/conf.d/steam-notes.conf` | 两个 program：steam-collector / steam-dashboard |
@@ -59,7 +59,7 @@ curl https://steam-data.zhili-he.top/steam/dashboard.json # 公网端点
 | 键 | 默认 | 说明 |
 |---|---|---|
 | STEAM_API_KEY / STEAM_ID / TURSO_URL / TURSO_TOKEN | — | TURSO_* 仅迁移时用 |
-| STEAM_DB_MODE / STEAM_DB_PATH | local / /sdcard/steam-notes/steam.db | scripts/turso_db.py 双模式开关（Actions 侧走 turso） |
+| STEAM_DB_MODE / STEAM_DB_PATH | local / /root/steam-notes/data/steam.db | scripts/turso_db.py 双模式开关（Actions 侧走 turso） |
 | POLL_INTERVAL | 60 | 本人状态轮询秒数 |
 | FRIEND_INTERVAL | 60 | 好友快照秒数（与本人合并成一次批量调用，零额外 API 成本） |
 | FRIENDLIST_INTERVAL | 1800 | 好友名单刷新 |
@@ -85,12 +85,17 @@ steam_level / game_news_updates。build_dashboard.py 读本地库生成的 JSON 
 
 ## 备份
 
-`steam.db` 加入 PC backup-guardian 每晚 SFTP 拉取清单（与 stock/us 小库同模式）。
+`steam.db` 每夜拉取已落地（2026-11-18）：backup-guardian 23:30 先经 mssh 触发一次新鲜
+backup_db.py 快照（避免 SFTP 拉到撕裂的活 WAL），再拉 `steam-backup.db`，与 stock/us
+同入 auto-* keep7。
 TIP: 迁移脚本可随时重跑（--force 重建），但采集器上线后重跑会覆盖增量数据——
 先停 steam-collector 再迁。
 
 ## 踩坑备忘
 
+- **铁律（2026-11-18）：一切运行时文件/库/暂存禁止放 /sdcard**——HyperOS 重启会收回
+  Termux 存储权限（stockbot 11-17 全线趴窝实证）。暂存用 Termux $PREFIX/tmp
+  （=proot /tmp），部署/库全在 proot rootfs。/sdcard 只允许冷备份。
 - 手机直连 Turso 被 GFW 在 TLS 握手 reset（DNS 正常）→ 迁移必须在 PC 走 Clash。
 - nginx 站点备份文件不能放 /etc/nginx/sites-enabled/（会被当站点加载 → duplicate default_server）。
 - supervisorctl 一律 `timeout 20` 包裹；远程带引号命令写 .sh 推 /sdcard 执行（m11p skill 坑 24/25）。

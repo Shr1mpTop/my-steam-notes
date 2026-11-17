@@ -9,9 +9,13 @@ $ErrorActionPreference = 'Stop'
 
 $repoRoot   = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)   # phone\steam-collector -> repo
 $mssh       = 'C:\Users\Gigg1ty\mi-ai\mssh.py'
-$stage      = '/sdcard/steam-notes-staging'
-$tarRemote  = '/sdcard/steam-notes-deploy.tgz'
-$shRemote   = '/sdcard/steam-notes-install.sh'
+# 2026-11-18 doctrine: NO /sdcard anywhere - staging lives in Termux $PREFIX/tmp
+# (app-private, survives storage-permission revocation) which --shared-tmp binds
+# into proot as /tmp, so both Termux and proot see the same files.
+$stage      = '/data/data/com.termux/files/usr/tmp/steam-notes-staging'
+$tarRemote  = '/data/data/com.termux/files/usr/tmp/steam-notes-deploy.tgz'
+$shRemote   = '/data/data/com.termux/files/usr/tmp/steam-notes-install.sh'
+$shInProot  = '/tmp/steam-notes-install.sh'
 
 $envFile = Join-Path $PSScriptRoot '.env'
 if (-not (Test-Path $envFile)) {
@@ -37,7 +41,7 @@ python $mssh --put (Join-Path $PSScriptRoot 'install-inner.sh') $shRemote
 # 3) extract + de-CRLF the installer + run it inside proot
 python $mssh "tar -xzf $tarRemote -C $stage"
 python $mssh "sed -i 's/\r$//' $shRemote"
-python $mssh "proot-distro login debian --shared-tmp -- bash $shRemote"
+python $mssh "proot-distro login debian --shared-tmp -- bash $shInProot"
 
 Write-Host "`nDeploy done. Verify:"
 Write-Host "  python $mssh `"proot-distro login debian --shared-tmp -- timeout 20 supervisorctl status`""

@@ -16,10 +16,9 @@ $tarLocal = Join-Path $env:TEMP 'steam-app-dist.tgz'
 if (Test-Path $tarLocal) { Remove-Item $tarLocal -Force }
 tar -czf $tarLocal -C (Join-Path $repoRoot 'web') dist-phone
 Write-Host "packed dist ($((Get-Item $tarLocal).Length) bytes)"
-python $mssh --put $tarLocal /sdcard/steam-app-dist.tgz
+python $mssh --put $tarLocal /data/data/com.termux/files/usr/tmp/steam-app-dist.tgz
 
-# 3) install inside proot
-python $mssh "mkdir -p /sdcard/steam-notes-staging"
-python $mssh "proot-distro login debian --shared-tmp -- /bin/bash -c 'rm -rf /root/steam-notes/www-app && mkdir -p /root/steam-notes/www-app && tar -xzf /sdcard/steam-app-dist.tgz -C /tmp && cp -r /tmp/dist-phone/* /root/steam-notes/www-app/ && ls /root/steam-notes/www-app | head -5'"
+# 3) install inside proot (staging = Termux $PREFIX/tmp, bound to /tmp via --shared-tmp)
+python $mssh "proot-distro login debian --shared-tmp -- /bin/bash -c 'rm -rf /root/steam-notes/www-app && mkdir -p /root/steam-notes/www-app && tar -xzf /tmp/steam-app-dist.tgz -C /tmp && cp -r /tmp/dist-phone/* /root/steam-notes/www-app/ && ls /root/steam-notes/www-app | head -5'"
 python $mssh "proot-distro login debian --shared-tmp -- curl -s -o /dev/null -w 'local 8082 http=%{http_code}\n' http://127.0.0.1:8082/"
 Write-Host "deploy-app done. If public 502/404: restart Cloudflared service (admin) so the new ingress rule loads."
