@@ -537,9 +537,15 @@ async function loadNightOwls() {
 
 async function loadPresenceDaily() {
   try {
-    const d = await get("/api/presence-daily?days=14");
-    $("presenceDaily").innerHTML = (d.daily || []).slice(-14).map((r) =>
-      `<div class="day-cell"><div class="d">${esc(cut(r.d || "", 10))}</div><div class="v">${r.online_hours}h</div><div class="p">${r.friends_active} friends</div></div>`).join("") || '<span class="faint">no daily data yet</span>';
+    const [d, st] = await Promise.all([get("/api/presence-daily?days=14"), get("/api/presence-today")]);
+    const meMap = {};
+    (d.me_daily || []).forEach((r) => { meMap[r.d] = r.my_online_hours; });
+    meMap[new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Singapore" })] = st.me_minutes / 60;
+    $("presenceDaily").innerHTML = (d.daily || []).slice(-14).map((r) => {
+      const mine = meMap[r.d];
+      const mineTxt = mine !== undefined ? ` · me ${mine.toFixed(1)}h` : "";
+      return `<div class="day-cell"><div class="d">${esc(cut(r.d || "", 10))}${mineTxt}</div><div class="v">${r.online_hours}h</div><div class="p">${r.friends_active} friends</div></div>`;
+    }).join("") || '<span class="faint">no daily data yet</span>';
   } catch (e) { fail($("presenceDaily"), e.message); }
 }
 
