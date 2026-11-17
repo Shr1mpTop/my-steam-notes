@@ -24,7 +24,7 @@ python $mssh "rm -rf $stage && mkdir -p $stage"
 # 1) tar the repo pieces (Windows bsdtar)
 $tarLocal = Join-Path $env:TEMP 'steam-notes-deploy.tgz'
 if (Test-Path $tarLocal) { Remove-Item $tarLocal -Force }
-tar -czf $tarLocal -C $repoRoot scripts phone
+tar -czf $tarLocal -C $repoRoot --exclude '.env' --exclude 'steam.db' --exclude 'steam.db-wal' --exclude 'steam.db-shm' scripts phone
 Write-Host "packed $tarLocal ($((Get-Item $tarLocal).Length) bytes)"
 
 # 2) push artifacts

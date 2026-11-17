@@ -82,6 +82,9 @@ timeout 20 supervisorctl restart steam-collector steam-dashboard steam-api || tr
 # restart can race with a freshly-added program; make sure everything is up
 timeout 20 supervisorctl start steam-api 2>/dev/null || true
 
+# 6) wipe staging (tar copies of secrets/db must not linger on /sdcard)
+rm -rf "$STAGE" /sdcard/steam-notes-deploy.tgz 2>/dev/null || true
+
 sleep 4
 echo "===== status ====="
 timeout 20 supervisorctl status | grep -E 'steam' || echo "(no steam programs visible)"

@@ -500,6 +500,19 @@ def sync_playtime():
         STATE["pt_map"][g["appid"]] = g.get("playtime_forever", 0)
     STATE["last_full_day"] = today
 
+    # my own steam level once a day (keeps /api/levels my_level fresh)
+    if STATE.get("last_level_day") != today:
+        lv = steam_get("/IPlayerService/GetSteamLevel/v0001/", {"steamid": SID})
+        if lv is not None:
+            my_lvl = (lv.get("response", {}) or {}).get("player_level", 0)
+            if my_lvl:
+                execute(
+                    "INSERT OR REPLACE INTO steam_level (date, level) VALUES (?, ?)",
+                    [today, my_lvl],
+                )
+                STATE["last_level_day"] = today
+                log(f"[level] my level refreshed: {my_lvl}")
+
     # player_daily daily row (cheap, keeps profile fresh)
     ps = steam_get("/ISteamUser/GetPlayerSummaries/v0002/", {"steamids": SID})
     if ps is not None:
@@ -570,7 +583,11 @@ def collect_level_and_badges(steamid):
         xp = resp.get("player_xp", 0)
         badge_count = len(resp.get("badges", []) or [])
         xp_up = resp.get("player_xp_needed_to_level_up", 0)
-    status = "ok" if (lvl is not None or xp is not None) else ("private" if lvl is None and xp is None else "ok")
+    # both endpoints unreachable = transient network trouble, do NOT persist
+    # a zero row; definitive empty/403 on one side still counts as ok-partial
+    if lvl is None and xp is None:
+        return
+    status = "ok"
     execute(SQL_FRIEND_LEVEL_UPSERT, [
         steamid, lvl or 0, xp or 0, xp_up or 0, badge_count or 0, status, now_iso
     ])
@@ -655,10 +672,23 @@ def maybe_prune():
         return
     cutoff_self = (now - timedelta(days=RETENTION_SELF_DAYS)).isoformat()
     cutoff_friend = (now - timedelta(days=RETENTION_FRIEND_DAYS)).isoformat()
-    execute("DELETE FROM status_polls WHERE timestamp < ?", [cutoff_self])
-    execute("DELETE FROM friend_status_polls WHERE timestamp < ?", [cutoff_friend])
+    # batched deletes: a single huge DELETE over ~1M rows would stall the
+    # phone's sdcard-backed SQLite for minutes
+    for table, cutoff in (("status_polls", cutoff_self), ("friend_status_polls", cutoff_friend)):
+        while True:
+            with DB_LOCK:
+                cur = DB_CONN.execute(
+                    f"DELETE FROM {table} WHERE rowid IN "
+                    f"(SELECT rowid FROM {table} WHERE timestamp < ? LIMIT 5000)",
+                    (cutoff,),
+                )
+                DB_CONN.commit()
+                affected = cur.rowcount
+            if not affected or affected < 5000:
+                break
+    execute("DELETE FROM game_concurrent WHERE ts < ?", [int((now - timedelta(days=30)).timestamp())])
     STATE["last_prune_day"] = today
-    log(f"[prune] done: status_polls < {RETENTION_SELF_DAYS}d, friend_status_polls < {RETENTION_FRIEND_DAYS}d")
+    log(f"[prune] done: status_polls<{RETENTION_SELF_DAYS}d, friend_status_polls<{RETENTION_FRIEND_DAYS}d (batched), game_concurrent<30d")
 
 
 def write_status_file(extra):
