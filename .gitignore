@@ -11,4 +11,6 @@ data/collector-status.json
 data/fresh.db*
 scripts/collector.log
 scripts/collector.env
+scripts/_probe_*.py
+web/dist-app/
 phone/steam-collector/steam.db*
