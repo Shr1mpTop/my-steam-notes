@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-18T23:55:27.742449+08:00",
+  "updated_at": "2026-11-19T00:25:32.476416+08:00",
   "player": {
     "personaname": "她饮茅台多了",
-    "online": true,
+    "online": false,
     "currently_playing": "",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg"
@@ -1597,7 +1597,7 @@
     {
       "appid": 4348910,
       "name": "Probably Stolen",
-      "playtime_2weeks_hours": 22.8,
+      "playtime_2weeks_hours": 22.3,
       "playtime_forever_hours": 32.9
     },
     {
@@ -4780,7 +4780,7 @@
       {
         "source": 892970,
         "target": 1172470,
-        "strength": 39
+        "strength": 40
       },
       {
         "source": 261550,
@@ -4992,7 +4992,7 @@
     "games": [
       {
         "name": "Probably Stolen",
-        "hours": 22.8
+        "hours": 22.3
       },
       {
         "name": "Apex Legends",
@@ -5703,22 +5703,11 @@
       "feedlabel": "Community Announcements",
       "update_type": "Update",
       "contents": "Ranked Integrity Update – Rookie Rank ExploitWe recently identified and quickly resolved an exploit that allowed some players, primarily on PlayStation 5, to enter Ranked matches as Rookie IV regardless of their actual rank.This caused several unintended advantages, including:No Ranked entry costRookie-tier kill bonusesMatchmaking Rating (MMR) being recorded as 0RP earned during these matches still being added to the player's actual Ranked scoreThis created an unfair advantage and directly impacted the integrity of Ranked progression.Our Anti-Cheat team identified the root cause and deployed a fix to prevent further abuse. We also conducted an investigation into accounts that benefited from this exploit and took enforcement action against players who deliberately and egregiously abused it...."
-    },
-    {
-      "appid": 4348910,
-      "game_name": "Probably Stolen",
-      "title": "This new shop sim game is doing gangbusters on the Steam charts",
-      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1848557880479800",
-      "date": 1793809149,
-      "feedname": "PCGamesN",
-      "feedlabel": "PCGamesN",
-      "update_type": "Update",
-      "contents": "Probably Stolen, new from publisher tinyBuild adds a rather dour sci-fi twist to the shop simulation formula we've seen a lot of recently, and it's doing rather well. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/probably-stolen/huge-peak-steam\">This new shop sim game is doing gangbusters on the Steam charts</a> "
     }
   ],
   "social_presence": {
-    "window_start": "2026-11-11T23:55:27.776718+08:00",
-    "window_end": "2026-11-18T23:55:27.776718+08:00",
+    "window_start": "2026-11-12T00:25:32.508297+08:00",
+    "window_end": "2026-11-19T00:25:32.508297+08:00",
     "members": [
       {
         "id": "self",
@@ -6813,7 +6802,7 @@
     ]
   },
   "friends_hub": {
-    "updated_at": "2026-11-18T23:55:27.780064+08:00",
+    "updated_at": "2026-11-19T00:25:32.511456+08:00",
     "friends": [],
     "shared_games": [],
     "leaderboard_total": [
@@ -6828,14 +6817,14 @@
       {
         "name": "她饮茅台多了",
         "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg",
-        "hours": 56.1,
+        "hours": 55.6,
         "is_self": true
       }
     ],
     "me_vs_them": {
       "my_total_hours": 6110.4,
       "my_total_rank": 1,
-      "my_two_week_hours": 56.1,
+      "my_two_week_hours": 55.6,
       "my_two_week_rank": 1,
       "public_friends": 0,
       "private_friends": 0,
