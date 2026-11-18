@@ -52,6 +52,10 @@ if ($failed) {
 
 # 4) commit + push (only when dashboard.json actually changed)
 Set-Location $repo
+# self-heal non-fast-forward: rebase onto origin/main; autoStash keeps the
+# main working tree's unrelated dirty files (parallel web edits) untouched
+git -c rebase.autoStash=true pull --rebase origin main 2>&1 | Out-Null
+if ($LASTEXITCODE -ne 0) { Log "pull --rebase FAILED :: non-fast-forward not healable, retry next run"; exit 1 }
 git add data/dashboard.json 2>&1 | Out-Null
 $staged = git diff --cached --name-only
 if ($staged -match "dashboard") {
