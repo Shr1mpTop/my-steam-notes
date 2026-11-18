@@ -25,7 +25,7 @@ export function RecentActivity({ activity }: Props) {
   const data = activity
     .map((g) => ({
       ...g,
-      label: truncate(g.name, 18),
+      label: truncate(g.name, 22),
       color: dataColor(`${g.appid}:${g.name}`),
     }))
     .reverse();
@@ -33,7 +33,7 @@ export function RecentActivity({ activity }: Props) {
   return (
     <Panel kicker={t("kickRecent")} title={t("recentActivity")} sub={t("recentActivitySubtitle")} delay={0.18}>
       <div className="recent-chart">
-        <ResponsiveContainer width="100%" height={Math.max(activity.length * 34 + 30, 220)}>
+        <ResponsiveContainer width="100%" height={Math.max(activity.length * 44 + 44, 320)}>
           <BarChart data={data} layout="vertical" margin={{ left: 0, right: 24, top: 4, bottom: 0 }}>
             <XAxis
               type="number"
@@ -45,7 +45,7 @@ export function RecentActivity({ activity }: Props) {
             <YAxis
               type="category"
               dataKey="label"
-              width={118}
+              width={140}
               tick={{ fill: "var(--text-3)", fontSize: 10.5 }}
               axisLine={false}
               tickLine={false}
@@ -56,7 +56,7 @@ export function RecentActivity({ activity }: Props) {
               labelStyle={{ color: "var(--accent-hi)", fontWeight: 600 }}
               cursor={{ fill: "rgba(255,255,255,0.05)" }}
             />
-            <Bar dataKey="playtime_2weeks_hours" radius={[3, 3, 3, 3]} barSize={14} background={{ fill: "rgba(255,255,255,0.03)", radius: 3 }}>
+            <Bar dataKey="playtime_2weeks_hours" radius={[4, 4, 4, 4]} barSize={20} background={{ fill: "rgba(255,255,255,0.03)", radius: 4 }}>
               {data.map((d) => (
                 <Cell key={d.appid} fill={d.color} />
               ))}

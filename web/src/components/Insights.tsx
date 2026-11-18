@@ -97,7 +97,7 @@ export function StayingPower({ games }: StayingProps) {
   const withLast = games.filter((g) => g.rtime_last_played > 0);
   if (!withLast.length) return null;
 
-  const data = withLast.slice(0, 15).map((g) => {
+  const data = withLast.slice(0, 30).map((g) => {
     const daysSincePlayed = daysSince(g.rtime_last_played, now);
     return {
       appid: g.appid,
@@ -178,7 +178,7 @@ interface PositionedLink {
 export function GameNetwork({ network }: Props) {
   const { t } = useLocale();
   const W = 640;
-  const H = 380;
+  const H = 540;
 
   const nodes = useMemo(() => {
     const m = new Map<number, { appid: number; name: string; genres: string[] }>();
@@ -303,7 +303,7 @@ export function GameNetwork({ network }: Props) {
   return (
     <Panel kicker={t("kickNetwork")} title={t("gameNetwork")} sub={t("networkSubtitle")} delay={0.22} className="game-network-card">
       <div className="network-bubble-stage">
-        <svg viewBox={`0 0 ${W} ${H}`} className="network-svg" aria-hidden="true">
+        <svg viewBox={`0 0 ${W} ${H}`} className="network-svg" style={{ maxHeight: H }} aria-hidden="true">
           {graph.links.map((link, i) => (
             <line
               key={`${link.source.appid}-${link.target.appid}-${i}`}
@@ -338,7 +338,7 @@ export function GameNetwork({ network }: Props) {
       </div>
 
       <div className="cloud-legend network-legend">
-        {genreNames.slice(0, 8).map((genre) => (
+        {genreNames.slice(0, 16).map((genre) => (
           <span key={genre} className="treemap-legend-item is-static">
             <span className="treemap-legend-dot" style={{ background: genreColor(genre) }} />
             {genre}

@@ -13,12 +13,12 @@ const GRID = "var(--chart-grid)";
 
 export function ParetoChart({ data }: ParetoProps) {
   const { t } = useLocale();
-  const top20 = data.slice(0, 20);
+  const top = data.slice(0, 40);
 
   return (
     <Panel kicker={t("kickRanking")} title={t("rule8020")} sub={t("rule8020Subtitle")} delay={0.12}>
-      <ResponsiveContainer width="100%" height={280}>
-        <AreaChart data={top20} margin={{ left: 0, right: 12, top: 8, bottom: 24 }}>
+      <ResponsiveContainer width="100%" height={380}>
+        <AreaChart data={top} margin={{ left: 0, right: 12, top: 8, bottom: 26 }}>
           <defs>
             <linearGradient id="paretoFill" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="rgba(122, 133, 240, 0.36)" />
@@ -30,6 +30,7 @@ export function ParetoChart({ data }: ParetoProps) {
             tick={{ fill: AXIS, fontSize: 10 }}
             axisLine={{ stroke: GRID }}
             tickLine={false}
+            minTickGap={14}
             label={{ value: t("gameRank"), position: "bottom", fill: AXIS, fontSize: 10, offset: 10 }}
           />
           <YAxis
@@ -71,14 +72,14 @@ export function PlatformPie({ data }: PlatformProps) {
   return (
     <Panel kicker={t("kickPlatform")} title={t("platformBreakdown")} sub={t("hoursByPlatform")} delay={0.16}>
       <div className="platform-chart">
-        <ResponsiveContainer width="100%" height={200}>
+        <ResponsiveContainer width="100%" height={280}>
           <PieChart>
             <Pie
               data={chartData}
               cx="50%"
               cy="50%"
-              innerRadius={54}
-              outerRadius={82}
+              innerRadius={68}
+              outerRadius={110}
               paddingAngle={3}
               cornerRadius={4}
               dataKey="value"

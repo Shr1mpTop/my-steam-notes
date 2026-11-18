@@ -38,7 +38,7 @@ export function AchievementBoard({ achievements }: Props) {
               <span className="achievement-pct">{game.pct}%</span>
               {game.rare.length > 0 && (
                 <div className="rare-achievements">
-                  {game.rare.slice(0, 2).map((r) => (
+                  {game.rare.slice(0, 4).map((r) => (
                     <span
                       key={r.name}
                       className="rare-tag"
@@ -66,7 +66,7 @@ export function GenreChart({ genres }: GenreProps) {
   return (
     <Panel kicker={t("kickGenres")} title={t("genreDistribution")} sub={t("genreSubtitle")} delay={0.22}>
       <div className="genre-chart">
-        {genres.slice(0, 10).map((g) => (
+        {genres.map((g) => (
           <div key={g.genre} className="genre-row">
             <span className="genre-name">{g.genre}</span>
             <div className="genre-bar-track">

@@ -30,12 +30,12 @@ function cleanUpdateText(text: string) {
 
 function previewText(text: string) {
   const clean = cleanUpdateText(text);
-  return clean.length > 150 ? `${clean.slice(0, 150).trim()}…` : clean;
+  return clean.length > 320 ? `${clean.slice(0, 320).trim()}…` : clean;
 }
 
 export function GameUpdates({ updates = [] }: Props) {
   const { t } = useLocale();
-  const recent = updates.slice(0, 6);
+  const recent = updates.slice(0, 20);
 
   if (!recent.length) {
     return <div className="empty-panel">{t("runSync")}</div>;

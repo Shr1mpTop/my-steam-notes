@@ -433,7 +433,7 @@ export function GameCloud({ games }: Props) {
 
       {!selectedGenre && (
         <div className="treemap-legend">
-          {genres.slice(0, 12).map(g => (
+          {genres.map(g => (
             <span key={g.name} className="treemap-legend-item" onClick={() => handleGenreClick(g.name)}>
               <span className="treemap-legend-dot" style={{ background: g.color }} />
               {g.name}

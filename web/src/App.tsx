@@ -22,7 +22,8 @@ import "./App.css";
 
 type Density = "comfortable" | "compact";
 
-const DENSITY_STORAGE_KEY = "steam-notebook-density-v3";
+// v4: drop legacy density saves so users stuck on "compact" restart on comfortable
+const DENSITY_STORAGE_KEY = "steam-notebook-density-v4";
 
 function initialDensity(): Density {
   if (typeof window === "undefined") return "comfortable";
@@ -223,8 +224,8 @@ function Dashboard() {
             <div className="cell span-8"><ContributionMap heatmap={data.heatmap} updatedAt={data.updated_at} /></div>
             <div className="cell span-4"><TimeHeatmap data={data.time_heatmap} /></div>
 
-            <div className="cell span-5"><WeekdayChart data={data.weekday} heatmap={data.heatmap} /></div>
-            <div className="cell span-7"><ParetoChart data={data.pareto} /></div>
+            <div className="cell span-6"><WeekdayChart data={data.weekday} heatmap={data.heatmap} /></div>
+            <div className="cell span-6"><ParetoChart data={data.pareto} /></div>
 
             <div className="cell span-12"><GameCloud games={data.game_cloud} /></div>
 

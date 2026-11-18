@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { CSSProperties } from "react";
 import type { HeatmapDay } from "../types";
 import { useLocale } from "../useLocale";
 import { HEAT_LEGEND, heatColor } from "../lib/palette";
@@ -34,6 +35,12 @@ function mondayIndex(dateStr: string) {
 function playtimeMinutes(entry?: HeatmapDay) {
   return entry?.playtime_minutes ?? entry?.online_minutes ?? 0;
 }
+
+/**
+ * 单元格原来是正方形:53 周 × 7 行在 span-8 面板里被压成 ~110px 的一条细带。
+ * 换成略带纵向的比例,让面板真正占用垂直空间;比例而非固定高度,各断点自动缩放。
+ */
+const CELL_STYLE: CSSProperties = { aspectRatio: "1 / 1.45" };
 
 export function ContributionMap({ heatmap, updatedAt }: Props) {
   const { t } = useLocale();
@@ -87,13 +94,13 @@ export function ContributionMap({ heatmap, updatedAt }: Props) {
           <div key={wi} className="heatmap-col">
             {w.map((d, di) =>
               d.minutes === -1 ? (
-                <div key={di} className="heatmap-cell empty" />
+                <div key={di} className="heatmap-cell empty" style={CELL_STYLE} />
               ) : (
                 <button
                   key={di}
                   className={`heatmap-cell${selected === d.date ? " is-selected" : ""}`}
                   type="button"
-                  style={{ background: heatColor(d.minutes) }}
+                  style={{ ...CELL_STYLE, background: heatColor(d.minutes) }}
                   title={`${formatDate(d.date)}: ${d.minutes > 0 ? fmtMinutes(d.minutes) : t("noActivity")}`}
                   aria-label={`${formatDate(d.date)}: ${d.minutes > 0 ? fmtMinutes(d.minutes) : t("noActivity")}`}
                   aria-pressed={selected === d.date}
@@ -127,7 +134,7 @@ export function ContributionMap({ heatmap, updatedAt }: Props) {
                 .sort(([, a], [, b]) => b - a)
                 .map(([name, mins]) => (
                   <li key={name}>
-                    <span>{name}</span>
+                    <span style={{ whiteSpace: "normal", overflow: "visible", textOverflow: "clip" }}>{name}</span>
                     <span>{fmtMinutes(mins)}</span>
                   </li>
                 ))}

@@ -19,6 +19,8 @@ interface HeatmapTooltip {
 
 const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const HOURS = Array.from({ length: 24 }, (_, i) => i);
+/** 每个小时的游戏明细从 6 条放宽到接近全量,同时供 tooltip 高度估算复用。 */
+const TOOLTIP_GAME_LIMIT = 16;
 
 function weekdayIndex(date: string) {
   const [year, month, day] = date.split("-").map(Number);
@@ -46,9 +48,11 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
 
   const placeTooltip = (event: MouseEvent<HTMLElement>, dow: number, hour: number, item?: TimeHeatmapItem) => {
     const width = 280;
-    const height = 230;
     const offset = 16;
     const nextItem = item ?? { dow, hour, count: 0, recent_count: 0, game_minutes: 0, online_minutes: 0, games: {} };
+    // tooltip 显示条数放宽后,高度按实际行数估算;否则靠近视口底部时会被裁掉。
+    const gameRows = Object.values(nextItem.games ?? {}).filter((minutes) => minutes > 0).length;
+    const height = 120 + Math.min(gameRows, TOOLTIP_GAME_LIMIT) * 22;
     const x = Math.max(12, Math.min(event.clientX + offset, window.innerWidth - width - 12));
     const y = Math.max(12, Math.min(event.clientY + offset, window.innerHeight - height - 12));
     setTooltip({ x, y, item: nextItem, label: `${DAYS[dow]} ${hour}:00` });
@@ -57,13 +61,13 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
     ? Object.entries(tooltip.item.games ?? {})
       .filter(([, minutes]) => minutes > 0)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 6)
+      .slice(0, TOOLTIP_GAME_LIMIT)
     : [];
 
   return (
     <Panel kicker={t("kickTime")} title={t("whenYouPlay")} sub={t("timeHeatmapSubtitle")} delay={0.1}>
       <div className="time-heatmap" onMouseLeave={() => setTooltip(null)}>
-        <div className="th-labels-y">
+        <div className="th-labels-y" style={{ alignSelf: "stretch" }}>
           {DAYS.map((d) => <span key={d}>{d}</span>)}
         </div>
         <div className="th-grid">
@@ -79,6 +83,10 @@ export function TimeHeatmap({ data }: TimeHeatmapProps) {
                     className="th-cell"
                     style={{
                       background: count > 0 ? heatColorRatio(intensity) : "var(--heat-empty)",
+                      // 覆盖样式表的 aspect-ratio: 1.35 —— 格子高度约翻倍,7×24 热力图
+                      // 变高但不引入任何内部滚动(minHeight 兜住窄屏)。
+                      aspectRatio: "1 / 1.4",
+                      minHeight: 14,
                     }}
                     aria-label={`${DAYS[dow]} ${hour}:00 — ${fmtMinutes(count)} ${t("playtime")}`}
                     onMouseEnter={(event) => placeTooltip(event, dow, hour, item)}
