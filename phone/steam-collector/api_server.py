@@ -565,7 +565,7 @@ def raw(table, limit):
 class Handler(BaseHTTPRequestHandler):
     server_version = "SteamMatrixAPI/1.0"
     _rate = {}  # client_ip -> [timestamp, count]
-    RATE_LIMIT = 60  # max requests per minute per client
+    RATE_LIMIT = 600  # max requests per minute per client (terminal makes ~30/min)
 
     def _check_rate(self):
         """Simple in-memory rate limiter per client IP."""
