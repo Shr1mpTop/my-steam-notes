@@ -968,13 +968,17 @@ class Handler(BaseHTTPRequestHandler):
 
     def send_json(self, code, payload):
         body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-        self.send_response(code)
-        self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Cache-Control", "no-store")
-        self.send_header("Content-Length", str(len(body)))
-        self.end_headers()
-        self.wfile.write(body)
+        try:
+            self.send_response(code)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+        except (BrokenPipeError, ConnectionResetError):
+            # client went away mid-response — drop it, never let it kill the worker/server
+            pass
 
     def do_GET(self):
         if not self._check_rate():
@@ -1075,14 +1079,17 @@ class Handler(BaseHTTPRequestHandler):
                                                    "/api/friend-polls", "/api/sweeps", "/api/news",
                                                    "/api/stats", "/api/raw?table=..."]})
         except Exception:
-            self.send_json(500, {"error": "internal error"})
+            try:
+                self.send_json(500, {"error": "internal error"})
+            except Exception:
+                pass  # original error + client gone; already logged by socketserver
 
     def log_message(self, fmt, *args):
         pass
 
 
 def main():
-    print(f"steam-matrix-api on :{PORT} db={DB}", flush=True)
+    print(f"{now_iso()} steam-matrix-api on :{PORT} db={DB}", flush=True)
     server = ThreadingHTTPServer(("0.0.0.0", PORT), Handler)
     server.serve_forever()
 
