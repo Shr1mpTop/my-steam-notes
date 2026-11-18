@@ -1,5 +1,7 @@
 # my-steam-notes · 长期发展路线图
 
+> 📍 本手册归属：《手册总目录》（E:\github\手册总目录.md，相对路径 ../../手册总目录.md）｜ 总手册：《运维手册》（E:\github\运维手册.md）。**改动本手册后必须同步更新《手册总目录》对应条目。**
+
 > 2026-11-17 编写 | 基于当前项目状态 + Steam API 全面调研 + 竞品分析
 
 ---
@@ -12,8 +14,8 @@
 |---|---|---|
 | **采集** | 60s 好友状态 + 20min 库扫描 + 30min 在线人数 | ✅ 手机 supervisord 自愈 |
 | **存储** | 本地 SQLite 15 张表（含每日/时段聚合） | ✅ 永久历史 |
-| **API** | 20+ 只读接口（status/friends/games/shared/levels/bans/hourly/night-owls/achieve 等） | ✅ 公网可达 |
-| **矩阵终端** | steam.zhili-he.top 15+ 面板，3 栏紧贴布局 | ✅ 含下钻详情 |
+| **API** | 13 只读接口（status/me/friends/friend/{steamid}/leaderboards/shared/games/polls/friend-polls/sweeps/news/stats/raw） | ✅ 公网可达（手机 `api_server.py` :8083 ← nginx :8082 反代） |
+| **矩阵终端** | steam.zhili-he.top 10 个自动刷新面板，3 栏紧贴布局 | ✅ 含下钻详情 |
 | **对外站** | GitHub Pages Linear 风格 + 好友社交面板 + treemap 游戏云 | ✅ 双语 |
 | **部署** | deploy.ps1 一键推手机 + install-inner.sh 幂等安装 | ✅ |
 
@@ -22,7 +24,7 @@
 - 好友库：4,475 行游戏数据，39 好友（37 公开 + 2 私密）
 - 好友总时长：113,350 小时
 - 等级/徽章/封禁/地区：37-40 人覆盖
-- 原始轮询：19,228+ 行（60s 级精度）
+- 原始轮询：`friend_status_polls` 约 170 万行（60s 级精度，好友 30 天保留、本人 45 天）
 - 每日聚合：friend_presence_daily + my_presence_daily 永久保留
 
 ### 当前痛点
@@ -32,6 +34,8 @@
 | 手机 WiFi 芯片故障 | 全站不可用（单点故障） | 🔴 P0 |
 | Pages fallback 数据为空 | 手机挂了对外站也没数据 | 🔴 P0 |
 | 无离线告警 | 手机挂 13 小时才发现 | 🟡 P1 |
+
+> ⚠️ 2026-11-18 核验订正：上表"手机 WiFi 芯片故障 → 全站不可用"**已非现状**——手机（192.168.0.104）在线并承载 stock/steam/buffotte 全部站点（《运维手册》§13.124 重启实证）。**单点故障风险仍成立**：所有生产站全压在一台手机上。Pages 数据新鲜度现由**手机 steam-collector（60s）+ PC 计划任务 `SteamNotebookCollector`（每 30 分钟推 main→deploy.yml）+ 手机 cron** 三层保障（§13.121/§13.126）。
 
 ---
 
@@ -118,6 +122,8 @@
 └─────────────────────────────────────────────────────┘
 ```
 
+> ⚠️ 2026-11-18 核验：Phase 0 已于 2026-11 落地，但**最终实现与下表方案不同**——备份走手机 `backup_db.py`（每日 03:40 快照 → `/root/steam-notes/backups`）+ backup-guardian 夜拉 `steam-backup.db`（**不进 GitHub 私有分支**）；采集冗余=手机 60s 采集 + PC 30min 计划任务 + 手机 cron 日结，GitHub Actions 定时已于 2026-11-18 全部停用。详见《运维手册》§13.121/§13.124/§13.126。
+
 | # | 任务 | 说明 | 工作量 |
 |---|---|---|---|
 | 0.1 | **手机网络恢复** | USB 共享网络 / WiFi 硬件更换 / 考虑换机 | 用户操作 |
@@ -135,7 +141,7 @@
 
 | # | 任务 | 说明 | 新增数据/功能 |
 |---|---|---|---|
-| 1.1 | **Actions 备份采集器** | GitHub Actions 每小时跑一次 collector（Turso 模式），手机挂了数据不断 | 冗余 |
+| 1.1 | ~~**Actions 备份采集器**~~ **已废弃（2026-11-18）** | GitHub Actions 每小时跑一次 collector（Turso 模式）——方案作废：Turso 降为冷存档不再写入，`poll_status`/`daily_sync` 定时已 `disabled_manually`；现冗余=手机 60s 采集 + PC 30min 计划任务 + 手机 cron | 冗余 |
 | 1.2 | **好友愿望单追踪** | 爬 `store.steampowered.com/wishlist/profiles/{id}` → 表 friend_wishlist | "好友想要什么" |
 | 1.3 | **游戏价格监控** | appdetails price_overview → 表 game_prices（时间序列） | **"好友常玩的游戏降价了"** |
 | 1.4 | **成就 schema 增强** | GetSchemaForGame → 成就名称/图标/描述存入 game_achievements | 成就展示更丰富 |
@@ -223,7 +229,7 @@ Steam API → M11P 手机采集器 → SQLite → Dashboard JSON
 | 决策点 | 建议 | 理由 |
 |---|---|---|
 | 数据库 | 继续用 SQLite | 单机够用，备份方便，性能好 |
-| 采集冗余 | Actions 每小时 + 主采集器 60s | Actions 免费且不受手机宕机影响 |
+| 采集冗余 | ~~Actions 每小时 + 主采集器 60s~~ → **主采集器 60s（手机）+ PC 30min 计划任务 + 手机 cron 日结** | Actions 定时已于 2026-11-18 停用（Turso 冷存档），冗余改由 PC 任务与手机 cron 承担 |
 | 前端 | 保持 React + Vite | 生态成熟，PWA 支持好 |
 | API 层 | 考虑加 GraphQL | 灵活查询，前端按需取数 |
 | 部署 | 短期手机，长期 VPS | 手机适合验证，VPS 适合稳定运行 |
@@ -293,4 +299,8 @@ Steam API → M11P 手机采集器 → SQLite → Dashboard JSON
 ---
 
 *文档位置：`docs/ROADMAP.md`*
-*最后更新：2026-11-17*
+*最后更新：2026-11-18*
+
+---
+
+> ✅ 最后核验：2026-11-18（手册治理代理对照《运维手册》§0/§2/§13.125 当前真实状态逐项核验；统一索引见《手册总目录》）

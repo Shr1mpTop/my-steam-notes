@@ -1,5 +1,12 @@
 # React + TypeScript + Vite
 
+> 📍 本手册归属：《手册总目录》（E:\github\手册总目录.md，相对路径 ../../../手册总目录.md）｜ 总手册：《运维手册》（E:\github\运维手册.md）。**改动本手册后必须同步更新《手册总目录》对应条目。**
+
+> ⚠️ **本文是 Vite 模板原文，不是 my-steam-notes 前端的项目说明。** 前端现状（2026-11-17 双站定稿）：
+> `web/` = Linear-2026 暗色设计系统 + three.js 游戏云（GitHub Pages 对外站，https://shr1mptop.github.io/my-steam-notes/）；
+> `web/terminal/index.html` = 手机 nginx **:8082** 矩阵终端站（steam.zhili-he.top）。
+> 数据供给/库/采集见 `phone/steam-collector/README.md`；详见《运维手册》§13.121/§13.122。
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
@@ -71,3 +78,7 @@ export default defineConfig([
   },
 ])
 ```
+
+---
+
+> ✅ 最后核验：2026-11-18（手册治理代理对照《运维手册》§0/§2/§13.125 当前真实状态逐项核验；统一索引见《手册总目录》）

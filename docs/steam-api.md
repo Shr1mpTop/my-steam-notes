@@ -7,6 +7,13 @@
 
 # 🎮 Steam Web API 开发者指南与核心接口文档
 
+> 📍 本手册归属：《手册总目录》（E:\github\手册总目录.md，相对路径 ../../手册总目录.md）｜ 总手册：《运维手册》（E:\github\运维手册.md）。**改动本手册后必须同步更新《手册总目录》对应条目。**
+
+> ⚠️ 2026-11-18 现状订正（接口清单本身仍然有效，**用途/落地方式已变**）：
+> - 采集端 2026-11-17 起**搬在手机上**（`steam-collector` 60s 轮询 → 本地 SQLite WAL `/root/steam-notes/data/steam.db`），**不再依赖 GitHub Actions 定时**——`poll_status`/`daily_sync` 两个定时工作流已于 2026-11-18 全部 `disabled_manually`，Turso 降为冷存档只读（《运维手册》§13.121/§13.126）。
+> - 文中所有"在 GitHub Actions Secrets 里配置"字样，现状改为：PC 侧密钥在 **gitignored 的 `scripts\collector.env`**，手机侧在 **`/root/steam-notes/phone/steam-collector/.env`（600）**，两者都不进 git。
+> - ⚠️ 待办提醒：`STEAM_API_KEY` 曾随旧提交进入 public 仓 git 历史，**待用户去 steamcommunity.com/dev/apikey 重置**后写回 `collector.env`（§13.126）。
+
 ## 零基础准备与调用规则
 
 ### 1. 基础 URL 结构
@@ -172,3 +179,7 @@ if __name__ == "__main__":
     `http://media.steampowered.com/steamcommunity/public/images/apps/{appid}/{img_icon_url}.jpg`
 2.  **调用频率限制**：Steam API 官方限制是 **每天 100,000 次请求**，对于你的个人数据追踪脚本来说绝对够用了。
 3.  **隐私错误排除**：如果你发现接口返回的是 `{"response": {}}` 空数组，99% 的可能性是你要查询的 Steam 账号的“我的个人资料 -> 隐私设置”中，把“游戏详情”设置成了“私密”或“仅限好友”。**必须设为“公开” API 才能读到**。
+
+---
+
+> ✅ 最后核验：2026-11-18（手册治理代理对照《运维手册》§0/§2/§13.125 当前真实状态逐项核验；统一索引见《手册总目录》）

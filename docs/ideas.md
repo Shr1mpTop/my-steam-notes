@@ -1,3 +1,7 @@
+> 📍 本手册归属：《手册总目录》（E:\github\手册总目录.md，相对路径 ../../手册总目录.md）｜ 总手册：《运维手册》（E:\github\运维手册.md）。**改动本手册后必须同步更新《手册总目录》对应条目。**
+
+> ⚠️ 2026-11-18 现状备注（原始创意清单按原文保留）：表中 **#9 Gaming Clock / #14 Platform 饼图 / #18 吃灰率 / #19 游戏关系网络 / #20 生命力 / #25 游戏天气 / #26 Weekly Digest 这 7 项曾已落地，又于 2026-11-17 前端重构时被移除**（《运维手册》§13.122），**不是现状**，仅作 backlog 参考；现对外站 = ProfileHero + 好友社交面板（FriendsHub/Leaderboards/MeVsThem/SharedGames）+ treemap 游戏云。另：本文"数据源"列的各表现全在**手机本地 SQLite**（`/root/steam-notes/data/steam.db`），Turso 已降为冷存档只读。
+
 搜集了大量创意，整理成完整清单。我按类别分组，标明了每个创意需要的数据源：
 
 全部创意清单（30+ 个可视化模块）
@@ -59,3 +63,7 @@ Steam Monitor (real-time tracking)
 Steam Stats Visualized
 Steam Staying Power visualization
 Steam Profile GitHub Topics
+
+---
+
+> ✅ 最后核验：2026-11-18（手册治理代理对照《运维手册》§0/§2/§13.125 当前真实状态逐项核验；统一索引见《手册总目录》）
