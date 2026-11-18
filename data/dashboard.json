@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T23:25:26.102545+08:00",
+  "updated_at": "2026-11-18T23:55:27.742449+08:00",
   "player": {
     "personaname": "她饮茅台多了",
     "online": true,
@@ -1597,7 +1597,7 @@
     {
       "appid": 4348910,
       "name": "Probably Stolen",
-      "playtime_2weeks_hours": 23.3,
+      "playtime_2weeks_hours": 22.8,
       "playtime_forever_hours": 32.9
     },
     {
@@ -4992,7 +4992,7 @@
     "games": [
       {
         "name": "Probably Stolen",
-        "hours": 23.3
+        "hours": 22.8
       },
       {
         "name": "Apex Legends",
@@ -5717,8 +5717,8 @@
     }
   ],
   "social_presence": {
-    "window_start": "2026-11-11T23:25:26.134307+08:00",
-    "window_end": "2026-11-18T23:25:26.134307+08:00",
+    "window_start": "2026-11-11T23:55:27.776718+08:00",
+    "window_end": "2026-11-18T23:55:27.776718+08:00",
     "members": [
       {
         "id": "self",
@@ -6813,7 +6813,7 @@
     ]
   },
   "friends_hub": {
-    "updated_at": "2026-11-18T23:25:26.137503+08:00",
+    "updated_at": "2026-11-18T23:55:27.780064+08:00",
     "friends": [],
     "shared_games": [],
     "leaderboard_total": [
@@ -6828,14 +6828,14 @@
       {
         "name": "她饮茅台多了",
         "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg",
-        "hours": 56.6,
+        "hours": 56.1,
         "is_self": true
       }
     ],
     "me_vs_them": {
       "my_total_hours": 6110.4,
       "my_total_rank": 1,
-      "my_two_week_hours": 56.6,
+      "my_two_week_hours": 56.1,
       "my_two_week_rank": 1,
       "public_friends": 0,
       "private_friends": 0,
