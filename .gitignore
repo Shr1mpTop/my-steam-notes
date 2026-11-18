@@ -10,4 +10,5 @@ data/trigger-rebuild
 data/collector-status.json
 data/fresh.db*
 scripts/collector.log
+scripts/collector.env
 phone/steam-collector/steam.db*

@@ -22,9 +22,16 @@ function TailOf($out) {
 
 Log "=== collector start ==="
 
-# env for Steam API + local SQLite
-$env:STEAM_API_KEY = "582140B5E4F194473C5172A2CD04B94A"
-$env:STEAM_ID = "76561198367786896"
+# env for Steam API + local SQLite — secrets live in gitignored scripts\collector.env
+$envFile = Join-Path $scripts 'collector.env'
+if (-not (Test-Path $envFile)) { Log "collector.env MISSING (STEAM_API_KEY/STEAM_ID)"; exit 1 }
+Get-Content $envFile | ForEach-Object {
+    $line = $_.Trim()
+    if ($line -and -not $line.StartsWith('#') -and $line.Contains('=')) {
+        $k, $v = $line -split '=', 2
+        Set-Item -Path "env:$($k.Trim())" -Value $v.Trim()
+    }
+}
 $env:STEAM_DB_MODE = "local"
 $env:STEAM_DB_PATH = Join-Path $dataDir 'fresh.db'
 $env:TURSO_URL = ""
@@ -54,7 +61,7 @@ if ($failed) {
 Set-Location $repo
 # self-heal non-fast-forward: rebase onto origin/main; autoStash keeps the
 # main working tree's unrelated dirty files (parallel web edits) untouched
-git -c rebase.autoStash=true pull --rebase origin main 2>&1 | Out-Null
+git -c rebase.autoStash=true -c http.proxy=http://127.0.0.1:7897 pull --rebase origin main 2>&1 | Out-Null
 if ($LASTEXITCODE -ne 0) { Log "pull --rebase FAILED :: non-fast-forward not healable, retry next run"; exit 1 }
 git add data/dashboard.json 2>&1 | Out-Null
 $staged = git diff --cached --name-only
