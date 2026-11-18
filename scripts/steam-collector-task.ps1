@@ -48,7 +48,11 @@ if ($LASTEXITCODE -ne 0) { Log "init tables FAILED exit=$LASTEXITCODE"; $failed 
 $out = & $python (Join-Path $scripts 'sync_realtime.py') 2>&1
 if ($LASTEXITCODE -ne 0) { Log "sync FAILED exit=$LASTEXITCODE :: $(TailOf $out)"; $failed = $true } else { Log "sync OK" }
 
-# 3) build dashboard.json
+# 3) poll own + friends presence (feeds the 24x7 heat map and FRIEND HEAT panel)
+$out = & $python (Join-Path $scripts 'poll_status.py') 2>&1
+if ($LASTEXITCODE -ne 0) { Log "poll FAILED exit=$LASTEXITCODE :: $(TailOf $out)"; $failed = $true } else { Log "poll OK" }
+
+# 4) build dashboard.json
 $out = & $python (Join-Path $scripts 'build_dashboard.py') 2>&1
 if ($LASTEXITCODE -ne 0) { Log "build FAILED exit=$LASTEXITCODE :: $(TailOf $out)"; $failed = $true } else { Log "build OK" }
 
@@ -57,7 +61,7 @@ if ($failed) {
     exit 1
 }
 
-# 4) commit + push (only when dashboard.json actually changed)
+# 5) commit + push (only when dashboard.json actually changed)
 Set-Location $repo
 # self-heal non-fast-forward: rebase onto origin/main; autoStash keeps the
 # main working tree's unrelated dirty files (parallel web edits) untouched
