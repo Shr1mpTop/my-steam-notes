@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-11-18T12:29:01.347683+08:00",
+  "updated_at": "2026-11-18T23:13:43.365851+08:00",
   "player": {
     "personaname": "她饮茅台多了",
-    "online": false,
+    "online": true,
     "currently_playing": "",
     "level": 30,
     "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg"
   },
   "milestone": {
-    "total_hours": 6108.8,
-    "movies": 3054,
+    "total_hours": 6110.4,
+    "movies": 3055,
     "books": 1018,
-    "walking_km": 30544
+    "walking_km": 30552
   },
   "game_cloud": [
     {
@@ -28,9 +28,9 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 780.5,
+      "playtime_hours": 782.1,
       "img_icon_url": "8986dd626da56db5f3fe09bc1b8871739de8b00d",
-      "rtime_last_played": 1794933689,
+      "rtime_last_played": 1795013302,
       "genres": [
         "Action",
         "Adventure",
@@ -1597,14 +1597,14 @@
     {
       "appid": 4348910,
       "name": "Probably Stolen",
-      "playtime_2weeks_hours": 24.2,
+      "playtime_2weeks_hours": 23.5,
       "playtime_forever_hours": 32.9
     },
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_2weeks_hours": 18.1,
-      "playtime_forever_hours": 780.5
+      "playtime_2weeks_hours": 19.5,
+      "playtime_forever_hours": 782.1
     },
     {
       "appid": 1769420,
@@ -1651,10 +1651,10 @@
   ],
   "heatmap": {
     "2026-11-18": {
-      "playtime_minutes": 251,
-      "online_minutes": 251,
+      "playtime_minutes": 346,
+      "online_minutes": 346,
       "games": {
-        "Apex Legends": 251
+        "Apex Legends": 346
       }
     },
     "2026-11-16": {
@@ -3068,7 +3068,7 @@
     }
   ],
   "platform": {
-    "Windows": 6072.2,
+    "Windows": 6073.8,
     "Mac": 26.0,
     "Linux": 0.3,
     "Steam Deck": 0.0
@@ -3082,8 +3082,8 @@
     },
     {
       "name": "Apex Legends",
-      "hours": 780.5,
-      "cumulative_pct": 45.0,
+      "hours": 782.1,
+      "cumulative_pct": 45.1,
       "rank": 2
     },
     {
@@ -3095,7 +3095,7 @@
     {
       "name": "Mount & Blade II: Bannerlord",
       "hours": 308.5,
-      "cumulative_pct": 56.1,
+      "cumulative_pct": 56.2,
       "rank": 4
     },
     {
@@ -3125,7 +3125,7 @@
     {
       "name": "Grand Theft Auto V Legacy",
       "hours": 121.7,
-      "cumulative_pct": 68.6,
+      "cumulative_pct": 68.7,
       "rank": 9
     },
     {
@@ -4088,7 +4088,7 @@
     },
     {
       "day": "Wed",
-      "minutes": 5296
+      "minutes": 5391
     },
     {
       "day": "Thu",
@@ -4142,7 +4142,7 @@
     {
       "appid": 1172470,
       "name": "Apex Legends",
-      "playtime_hours": 780.5,
+      "playtime_hours": 782.1,
       "total": 12,
       "unlocked": 11,
       "pct": 92,
@@ -4913,17 +4913,17 @@
     {
       "genre": "Action",
       "games": 35,
-      "hours": 4779.4
+      "hours": 4781.0
     },
     {
       "genre": "Free To Play",
       "games": 4,
-      "hours": 2814.0
+      "hours": 2815.6
     },
     {
       "genre": "Adventure",
       "games": 26,
-      "hours": 2488.6
+      "hours": 2490.2
     },
     {
       "genre": "RPG",
@@ -4992,11 +4992,11 @@
     "games": [
       {
         "name": "Probably Stolen",
-        "hours": 24.2
+        "hours": 23.5
       },
       {
         "name": "Apex Legends",
-        "hours": 18.1
+        "hours": 19.5
       },
       {
         "name": "Noble Fates",
@@ -5023,7 +5023,7 @@
         "2026-11-12",
         "2026-11-11"
       ],
-      "total_hours": 26.4,
+      "total_hours": 27.9,
       "games_count": 3,
       "top_games": [
         "Apex Legends",
@@ -5299,8 +5299,8 @@
     }
   ],
   "social_presence": {
-    "window_start": "2026-11-11T12:29:01.379889+08:00",
-    "window_end": "2026-11-18T12:29:01.379889+08:00",
+    "window_start": "2026-11-11T23:13:43.401584+08:00",
+    "window_end": "2026-11-18T23:13:43.401584+08:00",
     "members": [
       {
         "id": "self",
@@ -5364,13 +5364,6 @@
           "playing": true
         },
         "segments": [
-          {
-            "start": "2026-11-11T23:04:16.243959+08:00",
-            "end": "2026-11-11T23:19:16.243959+08:00",
-            "status": "playing",
-            "game": "Dota 2",
-            "gameid": "570"
-          },
           {
             "start": "2026-11-12T05:52:06.508690+08:00",
             "end": "2026-11-12T06:07:06.508690+08:00",
@@ -5501,13 +5494,6 @@
           "playing": true
         },
         "segments": [
-          {
-            "start": "2026-11-11T23:04:16.243959+08:00",
-            "end": "2026-11-11T23:19:16.243959+08:00",
-            "status": "playing",
-            "game": "Probably Stolen",
-            "gameid": "4348910"
-          },
           {
             "start": "2026-11-13T23:39:16.293368+08:00",
             "end": "2026-11-13T23:54:16.293368+08:00",
@@ -5970,13 +5956,6 @@
         },
         "segments": [
           {
-            "start": "2026-11-11T23:04:16.243959+08:00",
-            "end": "2026-11-11T23:19:16.243959+08:00",
-            "status": "playing",
-            "game": "Counter-Strike 2",
-            "gameid": "730"
-          },
-          {
             "start": "2026-11-13T23:39:16.293368+08:00",
             "end": "2026-11-13T23:54:16.293368+08:00",
             "status": "playing",
@@ -6416,14 +6395,14 @@
     ]
   },
   "friends_hub": {
-    "updated_at": "2026-11-18T12:29:01.383383+08:00",
+    "updated_at": "2026-11-18T23:13:43.405084+08:00",
     "friends": [],
     "shared_games": [],
     "leaderboard_total": [
       {
         "name": "她饮茅台多了",
         "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg",
-        "hours": 6108.8,
+        "hours": 6110.4,
         "is_self": true
       }
     ],
@@ -6431,14 +6410,14 @@
       {
         "name": "她饮茅台多了",
         "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg",
-        "hours": 56.1,
+        "hours": 56.8,
         "is_self": true
       }
     ],
     "me_vs_them": {
-      "my_total_hours": 6108.8,
+      "my_total_hours": 6110.4,
       "my_total_rank": 1,
-      "my_two_week_hours": 56.1,
+      "my_two_week_hours": 56.8,
       "my_two_week_rank": 1,
       "public_friends": 0,
       "private_friends": 0,
