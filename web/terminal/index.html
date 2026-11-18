@@ -21,8 +21,10 @@
     --gap: 4px;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; }
+  html { margin: 0; height: 100%; }
   body {
+    margin: 0;
+    min-height: 100%;
     background:
       radial-gradient(1200px 600px at 70% -10%, rgba(0, 255, 102, 0.055), transparent 60%),
       repeating-linear-gradient(0deg, var(--grid) 0 1px, transparent 1px 3px),
@@ -31,7 +33,8 @@
     font-family: var(--mono);
     font-size: 11px;
     line-height: 1.3;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   body::after {
     content: "";
@@ -71,17 +74,19 @@
   main.cols {
     display: flex; gap: var(--gap);
     padding: var(--gap);
-    height: calc(100vh - 26px - 18px - 2 * var(--gap) - 2px);
-    overflow: hidden;
+    align-items: flex-start;
+    min-height: calc(100vh - 26px - 18px - 2 * var(--gap) - 2px);
+    padding-bottom: 26px;
+    overflow: visible;
   }
   .col {
     flex: 1 1 0; min-width: 0;
     display: flex; flex-direction: column; gap: var(--gap);
-    overflow: hidden;
+    overflow: visible;
   }
   section.panel {
-    flex: 1 1 0;
-    min-height: 0;
+    flex: none;
+    min-height: 84px;
     min-width: 0;
     display: flex; flex-direction: column;
     border: 1px solid var(--line);
@@ -89,13 +94,13 @@
     box-shadow: inset 0 0 18px rgba(0, 255, 102, 0.04);
     overflow: hidden;
   }
-  section.panel.compact { flex: 0 0 auto; }
-  section.panel.grow-sm { flex-grow: 0.8; }
-  section.panel.grow { flex-grow: 1.4; }
-  section.panel.grow-lg { flex-grow: 2.2; }
+  section.panel.compact { flex: none; }
+  section.panel.grow-sm,
+  section.panel.grow,
+  section.panel.grow-lg { flex: none; }
   .panel-head {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 2px 6px;
+    padding: 3px 7px;
     border-bottom: 1px solid var(--line);
     color: var(--fg); font-size: 10px; letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -104,14 +109,10 @@
   }
   .panel-head .meta { color: var(--fg-faint); font-size: 9px; }
   .panel-body {
-    flex: 1 1 auto; min-height: 0;
-    padding: 3px 6px;
-    overflow: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--fg-faint) transparent;
+    flex: 1 1 auto;
+    padding: 4px 7px;
+    overflow: visible;
   }
-  .panel-body::-webkit-scrollbar { width: 5px; height: 5px; }
-  .panel-body::-webkit-scrollbar-thumb { background: var(--fg-faint); }
 
   table { border-collapse: collapse; width: 100%; font-size: 10.5px; }
   th { text-align: left; color: var(--fg-faint); font-weight: 500; padding: 1px 5px 1px 0; position: sticky; top: 0; background: rgba(2, 6, 4, 0.92); }
@@ -150,9 +151,9 @@
   .detail-close { cursor: pointer; color: var(--fg-dim); background: none; border: 1px solid var(--line); border-radius: 4px; font-family: var(--mono); font-size: 9px; padding: 1px 5px; }
   .detail-kv { display: grid; grid-template-columns: 84px 1fr; gap: 1px 8px; font-size: 10.5px; }
   .detail-kv span:nth-child(odd) { color: var(--fg-faint); }
-  .detail-games { margin-top: 4px; max-height: 160px; overflow: auto; }
+  .detail-games { margin-top: 4px; max-height: 280px; overflow: auto; }
 
-  .hour-heat { display: grid; grid-template-columns: repeat(24, 1fr); gap: 2px; align-items: end; height: 74px; }
+  .hour-heat { display: grid; grid-template-columns: repeat(24, 1fr); gap: 2px; align-items: end; height: 96px; }
   .hour-heat .hcol { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; min-width: 0; }
   .hour-heat .hbar { width: 100%; background: var(--fg-dim); box-shadow: 0 0 5px rgba(0,255,102,.35); min-height: 1px; }
   .hour-heat .hlab { font-size: 8px; color: var(--fg-faint); margin-top: 1px; }
@@ -169,10 +170,10 @@
   }
   @media (max-width: 900px) {
     body { overflow: auto; }
-    main.cols { flex-direction: column; height: auto; overflow: visible; }
+    main.cols { flex-direction: column; min-height: auto; overflow: visible; }
     .col { overflow: visible; }
     section.panel { flex: none; }
-    .panel-body { max-height: 300px; }
+    .panel-body { max-height: 300px; overflow: auto; }
     .presence-axis, .presence-row { grid-template-columns: 110px 1fr 44px; }
     .presence-axis-total { display: none; }
   }
