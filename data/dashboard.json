@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T23:13:43.365851+08:00",
+  "updated_at": "2026-11-18T23:25:26.102545+08:00",
   "player": {
     "personaname": "她饮茅台多了",
     "online": true,
@@ -1597,7 +1597,7 @@
     {
       "appid": 4348910,
       "name": "Probably Stolen",
-      "playtime_2weeks_hours": 23.5,
+      "playtime_2weeks_hours": 23.3,
       "playtime_forever_hours": 32.9
     },
     {
@@ -4992,7 +4992,7 @@
     "games": [
       {
         "name": "Probably Stolen",
-        "hours": 23.5
+        "hours": 23.3
       },
       {
         "name": "Apex Legends",
@@ -5296,11 +5296,429 @@
       "feedlabel": "Community Announcements",
       "update_type": "Update",
       "contents": "Hello, everyone!We have some news to share from the tower: STARIO: Haven Tower is coming to WePlay 2026!You’ll find us in Zone B01, where you can try the game for yourselves. Here are the event details:Dates: November 21–22, 2026 Venue: Hall 2.2, National Exhibition and Convention Center, Shanghai Booth Location: Zone B01Come say hello if you’re stopping by. We’d love to see you there!And here’s a little secret: the playable build will include some brand-new gameplay and features, but we’ll leave it to you to discover exactly what’s in store!STARIO is also currently 10% off, matching its lowest price to date. The discount ends on November 16, so if you’ve been thinking about adding it to your library, now’s a good time!A Peek at What’s ComingSince getting the current version into a stable ..."
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "Counter-Strike 2 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144180746",
+      "date": 1794438200,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "\\Fixed some cases of popping and glitching when switching weapons and reloading at extreme angles\\Fixed bot pathing issue in Retakes game modeFixed a rendering hang on DX11Improved avx / avx512 instruction set detectionMiscellaneous stability and performance improvements"
+    },
+    {
+      "appid": 271590,
+      "game_name": "Grand Theft Auto V Legacy",
+      "title": "I have converted GTA 5 from crime sim to train sim",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PC Gamer/1849192144179763",
+      "date": 1794420000,
+      "feedname": "PC Gamer",
+      "feedlabel": "PC Gamer",
+      "update_type": "Update",
+      "contents": "s we've already discussed, I regard the personal automobile as a <a href=\"https://www.pcgamer.com/games/sim/ive-never-felt-worse-for-doing-well-in-a-videogame-than-in-this-intensely-90s-citybuilder/\">vector of poisonous ideology</a>. Its beneficent alternative? The train: socialised, communal, predictable, subject to the gentle yet firm hand of rational state planning. If the world had more trains in it, we wouldn't be where we are now. We'd be somewhere else. On account of catching the train... <a href=\"https://www.pcgamer.com/games/grand-theft-auto/i-have-converted-gta-5-from-crime-sim-to-train-sim/?utm_source=steam&utm_medium=referral\" target=\"_blank\">Read more.</a>"
+    },
+    {
+      "appid": 214340,
+      "game_name": "Deponia",
+      "title": "Small Patch, Big Impact - Deponia Patch 4.0.1387",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144179425",
+      "date": 1794415177,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Heyho everyone,We are excited to announce that we found the source, the fix - and the hands to implement it, for one of the most annoying bugs in this game: The detonation plan bug. This Bug plagued a lot of players when loading a savegame in which the detonation plan was activated with the magnets, but had not fulfilled its purpose yet. We found a way to prevent this bug from appearing by storing the data used by the detonation plan in a more robust way and also making the code that uses this data more ...well, ... robust. Additionally we fixed the following two bugs in this update: Missing dialog option for closing the radio dialog with Cletus, when opening this dialog again after finishing it, while playing with Chinese, Korean or Arabic subtitles Incorrectly scaled game window on macOS..."
+    },
+    {
+      "appid": 261550,
+      "game_name": "Mount & Blade II: Bannerlord",
+      "title": "Patch Notes - WS v1.3.7 / BL v1.5.7",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144179132",
+      "date": 1794411194,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Greetings, Warriors of Calradia! War Sails v1.3.7 and Bannerlord v1.5.7 are now live on PC, with the console release planned once the release process for them concludes. Join us in watching the video below as we walk through the key highlights included in this update. Prefer reading instead? You can find the full text breakdown further below.\\ GETTING OUT TO SEAOwning a fleet has always demanded substantial progress - ships of your own, and crews that man them. We wanted to keep that intact while opening up more ways to access naval content earlier. The first is the ability to begin your Sandbox with a small trading ship through the new Advanced Starting Options. We’ll talk about those in a minute. Next, we have the ferry. You can now travel between certain coastal villages without owning ..."
+    },
+    {
+      "appid": 553850,
+      "game_name": "HELLDIVERS™ 2",
+      "title": "Devoid of Liberty: 7.2.3",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144178073",
+      "date": 1794392410,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Greetings, Helldivers. Today's hotfix tackles crash and bug fixes, as well as unblocking some cosmetic modifications. 🤝 Community Feedback Changes\\ Fixed an issue preventing certain cosmetic mods from functioning. 🔧 FixesCrash FixesFixed a crash that could occur when receiving status effects such as poison or gas in Hive World caves\\ Fixed a crash that could occur while exiting the game\\ Fixed a crash that could occur on boot when the game had issues with writing permissions on Windows MiscFixed issue where fire did not work and couldn’t be spread inside cavesFixed a level generation issue on Hive World caves where large assets could spawn outside the cave and block mission progression and stratagem call-in 🧠 Known Issues "
+    },
+    {
+      "appid": 1129580,
+      "game_name": "Medieval Dynasty",
+      "title": "Patch 2.7.0.5 on the Public Branch",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1849192144177650",
+      "date": 1794384007,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Dear Players, We share with you update 2.7.0.5 which resolves some of the problems related to the recent release, and includes additional changes: Fixed Legendary Animal spawning beyond the Valley map border Throwing Rocks not dealing damage to fish Bandit damage multiplier having no effect on bandit weapons in certain cases Trapping Master skill bugs appearing if players were on horses in Co-op mode Kind regards Render Cube and Toplitz teams"
+    },
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "Apex Legends: Latest Update 11/10/2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643360717",
+      "date": 1794334547,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "ADJUSTED:Crypto's drone is now able to scan through glassRevive is no longer interrupted and canceled if drone timer endsDev note: This is the next batch of Crypto changes we alluded to last week. While we are confident this, paired with last week's changes, will give Crypto's kit a meaningful boost, we will continue to monitor match data and player sentiment - so please let us know what you think once you've been hands-on with the adjustments. REMOVED:Loot Vaults have been removed from World's EdgeDev note: While World's Edge has not been in map rotations this season, we're aware that some players have noted vault removals in private/custom matches. This was an intentional change that we missed in the most recent Patch Notes, made to keep focus on Strongholds as the main source of mid-mat..."
+    },
+    {
+      "appid": 553850,
+      "game_name": "HELLDIVERS™ 2",
+      "title": "Developer Blog: November 2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643360280",
+      "date": 1794328293,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Content Update",
+      "contents": "Hello from Arrowhead, Helldivers! Our latest game update, Update 7.2, has been out for a few weeks now as well as hotfixes. As part of our continued commitment to improved transparency, here are the team’s latest reflections and our next steps for development based on this update. We poured a lot of work into the features you’ve been playing this Fall, some of which you’re actively discovering in-game over the last week (and which hit late compared to our content roadmap - more on this below). Since August you’ve collectively invaded and collapsed the Void, fought Illuminate Crushers and Wretches, activated the Terminid Control System+, celebrated Liberty Day, adopted a SEAF, provided a tank in every Super Earth citizen's driveway and more: not bad for three months! While Helldivers have p..."
+    },
+    {
+      "appid": 2835590,
+      "game_name": "8AM",
+      "title": "15 DAYS LEFT!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643360237",
+      "date": 1794327933,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "As part of the 8AM series, this new entry takes players into a graveyard environment where observation, attention to detail, and quick decision-making are essential. Players will monitor camera feeds, identify anomalies, and report anything that should not be there before the situation escalates.With only one month remaining until release, we invite you to add 8AM: The Graveyard to your Steam wishlist and follow the game to stay updated ahead of launch.Thank you for your continued support."
+    },
+    {
+      "appid": 365670,
+      "game_name": "Blender",
+      "title": "Blender 5.2.4 LTS Maintenance Release !",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643359537",
+      "date": 1794319223,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Blender 5.2.4 LTS features important bug fixes. It is released on the v5.2 - Stable - LTS branch. You can switch to this by right-clicking on the Blender entry in your library, select Properties.... Open the Betas tab and select v5.2 - Stable - Stable. Patch Notes * Python: Update certifi to 2026.10.19 and pip to 26.2.2. (e0d07a060956adf53b5f45dc0480e5b9d1f725a0) * Nodes: Multi-selection not cleared when auto-selecting new group input. (#155252) * Cycles Metal: data race in `path_cache_get()` crashes kernel compile threads (SIGABRT / heap corruption). (#165111) * Auto masking cavity Not working. (#164817) * Crash with delaunay grease pencil fill tool on empty frame. (#165148) * Fix: Crash symmetrizing bones with Action constraint animation. (f6e7b442edb) * Fix: UI: Text-box trackpad scroll..."
+    },
+    {
+      "appid": 365670,
+      "game_name": "Blender",
+      "title": "Blender 4.5.16 LTS Maintenance Release !",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643359092",
+      "date": 1794311177,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Blender 4.5.16 LTS features important bug fixes. It is released on the v4.5 - Stable - LTS branch. You can switch to this by right-clicking on the Blender entry in your library, select Properties.... Open the Betas tab and select v4.5 - Stable - Stable. Patch Notes * Python: Update certifi to 2026.10.19 and pip to 26.2.2. (dfc5900d81c1fbb5fc61d9fe5683ab972c666d81) * Line Art Modifier not recognizing Hair Curve objects. (#145291) * libraries.write crashes copying a newly created scene with an unsynchronized view layer. (#165588) * Fix #165789: Holes in the result of the skin modifier. (fc1e5163d95) * Fix: Curves: Attribute validator allows invalid curve type. (773d2b52ef) * Fix: Grease Pencil: Replace end frames on load by empty drawing. (602742a4ea) * GreasePencil: Disable 'duration' and '..."
+    },
+    {
+      "appid": 975370,
+      "game_name": "Dwarf Fortress",
+      "title": "Fortress Mode Now Has Audio(!!) + Myth & Magic progress 🎶 Patch 53.17",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643356099",
+      "date": 1794241121,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "Hey Urists,We wanted to update you on the progress of Myth & Magic. We were hoping to have the update out by the end of the year but unfortunately we won’t be able to reach that goal. Tarn has run into significant issues with the graphics engine and myth generation and we want to take the time to do it right. There is also an update to the graphics engine in progress which will allow us to include all the special magical effects the artists have been working on. We will be sharing progress as we go along and we’ll have a release date when we get closer.Myth & Magic Progress There’s been a good amount of progress to Myth & Magic already! We’ve got new wizard equipment in a variety of different styles. Wizards will come to your fort if your dwarves are able to entice them. Ancient Ruins One ..."
+    },
+    {
+      "appid": 359550,
+      "game_name": "Tom Clancy's Rainbow Six Siege",
+      "title": "Year 11 Season 4 Reveal Incoming",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643355550",
+      "date": 1794232834,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "A New Season Is Approaching {STEAM_CLAN_IMAGE}/8328525/93fab478b7ca851ad2d9107f224292d1584213c0.png The next chapter of Rainbow Six Siege is almost here. New gameplay updates, competitive improvements, and fresh opportunities are on the horizon. Whether you're climbing the Ranked ladder or coordinating with your squad, the upcoming season will introduce meaningful changes designed to strengthen the Siege experience. Stay tuned as we prepare to unveil what's next. Watch The Season Reveal Join us during the Osaka Major Grand Final for the official Year 11 Season 4 reveal. Be among the first to discover the season's biggest updates, hear directly from the development team, and get an early look at the future of Rainbow Six Siege. Panel Schedule November 14 9:30 PM ET 11:30 PM BRT November 15 ..."
+    },
+    {
+      "appid": 538030,
+      "game_name": "Xenonauts 2",
+      "title": "Full Release 7.29.0 STABLE (Unity 6.6 Reversion) Released!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643354975",
+      "date": 1794220748,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "We've pushed out a new update that reverts the Unity 6.6 upgrade from our previous build (7.28.0), as a small number of users were experiencing issues with starting the game. There were no gameplay changes in this build or the previous one, so effectively the game remains the same as it was in 7.27.13 before the upgrade.If for any reason you continue to experience issues with the game after this patch, the specific pre-upgrade build (7.27.13) is available on the \"legacy_v7\" Steam branch for anyone to use if needed.The Unity 6.6 versions are still active on the Experimental branch, and we'll try and figure out what might have been causing the startup issue for those affected next week so we can correct it (we need the 6.6 upgrade to support our upcoming official mod tools release).If you we..."
+    },
+    {
+      "appid": 1134700,
+      "game_name": "Wild Terra 2: New Lands",
+      "title": "Hotfix 3.0.446",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643354644",
+      "date": 1794212431,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Seasonal servers:- The seasonal reward list now shows detailed information about pets.- Fixed a bug that caused duplicated equipment to lose durability at the same time as its duplicate.- Fixed a bug that caused an incomplete line of information to be shown at the top of the rewards window. General fixes:- Improved handling of going down stairs.- Increased the interaction area and range for a Grave (helps in some cases where other objects overlap the grave).- Grave lifetime on Plague Island has been increased by 1 minute.- Added the \"Butcher All\" option.- Improved book sorting convenience (books are additionally sorted alphabetically by skill).- Effects and bonuses that refer to item rarity now show the rarity name in color in their description (matching the item rarity border). Descriptio..."
+    },
+    {
+      "appid": 4348910,
+      "game_name": "Probably Stolen",
+      "title": "100-Rev13 Hotfix",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643353154",
+      "date": 1794161867,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Hey, everyone! Here are the latest updates:ChangesChinese: Restored the previous translations of names, items, dialogue and UI text.Bug FixesLou: Fixed items in her locker not being counted correctly, which caused the player to be bombed. The fix applies to existing saves.Modding APIA major modding security update is planned and will be fully merged on December 10. Modders should check the updated Modding API documentation and update their mods before that date."
+    },
+    {
+      "appid": 1876880,
+      "game_name": "Primitive Society Simulator",
+      "title": "[Beta] 0.4.0_1108.1859",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643352671",
+      "date": 1794150870,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Interaction ImprovementsAfter Monogamy is enacted, children will now display the leader group they will join upon reaching adulthood.After Monogamy is enacted, if there is no estate and the parents' room has no available bed, children can now find an empty bed to sleep in.The Noble Training Ground can now accommodate multiple mother-child pairs training simultaneously.Bug FixesFixed an issue where starting a new game with \"Hide Roofs\" enabled and then building a shed would result in the shed's blueprint not having its roof hidden.Attempted fix for a bug where the construction blueprint for the Vanity Table (and potentially other affected buildings) was not visible."
+    },
+    {
+      "appid": 1787090,
+      "game_name": "MyDockFinder",
+      "title": "1.19.1 Official Version and Beta Version Release",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643352278",
+      "date": 1794141108,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "This update has the same version for both the official release and the betaThis time we're only adding a test for the dock background liquid glass. Both the official and beta channels are fine, but you'll need to add the configuration file manually because this feature isn't finished yet. There might be a lot of bugs, so it's just for trying out. Turning on liquid glass will increase GPU usage since it keeps taking screenshots in the background. If you're gaming, it's recommended to turn it off.Dock background liquid glass configuration. You need to manually add dockbgtype=1 under \\ in config.ini. After restarting, the dock background liquid glass effect can be enabled.Changelog Adjusted the compilation method, switched the instruction set back to SSE to prevent issues with some older CPUs..."
+    },
+    {
+      "appid": 552990,
+      "game_name": "World of Warships",
+      "title": "Weekend Highlights | 15.10 #1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643349014",
+      "date": 1794049201,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Update 15.10: What's New? {STEAM_CLAN_IMAGE}/31013613/0ed58bef247967a3fc4b797c95292a8bfb90941f.png Cultists and airships and Relics, oh my! Update 15.10 comes plunging into World of Warships with a new horror-themed PvE event front-and-center. That's just the tip of the iceberg, though, because we also have an all-new line of European cruisers entering the game in Early Access, as well as the return of Black Friday, UI improvements, and more! Check it all out in our dedicated article: About Update 15.10 King of the Sea XIX: International Finals {STEAM_CLAN_IMAGE}/31013613/f106ee3e43721150137265a5c277dd20df083744.png World of Warships' grandest tournament kicks off this weekend and will conclude in spectacular fashion later this month. Watch the top teams from each region face off for their..."
+    },
+    {
+      "appid": 4348910,
+      "game_name": "Probably Stolen",
+      "title": "Cumulative Update - 1.0.0.12",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643347661",
+      "date": 1794005714,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "New Features Dialogue: You can now click a dialogue bubble or the name bubble to advance the conversation, in both auto and manual advance modes. Space still works as before. Options: Added \"Dialogue bubble size\", which scales the speech bubbles, name tags and reply choices in the store and on the phone from 50% to 150%. Options: Added \"Move Bought Items to Inventory\" (on by default). Options: Added \"Disable Pop Culture Characters\" under Gameplay, which stops pop culture inspired customers (the Case Enjoyer and the Foodie Tourist) from visiting the store. Power Line Hijack now also makes Current Converters 15% cheaper to run and allows them to work during blackouts. Added Power Line Hijack II and III, which make Current Converters even cheaper to run. Intake and Outlet Hoppers can now be r..."
+    },
+    {
+      "appid": 304930,
+      "game_name": "Unturned",
+      "title": "3.26.3.14 Patch Notes",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643347277",
+      "date": 1793995745,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Patch Notes",
+      "contents": "ChangelogAdded notification to groups menu clarifying how recent Steam profile privacy changes affect groups in multiplayer.Storage barricades placed in the level editor not applying Default_Contained_Items. (Thanks bred!)MasterBundleReference properties (such as EquipablePrefab) inconsistent handling of empty UnityEvents cancelling load. (Thanks ZoliWorks!)An exploit corrupting equipped item state (example: switching incompatible attachments onto the equipped weapon). (Thanks iche-new!)As a reminder, please use caution when accepting unexpected server invites or joining servers from people you do not trust. We have recently seen an increase in reports involving malicious Workshop content."
+    },
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "Apex Legends: Latest Update - 11/6/2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643347036",
+      "date": 1793990928,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "MAP CHANGERemoved E-District (night) from all map rotations, and rotating in E-District (day)Dev Note: We are working on a handful of high impact changes that improve visibility on E-District night. We still want to deliver on the fantasy and atmosphere of a neon-soaked city, but feel we can do so in a way that doesn't compromise visibility. Expect reduced fog density, increased fog distance and adjusted color balance when E-District night comes back later this split. We anticipate reimplementing an improved E-District (night) map near the end of the month. Thank you for your continued feedback."
+    },
+    {
+      "appid": 4348910,
+      "game_name": "Probably Stolen",
+      "title": "Roadmap and 1 Million Shopkeepers Celebration!",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643346998",
+      "date": 1793990477,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Content Update",
+      "contents": "1 MILLION Shopkeepers have opened the shop!🧡Seeing this many people running shops on the station means the world to our small team and we are excited to share with you what we have in store for Probably Stolen's future. We read your reviews, bug reports and feedback, and you are the ones helping us decide what to prioritize next. So please never stop sending us your feedback!🗺️ What’s Coming NextThe development continues after 1.0 launch and we have many free content updates planned for the station. We know you've been eagerly waiting for this and so here it is finally, our official ROADMAP for the next few months.Few notes on the RoadmapNovember is all about polishYou may have noticed the roadmap doesn't cover this month. That's because our main focus is bug fixes and quality-of-life impr..."
+    },
+    {
+      "appid": 227300,
+      "game_name": "Euro Truck Simulator 2",
+      "title": "Pinktober 2026 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643346266",
+      "date": 1793980818,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "October has come to an end, and we're excited to share the results of this year's efforts! Throughout the month, our #BestCommunityEver came together once again to support an important cause, helping us turn our shared passion for trucking into something that reaches far beyond the virtual roads.We're incredibly happy to announce that, thanks to your support of our Pink Ribbon Charity Packs for Euro Truck Simulator 2 and American Truck Simulator, we have raised 32,000 USD!This achievement wouldn't have been possible without you. Every charity pack purchased, every screenshot shared, and every bit of awareness spread throughout the community helped contribute to this result. It's always inspiring to see how our players come together when there's an opportunity to support something meaningfu..."
+    },
+    {
+      "appid": 322330,
+      "game_name": "Don't Starve Together",
+      "title": "Hotfix 762172",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643344073",
+      "date": 1793935409,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Changes Added map screen sounds. Bug Fixes Fixed bug causing Depth Worm Waves to never come even if enabled. Fixed bug causing Moonblind Crows and Misshapen Birds to behave incorrectly during a Moonstorm event. Fixed bug causing Skittersquids to not spawn during Dusk, and a crash when Skittersquids are set to “Little” in world settings. Fixed bug causing Werepigs to always be stunlocked when attacked. Fixed bug causing additional Mermummies to spawn on every reload. Fixed bug causing Frankenswine, Mermummy, or Vamphare to retrofit onto creatures with equipment. Fixed Waterballoons going invisible when using the Clean Sweeper. Fixed an assortment of items floating on the water going invisible when changing skins via the Clean Sweeper. Fixed an issue on Linux that would result in black UI el..."
+    },
+    {
+      "appid": 322330,
+      "game_name": "Don't Starve Together",
+      "title": "Hotfix 762113",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643343655",
+      "date": 1793925127,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Changes Added map screen sounds. Bug Fixes Fixed bug causing Depth Worm Waves to never come even if enabled. Fixed bug causing Moonblind Crows and Misshapen Birds to behave incorrectly during a Moonstorm event. Fixed bug causing Skittersquids to not spawn during Dusk, and a crash when Skittersquids are set to “Little” in world settings. Fixed bug causing Werepigs to always be stunlocked when attacked. Fixed bug causing additional Mermummies to spawn on every reload. Fixed bug causing Frankenswine, Mermummy, or Vamphare to retrofit onto creatures with equipment. Fixed Waterballoons going invisible when using the Clean Sweeper. Fixed an assortment of items floating on the water going invisible when changing skins via the Clean Sweeper. Fixed an issue on Linux that would result in black UI el..."
+    },
+    {
+      "appid": 2835590,
+      "game_name": "8AM",
+      "title": "Discover Let's Build Together",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643343246",
+      "date": 1793915505,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "We'd like to introduce you to Let's Build Together. Build up to 859,436 pieces in a single map, solo or with up to 8 friends. Unlock powerful upgrades, automate construction with helpers, and turn empty plots into finished buildings in this cozy first-person building game. https://store.steampowered.com/app/5551100/ HeadArrow Team"
+    },
+    {
+      "appid": 289070,
+      "game_name": "Sid Meier's Civilization VI",
+      "title": "[Windows Only] Civilization VI Hotfix: November 2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643342775",
+      "date": 1793905615,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "We’ve released a targeted update to improve security protections for Civilization VI. Gameplay and save files should remain fully compatible with this update, though some community mods may experience compatibility issues. Please give mod authors time to update their creations, and consider temporarily disabling affected mods if you experience issues."
+    },
+    {
+      "appid": 1134700,
+      "game_name": "Wild Terra 2: New Lands",
+      "title": "Major Update 3.0.445. Season: Masters' Ascension",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643341245",
+      "date": 1793883664,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Major Update",
+      "contents": "Seasons are a new game mode, available only on separate servers! 3 servers have been launched: Ether (EU), Apex (NA), Spire (AP). The first season, Masters' Ascension, has begun! Earn rewards from the Free Path and the Noble Path. The Noble Path requires a Noble Season Pass (available in the game shop).This season is played in PvE mode.In this season: doubled experience and Infinite inspiration, faster respawns, double yield of rare resources, and other effects!Earn Season points for levels and for killing bosses, as well as from scrolls (from the mayor and in the game shop).Compete in the season ranking! The top 3 on each server will receive additional commemorative rewards (titles, borders). Points from scrolls do not count toward the ranking.Season rewards are placed in Legacy (they can..."
+    },
+    {
+      "appid": 3241660,
+      "game_name": "R.E.P.O.",
+      "title": "R.E.P.O. v0.5.1",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643340421",
+      "date": 1793869629,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Content Update",
+      "contents": "Hey hey semibots! Here is a small update with some fixes for our latest content update! NEW CHANGES BALANCING FIXES NEW Keybinding - Added the ability to unbind optional keybinds (chat, expressions, and voice chat). Added gamepad keybinds for chat, push-to-talk, and toggle mute. Gamepad - Added gamepad text input support for chat and a rotation sensitivity setting. CHANGES Enemy Pony - Adjusted riding position and prevented collisions between the pony and its rider. Localization - Added some missing translations. Gamepad - Increased maximum aim sensitivity for gamepad. BALANCING Valuable Manor Coffin - Slightly smaller. Upgraded Cube of Knowledge - Now heavier in its final form, talks more often and attracts enemies from further away. FIXES Tumble Wings - Fixed deactivating when scraping t..."
+    },
+    {
+      "appid": 227300,
+      "game_name": "Euro Truck Simulator 2",
+      "title": "Euro Truck Simulator 2: 1.62 Update Release",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643340236",
+      "date": 1793866343,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "We're excited to announce that the 1.62 update for Euro Truck Simulator 2 has officially been released and is now available on Steam!Before we head to the news, we would like to thank everyone who took part in the Open Beta and reported any issues or provided general feedback on our forum. This makes it much easier for our team to fine-tune everything and helps ensure a smooth transition to the full update release.DAF XG+ Emerald, Sapphire & 30 Years in Czechia EditionsWe are releasing three new editions of the DAF XG+! The Emerald and Sapphire Editions bring distinctive green and blue paint jobs, exclusive exterior accessories, and specially designed interiors, offering drivers a stylish new way to personalise their trucks.The third addition, the DAF XG+ 30 Years in Czechia Edition, celeb..."
+    },
+    {
+      "appid": 578080,
+      "game_name": "PUBG: BATTLEGROUNDS",
+      "title": "[Dev Letter] Anti-Cheat Update - Combating Cheat Distribution and Ban Evasion",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643339943",
+      "date": 1793858434,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "{STEAM_CLAN_IMAGE}/27971017/bec6b560d3e8b6691a748abf5602af472342b702.png Read the full announcement here!"
+    },
+    {
+      "appid": 2016590,
+      "game_name": "Dark and Darker",
+      "title": "Early Access Hotfix #131",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643339897",
+      "date": 1793856603,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Hotfix",
+      "contents": "Greetings, Adventurers. We’d like to inform you of the latest changes applied in this update.IRONMACEBugfixes:Fixed an issue where, if the Fighter’s Fortified Ground deployment was interrupted before the banner was planted, the banner could remain attached to the character, making them appear to move extremely fast and stutter.Fixed an issue where the hit sound could fail to play when struck by the Rogue’s Caltrops.Fixed an issue where casting Polymorph as a Wizard from a high position in the Dual Caverns module of The Frost Mountain - Ice Cavern could cause the screen to be blocked by the inside of the polymorphed target’s face.Fixed an issue where arrows stuck in front of the target in the Tavern could block projectiles, preventing the score from being displayed when hitting the target.F..."
+    },
+    {
+      "appid": 1422450,
+      "game_name": "Deadlock",
+      "title": "Minor Update - 11-04-2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643339845",
+      "date": 1793854950,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "- Healbane: Stacks now diminish 20% more aggressively (at 2 stacks 57.8%->54.7%, at 4 stacks 82.2% to 72%)- Apollo: Riposte - Pommel Hit now also disarms the enemy- Apollo: Riposte - Pummel hit now ends any preexisting parry on the target- Apollo: Riposte - T2 increased from +0.6s duration to +0.7s- Apollo: Itani Lo Sahn - T3 bonus damage increased from +50% to +60%- Baba: Spirit Resistance scaling reduced from 0.7 to 0.5- Baba: Melee damage per boon reduced by 10%- Baba: Baba's Brew - Cooldown increased from 27s to 28s- Baba: Baba's Brew - Burn DPS spirit scaling reduced from 0.15 to 0.13- Baba: Baba's Brew - Cycle time increased from 1.5s to 1.6s- Baba: Granny Long Legs - Melee Resist reduced from 30% to 25%- Baba: Granny Long Legs - Debuff Resist reduced from 30% to 25%- Celeste: Dazzli..."
+    },
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "Apex Legends: Latest Update 11/4/26",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848557880481641",
+      "date": 1793846626,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "🛠️ADJUSTED:CryptoDrone recall time has been shortened from 6 seconds to 0.7 seconds.Dev note: We are continuing to monitor match data and player feedback surrounding Crypto's state following his rework. We believe some aspects or finer details of this update missed the marked, especially for Crypto mains. This change is one we're able to make quickly, while we have more changes planned that require a full client update and should be released soon.✅FIXED:Crypto: fixed a bug where using an ordnance while using Crypto's drone would crash the gameEvac Towers: Stopped an exploit that allowed players to use excessive Evac Towers."
+    },
+    {
+      "appid": 730,
+      "game_name": "Counter-Strike 2",
+      "title": "Counter-Strike 2 Update",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848557880481353",
+      "date": 1793840047,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "\\Bomb defusal in Retakes mode will now instantly finish when there is sufficient time remaining in the round and no active utility remains to prevent the defuse.Reduced freeze time and round restart delay in Retakes mode.Pinging pet chickens during freeze time will request a trick from them.Pet chicken names are no longer displayed when customized item text game option is set to hidden.\\Instance.Precache now accepts entities to precacheAdded new top level export EntitiesAdded Entities.SpawnAdded Instance.OnBotControlAdded CSPlayerController.IsControllingBotAdded CSPlayerController.GetControlledBotPawnAdded CSPlayerPawn.ResetMoved Instance.ConnectOutput to Entities and changed it to accept a config objectMoved Instance.DisconnectOutput to EntitiesRenamed Instance.EntFireAtName to Entities.F..."
+    },
+    {
+      "appid": 1172470,
+      "game_name": "Apex Legends",
+      "title": "An Update from the Anti-Cheat Team – Nov 4, 2026",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848557880480055",
+      "date": 1793811743,
+      "feedname": "steam_community_announcements",
+      "feedlabel": "Community Announcements",
+      "update_type": "Update",
+      "contents": "Ranked Integrity Update – Rookie Rank ExploitWe recently identified and quickly resolved an exploit that allowed some players, primarily on PlayStation 5, to enter Ranked matches as Rookie IV regardless of their actual rank.This caused several unintended advantages, including:No Ranked entry costRookie-tier kill bonusesMatchmaking Rating (MMR) being recorded as 0RP earned during these matches still being added to the player's actual Ranked scoreThis created an unfair advantage and directly impacted the integrity of Ranked progression.Our Anti-Cheat team identified the root cause and deployed a fix to prevent further abuse. We also conducted an investigation into accounts that benefited from this exploit and took enforcement action against players who deliberately and egregiously abused it...."
+    },
+    {
+      "appid": 4348910,
+      "game_name": "Probably Stolen",
+      "title": "This new shop sim game is doing gangbusters on the Steam charts",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/1848557880479800",
+      "date": 1793809149,
+      "feedname": "PCGamesN",
+      "feedlabel": "PCGamesN",
+      "update_type": "Update",
+      "contents": "Probably Stolen, new from publisher tinyBuild adds a rather dour sci-fi twist to the shop simulation formula we've seen a lot of recently, and it's doing rather well. Read the full story on PCGamesN: <a href=\"https://www.pcgamesn.com/probably-stolen/huge-peak-steam\">This new shop sim game is doing gangbusters on the Steam charts</a> "
     }
   ],
   "social_presence": {
-    "window_start": "2026-11-11T23:13:43.401584+08:00",
-    "window_end": "2026-11-18T23:13:43.401584+08:00",
+    "window_start": "2026-11-11T23:25:26.134307+08:00",
+    "window_end": "2026-11-18T23:25:26.134307+08:00",
     "members": [
       {
         "id": "self",
@@ -6395,7 +6813,7 @@
     ]
   },
   "friends_hub": {
-    "updated_at": "2026-11-18T23:13:43.405084+08:00",
+    "updated_at": "2026-11-18T23:25:26.137503+08:00",
     "friends": [],
     "shared_games": [],
     "leaderboard_total": [
@@ -6410,14 +6828,14 @@
       {
         "name": "她饮茅台多了",
         "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg",
-        "hours": 56.8,
+        "hours": 56.6,
         "is_self": true
       }
     ],
     "me_vs_them": {
       "my_total_hours": 6110.4,
       "my_total_rank": 1,
-      "my_two_week_hours": 56.8,
+      "my_two_week_hours": 56.6,
       "my_two_week_rank": 1,
       "public_friends": 0,
       "private_friends": 0,
