@@ -165,6 +165,10 @@
   .day-cell .v { font-size: 12px; color: var(--fg); font-variant-numeric: tabular-nums; }
   .day-cell .p { font-size: 9px; color: var(--fg-dim); }
 
+  /* friend 24x7 activity grid */
+  .fheat { display: grid; grid-template-columns: repeat(24, 1fr); gap: 1px; }
+  .fheat .fc { height: 7px; border-radius: 1px; background: rgba(0, 255, 102, 0.05); }
+
   @media (max-width: 1180px) {
     .bar-row { grid-template-columns: 90px 1fr 50px; }
   }
@@ -233,12 +237,20 @@
       <div class="panel-body" id="detailBody"><span class="faint">click a friend row ↑</span></div>
     </section>
     <section class="panel grow-sm">
+      <div class="panel-head"><span>MOVERS // 2w delta</span><span class="meta">5min</span></div>
+      <div class="panel-body" id="movers"><span class="faint">…</span></div>
+    </section>
+    <section class="panel grow-sm">
       <div class="panel-head"><span>POLL STREAM // self</span><span class="meta">15s</span></div>
       <div class="panel-body"><table><thead><tr><th>ts</th><th>st</th><th>game</th></tr></thead><tbody id="pollStream"></tbody></table></div>
     </section>
     <section class="panel grow-sm">
       <div class="panel-head"><span>FRIEND POLL STREAM</span><span class="meta">15s</span></div>
       <div class="panel-body"><table><thead><tr><th>ts</th><th>who</th><th>game</th></tr></thead><tbody id="friendPollStream"></tbody></table></div>
+    </section>
+    <section class="panel grow-sm">
+      <div class="panel-head"><span>CO-PLAY // together</span><span class="meta">30min</span></div>
+      <div class="panel-body" id="coplay"><span class="faint">…</span></div>
     </section>
   </div>
 
@@ -260,6 +272,18 @@
       <div class="panel-body"><table><thead><tr><th>game</th><th class="num">hrs</th></tr></thead><tbody id="myGames"></tbody></table></div>
     </section>
     <section class="panel grow-sm">
+      <div class="panel-head"><span>GENRE // mix · drift</span><span class="meta">30min</span></div>
+      <div class="panel-body"><div id="genres"></div><div style="height:4px"></div><div id="genreDrift"></div></div>
+    </section>
+    <section class="panel grow-sm">
+      <div class="panel-head"><span>LIBRARY // value</span><span class="meta">30min</span></div>
+      <div class="panel-body"><div class="kv" id="libValue"></div><div style="height:4px"></div><table><thead><tr><th>game</th><th>price</th><th class="num">usd</th><th class="num">hrs</th></tr></thead><tbody id="libValueTop"></tbody></table></div>
+    </section>
+    <section class="panel grow-sm">
+      <div class="panel-head"><span>PLATFORM // split</span><span class="meta">10min</span></div>
+      <div class="panel-body" id="platform"></div>
+    </section>
+    <section class="panel grow-sm">
       <div class="panel-head"><span>2W RECENT // sessions</span><span class="meta">5min</span></div>
       <div class="panel-body"><table><thead><tr><th>game</th><th class="num">2w</th><th class="num">total</th></tr></thead><tbody id="recent2w"></tbody></table></div>
     </section>
@@ -279,12 +303,20 @@
       <div class="panel-body"><div class="bars" id="achieveLadder"></div></div>
     </section>
     <section class="panel grow-sm">
+      <div class="panel-head"><span>RARE // achievements</span><span class="meta">30min</span></div>
+      <div class="panel-body"><div class="bars" id="rare"></div></div>
+    </section>
+    <section class="panel grow-sm">
       <div class="panel-head"><span>HOT WEEK // 2w games</span><span class="meta">5min</span></div>
       <div class="panel-body"><div class="bars" id="hotWeek"></div></div>
     </section>
     <section class="panel">
       <div class="panel-head"><span>HOURLY HEAT // when they play</span><span class="meta">10min</span></div>
       <div class="panel-body panel-scroll-x"><div class="hour-heat" id="hourHeat"></div></div>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><span>FRIEND HEAT // 24×7</span><span class="meta">30min</span></div>
+      <div class="panel-body"><div class="fheat" id="friendHeat"></div></div>
     </section>
     <section class="panel grow-sm">
       <div class="panel-head"><span>PRESENCE LEADERS // today</span><span class="meta">60s</span></div>
@@ -295,8 +327,20 @@
       <div class="panel-body"><table><thead><tr><th>#</th><th>who</th><th class="num">hrs</th></tr></thead><tbody id="nightOwls"></tbody></table></div>
     </section>
     <section class="panel grow-sm">
+      <div class="panel-head"><span>FAV // this week</span><span class="meta">30min</span></div>
+      <div class="panel-body" id="favWeek"></div>
+    </section>
+    <section class="panel grow-sm">
       <div class="panel-head"><span>PRESENCE DAILY</span><span class="meta">5min</span></div>
       <div class="panel-body"><div class="day-heat" id="presenceDaily"></div></div>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><span>DAILY // timeline 60d</span><span class="meta">5min</span></div>
+      <div class="panel-body"><div class="kv" id="playDailyKv"></div><div style="height:4px"></div><div class="day-heat" id="playDailyHeat"></div></div>
+    </section>
+    <section class="panel grow-sm">
+      <div class="panel-head"><span>WEEKDAY // rhythm</span><span class="meta">10min</span></div>
+      <div class="panel-body"><div class="bars" id="rhythm"></div><div style="height:4px"></div><div id="rhythmWeeks"></div></div>
     </section>
     <section class="panel grow-sm">
       <div class="panel-head"><span>LEVELS // ladder</span><span class="meta">5min</span></div>
@@ -317,6 +361,10 @@
     <section class="panel grow-sm">
       <div class="panel-head"><span>NEWS</span><span class="meta">60s</span></div>
       <div class="panel-body"><div id="news" class="dim"></div></div>
+    </section>
+    <section class="panel grow-sm">
+      <div class="panel-head"><span>NEWS // pulse</span><span class="meta">15min</span></div>
+      <div class="panel-body" id="newsPulse"></div>
     </section>
   </div>
 </main>
@@ -649,6 +697,152 @@ async function loadRecords() {
 }
 
 function every(ms, fn) { fn(); setInterval(fn, ms); }
+
+// ---------- new panels (100-agent expansion) ----------
+
+async function loadMovers() {
+  try {
+    const d = await get("/api/movers");
+    const head = d.as_of
+      ? `<div class="row"><span class="faint">${esc(d.prev)} → ${esc(d.as_of)}</span><span class="dim">${d.gap_days}d</span></div><div style="height:3px"></div>`
+      : "";
+    const mk = (g, up) =>
+      `<tr><td>${esc(cut(g.name, 18))}</td><td class="num ${up ? "amber" : "red"}">${up ? "▲" : "▼"} ${Math.abs(g.d_total)}m</td><td class="num dim">${g.hours_now_2w}h</td></tr>`;
+    const rows = (d.gainers || []).map((g) => mk(g, true)).join("") + (d.losers || []).map((g) => mk(g, false)).join("");
+    $("movers").innerHTML = head + (rows
+      ? `<table><thead><tr><th>game</th><th class="num">Δ</th><th class="num">2w</th></tr></thead><tbody>${rows}</tbody></table>`
+      : '<span class="faint">need 2 snapshots</span>');
+  } catch (e) { fail($("movers"), e.message); }
+}
+
+async function loadCoplay() {
+  try {
+    const d = await get("/api/coplay");
+    const rows = (d.moments || []).map((m) =>
+      `<tr><td class="faint">${esc(cut(m.d, 10))} ${esc(m.h)}h</td><td>${esc(cut(m.name, 16))}</td><td class="num amber">${m.friends}p</td><td class="num dim">${m.my_polls}m</td></tr>`).join("");
+    $("coplay").innerHTML =
+      `<div class="row"><span>together hours 30d</span><span class="amber">${d.total_30d || 0}</span></div><div style="height:3px"></div>` +
+      (rows
+        ? `<table><thead><tr><th>when</th><th>game</th><th class="num">ppl</th><th class="num">me</th></tr></thead><tbody>${rows}</tbody></table>`
+        : '<span class="faint">no co-play detected yet</span>');
+  } catch (e) { fail($("coplay"), e.message); }
+}
+
+async function loadGenres() {
+  try {
+    const d = await get("/api/genres");
+    const cov = d.coverage || {};
+    const max = Math.max(...(d.mix || []).map((g) => g.hours || 0), 1);
+    const covRow = `<div class="row"><span class="faint">meta ${cov.detailed || 0}/${cov.owned || 0} games · ${cov.total_min ? Math.round(((cov.mapped_min || 0) / cov.total_min) * 100) : 0}% hrs</span></div><div style="height:3px"></div>`;
+    $("genres").innerHTML = covRow + (d.mix || []).map((g) =>
+      `<div class="bar-row" title="${esc(g.genre)} — ${g.games} games"><span class="faint">${esc(cut(g.genre, 14))}</span><div class="bar-track"><div class="bar-fill" style="width:${((g.hours || 0) / max) * 100}%"></div></div><span class="dim num">${Math.round(g.hours)}h</span></div>`).join("");
+    $("genreDrift").innerHTML = (d.drift || []).slice(0, 3).map((m) =>
+      `<div class="row"><span class="faint">${esc(m.ym)}</span><span class="dim">${esc(cut(m.top.map((t) => t.genre).join(" / "), 28))}</span></div>`).join("") || '<span class="faint">no drift data</span>';
+  } catch (e) { fail($("genres"), e.message); }
+}
+
+async function loadLibValue() {
+  try {
+    const d = await get("/api/library-value");
+    const s = d.summary || {};
+    const kv = [
+      ["priced", `${s.priced}/${s.owned} · ${s.hours_pct}% hrs`],
+      ["value", `$${(s.value_usd || 0).toLocaleString()}`],
+      ["list", `$${(s.list_usd || 0).toLocaleString()}`],
+      ["saved", `$${(s.saved_usd || 0).toLocaleString()}`],
+      ["$ / hour", `$${s.usd_per_hour}`],
+      ["dormant", `$${(s.dormant_usd || 0).toLocaleString()} · ${s.dormant_n} games`],
+    ];
+    $("libValue").innerHTML = kv.map(([k, v]) => `<span>${k}</span><span class="dim">${v}</span>`).join("");
+    $("libValueTop").innerHTML = (d.top_value || []).map((g) =>
+      `<tr><td>${esc(cut(g.name, 20))}</td><td class="dim">${esc(cut(g.fmt || "", 9))}</td><td class="num">$${g.usd}</td><td class="num dim">${g.hours}h</td></tr>`).join("");
+  } catch (e) { fail($("libValue"), e.message); }
+}
+
+async function loadPlatform() {
+  try {
+    const d = await get("/api/platform");
+    const p = d.platform || {};
+    const rows = [["win", p.win], ["mac", p.mac], ["lin", p.lin], ["deck", p.deck]].filter((x) => x[1]);
+    const max = Math.max(...rows.map((x) => x[1].pct), 1);
+    $("platform").innerHTML = rows.map(([k, v]) =>
+      `<div class="bar-row" title="${k}: ${v.games} games"><span class="faint">${k.toUpperCase()}</span><div class="bar-track"><div class="bar-fill${k === "deck" ? " me" : ""}" style="width:${(v.pct / max) * 100}%"></div></div><span class="dim num">${v.hours}h · ${v.pct}%</span></div>`).join("") +
+      `<div style="height:3px"></div><div class="row"><span class="faint">total</span><span class="dim">${d.total_hours}h · ${d.owned} games</span></div>` +
+      ((d.top_mac || []).length ? `<div class="row"><span class="faint">top mac</span><span class="dim">${esc(cut(d.top_mac[0].name, 16))} ${d.top_mac[0].hours}h</span></div>` : "");
+  } catch (e) { fail($("platform"), e.message); }
+}
+
+async function loadRare() {
+  try {
+    const d = await get("/api/rare-achievements");
+    const head = `<div class="row"><span>${d.total || 0} unlocked</span><span class="amber">+${d.last30 || 0} 30d</span></div><div style="height:3px"></div>`;
+    $("rare").innerHTML = head + (d.rare || []).map((r) =>
+      `<div class="bar-row" title="${esc(r.game)} — ${esc(r.label)} ${r.pct}% (${esc(r.unlocked_on)})"><span class="faint">${esc(cut(r.label, 16))}</span><div class="bar-track"><div class="bar-fill me" style="width:${Math.max(2, Math.min(100, (r.pct / 5) * 100))}%"></div></div><span class="dim num">${r.pct}%</span></div>`).join("") || '<span class="faint">no achievement data</span>';
+  } catch (e) { fail($("rare"), e.message); }
+}
+
+async function loadPlayDaily() {
+  try {
+    const d = await get("/api/play-daily?days=60");
+    const s = d.summary || {};
+    const best = s.best_day || {};
+    $("playDailyKv").innerHTML = [
+      ["7d avg", `${s.avg_7d}h`],
+      ["30d avg", `${s.avg_30d}h`],
+      ["streak", `${s.current_streak}d (best ${s.longest_streak}d)`],
+      ["best", `${best.hours}h · ${esc(cut(best.top_game || "—", 12))}`],
+    ].map(([k, v]) => `<span>${k}</span><span class="dim">${v}</span>`).join("");
+    const max = Math.max(...(d.daily || []).map((r) => r.hours), 0.01);
+    $("playDailyHeat").innerHTML = (d.daily || []).map((r) => {
+      const col = r.hours > 24 ? "var(--amber)" : r.hours > 0 ? "var(--fg)" : "var(--fg-faint)";
+      return `<div class="day-cell" title="${esc(r.d)} — ${r.hours}h · ${r.games} games${r.top_game ? " · " + esc(r.top_game) : ""}"><div class="d">${esc(cut(r.d, 10))}</div><div class="v" style="color:${col}">${r.hours}h</div><div class="p">${esc(cut(r.top_game || "—", 9))}</div></div>`;
+    }).join("") || '<span class="faint">no daily data</span>';
+  } catch (e) { fail($("playDailyHeat"), e.message); }
+}
+
+async function loadRhythm() {
+  try {
+    const d = await get("/api/play-rhythm");
+    const names = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const max = Math.max(...(d.weekday || []).map((r) => r.avg_h || 0), 0.01);
+    $("rhythm").innerHTML = (d.weekday || []).map((r) =>
+      `<div class="bar-row" title="${r.played_days}/${r.days} days played · best ${r.max_h}h"><span class="faint">${names[r.wd]}</span><div class="bar-track"><div class="bar-fill${r.avg_h >= 3 ? " me" : ""}" style="width:${((r.avg_h || 0) / max) * 100}%"></div></div><span class="dim num">${r.avg_h}h</span></div>`).join("");
+    $("rhythmWeeks").innerHTML = (d.weeks || []).slice(-6).map((w) =>
+      `<div class="row"><span class="faint">${esc(w.wk)}</span><span class="dim num">${w.hours}h · ${w.days}d</span></div>`).join("");
+  } catch (e) { fail($("rhythm"), e.message); }
+}
+
+async function loadFriendHeat() {
+  try {
+    const d = await get("/api/friend-heat");
+    const grid = d.grid || [];
+    const max = Math.max(...grid.flat(), 1);
+    $("friendHeat").innerHTML = grid.flat().map((n) => {
+      const a = n > 0 ? (0.1 + Math.min(1, n / max) * 0.85).toFixed(2) : "0.05";
+      return `<div class="fc" title="polls: ${n}"></div>`;
+    }).join("");
+    $("favWeek").innerHTML = (d.week || []).slice(0, 6).map((r, i) =>
+      `<div class="row"><span>${i + 1}. ${esc(cut(r.name, 18))}</span><span class="dim num">${r.poll_hours}h in-game</span></div>`).join("") || '<span class="faint">no game polls this week</span>';
+  } catch (e) { fail($("friendHeat"), e.message); }
+}
+
+async function loadNewsPulse() {
+  try {
+    const d = await get("/api/news-pulse");
+    const max = Math.max(...(d.per_day || []).map((r) => r.n), 1);
+    const bars = (d.per_day || []).map((r) =>
+      `<div class="bar-row" title="${esc(r.d)}"><span class="faint">${esc(cut(r.d, 10))}</span><div class="bar-track"><div class="bar-fill" style="width:${(r.n / max) * 100}%"></div></div><span class="dim num">${r.n}</span></div>`).join("");
+    const hot = (d.hot_games || []).map((h) =>
+      `<div class="row"><span>${esc(cut(h.game_name, 24))}</span><span class="num amber">${h.n}</span></div>`).join("");
+    const src = (d.sources || []).map((s) =>
+      `<div class="row"><span class="dim">${esc(cut(s.src, 24))}</span><span class="num faint">${s.n}</span></div>`).join("");
+    $("newsPulse").innerHTML =
+      `<div class="kicker">news / day</div>` + (bars || '<span class="faint">no news</span>') +
+      `<div style="height:4px"></div><div class="kicker">hot games 14d</div>` + (hot || "—") +
+      `<div style="height:4px"></div><div class="kicker">sources 30d</div>` + (src || "—");
+  } catch (e) { fail($("newsPulse"), e.message); }
+}
+
 every(15000, loadStatus);
 every(15000, loadMe);
 every(15000, loadFriends);
@@ -672,6 +866,16 @@ every(300000, loadLevels);
 every(1200000, loadBans);
 every(60000, loadStats);
 every(60000, loadNews);
+every(300000, loadMovers);
+every(1800000, loadCoplay);
+every(1800000, loadGenres);
+every(1800000, loadLibValue);
+every(600000, loadPlatform);
+every(1800000, loadRare);
+every(300000, loadPlayDaily);
+every(600000, loadRhythm);
+every(1800000, loadFriendHeat);
+every(900000, loadNewsPulse);
 setInterval(() => { $("clock").textContent = new Date().toLocaleTimeString([], { hour12: false }); }, 1000);
 $("clock").textContent = new Date().toLocaleTimeString([], { hour12: false });
 </script>

@@ -562,6 +562,392 @@ def raw(table, limit):
             "rows": q(f'SELECT * FROM "{table}" LIMIT ?', (limit,))}
 
 
+# ------------- 100-agent expansion: new data dimensions (TTL-cached) -------------
+
+FX_TO_USD = {
+    "USD": 1.0, "SGD": 0.74, "EUR": 1.08, "CNY": 0.14, "JPY": 0.0067,
+    "GBP": 1.27, "CAD": 0.73, "AUD": 0.66, "BRL": 0.19, "INR": 0.012,
+    "KRW": 0.00073, "HKD": 0.128, "TWD": 0.031, "NOK": 0.093, "SEK": 0.095,
+    "DKK": 0.145, "PLN": 0.25, "TRY": 0.03, "RUB": 0.011, "MXN": 0.055,
+}
+
+
+def play_daily(days):
+    """Daily playtime timeline (daily_snapshots) with calendar gap-fill, streaks, best day."""
+    def build():
+        end = q("SELECT MAX(date) AS d FROM daily_snapshots")[0]["d"]
+        if not end:
+            return {"updated_at": now_iso(), "days": days, "daily": [], "summary": {}}
+        rows = q("""
+            WITH RECURSIVE cal(d) AS (
+                SELECT date(?, ?)
+                UNION ALL SELECT date(d, '+1 day') FROM cal WHERE d < ?
+            )
+            SELECT cal.d AS d,
+                   COALESCE(ROUND(SUM(ds.daily_playtime)/60.0, 2), 0.0) AS hours,
+                   COUNT(DISTINCT CASE WHEN ds.daily_playtime > 0 THEN ds.appid END) AS games,
+                   (SELECT name FROM daily_snapshots t WHERE t.date = cal.d AND t.daily_playtime > 0
+                    ORDER BY t.daily_playtime DESC LIMIT 1) AS top_game
+            FROM cal LEFT JOIN daily_snapshots ds ON ds.date = cal.d
+            GROUP BY cal.d ORDER BY cal.d
+        """, (end, f"-{max(1, days - 1)} days", end))
+        hours_list = [r["hours"] for r in rows]
+        best = max(rows, key=lambda r: r["hours"]) if rows else None
+        cur = 0
+        for h in reversed(hours_list):
+            if h > 0:
+                cur += 1
+            else:
+                break
+        longest = run = 0
+        for h in hours_list:
+            run = run + 1 if h > 0 else 0
+            longest = max(longest, run)
+        n = len(hours_list)
+        return {"updated_at": now_iso(), "end": end, "days": days, "daily": rows,
+                "summary": {"avg_7d": round(sum(hours_list[-7:]) / max(1, min(7, n)), 2),
+                            "avg_30d": round(sum(hours_list[-30:]) / max(1, min(30, n)), 2),
+                            "current_streak": cur, "longest_streak": longest,
+                            "best_day": best}}
+    return cached("play-daily", 300, build)
+
+
+def play_rhythm():
+    """Weekday playtime profile + weekly totals + my hourly playing pattern."""
+    def build():
+        weekday = q("""
+            SELECT CAST(strftime('%w', date) AS INTEGER) AS wd,
+                   COUNT(*) AS days,
+                   SUM(CASE WHEN h > 0 THEN 1 ELSE 0 END) AS played_days,
+                   ROUND(AVG(h), 2) AS avg_h, ROUND(MAX(h), 2) AS max_h
+            FROM (SELECT date, SUM(daily_playtime)/60.0 AS h FROM daily_snapshots GROUP BY date)
+            GROUP BY wd ORDER BY wd
+        """)
+        weeks = q("""
+            SELECT strftime('%Y-%W', date) AS wk, COUNT(DISTINCT date) AS days,
+                   ROUND(SUM(daily_playtime)/60.0, 1) AS hours
+            FROM daily_snapshots
+            WHERE date >= date((SELECT MAX(date) FROM daily_snapshots), '-55 days')
+            GROUP BY wk ORDER BY wk
+        """)
+        me_hourly = {f"{i:02d}": 0 for i in range(24)}
+        try:
+            for r in q("""
+                SELECT strftime('%H', timestamp, '+8 hours') AS h, COUNT(*) AS n
+                FROM status_polls WHERE personastate > 0
+                GROUP BY h ORDER BY h
+            """):
+                me_hourly[r["h"]] = r["n"]
+        except sqlite3.OperationalError:
+            pass
+        return {"updated_at": now_iso(), "weekday": weekday, "weeks": weeks, "me_hourly": me_hourly}
+    return cached("play-rhythm", 600, build)
+
+
+def movers():
+    """2-week momentum: latest recent_sessions snapshot vs the previous one."""
+    def build():
+        dates = q("SELECT DISTINCT snapshot_date AS d FROM recent_sessions ORDER BY d DESC LIMIT 2")
+        if len(dates) < 2:
+            return {"updated_at": now_iso(), "as_of": None, "prev": None,
+                    "gap_days": None, "gainers": [], "losers": []}
+        as_of, prev = dates[0]["d"], dates[1]["d"]
+        rows = q("""
+            SELECT c.appid, COALESCE(c.name, 'App ' || c.appid) AS name,
+                   c.playtime_2weeks AS now_2w, COALESCE(p.playtime_2weeks, 0) AS prev_2w,
+                   c.playtime_forever AS now_total, COALESCE(p.playtime_forever, 0) AS prev_total
+            FROM recent_sessions c
+            LEFT JOIN recent_sessions p ON p.appid = c.appid AND p.snapshot_date = ?
+            WHERE c.snapshot_date = ?
+        """, (prev, as_of))
+        gap = q("SELECT CAST(julianday(?) - julianday(?) AS INTEGER) AS g", (as_of, prev))[0]["g"]
+        for r in rows:
+            r["d_total"] = (r["now_total"] or 0) - (r["prev_total"] or 0)
+            r["d_2w"] = (r["now_2w"] or 0) - (r["prev_2w"] or 0)
+            r["hours_now_2w"] = round((r["now_2w"] or 0) / 60.0, 1)
+        gainers = sorted([r for r in rows if r["d_total"] > 0], key=lambda x: -x["d_total"])[:8]
+        losers = sorted([r for r in rows if r["d_total"] < 0], key=lambda x: x["d_total"])[:5]
+        return {"updated_at": now_iso(), "as_of": as_of, "prev": prev, "gap_days": gap,
+                "gainers": gainers, "losers": losers}
+    return cached("movers", 300, build)
+
+
+def genres():
+    """Genre mix (hours-weighted, json_each over game_details.genres) + monthly taste drift."""
+    def build():
+        try:
+            mix = q("""
+                SELECT j.value AS genre, COUNT(*) AS games,
+                       ROUND(SUM(o.playtime_forever)/60.0, 1) AS hours
+                FROM game_details d
+                JOIN json_each(d.genres) j
+                JOIN owned_games o ON o.appid = d.appid
+                GROUP BY j.value ORDER BY hours DESC LIMIT 14
+            """)
+            drift = q("""
+                SELECT strftime('%Y-%m', s.date) AS ym, j.value AS genre,
+                       ROUND(SUM(s.daily_playtime)/60.0, 1) AS hours
+                FROM daily_snapshots s
+                JOIN game_details d ON d.appid = s.appid
+                JOIN json_each(d.genres) j
+                WHERE s.daily_playtime > 0
+                GROUP BY ym, j.value ORDER BY ym DESC, hours DESC
+            """)
+        except sqlite3.OperationalError:
+            mix, drift = [], []
+        cov = q("""
+            SELECT (SELECT COUNT(*) FROM owned_games) AS owned,
+                   (SELECT COUNT(*) FROM game_details) AS detailed,
+                   (SELECT SUM(playtime_forever) FROM owned_games) AS total_min,
+                   (SELECT SUM(o.playtime_forever) FROM owned_games o
+                      JOIN game_details d ON d.appid = o.appid) AS mapped_min
+        """)[0]
+        months = {}
+        for r in drift:
+            months.setdefault(r["ym"], []).append({"genre": r["genre"], "hours": r["hours"]})
+        drift_out = [{"ym": ym, "top": v[:5],
+                      "total_hours": round(sum(x["hours"] for x in v), 1)}
+                     for ym, v in sorted(months.items(), reverse=True)[:6]]
+        return {"updated_at": now_iso(), "mix": mix, "drift": drift_out, "coverage": cov}
+    return cached("genres", 900, build)
+
+
+def library_value():
+    """Captured list-price value of the library (hours-weighted coverage, FX->USD)."""
+    def build():
+        try:
+            rows = q("""
+                SELECT d.appid, d.name,
+                       json_extract(d.price_overview, '$.currency') AS cc,
+                       json_extract(d.price_overview, '$.final') / 100.0 AS price,
+                       json_extract(d.price_overview, '$.initial') / 100.0 AS list_price,
+                       json_extract(d.price_overview, '$.final_formatted') AS fmt,
+                       COALESCE(o.playtime_forever, 0) AS minutes,
+                       COALESCE(o.rtime_last_played, 0) AS rtime
+                FROM game_details d LEFT JOIN owned_games o ON o.appid = d.appid
+                WHERE d.price_overview IS NOT NULL AND json_valid(d.price_overview)
+                  AND json_extract(d.price_overview, '$.final') > 0
+            """)
+            cov = q("""
+                SELECT (SELECT COUNT(*) FROM owned_games) AS owned,
+                       (SELECT SUM(playtime_forever) FROM owned_games) AS total_min,
+                       (SELECT SUM(o.playtime_forever) FROM owned_games o
+                          JOIN game_details d ON d.appid = o.appid) AS mapped_min
+            """)[0]
+        except sqlite3.OperationalError:
+            rows = []
+            cov = {"owned": 0, "total_min": 0, "mapped_min": 0}
+        def usd(x, cc):
+            return (x or 0) * FX_TO_USD.get(cc, 1.0)
+        value = sum(usd(r["price"], r["cc"]) for r in rows)
+        listv = sum(usd(r["list_price"], r["cc"]) for r in rows)
+        hours = sum((r["minutes"] or 0) for r in rows) / 60.0
+        cutoff = time.time() - 365 * 86400
+        dormant_usd = sum(usd(r["price"], r["cc"]) for r in rows if r["rtime"] and r["rtime"] < cutoff)
+        dormant_n = sum(1 for r in rows if r["rtime"] and r["rtime"] < cutoff)
+        top = sorted(rows, key=lambda r: -usd(r["price"], r["cc"]))[:10]
+        top_out = [{"name": r["name"], "fmt": r["fmt"],
+                    "usd": round(usd(r["price"], r["cc"]), 2),
+                    "hours": round((r["minutes"] or 0) / 60.0, 1),
+                    "usd_per_hour": round(usd(r["price"], r["cc"]) / max(0.1, (r["minutes"] or 0) / 60.0), 3)}
+                   for r in top]
+        hours_pct = round(100.0 * (cov["mapped_min"] or 0) / cov["total_min"], 1) if cov["total_min"] else 0.0
+        return {"updated_at": now_iso(),
+                "summary": {"owned": cov["owned"], "priced": len(rows),
+                            "value_usd": round(value, 2), "list_usd": round(listv, 2),
+                            "saved_usd": round(listv - value, 2),
+                            "hours": round(hours, 0),
+                            "usd_per_hour": round(value / max(1.0, hours), 3),
+                            "dormant_usd": round(dormant_usd, 2), "dormant_n": dormant_n,
+                            "hours_pct": hours_pct},
+                "top_value": top_out}
+    return cached("library-value", 900, build)
+
+
+def platform():
+    """Playtime split across Steam platforms (windows/mac/linux/deck)."""
+    def build():
+        r = q("""
+            SELECT COUNT(*) AS owned,
+                   SUM(playtime_windows_forever) AS win, SUM(playtime_mac_forever) AS mac,
+                   SUM(playtime_linux_forever) AS lin, SUM(playtime_deck_forever) AS deck,
+                   SUM(playtime_forever) AS total,
+                   SUM(playtime_windows_forever > 0) AS win_games,
+                   SUM(playtime_mac_forever > 0) AS mac_games,
+                   SUM(playtime_linux_forever > 0) AS lin_games,
+                   SUM(playtime_deck_forever > 0) AS deck_games
+            FROM owned_games
+        """)[0]
+        total = r["total"] or 0
+        out = {}
+        for k in ("win", "mac", "lin", "deck"):
+            mins = r[k] or 0
+            out[k] = {"minutes": mins, "hours": round(mins / 60.0, 1),
+                      "games": r[f"{k}_games"] or 0,
+                      "pct": round(100.0 * mins / total, 2) if total else 0.0}
+        top_deck = q("SELECT name, ROUND(playtime_deck_forever/60.0,1) AS hours FROM owned_games WHERE playtime_deck_forever > 0 ORDER BY 2 DESC LIMIT 3")
+        top_mac = q("SELECT name, ROUND(playtime_mac_forever/60.0,1) AS hours FROM owned_games WHERE playtime_mac_forever > 0 ORDER BY 2 DESC LIMIT 3")
+        return {"updated_at": now_iso(), "owned": r["owned"], "platform": out,
+                "total_hours": round(total / 60.0, 1), "top_deck": top_deck, "top_mac": top_mac}
+    return cached("platform", 600, build)
+
+
+def rare_achievements():
+    """Rarest unlocked achievements (global_percent) + recent unlock feed."""
+    def build():
+        try:
+            rare = q("""
+                SELECT game, apiname, pct, unlocked_on, days_ago FROM (
+                    SELECT COALESCE(og.name, gd.name, 'app ' || ga.appid) AS game,
+                           ga.apiname AS apiname,
+                           ROUND(CAST(ga.global_percent AS REAL), 2) AS pct,
+                           date(ga.unlocktime, 'unixepoch', '+8 hours') AS unlocked_on,
+                           CAST((strftime('%s','now') - ga.unlocktime) / 86400 AS INTEGER) AS days_ago,
+                           ROW_NUMBER() OVER (PARTITION BY ga.appid
+                             ORDER BY CAST(ga.global_percent AS REAL) ASC) AS rn
+                    FROM game_achievements ga
+                    LEFT JOIN owned_games og ON og.appid = ga.appid
+                    LEFT JOIN game_details gd ON gd.appid = ga.appid
+                    WHERE ga.achieved = 1 AND ga.unlocktime > 0
+                      AND CAST(ga.global_percent AS REAL) > 0
+                ) WHERE rn <= 2 ORDER BY pct ASC LIMIT 15
+            """)
+            totals = q("""
+                SELECT COUNT(*) AS total,
+                       SUM(CASE WHEN unlocktime >= strftime('%s','now','-30 days') THEN 1 ELSE 0 END) AS last30
+                FROM game_achievements WHERE achieved = 1
+            """)[0]
+        except sqlite3.OperationalError:
+            rare = []
+            totals = {"total": 0, "last30": 0}
+
+        def label(a):
+            s = (a or "").replace("_", " ").strip()
+            return s.title() if s.upper() == s or s.lower() == s else s
+        for r in rare:
+            r["label"] = label(r["apiname"])
+        return {"updated_at": now_iso(), "rare": rare,
+                "total": totals["total"] or 0, "last30": totals["last30"] or 0}
+    return cached("rare-achievements", 900, build)
+
+
+def friend_heat():
+    """Friends' 24x7 activity grid (120d polls) + this-week leaders + 24h playing curve."""
+    def build():
+        try:
+            cells = q("""
+                SELECT CAST(strftime('%H', timestamp, '+8 hours') AS INTEGER) AS h,
+                       CAST(strftime('%w', timestamp, '+8 hours') AS INTEGER) AS wd,
+                       COUNT(*) AS n
+                FROM friend_status_polls
+                WHERE timestamp >= strftime('%s','now','-120 days')
+                GROUP BY h, wd
+            """)
+            week = q("""
+                SELECT COALESCE(c.personaname, fp.steamid) AS name,
+                       COUNT(*) / 60.0 AS poll_hours
+                FROM friend_status_polls fp
+                LEFT JOIN friends_current c ON c.steamid = fp.steamid
+                WHERE fp.gameextrainfo IS NOT NULL AND fp.gameextrainfo != ''
+                  AND fp.timestamp >= strftime('%s','now','-7 days')
+                GROUP BY fp.steamid ORDER BY poll_hours DESC LIMIT 8
+            """)
+            curve_rows = q("""
+                SELECT strftime('%H', timestamp, '+8 hours') AS h, COUNT(DISTINCT steamid) AS n
+                FROM friend_status_polls
+                WHERE gameextrainfo != '' AND timestamp >= strftime('%s','now','-1 days')
+                GROUP BY h
+            """)
+        except sqlite3.OperationalError:
+            cells, week, curve_rows = [], [], []
+        grid = [[0] * 24 for _ in range(7)]
+        for r in cells:
+            if 0 <= r["wd"] <= 6 and 0 <= r["h"] <= 23:
+                grid[r["wd"]][r["h"]] = r["n"]
+        for r in week:
+            r["poll_hours"] = round(r["poll_hours"] or 0, 1)
+        curve = {f"{i:02d}": 0 for i in range(24)}
+        for r in curve_rows:
+            curve[r["h"]] = r["n"]
+        return {"updated_at": now_iso(), "grid": grid, "week": week, "curve": curve}
+    return cached("friend-heat", 1800, build)
+
+
+def coplay():
+    """Same day+hour buckets where me and friends were in the same game (30d)."""
+    def build():
+        try:
+            rows = q("""
+                WITH me AS (
+                    SELECT date(timestamp, '+8 hours') AS d,
+                           strftime('%H', timestamp, '+8 hours') AS h,
+                           gameid, COUNT(*) AS my_n
+                    FROM status_polls
+                    WHERE gameid IS NOT NULL AND gameid != ''
+                      AND timestamp >= strftime('%s','now','-30 days')
+                    GROUP BY d, h, gameid
+                ),
+                fr AS (
+                    SELECT date(timestamp, '+8 hours') AS d,
+                           strftime('%H', timestamp, '+8 hours') AS h,
+                           gameid, COUNT(DISTINCT steamid) AS friends
+                    FROM friend_status_polls
+                    WHERE gameid IS NOT NULL AND gameid != ''
+                      AND timestamp >= strftime('%s','now','-30 days')
+                    GROUP BY d, h, gameid
+                )
+                SELECT fr.d AS d, fr.h AS h,
+                       COALESCE(og.name, 'app ' || fr.gameid) AS name,
+                       m.my_n AS my_polls, fr.friends AS friends
+                FROM fr JOIN me ON me.d = fr.d AND me.h = fr.h AND me.gameid = fr.gameid
+                LEFT JOIN owned_games og ON og.appid = CAST(fr.gameid AS INTEGER)
+                ORDER BY fr.d DESC, fr.h DESC LIMIT 30
+            """)
+            total = q("""
+                SELECT COUNT(*) AS n FROM (
+                    SELECT date(timestamp,'+8 hours') AS d, strftime('%H',timestamp,'+8 hours') AS h, gameid
+                    FROM status_polls WHERE gameid != '' AND timestamp >= strftime('%s','now','-30 days')
+                    GROUP BY d, h, gameid
+                    INTERSECT
+                    SELECT date(timestamp,'+8 hours') AS d, strftime('%H',timestamp,'+8 hours') AS h, gameid
+                    FROM friend_status_polls WHERE gameid != '' AND timestamp >= strftime('%s','now','-30 days')
+                    GROUP BY d, h, gameid
+                )
+            """)[0]["n"]
+        except sqlite3.OperationalError:
+            rows, total = [], 0
+        return {"updated_at": now_iso(), "total_30d": total, "moments": rows}
+    return cached("coplay", 1800, build)
+
+
+def news_pulse():
+    """News volume per day + feed source mix + hottest updated games."""
+    def build():
+        try:
+            per_day = q("""
+                SELECT date(date, 'unixepoch', '+8 hours') AS d, COUNT(*) AS n
+                FROM game_news_updates
+                WHERE date >= strftime('%s','now','-14 days')
+                GROUP BY d ORDER BY d
+            """)
+            sources = q("""
+                SELECT COALESCE(NULLIF(feedlabel, ''), NULLIF(feedname, ''), '?') AS src, COUNT(*) AS n
+                FROM game_news_updates
+                WHERE date >= strftime('%s','now','-30 days')
+                GROUP BY src ORDER BY n DESC LIMIT 6
+            """)
+            hot = q("""
+                SELECT game_name, COUNT(*) AS n
+                FROM game_news_updates
+                WHERE date >= strftime('%s','now','-14 days')
+                GROUP BY game_name ORDER BY n DESC LIMIT 6
+            """)
+        except sqlite3.OperationalError:
+            per_day, sources, hot = [], [], []
+        return {"updated_at": now_iso(), "per_day": per_day, "sources": sources, "hot_games": hot}
+    return cached("news-pulse", 900, build)
+
+
 class Handler(BaseHTTPRequestHandler):
     server_version = "SteamMatrixAPI/1.0"
     _rate = {}  # client_ip -> [timestamp, count]
@@ -649,6 +1035,27 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json(200, concurrent())
             elif path == "/api/countries":
                 self.send_json(200, countries())
+            elif path == "/api/play-daily":
+                days = min(max(int((qs.get("days") or ["60"])[0]), 7), 120)
+                self.send_json(200, play_daily(days))
+            elif path == "/api/play-rhythm":
+                self.send_json(200, play_rhythm())
+            elif path == "/api/movers":
+                self.send_json(200, movers())
+            elif path == "/api/genres":
+                self.send_json(200, genres())
+            elif path == "/api/library-value":
+                self.send_json(200, library_value())
+            elif path == "/api/platform":
+                self.send_json(200, platform())
+            elif path == "/api/rare-achievements":
+                self.send_json(200, rare_achievements())
+            elif path == "/api/friend-heat":
+                self.send_json(200, friend_heat())
+            elif path == "/api/coplay":
+                self.send_json(200, coplay())
+            elif path == "/api/news-pulse":
+                self.send_json(200, news_pulse())
             elif path == "/api/achieve-compare":
                 self.send_json(200, achieve_compare())
             elif path == "/api/raw":
