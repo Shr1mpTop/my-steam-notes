@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-18T12:17:52.130252+08:00",
+  "updated_at": "2026-11-18T12:23:12.718187+08:00",
   "player": {
-    "personaname": "俊林叔叔阳具店",
+    "personaname": "她饮茅台多了",
     "online": false,
     "currently_playing": "",
     "level": 30,
-    "avatarfull": ""
+    "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg"
   },
   "milestone": {
     "total_hours": 6108.8,
@@ -5299,15 +5299,15 @@
     }
   ],
   "social_presence": {
-    "window_start": "2026-11-11T12:17:52.163942+08:00",
-    "window_end": "2026-11-18T12:17:52.163942+08:00",
+    "window_start": "2026-11-11T12:23:12.753500+08:00",
+    "window_end": "2026-11-18T12:23:12.753500+08:00",
     "members": [
       {
         "id": "self",
-        "steamid": null,
-        "name": "俊林叔叔阳具店",
-        "avatarfull": "",
-        "profileurl": "",
+        "steamid": "76561198367786896",
+        "name": "她饮茅台多了",
+        "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg",
+        "profileurl": "https://steamcommunity.com/profiles/76561198367786896/",
         "is_self": true,
         "last_seen_at": "2026-11-16T15:11:40.206739+08:00",
         "current": {
@@ -6416,21 +6416,21 @@
     ]
   },
   "friends_hub": {
-    "updated_at": "2026-11-18T12:17:52.167846+08:00",
+    "updated_at": "2026-11-18T12:23:12.757446+08:00",
     "friends": [],
     "shared_games": [],
     "leaderboard_total": [
       {
-        "name": "俊林叔叔阳具店",
-        "avatarfull": "",
+        "name": "她饮茅台多了",
+        "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg",
         "hours": 6108.8,
         "is_self": true
       }
     ],
     "leaderboard_2weeks": [
       {
-        "name": "俊林叔叔阳具店",
-        "avatarfull": "",
+        "name": "她饮茅台多了",
+        "avatarfull": "https://avatars.steamstatic.com/765d3fca26636c1aac0227b5f35e2ebcaafd9d28_full.jpg",
         "hours": 56.1,
         "is_self": true
       }
