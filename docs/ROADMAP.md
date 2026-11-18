@@ -273,7 +273,7 @@ Steam API → M11P 手机采集器 → SQLite → Dashboard JSON
 
 | 风险 | 概率 | 影响 | 对策 |
 |---|---|---|---|
-| 手机硬件故障 | 高（WiFi 已死） | 全站不可用 | Actions 备份采集 + 迁移 VPS |
+| 手机硬件故障 | 中（WiFi 芯片已换机恢复，2026-11-18 核验；单点故障仍成立） | 全站不可用 | Actions 备份采集 + 迁移 VPS |
 | Steam API 变更/限制 | 中 | 采集中断 | 多接口冗余 + 社区关注变更 |
 | Cloudflare 免费额度 | 低 | 公网不可达 | 可换 Cloudflare Pages Workers |
 | SQLite 数据损坏 | 低 | 数据丢失 | 每日备份到 GitHub |
