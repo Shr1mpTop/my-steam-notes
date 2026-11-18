@@ -6,18 +6,27 @@ const REFRESH_MS = 60_000;
 // change). Falls back to the bundled build-time snapshot whenever the phone
 // or the tunnel is unavailable.
 const REMOTE_DASHBOARD_URL = "https://steam-data.zhili-he.top/steam/dashboard.json";
-const REMOTE_TIMEOUT_MS = 5_000;
+const REMOTE_TIMEOUT_MS = 12_000;
+const LOCAL_TIMEOUT_MS = 20_000;
 const REMOTE_COOLDOWN_MS = 10 * 60_000;
+
+// On the phone site (/app/) the "remote" endpoint serves the very same live
+// file — skip the detour and load the same-origin copy directly.
+const SAME_ORIGIN_LIVE =
+  typeof location !== "undefined" && location.hostname === "steam.zhili-he.top";
 
 let remoteDisabledUntil = 0;
 
-async function fetchDashboard(url: string): Promise<DashboardData> {
+async function fetchDashboard(url: string, timeoutMs = REMOTE_TIMEOUT_MS): Promise<DashboardData> {
   const controller = new AbortController();
-  const timer = window.setTimeout(() => controller.abort(), REMOTE_TIMEOUT_MS);
+  const timer = window.setTimeout(() => controller.abort(), timeoutMs);
   try {
     const response = await fetch(url, { cache: "no-store", signal: controller.signal });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return (await response.json()) as DashboardData;
+  } catch (err) {
+    if (err instanceof DOMException && err.name === "AbortError") throw new Error("timeout");
+    throw err;
   } finally {
     window.clearTimeout(timer);
   }
@@ -28,7 +37,7 @@ function localDashboardUrl() {
 }
 
 async function loadDashboardData(): Promise<{ data: DashboardData; source: "live" | "snapshot" }> {
-  if (Date.now() >= remoteDisabledUntil) {
+  if (!SAME_ORIGIN_LIVE && Date.now() >= remoteDisabledUntil) {
     try {
       const data = await fetchDashboard(`${REMOTE_DASHBOARD_URL}?t=${Date.now()}`);
       return { data, source: "live" };
@@ -36,7 +45,7 @@ async function loadDashboardData(): Promise<{ data: DashboardData; source: "live
       remoteDisabledUntil = Date.now() + REMOTE_COOLDOWN_MS;
     }
   }
-  return { data: await fetchDashboard(localDashboardUrl()), source: "snapshot" };
+  return { data: await fetchDashboard(localDashboardUrl(), LOCAL_TIMEOUT_MS), source: "snapshot" };
 }
 
 export function useDashboard() {
