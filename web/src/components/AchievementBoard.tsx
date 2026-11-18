@@ -1,6 +1,7 @@
 import type { AchievementGame, GenreItem } from "../types";
 import { useLocale } from "../useLocale";
 import { genreColor } from "../lib/palette";
+import { GameCover } from "./GameImages";
 import { Panel, Reveal } from "./ui";
 
 interface Props { achievements: AchievementGame[]; }
@@ -54,6 +55,46 @@ export function AchievementBoard({ achievements }: Props) {
         ))}
       </div>
     </Panel>
+  );
+}
+
+/**
+ * Instagram-style photo wall: one portrait cover per game with the
+ * achievement progress printed over the photo. Renders as masonry items
+ * inside the page-level .wall container.
+ */
+export function AchievementWall({ achievements }: Props) {
+  if (!achievements.length) return null;
+  const sorted = [...achievements].sort((a, b) => b.playtime_hours - a.playtime_hours);
+  return (
+    <>
+      {sorted.map((game, i) => (
+        <Reveal key={game.appid} delay={Math.min(i * 0.02, 0.25)} className="wall-item">
+          <a
+            className={`wall-card${game.pct === 100 ? " is-complete" : ""}`}
+            href={`https://steamcommunity.com/stats/${game.appid}/achievements`}
+            target="_blank"
+            rel="noreferrer"
+            title={`${game.name} — ${game.pct}%`}
+          >
+            <GameCover appid={game.appid} name={game.name} variant="portrait" />
+            <div className="wall-overlay">
+              <span className="wall-name">{game.name}</span>
+              <div className="wall-bar">
+                <div
+                  className={`wall-bar-fill${game.pct === 100 ? " is-complete" : ""}`}
+                  style={{ width: `${game.pct}%` }}
+                />
+              </div>
+              <div className="wall-pct-row">
+                <span>{game.unlocked}/{game.total}</span>
+                <span>{game.pct}%</span>
+              </div>
+            </div>
+          </a>
+        </Reveal>
+      ))}
+    </>
   );
 }
 

@@ -14,8 +14,8 @@ import { ContributionMap } from "./components/ContributionMap";
 import { TimeHeatmap, WeekdayChart } from "./components/TimeAnalytics";
 import { ParetoChart } from "./components/Ranking";
 import { StatsCards } from "./components/Insights";
-import { AchievementBoard, GenreChart } from "./components/AchievementBoard";
-import { GameUpdates } from "./components/GameUpdates";
+import { AchievementWall, GenreChart } from "./components/AchievementBoard";
+import { UpdateFeed } from "./components/GameUpdates";
 import { FriendsHubPanel } from "./components/FriendsHub";
 import { Leaderboards, MeVsThem, SharedGamesPanel } from "./components/FriendsCompare";
 import "./App.css";
@@ -212,6 +212,10 @@ function Dashboard() {
           </section>
 
           <div className="bento">
+            <div className="cell span-12"><StatsCards stats={data.stats} /></div>
+
+            <div className="cell span-12"><GameCloud games={data.game_cloud} /></div>
+
             <div className="cell span-12"><FriendsHubPanel hub={data.friends_hub} /></div>
 
             <div className="cell span-4"><MeVsThem hub={data.friends_hub} /></div>
@@ -227,14 +231,21 @@ function Dashboard() {
             <div className="cell span-6"><WeekdayChart data={data.weekday} heatmap={data.heatmap} /></div>
             <div className="cell span-6"><ParetoChart data={data.pareto} /></div>
 
-            <div className="cell span-12"><GameCloud games={data.game_cloud} /></div>
-
-            <div className="cell span-12"><StatsCards stats={data.stats} /></div>
-
             <div className="cell span-12"><GenreChart genres={data.genres} /></div>
-
-            <div className="cell span-12"><AchievementBoard achievements={data.achievements} /></div>
           </div>
+
+          {data.achievements.length > 0 && (
+            <section className="wall-section" id="wall" aria-label={t("wallTitle")}>
+              <div className="section-title">
+                <span>STEAM</span>
+                <h2>{t("wallTitle")}</h2>
+                <p>{t("wallSubtitle")}</p>
+              </div>
+              <div className="wall">
+                <AchievementWall achievements={data.achievements} />
+              </div>
+            </section>
+          )}
 
           <section className="updates-section" id="updates" aria-label="Game update news">
             <div className="section-title">
@@ -243,7 +254,7 @@ function Dashboard() {
               <p>{t("updateFeedSubtitle")}</p>
             </div>
 
-            <GameUpdates updates={data.game_updates ?? []} />
+            <UpdateFeed updates={data.game_updates ?? []} />
 
             <footer className="footer">
               <span>Steam Notebook — {t("updated")} {new Date(data.updated_at).toLocaleString(localeTag)}</span>

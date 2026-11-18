@@ -3673,3 +3673,292 @@ a { color: inherit; }
   .fh-now { flex-wrap: wrap; }
   .fh-empty { grid-auto-flow: row; }
 }
+
+/* ---------- Photo wall (IG-style masonry of library covers) ---------- */
+
+.wall-section { position: relative; }
+
+.wall {
+  columns: 260px 4;
+  column-gap: var(--bento-gap);
+}
+
+.wall-item {
+  break-inside: avoid;
+  margin-bottom: var(--bento-gap);
+}
+
+.wall-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-inset);
+  text-decoration: none;
+  transition: transform var(--dur) ease, border-color var(--dur) ease, box-shadow var(--dur) ease;
+}
+
+.wall-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-3);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+.wall-card.is-complete { border-color: rgba(76, 183, 130, 0.5); }
+
+.wall-card .cover-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wall-card .cover-fallback {
+  position: absolute;
+  inset: 0;
+}
+
+.cover-img {
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.cover-img.is-loaded { opacity: 1; }
+
+.cover-fallback {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(220px 160px at 30% 20%, rgba(94, 106, 210, 0.16), transparent 70%),
+    linear-gradient(160deg, #1a1b22, #101017);
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.wall-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: grid;
+  gap: 7px;
+  padding: 30px 12px 12px;
+  background: linear-gradient(180deg, transparent, rgba(5, 5, 8, 0.9) 58%);
+}
+
+.wall-name {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wall-bar {
+  height: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.wall-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #5e6ad2, #7a85f0);
+}
+
+.wall-bar-fill.is-complete {
+  background: linear-gradient(90deg, #3f9e6d, #4cb782);
+}
+
+.wall-pct-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.wall-card.is-complete::after {
+  content: "✓";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(76, 183, 130, 0.9);
+  color: #04110a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ---------- Update feed (Twitter/IG single-column post stream) ---------- */
+
+.feed {
+  display: grid;
+  gap: var(--bento-gap);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.post-card {
+  display: grid;
+  gap: 12px;
+  padding: var(--panel-pad);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
+    rgba(16, 16, 18, 0.52);
+  box-shadow: var(--shadow-panel);
+  backdrop-filter: blur(18px);
+  text-decoration: none;
+  transition: border-color var(--dur) ease, transform var(--dur) ease;
+}
+
+.post-card:hover {
+  border-color: var(--line-3);
+  transform: translateY(-2px);
+}
+
+.post-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  border: 1px solid var(--line-2);
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg-2);
+}
+
+.post-id {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.post-id strong {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 640;
+  letter-spacing: -0.01em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-id span {
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-type {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 3px 9px;
+  border: 1px solid rgba(94, 106, 210, 0.4);
+  border-radius: 999px;
+  background: var(--accent-softer);
+  color: var(--accent-hi);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.post-img {
+  position: relative;
+  aspect-ratio: 460 / 215;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-inset);
+}
+
+.post-img .cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-img .cover-fallback {
+  position: absolute;
+  inset: 0;
+}
+
+.post-title {
+  color: var(--text);
+  font-size: 14.5px;
+  font-weight: 640;
+  letter-spacing: -0.014em;
+  line-height: 1.4;
+}
+
+.post-card > p {
+  color: var(--text-3);
+  font-size: 12.5px;
+  line-height: 1.62;
+  margin: 0;
+}
+
+.post-foot {
+  color: var(--accent-hi);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.feed-sentinel { height: 1px; }
+
+.feed-loading,
+.feed-end {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 28px 0 10px;
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.feed-loading .boot-ring {
+  width: 22px;
+  height: 22px;
+  border-width: 2px;
+}
+
+@media (max-width: 680px) {
+  .feed { max-width: 100%; }
+  .wall { columns: 1 auto; }
+  .wall-card { aspect-ratio: auto; height: 300px; }
+}

@@ -188,6 +188,11 @@ const messages: Record<Locale, Messages> = {
     sharedFriendHours: "好友总时长",
     friendsShort: "好友",
     twoWeeksShort: "双周",
+    wallTitle: "游戏库照片墙",
+    wallSubtitle: "每款游戏一张封面，成就进度印在照片上 — 像刷相册一样往下滑。",
+    feedLoading: "正在加载更多动态…",
+    feedCaughtUp: "✓ 你已经看完全部动态",
+    readMore: "阅读原文",
   },
   en: {
     localeName: "English",
@@ -369,6 +374,11 @@ const messages: Record<Locale, Messages> = {
     sharedFriendHours: "Friends' total",
     friendsShort: "Friends",
     twoWeeksShort: "2wk",
+    wallTitle: "Library Wall",
+    wallSubtitle: "One cover per game, achievement progress printed on the photo — scroll it like an album.",
+    feedLoading: "Loading more updates…",
+    feedCaughtUp: "✓ You're all caught up",
+    readMore: "Read more",
   },
 };
 

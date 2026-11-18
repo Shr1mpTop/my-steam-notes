@@ -679,7 +679,7 @@ def build_game_updates():
                FROM game_news_updates
                WHERE date >= ?
                ORDER BY date DESC
-               LIMIT 24""",
+               LIMIT 96""",
             [int((datetime.now(TZ) - timedelta(days=14)).timestamp())],
         )
     except Exception:
