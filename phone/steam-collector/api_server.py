@@ -452,6 +452,30 @@ def presence_today():
     return cached("presence-today", 60, build)
 
 
+def friend_day():
+    """Today per friend: which games, with first/last seen spans (raw poll rows)."""
+    def build():
+        today = datetime.now(TZ).strftime("%Y-%m-%d")
+        rows = q("""
+            SELECT COALESCE(c.personaname, fp.steamid) AS name,
+                   fp.gameextrainfo AS game,
+                   MIN(fp.timestamp) AS first_seen,
+                   MAX(fp.timestamp) AS last_seen,
+                   COUNT(*) AS polls
+            FROM friend_status_polls fp
+            LEFT JOIN friends_current c ON c.steamid = fp.steamid
+            WHERE fp.gameextrainfo IS NOT NULL AND fp.gameextrainfo != ''
+              AND date(fp.timestamp, '+8 hours') = ?
+            GROUP BY fp.steamid, fp.gameextrainfo
+            ORDER BY name, first_seen
+        """, (today,))
+        for r in rows:
+            # poll cadence is ~2 min/round -> minutes estimate per session
+            r["minutes"] = round(r["polls"] * 2.0)
+        return {"updated_at": now_iso(), "date": today, "sessions": rows}
+    return cached("friend-day", 120, build)
+
+
 def records():
     """Superlatives across the whole dataset."""
     def build():
@@ -1027,6 +1051,8 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json(200, presence_daily(days))
             elif path == "/api/presence-today":
                 self.send_json(200, presence_today())
+            elif path == "/api/friend-day":
+                self.send_json(200, friend_day())
             elif path == "/api/records":
                 self.send_json(200, records())
             elif path == "/api/bans":

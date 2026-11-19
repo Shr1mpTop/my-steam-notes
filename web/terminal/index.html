@@ -324,6 +324,10 @@
       <div class="panel-body"><table><thead><tr><th>#</th><th>who</th><th class="num">online</th><th>game</th></tr></thead><tbody id="presenceLeaders"></tbody></table></div>
     </section>
     <section class="panel grow-sm">
+      <div class="panel-head"><span>FRIEND DAY // who plays what</span><span class="meta">2min</span></div>
+      <div class="panel-body" id="friendDay"></div>
+    </section>
+    <section class="panel grow-sm">
       <div class="panel-head"><span>NIGHT OWLS // 00-06</span><span class="meta">10min</span></div>
       <div class="panel-body"><table><thead><tr><th>#</th><th>who</th><th class="num">hrs</th></tr></thead><tbody id="nightOwls"></tbody></table></div>
     </section>
@@ -820,11 +824,33 @@ async function loadFriendHeat() {
     const max = Math.max(...grid.flat(), 1);
     $("friendHeat").innerHTML = grid.flat().map((n) => {
       const a = n > 0 ? (0.1 + Math.min(1, n / max) * 0.85).toFixed(2) : "0.05";
-      return `<div class="fc" title="polls: ${n}"></div>`;
+      return `<div class="fc" title="polls: ${n}" style="background:rgba(0,255,102,${a})"></div>`;
     }).join("");
     $("favWeek").innerHTML = (d.week || []).slice(0, 6).map((r, i) =>
       `<div class="row"><span>${i + 1}. ${esc(cut(r.name, 18))}</span><span class="dim num">${r.poll_hours}h in-game</span></div>`).join("") || '<span class="faint">no game polls this week</span>';
   } catch (e) { fail($("friendHeat"), e.message); }
+}
+
+async function loadFriendDay() {
+  try {
+    const d = await get("/api/friend-day");
+    const by = new Map();
+    (d.sessions || []).forEach((s) => {
+      if (!by.has(s.name)) by.set(s.name, []);
+      by.get(s.name).push(s);
+    });
+    const names = [...by.keys()].sort((x, y) =>
+      by.get(y).reduce((t, s) => t + s.polls, 0) - by.get(x).reduce((t, s) => t + s.polls, 0));
+    const rows = names.slice(0, 20).map((name) => {
+      const sessions = by.get(name);
+      const mins = sessions.reduce((t, s) => t + s.polls, 0) * 2; // ~2min cadence
+      const detail = sessions.map((s) =>
+        `${esc(cut(s.game, 20))} <span class="faint">${s.first_seen.slice(11, 16)}–${s.last_seen.slice(11, 16)}</span>`
+      ).join(" · ");
+      return `<div class="row"><span>${esc(cut(name, 14))}</span><span class="dim">${detail}</span><span class="num">${fmtH(mins / 60)}</span></div>`;
+    }).join("");
+    $("friendDay").innerHTML = rows || '<span class="faint">nobody in-game today yet</span>';
+  } catch (e) { fail($("friendDay"), e.message); }
 }
 
 async function loadNewsPulse() {
@@ -876,6 +902,7 @@ every(1800000, loadRare);
 every(300000, loadPlayDaily);
 every(600000, loadRhythm);
 every(1800000, loadFriendHeat);
+every(120000, loadFriendDay);
 every(900000, loadNewsPulse);
 setInterval(() => { $("clock").textContent = new Date().toLocaleTimeString([], { hour12: false }); }, 1000);
 $("clock").textContent = new Date().toLocaleTimeString([], { hour12: false });
