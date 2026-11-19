@@ -13,6 +13,7 @@ API surface so the terminal UI can bombard itself with data:
   GET /api/games?limit=N     my owned games by hours
   GET /api/polls?limit=N     recent self status polls
   GET /api/friend-polls?limit=N  recent friend poll rows
+  GET /api/friend-day        today per friend: game + first/last span (~minutes)
   GET /api/sweeps            friend library sweep state
   GET /api/news?limit=N      recent game update posts
   GET /api/raw?table=NAME&limit=N   whitelisted raw table dump
